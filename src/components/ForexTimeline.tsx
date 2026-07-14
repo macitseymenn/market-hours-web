@@ -11,6 +11,7 @@ import {
   wallToUtc,
 } from "@/lib/markets";
 import { AlarmBell } from "./alarms/AlarmBell";
+import { AlarmModal } from "./alarms/AlarmModal";
 
 /**
  * Live, DST-accurate "Forex Market Time Zone Converter".
@@ -91,6 +92,7 @@ export function ForexTimeline() {
   const [now, setNow] = useState<number | null>(null);
   const [displayTz, setDisplayTz] = useState("UTC");
   const [hour24, setHour24] = useState(true);
+  const [optionsOpen, setOptionsOpen] = useState(false);
 
   useEffect(() => {
     // Initialise client-only values after mount — the visitor's detected timezone
@@ -170,16 +172,31 @@ export function ForexTimeline() {
           </select>
         </label>
 
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-fog">
-          24-hour time
-          <input
-            type="checkbox"
-            checked={hour24}
-            onChange={(e) => setHour24(e.target.checked)}
-            className="h-4 w-4 accent-emerald"
-          />
-        </label>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <label className="flex cursor-pointer items-center gap-2 text-sm text-fog">
+            24-hour time
+            <input
+              type="checkbox"
+              checked={hour24}
+              onChange={(e) => setHour24(e.target.checked)}
+              className="h-4 w-4 accent-emerald"
+            />
+          </label>
+          <button
+            type="button"
+            onClick={() => setOptionsOpen(true)}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-surface-2 px-3 py-1.5 text-sm text-fog transition-colors hover:border-emerald hover:text-emerald"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
+            Options
+          </button>
+        </div>
       </div>
+
+      <AlarmModal open={optionsOpen} onClose={() => setOptionsOpen(false)} />
 
       {/* Scrollable timeline. pt-20 reserves space above the hours for the pin. */}
       <div className="overflow-x-auto">

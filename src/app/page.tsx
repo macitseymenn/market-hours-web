@@ -4,7 +4,6 @@ import { Features } from "@/components/Features";
 import { SessionTimes } from "@/components/SessionTimes";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Screenshots } from "@/components/Screenshots";
-import { AlarmPanel } from "@/components/alarms/AlarmPanel";
 import { BlogPreview } from "@/components/BlogPreview";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
@@ -57,7 +56,6 @@ export default function Home() {
       />
       <Hero />
       <TrustBar />
-      <AlarmPanel />
       <HowItWorks />
       <SessionTimes />
       <Features />
