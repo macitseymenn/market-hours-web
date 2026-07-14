@@ -1,0 +1,421 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
+/**
+ * Live, DST-accurate "Forex Market Time Zone Converter".
+ *
+ * A 24-hour horizontal axis rendered in a user-selectable timezone. Each market
+ * is drawn as a coloured bar spanning its open window, a moving "now" line marks
+ * the current instant, and each row shows the market's own local time plus an
+ * OPEN / CLOSED status.
+ *
+ * Everything is computed in the browser from IANA timezone rules (via the Intl
+ * API), so daylight-saving shifts are always correct with no data source needed.
+ * Regular session hours are deterministic; a market-holiday API could later be
+ * layered on top by overriding `openNow` per city.
+ */
+
+const DAY_MS = 86_400_000;
+const HOUR_MS = 3_600_000;
+
+// Sessions are defined by their LOCAL open/close hour in each city's own
+// timezone — this is what makes DST automatic (London always opens 08:00 local,
+// whether that's GMT or BST). Colours are distinct per market for legibility.
+// Editorial categorical colours — muted, cohesive, distinct per market.
+const CITIES = [
+  { city: "Sydney", flag: "🇦🇺", tz: "Australia/Sydney", open: 8, close: 17, color: "#4e6e81" },
+  { city: "Tokyo", flag: "🇯🇵", tz: "Asia/Tokyo", open: 9, close: 18, color: "#8a6d9b" },
+  { city: "Frankfurt", flag: "🇩🇪", tz: "Europe/Berlin", open: 8, close: 17, color: "#c6a24c" },
+  { city: "London", flag: "🇬🇧", tz: "Europe/London", open: 8, close: 17, color: "#b5654a" },
+  { city: "New York", flag: "🇺🇸", tz: "America/New_York", open: 8, close: 17, color: "#5f8060" },
+] as const;
+
+// City name for each selectable timezone; the live "(GMT +2)" suffix is appended
+// at render time from the current offset.
+const TZ_OPTIONS = [
+  { tz: "Europe/London", city: "London" },
+  { tz: "Europe/Berlin", city: "Berlin" },
+  { tz: "Europe/Istanbul", city: "Istanbul" },
+  { tz: "Africa/Cairo", city: "Cairo" },
+  { tz: "Asia/Dubai", city: "Dubai" },
+  { tz: "America/New_York", city: "New York" },
+  { tz: "America/Los_Angeles", city: "Los Angeles" },
+  { tz: "Asia/Tokyo", city: "Tokyo" },
+  { tz: "Asia/Shanghai", city: "Shanghai" },
+  { tz: "Asia/Kolkata", city: "Mumbai" },
+  { tz: "Australia/Sydney", city: "Sydney" },
+  { tz: "UTC", city: "UTC" },
+];
+
+/** Human city name from an IANA tz id, e.g. "America/New_York" → "New York". */
+function cityFromTz(tz: string) {
+  const found = TZ_OPTIONS.find((o) => o.tz === tz);
+  if (found) return found.city;
+  const last = tz.split("/").pop() ?? tz;
+  return last.replace(/_/g, " ");
+}
+
+/** Wall-clock parts of `instant` as seen in `tz`. */
+function tzParts(tz: string, instant: number) {
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone: tz,
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  const map: Record<string, number> = {};
+  for (const p of dtf.formatToParts(instant)) {
+    if (p.type !== "literal") map[p.type] = Number(p.value);
+  }
+  map.hour %= 24; // Intl can emit "24" at midnight
+  return map;
+}
+
+/** Offset (ms) of `tz` from UTC at a given instant. */
+function tzOffset(tz: string, instant: number) {
+  const m = tzParts(tz, instant);
+  const asUTC = Date.UTC(m.year, m.month - 1, m.day, m.hour, m.minute, m.second);
+  return asUTC - instant;
+}
+
+/** UTC instant for a wall-clock time in `tz` (guess-then-correct). */
+function wallToUtc(y: number, mo: number, d: number, h: number, tz: string) {
+  const guess = Date.UTC(y, mo, d, h, 0, 0);
+  return guess - tzOffset(tz, guess);
+}
+
+/** e.g. "GMT +2", "GMT -4", "GMT +5:30". */
+function gmtLabel(ms: number) {
+  const h = ms / HOUR_MS;
+  const sign = h >= 0 ? "+" : "-";
+  const abs = Math.abs(h);
+  const whole = Math.floor(abs);
+  const mins = Math.round((abs - whole) * 60);
+  return `GMT ${sign}${whole}${mins ? `:${String(mins).padStart(2, "0")}` : ""}`;
+}
+
+type Bar = { leftPct: number; widthPct: number };
+
+/** Minimal analog clock shown inside the "now" pin — white face, dark hands. */
+function PinClock({ h, m, s }: { h: number; m: number; s: number }) {
+  const C = 15;
+  const hand = (deg: number, len: number, w: number, color: string) => {
+    const rad = ((deg - 90) * Math.PI) / 180;
+    return (
+      <line
+        x1={C}
+        y1={C}
+        x2={(C + len * Math.cos(rad)).toFixed(2)}
+        y2={(C + len * Math.sin(rad)).toFixed(2)}
+        stroke={color}
+        strokeWidth={w}
+        strokeLinecap="round"
+      />
+    );
+  };
+  return (
+    <svg viewBox="0 0 30 30" className="h-7 w-7" aria-hidden="true">
+      <circle cx={C} cy={C} r="13" fill="#ffffff" stroke="rgba(0,0,0,0.12)" strokeWidth="1" />
+      {hand(((h % 12) + m / 60) * 30, 6.5, 1.8, "#2a2320")}
+      {hand(m * 6, 9.5, 1.4, "#2a2320")}
+      {hand(s * 6, 10, 0.9, "#b5654a")}
+      <circle cx={C} cy={C} r="1.3" fill="#2a2320" />
+    </svg>
+  );
+}
+
+export function ForexTimeline() {
+  const [now, setNow] = useState<number | null>(null);
+  const [displayTz, setDisplayTz] = useState("UTC");
+  const [hour24, setHour24] = useState(true);
+
+  useEffect(() => {
+    // Initialise client-only values after mount — the visitor's detected timezone
+    // and the current time — to avoid a hydration mismatch. Runs once, not per
+    // render, so the cascading-render concern the lint rule guards against does
+    // not apply here.
+    /* eslint-disable react-hooks/set-state-in-effect */
+    const local = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (local) setDisplayTz(local);
+    setNow(Date.now());
+    /* eslint-enable react-hooks/set-state-in-effect */
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  // Build the dropdown: each option is "City (GMT +2)" with the live offset.
+  // The visitor's detected timezone is included even if not in the preset list.
+  const tzOptions = useMemo(() => {
+    const list = [...TZ_OPTIONS];
+    if (!list.some((o) => o.tz === displayTz)) {
+      list.unshift({ tz: displayTz, city: cityFromTz(displayTz) });
+    }
+    return list.map((o) => ({
+      tz: o.tz,
+      label:
+        now !== null ? `${o.city} (${gmtLabel(tzOffset(o.tz, now))})` : o.city,
+    }));
+  }, [displayTz, now]);
+
+  // Midnight today in the display timezone → the left edge of the 24h axis.
+  const axisStart = useMemo(() => {
+    if (now === null) return null;
+    const p = tzParts(displayTz, now);
+    return wallToUtc(p.year, p.month - 1, p.day, 0, displayTz);
+  }, [now, displayTz]);
+
+  const nowLeftPct =
+    now !== null && axisStart !== null
+      ? Math.min(100, Math.max(0, ((now - axisStart) / DAY_MS) * 100))
+      : 0;
+
+  // Now-pin values (time in the selected timezone), driving the minimal clock.
+  const pinParts = now !== null ? tzParts(displayTz, now) : null;
+  const pinTime =
+    now !== null
+      ? new Intl.DateTimeFormat("en-US", {
+          timeZone: displayTz,
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: !hour24,
+        }).format(now)
+      : "";
+  const pinDay =
+    now !== null
+      ? new Intl.DateTimeFormat("en-US", {
+          timeZone: displayTz,
+          weekday: "long",
+        }).format(now)
+      : "";
+
+  return (
+    <div className="rounded-2xl border border-surface-2 bg-surface/50 p-5 sm:p-6">
+      {/* Controls */}
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+        <label className="flex items-center gap-2 text-sm text-fog">
+          <span className="text-muted">Your timezone</span>
+          <select
+            value={displayTz}
+            onChange={(e) => setDisplayTz(e.target.value)}
+            className="rounded-lg border border-surface-2 bg-charcoal px-3 py-1.5 text-ivory outline-none focus-visible:border-emerald"
+          >
+            {tzOptions.map((o) => (
+              <option key={o.tz} value={o.tz}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-fog">
+          24-hour time
+          <input
+            type="checkbox"
+            checked={hour24}
+            onChange={(e) => setHour24(e.target.checked)}
+            className="h-4 w-4 accent-emerald"
+          />
+        </label>
+      </div>
+
+      {/* Scrollable timeline. pt-20 reserves space above the hours for the pin. */}
+      <div className="overflow-x-auto">
+        <div className="relative min-w-[680px] pt-20">
+          <HoursHeader hour24={hour24} />
+
+          <ul className="mt-1 divide-y divide-surface-2/60">
+            {CITIES.map((c) => (
+              <CityRow
+                key={c.city}
+                city={c}
+                now={now}
+                axisStart={axisStart}
+                hour24={hour24}
+              />
+            ))}
+          </ul>
+
+          {/* Overlay padded by the label-column width so the pin and the single
+              continuous "now" line both align to the track and to each other. */}
+          {now !== null && (
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{ paddingLeft: "10rem" }}
+            >
+              <div className="relative h-full">
+                {/* The "now" pin, with a minimal live clock. */}
+                <div
+                  className="absolute top-0 z-20 flex -translate-x-1/2 flex-col items-center"
+                  style={{ left: `${nowLeftPct}%` }}
+                >
+                  <div className="flex flex-col items-center gap-0.5 rounded-2xl bg-emerald px-2.5 py-1.5 text-charcoal shadow-lg">
+                    {pinParts && (
+                      <PinClock h={pinParts.hour} m={pinParts.minute} s={pinParts.second} />
+                    )}
+                    <span
+                      className="text-[11px] font-semibold leading-none tabular-nums"
+                      suppressHydrationWarning
+                    >
+                      {pinTime}
+                    </span>
+                    <span className="text-[10px] leading-none opacity-80">{pinDay}</span>
+                  </div>
+                  <div
+                    className="h-0 w-0 border-x-[6px] border-t-[7px] border-x-transparent"
+                    style={{ borderTopColor: "var(--color-emerald)" }}
+                  />
+                </div>
+                {/* Continuous now-line, connecting from the pin down through all rows. */}
+                <div
+                  aria-hidden="true"
+                  className="absolute bottom-0 top-[4.25rem] w-0.5 -translate-x-1/2 rounded bg-emerald"
+                  style={{ left: `${nowLeftPct}%` }}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <p className="mt-5 text-xs text-muted">
+        Times update live in your selected timezone and follow daylight-saving
+        changes automatically. Session windows are indicative of normal trading
+        days and exclude market holidays.
+      </p>
+    </div>
+  );
+}
+
+const LABEL_COL = "w-40 shrink-0 pr-4";
+
+function HoursHeader({ hour24 }: { hour24: boolean }) {
+  return (
+    <div className="flex items-end">
+      <div className={LABEL_COL} />
+      <div className="relative h-6 flex-1">
+        {Array.from({ length: 25 }).map((_, h) => {
+          const twelve = h % 12 === 0 ? 12 : h % 12;
+          const label = hour24 ? String(h % 24).padStart(2, "0") : String(twelve);
+          return (
+            <span
+              key={h}
+              className="absolute bottom-0 -translate-x-1/2 font-mono text-[10px] text-muted"
+              style={{ left: `${((h / 24) * 100).toFixed(4)}%` }}
+            >
+              {label}
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function CityRow({
+  city,
+  now,
+  axisStart,
+  hour24,
+}: {
+  city: (typeof CITIES)[number];
+  now: number | null;
+  axisStart: number | null;
+  hour24: boolean;
+}) {
+  // Compute this market's open windows that intersect the visible 24h axis, plus
+  // whether it is open right now. We check the local session for yesterday/today/
+  // tomorrow so bars that straddle the axis edges still render.
+  const { bars, openNow } = useMemo(() => {
+    if (now === null || axisStart === null)
+      return { bars: [] as Bar[], openNow: false };
+    const axisEnd = axisStart + DAY_MS;
+    const p = tzParts(city.tz, now);
+    const out: Bar[] = [];
+    let isOpen = false;
+    for (const off of [-1, 0, 1]) {
+      const openUtc = wallToUtc(p.year, p.month - 1, p.day + off, city.open, city.tz);
+      const closeUtc = wallToUtc(p.year, p.month - 1, p.day + off, city.close, city.tz);
+      if (now >= openUtc && now < closeUtc) isOpen = true;
+      const s = Math.max(openUtc, axisStart);
+      const e = Math.min(closeUtc, axisEnd);
+      if (e > s) {
+        out.push({
+          leftPct: ((s - axisStart) / DAY_MS) * 100,
+          widthPct: ((e - s) / DAY_MS) * 100,
+        });
+      }
+    }
+    return { bars: out, openNow: isOpen };
+  }, [now, axisStart, city]);
+
+  const localTime =
+    now !== null
+      ? new Intl.DateTimeFormat("en-US", {
+          timeZone: city.tz,
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: !hour24,
+        }).format(now)
+      : "—";
+
+  const localDate =
+    now !== null
+      ? new Intl.DateTimeFormat("en-US", {
+          timeZone: city.tz,
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        }).format(now)
+      : "";
+
+  const offsetLabel =
+    now !== null ? gmtLabel(tzOffset(city.tz, now)) : "";
+
+  return (
+    <li className="flex items-stretch py-3">
+      <div className={`${LABEL_COL} flex items-center gap-3`}>
+        <span aria-hidden="true" className="text-xl">
+          {city.flag}
+        </span>
+        <span className="leading-tight">
+          <span className="block font-semibold text-ivory">{city.city}</span>
+          <span className="block font-mono text-sm text-fog">{localTime}</span>
+          <span className="block text-[11px] text-muted">
+            {localDate}
+            {offsetLabel && ` · ${offsetLabel}`}
+          </span>
+        </span>
+      </div>
+
+      <div className="relative min-h-[52px] flex-1">
+        {/* Status label */}
+        <span
+          className="absolute left-0 top-0 text-[11px] font-semibold uppercase tracking-wide"
+          style={{ color: openNow ? city.color : "var(--color-muted)" }}
+        >
+          {city.city} session {openNow ? "open" : "closed"}
+        </span>
+        {/* Empty rail — a clean track for each market (no hour gridlines). */}
+        <div className="absolute inset-x-0 bottom-2 h-6 rounded-md bg-surface-2/50" />
+        {/* Open-window bars — solid and prominent when open, faded when closed. */}
+        {bars.map((b, i) => (
+          <div
+            key={i}
+            className="absolute bottom-2 h-6 rounded-md shadow-sm"
+            style={{
+              left: `${b.leftPct}%`,
+              width: `${b.widthPct}%`,
+              backgroundColor: city.color,
+              opacity: openNow ? 1 : 0.4,
+            }}
+          />
+        ))}
+      </div>
+    </li>
+  );
+}

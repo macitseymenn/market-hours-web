@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#1a1714"/>
+  <g opacity="0.95">
+    <rect x="70" y="150" width="300" height="20" rx="10" fill="#4e6e81"/>
+    <rect x="120" y="190" width="360" height="20" rx="10" fill="#8a6d9b"/>
+    <rect x="200" y="230" width="330" height="20" rx="10" fill="#b5654a"/>
+    <rect x="300" y="270" width="280" height="20" rx="10" fill="#5f8060"/>
+  </g>
+  <circle cx="620" cy="210" r="118" fill="none" stroke="#e0577e" stroke-width="2" opacity="0.55"/>
+  <line x1="620" y1="210" x2="620" y2="130" stroke="#e0577e" stroke-width="4" stroke-linecap="round"/>
+  <line x1="620" y1="210" x2="678" y2="238" stroke="#ece3d6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="620" cy="210" r="6" fill="#e0577e"/>
+  <text x="70" y="112" fill="#ece3d6" font-family="sans-serif" font-size="30" font-weight="700">Trading sessions</text>
+</svg>

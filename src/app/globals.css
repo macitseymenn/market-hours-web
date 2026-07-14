@@ -1,26 +1,181 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Theming model
+  -------------
+  Colour tokens are defined as CSS variables so they can flip at runtime between
+  Light (the default) and Dark. Components keep using the SAME utility names
+  (bg-charcoal, text-ivory, text-fog, border-surface-2, text-emerald …); only the
+  VALUES change per theme, so nothing else needs to be rewritten.
+
+  Non-inline `@theme` emits the tokens as :root variables and makes utilities
+  reference them via var(), which is what lets `.dark` override them live.
+
+  Token meaning (name is historical, not literal):
+    charcoal   = page background      surface  = cards / raised panels
+    surface-2  = borders / SVG lines  ivory    = headings / strong text
+    fog        = body text            muted    = secondary text
+    emerald    = primary accent (deeper in light for contrast)  amber = accent 2
+*/
+@theme {
+  /*
+    "Editorial" palette — warm cream + ink + claret (Financial-Times-ish).
+    Token names are historical: emerald = primary accent (claret here),
+    amber = secondary accent (steel blue). Light values are the defaults.
+  */
+  --color-charcoal: #fbf3e9; /* page (warm cream) */
+  --color-surface: #fffcf6; /* cards (warm white) */
+  --color-surface-2: #e7dccb; /* borders / SVG lines (warm) */
+  --color-ivory: #23201c; /* headings / strong ink */
+  --color-fog: #4a443b; /* body text */
+  --color-muted: #6b6153; /* secondary text */
+  --color-emerald: #9e1b4b; /* primary accent (claret) */
+  --color-emerald-600: #82123b; /* accent hover */
+  --color-amber: #3e5c76; /* secondary accent (steel) */
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---- Dark theme overrides (deep espresso) ---- */
+.dark {
+  --color-charcoal: #1a1714;
+  --color-surface: #241f1b;
+  --color-surface-2: #38302a;
+  --color-ivory: #ece3d6;
+  --color-fog: #c3b8a9;
+  --color-muted: #897f70;
+  --color-emerald: #e0577e; /* brighter claret/rose for dark contrast */
+  --color-emerald-600: #cb4268;
+  --color-amber: #86a6c8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-charcoal);
+    color: var(--color-fog);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ivory);
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-emerald);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/*
+  Smooth colour crossfade only while actively switching themes — added briefly by
+  the toggle, then removed, so it never interferes with hover/other transitions.
+*/
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease !important;
+}
+
+/* Honour users who prefer less motion: no smooth-scroll momentum, no crossfade. */
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition: none !important;
+  }
+}
+
+/* Article body typography (Markdown output). Theme-aware via colour tokens. */
+.article-prose {
+  color: var(--color-fog);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.article-prose > * + * {
+  margin-top: 1.25rem;
+}
+.article-prose h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.article-prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.article-prose a {
+  color: var(--color-emerald);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-prose a:hover {
+  color: var(--color-emerald-600);
+}
+.article-prose strong {
+  color: var(--color-ivory);
+  font-weight: 600;
+}
+.article-prose ul,
+.article-prose ol {
+  margin-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.article-prose ul {
+  list-style: disc;
+}
+.article-prose ol {
+  list-style: decimal;
+}
+.article-prose blockquote {
+  border-left: 3px solid var(--color-emerald);
+  padding-left: 1rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+.article-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-surface-2);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.article-prose em {
+  color: var(--color-muted);
 }
