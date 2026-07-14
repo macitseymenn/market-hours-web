@@ -51,9 +51,9 @@ export const PUBLISHER = {
  */
 export const NAV = [
   { label: "Live hours", href: "/#top" },
+  { label: "Alarms", href: "/#alarms" },
   { label: "Sessions", href: "/#sessions" },
   { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/#faq" },
   { label: "Get the app", href: "/#apps" },
 ] as const;
 

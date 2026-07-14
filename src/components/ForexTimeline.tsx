@@ -1,6 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import {
+  DAY_MS,
+  HOUR_MS,
+  MARKETS,
+  type Market,
+  tzParts,
+  tzOffset,
+  wallToUtc,
+} from "@/lib/markets";
+import { AlarmBell } from "./alarms/AlarmBell";
 
 /**
  * Live, DST-accurate "Forex Market Time Zone Converter".
@@ -8,28 +18,9 @@ import { useEffect, useMemo, useState } from "react";
  * A 24-hour horizontal axis rendered in a user-selectable timezone. Each market
  * is drawn as a coloured bar spanning its open window, a moving "now" line marks
  * the current instant, and each row shows the market's own local time plus an
- * OPEN / CLOSED status.
- *
- * Everything is computed in the browser from IANA timezone rules (via the Intl
- * API), so daylight-saving shifts are always correct with no data source needed.
- * Regular session hours are deterministic; a market-holiday API could later be
- * layered on top by overriding `openNow` per city.
+ * OPEN / CLOSED status. The market model + timezone maths live in `@/lib/markets`
+ * (shared with the alarm system).
  */
-
-const DAY_MS = 86_400_000;
-const HOUR_MS = 3_600_000;
-
-// Sessions are defined by their LOCAL open/close hour in each city's own
-// timezone — this is what makes DST automatic (London always opens 08:00 local,
-// whether that's GMT or BST). Colours are distinct per market for legibility.
-// Editorial categorical colours — muted, cohesive, distinct per market.
-const CITIES = [
-  { city: "Sydney", flag: "🇦🇺", tz: "Australia/Sydney", open: 8, close: 17, color: "#4e6e81" },
-  { city: "Tokyo", flag: "🇯🇵", tz: "Asia/Tokyo", open: 9, close: 18, color: "#8a6d9b" },
-  { city: "Frankfurt", flag: "🇩🇪", tz: "Europe/Berlin", open: 8, close: 17, color: "#c6a24c" },
-  { city: "London", flag: "🇬🇧", tz: "Europe/London", open: 8, close: 17, color: "#b5654a" },
-  { city: "New York", flag: "🇺🇸", tz: "America/New_York", open: 8, close: 17, color: "#5f8060" },
-] as const;
 
 // City name for each selectable timezone; the live "(GMT +2)" suffix is appended
 // at render time from the current offset.
@@ -54,39 +45,6 @@ function cityFromTz(tz: string) {
   if (found) return found.city;
   const last = tz.split("/").pop() ?? tz;
   return last.replace(/_/g, " ");
-}
-
-/** Wall-clock parts of `instant` as seen in `tz`. */
-function tzParts(tz: string, instant: number) {
-  const dtf = new Intl.DateTimeFormat("en-US", {
-    timeZone: tz,
-    hour12: false,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-  const map: Record<string, number> = {};
-  for (const p of dtf.formatToParts(instant)) {
-    if (p.type !== "literal") map[p.type] = Number(p.value);
-  }
-  map.hour %= 24; // Intl can emit "24" at midnight
-  return map;
-}
-
-/** Offset (ms) of `tz` from UTC at a given instant. */
-function tzOffset(tz: string, instant: number) {
-  const m = tzParts(tz, instant);
-  const asUTC = Date.UTC(m.year, m.month - 1, m.day, m.hour, m.minute, m.second);
-  return asUTC - instant;
-}
-
-/** UTC instant for a wall-clock time in `tz` (guess-then-correct). */
-function wallToUtc(y: number, mo: number, d: number, h: number, tz: string) {
-  const guess = Date.UTC(y, mo, d, h, 0, 0);
-  return guess - tzOffset(tz, guess);
 }
 
 /** e.g. "GMT +2", "GMT -4", "GMT +5:30". */
@@ -229,7 +187,7 @@ export function ForexTimeline() {
           <HoursHeader hour24={hour24} />
 
           <ul className="mt-1 divide-y divide-surface-2/60">
-            {CITIES.map((c) => (
+            {MARKETS.map((c) => (
               <CityRow
                 key={c.city}
                 city={c}
@@ -245,7 +203,7 @@ export function ForexTimeline() {
           {now !== null && (
             <div
               className="pointer-events-none absolute inset-0"
-              style={{ paddingLeft: "10rem" }}
+              style={{ paddingLeft: "10rem", paddingRight: "7rem" }}
             >
               <div className="relative h-full">
                 {/* The "now" pin, with a minimal live clock. */}
@@ -292,6 +250,7 @@ export function ForexTimeline() {
 }
 
 const LABEL_COL = "w-40 shrink-0 pr-4";
+const ALARM_COL = "w-28 shrink-0"; // trailing column for the alarm bell (7rem)
 
 function HoursHeader({ hour24 }: { hour24: boolean }) {
   return (
@@ -312,6 +271,7 @@ function HoursHeader({ hour24 }: { hour24: boolean }) {
           );
         })}
       </div>
+      <div className={ALARM_COL} />
     </div>
   );
 }
@@ -322,7 +282,7 @@ function CityRow({
   axisStart,
   hour24,
 }: {
-  city: (typeof CITIES)[number];
+  city: Market;
   now: number | null;
   axisStart: number | null;
   hour24: boolean;
@@ -415,6 +375,11 @@ function CityRow({
             }}
           />
         ))}
+      </div>
+
+      {/* Alarm toggle in its own column — never overlaps the bars or now-line. */}
+      <div className={`${ALARM_COL} flex items-center justify-end pl-3`}>
+        <AlarmBell city={city.city} now={now} />
       </div>
     </li>
   );

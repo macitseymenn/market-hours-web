@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { AlarmProvider } from "@/components/alarms/AlarmProvider";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 
 // Applied before paint so the theme never flashes. An explicit saved choice wins;
@@ -95,13 +96,15 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SmoothScroll>
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </SmoothScroll>
+        <AlarmProvider>
+          <SmoothScroll>
+            <Header />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </SmoothScroll>
+        </AlarmProvider>
       </body>
     </html>
   );
