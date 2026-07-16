@@ -33,7 +33,7 @@ export const APP = {
   appStoreUrl:
     "https://apps.apple.com/tr/app/forex-market-hours-london/id6758207849",
   // TODO: replace with the real Google Play listing URL when published.
-  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.huntersgroup.forexmarkethours",
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.marketshours.app",
   price: "0",
   currency: "USD",
   rating: { value: "5.0", count: "12" },
