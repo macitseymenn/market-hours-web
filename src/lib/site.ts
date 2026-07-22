@@ -33,7 +33,7 @@ export const PRODUCT = {
 } as const;
 
 export const APP = {
-  name: "Forex Market Hours: London",
+  name: "Forex Market Hours",
   shortName: "Forex Market Hours",
   tagline: "Live Session Clock & Calendar",
   // Description of the mobile app specifically (used for app JSON-LD + app CTA).

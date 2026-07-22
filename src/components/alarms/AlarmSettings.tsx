@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { getMarket, nextOpen } from "@/lib/markets";
+import { getMarket, nextOpen, nextClose } from "@/lib/markets";
 import { SOUNDS } from "@/lib/sounds";
-import { formatCountdown, useAlarms } from "./AlarmProvider";
+import { formatCountdown, parseArm, useAlarms } from "./AlarmProvider";
 
 /** Format a Date as a datetime-local input value ("YYYY-MM-DDTHH:MM"), local time. */
 function toLocalInputValue(d: Date): string {
@@ -199,18 +199,27 @@ export function AlarmSettings() {
         ) : (
           <>
             <ul className="mt-3 flex flex-col gap-2">
-              {armed.map((city) => {
+              {armed.map((key) => {
+                const parsed = parseArm(key);
+                if (!parsed) return null;
+                const { city, event } = parsed;
                 const m = getMarket(city);
-                const cd = m && now !== null ? formatCountdown(nextOpen(m, now) - now) : "";
+                const open = event === "open";
+                const cd =
+                  m && now !== null
+                    ? formatCountdown(
+                        (open ? nextOpen(m, now) : nextClose(m, now)) - now,
+                      )
+                    : "";
                 return (
                   <li
-                    key={`m-${city}`}
+                    key={`m-${key}`}
                     className="flex items-center justify-between rounded-lg border border-surface-2 px-3 py-2 text-sm"
                   >
                     <span className="flex items-center gap-2 text-ivory">
                       <span aria-hidden="true">{m?.flag}</span>
                       {cityName(city)}{" "}
-                      <span className="text-muted">· {t("opens")}</span>
+                      <span className="text-muted">· {t(open ? "opens" : "closes")}</span>
                     </span>
                     <span className="flex items-center gap-3">
                       <span className="font-mono text-fog" suppressHydrationWarning>
@@ -218,8 +227,11 @@ export function AlarmSettings() {
                       </span>
                       <button
                         type="button"
-                        onClick={() => toggle(city)}
-                        aria-label={t("removeMarketAria", { city: cityName(city) })}
+                        onClick={() => toggle(city, event)}
+                        aria-label={t("removeMarketAria", {
+                          city: cityName(city),
+                          event: t(open ? "eventOpen" : "eventClose"),
+                        })}
                         className="text-muted transition-colors hover:text-ivory"
                       >
                         ✕

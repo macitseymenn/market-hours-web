@@ -293,7 +293,7 @@ export function ForexTimeline() {
                   className="absolute top-0 z-20 flex -translate-x-1/2 flex-col items-center"
                   style={{ left: `${nowLeftPct}%` }}
                 >
-                  <div className="flex flex-col items-center gap-0.5 rounded-2xl bg-emerald px-2.5 py-1.5 text-charcoal shadow-lg">
+                  <div className="flex flex-col items-center gap-0.5 rounded-2xl bg-emerald px-2.5 py-1.5 text-white shadow-lg">
                     {pinParts && (
                       <PinClock h={pinParts.hour} m={pinParts.minute} s={pinParts.second} />
                     )}
@@ -330,11 +330,12 @@ export function ForexTimeline() {
 // The now-line overlay padding must match these column widths. Keep the rem
 // values in sync with the Tailwind width classes below (w-40 = 10rem, w-28 = 7rem).
 const LABEL_COL_REM = 10;
-const ALARM_COL_REM = 7;
+const ALARM_COL_REM = 8;
 const LABEL_COL = "w-40 shrink-0 pr-4";
-const ALARM_COL = "w-28 shrink-0"; // trailing column for the alarm bell (7rem)
+const ALARM_COL = "w-32 shrink-0"; // trailing column for the alarm bells (8rem)
 
 function HoursHeader({ hour24 }: { hour24: boolean }) {
+  const ta = useTranslations("alarms");
   return (
     <div className="flex items-end">
       <div className={LABEL_COL} />
@@ -353,7 +354,25 @@ function HoursHeader({ hour24 }: { hour24: boolean }) {
           );
         })}
       </div>
-      <div className={ALARM_COL} />
+      {/* Column header so the trailing Open/Close toggles read as alarms. */}
+      <div className={`${ALARM_COL} flex items-center justify-end gap-1 pl-3`}>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-3 w-3 text-muted"
+          aria-hidden="true"
+        >
+          <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.7 21a2 2 0 0 1-3.4 0" />
+        </svg>
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+          {ta("bellLabel")}
+        </span>
+      </div>
     </div>
   );
 }

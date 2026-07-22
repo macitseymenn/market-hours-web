@@ -88,3 +88,14 @@ export function nextOpen(m: Market, now: number): number {
   }
   return best;
 }
+
+/** The next session-close instant strictly after `now` (recurs daily). */
+export function nextClose(m: Market, now: number): number {
+  const p = tzParts(m.tz, now);
+  let best = Infinity;
+  for (const off of [-1, 0, 1, 2]) {
+    const c = wallToUtc(p.year, p.month - 1, p.day + off, m.close, m.tz);
+    if (c > now && c < best) best = c;
+  }
+  return best;
+}

@@ -10,12 +10,13 @@ import {
   useState,
 } from "react";
 import { useTranslations } from "next-intl";
-import { getMarket, nextOpen } from "@/lib/markets";
+import { getMarket, nextOpen, nextClose } from "@/lib/markets";
 import { playSound, type SoundId } from "@/lib/sounds";
 
 /**
  * In-tab alarm system (no backend). Two kinds of alarm:
- *   • Market alarms — arm a market's 🔔; rings the moment that market OPENS.
+ *   • Market alarms — arm a market's 🔔; rings the moment that market OPENS or
+ *     CLOSES (each direction armed independently).
  *   • Custom alarms — a one-shot alarm at any date/time the user picks.
  *
  * Persistent ringing: if an alarm triggers while THIS tab is in the background
@@ -29,14 +30,40 @@ type Perm = NotificationPermission | "unsupported";
 
 export type CustomAlarm = { id: string; at: number; label: string };
 
+/** A market alarm can fire on the session OPEN or the session CLOSE. */
+export type AlarmEvent = "open" | "close";
+
+/** Armed market alarms are stored as canonical `"City:event"` keys (e.g.
+ *  "London:open"). Legacy entries were bare city names — those migrate to
+ *  `open` on load. City names contain no colon, so the last ":" splits safely. */
+export function armKey(city: string, event: AlarmEvent): string {
+  return `${city}:${event}`;
+}
+
+export function parseArm(key: string): { city: string; event: AlarmEvent } | null {
+  const idx = key.lastIndexOf(":");
+  if (idx === -1) return getMarket(key) ? { city: key, event: "open" } : null;
+  const city = key.slice(0, idx);
+  const event = key.slice(idx + 1) as AlarmEvent;
+  if (!getMarket(city) || (event !== "open" && event !== "close")) return null;
+  return { city, event };
+}
+
+/** Next fire instant for a market's chosen event, strictly after `now`. */
+function nextEvent(city: string, event: AlarmEvent, now: number): number | null {
+  const m = getMarket(city);
+  if (!m) return null;
+  return event === "open" ? nextOpen(m, now) : nextClose(m, now);
+}
+
 type AlarmCtx = {
   armed: string[];
   customAlarms: CustomAlarm[];
   soundOn: boolean;
   sound: SoundId;
   permission: Perm;
-  isArmed: (city: string) => boolean;
-  toggle: (city: string) => void;
+  isArmed: (city: string, event: AlarmEvent) => boolean;
+  toggle: (city: string, event: AlarmEvent) => void;
   addCustomAlarm: (at: number, label: string) => void;
   removeCustomAlarm: (id: string) => void;
   clearAll: () => void;
@@ -93,7 +120,13 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
     /* eslint-disable react-hooks/set-state-in-effect */
     try {
       const a = JSON.parse(localStorage.getItem(LS_ARMED) || "[]");
-      if (Array.isArray(a)) setArmed(a.filter((c: string) => getMarket(c)));
+      if (Array.isArray(a)) {
+        const norm = a
+          .map((k: unknown) => (typeof k === "string" ? parseArm(k) : null))
+          .filter((p): p is { city: string; event: AlarmEvent } => p !== null)
+          .map((p) => armKey(p.city, p.event));
+        setArmed(Array.from(new Set(norm)));
+      }
       const cs = JSON.parse(localStorage.getItem(LS_CUSTOM) || "[]");
       if (Array.isArray(cs)) {
         const now = Date.now();
@@ -316,21 +349,30 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
 
       const tr = msgRef.current.t;
 
-      for (const city of armed) {
-        const m = getMarket(city);
-        if (!m) continue;
-        const open = nextOpen(m, now);
-        if (!nearest || open < nearest.at)
-          nearest = { text: tr("titleOpens", { city: cityName(city) }), at: open };
-        const prev = prevOpenRef.current[city];
-        if (prev !== undefined && open !== prev) {
+      for (const key of armed) {
+        const parsed = parseArm(key);
+        if (!parsed) continue;
+        const { city, event } = parsed;
+        const at = nextEvent(city, event, now);
+        if (at === null) continue;
+        const title =
+          event === "open"
+            ? tr("titleOpens", { city: cityName(city) })
+            : tr("titleCloses", { city: cityName(city) });
+        if (!nearest || at < nearest.at) nearest = { text: title, at };
+        const prev = prevOpenRef.current[key];
+        if (prev !== undefined && at !== prev) {
           trigger(
-            tr("notifSessionOpenTitle", { city: cityName(city) }),
-            tr("notifSessionOpenBody", { city: cityName(city) }),
-            `fmh-${city}`,
+            event === "open"
+              ? tr("notifSessionOpenTitle", { city: cityName(city) })
+              : tr("notifSessionCloseTitle", { city: cityName(city) }),
+            event === "open"
+              ? tr("notifSessionOpenBody", { city: cityName(city) })
+              : tr("notifSessionCloseBody", { city: cityName(city) }),
+            `fmh-${key}`,
           );
         }
-        prevOpenRef.current[city] = open;
+        prevOpenRef.current[key] = at;
       }
 
       for (const ca of customAlarms) {
@@ -370,18 +412,19 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
     };
   }, [armed, customAlarms, ring, trigger, stopRinging, removeCustomAlarm]);
 
-  const toggle = useCallback((city: string) => {
+  const toggle = useCallback((city: string, event: AlarmEvent) => {
+    const key = armKey(city, event);
     setArmed((prev) => {
-      if (prev.includes(city)) {
-        delete prevOpenRef.current[city];
-        return prev.filter((c) => c !== city);
+      if (prev.includes(key)) {
+        delete prevOpenRef.current[key];
+        return prev.filter((k) => k !== key);
       }
       if (typeof Notification !== "undefined" && Notification.permission === "default") {
         Notification.requestPermission()
           .then((p) => setPermission(p))
           .catch(() => {});
       }
-      return [...prev, city];
+      return [...prev, key];
     });
   }, []);
 
@@ -416,7 +459,7 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
       soundOn,
       sound,
       permission,
-      isArmed: (c) => armed.includes(c),
+      isArmed: (c, e) => armed.includes(armKey(c, e)),
       toggle,
       addCustomAlarm,
       removeCustomAlarm,

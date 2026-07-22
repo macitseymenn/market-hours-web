@@ -24,13 +24,16 @@ export async function Hero() {
           </p>
         </div>
 
-        {/* Server-rendered "open right now" status — crawlable without JS, kept
-            fresh via the homepage's 5-minute ISR revalidation. */}
-        <MarketStatus />
+        {/* The product: the live market-hours tool, front and centre — the hero
+            leads straight from the definition into the live clock. */}
+        <div className="mt-10">
+          <ForexTimeline />
+        </div>
 
         {/* Explicit "converter" framing: this live tool converts every session
             to the visitor's own timezone — named as such for query match with
-            "forex market hours converter" / "forex time converter" searches. */}
+            "forex market hours converter" / "forex time converter" searches.
+            Placed below the tool so the hero leads straight into the live clock. */}
         <div className="mx-auto mt-10 max-w-3xl text-center">
           <h2 className="text-xl font-semibold text-ivory sm:text-2xl">
             {t("converterH2")}
@@ -38,12 +41,12 @@ export async function Hero() {
           <p className="mx-auto mt-2 max-w-2xl text-fog">{t("converterIntro")}</p>
         </div>
 
-        {/* The product: the live market-hours tool, front and centre. */}
-        <div className="mt-6">
-          <ForexTimeline />
-        </div>
+        {/* Server-rendered "open right now" status — crawlable without JS, kept
+            fresh via the homepage's 5-minute ISR revalidation. Placed below the
+            converter framing, just above the app prompt. */}
+        <MarketStatus />
 
-        <p className="mt-4 text-center text-sm text-muted">
+        <p className="mt-6 text-center text-sm text-muted">
           {t("phonePrompt")}{" "}
           <a href="#apps" className="text-emerald underline-offset-4 hover:underline">
             {t("phoneLink")}
