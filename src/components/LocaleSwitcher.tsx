@@ -1,20 +1,49 @@
 "use client";
 
+import { useEffect, useId, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
 
 /**
- * Language switcher. Navigates to the equivalent page in the target locale,
- * respecting localized slugs (e.g. /es/acerca-de -> /en/about, and blog posts
- * whose slugs differ per locale) by reading the page's own hreflang alternates,
- * which are already emitted correctly on every route. Falls back to swapping the
- * leading /xx locale segment if no alternate is found.
+ * Language switcher — a dropdown that lists every configured locale, so adding
+ * a new language to `routing.locales` automatically surfaces it here. Selecting
+ * a language navigates to the equivalent page in that locale, respecting
+ * localized slugs by reading the page's own hreflang alternates (with a
+ * locale-segment-swap fallback).
  */
 export function LocaleSwitcher() {
   const active = useLocale();
   const t = useTranslations("header");
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        btnRef.current?.focus();
+      }
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    // Focus the active option when the menu opens.
+    rootRef.current
+      ?.querySelector<HTMLElement>('[role="menuitemradio"][aria-checked="true"]')
+      ?.focus();
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   const go = (target: string) => {
+    setOpen(false);
     if (target === active) return;
     let path: string | null = null;
     const link = document.querySelector<HTMLLinkElement>(
@@ -29,43 +58,92 @@ export function LocaleSwitcher() {
       }
     }
     if (!path) {
-      path = window.location.pathname.replace(
-        /^\/[a-z]{2}(?=\/|$)/,
-        `/${target}`,
-      );
+      path = window.location.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, `/${target}`);
     }
-    // Full navigation so the document lang, metadata and all server components
-    // re-render in the new locale.
     window.location.assign(path);
   };
 
   return (
-    <div
-      role="group"
-      aria-label={t("language")}
-      className="flex items-center rounded-lg border border-surface-2 p-0.5 text-xs font-semibold"
-    >
-      {routing.locales.map((l) => {
-        const isActive = l === active;
-        return (
-          <button
-            key={l}
-            type="button"
-            lang={l}
-            onClick={() => go(l)}
-            aria-current={isActive ? "true" : undefined}
-            aria-label={t("languageNames." + l)}
-            title={t("languageNames." + l)}
-            className={
-              isActive
-                ? "rounded-md bg-emerald px-2 py-1 text-charcoal"
-                : "rounded-md px-2 py-1 text-muted transition-colors hover:text-ivory"
-            }
-          >
-            {l.toUpperCase()}
-          </button>
-        );
-      })}
+    <div ref={rootRef} className="relative">
+      <button
+        ref={btnRef}
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-controls={menuId}
+        aria-label={t("language")}
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-surface-2 px-2.5 text-sm text-fog transition-colors hover:text-ivory"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" />
+        </svg>
+        <span className="hidden sm:inline">{t("languageNames." + active)}</span>
+        <span className="font-semibold uppercase sm:hidden">{active}</span>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          aria-hidden="true"
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
+      {open && (
+        <ul
+          id={menuId}
+          role="menu"
+          aria-label={t("language")}
+          className="absolute right-0 z-50 mt-2 min-w-[9rem] overflow-hidden rounded-lg border border-surface-2 bg-charcoal py-1 shadow-xl"
+        >
+          {routing.locales.map((l) => {
+            const isActive = l === active;
+            return (
+              <li key={l} role="none">
+                <button
+                  role="menuitemradio"
+                  aria-checked={isActive}
+                  lang={l}
+                  type="button"
+                  onClick={() => go(l)}
+                  className={`flex w-full items-center justify-between gap-3 px-3 py-2 text-left text-sm transition-colors hover:bg-surface-2/40 ${
+                    isActive ? "text-emerald" : "text-fog hover:text-ivory"
+                  }`}
+                >
+                  {t("languageNames." + l)}
+                  {isActive && (
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      aria-hidden="true"
+                    >
+                      <path d="m5 12 5 5L20 7" />
+                    </svg>
+                  )}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }
