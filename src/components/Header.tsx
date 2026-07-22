@@ -4,6 +4,7 @@ import { CTA_ID, NAV } from "@/lib/site";
 import { Link } from "@/i18n/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { MobileNav } from "./MobileNav";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 // The "Get the app" item is rendered as the standalone CTA button, so it's
 // filtered out of the inline nav to avoid a duplicate adjacent link.
@@ -58,6 +59,7 @@ export async function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LocaleSwitcher />
           <ThemeToggle />
           <a
             href={`${home}#${CTA_ID}`}

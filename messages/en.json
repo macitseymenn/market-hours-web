@@ -11,7 +11,9 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "primaryNav": "Primary navigation",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "languageNames": { "en": "English", "es": "Español" }
   },
   "footer": {
     "explore": "Explore",
