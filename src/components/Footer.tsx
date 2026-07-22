@@ -1,8 +1,16 @@
+import { getLocale, getTranslations } from "next-intl/server";
 import { APP, DISCLAIMER, LEGAL_NAV, NAV, PUBLISHER, SITE_URL } from "@/lib/site";
-import { NavItem } from "./NavItem";
+import { Link } from "@/i18n/navigation";
 
-export function Footer() {
+export async function Footer() {
   const year = new Date().getFullYear();
+  const locale = await getLocale();
+  const t = await getTranslations("nav");
+  const tf = await getTranslations("footer");
+  const tl = await getTranslations("legalNav");
+  const home = `/${locale}`;
+  const linkClass = "inline-block py-1.5 hover:text-ivory";
+
   return (
     <footer className="border-t border-surface-2/70 bg-surface/40">
       <div className="mx-auto max-w-6xl px-5 py-12">
@@ -13,24 +21,27 @@ export function Footer() {
             </p>
             <p className="mt-2 text-sm text-muted">{APP.tagline}</p>
             <p className="mt-4 text-sm text-muted">
-              Published by {PUBLISHER.displayName}.
+              {tf("publishedBy", { publisher: PUBLISHER.displayName })}
             </p>
           </div>
 
           <div className="flex flex-col gap-8 sm:flex-row sm:gap-12">
-            <nav aria-label="Footer">
+            <nav aria-label={tf("explore")}>
               <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
-                Explore
+                {tf("explore")}
               </p>
               <ul className="flex flex-col gap-y-1 text-sm text-fog">
                 {NAV.map((item) => (
-                  <li key={item.href}>
-                    <NavItem
-                      href={item.href}
-                      className="inline-block py-1.5 hover:text-ivory"
-                    >
-                      {item.label}
-                    </NavItem>
+                  <li key={item.key}>
+                    {item.type === "page" ? (
+                      <Link href={item.href} className={linkClass}>
+                        {t(item.key)}
+                      </Link>
+                    ) : (
+                      <a href={`${home}#${item.id}`} className={linkClass}>
+                        {t(item.key)}
+                      </a>
+                    )}
                   </li>
                 ))}
                 <li>
@@ -38,27 +49,24 @@ export function Footer() {
                     href={APP.appStoreUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block py-1.5 hover:text-ivory"
+                    className={linkClass}
                   >
-                    App Store
+                    {tf("appStore")}
                   </a>
                 </li>
               </ul>
             </nav>
 
-            <nav aria-label="Company & legal">
+            <nav aria-label={tf("companyLegal")}>
               <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
-                Company &amp; legal
+                {tf("companyLegal")}
               </p>
               <ul className="flex flex-col gap-y-1 text-sm text-fog">
                 {LEGAL_NAV.map((item) => (
                   <li key={item.href}>
-                    <NavItem
-                      href={item.href}
-                      className="inline-block py-1.5 hover:text-ivory"
-                    >
-                      {item.label}
-                    </NavItem>
+                    <Link href={item.href} className={linkClass}>
+                      {tl(item.key)}
+                    </Link>
                   </li>
                 ))}
               </ul>

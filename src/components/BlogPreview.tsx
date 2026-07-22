@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { getAllPosts } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
@@ -38,7 +38,7 @@ export function BlogPreview() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-surface-2 bg-surface/50"
               >
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
                   className="relative block aspect-[16/9] overflow-hidden bg-surface-2"
                   aria-label={post.title}
                 >
@@ -59,7 +59,10 @@ export function BlogPreview() {
                   </div>
 
                   <h3 className="mt-2 text-lg font-semibold text-ivory">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-emerald">
+                    <Link
+                      href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
+                      className="hover:text-emerald"
+                    >
                       {post.title}
                     </Link>
                   </h3>
@@ -76,7 +79,7 @@ export function BlogPreview() {
                           className="rounded-full border border-surface-2"
                         />
                         <Link
-                          href={`/author/${author.slug}`}
+                          href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
                           className="text-sm text-fog hover:text-emerald"
                         >
                           {author.name}
@@ -84,7 +87,7 @@ export function BlogPreview() {
                       </div>
                     )}
                     <Link
-                      href={`/blog/${post.slug}`}
+                      href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
                       className="text-sm font-medium text-emerald hover:text-emerald-600"
                     >
                       Learn more →

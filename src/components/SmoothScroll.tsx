@@ -21,23 +21,22 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     };
     rafId = requestAnimationFrame(raf);
 
-    // Smoothly scroll to hash targets, offset for the sticky header. Handles both
-    // in-page "#id" links and homepage "/#id" links (only when already on "/").
+    // Smoothly scroll to hash targets, offset for the sticky header. Handles
+    // bare "#id" links and locale-prefixed home links like "/en#id" / "/es#id",
+    // but only when the link points at the page we're already on — otherwise the
+    // browser navigates normally (e.g. from a blog post back to a home section).
     const onClick = (e: MouseEvent) => {
-      const anchor = (e.target as HTMLElement)?.closest?.(
-        'a[href^="#"], a[href^="/#"]',
-      );
+      const anchor = (e.target as HTMLElement)?.closest?.('a[href*="#"]');
       if (!anchor) return;
       const href = anchor.getAttribute("href") ?? "";
-      let hash: string | null = null;
-      if (href.startsWith("#")) {
-        hash = href;
-      } else if (href.startsWith("/#")) {
-        // Let the browser navigate home if we're on another page.
-        if (window.location.pathname !== "/") return;
-        hash = href.slice(1);
-      }
-      if (!hash || hash === "#") return;
+      const hashIndex = href.indexOf("#");
+      if (hashIndex === -1) return;
+      const hash = href.slice(hashIndex);
+      const path = href.slice(0, hashIndex);
+      const here = window.location.pathname;
+      const onThisPage =
+        path === "" || path === here || path === here.replace(/\/$/, "");
+      if (!onThisPage || hash === "#") return;
       const target = document.querySelector(hash);
       if (target) {
         e.preventDefault();

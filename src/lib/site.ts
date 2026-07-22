@@ -49,17 +49,22 @@ export const PUBLISHER = {
  * Primary navigation. Section links are absolute (`/#id`) so they work from any
  * page (blog, author) — on the homepage they still smooth-scroll via Lenis.
  */
+/**
+ * Primary navigation. `hash` items scroll to a section on the home page (the
+ * locale prefix is added at render time); `page` items are localized routes
+ * resolved through next-intl's Link (so Spanish gets the localized slug).
+ */
 export const NAV = [
-  { label: "Live hours", href: "/#top" },
-  { label: "Sessions", href: "/#sessions" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Get the app", href: "/#apps" },
+  { key: "liveHours", type: "hash", id: "top" },
+  { key: "sessions", type: "hash", id: "sessions" },
+  { key: "blog", type: "page", href: "/blog" },
+  { key: "faq", type: "hash", id: "faq" },
+  { key: "getApp", type: "hash", id: "apps" },
 ] as const;
 
-/** The href rendered as the standalone "Get the app" CTA button (filtered out
- *  of the header's inline nav to avoid a duplicate adjacent link). */
-export const CTA_HREF = "/#apps";
+/** The section id rendered as the standalone "Get the app" CTA button (filtered
+ *  out of the header's inline nav to avoid a duplicate adjacent link). */
+export const CTA_ID = "apps";
 
 /**
  * Trust / legal pages. Organization-level E-E-A-T surface, linked in the footer
@@ -68,13 +73,13 @@ export const CTA_HREF = "/#apps";
  * the standard legal set.
  */
 export const LEGAL_NAV = [
-  { label: "About", href: "/about" },
-  { label: "How we calculate times", href: "/methodology" },
-  { label: "Editorial policy", href: "/editorial-policy" },
-  { label: "Disclaimer", href: "/disclaimer" },
-  { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "/terms" },
-  { label: "Contact", href: "/contact" },
+  { key: "about", href: "/about" },
+  { key: "methodology", href: "/methodology" },
+  { key: "editorialPolicy", href: "/editorial-policy" },
+  { key: "disclaimer", href: "/disclaimer" },
+  { key: "privacy", href: "/privacy" },
+  { key: "terms", href: "/terms" },
+  { key: "contact", href: "/contact" },
 ] as const;
 
 /**

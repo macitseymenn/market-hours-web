@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "liveHours": "Horario en vivo",
+    "sessions": "Sesiones",
+    "blog": "Blog",
+    "faq": "Preguntas frecuentes",
+    "getApp": "Descargar la app"
+  },
+  "header": {
+    "homeAria": "Inicio de Horario del Mercado Forex",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primaryNav": "Navegación principal"
+  },
+  "footer": {
+    "explore": "Explorar",
+    "companyLegal": "Empresa y legal",
+    "publishedBy": "Publicado por {publisher}.",
+    "appStore": "App Store"
+  },
+  "legalNav": {
+    "about": "Acerca de",
+    "methodology": "Cómo calculamos los horarios",
+    "editorialPolicy": "Política editorial",
+    "disclaimer": "Aviso de riesgo",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto"
+  }
+}

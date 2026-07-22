@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { NAV } from "@/lib/site";
-import { NavItem } from "./NavItem";
+import { Link } from "@/i18n/navigation";
 
 const FOCUSABLE =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -10,14 +11,16 @@ const FOCUSABLE =
 /**
  * Accessible mobile navigation. The desktop <nav> is hidden below `lg`; this
  * discloses the same links in a focus-trapped panel with a hamburger trigger,
- * so keyboard and screen-reader users on small screens can reach every section
- * (previously the nav was `display:none` and unreachable on mobile).
+ * so keyboard and screen-reader users on small screens can reach every section.
  */
-export function MobileNav() {
+export function MobileNav({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
   const panelId = useId();
+  const t = useTranslations("nav");
+  const th = useTranslations("header");
+  const home = `/${locale}`;
 
   useEffect(() => {
     if (!open) return;
@@ -51,6 +54,9 @@ export function MobileNav() {
     };
   }, [open]);
 
+  const linkClass =
+    "block rounded-lg px-3 py-3 text-base text-fog hover:bg-surface-2/40 hover:text-ivory";
+
   return (
     <div className="lg:hidden">
       <button
@@ -58,7 +64,7 @@ export function MobileNav() {
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label={open ? th("closeMenu") : th("openMenu")}
         onClick={() => setOpen((v) => !v)}
         className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-surface-2 text-fog transition-colors hover:text-ivory"
       >
@@ -98,20 +104,30 @@ export function MobileNav() {
             id={panelId}
             role="dialog"
             aria-modal="true"
-            aria-label="Primary navigation"
+            aria-label={th("primaryNav")}
             ref={panelRef}
             className="fixed inset-x-0 top-[57px] z-50 border-t border-surface-2 bg-charcoal p-4 shadow-xl"
           >
             <ul className="flex flex-col gap-1">
               {NAV.map((item) => (
-                <li key={item.href}>
-                  <NavItem
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-lg px-3 py-3 text-base text-fog hover:bg-surface-2/40 hover:text-ivory"
-                  >
-                    {item.label}
-                  </NavItem>
+                <li key={item.key}>
+                  {item.type === "page" ? (
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className={linkClass}
+                    >
+                      {t(item.key)}
+                    </Link>
+                  ) : (
+                    <a
+                      href={`${home}#${item.id}`}
+                      onClick={() => setOpen(false)}
+                      className={linkClass}
+                    >
+                      {t(item.key)}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

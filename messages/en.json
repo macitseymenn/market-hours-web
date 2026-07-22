@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "liveHours": "Live hours",
+    "sessions": "Sessions",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "getApp": "Get the app"
+  },
+  "header": {
+    "homeAria": "Forex Market Hours home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryNav": "Primary navigation"
+  },
+  "footer": {
+    "explore": "Explore",
+    "companyLegal": "Company & legal",
+    "publishedBy": "Published by {publisher}.",
+    "appStore": "App Store"
+  },
+  "legalNav": {
+    "about": "About",
+    "methodology": "How we calculate times",
+    "editorialPolicy": "Editorial policy",
+    "disclaimer": "Disclaimer",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  }
+}
