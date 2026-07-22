@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { AUTHORS, getAuthor } from "@/content/authors";
 import { getPostsByAuthor, readingMinutes } from "@/content/blog";
 import { formatDate } from "@/lib/format";
 import { SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
   return AUTHORS.map((a) => ({ slug: a.slug }));
@@ -15,15 +18,25 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const author = getAuthor(slug);
   if (!author) return {};
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = { pathname: "/author/[slug]", params: { slug: author.slug } } as const;
+
   return {
     title: `${author.name} — ${author.role}`,
     description: author.bio,
-    alternates: { canonical: `/author/${author.slug}` },
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
     // Author profiles are placeholder — keep them out of the index so no
     // fabricated Person/identity is indexed for a YMYL topic. Remove this once
     // real, credentialed author profiles exist.
@@ -34,9 +47,11 @@ export async function generateMetadata({
 export default async function AuthorPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
   const author = getAuthor(slug);
   if (!author) notFound();
 
@@ -137,7 +152,10 @@ export default async function AuthorPage({
                   {readingMinutes(post.body)} min read
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-ivory">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-emerald">
+                  <Link
+                    href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
+                    className="hover:text-emerald"
+                  >
                     {post.title}
                   </Link>
                 </h3>

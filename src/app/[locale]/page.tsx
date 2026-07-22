@@ -7,6 +7,7 @@ import { Screenshots } from "@/components/Screenshots";
 import { BlogPreview } from "@/components/BlogPreview";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
+import { setRequestLocale } from "next-intl/server";
 import { APP, FAQ, PRODUCT, PUBLISHER, SITE_URL, STEPS } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 
@@ -75,7 +76,14 @@ const faqJsonLd = {
   })),
 };
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <script

@@ -1,22 +1,40 @@
 import type { Metadata } from "next";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description:
-    "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries. info@forexmarkethours.app.",
-  alternates: {
-    canonical: "/contact",
-    languages: { en: "/contact", "x-default": "/contact" },
-  },
-  openGraph: {
-    type: "website",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/contact";
+
+  return {
     title: "Contact Us",
     description:
-      "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries.",
-    url: `${SITE_URL}/contact`,
-  },
-};
+      "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries. info@forexmarkethours.app.",
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: "Contact Us",
+      description:
+        "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries.",
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -27,7 +45,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
@@ -64,7 +89,7 @@ export default function ContactPage() {
             <strong>Corrections</strong> — spotted an inaccurate session time,
             a broken source link, or an outdated date in an article? Let us
             know and we will review it (see our{" "}
-            <a href="/editorial-policy">editorial policy</a>).
+            <Link href="/editorial-policy">editorial policy</Link>).
           </li>
           <li>
             <strong>Feedback</strong> — feature requests, bug reports, or

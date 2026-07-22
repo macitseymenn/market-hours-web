@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { getAllPosts, getPost, readingMinutes } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -17,21 +20,31 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
   const author = getAuthor(post.authorSlug);
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = { pathname: "/blog/[slug]", params: { slug: post.slug } } as const;
+
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `${SITE_URL}/blog/${post.slug}`,
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
       authors: author ? [author.name] : undefined,
@@ -43,9 +56,11 @@ export async function generateMetadata({
 export default async function PostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
   const post = getPost(slug);
   if (!post) notFound();
 
@@ -127,7 +142,7 @@ export default async function PostPage({
             />
             <div className="text-sm">
               <Link
-                href={`/author/${author.slug}`}
+                href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
                 className="font-semibold text-ivory hover:text-emerald"
               >
                 {author.name}
@@ -180,7 +195,7 @@ export default async function PostPage({
             <div>
               <p className="text-sm text-muted">Written by</p>
               <Link
-                href={`/author/${author.slug}`}
+                href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
                 className="font-semibold text-ivory hover:text-emerald"
               >
                 {author.name}

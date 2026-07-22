@@ -1,29 +1,46 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { getAllPosts, readingMinutes } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
 const BLOG_TITLE = "Forex Market Hours Blog — Sessions & Trading Times";
 const BLOG_DESC =
   "Clear guides to forex market hours, trading sessions, session overlaps and timezones — from the Forex Market Hours team.";
 
-export const metadata: Metadata = {
-  title: { absolute: BLOG_TITLE },
-  description: BLOG_DESC,
-  alternates: {
-    canonical: "/blog",
-    languages: { en: "/blog", "x-default": "/blog" },
-  },
-  openGraph: {
-    type: "website",
-    title: BLOG_TITLE,
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/blog";
+
+  return {
+    title: { absolute: BLOG_TITLE },
     description: BLOG_DESC,
-    url: `${SITE_URL}/blog`,
-  },
-};
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: BLOG_TITLE,
+      description: BLOG_DESC,
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 // Blog structured data — lists the posts for search engines.
 function blogJsonLd() {
@@ -43,7 +60,14 @@ function blogJsonLd() {
   };
 }
 
-export default function BlogIndex() {
+export default async function BlogIndex({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const posts = getAllPosts();
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 md:py-20">
@@ -77,7 +101,10 @@ export default function BlogIndex() {
                   )}
                 </div>
                 <h2 className="mt-2 text-2xl font-semibold text-ivory">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-emerald">
+                  <Link
+                    href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
+                    className="hover:text-emerald"
+                  >
                     {post.title}
                   </Link>
                 </h2>
@@ -86,7 +113,7 @@ export default function BlogIndex() {
                   <p className="mt-3 text-sm text-muted">
                     By{" "}
                     <Link
-                      href={`/author/${author.slug}`}
+                      href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
                       className="text-fog hover:text-emerald"
                     >
                       {author.name}

@@ -1,23 +1,40 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { DISCLAIMER, PRODUCT, SITE_URL } from "@/lib/site";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Risk & Trading Disclaimer",
-  description:
-    "Forex Market Hours is a market-hours tool only — not financial advice and not a broker. Read our full risk and trading disclaimer.",
-  alternates: {
-    canonical: "/disclaimer",
-    languages: { en: "/disclaimer", "x-default": "/disclaimer" },
-  },
-  openGraph: {
-    type: "website",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/disclaimer";
+
+  return {
     title: "Risk & Trading Disclaimer",
     description:
-      "Forex Market Hours is a market-hours tool only — not financial advice and not a broker.",
-    url: `${SITE_URL}/disclaimer`,
-  },
-};
+      "Forex Market Hours is a market-hours tool only — not financial advice and not a broker. Read our full risk and trading disclaimer.",
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: "Risk & Trading Disclaimer",
+      description:
+        "Forex Market Hours is a market-hours tool only — not financial advice and not a broker.",
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -33,7 +50,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function DisclaimerPage() {
+export default async function DisclaimerPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script

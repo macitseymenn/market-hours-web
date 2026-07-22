@@ -1,23 +1,40 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { PRODUCT, SITE_URL } from "@/lib/site";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Editorial Standards & Accuracy Policy",
-  description:
-    "How we research, source and review forex market-hours content — our accuracy, corrections and non-advice editorial standards.",
-  alternates: {
-    canonical: "/editorial-policy",
-    languages: { en: "/editorial-policy", "x-default": "/editorial-policy" },
-  },
-  openGraph: {
-    type: "website",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/editorial-policy";
+
+  return {
     title: "Editorial Standards & Accuracy Policy",
     description:
       "How we research, source and review forex market-hours content — our accuracy, corrections and non-advice editorial standards.",
-    url: `${SITE_URL}/editorial-policy`,
-  },
-};
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: "Editorial Standards & Accuracy Policy",
+      description:
+        "How we research, source and review forex market-hours content — our accuracy, corrections and non-advice editorial standards.",
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -33,7 +50,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function EditorialPolicyPage() {
+export default async function EditorialPolicyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script

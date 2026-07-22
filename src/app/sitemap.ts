@@ -1,29 +1,71 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, LEGAL_NAV } from "@/lib/site";
 import { getAllPosts } from "@/content/blog";
+import { getPathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+
+type SitemapHref = Parameters<typeof getPathname>[0]["href"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
+  const abs = (locale: (typeof routing.locales)[number], href: SitemapHref) =>
+    `${SITE_URL}${getPathname({ locale, href })}`;
+
+  // One sitemap entry per locale for a logical route, each carrying hreflang
+  // alternates for every locale so search engines pair the localized URLs.
+  const entries = (
+    href: SitemapHref,
+    opts: Pick<
+      MetadataRoute.Sitemap[number],
+      "lastModified" | "changeFrequency" | "priority"
+    >,
+  ): MetadataRoute.Sitemap =>
+    routing.locales.map((locale) => ({
+      url: abs(locale, href),
+      ...opts,
+      alternates: {
+        languages: {
+          en: abs("en", href),
+          es: abs("es", href),
+        },
+      },
+    }));
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    ...entries("/", {
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    }),
+    ...entries("/blog", {
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }),
   ];
 
-  const postRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
-    url: `${SITE_URL}/blog/${p.slug}`,
-    lastModified: new Date(p.updated ?? p.date),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  // Blog post slugs are shared across locales (English), so `post.slug` is used
+  // for both locale URLs.
+  const postRoutes: MetadataRoute.Sitemap = posts.flatMap((p) =>
+    entries(
+      { pathname: "/blog/[slug]", params: { slug: p.slug } },
+      {
+        lastModified: new Date(p.updated ?? p.date),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      },
+    ),
+  );
 
   // Trust / legal pages — indexable EEAT surface.
-  const legalRoutes: MetadataRoute.Sitemap = LEGAL_NAV.map((item) => ({
-    url: `${SITE_URL}${item.href}`,
-    lastModified: new Date(),
-    changeFrequency: "yearly",
-    priority: 0.4,
-  }));
+  const legalRoutes: MetadataRoute.Sitemap = LEGAL_NAV.flatMap((item) =>
+    entries(item.href, {
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    }),
+  );
 
   // Note: /author/* routes are intentionally omitted while author profiles are
   // placeholder — thin, low-value pages dilute crawl budget and are an EEAT

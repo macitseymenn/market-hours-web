@@ -1,24 +1,41 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Terms of Use",
-  description:
-    "The terms governing use of the Forex Market Hours web tool and mobile apps.",
-  alternates: {
-    canonical: "/terms",
-    languages: { en: "/terms", "x-default": "/terms" },
-  },
-  openGraph: {
-    type: "website",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/terms";
+
+  return {
     title: "Terms of Use",
     description:
       "The terms governing use of the Forex Market Hours web tool and mobile apps.",
-    url: `${SITE_URL}/terms`,
-  },
-};
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: "Terms of Use",
+      description:
+        "The terms governing use of the Forex Market Hours web tool and mobile apps.",
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 const LAST_UPDATED = "2026-07-22";
 
@@ -31,7 +48,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function TermsPage() {
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script

@@ -1,23 +1,40 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
+import { Link, getPathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: { absolute: `About ${PRODUCT.name}` },
-  description:
-    "Who builds Forex Market Hours, why we made a free live session clock, and how we keep session times accurate. By Hunters Group Software.",
-  alternates: {
-    canonical: "/about",
-    languages: { en: "/about", "x-default": "/about" },
-  },
-  openGraph: {
-    type: "website",
-    title: `About ${PRODUCT.name}`,
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const href = "/about";
+
+  return {
+    title: { absolute: `About ${PRODUCT.name}` },
     description:
-      "Who builds Forex Market Hours, why we made a free live session clock, and how we keep session times accurate.",
-    url: `${SITE_URL}/about`,
-  },
-};
+      "Who builds Forex Market Hours, why we made a free live session clock, and how we keep session times accurate. By Hunters Group Software.",
+    alternates: {
+      canonical: getPathname({ locale: l, href }),
+      languages: {
+        en: getPathname({ locale: "en", href }),
+        es: getPathname({ locale: "es", href }),
+        "x-default": getPathname({ locale: "en", href }),
+      },
+    },
+    openGraph: {
+      type: "website",
+      title: `About ${PRODUCT.name}`,
+      description:
+        "Who builds Forex Market Hours, why we made a free live session clock, and how we keep session times accurate.",
+      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+    },
+  };
+}
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -28,7 +45,14 @@ const breadcrumbJsonLd = {
   ],
 };
 
-export default function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
