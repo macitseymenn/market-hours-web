@@ -6,7 +6,7 @@ import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
-import { analytics, analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
+import { analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
 
 const LAST_UPDATED = "2026-07-22";
 
