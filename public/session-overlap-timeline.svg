@@ -1,0 +1,59 @@
+<svg viewBox="0 0 850 260" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Forex session overlap timeline</title>
+  <!-- Outer frame -->
+  <rect x="2" y="2" width="846" height="256" rx="16" fill="none" stroke="rgba(128,116,96,0.25)" stroke-width="1.5" />
+
+  <!-- London-New York overlap band (13:00-17:00 GMT), behind everything else -->
+  <rect x="490" y="14" width="120" height="216" fill="rgba(158,27,75,0.10)" />
+  <line x1="490" y1="14" x2="490" y2="230" stroke="rgba(158,27,75,0.35)" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="610" y1="14" x2="610" y2="230" stroke="rgba(158,27,75,0.35)" stroke-width="1" stroke-dasharray="3,3" />
+
+  <!-- Row rails (full 24h track, faint) -->
+  <rect x="100" y="20" width="720" height="24" rx="6" fill="rgba(128,116,96,0.15)" />
+  <rect x="100" y="64" width="720" height="24" rx="6" fill="rgba(128,116,96,0.15)" />
+  <rect x="100" y="108" width="720" height="24" rx="6" fill="rgba(128,116,96,0.15)" />
+  <rect x="100" y="152" width="720" height="24" rx="6" fill="rgba(128,116,96,0.15)" />
+  <rect x="100" y="196" width="720" height="24" rx="6" fill="rgba(128,116,96,0.15)" />
+
+  <!-- Sydney 22:00-07:00 (wraps midnight) -->
+  <rect x="760" y="20" width="60" height="24" rx="6" fill="#4e6e81" />
+  <rect x="100" y="20" width="210" height="24" rx="6" fill="#4e6e81" />
+  <!-- Tokyo 00:00-09:00 -->
+  <rect x="100" y="64" width="270" height="24" rx="6" fill="#8a6d9b" />
+  <!-- Frankfurt 07:00-16:00 -->
+  <rect x="310" y="108" width="270" height="24" rx="6" fill="#c6a24c" />
+  <!-- London 08:00-17:00 -->
+  <rect x="340" y="152" width="270" height="24" rx="6" fill="#b5654a" />
+  <!-- New York 13:00-22:00 -->
+  <rect x="490" y="196" width="270" height="24" rx="6" fill="#5f8060" />
+
+  <!-- Row flags -->
+  <text x="80" y="37" text-anchor="end" font-size="16">🇦🇺</text>
+  <text x="80" y="81" text-anchor="end" font-size="16">🇯🇵</text>
+  <text x="80" y="125" text-anchor="end" font-size="16">🇩🇪</text>
+  <text x="80" y="169" text-anchor="end" font-size="16">🇬🇧</text>
+  <text x="80" y="213" text-anchor="end" font-size="16">🇺🇸</text>
+
+  <!-- Hour axis -->
+  <line x1="100" y1="242" x2="820" y2="242" stroke="rgba(128,116,96,0.4)" stroke-width="1" />
+  <g fill="#8a8478" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="middle">
+    <line x1="100" y1="238" x2="100" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="100" y="257">0</text>
+    <line x1="190" y1="238" x2="190" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="190" y="257">3</text>
+    <line x1="280" y1="238" x2="280" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="280" y="257">6</text>
+    <line x1="370" y1="238" x2="370" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="370" y="257">9</text>
+    <line x1="460" y1="238" x2="460" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="460" y="257">12</text>
+    <line x1="550" y1="238" x2="550" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="550" y="257">15</text>
+    <line x1="640" y1="238" x2="640" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="640" y="257">18</text>
+    <line x1="730" y1="238" x2="730" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="730" y="257">21</text>
+    <line x1="820" y1="238" x2="820" y2="246" stroke="rgba(128,116,96,0.4)" />
+    <text x="820" y="257">24</text>
+  </g>
+</svg>

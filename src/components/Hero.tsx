@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ForexTimeline } from "./ForexTimeline";
+import { MarketStatus } from "./MarketStatus";
 
 export async function Hero() {
   const t = await getTranslations("home.hero");
@@ -23,8 +24,22 @@ export async function Hero() {
           </p>
         </div>
 
+        {/* Server-rendered "open right now" status — crawlable without JS, kept
+            fresh via the homepage's 5-minute ISR revalidation. */}
+        <MarketStatus />
+
+        {/* Explicit "converter" framing: this live tool converts every session
+            to the visitor's own timezone — named as such for query match with
+            "forex market hours converter" / "forex time converter" searches. */}
+        <div className="mx-auto mt-10 max-w-3xl text-center">
+          <h2 className="text-xl font-semibold text-ivory sm:text-2xl">
+            {t("converterH2")}
+          </h2>
+          <p className="mx-auto mt-2 max-w-2xl text-fog">{t("converterIntro")}</p>
+        </div>
+
         {/* The product: the live market-hours tool, front and centre. */}
-        <div className="mt-10">
+        <div className="mt-6">
           <ForexTimeline />
         </div>
 

@@ -71,10 +71,13 @@ export function LocaleSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={menuId}
-        aria-label={t("language")}
         onClick={() => setOpen((v) => !v)}
         className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-surface-2 px-2.5 text-sm text-fog transition-colors hover:text-ivory"
       >
+        {/* Accessible name is composed from the visible language text (+ this
+            context prefix) so it satisfies WCAG 2.5.3 label-in-name at every
+            breakpoint, rather than being overridden by a generic aria-label. */}
+        <span className="sr-only">{t("language")}: </span>
         <svg
           width="16"
           height="16"

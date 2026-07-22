@@ -3,10 +3,15 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { AUTHORS, getAuthor } from "@/content/authors";
+import {
+  AUTHORS,
+  getAuthor,
+  isPlaceholderAuthor,
+  DEFAULT_KNOWS_ABOUT,
+} from "@/content/authors";
 import { getPostsByAuthor, readingMinutes, type BlogLocale } from "@/content/blog";
 import { formatDate } from "@/lib/format";
-import { SITE_URL } from "@/lib/site";
+import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
@@ -26,9 +31,21 @@ export async function generateMetadata({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const href = { pathname: "/author/[slug]", params: { slug: author.slug } } as const;
 
+  // While the profile is placeholder scaffolding it is kept out of the index so
+  // no fabricated Person/identity is indexed for a YMYL topic. The moment the
+  // orchestrator drops in a real, credentialed author (see authors.ts), the
+  // guard flips and the page becomes indexable automatically — no code change.
+  const placeholder = isPlaceholderAuthor(author);
+
   return {
-    title: `${author.name} — ${author.role}`,
-    description: author.bio,
+    title: placeholder
+      ? `${PUBLISHER.displayName} — ${l === "es" ? "Equipo editorial" : "Editorial Team"}`
+      : `${author.name} — ${author.role}`,
+    description: placeholder
+      ? l === "es"
+        ? `Perfil editorial de ${PUBLISHER.displayName}, responsable del contenido de Forex Market Hours.`
+        : `Editorial profile for ${PUBLISHER.displayName}, responsible for Forex Market Hours content.`
+      : author.bio,
     alternates: {
       canonical: getPathname({ locale: l, href }),
       languages: {
@@ -37,10 +54,7 @@ export async function generateMetadata({
         "x-default": getPathname({ locale: "en", href }),
       },
     },
-    // Author profiles are placeholder — keep them out of the index so no
-    // fabricated Person/identity is indexed for a YMYL topic. Remove this once
-    // real, credentialed author profiles exist.
-    robots: { index: false, follow: true },
+    robots: { index: !placeholder, follow: true },
   };
 }
 
@@ -57,41 +71,72 @@ export default async function AuthorPage({
   const author = getAuthor(slug);
   if (!author) notFound();
 
+  const placeholder = isPlaceholderAuthor(author);
   const posts = getPostsByAuthor(author.slug, l);
 
-  // Person structured data — establishes author identity/authoritativeness.
-  const personJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: author.name,
-    jobTitle: author.role,
-    description: author.bio,
-    url: `${SITE_URL}/author/${author.slug}`,
-    image: `${SITE_URL}${author.avatar}`,
-    sameAs: author.links.map((l) => l.href),
-  };
+  // Neutral, honest display identity while the profile is placeholder: attribute
+  // to the Organization rather than render a fake person. Once real data lands,
+  // the named author renders instead.
+  const displayName = placeholder ? PUBLISHER.displayName : author.name;
+  const displayRole = placeholder
+    ? l === "es"
+      ? "Equipo editorial"
+      : "Editorial Team"
+    : author.role;
+  const displayBio = placeholder
+    ? l === "es"
+      ? `El contenido de Forex Market Hours lo mantiene ${PUBLISHER.displayName}. El perfil de autor con nombre se publicará aquí cuando esté disponible.`
+      : `Forex Market Hours content is maintained by ${PUBLISHER.displayName}. A named author profile will appear here when available.`
+    : author.bio;
+
+  // Person structured data — establishes a real author's identity, expertise and
+  // affiliation. Suppressed entirely while placeholder so no fabricated Person,
+  // image or sameAs is ever emitted for this YMYL topic.
+  const personJsonLd = placeholder
+    ? null
+    : {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: author.name,
+        jobTitle: author.role,
+        description: author.bio,
+        url: `${SITE_URL}${getPathname({ locale: l, href: { pathname: "/author/[slug]", params: { slug: author.slug } } })}`,
+        image: `${SITE_URL}${author.avatar}`,
+        knowsAbout: author.knowsAbout ?? [...DEFAULT_KNOWS_ABOUT],
+        worksFor: {
+          "@type": "Organization",
+          name: PUBLISHER.legalName,
+          url: SITE_URL,
+        },
+        // Only real, verifiable profiles — never emitted while placeholder.
+        ...(author.links.length > 0
+          ? { sameAs: author.links.map((link) => link.href) }
+          : {}),
+      };
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 md:py-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLdScript(personJsonLd) }}
-      />
+      {personJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(personJsonLd) }}
+        />
+      )}
 
       <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
         <Image
-          src={author.avatar}
-          alt={author.name}
+          src={placeholder ? "/icon.webp" : author.avatar}
+          alt={displayName}
           width={112}
           height={112}
           className="rounded-2xl border border-surface-2"
         />
         <div>
           <h1 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            {author.name}
+            {displayName}
           </h1>
-          <p className="mt-1 text-emerald">{author.role}</p>
-          <p className="mt-3 text-fog">{author.bio}</p>
+          <p className="mt-1 text-emerald">{displayRole}</p>
+          <p className="mt-3 text-fog">{displayBio}</p>
         </div>
       </header>
 
@@ -99,10 +144,40 @@ export default async function AuthorPage({
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
           {t("authorAbout")}
         </h2>
-        <p className="mt-3 text-fog">{author.longBio}</p>
+        {placeholder ? (
+          <p className="mt-3 text-fog">
+            {l === "es" ? (
+              <>
+                Conoce quién desarrolla y mantiene esta herramienta en la{" "}
+                <Link href="/about" className="text-emerald hover:underline">
+                  página Acerca de
+                </Link>
+                , y cómo revisamos el contenido en nuestra{" "}
+                <Link href="/editorial-policy" className="text-emerald hover:underline">
+                  política editorial
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                Learn who builds and maintains this tool on the{" "}
+                <Link href="/about" className="text-emerald hover:underline">
+                  About page
+                </Link>
+                , and how content is reviewed in our{" "}
+                <Link href="/editorial-policy" className="text-emerald hover:underline">
+                  editorial policy
+                </Link>
+                .
+              </>
+            )}
+          </p>
+        ) : (
+          <p className="mt-3 text-fog">{author.longBio}</p>
+        )}
       </section>
 
-      {author.credentials.length > 0 && (
+      {!placeholder && author.credentials.length > 0 && (
         <section className="mt-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
             {t("authorExperience")}
@@ -118,22 +193,23 @@ export default async function AuthorPage({
         </section>
       )}
 
-      {/* Credibility links — the author's own profiles (also used as sameAs). */}
-      {author.links.length > 0 && (
+      {/* Credibility links — the author's own profiles (also used as sameAs).
+          Suppressed while placeholder so no fake x.com/username link is shown. */}
+      {!placeholder && author.links.length > 0 && (
         <section className="mt-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
             {t("authorElsewhere")}
           </h2>
           <ul className="mt-3 flex flex-wrap gap-3">
-            {author.links.map((l) => (
-              <li key={l.href}>
+            {author.links.map((link) => (
+              <li key={link.href}>
                 <a
-                  href={l.href}
+                  href={link.href}
                   target="_blank"
-                  rel={`noopener noreferrer${l.rel ? ` ${l.rel}` : ""}`}
+                  rel={`noopener noreferrer${link.rel ? ` ${link.rel}` : ""}`}
                   className="inline-flex rounded-lg border border-surface-2 px-3 py-1.5 text-sm text-fog hover:border-emerald hover:text-emerald"
                 >
-                  {l.label} ↗
+                  {link.label} ↗
                 </a>
               </li>
             ))}
@@ -144,7 +220,7 @@ export default async function AuthorPage({
       {posts.length > 0 && (
         <section className="mt-12 border-t border-surface-2 pt-8">
           <h2 className="text-xl font-semibold text-ivory">
-            {t("authorArticles", { name: author.name })}
+            {t("authorArticles", { name: displayName })}
           </h2>
           <ul className="mt-6 flex flex-col gap-6">
             {posts.map((post) => (

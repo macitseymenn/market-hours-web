@@ -31,21 +31,53 @@ function cityLabel(tr: CityTranslator, city: string): string {
  * (shared with the alarm system).
  */
 
-// City name for each selectable timezone; the live "(GMT +2)" suffix is appended
-// at render time from the current offset.
+// Selectable timezones — a broad list of major cities spanning every UTC offset,
+// ordered roughly west → east. The live "(GMT +2)" suffix is appended at render
+// time from the current offset, and the visitor's own timezone is auto-detected
+// and pre-selected on load (added to the top of the list if not already here).
+// City names are localized via the `tool.cities` message map (English name is
+// the key), falling back to the English name for any city not translated.
 const TZ_OPTIONS = [
-  { tz: "Europe/London", city: "London" },
-  { tz: "Europe/Berlin", city: "Berlin" },
-  { tz: "Europe/Istanbul", city: "Istanbul" },
-  { tz: "Africa/Cairo", city: "Cairo" },
-  { tz: "Asia/Dubai", city: "Dubai" },
-  { tz: "America/New_York", city: "New York" },
+  { tz: "Pacific/Honolulu", city: "Honolulu" },
+  { tz: "America/Anchorage", city: "Anchorage" },
   { tz: "America/Los_Angeles", city: "Los Angeles" },
-  { tz: "Asia/Tokyo", city: "Tokyo" },
-  { tz: "Asia/Shanghai", city: "Shanghai" },
-  { tz: "Asia/Kolkata", city: "Mumbai" },
-  { tz: "Australia/Sydney", city: "Sydney" },
+  { tz: "America/Denver", city: "Denver" },
+  { tz: "America/Chicago", city: "Chicago" },
+  { tz: "America/Mexico_City", city: "Mexico City" },
+  { tz: "America/New_York", city: "New York" },
+  { tz: "America/Toronto", city: "Toronto" },
+  { tz: "America/Sao_Paulo", city: "São Paulo" },
+  { tz: "America/Argentina/Buenos_Aires", city: "Buenos Aires" },
   { tz: "UTC", city: "UTC" },
+  { tz: "Europe/London", city: "London" },
+  { tz: "Europe/Lisbon", city: "Lisbon" },
+  { tz: "Europe/Madrid", city: "Madrid" },
+  { tz: "Europe/Paris", city: "Paris" },
+  { tz: "Europe/Berlin", city: "Berlin" },
+  { tz: "Africa/Lagos", city: "Lagos" },
+  { tz: "Europe/Athens", city: "Athens" },
+  { tz: "Africa/Cairo", city: "Cairo" },
+  { tz: "Africa/Johannesburg", city: "Johannesburg" },
+  { tz: "Europe/Istanbul", city: "Istanbul" },
+  { tz: "Europe/Moscow", city: "Moscow" },
+  { tz: "Asia/Riyadh", city: "Riyadh" },
+  { tz: "Asia/Tehran", city: "Tehran" },
+  { tz: "Asia/Dubai", city: "Dubai" },
+  { tz: "Asia/Karachi", city: "Karachi" },
+  { tz: "Asia/Kolkata", city: "Mumbai" },
+  { tz: "Asia/Dhaka", city: "Dhaka" },
+  { tz: "Asia/Bangkok", city: "Bangkok" },
+  { tz: "Asia/Jakarta", city: "Jakarta" },
+  { tz: "Asia/Shanghai", city: "Shanghai" },
+  { tz: "Asia/Singapore", city: "Singapore" },
+  { tz: "Asia/Hong_Kong", city: "Hong Kong" },
+  { tz: "Australia/Perth", city: "Perth" },
+  { tz: "Asia/Tokyo", city: "Tokyo" },
+  { tz: "Asia/Seoul", city: "Seoul" },
+  { tz: "Australia/Adelaide", city: "Adelaide" },
+  { tz: "Australia/Sydney", city: "Sydney" },
+  { tz: "Australia/Brisbane", city: "Brisbane" },
+  { tz: "Pacific/Auckland", city: "Auckland" },
 ];
 
 /** Human city name from an IANA tz id, e.g. "America/New_York" → "New York". */

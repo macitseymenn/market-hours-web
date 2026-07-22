@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getAllPosts, type BlogLocale } from "@/content/blog";
-import { getAuthor } from "@/content/authors";
+import { getAuthor, isPlaceholderAuthor, EDITORIAL_TEAM } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 
 export async function BlogPreview() {
@@ -32,6 +32,9 @@ export async function BlogPreview() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {posts.map((post) => {
             const author = getAuthor(post.authorSlug);
+            // Named byline only once real author data is wired; else the org.
+            const namedAuthor =
+              author && !isPlaceholderAuthor(author) ? author : null;
             return (
               <article
                 key={post.slug}
@@ -69,20 +72,36 @@ export async function BlogPreview() {
                   <p className="mt-2 flex-1 text-sm text-fog">{post.description}</p>
 
                   <div className="mt-5 flex items-center justify-between border-t border-surface-2 pt-4">
-                    {author && (
+                    {namedAuthor ? (
                       <div className="flex items-center gap-2">
                         <Image
-                          src={author.avatar}
-                          alt={author.name}
+                          src={namedAuthor.avatar}
+                          alt={namedAuthor.name}
                           width={28}
                           height={28}
                           className="rounded-full border border-surface-2"
                         />
                         <Link
-                          href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
+                          href={{ pathname: "/author/[slug]", params: { slug: namedAuthor.slug } }}
                           className="text-sm text-fog hover:text-emerald"
                         >
-                          {author.name}
+                          {namedAuthor.name}
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={EDITORIAL_TEAM.avatar}
+                          alt={EDITORIAL_TEAM.name}
+                          width={28}
+                          height={28}
+                          className="rounded-full border border-surface-2"
+                        />
+                        <Link
+                          href={EDITORIAL_TEAM.href}
+                          className="text-sm text-fog hover:text-emerald"
+                        >
+                          {EDITORIAL_TEAM.name}
                         </Link>
                       </div>
                     )}

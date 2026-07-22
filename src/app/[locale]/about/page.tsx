@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
+import { APP, PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -43,6 +43,14 @@ const COPY = {
           {PRODUCT.name} so that conversion happens automatically, all the time,
           for free.
         </p>
+        <p>
+          That problem is one we ran into first-hand: as a small software team
+          that follows the markets ourselves, we were tired of doing GMT maths in
+          our heads and second-guessing whether London had already moved to
+          summer time. The tool started as the utility we wanted for our own use,
+          and we still use it every trading day — which is the fastest way we
+          notice when anything looks wrong.
+        </p>
 
         <h2>What Forex Market Hours is — and isn&apos;t</h2>
         <p>
@@ -61,7 +69,9 @@ const COPY = {
           timezone rules rather than a fixed table, so daylight-saving shifts are
           applied automatically. We explain exactly how that works, and the
           sources we rely on, on our{" "}
-          <Link href="/methodology">methodology page</Link>.
+          <Link href="/methodology">methodology page</Link>. How we research,
+          review and correct our written content is set out in our{" "}
+          <Link href="/editorial-policy">editorial policy</Link>.
         </p>
 
         <h2>The free web tool and app</h2>
@@ -119,6 +129,14 @@ const COPY = {
           verano. Creamos {PRODUCT.name} para que esa conversión se haga de forma
           automática, siempre y gratis.
         </p>
+        <p>
+          Es un problema que vivimos en primera persona: como un pequeño equipo
+          de software que también sigue los mercados, estábamos cansados de hacer
+          cálculos de GMT mentalmente y de dudar si Londres ya había pasado al
+          horario de verano. La herramienta nació como la utilidad que queríamos
+          para nuestro propio uso, y seguimos usándola cada jornada de trading, que
+          es la forma más rápida de darnos cuenta cuando algo no cuadra.
+        </p>
 
         <h2>Qué es Horario del Mercado Forex y qué no es</h2>
         <p>
@@ -139,7 +157,9 @@ const COPY = {
           modo que los cambios de horario de verano se aplican automáticamente.
           Explicamos exactamente cómo funciona, y las fuentes en las que nos
           basamos, en nuestra{" "}
-          <Link href="/methodology">página de metodología</Link>.
+          <Link href="/methodology">página de metodología</Link>. Cómo
+          investigamos, revisamos y corregimos nuestro contenido escrito se detalla
+          en nuestra <Link href="/editorial-policy">política editorial</Link>.
         </p>
 
         <h2>La herramienta web y la app gratuitas</h2>
@@ -216,11 +236,35 @@ export default async function AboutPage({
     ],
   };
 
+  // AboutPage → Organization: the org-level E-E-A-T / entity signal. `sameAs`
+  // points to the publisher's real, verifiable App Store and Google Play
+  // listings; the org publishes both apps under this identity.
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: c.metaTitle,
+    inLanguage: l,
+    url: `${SITE_URL}${getPathname({ locale: l, href: "/about" })}`,
+    mainEntity: {
+      "@type": "Organization",
+      name: PUBLISHER.legalName,
+      alternateName: PUBLISHER.displayName,
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.webp`,
+      email: "info@forexmarkethours.app",
+      sameAs: [APP.appStoreUrl, APP.googlePlayUrl],
+    },
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
 
       <header className="max-w-2xl">

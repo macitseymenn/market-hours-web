@@ -1,8 +1,18 @@
-import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { SESSIONS } from "@/lib/site";
+import { POSTS, type BlogLocale } from "@/content/blog";
 
 export async function SessionTimes() {
   const t = await getTranslations("home.sessions");
+  const locale = (await getLocale()) as BlogLocale;
+
+  // Contextual internal links to the two most relevant guides — looked up by
+  // their stable English slug so the correct localized slug/href resolves
+  // for both locales.
+  const bestTimePost = POSTS.find((p) => p.slug.en === "best-time-to-trade-forex");
+  const overlapPost = POSTS.find((p) => p.slug.en === "london-new-york-overlap");
 
   return (
     <section
@@ -90,6 +100,91 @@ export async function SessionTimes() {
             {t("overlapBody")}
           </p>
         </div>
+
+        {/* Session-overlap diagram — a lightweight SVG so the page qualifies for
+            image-pack results, with a descriptive, localized alt text. */}
+        <div className="mt-8 overflow-hidden rounded-2xl border border-surface-2 bg-surface/30 p-4 sm:p-5">
+          <Image
+            src="/session-overlap-timeline.svg"
+            alt={t("diagramAlt")}
+            width={850}
+            height={260}
+            className="h-auto w-full"
+          />
+          <p className="mt-3 text-center text-xs text-muted">{t("diagramCaption")}</p>
+        </div>
+
+        {/* Dated, cited stats — concrete GEO/AEO signals with real outbound
+            links (BIS turnover survey, IANA timezone database). */}
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-fog">
+          {t.rich("statTurnover", {
+            link: (chunks) => (
+              <a
+                href="https://www.bis.org/statistics/rpfx22.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald underline underline-offset-4 hover:text-emerald-600"
+              >
+                {chunks}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            ),
+          })}
+        </p>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-fog">
+          {t.rich("statIana", {
+            link: (chunks) => (
+              <a
+                href="https://www.iana.org/time-zones"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald underline underline-offset-4 hover:text-emerald-600"
+              >
+                {chunks}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            ),
+          })}
+        </p>
+
+        {/* Internal linking depth — contextual links into the two most
+            relevant guides, plus the methodology page (owned elsewhere). */}
+        {bestTimePost && overlapPost && (
+          <p className="mt-4 max-w-3xl text-sm text-fog">
+            {t.rich("relatedReading", {
+              bestTime: (chunks) => (
+                <Link
+                  href={{
+                    pathname: "/blog/[slug]",
+                    params: { slug: bestTimePost.slug[locale] },
+                  }}
+                  className="text-emerald underline underline-offset-4 hover:text-emerald-600"
+                >
+                  {chunks}
+                </Link>
+              ),
+              overlap: (chunks) => (
+                <Link
+                  href={{
+                    pathname: "/blog/[slug]",
+                    params: { slug: overlapPost.slug[locale] },
+                  }}
+                  className="text-emerald underline underline-offset-4 hover:text-emerald-600"
+                >
+                  {chunks}
+                </Link>
+              ),
+              methodology: (chunks) => (
+                <Link
+                  href="/methodology"
+                  className="text-emerald underline underline-offset-4 hover:text-emerald-600"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
+          </p>
+        )}
 
         <p className="mt-6 text-xs text-muted">{t("dstNote")}</p>
       </div>

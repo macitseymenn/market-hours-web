@@ -13,7 +13,10 @@
     "primaryNav": "Primary navigation",
     "skipToContent": "Skip to content",
     "language": "Language",
-    "languageNames": { "en": "English", "es": "Español" }
+    "languageNames": {
+      "en": "English",
+      "es": "Español"
+    }
   },
   "footer": {
     "explore": "Explore",
@@ -49,8 +52,16 @@
     "hero": {
       "h1": "Forex market hours, live in your timezone",
       "definition": "Forex market hours are the times each major currency market is open for trading. The forex market runs 24 hours a day, five days a week, across four sessions — Sydney, Tokyo, London and New York — and is closed on weekends. This live clock shows which sessions are open right now in your timezone.",
+      "converterH2": "Forex market hours converter — see every session in your timezone",
+      "converterIntro": "Convert every trading session to your local time automatically — no manual GMT math, no daylight-saving guesswork. Pick any city or use your device's detected timezone below.",
       "phonePrompt": "Prefer it on your phone?",
       "phoneLink": "Get the free iOS & Android app ↓"
+    },
+    "status": {
+      "statusLine": "{count, plural, =0 {No major forex session is open right now — trading resumes when the Sydney session opens for the week.} =1 {Right now, the {list} session is open.} other {Right now, the {list} sessions are open.}}",
+      "fact": "The forex market trades 24 hours a day, five days a week — from Sunday 22:00 GMT to Friday 22:00 GMT.",
+      "countdown": "Next session opens in {hours}h {minutes}m ({city}).",
+      "verified": "Session times verified {date}."
     },
     "trust": {
       "aria": "At a glance",
@@ -113,6 +124,11 @@
       "overlapTitle": "London – New York overlap",
       "overlapGmt": "≈ 13:00 – 17:00 GMT",
       "overlapBody": "When London and New York are open together, the two largest markets trade at once — typically the deepest liquidity and sharpest moves of the day.",
+      "diagramAlt": "Timeline diagram of the Sydney, Tokyo, Frankfurt, London and New York forex sessions across a 24-hour GMT day, with the London–New York overlap highlighted.",
+      "diagramCaption": "The five major forex sessions across a 24-hour GMT day. The shaded band marks the London–New York overlap (≈13:00–17:00 GMT), the day's highest-liquidity window.",
+      "statTurnover": "For scale: global average daily forex turnover reached $7.5 trillion in April 2022, with UK (London) desks handling the largest share worldwide, according to the Bank for International Settlements' <link>Triennial Central Bank Survey</link>.",
+      "statIana": "Every hour on this page is computed live from the <link>IANA Time Zone Database</link> — the timezone reference built into virtually every browser and operating system — so daylight-saving shifts are always accurate.",
+      "relatedReading": "Want more detail? Read about the <bestTime>best time to trade forex by session</bestTime>, dig into the <overlap>London–New York overlap</overlap>, or see <methodology>how we calculate these times</methodology>.",
       "dstNote": "Session windows are provided for general information and shift with daylight-saving time (for example, London observes GMT in winter and BST in summer). The app always reflects the current, correctly-adjusted times."
     },
     "features": {
@@ -226,10 +242,10 @@
     "yourTimezone": "Your timezone",
     "hour24": "24-hour time",
     "options": "Options",
-    "timelineAria": "24-hour session timeline — scroll horizontally to see all hours",
+    "timelineAria": "Forex market hours converter — 24-hour session timeline, scroll horizontally to see all sessions in your timezone",
     "sessionOpen": "{city} session open",
     "sessionClosed": "{city} session closed",
-    "footnote": "Times update live in your selected timezone and follow daylight-saving changes automatically. Session windows are indicative of normal trading days and exclude market holidays.",
+    "footnote": "This converter updates every session to your selected timezone live and follows daylight-saving changes automatically. Session windows are indicative of normal trading days and exclude market holidays.",
     "clockAria": "24-hour clock showing the major forex sessions in GMT.",
     "cities": {
       "Sydney": "Sydney",
@@ -244,7 +260,35 @@
       "Los Angeles": "Los Angeles",
       "Shanghai": "Shanghai",
       "Mumbai": "Mumbai",
-      "UTC": "UTC"
+      "UTC": "UTC",
+      "Honolulu": "Honolulu",
+      "Anchorage": "Anchorage",
+      "Denver": "Denver",
+      "Chicago": "Chicago",
+      "Mexico City": "Mexico City",
+      "Toronto": "Toronto",
+      "São Paulo": "São Paulo",
+      "Buenos Aires": "Buenos Aires",
+      "Lisbon": "Lisbon",
+      "Madrid": "Madrid",
+      "Paris": "Paris",
+      "Lagos": "Lagos",
+      "Athens": "Athens",
+      "Johannesburg": "Johannesburg",
+      "Moscow": "Moscow",
+      "Riyadh": "Riyadh",
+      "Tehran": "Tehran",
+      "Karachi": "Karachi",
+      "Dhaka": "Dhaka",
+      "Bangkok": "Bangkok",
+      "Jakarta": "Jakarta",
+      "Singapore": "Singapore",
+      "Hong Kong": "Hong Kong",
+      "Perth": "Perth",
+      "Seoul": "Seoul",
+      "Adelaide": "Adelaide",
+      "Brisbane": "Brisbane",
+      "Auckland": "Auckland"
     }
   },
   "alarms": {
@@ -299,7 +343,8 @@
     "appStoreLine2": "App Store",
     "googlePlayAria": "Get it on Google Play — {app} (opens in a new tab)",
     "googlePlayLine1": "Get it on",
-    "googlePlayLine2": "Google Play"
+    "googlePlayLine2": "Google Play",
+    "newTab": "(opens in a new tab)"
   },
   "blog": {
     "metaTitle": "Forex Market Hours Blog — Sessions & Trading Times",

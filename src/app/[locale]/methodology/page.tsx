@@ -93,7 +93,10 @@ const COPY = {
           . That database is maintained precisely because daylight-saving rules
           change from country to country and year to year — so reading from it,
           instead of a fixed table we&apos;d have to update by hand, is what keeps
-          the tool accurate without drifting out of date.
+          the tool accurate without drifting out of date. In practice we also
+          spot-check the tool against the actual local clocks in each session city,
+          especially around the spring and autumn clock-change weekends when
+          mismatches are most likely to surface.
         </p>
 
         <h2>Why not a fixed GMT table?</h2>
@@ -200,6 +203,10 @@ const COPY = {
           horario de verano cambian de un país a otro y de un año a otro, así que
           leer de ella, en lugar de una tabla fija que tendríamos que actualizar a
           mano, es lo que mantiene la herramienta precisa sin quedarse desfasada.
+          En la práctica, además cotejamos la herramienta con los relojes locales
+          reales de cada ciudad de sesión, sobre todo en los fines de semana de
+          cambio de hora de primavera y otoño, cuando es más probable que aparezcan
+          discrepancias.
         </p>
 
         <h2>¿Por qué no una tabla fija en GMT?</h2>

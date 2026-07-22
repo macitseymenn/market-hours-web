@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { PRODUCT, SITE_URL } from "@/lib/site";
+import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -49,6 +49,17 @@ const COPY = {
           and the interactive clock never contradict each other. Content is
           periodically re-checked as clock-change dates and market conventions are
           confirmed each year.
+        </p>
+
+        <h2>Editorial oversight</h2>
+        <p>
+          Editorial responsibility for {PRODUCT.name} sits with the{" "}
+          {PUBLISHER.displayName} team, the software company that builds and
+          maintains the tool — see our <Link href="/about">About page</Link>. The
+          same team both writes the guides and maintains the live tool, so the
+          data behind an article and the words describing it are checked together
+          rather than in isolation. When a real named editor is credited on an
+          article, their profile and background will be linked from the byline.
         </p>
 
         <h2>Corrections</h2>
@@ -125,6 +136,18 @@ const COPY = {
           guías escritas y el reloj interactivo nunca se contradicen. El contenido
           se vuelve a comprobar periódicamente, a medida que cada año se confirman
           las fechas de los cambios de hora y las convenciones de mercado.
+        </p>
+
+        <h2>Supervisión editorial</h2>
+        <p>
+          La responsabilidad editorial de {PRODUCT.name} recae en el equipo de{" "}
+          {PUBLISHER.displayName}, la empresa de software que crea y mantiene la
+          herramienta; consulta nuestra <Link href="/about">página Acerca de</Link>.
+          El mismo equipo redacta las guías y mantiene la herramienta en vivo, de
+          modo que los datos que hay detrás de un artículo y las palabras que lo
+          describen se comprueban a la vez, no por separado. Cuando se acredite a un
+          editor con nombre en un artículo, su perfil y su trayectoria se enlazarán
+          desde la firma.
         </p>
 
         <h2>Correcciones</h2>

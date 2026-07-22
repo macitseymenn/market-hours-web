@@ -7,6 +7,18 @@
 // Swap this one constant for the real production domain when it's ready.
 export const SITE_URL = "https://forexmarkethours.app";
 
+/**
+ * Homepage content freshness, used for JSON-LD `datePublished`/`dateModified`
+ * and the visible "Session times verified {Month Year}" line. Bump `modified`
+ * whenever the homepage copy or session data is materially reviewed/updated —
+ * it is a manual editorial signal, not a build timestamp, so it stays accurate
+ * even though the page itself is served from an ISR cache.
+ */
+export const CONTENT_DATES = {
+  published: "2026-01-15",
+  modified: "2026-07-22",
+} as const;
+
 /** The product: a free web tool (the star) with companion mobile apps. */
 export const PRODUCT = {
   name: "Forex Market Hours",

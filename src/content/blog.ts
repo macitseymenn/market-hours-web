@@ -79,7 +79,7 @@ In standard (winter) time, the four major sessions run roughly:
 
 - **Sydney** — 22:00–07:00 GMT. Opens the trading week and sets an early tone for AUD and NZD pairs, but overall volume is the lightest of the four.
 - **Tokyo** — 00:00–09:00 GMT. The main Asian session, most active for JPY crosses like USD/JPY and EUR/JPY.
-- **Frankfurt/London** — 07:00–17:00 GMT. London alone is the largest forex centre in the world by trading volume, according to the Bank for International Settlements' [Triennial Central Bank Survey](https://www.bis.org/statistics/rpfx22.htm), so the London open often sets the tone for the rest of the day.
+- **Frankfurt/London** — 07:00–17:00 GMT. London alone is the largest forex centre in the world by trading volume — global average daily FX turnover reached $7.5 trillion in April 2022, and UK desks handled the largest share of it, according to the Bank for International Settlements' [Triennial Central Bank Survey](https://www.bis.org/statistics/rpfx22.htm) — so the London open often sets the tone for the rest of the day.
 - **New York** — 13:00–22:00 GMT. The second-largest session, driving USD volatility and home to major U.S. data releases.
 
 Each session alone offers reasonable liquidity for its regional currencies. But the real activity spikes happen at the **overlaps**, where two sessions run simultaneously.
@@ -92,6 +92,27 @@ Which hours matter most depends on which pairs you follow:
 - **USD/JPY, EUR/JPY, GBP/JPY** — the Tokyo–London overlap, roughly 07:00–09:00 GMT, plus the tail end of the Tokyo session, tends to matter most for yen pairs.
 - **AUD/USD, NZD/USD** — the Sydney–Tokyo overlap, around 00:00–07:00 GMT, is the relevant window for Australian and New Zealand dollar pairs.
 - **USD/CAD** — most active during the New York session itself, particularly around U.S. and Canadian data releases.
+
+## Best time to trade by day of the week
+
+Liquidity isn't just an hour-of-day question — it also shifts across the trading week:
+
+- **Monday** is typically the quietest day. Asian markets are still catching up on news from the weekend, and European and U.S. desks often wait for the week's first data releases before committing to size.
+- **Tuesday through Thursday** carry the heaviest volume overall, since every major session is running at full staffing and most scheduled economic data — central-bank decisions, employment figures, inflation prints — is released midweek.
+- **Friday afternoon**, especially once the New York session passes its own midday, volume tends to thin out again as desks square positions ahead of the weekend close at 22:00 GMT.
+
+None of this changes which hours a session is open — only how much volume typically shows up during them.
+
+## A worked example: the London–New York overlap in practice
+
+To see why the overlap matters, walk through a typical Tuesday in GMT:
+
+1. **07:00–08:00 GMT** — Frankfurt opens. EUR pairs start seeing steady, moderate volume.
+2. **08:00 GMT** — London opens. Liquidity across GBP and EUR pairs increases noticeably; this is often where the day's initial directional bias forms.
+3. **13:00 GMT** — New York opens while London is still five hours into its session. This is the start of the overlap: EUR/USD, GBP/USD and USD/JPY volume typically climbs sharply, spreads tighten, and any scheduled 13:30 GMT (8:30 a.m. ET) U.S. data release — non-farm payrolls, CPI, retail sales — lands right at the start of this window.
+4. **17:00 GMT** — London closes. New York continues alone for a few more hours, and volume gradually eases off.
+
+The concrete takeaway: if you only have a narrow window to watch the market each day, the 13:00–17:00 GMT stretch is where the largest share of the day's volume, and the sessions' own overlap, both land at once.
 
 ## Liquidity, spreads and volatility: the trade-off
 
@@ -125,7 +146,7 @@ En horario estándar (de invierno), las cuatro grandes sesiones funcionan aproxi
 
 - **Sídney** — 22:00–07:00 GMT. Abre la semana de negociación y marca un tono temprano para los pares del AUD y el NZD, pero su volumen es el más ligero de las cuatro.
 - **Tokio** — 00:00–09:00 GMT. La principal sesión asiática, la más activa para los cruces del JPY como el USD/JPY y el EUR/JPY.
-- **Fráncfort/Londres** — 07:00–17:00 GMT. Londres por sí solo es el mayor centro forex del mundo por volumen de negociación, según la [Encuesta Trienal de Bancos Centrales](https://www.bis.org/statistics/rpfx22.htm) del Banco de Pagos Internacionales, por lo que la apertura de Londres suele marcar el tono del resto del día.
+- **Fráncfort/Londres** — 07:00–17:00 GMT. Londres por sí solo es el mayor centro forex del mundo por volumen de negociación — el volumen medio diario de negociación de forex alcanzó los 7,5 billones de dólares en abril de 2022, y las mesas del Reino Unido gestionaron la mayor cuota de ese volumen, según la [Encuesta Trienal de Bancos Centrales](https://www.bis.org/statistics/rpfx22.htm) del Banco de Pagos Internacionales — por lo que la apertura de Londres suele marcar el tono del resto del día.
 - **Nueva York** — 13:00–22:00 GMT. La segunda sesión más grande, que impulsa la volatilidad del USD y alberga las principales publicaciones de datos de EE. UU.
 
 Cada sesión por separado ofrece una liquidez razonable para sus divisas regionales. Pero los verdaderos picos de actividad se producen en los **solapamientos**, donde dos sesiones funcionan simultáneamente.
@@ -138,6 +159,27 @@ Qué horas importan más depende de qué pares sigas:
 - **USD/JPY, EUR/JPY, GBP/JPY** — el solapamiento Tokio–Londres, aproximadamente de 07:00 a 09:00 GMT, junto con el tramo final de la sesión de Tokio, suele ser lo más relevante para los pares del yen.
 - **AUD/USD, NZD/USD** — el solapamiento Sídney–Tokio, en torno a las 00:00–07:00 GMT, es la ventana relevante para los pares del dólar australiano y neozelandés.
 - **USD/CAD** — más activo durante la propia sesión de Nueva York, especialmente en torno a las publicaciones de datos de EE. UU. y Canadá.
+
+## Mejor hora para operar según el día de la semana
+
+La liquidez no depende solo de la hora del día: también varía a lo largo de la semana de negociación:
+
+- **El lunes** suele ser el día más tranquilo. Los mercados asiáticos todavía están asimilando las noticias del fin de semana, y las mesas europeas y estadounidenses suelen esperar a las primeras publicaciones de datos de la semana antes de operar con volumen.
+- **De martes a jueves** se concentra el mayor volumen general, ya que todas las sesiones principales funcionan a pleno rendimiento y la mayoría de los datos económicos programados —decisiones de bancos centrales, cifras de empleo, datos de inflación— se publican a mitad de semana.
+- **El viernes por la tarde**, sobre todo una vez que la sesión de Nueva York supera su propio mediodía, el volumen tiende a reducirse de nuevo a medida que las mesas cierran posiciones antes del cierre del fin de semana a las 22:00 GMT.
+
+Nada de esto cambia las horas en que una sesión está abierta; solo cuánto volumen suele aparecer durante ellas.
+
+## Un ejemplo práctico: el solapamiento Londres–Nueva York en acción
+
+Para entender por qué importa el solapamiento, sigamos un martes típico en GMT:
+
+1. **07:00–08:00 GMT** — Abre Fráncfort. Los pares del EUR empiezan a registrar un volumen constante y moderado.
+2. **08:00 GMT** — Abre Londres. La liquidez en los pares de la GBP y el EUR aumenta notablemente; a menudo aquí se forma el sesgo direccional inicial del día.
+3. **13:00 GMT** — Abre Nueva York mientras Londres lleva ya cinco horas de sesión. Aquí empieza el solapamiento: el volumen de EUR/USD, GBP/USD y USD/JPY suele subir con fuerza, los spreads se estrechan, y cualquier publicación de datos de EE. UU. programada para las 13:30 GMT (8:30 a. m. hora del Este) —nóminas no agrícolas, IPC, ventas minoristas— cae justo al inicio de esta ventana.
+4. **17:00 GMT** — Cierra Londres. Nueva York continúa sola unas horas más y el volumen se va reduciendo gradualmente.
+
+La conclusión concreta: si solo dispones de una ventana estrecha para seguir el mercado cada día, el tramo de 13:00 a 17:00 GMT es donde coinciden a la vez la mayor parte del volumen del día y el propio solapamiento de las sesiones.
 
 ## Liquidez, spreads y volatilidad: el equilibrio
 

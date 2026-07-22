@@ -12,8 +12,8 @@ export function GET() {
 > ${PRODUCT.description}
 
 ## Key pages
-- [Live forex market-hours tool](${SITE_URL}/): see which sessions (Sydney, Tokyo, Frankfurt, London, New York) are open right now, in your timezone.
-- [Blog](${SITE_URL}/blog): guides on forex market hours, sessions and timezones.
+- [Live forex market-hours tool](${SITE_URL}/en/): see which sessions (Sydney, Tokyo, Frankfurt, London, New York) are open right now, in your timezone.
+- [Blog](${SITE_URL}/en/blog): guides on forex market hours, sessions and timezones.
 
 ## Articles
 ${posts

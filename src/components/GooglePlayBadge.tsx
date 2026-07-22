@@ -13,7 +13,6 @@ export async function GooglePlayBadge({ className = "" }: { className?: string }
       href={APP.googlePlayUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={t("googlePlayAria", { app: APP.name })}
       className={`inline-flex items-center gap-3 rounded-xl border border-surface-2 bg-charcoal px-5 py-3 text-ivory transition-transform hover:-translate-y-0.5 hover:border-fog/40 ${className}`}
     >
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7 shrink-0">
@@ -28,6 +27,7 @@ export async function GooglePlayBadge({ className = "" }: { className?: string }
         </span>
         <span className="text-lg font-semibold">{t("googlePlayLine2")}</span>
       </span>
+      <span className="sr-only"> {t("newTab")}</span>
     </a>
   );
 }

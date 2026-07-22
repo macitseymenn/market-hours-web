@@ -7,13 +7,16 @@
     "getApp": "Descargar la app"
   },
   "header": {
-    "homeAria": "Inicio de Horario del Mercado Forex",
+    "homeAria": "Inicio de Forex Market Hours",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "primaryNav": "Navegación principal",
     "skipToContent": "Saltar al contenido",
     "language": "Idioma",
-    "languageNames": { "en": "English", "es": "Español" }
+    "languageNames": {
+      "en": "English",
+      "es": "Español"
+    }
   },
   "footer": {
     "explore": "Explorar",
@@ -49,8 +52,16 @@
     "hero": {
       "h1": "Horario del mercado forex, en vivo en tu zona horaria",
       "definition": "El horario del mercado forex son las horas en que cada gran mercado de divisas está abierto para operar. El mercado forex funciona las 24 horas del día, cinco días a la semana, a través de cuatro sesiones —Sídney, Tokio, Londres y Nueva York— y cierra los fines de semana. Este reloj en vivo muestra qué sesiones están abiertas ahora mismo en tu zona horaria.",
+      "converterH2": "Convertidor de horarios del mercado forex — ve cada sesión en tu zona horaria",
+      "converterIntro": "Convierte automáticamente cada sesión de trading a tu hora local, sin cálculos manuales de GMT ni conjeturas sobre el horario de verano. Elige cualquier ciudad o usa la zona horaria que detecte tu dispositivo, abajo.",
       "phonePrompt": "¿Lo prefieres en tu móvil?",
       "phoneLink": "Descarga la app gratis para iOS y Android ↓"
+    },
+    "status": {
+      "statusLine": "{count, plural, =0 {Ahora mismo no hay ninguna sesión importante abierta: la negociación se reanuda cuando abre la sesión de Sídney para la semana.} =1 {Ahora mismo, la sesión de {list} está abierta.} other {Ahora mismo, las sesiones de {list} están abiertas.}}",
+      "fact": "El mercado forex opera las 24 horas del día, cinco días a la semana, desde el domingo a las 22:00 GMT hasta el viernes a las 22:00 GMT.",
+      "countdown": "La próxima sesión abre en {hours} h {minutes} min ({city}).",
+      "verified": "Horarios de sesión verificados en {date}."
     },
     "trust": {
       "aria": "De un vistazo",
@@ -113,6 +124,11 @@
       "overlapTitle": "Solapamiento Londres – Nueva York",
       "overlapGmt": "≈ 13:00 – 17:00 GMT",
       "overlapBody": "Cuando Londres y Nueva York están abiertos a la vez, los dos mayores mercados operan simultáneamente: por lo general, la mayor liquidez y los movimientos más bruscos del día.",
+      "diagramAlt": "Diagrama de línea de tiempo de las sesiones forex de Sídney, Tokio, Fráncfort, Londres y Nueva York a lo largo de un día de 24 horas en GMT, con el solapamiento Londres–Nueva York destacado.",
+      "diagramCaption": "Las cinco grandes sesiones forex a lo largo de un día de 24 horas en GMT. La banda resaltada marca el solapamiento Londres–Nueva York (≈13:00–17:00 GMT), la ventana de mayor liquidez del día.",
+      "statTurnover": "Para dimensionarlo: el volumen medio diario de negociación de forex alcanzó los 7,5 billones de dólares en abril de 2022, con las mesas del Reino Unido (Londres) gestionando la mayor cuota mundial, según la <link>Encuesta Trienal de Bancos Centrales</link> del Banco de Pagos Internacionales.",
+      "statIana": "Cada hora en esta página se calcula en tiempo real a partir de la <link>Base de Datos de Zonas Horarias de IANA</link> —la referencia de zonas horarias integrada en prácticamente todos los navegadores y sistemas operativos—, por lo que los cambios de horario de verano siempre son precisos.",
+      "relatedReading": "¿Quieres más detalle? Lee sobre la <bestTime>mejor hora para operar forex por sesión</bestTime>, profundiza en el <overlap>solapamiento Londres–Nueva York</overlap>, o consulta <methodology>cómo calculamos estos horarios</methodology>.",
       "dstNote": "Los horarios de las sesiones se facilitan a título informativo y varían con el horario de verano (por ejemplo, Londres sigue el GMT en invierno y el BST en verano). La app siempre refleja los horarios actuales, correctamente ajustados."
     },
     "features": {
@@ -226,10 +242,10 @@
     "yourTimezone": "Tu zona horaria",
     "hour24": "Formato de 24 horas",
     "options": "Opciones",
-    "timelineAria": "Línea de tiempo de sesiones de 24 horas: desplázate horizontalmente para ver todas las horas",
+    "timelineAria": "Convertidor de horarios del mercado forex: línea de tiempo de sesiones de 24 horas, desplázate horizontalmente para ver todas las sesiones en tu zona horaria",
     "sessionOpen": "Sesión de {city} abierta",
     "sessionClosed": "Sesión de {city} cerrada",
-    "footnote": "Los horarios se actualizan en vivo en la zona horaria que elijas y se ajustan automáticamente a los cambios de horario de verano. Las ventanas de las sesiones son orientativas para jornadas de negociación normales y excluyen los días festivos de mercado.",
+    "footnote": "Este convertidor actualiza cada sesión en vivo a la zona horaria que elijas y se ajusta automáticamente a los cambios de horario de verano. Las ventanas de las sesiones son orientativas para jornadas de negociación normales y excluyen los días festivos de mercado.",
     "clockAria": "Reloj de 24 horas que muestra las principales sesiones forex en GMT.",
     "cities": {
       "Sydney": "Sídney",
@@ -244,7 +260,35 @@
       "Los Angeles": "Los Ángeles",
       "Shanghai": "Shanghái",
       "Mumbai": "Bombay",
-      "UTC": "UTC"
+      "UTC": "UTC",
+      "Honolulu": "Honolulú",
+      "Anchorage": "Anchorage",
+      "Denver": "Denver",
+      "Chicago": "Chicago",
+      "Mexico City": "Ciudad de México",
+      "Toronto": "Toronto",
+      "São Paulo": "São Paulo",
+      "Buenos Aires": "Buenos Aires",
+      "Lisbon": "Lisboa",
+      "Madrid": "Madrid",
+      "Paris": "París",
+      "Lagos": "Lagos",
+      "Athens": "Atenas",
+      "Johannesburg": "Johannesburgo",
+      "Moscow": "Moscú",
+      "Riyadh": "Riad",
+      "Tehran": "Teherán",
+      "Karachi": "Karachi",
+      "Dhaka": "Daca",
+      "Bangkok": "Bangkok",
+      "Jakarta": "Yakarta",
+      "Singapore": "Singapur",
+      "Hong Kong": "Hong Kong",
+      "Perth": "Perth",
+      "Seoul": "Seúl",
+      "Adelaide": "Adelaida",
+      "Brisbane": "Brisbane",
+      "Auckland": "Auckland"
     }
   },
   "alarms": {
@@ -299,7 +343,8 @@
     "appStoreLine2": "App Store",
     "googlePlayAria": "Consíguelo en Google Play — {app} (se abre en una pestaña nueva)",
     "googlePlayLine1": "Consíguelo en",
-    "googlePlayLine2": "Google Play"
+    "googlePlayLine2": "Google Play",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "blog": {
     "metaTitle": "Blog de Horario del Mercado Forex — Sesiones y horarios de trading",

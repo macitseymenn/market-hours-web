@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAllPosts, getPost, readingMinutes, type BlogLocale } from "@/content/blog";
-import { getAuthor } from "@/content/authors";
+import { getAuthor, isPlaceholderAuthor, EDITORIAL_TEAM } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
@@ -51,7 +51,10 @@ export async function generateMetadata({
       url: `${SITE_URL}${getPathname({ locale: l, href: hrefFor(l as BlogLocale) })}`,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
-      authors: author ? [author.name] : undefined,
+      // Attribute to the real author once wired; until then, honestly to the org.
+      authors: [
+        author && !isPlaceholderAuthor(author) ? author.name : EDITORIAL_TEAM.name,
+      ],
       tags: post.tags,
     },
   };
@@ -71,6 +74,9 @@ export default async function PostPage({
   if (!post) notFound();
 
   const author = getAuthor(post.authorSlug);
+  // A byline is only a named person once real author data is wired in; until then
+  // we attribute honestly to the Organization (correct E-E-A-T for a YMYL topic).
+  const namedAuthor = author && !isPlaceholderAuthor(author) ? author : null;
   const url = `${SITE_URL}${getPathname({ locale: l, href: { pathname: "/blog/[slug]", params: { slug: post.slug } } })}`;
 
   const articleJsonLd = {
@@ -86,9 +92,15 @@ export default async function PostPage({
     image: `${SITE_URL}${post.cover}`,
     wordCount: post.body.trim().split(/\s+/).length,
     keywords: post.tags.join(", "),
-    // Attributed to the organization, not a fabricated Person — honest E-E-A-T
-    // for a YMYL topic while author profiles remain placeholder.
-    author: { "@type": "Organization", name: PUBLISHER.legalName, url: SITE_URL },
+    // Named Person once a real author is wired in; otherwise honestly the
+    // Organization — never a fabricated Person for a YMYL topic.
+    author: namedAuthor
+      ? {
+          "@type": "Person",
+          name: namedAuthor.name,
+          url: `${SITE_URL}${getPathname({ locale: l, href: { pathname: "/author/[slug]", params: { slug: namedAuthor.slug } } })}`,
+        }
+      : { "@type": "Organization", name: PUBLISHER.legalName, url: SITE_URL },
     publisher: {
       "@type": "Organization",
       name: PUBLISHER.legalName,
@@ -143,23 +155,48 @@ export default async function PostPage({
           {post.title}
         </h1>
 
-        {author && (
+        {namedAuthor ? (
           <div className="mt-6 flex items-center gap-3 border-y border-surface-2 py-4">
             <Image
-              src={author.avatar}
-              alt={author.name}
+              src={namedAuthor.avatar}
+              alt={namedAuthor.name}
               width={44}
               height={44}
               className="rounded-full border border-surface-2"
             />
             <div className="text-sm">
+              <span className="text-muted">{t("writtenBy")} </span>
               <Link
-                href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
+                href={{ pathname: "/author/[slug]", params: { slug: namedAuthor.slug } }}
                 className="font-semibold text-ivory hover:text-emerald"
               >
-                {author.name}
+                {namedAuthor.name}
               </Link>
-              <p className="text-muted">{author.role}</p>
+              <p className="text-muted">{namedAuthor.role}</p>
+            </div>
+          </div>
+        ) : (
+          <div className="mt-6 flex items-center gap-3 border-y border-surface-2 py-4">
+            <Image
+              src={EDITORIAL_TEAM.avatar}
+              alt={EDITORIAL_TEAM.name}
+              width={44}
+              height={44}
+              className="rounded-full border border-surface-2"
+            />
+            <div className="text-sm">
+              <span className="text-muted">{t("writtenBy")} </span>
+              <Link
+                href={EDITORIAL_TEAM.href}
+                className="font-semibold text-ivory hover:text-emerald"
+              >
+                {EDITORIAL_TEAM.name}
+              </Link>
+              <p className="text-muted">
+                {l === "es"
+                  ? "Contenido revisado con fuentes primarias"
+                  : "Content reviewed against primary sources"}
+              </p>
             </div>
           </div>
         )}
@@ -194,12 +231,12 @@ export default async function PostPage({
         </p>
       )}
 
-      {author && (
+      {namedAuthor ? (
         <footer className="mt-12 rounded-2xl border border-surface-2 bg-surface/50 p-6">
           <div className="flex items-start gap-4">
             <Image
-              src={author.avatar}
-              alt={author.name}
+              src={namedAuthor.avatar}
+              alt={namedAuthor.name}
               width={56}
               height={56}
               className="rounded-full border border-surface-2"
@@ -207,12 +244,38 @@ export default async function PostPage({
             <div>
               <p className="text-sm text-muted">{t("writtenBy")}</p>
               <Link
-                href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
+                href={{ pathname: "/author/[slug]", params: { slug: namedAuthor.slug } }}
                 className="font-semibold text-ivory hover:text-emerald"
               >
-                {author.name}
+                {namedAuthor.name}
               </Link>
-              <p className="mt-1 text-sm text-fog">{author.bio}</p>
+              <p className="mt-1 text-sm text-fog">{namedAuthor.bio}</p>
+            </div>
+          </div>
+        </footer>
+      ) : (
+        <footer className="mt-12 rounded-2xl border border-surface-2 bg-surface/50 p-6">
+          <div className="flex items-start gap-4">
+            <Image
+              src={EDITORIAL_TEAM.avatar}
+              alt={EDITORIAL_TEAM.name}
+              width={56}
+              height={56}
+              className="rounded-full border border-surface-2"
+            />
+            <div>
+              <p className="text-sm text-muted">{t("writtenBy")}</p>
+              <Link
+                href={EDITORIAL_TEAM.href}
+                className="font-semibold text-ivory hover:text-emerald"
+              >
+                {EDITORIAL_TEAM.name}
+              </Link>
+              <p className="mt-1 text-sm text-fog">
+                {l === "es"
+                  ? "Contenido investigado y revisado por el equipo editorial de Forex Market Hours. Consulta nuestra política editorial."
+                  : "Content researched and reviewed by the Forex Market Hours editorial team. See our editorial policy."}
+              </p>
             </div>
           </div>
         </footer>
