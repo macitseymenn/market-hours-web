@@ -16,6 +16,10 @@ import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
+// ISR: re-render hourly so a scheduled post appears in its author's post list as
+// soon as it publishes — see `isPublished` in @/content/blog.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return AUTHORS.map((a) => ({ slug: a.slug }));
 }

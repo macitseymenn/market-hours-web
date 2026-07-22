@@ -13,6 +13,12 @@ import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
+// ISR: re-render hourly. A future-dated post is not prebuilt (it's excluded from
+// generateStaticParams while unpublished) and its URL 404s until 00:00 UTC on its
+// date; after that, the gate opens and the page is generated on demand. See
+// `isPublished` in @/content/blog.
+export const revalidate = 3600;
+
 export function generateStaticParams({ params }: { params: { locale: string } }) {
   const l = (hasLocale(routing.locales, params.locale)
     ? params.locale

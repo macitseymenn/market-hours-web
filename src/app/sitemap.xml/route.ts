@@ -5,8 +5,10 @@ import { routing } from "@/i18n/routing";
 
 // Custom sitemap route (instead of Next's metadata `sitemap.ts`) so we can add an
 // `<?xml-stylesheet?>` — browsers render a friendly table, search engines read
-// the raw XML. Fully static.
-export const dynamic = "force-static";
+// the raw XML. ISR (revalidate) rather than fully static so a scheduled post
+// enters the sitemap automatically once it publishes — see `isPublished` in
+// @/content/blog.
+export const revalidate = 3600;
 
 type Href = Parameters<typeof getPathname>[0]["href"];
 type Locale = (typeof routing.locales)[number];

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#1a1714"/>
+  <circle cx="220" cy="210" r="84" fill="none" stroke="#4e6e81" stroke-width="5"/>
+  <ellipse cx="220" cy="210" rx="34" ry="84" fill="none" stroke="#4e6e81" stroke-width="3" opacity="0.7"/>
+  <line x1="136" y1="210" x2="304" y2="210" stroke="#4e6e81" stroke-width="3" opacity="0.7"/>
+  <line x1="150" y1="168" x2="290" y2="168" stroke="#4e6e81" stroke-width="2" opacity="0.5"/>
+  <line x1="150" y1="252" x2="290" y2="252" stroke="#4e6e81" stroke-width="2" opacity="0.5"/>
+  <g fill="#c3b8a9" font-family="sans-serif" font-size="15">
+    <text x="360" y="180">GMT · EST · CET</text>
+    <text x="360" y="212">IST · GST · SGT · AEST</text>
+  </g>
+  <text x="360" y="130" fill="#ece3d6" font-family="sans-serif" font-size="30" font-weight="700">Hours by timezone</text>
+  <text x="360" y="270" fill="#c6a24c" font-family="sans-serif" font-size="16">DST handled automatically</text>
+</svg>
