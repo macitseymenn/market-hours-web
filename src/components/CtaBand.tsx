@@ -1,8 +1,11 @@
+import { getTranslations } from "next-intl/server";
 import { APP } from "@/lib/site";
 import { AppStoreBadge } from "./AppStoreBadge";
 import { GooglePlayBadge } from "./GooglePlayBadge";
 
-export function CtaBand() {
+export async function CtaBand() {
+  const t = await getTranslations("home.cta");
+
   return (
     <section id="apps" className="border-t border-surface-2/60 py-20 md:py-24">
       <div className="mx-auto max-w-4xl px-5">
@@ -12,21 +15,20 @@ export function CtaBand() {
             className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald/10 blur-3xl"
           />
           <p className="relative text-sm font-medium uppercase tracking-wide text-emerald">
-            Take it with you
+            {t("eyebrow")}
           </p>
           <h2 className="relative mt-3 text-3xl font-semibold text-ivory sm:text-4xl">
-            Get the free app for iOS &amp; Android
+            {t("h2")}
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-lg text-fog">
-            Everything the web tool does, plus Home &amp; Lock Screen widgets, an
-            economic calendar, and alerts 15 minutes before each session opens.
+            {t("body")}
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-4">
             <AppStoreBadge />
             <GooglePlayBadge />
           </div>
           <p className="relative mt-5 text-sm text-muted">
-            {APP.platforms.join(" · ")} · No ads · Collects no data
+            {APP.platforms.join(" · ")} · {t("platformsSuffix")}
           </p>
         </div>
       </div>

@@ -10,13 +10,15 @@
     "homeAria": "Forex Market Hours home",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "primaryNav": "Primary navigation"
+    "primaryNav": "Primary navigation",
+    "skipToContent": "Skip to content"
   },
   "footer": {
     "explore": "Explore",
     "companyLegal": "Company & legal",
     "publishedBy": "Published by {publisher}.",
-    "appStore": "App Store"
+    "appStore": "App Store",
+    "rights": "© {year} {legalName}. Not affiliated with Apple Inc. “App Store” is a trademark of Apple Inc. · {host}"
   },
   "legalNav": {
     "about": "About",
@@ -26,5 +28,292 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact"
+  },
+  "common": {
+    "disclaimer": "Forex Market Hours is a market-hours tool only. It does not provide financial advice and does not offer trading, deposit, or withdrawal services. Trading foreign exchange carries risk. Session times are provided for general information and follow daylight-saving changes."
+  },
+  "schema": {
+    "webAppDescription": "A free live tool that shows which forex sessions — Sydney, Tokyo, Frankfurt, London and New York — are open right now, in your own timezone. See session overlaps, opening times and daylight-saving shifts at a glance, right in your browser. Also available as an iOS and Android app.",
+    "appDescription": "The Forex Market Hours app shows exactly when the London, New York, Tokyo, Sydney and Frankfurt forex sessions open and close in your own timezone — with a live 24-hour session clock, widgets, session alerts and an economic calendar. A market-tracking utility, not a broker.",
+    "howToName": "How to read the forex market hours clock",
+    "featureList": [
+      "Live forex session clock",
+      "Automatic timezone conversion",
+      "Session overlap detection",
+      "Daylight-saving adjustment"
+    ]
+  },
+  "home": {
+    "hero": {
+      "h1": "Forex market hours, live in your timezone",
+      "definition": "Forex market hours are the times each major currency market is open for trading. The forex market runs 24 hours a day, five days a week, across four sessions — Sydney, Tokyo, London and New York — and is closed on weekends. This live clock shows which sessions are open right now in your timezone.",
+      "phonePrompt": "Prefer it on your phone?",
+      "phoneLink": "Get the free iOS & Android app ↓"
+    },
+    "trust": {
+      "aria": "At a glance",
+      "items": [
+        "Free forever",
+        "No advertisements",
+        "No account needed",
+        "Collects no data",
+        "60+ languages"
+      ]
+    },
+    "how": {
+      "h2": "How to read the forex market hours clock",
+      "intro": "No sign-up, no downloads needed — just open the page and read the live market hours in three steps.",
+      "steps": [
+        {
+          "title": "Set your timezone",
+          "body": "The timeline opens in your local timezone automatically. Switch it to compare any market from anywhere in the world."
+        },
+        {
+          "title": "Read the open markets",
+          "body": "Each coloured bar is a session's trading window. The moving line is now — wherever it crosses a bar, that market is open."
+        },
+        {
+          "title": "Plan around the overlaps",
+          "body": "Spot the London–New York overlap and other high-liquidity windows at a glance, then time your trading around them."
+        }
+      ]
+    },
+    "sessions": {
+      "h2": "Forex trading sessions & session times",
+      "intro": "The forex market runs 24 hours a day across the major sessions below. These are the standard windows in GMT; the tool above adjusts them to your timezone and for daylight saving automatically.",
+      "caption": "Major forex trading sessions and their approximate opening hours in GMT.",
+      "colSession": "Session",
+      "colRegion": "Region",
+      "colHours": "Hours (GMT)",
+      "colWhy": "Why it matters",
+      "largest": "Largest",
+      "cities": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "Frankfurt": "Frankfurt",
+        "London": "London",
+        "New York": "New York"
+      },
+      "regions": {
+        "Sydney": "Australia",
+        "Tokyo": "Japan",
+        "Frankfurt": "Germany",
+        "London": "United Kingdom",
+        "New York": "United States"
+      },
+      "notes": {
+        "Sydney": "Opens the trading week; sets early AUD and NZD tone.",
+        "Tokyo": "The Asian session; most active for JPY pairs.",
+        "Frankfurt": "Opens Europe an hour before London; key for EUR pairs.",
+        "London": "The largest forex session by volume worldwide.",
+        "New York": "Drives USD volatility; overlaps London mid-afternoon."
+      },
+      "overlapTitle": "London – New York overlap",
+      "overlapGmt": "≈ 13:00 – 17:00 GMT",
+      "overlapBody": "When London and New York are open together, the two largest markets trade at once — typically the deepest liquidity and sharpest moves of the day.",
+      "dstNote": "Session windows are provided for general information and shift with daylight-saving time (for example, London observes GMT in winter and BST in summer). The app always reflects the current, correctly-adjusted times."
+    },
+    "features": {
+      "h2": "Forex session tools: clock, alerts & economic calendar",
+      "intro": "The web tool shows you the live hours; the free app adds widgets, an economic calendar and alerts. Here's the full picture.",
+      "items": [
+        {
+          "title": "Live 24-hour session clock",
+          "body": "An interactive circular clock maps the whole trading day so you can see which markets are open at a glance."
+        },
+        {
+          "title": "Home & Lock Screen widgets",
+          "body": "Keep the next session open right on your Home and Lock Screen, updating in real time without opening the app."
+        },
+        {
+          "title": "Live economic calendar",
+          "body": "Track high-impact releases — NFP, CPI, GDP, PMI and central-bank rate decisions — before they move the market."
+        },
+        {
+          "title": "Session & news alerts",
+          "body": "Get a heads-up 15 minutes before a session opens, plus alerts for the economic events that matter to you."
+        },
+        {
+          "title": "Automatic timezone",
+          "body": "Every time is converted to your local timezone and adjusted for GMT/BST, so there's no manual math."
+        },
+        {
+          "title": "Dark mode & battery-friendly",
+          "body": "A dark interface built for long analysis sessions, designed to stay light on your battery."
+        }
+      ]
+    },
+    "blogPreview": {
+      "h2": "Forex market hours guides",
+      "intro": "Guides and explainers on forex market hours, sessions and the timezones that shape them.",
+      "viewAll": "View all posts →",
+      "learnMore": "Learn more →"
+    },
+    "faq": {
+      "h2": "Forex market hours: frequently asked questions",
+      "items": [
+        {
+          "q": "Is this free to use?",
+          "a": "Yes. The Forex Market Hours web tool is completely free, with no ads and no sign-up. The companion iOS and Android apps are free too."
+        },
+        {
+          "q": "Do I need to create an account?",
+          "a": "No account is required. Open the page and the live market hours appear instantly in your timezone."
+        },
+        {
+          "q": "Does it give trading signals or financial advice?",
+          "a": "No. It is a market-hours tool that shows when sessions open and close. It does not provide financial advice, trading signals, or any trading, deposit or withdrawal services."
+        },
+        {
+          "q": "Which forex sessions does it show?",
+          "a": "The major sessions — Sydney, Tokyo, Frankfurt, London and New York — plus the high-volume session overlaps where volatility tends to peak."
+        },
+        {
+          "q": "Are the times correct for daylight saving?",
+          "a": "Yes. Every market's hours are computed from its own timezone rules, so daylight-saving shifts (GMT/BST, EST/EDT, and so on) are always applied automatically."
+        },
+        {
+          "q": "Is there a mobile app?",
+          "a": "Yes. Forex Market Hours is available on the App Store (iPhone, iPad, Mac, Apple Vision Pro) and on Google Play for Android, adding widgets, an economic calendar and alerts 15 minutes before each session opens."
+        },
+        {
+          "q": "Does it collect my data?",
+          "a": "No. The tool runs in your browser and the app collects no data."
+        },
+        {
+          "q": "What time does the forex market open and close?",
+          "a": "The forex market opens Sunday at 5:00 PM New York time (22:00 GMT) when Sydney begins trading, and closes Friday at 5:00 PM New York time. It runs 24 hours a day, five days a week, and is closed on weekends."
+        },
+        {
+          "q": "Is the forex market open right now?",
+          "a": "The forex market is open 24 hours from Sunday 5 PM ET to Friday 5 PM ET. To see whether a specific session — Sydney, Tokyo, London or New York — is trading at this moment in your timezone, check the live clock at the top of this page."
+        },
+        {
+          "q": "What is the best time to trade forex?",
+          "a": "The most active window is the London–New York overlap, roughly 13:00–17:00 GMT, when the two largest markets trade at once. Liquidity is deepest and spreads are tightest then, though volatility is higher. The best time also depends on the currency pairs you trade."
+        },
+        {
+          "q": "Why is the London session the most important?",
+          "a": "London is the largest forex trading centre by volume — the UK handles the biggest share of global FX turnover (BIS Triennial Survey). The London open often sets the day's direction, and its afternoon overlaps with New York, creating the busiest hours of the day."
+        },
+        {
+          "q": "What are the forex market hours in my timezone?",
+          "a": "Session times are usually quoted in GMT, but this tool converts every session to your local timezone automatically and adjusts for daylight saving — so you see the exact hour each market opens and closes on your own clock, with no manual conversion."
+        }
+      ]
+    },
+    "screenshots": {
+      "h2": "The forex session clock on your phone",
+      "intro": "Clean, focused screens built for quick glances during the trading day — on iPhone, iPad, Mac and Android.",
+      "clockLabel": "Live session clock",
+      "clockCaption": "London open in 42m",
+      "calendarLabel": "Economic calendar",
+      "alertsLabel": "Session alerts",
+      "alertTitle": "London session opening",
+      "alertBody": "Opens in 15 minutes · 08:00 GMT",
+      "disclaimer": "Illustrative previews. Times and events shown are examples."
+    },
+    "cta": {
+      "eyebrow": "Take it with you",
+      "h2": "Get the free app for iOS & Android",
+      "body": "Everything the web tool does, plus Home & Lock Screen widgets, an economic calendar, and alerts 15 minutes before each session opens.",
+      "platformsSuffix": "No ads · Collects no data"
+    }
+  },
+  "tool": {
+    "yourTimezone": "Your timezone",
+    "hour24": "24-hour time",
+    "options": "Options",
+    "timelineAria": "24-hour session timeline — scroll horizontally to see all hours",
+    "sessionOpen": "{city} session open",
+    "sessionClosed": "{city} session closed",
+    "footnote": "Times update live in your selected timezone and follow daylight-saving changes automatically. Session windows are indicative of normal trading days and exclude market holidays.",
+    "clockAria": "24-hour clock showing the major forex sessions in GMT.",
+    "cities": {
+      "Sydney": "Sydney",
+      "Tokyo": "Tokyo",
+      "Frankfurt": "Frankfurt",
+      "London": "London",
+      "New York": "New York",
+      "Berlin": "Berlin",
+      "Istanbul": "Istanbul",
+      "Cairo": "Cairo",
+      "Dubai": "Dubai",
+      "Los Angeles": "Los Angeles",
+      "Shanghai": "Shanghai",
+      "Mumbai": "Mumbai",
+      "UTC": "UTC"
+    }
+  },
+  "alarms": {
+    "bellLabel": "Alarm",
+    "setAria": "Set alarm for when {city} opens",
+    "cancelAria": "Cancel alarm for when {city} opens",
+    "titleOn": "Alarm on — rings when {city} opens (in {countdown})",
+    "titleOff": "Alarm me when {city} opens",
+    "options": "Alarm options",
+    "close": "Close",
+    "sound": "Alarm sound",
+    "soundOn": "🔊 Sound on",
+    "soundOff": "🔈 Sound off",
+    "soundHint": "Click a sound to select it and hear a preview.",
+    "testSound": "▶ Test selected sound",
+    "notifications": "Notifications",
+    "notifEnabled": "✓ Browser notifications enabled.",
+    "notifPrompt": "Show a popup when an alarm rings.",
+    "notifEnable": "Enable notifications",
+    "notifDenied": "Notifications are blocked in your browser settings — the sound and tab-title countdown still work.",
+    "notifUnsupported": "Your browser doesn’t support notifications — using sound + the tab-title countdown.",
+    "notifTabHint": "On another tab when an alarm rings? This tab keeps flashing 🔔 in its title until you come back. For alerts when the site is fully closed, use the <link>mobile app</link>.",
+    "customTitle": "Set a custom alarm",
+    "customHint": "Pick any date and time and we’ll ring your chosen sound then.",
+    "dateTime": "Date & time",
+    "labelOptional": "Label (optional)",
+    "labelPlaceholder": "e.g. Check EUR/USD",
+    "addAlarm": "Add alarm",
+    "errPickDateTime": "Pick a date and time.",
+    "errFuture": "Choose a time in the future.",
+    "activeTitle": "Active alarms",
+    "activeEmpty": "No alarms yet. Set one above, or tap the 🔔 next to a market in the timeline.",
+    "opens": "opens",
+    "inTime": "in {countdown}",
+    "removeMarketAria": "Remove {city} alarm",
+    "removeCustomAria": "Remove alarm {label}",
+    "clearAll": "Clear all alarms",
+    "defaultLabel": "Alarm",
+    "notifSessionOpenTitle": "{city} session is open",
+    "notifSessionOpenBody": "The {city} forex session just opened.",
+    "notifCustomBody": "Your alarm is ringing.",
+    "titleOpens": "{city} opens",
+    "titleReturn": "‼️ Alarm — click to return"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "badges": {
+    "appStoreAria": "Download on the App Store — {app} (opens in a new tab)",
+    "appStoreLine1": "Download on the",
+    "appStoreLine2": "App Store",
+    "googlePlayAria": "Get it on Google Play — {app} (opens in a new tab)",
+    "googlePlayLine1": "Get it on",
+    "googlePlayLine2": "Google Play"
+  },
+  "blog": {
+    "metaTitle": "Forex Market Hours Blog — Sessions & Trading Times",
+    "metaDesc": "Clear guides to forex market hours, trading sessions, session overlaps and timezones — from the Forex Market Hours team.",
+    "indexTitle": "Blog",
+    "indexIntro": "Clear, practical guides to forex market hours, trading sessions and the timezones that shape them.",
+    "minRead": "{minutes} min read",
+    "by": "By <link>{name}</link>",
+    "backToBlog": "← Blog",
+    "lastUpdated": "Last updated {date}.",
+    "writtenBy": "Written by",
+    "breadcrumbHome": "Home",
+    "breadcrumbBlog": "Blog",
+    "authorAbout": "About",
+    "authorExperience": "Experience",
+    "authorElsewhere": "Elsewhere",
+    "authorArticles": "Articles by {name}"
   }
 }

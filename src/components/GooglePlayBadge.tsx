@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { APP } from "@/lib/site";
 
 /**
@@ -5,13 +6,14 @@ import { APP } from "@/lib/site";
  * App Store badge and the site palette. Swap APP.googlePlayUrl for the real
  * listing once the Android app is published.
  */
-export function GooglePlayBadge({ className = "" }: { className?: string }) {
+export async function GooglePlayBadge({ className = "" }: { className?: string }) {
+  const t = await getTranslations("badges");
   return (
     <a
       href={APP.googlePlayUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Get it on Google Play — ${APP.name} (opens in a new tab)`}
+      aria-label={t("googlePlayAria", { app: APP.name })}
       className={`inline-flex items-center gap-3 rounded-xl border border-surface-2 bg-charcoal px-5 py-3 text-ivory transition-transform hover:-translate-y-0.5 hover:border-fog/40 ${className}`}
     >
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7 shrink-0">
@@ -21,8 +23,10 @@ export function GooglePlayBadge({ className = "" }: { className?: string }) {
         <path d="M3.6 21.7c.3.24.7.3 1.06.1L16.9 15.6 13.3 12z" fill="#ff3a44" />
       </svg>
       <span className="flex flex-col leading-none">
-        <span className="text-[11px] font-medium opacity-70">Get it on</span>
-        <span className="text-lg font-semibold">Google Play</span>
+        <span className="text-[11px] font-medium opacity-70">
+          {t("googlePlayLine1")}
+        </span>
+        <span className="text-lg font-semibold">{t("googlePlayLine2")}</span>
       </span>
     </a>
   );

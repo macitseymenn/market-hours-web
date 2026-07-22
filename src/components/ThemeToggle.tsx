@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { useTranslations } from "next-intl";
 
 /**
  * Light/Dark theme switch. By default the site follows the operating system's
@@ -38,7 +39,9 @@ function subscribe(onChange: () => void) {
 const isDark = () => document.documentElement.classList.contains("dark");
 
 export function ThemeToggle() {
+  const t = useTranslations("theme");
   const dark = useSyncExternalStore(subscribe, isDark, () => false);
+  const label = dark ? t("switchToLight") : t("switchToDark");
 
   const toggle = () => {
     const root = document.documentElement;
@@ -58,8 +61,8 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
-      title={`Switch to ${dark ? "light" : "dark"} mode`}
+      aria-label={label}
+      title={label}
       className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-surface-2 text-fog transition-colors hover:text-ivory"
     >
       {/* Show the icon of the mode you'll switch TO. */}

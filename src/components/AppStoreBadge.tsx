@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { APP } from "@/lib/site";
 
 /**
@@ -5,13 +6,14 @@ import { APP } from "@/lib/site";
  * text) rather than embedding Apple's badge image, so it inherits the site's
  * palette and stays crisp at any size.
  */
-export function AppStoreBadge({ className = "" }: { className?: string }) {
+export async function AppStoreBadge({ className = "" }: { className?: string }) {
+  const t = await getTranslations("badges");
   return (
     <a
       href={APP.appStoreUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Download on the App Store — ${APP.name} (opens in a new tab)`}
+      aria-label={t("appStoreAria", { app: APP.name })}
       className={`inline-flex items-center gap-3 rounded-xl bg-ivory px-5 py-3 text-charcoal transition-transform hover:-translate-y-0.5 ${className}`}
     >
       <svg
@@ -24,9 +26,11 @@ export function AppStoreBadge({ className = "" }: { className?: string }) {
       </svg>
       <span className="flex flex-col leading-none">
         <span className="text-[11px] font-medium opacity-70">
-          Download on the
+          {t("appStoreLine1")}
         </span>
-        <span className="font-display text-lg font-semibold">App Store</span>
+        <span className="font-display text-lg font-semibold">
+          {t("appStoreLine2")}
+        </span>
       </span>
     </a>
   );

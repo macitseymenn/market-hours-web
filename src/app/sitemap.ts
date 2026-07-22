@@ -7,7 +7,9 @@ import { routing } from "@/i18n/routing";
 type SitemapHref = Parameters<typeof getPathname>[0]["href"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts();
+  // Slug maps are shared across locales via the resolved post; English is only
+  // used here to enumerate the posts (each carries every locale's slug).
+  const posts = getAllPosts("en");
 
   const abs = (locale: (typeof routing.locales)[number], href: SitemapHref) =>
     `${SITE_URL}${getPathname({ locale, href })}`;
@@ -45,18 +47,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   ];
 
-  // Blog post slugs are shared across locales (English), so `post.slug` is used
-  // for both locale URLs.
-  const postRoutes: MetadataRoute.Sitemap = posts.flatMap((p) =>
-    entries(
-      { pathname: "/blog/[slug]", params: { slug: p.slug } },
-      {
-        lastModified: new Date(p.updated ?? p.date),
-        changeFrequency: "monthly",
-        priority: 0.7,
+  // Blog post slugs are localized (English slug for /en, Spanish slug for /es),
+  // so each locale URL uses its own slug and hreflang pairs them together.
+  const postRoutes: MetadataRoute.Sitemap = posts.flatMap((p) => {
+    const hrefFor = (locale: (typeof routing.locales)[number]): SitemapHref => ({
+      pathname: "/blog/[slug]",
+      params: { slug: p.slugs[locale] },
+    });
+    const opts = {
+      lastModified: new Date(p.updated ?? p.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    };
+    return routing.locales.map((locale) => ({
+      url: abs(locale, hrefFor(locale)),
+      ...opts,
+      alternates: {
+        languages: {
+          en: abs("en", hrefFor("en")),
+          es: abs("es", hrefFor("es")),
+        },
       },
-    ),
-  );
+    }));
+  });
 
   // Trust / legal pages — indexable EEAT surface.
   const legalRoutes: MetadataRoute.Sitemap = LEGAL_NAV.flatMap((item) =>

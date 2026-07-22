@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { getAllPosts, getPost, readingMinutes } from "@/content/blog";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getAllPosts, getPost, readingMinutes, type BlogLocale } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
@@ -13,8 +13,11 @@ import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
-export function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
+export function generateStaticParams({ params }: { params: { locale: string } }) {
+  const l = (hasLocale(routing.locales, params.locale)
+    ? params.locale
+    : routing.defaultLocale) as BlogLocale;
+  return getAllPosts(l).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -23,28 +26,29 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = getPost(slug);
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const post = getPost(slug, l as BlogLocale);
   if (!post) return {};
   const author = getAuthor(post.authorSlug);
-  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
-  const href = { pathname: "/blog/[slug]", params: { slug: post.slug } } as const;
+  const hrefFor = (loc: BlogLocale) =>
+    ({ pathname: "/blog/[slug]", params: { slug: post.slugs[loc] } }) as const;
 
   return {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: getPathname({ locale: l, href }),
+      canonical: getPathname({ locale: l, href: hrefFor(l as BlogLocale) }),
       languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
+        en: getPathname({ locale: "en", href: hrefFor("en") }),
+        es: getPathname({ locale: "es", href: hrefFor("es") }),
+        "x-default": getPathname({ locale: "en", href: hrefFor("en") }),
       },
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `${SITE_URL}${getPathname({ locale: l, href })}`,
+      url: `${SITE_URL}${getPathname({ locale: l, href: hrefFor(l as BlogLocale) })}`,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
       authors: author ? [author.name] : undefined,
@@ -60,18 +64,21 @@ export default async function PostPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as BlogLocale;
+  const t = await getTranslations("blog");
 
-  const post = getPost(slug);
+  const post = getPost(slug, l);
   if (!post) notFound();
 
   const author = getAuthor(post.authorSlug);
-  const url = `${SITE_URL}/blog/${post.slug}`;
+  const url = `${SITE_URL}${getPathname({ locale: l, href: { pathname: "/blog/[slug]", params: { slug: post.slug } } })}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    inLanguage: l,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
     mainEntityOfPage: url,
@@ -93,8 +100,13 @@ export default async function PostPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `${SITE_URL}/${l}` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t("breadcrumbBlog"),
+        item: `${SITE_URL}${getPathname({ locale: l, href: "/blog" })}`,
+      },
       { "@type": "ListItem", position: 3, name: post.title, item: url },
     ],
   };
@@ -112,18 +124,18 @@ export default async function PostPage({
 
       <nav aria-label="Breadcrumb" className="text-sm text-muted">
         <Link href="/blog" className="hover:text-emerald">
-          ← Blog
+          {t("backToBlog")}
         </Link>
       </nav>
 
       <header className="mt-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-          <time dateTime={post.date}>{formatDate(post.date)}</time>
+          <time dateTime={post.date}>{formatDate(post.date, l)}</time>
           <span aria-hidden="true">·</span>
-          <span>{readingMinutes(post.body)} min read</span>
-          {post.tags.map((t) => (
-            <span key={t} className="rounded-full bg-surface px-2 py-0.5 text-xs text-emerald">
-              {t}
+          <span>{t("minRead", { minutes: readingMinutes(post.body) })}</span>
+          {post.tags.map((tag) => (
+            <span key={tag} className="rounded-full bg-surface px-2 py-0.5 text-xs text-emerald">
+              {tag}
             </span>
           ))}
         </div>
@@ -178,7 +190,7 @@ export default async function PostPage({
 
       {post.updated && (
         <p className="mt-10 text-sm text-muted">
-          Last updated {formatDate(post.updated)}.
+          {t("lastUpdated", { date: formatDate(post.updated, l) })}
         </p>
       )}
 
@@ -193,7 +205,7 @@ export default async function PostPage({
               className="rounded-full border border-surface-2"
             />
             <div>
-              <p className="text-sm text-muted">Written by</p>
+              <p className="text-sm text-muted">{t("writtenBy")}</p>
               <Link
                 href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
                 className="font-semibold text-ivory hover:text-emerald"

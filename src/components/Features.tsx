@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { FEATURES } from "@/lib/site";
 
 // Minimal stroke icons keyed to each feature. aria-hidden — the heading carries
@@ -38,24 +39,24 @@ const ICONS: Record<string, React.ReactNode> = {
   moon: <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8" />,
 };
 
-export function Features() {
+export async function Features() {
+  const t = await getTranslations("home.features");
+  const items = t.raw("items") as { title: string; body: string }[];
+
   return (
     <section id="features" className="border-t border-surface-2/60 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            Forex session tools: clock, alerts &amp; economic calendar
+            {t("h2")}
           </h2>
-          <p className="mt-4 text-lg text-fog">
-            The web tool shows you the live hours; the free app adds widgets, an
-            economic calendar and alerts. Here&apos;s the full picture.
-          </p>
+          <p className="mt-4 text-lg text-fog">{t("intro")}</p>
         </div>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f) => (
+          {FEATURES.map((f, i) => (
             <li
-              key={f.title}
+              key={f.icon}
               className="rounded-2xl border border-surface-2 bg-surface/50 p-6 transition-colors hover:border-emerald/50"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald/10 text-emerald">
@@ -73,9 +74,11 @@ export function Features() {
                 </svg>
               </span>
               <h3 className="mt-4 font-display text-lg font-semibold text-ivory">
-                {f.title}
+                {items[i]?.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-fog">{f.body}</p>
+              <p className="mt-2 text-sm leading-relaxed text-fog">
+                {items[i]?.body}
+              </p>
             </li>
           ))}
         </ul>

@@ -1,17 +1,20 @@
-import { FAQ } from "@/lib/site";
+import { getTranslations } from "next-intl/server";
 
 // Native <details>/<summary> accordion — fully keyboard-accessible and works
 // with no client-side JavaScript.
-export function Faq() {
+export async function Faq() {
+  const t = await getTranslations("home.faq");
+  const items = t.raw("items") as { q: string; a: string }[];
+
   return (
     <section id="faq" className="border-t border-surface-2/60 py-20 md:py-24">
       <div className="mx-auto max-w-3xl px-5">
         <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-          Forex market hours: frequently asked questions
+          {t("h2")}
         </h2>
 
         <div className="mt-10 divide-y divide-surface-2 border-y border-surface-2">
-          {FAQ.map((item) => (
+          {items.map((item) => (
             <details key={item.q} className="group py-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-medium text-ivory">
                 {item.q}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import {
   DAY_MS,
   MARKETS,
@@ -11,6 +12,14 @@ import {
 } from "@/lib/markets";
 import { AlarmBell } from "./alarms/AlarmBell";
 import { AlarmModal } from "./alarms/AlarmModal";
+
+/** Translate a city name via the `tool.cities` map, falling back to the raw
+ *  name for timezones the visitor's browser reports that aren't in the list. */
+type CityTranslator = { has: (k: string) => boolean; t: (k: string) => string };
+function cityLabel(tr: CityTranslator, city: string): string {
+  const key = `cities.${city}`;
+  return tr.has(key) ? tr.t(key) : city;
+}
 
 /**
  * Live, DST-accurate "Forex Market Time Zone Converter".
@@ -92,6 +101,10 @@ function PinClock({ h, m, s }: { h: number; m: number; s: number }) {
 }
 
 export function ForexTimeline() {
+  const t = useTranslations("tool");
+  const tr: CityTranslator = { has: (k) => t.has(k), t: (k) => t(k) };
+  // Format live clock weekdays/dates in the active locale (es -> "miércoles").
+  const dtLocale = useLocale() === "es" ? "es-ES" : "en-US";
   const [now, setNow] = useState<number | null>(null);
   const [displayTz, setDisplayTz] = useState("UTC");
   const [hour24, setHour24] = useState(true);
@@ -118,11 +131,15 @@ export function ForexTimeline() {
     if (!list.some((o) => o.tz === displayTz)) {
       list.unshift({ tz: displayTz, city: cityFromTz(displayTz) });
     }
-    return list.map((o) => ({
-      tz: o.tz,
-      label:
-        now !== null ? `${o.city} (${gmtLabel(tzOffset(o.tz, now))})` : o.city,
-    }));
+    return list.map((o) => {
+      const name = cityLabel(tr, o.city);
+      return {
+        tz: o.tz,
+        label:
+          now !== null ? `${name} (${gmtLabel(tzOffset(o.tz, now))})` : name,
+      };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayTz, now]);
 
   // Midnight today in the display timezone → the left edge of the 24h axis.
@@ -141,7 +158,7 @@ export function ForexTimeline() {
   const pinParts = now !== null ? tzParts(displayTz, now) : null;
   const pinTime =
     now !== null
-      ? new Intl.DateTimeFormat("en-US", {
+      ? new Intl.DateTimeFormat(dtLocale, {
           timeZone: displayTz,
           hour: "numeric",
           minute: "2-digit",
@@ -150,7 +167,7 @@ export function ForexTimeline() {
       : "";
   const pinDay =
     now !== null
-      ? new Intl.DateTimeFormat("en-US", {
+      ? new Intl.DateTimeFormat(dtLocale, {
           timeZone: displayTz,
           weekday: "long",
         }).format(now)
@@ -161,7 +178,7 @@ export function ForexTimeline() {
       {/* Controls */}
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <label className="flex items-center gap-2 text-sm text-fog">
-          <span className="text-muted">Your timezone</span>
+          <span className="text-muted">{t("yourTimezone")}</span>
           <select
             value={displayTz}
             onChange={(e) => setDisplayTz(e.target.value)}
@@ -177,7 +194,7 @@ export function ForexTimeline() {
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <label className="flex cursor-pointer items-center gap-2 text-sm text-fog">
-            24-hour time
+            {t("hour24")}
             <input
               type="checkbox"
               checked={hour24}
@@ -194,7 +211,7 @@ export function ForexTimeline() {
               <circle cx="12" cy="12" r="3" />
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
             </svg>
-            Options
+            {t("options")}
           </button>
         </div>
       </div>
@@ -207,7 +224,7 @@ export function ForexTimeline() {
         className="overflow-x-auto"
         tabIndex={0}
         role="group"
-        aria-label="24-hour session timeline — scroll horizontally to see all hours"
+        aria-label={t("timelineAria")}
       >
         <div className="relative min-w-[680px] pt-20">
           <HoursHeader hour24={hour24} />
@@ -217,9 +234,13 @@ export function ForexTimeline() {
               <CityRow
                 key={c.city}
                 city={c}
+                cityName={cityLabel(tr, c.city)}
+                statusOpen={t("sessionOpen", { city: cityLabel(tr, c.city) })}
+                statusClosed={t("sessionClosed", { city: cityLabel(tr, c.city) })}
                 now={now}
                 axisStart={axisStart}
                 hour24={hour24}
+                dtLocale={dtLocale}
               />
             ))}
           </ul>
@@ -269,11 +290,7 @@ export function ForexTimeline() {
         </div>
       </div>
 
-      <p className="mt-5 text-xs text-muted">
-        Times update live in your selected timezone and follow daylight-saving
-        changes automatically. Session windows are indicative of normal trading
-        days and exclude market holidays.
-      </p>
+      <p className="mt-5 text-xs text-muted">{t("footnote")}</p>
     </div>
   );
 }
@@ -311,14 +328,22 @@ function HoursHeader({ hour24 }: { hour24: boolean }) {
 
 function CityRow({
   city,
+  cityName,
+  statusOpen,
+  statusClosed,
   now,
   axisStart,
   hour24,
+  dtLocale,
 }: {
   city: Market;
+  cityName: string;
+  statusOpen: string;
+  statusClosed: string;
   now: number | null;
   axisStart: number | null;
   hour24: boolean;
+  dtLocale: string;
 }) {
   // Compute this market's open windows that intersect the visible 24h axis, plus
   // whether it is open right now. We check the local session for yesterday/today/
@@ -348,7 +373,7 @@ function CityRow({
 
   const localTime =
     now !== null
-      ? new Intl.DateTimeFormat("en-US", {
+      ? new Intl.DateTimeFormat(dtLocale, {
           timeZone: city.tz,
           hour: "numeric",
           minute: "2-digit",
@@ -358,7 +383,7 @@ function CityRow({
 
   const localDate =
     now !== null
-      ? new Intl.DateTimeFormat("en-US", {
+      ? new Intl.DateTimeFormat(dtLocale, {
           timeZone: city.tz,
           weekday: "short",
           month: "short",
@@ -376,7 +401,7 @@ function CityRow({
           {city.flag}
         </span>
         <span className="leading-tight">
-          <span className="block font-semibold text-ivory">{city.city}</span>
+          <span className="block font-semibold text-ivory">{cityName}</span>
           <span className="block font-mono text-sm text-fog">{localTime}</span>
           <span className="block text-[11px] text-muted">
             {localDate}
@@ -391,7 +416,7 @@ function CityRow({
           className="absolute left-0 top-0 text-[11px] font-semibold uppercase tracking-wide"
           style={{ color: openNow ? city.color : "var(--color-muted)" }}
         >
-          {city.city} session {openNow ? "open" : "closed"}
+          {openNow ? statusOpen : statusClosed}
         </span>
         {/* Empty rail — a clean track for each market (no hour gridlines). */}
         <div className="absolute inset-x-0 bottom-2 h-6 rounded-md bg-surface-2/50" />
@@ -412,7 +437,7 @@ function CityRow({
 
       {/* Alarm toggle in its own column — never overlaps the bars or now-line. */}
       <div className={`${ALARM_COL} flex items-center justify-end pl-3`}>
-        <AlarmBell city={city.city} now={now} />
+        <AlarmBell city={city.city} cityName={cityName} now={now} />
       </div>
     </li>
   );

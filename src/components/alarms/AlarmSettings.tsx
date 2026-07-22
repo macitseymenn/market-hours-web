@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { getMarket, nextOpen } from "@/lib/markets";
 import { SOUNDS } from "@/lib/sounds";
 import { formatCountdown, useAlarms } from "./AlarmProvider";
@@ -16,6 +17,11 @@ function toLocalInputValue(d: Date): string {
  * active alarms). Rendered inside the Options modal above the timeline.
  */
 export function AlarmSettings() {
+  const t = useTranslations("alarms");
+  const tc = useTranslations("tool");
+  const locale = useLocale();
+  const cityName = (city: string) =>
+    tc.has(`cities.${city}`) ? tc(`cities.${city}`) : city;
   const {
     sound,
     soundOn,
@@ -48,11 +54,11 @@ export function AlarmSettings() {
   const addCustom = () => {
     const at = new Date(dt).getTime();
     if (!dt || Number.isNaN(at)) {
-      setError("Pick a date and time.");
+      setError(t("errPickDateTime"));
       return;
     }
     if (at <= Date.now()) {
-      setError("Choose a time in the future.");
+      setError(t("errFuture"));
       return;
     }
     addCustomAlarm(at, label);
@@ -67,19 +73,17 @@ export function AlarmSettings() {
       {/* Sound */}
       <section className="pb-6">
         <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-ivory">Alarm sound</h3>
+          <h3 className="font-semibold text-ivory">{t("sound")}</h3>
           <button
             type="button"
             onClick={() => setSoundOn(!soundOn)}
             aria-pressed={soundOn}
             className="rounded-lg border border-surface-2 px-3 py-1.5 text-xs text-fog transition-colors hover:border-emerald hover:text-emerald"
           >
-            {soundOn ? "🔊 Sound on" : "🔈 Sound off"}
+            {soundOn ? t("soundOn") : t("soundOff")}
           </button>
         </div>
-        <p className="mt-2 text-sm text-muted">
-          Click a sound to select it and hear a preview.
-        </p>
+        <p className="mt-2 text-sm text-muted">{t("soundHint")}</p>
         <div className="mt-4 grid grid-cols-2 gap-3">
           {SOUNDS.map((s) => {
             const active = s.id === sound;
@@ -108,61 +112,54 @@ export function AlarmSettings() {
           onClick={() => preview()}
           className="mt-4 rounded-lg bg-emerald px-4 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-emerald-600"
         >
-          ▶ Test selected sound
+          {t("testSound")}
         </button>
       </section>
 
       {/* Notifications */}
       <section className="py-6">
-        <h3 className="font-semibold text-ivory">Notifications</h3>
+        <h3 className="font-semibold text-ivory">{t("notifications")}</h3>
         <div className="mt-2 text-sm">
           {permission === "granted" && (
-            <p className="text-emerald">✓ Browser notifications enabled.</p>
+            <p className="text-emerald">{t("notifEnabled")}</p>
           )}
           {permission === "default" && (
             <div className="flex flex-wrap items-center gap-3">
-              <p className="text-muted">Show a popup when an alarm rings.</p>
+              <p className="text-muted">{t("notifPrompt")}</p>
               <button
                 type="button"
                 onClick={requestPermission}
                 className="rounded-lg border border-emerald px-3 py-1.5 text-xs font-medium text-emerald transition-colors hover:bg-emerald/10"
               >
-                Enable notifications
+                {t("notifEnable")}
               </button>
             </div>
           )}
           {permission === "denied" && (
-            <p className="text-muted">
-              Notifications are blocked in your browser settings — the sound and
-              tab-title countdown still work.
-            </p>
+            <p className="text-muted">{t("notifDenied")}</p>
           )}
           {permission === "unsupported" && (
-            <p className="text-muted">
-              Your browser doesn’t support notifications — using sound + the
-              tab-title countdown.
-            </p>
+            <p className="text-muted">{t("notifUnsupported")}</p>
           )}
         </div>
         <p className="mt-3 text-xs text-muted">
-          On another tab when an alarm rings? This tab keeps flashing 🔔 in its title
-          until you come back. For alerts when the site is fully closed, use the{" "}
-          <a href="#apps" className="text-emerald hover:underline">
-            mobile app
-          </a>
-          .
+          {t.rich("notifTabHint", {
+            link: (chunks) => (
+              <a href="#apps" className="text-emerald hover:underline">
+                {chunks}
+              </a>
+            ),
+          })}
         </p>
       </section>
 
       {/* Custom alarm */}
       <section className="py-6">
-        <h3 className="font-semibold text-ivory">Set a custom alarm</h3>
-        <p className="mt-2 text-sm text-muted">
-          Pick any date and time and we’ll ring your chosen sound then.
-        </p>
+        <h3 className="font-semibold text-ivory">{t("customTitle")}</h3>
+        <p className="mt-2 text-sm text-muted">{t("customHint")}</p>
         <div className="mt-4 flex flex-wrap items-end gap-3">
           <label className="flex flex-col gap-1 text-xs text-muted">
-            Date &amp; time
+            {t("dateTime")}
             <input
               type="datetime-local"
               value={dt}
@@ -171,12 +168,12 @@ export function AlarmSettings() {
             />
           </label>
           <label className="flex flex-1 flex-col gap-1 text-xs text-muted">
-            Label (optional)
+            {t("labelOptional")}
             <input
               type="text"
               value={label}
               onChange={(e) => setLabel(e.target.value)}
-              placeholder="e.g. Check EUR/USD"
+              placeholder={t("labelPlaceholder")}
               maxLength={60}
               className="w-full min-w-[9rem] rounded-lg border border-surface-2 bg-charcoal px-3 py-2 text-sm text-ivory outline-none placeholder:text-muted focus-visible:border-emerald"
             />
@@ -186,7 +183,7 @@ export function AlarmSettings() {
             onClick={addCustom}
             className="rounded-lg bg-emerald px-4 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-emerald-600"
           >
-            Add alarm
+            {t("addAlarm")}
           </button>
         </div>
         {error && <p className="mt-2 text-xs text-muted">{error}</p>}
@@ -195,13 +192,10 @@ export function AlarmSettings() {
       {/* Active alarms */}
       <section className="pt-6">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
-          Active alarms {totalAlarms > 0 && `(${totalAlarms})`}
+          {t("activeTitle")} {totalAlarms > 0 && `(${totalAlarms})`}
         </h3>
         {totalAlarms === 0 ? (
-          <p className="mt-3 text-sm text-muted">
-            No alarms yet. Set one above, or tap the 🔔 next to a market in the
-            timeline.
-          </p>
+          <p className="mt-3 text-sm text-muted">{t("activeEmpty")}</p>
         ) : (
           <>
             <ul className="mt-3 flex flex-col gap-2">
@@ -215,16 +209,17 @@ export function AlarmSettings() {
                   >
                     <span className="flex items-center gap-2 text-ivory">
                       <span aria-hidden="true">{m?.flag}</span>
-                      {city} <span className="text-muted">· opens</span>
+                      {cityName(city)}{" "}
+                      <span className="text-muted">· {t("opens")}</span>
                     </span>
                     <span className="flex items-center gap-3">
                       <span className="font-mono text-fog" suppressHydrationWarning>
-                        in {cd}
+                        {t("inTime", { countdown: cd })}
                       </span>
                       <button
                         type="button"
                         onClick={() => toggle(city)}
-                        aria-label={`Remove ${city} alarm`}
+                        aria-label={t("removeMarketAria", { city: cityName(city) })}
                         className="text-muted transition-colors hover:text-ivory"
                       >
                         ✕
@@ -235,7 +230,7 @@ export function AlarmSettings() {
               })}
               {customAlarms.map((ca) => {
                 const cd = now !== null ? formatCountdown(ca.at - now) : "";
-                const when = new Intl.DateTimeFormat(undefined, {
+                const when = new Intl.DateTimeFormat(locale, {
                   weekday: "short",
                   hour: "2-digit",
                   minute: "2-digit",
@@ -251,12 +246,12 @@ export function AlarmSettings() {
                     </span>
                     <span className="flex items-center gap-3">
                       <span className="font-mono text-fog" suppressHydrationWarning>
-                        in {cd}
+                        {t("inTime", { countdown: cd })}
                       </span>
                       <button
                         type="button"
                         onClick={() => removeCustomAlarm(ca.id)}
-                        aria-label={`Remove alarm ${ca.label}`}
+                        aria-label={t("removeCustomAria", { label: ca.label })}
                         className="text-muted transition-colors hover:text-ivory"
                       >
                         ✕
@@ -271,7 +266,7 @@ export function AlarmSettings() {
               onClick={clearAll}
               className="mt-4 text-sm text-muted underline-offset-4 hover:text-ivory hover:underline"
             >
-              Clear all alarms
+              {t("clearAll")}
             </button>
           </>
         )}

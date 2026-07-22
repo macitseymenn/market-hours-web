@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { useTranslations } from "next-intl";
 import { AlarmSettings } from "./AlarmSettings";
 
 const FOCUSABLE =
@@ -9,6 +10,7 @@ const FOCUSABLE =
 
 /** Popup dialog holding the alarm settings, opened by the timeline's Options button. */
 export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const t = useTranslations("alarms");
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
 
@@ -71,13 +73,13 @@ export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => vo
         {/* Fixed header */}
         <div className="flex items-center justify-between border-b border-surface-2 px-5 py-4">
           <h2 id="alarm-options-title" className="text-lg font-semibold text-ivory">
-            Alarm options
+            {t("options")}
           </h2>
           <button
             ref={closeRef}
             type="button"
             onClick={onClose}
-            aria-label="Close"
+            aria-label={t("close")}
             className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-surface-2 text-muted transition-colors hover:text-ivory"
           >
             ✕

@@ -28,12 +28,18 @@ function arcPath(openUTC: number, closeUTC: number, r: number) {
   return `M ${a.x.toFixed(2)} ${a.y.toFixed(2)} A ${r} ${r} 0 ${largeArc} 1 ${b.x.toFixed(2)} ${b.y.toFixed(2)}`;
 }
 
-export function SessionClock({ className = "" }: { className?: string }) {
+export function SessionClock({
+  className = "",
+  ariaLabel = "24-hour clock showing the major forex sessions in GMT.",
+}: {
+  className?: string;
+  ariaLabel?: string;
+}) {
   return (
     <svg
       viewBox="0 0 260 260"
       role="img"
-      aria-label="24-hour clock showing the major forex sessions in GMT."
+      aria-label={ariaLabel}
       className={className}
     >
       <circle cx={CENTER} cy={CENTER} r={120} fill="none" stroke="var(--color-surface-2)" strokeWidth="1" />

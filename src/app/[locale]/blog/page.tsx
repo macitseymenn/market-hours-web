@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { getAllPosts, readingMinutes } from "@/content/blog";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getAllPosts, readingMinutes, type BlogLocale } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
-
-const BLOG_TITLE = "Forex Market Hours Blog — Sessions & Trading Times";
-const BLOG_DESC =
-  "Clear guides to forex market hours, trading sessions, session overlaps and timezones — from the Forex Market Hours team.";
 
 export async function generateMetadata({
   params,
@@ -20,11 +16,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
+  const t = await getTranslations({ locale: l, namespace: "blog" });
   const href = "/blog";
 
   return {
-    title: { absolute: BLOG_TITLE },
-    description: BLOG_DESC,
+    title: { absolute: t("metaTitle") },
+    description: t("metaDesc"),
     alternates: {
       canonical: getPathname({ locale: l, href }),
       languages: {
@@ -35,25 +32,25 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      title: BLOG_TITLE,
-      description: BLOG_DESC,
+      title: t("metaTitle"),
+      description: t("metaDesc"),
       url: `${SITE_URL}${getPathname({ locale: l, href })}`,
     },
   };
 }
 
 // Blog structured data — lists the posts for search engines.
-function blogJsonLd() {
+function blogJsonLd(locale: BlogLocale) {
   return {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: `${PRODUCT.name} Blog`,
-    url: `${SITE_URL}/blog`,
+    url: `${SITE_URL}${getPathname({ locale, href: "/blog" })}`,
     publisher: { "@type": "Organization", name: PUBLISHER.legalName },
-    blogPost: getAllPosts().map((p) => ({
+    blogPost: getAllPosts(locale).map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
-      url: `${SITE_URL}/blog/${p.slug}`,
+      url: `${SITE_URL}${getPathname({ locale, href: { pathname: "/blog/[slug]", params: { slug: p.slug } } })}`,
       datePublished: p.date,
       dateModified: p.updated ?? p.date,
     })),
@@ -67,20 +64,21 @@ export default async function BlogIndex({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as BlogLocale;
+  const t = await getTranslations("blog");
 
-  const posts = getAllPosts();
+  const posts = getAllPosts(l);
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLdScript(blogJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(blogJsonLd(l)) }}
       />
       <header className="max-w-2xl">
-        <h1 className="text-4xl font-semibold text-ivory sm:text-5xl">Blog</h1>
-        <p className="mt-4 text-lg text-fog">
-          Clear, practical guides to forex market hours, trading sessions and the
-          timezones that shape them.
-        </p>
+        <h1 className="text-4xl font-semibold text-ivory sm:text-5xl">
+          {t("indexTitle")}
+        </h1>
+        <p className="mt-4 text-lg text-fog">{t("indexIntro")}</p>
       </header>
 
       <ul className="mt-12 divide-y divide-surface-2">
@@ -90,9 +88,9 @@ export default async function BlogIndex({
             <li key={post.slug} className="py-8 first:pt-0">
               <article>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                  <time dateTime={post.date}>{formatDate(post.date, l)}</time>
                   <span aria-hidden="true">·</span>
-                  <span>{readingMinutes(post.body)} min read</span>
+                  <span>{t("minRead", { minutes: readingMinutes(post.body) })}</span>
                   {post.tags[0] && (
                     <>
                       <span aria-hidden="true">·</span>
@@ -111,13 +109,17 @@ export default async function BlogIndex({
                 <p className="mt-2 text-fog">{post.description}</p>
                 {author && (
                   <p className="mt-3 text-sm text-muted">
-                    By{" "}
-                    <Link
-                      href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
-                      className="text-fog hover:text-emerald"
-                    >
-                      {author.name}
-                    </Link>
+                    {t.rich("by", {
+                      name: author.name,
+                      link: (chunks) => (
+                        <Link
+                          href={{ pathname: "/author/[slug]", params: { slug: author.slug } }}
+                          className="text-fog hover:text-emerald"
+                        >
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
                   </p>
                 )}
               </article>

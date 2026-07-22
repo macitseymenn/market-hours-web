@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { useTranslations } from "next-intl";
 import { getMarket, nextOpen } from "@/lib/markets";
 import { playSound, type SoundId } from "@/lib/sounds";
 
@@ -69,6 +70,18 @@ export function formatCountdown(ms: number): string {
 }
 
 export function AlarmProvider({ children }: { children: React.ReactNode }) {
+  const t = useTranslations("alarms");
+  const tc = useTranslations("tool");
+  // Keep the latest translators in a ref so the 1s alarm loop and callbacks read
+  // localized copy without re-subscribing every render. Updated in an effect so
+  // the ref is never mutated during render.
+  const msgRef = useRef({ t, tc });
+  useEffect(() => {
+    msgRef.current = { t, tc };
+  }, [t, tc]);
+  const cityName = (c: string) =>
+    msgRef.current.tc.has(`cities.${c}`) ? msgRef.current.tc(`cities.${c}`) : c;
+
   const [armed, setArmed] = useState<string[]>([]);
   const [customAlarms, setCustomAlarms] = useState<CustomAlarm[]>([]);
   const [soundOn, setSoundOnState] = useState(true);
@@ -279,7 +292,7 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
           flashRef.current = !flashRef.current;
           document.title = flashRef.current
             ? `🔔 ${ringLabelRef.current}`
-            : "‼️ Alarm — click to return";
+            : msgRef.current.t("titleReturn");
           if (now - lastBeepRef.current > 2500) {
             lastBeepRef.current = now;
             ring();
@@ -301,14 +314,21 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
 
       let nearest: { text: string; at: number } | null = null;
 
+      const tr = msgRef.current.t;
+
       for (const city of armed) {
         const m = getMarket(city);
         if (!m) continue;
         const open = nextOpen(m, now);
-        if (!nearest || open < nearest.at) nearest = { text: `${city} opens`, at: open };
+        if (!nearest || open < nearest.at)
+          nearest = { text: tr("titleOpens", { city: cityName(city) }), at: open };
         const prev = prevOpenRef.current[city];
         if (prev !== undefined && open !== prev) {
-          trigger(`${city} session is open`, `The ${city} forex session just opened.`, `fmh-${city}`);
+          trigger(
+            tr("notifSessionOpenTitle", { city: cityName(city) }),
+            tr("notifSessionOpenBody", { city: cityName(city) }),
+            `fmh-${city}`,
+          );
         }
         prevOpenRef.current[city] = open;
       }
@@ -317,12 +337,17 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
         if (now >= ca.at) {
           if (!firedCustomRef.current.has(ca.id)) {
             firedCustomRef.current.add(ca.id);
-            trigger(ca.label || "Alarm", "Your alarm is ringing.", `fmh-${ca.id}`);
+            trigger(
+              ca.label || tr("defaultLabel"),
+              tr("notifCustomBody"),
+              `fmh-${ca.id}`,
+            );
             removeCustomAlarm(ca.id);
           }
           continue;
         }
-        if (!nearest || ca.at < nearest.at) nearest = { text: ca.label || "Alarm", at: ca.at };
+        if (!nearest || ca.at < nearest.at)
+          nearest = { text: ca.label || tr("defaultLabel"), at: ca.at };
       }
 
       // If ringing just started this tick, let it own the title next tick.
@@ -371,7 +396,9 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
         .catch(() => {});
     }
     setCustomAlarms((prev) =>
-      [...prev, { id, at, label: label.trim() || "Alarm" }].sort((a, b) => a.at - b.at),
+      [...prev, { id, at, label: label.trim() || msgRef.current.t("defaultLabel") }].sort(
+        (a, b) => a.at - b.at,
+      ),
     );
   }, []);
 

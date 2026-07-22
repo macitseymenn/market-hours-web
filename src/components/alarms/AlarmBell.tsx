@@ -1,14 +1,25 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { getMarket, nextOpen } from "@/lib/markets";
 import { formatCountdown, useAlarms } from "./AlarmProvider";
 
 /**
  * Per-market alarm toggle. When armed, shows a live "opens in …" countdown driven
  * by the timeline's `now`. Clicking arms/disarms an alarm for that market's next
- * session open.
+ * session open. `city` is the internal market key; `cityName` is the localized
+ * display name shown to the user.
  */
-export function AlarmBell({ city, now }: { city: string; now: number | null }) {
+export function AlarmBell({
+  city,
+  cityName,
+  now,
+}: {
+  city: string;
+  cityName: string;
+  now: number | null;
+}) {
+  const t = useTranslations("alarms");
   const { isArmed, toggle } = useAlarms();
   const armed = isArmed(city);
   const market = getMarket(city);
@@ -22,11 +33,15 @@ export function AlarmBell({ city, now }: { city: string; now: number | null }) {
       type="button"
       onClick={() => toggle(city)}
       aria-pressed={armed}
-      aria-label={`${armed ? "Cancel" : "Set"} alarm for when ${city} opens`}
+      aria-label={
+        armed
+          ? t("cancelAria", { city: cityName })
+          : t("setAria", { city: cityName })
+      }
       title={
         armed
-          ? `Alarm on — rings when ${city} opens (in ${countdown})`
-          : `Alarm me when ${city} opens`
+          ? t("titleOn", { city: cityName, countdown: countdown ?? "" })
+          : t("titleOff", { city: cityName })
       }
       className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-1 text-[11px] transition-colors ${
         armed
@@ -52,7 +67,7 @@ export function AlarmBell({ city, now }: { city: string; now: number | null }) {
           {countdown}
         </span>
       ) : (
-        <span>Alarm</span>
+        <span>{t("bellLabel")}</span>
       )}
     </button>
   );

@@ -6,7 +6,7 @@ import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 export const dynamic = "force-static";
 
 export function GET() {
-  const posts = getAllPosts();
+  const posts = getAllPosts("en");
   const body = `# ${PRODUCT.name}
 
 > ${PRODUCT.description}
@@ -17,7 +17,7 @@ export function GET() {
 
 ## Articles
 ${posts
-  .map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`)
+  .map((p) => `- [${p.title}](${SITE_URL}/en/blog/${p.slug}): ${p.description}`)
   .join("\n")}
 
 ## About

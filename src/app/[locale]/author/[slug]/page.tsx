@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AUTHORS, getAuthor } from "@/content/authors";
-import { getPostsByAuthor, readingMinutes } from "@/content/blog";
+import { getPostsByAuthor, readingMinutes, type BlogLocale } from "@/content/blog";
 import { formatDate } from "@/lib/format";
 import { SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
@@ -51,11 +51,13 @@ export default async function AuthorPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as BlogLocale;
+  const t = await getTranslations("blog");
 
   const author = getAuthor(slug);
   if (!author) notFound();
 
-  const posts = getPostsByAuthor(author.slug);
+  const posts = getPostsByAuthor(author.slug, l);
 
   // Person structured data — establishes author identity/authoritativeness.
   const personJsonLd = {
@@ -95,7 +97,7 @@ export default async function AuthorPage({
 
       <section className="mt-10">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
-          About
+          {t("authorAbout")}
         </h2>
         <p className="mt-3 text-fog">{author.longBio}</p>
       </section>
@@ -103,7 +105,7 @@ export default async function AuthorPage({
       {author.credentials.length > 0 && (
         <section className="mt-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
-            Experience
+            {t("authorExperience")}
           </h2>
           <ul className="mt-3 flex flex-col gap-2 text-fog">
             {author.credentials.map((c) => (
@@ -120,7 +122,7 @@ export default async function AuthorPage({
       {author.links.length > 0 && (
         <section className="mt-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
-            Elsewhere
+            {t("authorElsewhere")}
           </h2>
           <ul className="mt-3 flex flex-wrap gap-3">
             {author.links.map((l) => (
@@ -142,14 +144,14 @@ export default async function AuthorPage({
       {posts.length > 0 && (
         <section className="mt-12 border-t border-surface-2 pt-8">
           <h2 className="text-xl font-semibold text-ivory">
-            Articles by {author.name}
+            {t("authorArticles", { name: author.name })}
           </h2>
           <ul className="mt-6 flex flex-col gap-6">
             {posts.map((post) => (
               <li key={post.slug}>
                 <div className="text-sm text-muted">
-                  <time dateTime={post.date}>{formatDate(post.date)}</time> ·{" "}
-                  {readingMinutes(post.body)} min read
+                  <time dateTime={post.date}>{formatDate(post.date, l)}</time> ·{" "}
+                  {t("minRead", { minutes: readingMinutes(post.body) })}
                 </div>
                 <h3 className="mt-1 text-lg font-semibold text-ivory">
                   <Link

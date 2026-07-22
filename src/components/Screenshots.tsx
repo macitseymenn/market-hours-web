@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { SessionClock } from "./SessionClock";
 
 /*
@@ -30,29 +31,27 @@ function PhoneFrame({
   );
 }
 
-export function Screenshots() {
+export async function Screenshots() {
+  const t = await getTranslations("home.screenshots");
+  const tt = await getTranslations("tool");
+
   return (
     <section className="border-t border-surface-2/60 bg-surface/30 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            The forex session clock on your phone
+            {t("h2")}
           </h2>
-          <p className="mt-4 text-lg text-fog">
-            Clean, focused screens built for quick glances during the trading
-            day — on iPhone, iPad, Mac and Android.
-          </p>
+          <p className="mt-4 text-lg text-fog">{t("intro")}</p>
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          <PhoneFrame label="Live session clock">
-            <SessionClock className="w-full max-w-[150px]" />
-            <p className="text-center text-xs text-muted">
-              London open in 42m
-            </p>
+          <PhoneFrame label={t("clockLabel")}>
+            <SessionClock className="w-full max-w-[150px]" ariaLabel={tt("clockAria")} />
+            <p className="text-center text-xs text-muted">{t("clockCaption")}</p>
           </PhoneFrame>
 
-          <PhoneFrame label="Economic calendar">
+          <PhoneFrame label={t("calendarLabel")}>
             <ul className="w-full space-y-2 text-left">
               {[
                 ["13:30", "USD NFP", "High"],
@@ -71,14 +70,12 @@ export function Screenshots() {
             </ul>
           </PhoneFrame>
 
-          <PhoneFrame label="Session alerts">
+          <PhoneFrame label={t("alertsLabel")}>
             <div className="w-full rounded-xl border border-surface-2 bg-charcoal/60 p-4">
               <p className="text-xs font-semibold text-ivory">
-                London session opening
+                {t("alertTitle")}
               </p>
-              <p className="mt-1 text-[11px] text-muted">
-                Opens in 15 minutes · 08:00 GMT
-              </p>
+              <p className="mt-1 text-[11px] text-muted">{t("alertBody")}</p>
             </div>
             <span
               aria-hidden="true"
@@ -89,9 +86,7 @@ export function Screenshots() {
           </PhoneFrame>
         </div>
 
-        <p className="mt-8 text-center text-xs text-muted">
-          Illustrative previews. Times and events shown are examples.
-        </p>
+        <p className="mt-8 text-center text-xs text-muted">{t("disclaimer")}</p>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { APP, DISCLAIMER, LEGAL_NAV, NAV, PUBLISHER, SITE_URL } from "@/lib/site";
+import { APP, LEGAL_NAV, NAV, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link } from "@/i18n/navigation";
 
 export async function Footer() {
@@ -8,6 +8,7 @@ export async function Footer() {
   const t = await getTranslations("nav");
   const tf = await getTranslations("footer");
   const tl = await getTranslations("legalNav");
+  const tc = await getTranslations("common");
   const home = `/${locale}`;
   const linkClass = "inline-block py-1.5 hover:text-ivory";
 
@@ -76,11 +77,14 @@ export async function Footer() {
 
         {/* Prominent, honest disclaimer — a core E-E-A-T trust signal. */}
         <p className="mt-10 border-t border-surface-2/70 pt-6 text-xs leading-relaxed text-muted">
-          {DISCLAIMER}
+          {tc("disclaimer")}
         </p>
         <p className="mt-4 text-xs text-muted">
-          © {year} {PUBLISHER.legalName}. Not affiliated with Apple Inc. “App
-          Store” is a trademark of Apple Inc. · {new URL(SITE_URL).host}
+          {tf("rights", {
+            year,
+            legalName: PUBLISHER.legalName,
+            host: new URL(SITE_URL).host,
+          })}
         </p>
       </div>
     </footer>
