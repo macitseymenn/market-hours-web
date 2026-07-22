@@ -36,7 +36,7 @@ export function Screenshots() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            A closer look at the app
+            The forex session clock on your phone
           </h2>
           <p className="mt-4 text-lg text-fog">
             Clean, focused screens built for quick glances during the trading

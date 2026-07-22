@@ -1,3 +1,4 @@
+import { HERO_DEFINITION } from "@/lib/site";
 import { ForexTimeline } from "./ForexTimeline";
 
 export function Hero() {
@@ -13,10 +14,10 @@ export function Hero() {
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] text-ivory sm:text-5xl">
             Forex market hours, live in your timezone
           </h1>
+          {/* Definition-first answer — the extractable paragraph AI Overviews and
+              featured snippets quote for "forex market hours". */}
           <p className="mx-auto mt-5 max-w-2xl text-lg text-fog">
-            See which forex sessions are open right now. Sydney, Tokyo,
-            Frankfurt, London and New York — with a live clock, session overlaps
-            and automatic daylight-saving, straight in your browser.
+            {HERO_DEFINITION}
           </p>
         </div>
 

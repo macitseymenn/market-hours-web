@@ -1,8 +1,8 @@
-import { APP, DISCLAIMER, NAV, PUBLISHER, SITE_URL } from "@/lib/site";
+import { APP, DISCLAIMER, LEGAL_NAV, NAV, PUBLISHER, SITE_URL } from "@/lib/site";
 import { NavItem } from "./NavItem";
 
 export function Footer() {
-  const year = 2026; // Build-time constant; update on the yearly deploy.
+  const year = new Date().getFullYear();
   return (
     <footer className="border-t border-surface-2/70 bg-surface/40">
       <div className="mx-auto max-w-6xl px-5 py-12">
@@ -17,27 +17,53 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Footer">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-fog">
-              {NAV.map((item) => (
-                <li key={item.href}>
-                  <NavItem href={item.href} className="hover:text-ivory">
-                    {item.label}
-                  </NavItem>
+          <div className="flex flex-col gap-8 sm:flex-row sm:gap-12">
+            <nav aria-label="Footer">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                Explore
+              </p>
+              <ul className="flex flex-col gap-y-1 text-sm text-fog">
+                {NAV.map((item) => (
+                  <li key={item.href}>
+                    <NavItem
+                      href={item.href}
+                      className="inline-block py-1.5 hover:text-ivory"
+                    >
+                      {item.label}
+                    </NavItem>
+                  </li>
+                ))}
+                <li>
+                  <a
+                    href={APP.appStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block py-1.5 hover:text-ivory"
+                  >
+                    App Store
+                  </a>
                 </li>
-              ))}
-              <li>
-                <a
-                  href={APP.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-ivory"
-                >
-                  App Store
-                </a>
-              </li>
-            </ul>
-          </nav>
+              </ul>
+            </nav>
+
+            <nav aria-label="Company & legal">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                Company &amp; legal
+              </p>
+              <ul className="flex flex-col gap-y-1 text-sm text-fog">
+                {LEGAL_NAV.map((item) => (
+                  <li key={item.href}>
+                    <NavItem
+                      href={item.href}
+                      className="inline-block py-1.5 hover:text-ivory"
+                    >
+                      {item.label}
+                    </NavItem>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
 
         {/* Prominent, honest disclaimer — a core E-E-A-T trust signal. */}

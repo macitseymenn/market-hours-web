@@ -57,6 +57,39 @@ export const NAV = [
   { label: "Get the app", href: "/#apps" },
 ] as const;
 
+/** The href rendered as the standalone "Get the app" CTA button (filtered out
+ *  of the header's inline nav to avoid a duplicate adjacent link). */
+export const CTA_HREF = "/#apps";
+
+/**
+ * Trust / legal pages. Organization-level E-E-A-T surface, linked in the footer
+ * on every page. These are the pages a YMYL topic (forex) needs for Google to
+ * trust the site: who we are, how we compute times, editorial standards, and
+ * the standard legal set.
+ */
+export const LEGAL_NAV = [
+  { label: "About", href: "/about" },
+  { label: "How we calculate times", href: "/methodology" },
+  { label: "Editorial policy", href: "/editorial-policy" },
+  { label: "Disclaimer", href: "/disclaimer" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "Contact", href: "/contact" },
+] as const;
+
+/**
+ * The definition-first answer rendered directly under the hero H1. This is the
+ * 40–60 word extractable paragraph AI Overviews and featured snippets quote for
+ * "forex market hours" / "what are forex market hours". Kept server-rendered so
+ * crawlers and answer engines read it without executing the live clock.
+ */
+export const HERO_DEFINITION =
+  "Forex market hours are the times each major currency market is open for " +
+  "trading. The forex market runs 24 hours a day, five days a week, across " +
+  "four sessions — Sydney, Tokyo, London and New York — and is closed on " +
+  "weekends. This live clock shows which sessions are open right now in your " +
+  "timezone.";
+
 /** Feature cards — each has an icon key resolved in the Features component. */
 export const FEATURES = [
   {
@@ -210,6 +243,26 @@ export const FAQ = [
   {
     q: "Does it collect my data?",
     a: "No. The tool runs in your browser and the app collects no data.",
+  },
+  {
+    q: "What time does the forex market open and close?",
+    a: "The forex market opens Sunday at 5:00 PM New York time (22:00 GMT) when Sydney begins trading, and closes Friday at 5:00 PM New York time. It runs 24 hours a day, five days a week, and is closed on weekends.",
+  },
+  {
+    q: "Is the forex market open right now?",
+    a: "The forex market is open 24 hours from Sunday 5 PM ET to Friday 5 PM ET. To see whether a specific session — Sydney, Tokyo, London or New York — is trading at this moment in your timezone, check the live clock at the top of this page.",
+  },
+  {
+    q: "What is the best time to trade forex?",
+    a: "The most active window is the London–New York overlap, roughly 13:00–17:00 GMT, when the two largest markets trade at once. Liquidity is deepest and spreads are tightest then, though volatility is higher. The best time also depends on the currency pairs you trade.",
+  },
+  {
+    q: "Why is the London session the most important?",
+    a: "London is the largest forex trading centre by volume — the UK handles the biggest share of global FX turnover (BIS Triennial Survey). The London open often sets the day's direction, and its afternoon overlaps with New York, creating the busiest hours of the day.",
+  },
+  {
+    q: "What are the forex market hours in my timezone?",
+    a: "Session times are usually quoted in GMT, but this tool converts every session to your local timezone automatically and adjusts for daylight saving — so you see the exact hour each market opens and closes on your own clock, with no manual conversion.",
   },
 ] as const;
 

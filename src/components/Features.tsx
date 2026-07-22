@@ -44,7 +44,7 @@ export function Features() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            Everything you need to time the market
+            Forex session tools: clock, alerts &amp; economic calendar
           </h2>
           <p className="mt-4 text-lg text-fog">
             The web tool shows you the live hours; the free app adds widgets, an

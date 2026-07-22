@@ -6,6 +6,7 @@ import { AUTHORS, getAuthor } from "@/content/authors";
 import { getPostsByAuthor, readingMinutes } from "@/content/blog";
 import { formatDate } from "@/lib/format";
 import { SITE_URL } from "@/lib/site";
+import { jsonLdScript } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return AUTHORS.map((a) => ({ slug: a.slug }));
@@ -23,6 +24,10 @@ export async function generateMetadata({
     title: `${author.name} — ${author.role}`,
     description: author.bio,
     alternates: { canonical: `/author/${author.slug}` },
+    // Author profiles are placeholder — keep them out of the index so no
+    // fabricated Person/identity is indexed for a YMYL topic. Remove this once
+    // real, credentialed author profiles exist.
+    robots: { index: false, follow: true },
   };
 }
 
@@ -53,7 +58,7 @@ export default async function AuthorPage({
     <div className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(personJsonLd) }}
       />
 
       <header className="flex flex-col gap-6 sm:flex-row sm:items-center">

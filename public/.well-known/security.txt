@@ -1,7 +1,7 @@
 # Forex Market Hours — security contact (RFC 9116)
-# TODO before launch: set a real security contact and the production domain.
 
-Contact: mailto:security@forexmarkethours.app
-Expires: 2027-07-13T00:00:00.000Z
-Preferred-Languages: en, tr
+Contact: mailto:info@forexmarkethours.app
+Contact: https://forexmarkethours.app/contact
+Expires: 2027-07-22T00:00:00.000Z
+Preferred-Languages: en
 Canonical: https://forexmarkethours.app/.well-known/security.txt

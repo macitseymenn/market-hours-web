@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   DAY_MS,
-  HOUR_MS,
   MARKETS,
   type Market,
   tzParts,
@@ -50,11 +49,15 @@ function cityFromTz(tz: string) {
 
 /** e.g. "GMT +2", "GMT -4", "GMT +5:30". */
 function gmtLabel(ms: number) {
-  const h = ms / HOUR_MS;
-  const sign = h >= 0 ? "+" : "-";
-  const abs = Math.abs(h);
-  const whole = Math.floor(abs);
-  const mins = Math.round((abs - whole) * 60);
+  // Round to whole minutes at a single point so floating-point error in the
+  // ms→hours division can never leave a remainder that rounds to 60 (which
+  // previously rendered whole-hour zones as e.g. "GMT +8:60" for Tokyo, and
+  // UTC as "GMT -0").
+  const totalMinutes = Math.round(ms / 60_000);
+  const sign = totalMinutes < 0 ? "-" : "+";
+  const abs = Math.abs(totalMinutes);
+  const whole = Math.floor(abs / 60);
+  const mins = abs % 60;
   return `GMT ${sign}${whole}${mins ? `:${String(mins).padStart(2, "0")}` : ""}`;
 }
 
@@ -198,8 +201,14 @@ export function ForexTimeline() {
 
       <AlarmModal open={optionsOpen} onClose={() => setOptionsOpen(false)} />
 
-      {/* Scrollable timeline. pt-20 reserves space above the hours for the pin. */}
-      <div className="overflow-x-auto">
+      {/* Scrollable timeline. pt-20 reserves space above the hours for the pin.
+          tabIndex+role make the horizontal scroll reachable by keyboard. */}
+      <div
+        className="overflow-x-auto"
+        tabIndex={0}
+        role="group"
+        aria-label="24-hour session timeline — scroll horizontally to see all hours"
+      >
         <div className="relative min-w-[680px] pt-20">
           <HoursHeader hour24={hour24} />
 
@@ -220,7 +229,10 @@ export function ForexTimeline() {
           {now !== null && (
             <div
               className="pointer-events-none absolute inset-0"
-              style={{ paddingLeft: "10rem", paddingRight: "7rem" }}
+              style={{
+                paddingLeft: `${LABEL_COL_REM}rem`,
+                paddingRight: `${ALARM_COL_REM}rem`,
+              }}
             >
               <div className="relative h-full">
                 {/* The "now" pin, with a minimal live clock. */}
@@ -238,7 +250,7 @@ export function ForexTimeline() {
                     >
                       {pinTime}
                     </span>
-                    <span className="text-[10px] leading-none opacity-80">{pinDay}</span>
+                    <span className="text-[10px] font-medium leading-none">{pinDay}</span>
                   </div>
                   <div
                     className="h-0 w-0 border-x-[6px] border-t-[7px] border-x-transparent"
@@ -266,6 +278,10 @@ export function ForexTimeline() {
   );
 }
 
+// The now-line overlay padding must match these column widths. Keep the rem
+// values in sync with the Tailwind width classes below (w-40 = 10rem, w-28 = 7rem).
+const LABEL_COL_REM = 10;
+const ALARM_COL_REM = 7;
 const LABEL_COL = "w-40 shrink-0 pr-4";
 const ALARM_COL = "w-28 shrink-0"; // trailing column for the alarm bell (7rem)
 

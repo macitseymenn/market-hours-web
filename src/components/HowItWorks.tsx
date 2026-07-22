@@ -6,7 +6,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            How to use it
+            How to read the forex market hours clock
           </h2>
           <p className="mt-4 text-lg text-fog">
             No sign-up, no downloads needed — just open the page and read the live

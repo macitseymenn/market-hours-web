@@ -3,18 +3,24 @@ import Link from "next/link";
 import { getAllPosts, readingMinutes } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
-import { PRODUCT, SITE_URL } from "@/lib/site";
+import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
+import { jsonLdScript } from "@/lib/jsonld";
+
+const BLOG_TITLE = "Forex Market Hours Blog — Sessions & Trading Times";
+const BLOG_DESC =
+  "Clear guides to forex market hours, trading sessions, session overlaps and timezones — from the Forex Market Hours team.";
 
 export const metadata: Metadata = {
-  title: "Blog — Forex market hours & sessions",
-  description:
-    "Guides and explainers on forex market hours, trading sessions, session overlaps and timezones, from the Forex Market Hours team.",
-  alternates: { canonical: "/blog" },
+  title: { absolute: BLOG_TITLE },
+  description: BLOG_DESC,
+  alternates: {
+    canonical: "/blog",
+    languages: { en: "/blog", "x-default": "/blog" },
+  },
   openGraph: {
     type: "website",
-    title: "Blog — Forex Market Hours",
-    description:
-      "Guides and explainers on forex market hours, trading sessions and timezones.",
+    title: BLOG_TITLE,
+    description: BLOG_DESC,
     url: `${SITE_URL}/blog`,
   },
 };
@@ -26,6 +32,7 @@ function blogJsonLd() {
     "@type": "Blog",
     name: `${PRODUCT.name} Blog`,
     url: `${SITE_URL}/blog`,
+    publisher: { "@type": "Organization", name: PUBLISHER.legalName },
     blogPost: getAllPosts().map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
@@ -42,7 +49,7 @@ export default function BlogIndex() {
     <div className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(blogJsonLd()) }}
       />
       <header className="max-w-2xl">
         <h1 className="text-4xl font-semibold text-ivory sm:text-5xl">Blog</h1>

@@ -11,7 +11,7 @@ export function AppStoreBadge({ className = "" }: { className?: string }) {
       href={APP.appStoreUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Download ${APP.name} on the App Store (opens in a new tab)`}
+      aria-label={`Download on the App Store — ${APP.name} (opens in a new tab)`}
       className={`inline-flex items-center gap-3 rounded-xl bg-ivory px-5 py-3 text-charcoal transition-transform hover:-translate-y-0.5 ${className}`}
     >
       <svg

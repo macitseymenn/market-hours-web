@@ -24,10 +24,66 @@ export type Post = {
 
 export const POSTS: Post[] = [
   {
+    slug: "best-time-to-trade-forex",
+    title: "Best Time to Trade Forex (by Session)",
+    description:
+      "The best time to trade forex is the London–New York overlap, 13:00–17:00 GMT. Compare all four sessions and find the best hours for your pairs.",
+    date: "2026-07-15",
+    authorSlug: "author",
+    tags: ["Basics", "Sessions"],
+    cover: "/blog/best-time-to-trade-forex.svg",
+    body: `The best time to trade forex is during the **London–New York overlap**, roughly **13:00–17:00 GMT**, when the world's two largest financial centres are both open at once. That single window sees the deepest liquidity, the tightest spreads and the sharpest price moves of the entire 24-hour trading day — but it isn't the only window worth knowing, and it isn't automatically the best time for every trader or every pair.
+
+## Why "best time" depends on liquidity, not just hours
+
+Forex trades 24 hours a day, five days a week, but volume is not spread evenly across that time. It follows the sun through four regional sessions — Sydney, Tokyo, Frankfurt/London and New York — and activity concentrates wherever two of those sessions overlap. More participants trading at once generally means tighter spreads and easier order execution; fewer participants means thinner, choppier conditions. That trade-off between liquidity, spreads and volatility is what "best time to trade" really comes down to.
+
+## Comparing the four sessions
+
+In standard (winter) time, the four major sessions run roughly:
+
+- **Sydney** — 22:00–07:00 GMT. Opens the trading week and sets an early tone for AUD and NZD pairs, but overall volume is the lightest of the four.
+- **Tokyo** — 00:00–09:00 GMT. The main Asian session, most active for JPY crosses like USD/JPY and EUR/JPY.
+- **Frankfurt/London** — 07:00–17:00 GMT. London alone is the largest forex centre in the world by trading volume, according to the Bank for International Settlements' [Triennial Central Bank Survey](https://www.bis.org/statistics/rpfx22.htm), so the London open often sets the tone for the rest of the day.
+- **New York** — 13:00–22:00 GMT. The second-largest session, driving USD volatility and home to major U.S. data releases.
+
+Each session alone offers reasonable liquidity for its regional currencies. But the real activity spikes happen at the **overlaps**, where two sessions run simultaneously.
+
+## The best hours for major pairs
+
+Which hours matter most depends on which pairs you follow:
+
+- **EUR/USD, GBP/USD, EUR/GBP** — the London–New York overlap (13:00–17:00 GMT) is the standout window, since it's the only time both the eurozone/UK and U.S. sessions are live together.
+- **USD/JPY, EUR/JPY, GBP/JPY** — the Tokyo–London overlap, roughly 07:00–09:00 GMT, plus the tail end of the Tokyo session, tends to matter most for yen pairs.
+- **AUD/USD, NZD/USD** — the Sydney–Tokyo overlap, around 00:00–07:00 GMT, is the relevant window for Australian and New Zealand dollar pairs.
+- **USD/CAD** — most active during the New York session itself, particularly around U.S. and Canadian data releases.
+
+## Liquidity, spreads and volatility: the trade-off
+
+Higher liquidity generally means lower spreads, which is one reason the London–New York overlap gets so much attention. But that same period also tends to bring the sharpest volatility, especially around scheduled U.S. economic releases such as the monthly non-farm payrolls report. Tighter spreads and easier execution are a benefit; larger, faster price swings are a risk that cuts both ways. Trading outside the overlaps, during a single quieter session, usually means wider spreads and slower price action — sometimes preferable if you want calmer conditions, sometimes simply less opportunity.
+
+## Finding the overlap in your own timezone
+
+All of the hours above are quoted in GMT for consistency, but what actually matters is the time on your own clock — and that shifts twice a year as different countries move on and off daylight saving at different dates. Rather than converting each session by hand, the [live session clock on our homepage](/) shows exactly which sessions are open right now, in your own local timezone, with the overlaps highlighted automatically.
+
+## Frequently asked questions
+
+**Is the London–New York overlap always the best time to trade?**
+It's the highest-liquidity window overall, but "best" depends on the pair. Yen and Pacific-dollar pairs often see more relevant activity during the Tokyo–London and Sydney–Tokyo overlaps instead.
+
+**Does trading during the overlap guarantee better results?**
+No. Higher liquidity typically means tighter spreads, but the same window often brings sharper volatility, which increases risk as well as opportunity.
+
+**Do these hours change with daylight saving?**
+Yes. Session times are anchored to each city's local trading hours, so their GMT equivalents shift when a country moves its clocks. Use a live, timezone-aware tool rather than a fixed table to stay accurate.
+
+*This article is for general information only and is not financial advice. Forex Market Hours does not provide trading signals or recommendations; trading foreign exchange carries risk.*`,
+  },
+  {
     slug: "when-does-the-forex-market-open-and-close",
     title: "When does the forex market open and close?",
     description:
-      "A plain-English guide to the four major forex sessions — Sydney, Tokyo, London and New York — and the hours that actually matter for traders.",
+      "Forex opens Sunday 5pm ET and closes Friday 5pm ET. See the four sessions — Sydney, Tokyo, London, New York — and the hours that matter.",
     date: "2026-06-22",
     updated: "2026-07-10",
     authorSlug: "author",
@@ -64,7 +120,7 @@ Every time above is quoted in GMT for consistency, but what matters is the hour 
     slug: "london-new-york-overlap",
     title: "The London–New York overlap: the busiest hours in forex",
     description:
-      "Why the few hours when London and New York trade together see the deepest liquidity and the sharpest moves — and how to use them.",
+      "The London–New York overlap (13:00–17:00 GMT) is forex's deepest-liquidity window. Why it matters and how to trade the busiest hours.",
     date: "2026-07-01",
     authorSlug: "author",
     tags: ["Sessions", "Strategy"],

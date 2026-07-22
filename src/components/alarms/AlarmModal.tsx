@@ -4,14 +4,36 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { AlarmSettings } from "./AlarmSettings";
 
+const FOCUSABLE =
+  'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
 /** Popup dialog holding the alarm settings, opened by the timeline's Options button. */
 export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      // Trap Tab focus inside the dialog panel.
+      if (e.key !== "Tab" || !panelRef.current) return;
+      const items = Array.from(
+        panelRef.current.querySelectorAll<HTMLElement>(FOCUSABLE),
+      );
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", onKey);
     // Lock background scroll while the dialog is open.
@@ -33,13 +55,19 @@ export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => vo
       aria-modal="true"
       aria-labelledby="alarm-options-title"
     >
+      {/* Decorative click-to-close backdrop — kept out of the tab order and the
+          a11y tree so the focus trap only sees elements inside the panel. */}
       <button
         type="button"
-        aria-label="Close options"
+        tabIndex={-1}
+        aria-hidden="true"
         onClick={onClose}
         className="absolute inset-0 cursor-default bg-black/50 backdrop-blur-sm"
       />
-      <div className="relative z-10 flex max-h-[85vh] w-full max-w-md flex-col overflow-hidden rounded-2xl border border-surface-2 bg-charcoal shadow-2xl">
+      <div
+        ref={panelRef}
+        className="relative z-10 flex max-h-[85vh] w-full max-w-md flex-col overflow-hidden rounded-2xl border border-surface-2 bg-charcoal shadow-2xl"
+      >
         {/* Fixed header */}
         <div className="flex items-center justify-between border-b border-surface-2 px-5 py-4">
           <h2 id="alarm-options-title" className="text-lg font-semibold text-ivory">
@@ -50,7 +78,7 @@ export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => vo
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-surface-2 text-muted transition-colors hover:text-ivory"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-surface-2 text-muted transition-colors hover:text-ivory"
           >
             ✕
           </button>

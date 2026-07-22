@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, LEGAL_NAV } from "@/lib/site";
 import { getAllPosts } from "@/content/blog";
-import { AUTHORS } from "@/content/authors";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
@@ -18,12 +17,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const authorRoutes: MetadataRoute.Sitemap = AUTHORS.map((a) => ({
-    url: `${SITE_URL}/author/${a.slug}`,
+  // Trust / legal pages — indexable EEAT surface.
+  const legalRoutes: MetadataRoute.Sitemap = LEGAL_NAV.map((item) => ({
+    url: `${SITE_URL}${item.href}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.5,
+    changeFrequency: "yearly",
+    priority: 0.4,
   }));
 
-  return [...staticRoutes, ...postRoutes, ...authorRoutes];
+  // Note: /author/* routes are intentionally omitted while author profiles are
+  // placeholder — thin, low-value pages dilute crawl budget and are an EEAT
+  // liability. Re-add here when real, credentialed author profiles exist.
+  return [...staticRoutes, ...postRoutes, ...legalRoutes];
 }

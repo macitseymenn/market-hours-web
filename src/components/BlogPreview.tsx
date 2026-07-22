@@ -14,7 +14,7 @@ export function BlogPreview() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-              From the blog
+              Forex market hours guides
             </h2>
             <p className="mt-4 text-lg text-fog">
               Guides and explainers on forex market hours, sessions and the

@@ -7,7 +7,7 @@ export function Faq() {
     <section id="faq" className="border-t border-surface-2/60 py-20 md:py-24">
       <div className="mx-auto max-w-3xl px-5">
         <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-          Frequently asked questions
+          Forex market hours: frequently asked questions
         </h2>
 
         <div className="mt-10 divide-y divide-surface-2 border-y border-surface-2">

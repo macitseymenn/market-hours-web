@@ -10,22 +10,30 @@ export function NavItem({
   className,
   children,
   "aria-label": ariaLabel,
+  onClick,
 }: {
   href: string;
   className?: string;
   children: React.ReactNode;
   "aria-label"?: string;
+  /** Optional click handler — e.g. to close the mobile nav panel on navigate. */
+  onClick?: () => void;
 }) {
   const isPageRoute = href.startsWith("/") && !href.startsWith("/#");
   if (isPageRoute) {
     return (
-      <Link href={href} className={className} aria-label={ariaLabel}>
+      <Link
+        href={href}
+        className={className}
+        aria-label={ariaLabel}
+        onClick={onClick}
+      >
         {children}
       </Link>
     );
   }
   return (
-    <a href={href} className={className} aria-label={ariaLabel}>
+    <a href={href} className={className} aria-label={ariaLabel} onClick={onClick}>
       {children}
     </a>
   );

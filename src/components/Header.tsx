@@ -1,7 +1,12 @@
 import Image from "next/image";
-import { APP, NAV } from "@/lib/site";
+import { APP, CTA_HREF, NAV } from "@/lib/site";
 import { ThemeToggle } from "./ThemeToggle";
 import { NavItem } from "./NavItem";
+import { MobileNav } from "./MobileNav";
+
+// The "Get the app" item is rendered as the standalone CTA button, so it's
+// filtered out of the inline nav to avoid a duplicate adjacent link.
+const HEADER_NAV = NAV.filter((item) => item.href !== CTA_HREF);
 
 export function Header() {
   return (
@@ -21,11 +26,15 @@ export function Header() {
           </span>
         </NavItem>
 
-        <nav aria-label="Primary" className="hidden md:block">
-          <ul className="flex items-center gap-7 text-sm text-fog">
-            {NAV.map((item) => (
+        {/* Desktop nav appears at lg to avoid wrapping/collision at the md (768px) width. */}
+        <nav aria-label="Primary" className="hidden lg:block">
+          <ul className="flex items-center gap-6 text-sm text-fog">
+            {HEADER_NAV.map((item) => (
               <li key={item.href}>
-                <NavItem href={item.href} className="transition-colors hover:text-ivory">
+                <NavItem
+                  href={item.href}
+                  className="inline-block py-2 transition-colors hover:text-ivory"
+                >
                   {item.label}
                 </NavItem>
               </li>
@@ -36,11 +45,12 @@ export function Header() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <NavItem
-            href="/#apps"
-            className="rounded-lg bg-emerald px-4 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-emerald-600"
+            href={CTA_HREF}
+            className="hidden rounded-lg bg-emerald px-4 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-emerald-600 sm:inline-block"
           >
             Get the app
           </NavItem>
+          <MobileNav />
         </div>
       </div>
     </header>

@@ -9,7 +9,7 @@ export function SessionTimes() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold text-ivory sm:text-4xl">
-            Forex trading sessions explained
+            Forex trading sessions &amp; session times
           </h2>
           <p className="mt-4 text-lg text-fog">
             The forex market runs 24 hours a day across the major sessions below.
@@ -60,7 +60,7 @@ export function SessionTimes() {
                       />
                       {s.city}
                       {isHighlight && (
-                        <span className="rounded-full bg-emerald/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-emerald">
+                        <span className="rounded-full bg-emerald px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-charcoal">
                           Largest
                         </span>
                       )}

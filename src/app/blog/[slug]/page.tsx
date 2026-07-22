@@ -8,6 +8,7 @@ import { getAllPosts, getPost, readingMinutes } from "@/content/blog";
 import { getAuthor } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
+import { jsonLdScript } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -60,16 +61,17 @@ export default async function PostPage({
     dateModified: post.updated ?? post.date,
     mainEntityOfPage: url,
     url,
+    image: `${SITE_URL}${post.cover}`,
+    wordCount: post.body.trim().split(/\s+/).length,
     keywords: post.tags.join(", "),
-    author: author
-      ? {
-          "@type": "Person",
-          name: author.name,
-          url: `${SITE_URL}/author/${author.slug}`,
-          sameAs: author.links.map((l) => l.href),
-        }
-      : undefined,
-    publisher: { "@type": "Organization", name: PUBLISHER.legalName },
+    // Attributed to the organization, not a fabricated Person — honest E-E-A-T
+    // for a YMYL topic while author profiles remain placeholder.
+    author: { "@type": "Organization", name: PUBLISHER.legalName, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: PUBLISHER.legalName,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.webp` },
+    },
   };
 
   const breadcrumbJsonLd = {
@@ -86,11 +88,11 @@ export default async function PostPage({
     <article className="mx-auto max-w-3xl px-5 py-16 md:py-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(articleJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(breadcrumbJsonLd) }}
       />
 
       <nav aria-label="Breadcrumb" className="text-sm text-muted">
