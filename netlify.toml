@@ -1,0 +1,19 @@
+# Netlify deployment config for the Next.js 16 app.
+#
+# The site is NOT a static export — it uses the App Router with next-intl i18n
+# routing (proxy.ts), ISR (homepage `revalidate`), and route handlers
+# (sitemap.xml / sitemap.xsl / llms.txt). Netlify's official Next.js runtime
+# runs all of this as serverless/edge functions; the alarm feature is entirely
+# client-side (localStorage / Web Audio / Notifications) and works unchanged.
+#
+# Security headers (CSP, HSTS, etc.) come from next.config.ts `headers()` and are
+# honored by the Next runtime. The CSP opens up for analytics only when the
+# corresponding NEXT_PUBLIC_* env vars are set (see .env.example).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Official Next.js runtime (Netlify auto-installs this; pinned here for clarity).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

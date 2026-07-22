@@ -1,8 +1,12 @@
 import { getTranslations } from "next-intl/server";
+import { analyticsEnabled } from "@/lib/analytics";
 
 export async function TrustBar() {
   const t = await getTranslations("home.trust");
-  const items = t.raw("items") as string[];
+  const items = [...(t.raw("items") as string[])];
+  // "Collects no data" (index 3) is only strictly true with analytics off; when
+  // analytics is enabled it softens to a "Privacy-first" claim that stays honest.
+  if (analyticsEnabled && items.length > 3) items[3] = t("privacyFirst");
 
   return (
     <section aria-label={t("aria")} className="border-y border-surface-2/60 bg-surface/40">

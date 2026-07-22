@@ -24,13 +24,44 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 // production policy stays strict (React never uses eval() in prod).
 const isDev = process.env.NODE_ENV !== "production";
 
+// Analytics is env-driven: the CSP only opens up for the exact providers that
+// are configured (via env vars at build time). With none set, the policy stays
+// as strict as before — no third-party origins are allowed.
+const A = {
+  google: !!(process.env.NEXT_PUBLIC_GA_ID || process.env.NEXT_PUBLIC_GTM_ID),
+  clicky: !!process.env.NEXT_PUBLIC_CLICKY_ID,
+  plausible: !!process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN,
+};
+const scriptHosts: string[] = [];
+const connectHosts: string[] = [];
+const imgHosts: string[] = [];
+if (A.google) {
+  scriptHosts.push("https://www.googletagmanager.com");
+  connectHosts.push(
+    "https://www.google-analytics.com",
+    "https://region1.google-analytics.com",
+    "https://www.googletagmanager.com",
+  );
+  imgHosts.push("https://www.google-analytics.com", "https://www.googletagmanager.com");
+}
+if (A.clicky) {
+  scriptHosts.push("https://static.getclicky.com");
+  connectHosts.push("https://in.getclicky.com");
+  imgHosts.push("https://static.getclicky.com", "https://in.getclicky.com");
+}
+if (A.plausible) {
+  scriptHosts.push("https://plausible.io");
+  connectHosts.push("https://plausible.io");
+}
+const extra = (hosts: string[]) => (hosts.length ? " " + hosts.join(" ") : "");
+
 const CSP = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}${extra(scriptHosts)}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
+  `img-src 'self' data:${extra(imgHosts)}`,
   "font-src 'self'",
-  `connect-src 'self'${isDev ? " ws: wss:" : ""}`,
+  `connect-src 'self'${isDev ? " ws: wss:" : ""}${extra(connectHosts)}`,
   "media-src 'self'",
   "manifest-src 'self'",
   "worker-src 'self'",

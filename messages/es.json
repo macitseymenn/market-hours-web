@@ -71,7 +71,8 @@
         "Sin necesidad de cuenta",
         "No recopila datos",
         "Más de 60 idiomas"
-      ]
+      ],
+      "privacyFirst": "Centrado en la privacidad"
     },
     "how": {
       "h2": "Cómo leer el reloj del horario del mercado forex",
@@ -362,5 +363,12 @@
     "authorExperience": "Experiencia",
     "authorElsewhere": "En otros sitios",
     "authorArticles": "Artículos de {name}"
+  },
+  "consent": {
+    "title": "Consentimiento de cookies",
+    "message": "Usamos analítica respetuosa con la privacidad para entender cómo se usa la herramienta. Sin publicidad, nunca.",
+    "learnMore": "Más información",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   }
 }

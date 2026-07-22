@@ -1,28 +1,115 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { analytics, analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
 
 const LAST_UPDATED = "2026-07-22";
+
+// Honest, env-driven data-handling section. With no analytics configured the
+// site is genuinely tracking-free; when analytics is enabled the wording below
+// switches to describe exactly what runs and how consent works.
+const DATA_SECTION: Record<Locale, ReactNode> = {
+  en: analyticsEnabled ? (
+    <>
+      <h2>Analytics</h2>
+      <p>
+        We use privacy-respecting analytics to understand aggregate usage — which
+        pages are popular and roughly where visitors come from — so we can improve
+        the tool. We never run advertising trackers and never sell or share your
+        data.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          The analytics we use may set cookies. They load{" "}
+          <strong>only after you accept</strong> the consent banner; if you
+          decline, no analytics cookies are set. Google Analytics, where used, is
+          configured to anonymise IP addresses. You can change your choice any time
+          by clearing this site&apos;s data in your browser.
+        </p>
+      ) : (
+        <p>
+          Our analytics is cookieless and does not use any persistent identifier or
+          track you across sites, so no consent banner is required.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>We collect no personal data</h2>
+      <p>
+        We run no analytics, no advertising trackers, and set no tracking cookies
+        on this site. We do not collect names, email addresses, IP addresses, or
+        any other personal or trading data through the web tool, and we have
+        nothing of yours to sell or share.
+      </p>
+    </>
+  ),
+  es: analyticsEnabled ? (
+    <>
+      <h2>Analítica</h2>
+      <p>
+        Usamos analítica respetuosa con la privacidad para entender el uso
+        agregado —qué páginas son populares y, de forma aproximada, de dónde vienen
+        los visitantes— y así mejorar la herramienta. Nunca usamos rastreadores
+        publicitarios ni vendemos o compartimos tus datos.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          La analítica que usamos puede instalar cookies. Se cargan{" "}
+          <strong>solo después de que aceptes</strong> el aviso de consentimiento;
+          si lo rechazas, no se instala ninguna cookie de analítica. Google
+          Analytics, cuando se usa, está configurado para anonimizar las direcciones
+          IP. Puedes cambiar tu elección en cualquier momento borrando los datos de
+          este sitio en tu navegador.
+        </p>
+      ) : (
+        <p>
+          Nuestra analítica no usa cookies ni ningún identificador persistente, ni
+          te rastrea entre sitios, por lo que no se requiere aviso de
+          consentimiento.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>No recopilamos datos personales</h2>
+      <p>
+        No usamos analíticas, ni rastreadores publicitarios, ni instalamos cookies
+        de seguimiento en este sitio. No recopilamos nombres, direcciones de correo
+        electrónico, direcciones IP ni ningún otro dato personal o de trading a
+        través de la herramienta web, y no tenemos nada tuyo que vender ni
+        compartir.
+      </p>
+    </>
+  ),
+};
 
 const COPY = {
   en: {
     metaTitle: "Privacy Policy",
-    metaDescription:
-      "How Forex Market Hours handles data. The web tool runs in your browser; we collect no personal trading data.",
+    metaDescription: analyticsEnabled
+      ? "How Forex Market Hours handles data: the web tool runs in your browser, uses privacy-friendly analytics, shows no ads and never sells your data."
+      : "How Forex Market Hours handles data. The web tool runs in your browser; we collect no personal trading data.",
     breadcrumb: "Privacy Policy",
     h1: "Privacy Policy",
-    lead: (
+    lead: analyticsEnabled ? (
+      <>
+        Short version: {PRODUCT.name} runs in your browser, uses privacy-friendly
+        analytics, shows no ads, and never sells your data.
+      </>
+    ) : (
       <>
         Short version: {PRODUCT.name} runs in your browser, collects no personal
         data, and does not track you.
       </>
     ),
     lastUpdated: (date: string) => <>Last updated: {date}.</>,
-    body: (
+    body: (dataSection: ReactNode) => (
       <>
         <h2>The web tool runs in your browser</h2>
         <p>
@@ -32,13 +119,7 @@ const COPY = {
           timezone you use, or how you use the site.
         </p>
 
-        <h2>We collect no personal data</h2>
-        <p>
-          We run no analytics, no advertising trackers, and set no tracking cookies
-          on this site. We do not collect names, email addresses, IP addresses, or
-          any other personal or trading data through the web tool, and we have
-          nothing of yours to sell or share.
-        </p>
+        {dataSection}
 
         <h2>Local storage: theme and alarms only</h2>
         <p>
@@ -95,18 +176,24 @@ const COPY = {
   },
   es: {
     metaTitle: "Política de privacidad",
-    metaDescription:
-      "Cómo gestiona los datos Horario del Mercado Forex. La herramienta web funciona en tu navegador; no recopilamos datos personales de trading.",
+    metaDescription: analyticsEnabled
+      ? "Cómo gestiona los datos Horario del Mercado Forex: la herramienta funciona en tu navegador, usa analítica respetuosa con la privacidad, sin anuncios y sin vender tus datos."
+      : "Cómo gestiona los datos Horario del Mercado Forex. La herramienta web funciona en tu navegador; no recopilamos datos personales de trading.",
     breadcrumb: "Política de privacidad",
     h1: "Política de privacidad",
-    lead: (
+    lead: analyticsEnabled ? (
+      <>
+        Versión breve: {PRODUCT.name} funciona en tu navegador, usa analítica
+        respetuosa con la privacidad, no muestra anuncios y nunca vende tus datos.
+      </>
+    ) : (
       <>
         Versión breve: {PRODUCT.name} funciona en tu navegador, no recopila datos
         personales y no te rastrea.
       </>
     ),
     lastUpdated: (date: string) => <>Última actualización: {date}.</>,
-    body: (
+    body: (dataSection: ReactNode) => (
       <>
         <h2>La herramienta web funciona en tu navegador</h2>
         <p>
@@ -117,14 +204,7 @@ const COPY = {
           cómo utilizas el sitio.
         </p>
 
-        <h2>No recopilamos datos personales</h2>
-        <p>
-          No usamos analíticas, ni rastreadores publicitarios, ni instalamos
-          cookies de seguimiento en este sitio. No recopilamos nombres, direcciones
-          de correo electrónico, direcciones IP ni ningún otro dato personal o de
-          trading a través de la herramienta web, y no tenemos nada tuyo que vender
-          ni compartir.
-        </p>
+        {dataSection}
 
         <h2>Almacenamiento local: solo tema y alarmas</h2>
         <p>
@@ -251,7 +331,7 @@ export default async function PrivacyPage({
 
       <div className="article-prose mt-8">
         <p>{c.lastUpdated(formatDate(LAST_UPDATED, l))}</p>
-        {c.body}
+        {c.body(DATA_SECTION[l])}
       </div>
     </article>
   );

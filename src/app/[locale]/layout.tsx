@@ -10,6 +10,7 @@ import { AlarmProvider } from "@/components/alarms/AlarmProvider";
 import { APP, PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { routing, type Locale } from "@/i18n/routing";
+import { Analytics } from "@/components/analytics/Analytics";
 
 // Applied before paint so the theme never flashes. An explicit saved choice wins;
 // otherwise we follow the operating system's colour scheme.
@@ -83,6 +84,10 @@ export async function generateMetadata({
       apple: [{ url: "/icon.webp" }],
     },
     category: "finance",
+    // Search Console verification — set GOOGLE_SITE_VERIFICATION in the host env.
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
   };
 }
 
@@ -160,6 +165,7 @@ export default async function LocaleLayout({
               <Footer />
             </SmoothScroll>
           </AlarmProvider>
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

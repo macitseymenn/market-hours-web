@@ -71,7 +71,8 @@
         "No account needed",
         "Collects no data",
         "60+ languages"
-      ]
+      ],
+      "privacyFirst": "Privacy-first"
     },
     "how": {
       "h2": "How to read the forex market hours clock",
@@ -362,5 +363,12 @@
     "authorExperience": "Experience",
     "authorElsewhere": "Elsewhere",
     "authorArticles": "Articles by {name}"
+  },
+  "consent": {
+    "title": "Cookie consent",
+    "message": "We use privacy-friendly analytics to understand how the tool is used. No ads, ever.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
