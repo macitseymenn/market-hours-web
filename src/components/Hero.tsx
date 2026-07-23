@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ForexTimeline } from "./ForexTimeline";
+import { AlarmCta } from "./AlarmCta";
 import { MarketStatus } from "./MarketStatus";
 
 export async function Hero() {
@@ -22,6 +23,10 @@ export async function Hero() {
           <p className="mx-auto mt-5 max-w-2xl text-lg text-fog">
             {t("definition")}
           </p>
+          {/* Primary alarm CTA — high in the hero so it's visible on load on both
+              mobile and desktop. Opens the timeline's alarm modal via a window
+              event (see AlarmCta). */}
+          <AlarmCta />
         </div>
 
         {/* The product: the live market-hours tool, front and centre — the hero

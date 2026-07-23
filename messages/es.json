@@ -55,7 +55,8 @@
       "converterH2": "Convertidor de horarios del mercado forex — ve cada sesión en tu zona horaria",
       "converterIntro": "Convierte automáticamente cada sesión de trading a tu hora local, sin cálculos manuales de GMT ni conjeturas sobre el horario de verano. Elige cualquier ciudad o usa la zona horaria que detecte tu dispositivo, abajo.",
       "phonePrompt": "¿Lo prefieres en tu móvil?",
-      "phoneLink": "Descarga la app gratis para iOS y Android ↓"
+      "phoneLink": "Descarga la app gratis para iOS y Android ↓",
+      "alarmCta": "No te pierdas ninguna sesión — pon tu alarma"
     },
     "status": {
       "statusLine": "{count, plural, =0 {Ahora mismo no hay ninguna sesión importante abierta: la negociación se reanuda cuando abre la sesión de Sídney para la semana.} =1 {Ahora mismo, la sesión de {list} está abierta.} other {Ahora mismo, las sesiones de {list} están abiertas.}}",

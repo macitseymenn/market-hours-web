@@ -13,6 +13,10 @@ import {
 import { AlarmBell } from "./alarms/AlarmBell";
 import { AlarmModal } from "./alarms/AlarmModal";
 
+/** Window event other components (e.g. the hero <AlarmCta>) dispatch to open the
+ *  alarm modal, which this timeline owns. Keeps the two components decoupled. */
+export const OPEN_ALARMS_EVENT = "fmh:open-alarms";
+
 /** Translate a city name via the `tool.cities` map, falling back to the raw
  *  name for timezones the visitor's browser reports that aren't in the list. */
 type CityTranslator = { has: (k: string) => boolean; t: (k: string) => string };
@@ -154,6 +158,14 @@ export function ForexTimeline() {
     /* eslint-enable react-hooks/set-state-in-effect */
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
+  }, []);
+
+  // Let other components (the hero alarm CTA) open the alarm modal via a window
+  // event, so this timeline stays the single owner of the modal's open state.
+  useEffect(() => {
+    const open = () => setOptionsOpen(true);
+    window.addEventListener(OPEN_ALARMS_EVENT, open);
+    return () => window.removeEventListener(OPEN_ALARMS_EVENT, open);
   }, []);
 
   // Build the dropdown: each option is "City (GMT +2)" with the live offset.
