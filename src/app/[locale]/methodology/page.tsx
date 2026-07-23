@@ -52,7 +52,7 @@ const COPY = {
     lead: (
       <>
         Every session time in {PRODUCT.name} is computed live from each financial
-        centre&apos;s own timezone rules, not read from a static GMT table — so
+        centre&apos;s own timezone rules, not read from a static GMT table, so
         daylight-saving shifts are always applied automatically.
       </>
     ),
@@ -61,7 +61,7 @@ const COPY = {
         <h2>The short answer</h2>
         <p>
           Each forex session is defined by the <strong>local</strong> trading
-          hours of its financial centre — for example, London trades roughly
+          hours of its financial centre, for example, London trades roughly
           08:00–17:00 in its own local time, all year round. We compute the
           current UTC/GMT equivalent of that local window using each city&apos;s
           IANA timezone rules, via the browser&apos;s built-in <code>Intl</code>{" "}
@@ -91,7 +91,7 @@ const COPY = {
             IANA Time Zone Database
           </a>
           . That database is maintained precisely because daylight-saving rules
-          change from country to country and year to year — so reading from it,
+          change from country to country and year to year, so reading from it,
           instead of a fixed table we&apos;d have to update by hand, is what keeps
           the tool accurate without drifting out of date. In practice we also
           spot-check the tool against the actual local clocks in each session city,
@@ -117,7 +117,7 @@ const COPY = {
         <ul>
           <li>
             <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
-              Bank for International Settlements — Triennial Central Bank Survey
+              Bank for International Settlements: Triennial Central Bank Survey
             </a>{" "}
             for London&apos;s position as the largest FX centre by trading volume.
           </li>
@@ -227,7 +227,7 @@ const COPY = {
         <ul>
           <li>
             <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
-              Banco de Pagos Internacionales — Encuesta Trienal de Bancos Centrales
+              Banco de Pagos Internacionales: Encuesta Trienal de Bancos Centrales
             </a>{" "}
             para la posición de Londres como el mayor centro forex por volumen de
             negociación.
@@ -307,7 +307,7 @@ export default async function MethodologyPage({
 
   const sessionList = SESSIONS.map((s) => (
     <li key={s.city}>
-      <strong>{CITY[l][s.city]}</strong> ({REGION[l][s.city]}) — {s.gmt} GMT
+      <strong>{CITY[l][s.city]}</strong> ({REGION[l][s.city]}): {s.gmt} GMT
     </li>
   ));
 

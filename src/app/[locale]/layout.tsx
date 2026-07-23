@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Script from "next/script";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -20,14 +21,14 @@ const themeInitScript = `try{var t=localStorage.getItem('theme');if(t==='dark'||
 // doubling the brand (the title template appends the brand on inner pages).
 const HOME_META: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "Forex Market Hours — Live Session Clock in Your Timezone",
+    title: "Forex Market Hours: Live Session Clock in Your Timezone",
     description:
-      "See which forex sessions are open right now — Sydney, Tokyo, London & New York — live in your timezone. Free session clock, overlaps & DST. No signup.",
+      "See which forex sessions are open right now, Sydney, Tokyo, London & New York, live in your timezone. Free session clock, overlaps & DST. No signup.",
   },
   es: {
-    title: "Horario del Mercado Forex — Reloj de Sesiones en Tu Zona Horaria",
+    title: "Horario del Mercado Forex: Reloj de Sesiones en Tu Zona Horaria",
     description:
-      "Descubre qué sesiones de forex están abiertas ahora — Sídney, Tokio, Londres y Nueva York — en tu zona horaria. Reloj de sesiones gratis, sin registro.",
+      "Descubre qué sesiones de forex están abiertas ahora, Sídney, Tokio, Londres y Nueva York, en tu zona horaria. Reloj de sesiones gratis, sin registro.",
   },
 };
 
@@ -50,7 +51,7 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: {
       default: meta.title,
-      template: `%s — ${PRODUCT.name}`,
+      template: `%s: ${PRODUCT.name}`,
     },
     description: meta.description,
     applicationName: PRODUCT.name,
@@ -84,7 +85,7 @@ export async function generateMetadata({
       apple: [{ url: "/icon.webp" }],
     },
     category: "finance",
-    // Search Console verification — set GOOGLE_SITE_VERIFICATION in the host env.
+    // Search Console verification, set GOOGLE_SITE_VERIFICATION in the host env.
     verification: process.env.GOOGLE_SITE_VERIFICATION
       ? { google: process.env.GOOGLE_SITE_VERIFICATION }
       : undefined,
@@ -140,7 +141,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-charcoal text-fog">
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Theme applied before paint (no flash). Rendered via next/script with
+            the `beforeInteractive` strategy, the framework-supported way to emit
+            a critical inline script from a component, which also avoids React's
+            "script tag inside a component won't run on the client" warning that a
+            raw <script> triggers. The JSON-LD blocks below stay as native
+            <script type="application/ld+json"> tags: those are inert data (not
+            executed), which is exactly what Next's JSON-LD guidance recommends. */}
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdScript(orgJsonLd) }}

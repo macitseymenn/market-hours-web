@@ -1,7 +1,7 @@
 import { getAllPosts } from "@/content/blog";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 
-// /llms.txt — a plain-text guide for LLM crawlers (llmstxt.org convention).
+// /llms.txt, a plain-text guide for LLM crawlers (llmstxt.org convention).
 // Generated from site content so it stays in sync.
 export const dynamic = "force-static";
 

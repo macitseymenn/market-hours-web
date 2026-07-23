@@ -17,7 +17,7 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
 // ISR: re-render hourly so a scheduled post appears in its author's post list as
-// soon as it publishes — see `isPublished` in @/content/blog.
+// soon as it publishes, see `isPublished` in @/content/blog.
 export const revalidate = 3600;
 
 export function generateStaticParams() {
@@ -38,13 +38,13 @@ export async function generateMetadata({
   // While the profile is placeholder scaffolding it is kept out of the index so
   // no fabricated Person/identity is indexed for a YMYL topic. The moment the
   // orchestrator drops in a real, credentialed author (see authors.ts), the
-  // guard flips and the page becomes indexable automatically — no code change.
+  // guard flips and the page becomes indexable automatically, no code change.
   const placeholder = isPlaceholderAuthor(author);
 
   return {
     title: placeholder
-      ? `${PUBLISHER.displayName} — ${l === "es" ? "Equipo editorial" : "Editorial Team"}`
-      : `${author.name} — ${author.role}`,
+      ? `${PUBLISHER.displayName}: ${l === "es" ? "Equipo editorial" : "Editorial Team"}`
+      : `${author.name}: ${author.role}`,
     description: placeholder
       ? l === "es"
         ? `Perfil editorial de ${PUBLISHER.displayName}, responsable del contenido de Forex Market Hours.`
@@ -93,7 +93,7 @@ export default async function AuthorPage({
       : `Forex Market Hours content is maintained by ${PUBLISHER.displayName}. A named author profile will appear here when available.`
     : author.bio;
 
-  // Person structured data — establishes a real author's identity, expertise and
+  // Person structured data, establishes a real author's identity, expertise and
   // affiliation. Suppressed entirely while placeholder so no fabricated Person,
   // image or sameAs is ever emitted for this YMYL topic.
   const personJsonLd = placeholder
@@ -112,7 +112,7 @@ export default async function AuthorPage({
           name: PUBLISHER.legalName,
           url: SITE_URL,
         },
-        // Only real, verifiable profiles — never emitted while placeholder.
+        // Only real, verifiable profiles, never emitted while placeholder.
         ...(author.links.length > 0
           ? { sameAs: author.links.map((link) => link.href) }
           : {}),
@@ -197,7 +197,7 @@ export default async function AuthorPage({
         </section>
       )}
 
-      {/* Credibility links — the author's own profiles (also used as sameAs).
+      {/* Credibility links, the author's own profiles (also used as sameAs).
           Suppressed while placeholder so no fake x.com/username link is shown. */}
       {!placeholder && author.links.length > 0 && (
         <section className="mt-8">

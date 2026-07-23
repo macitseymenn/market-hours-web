@@ -17,7 +17,7 @@ const COPY = {
     lead: (
       <>
         {PRODUCT.name} is a free, live forex session clock built by{" "}
-        {PUBLISHER.displayName} — a software company that makes small, focused
+        {PUBLISHER.displayName}, a software company that makes small, focused
         tools instead of broad financial products.
       </>
     ),
@@ -26,8 +26,8 @@ const COPY = {
         <h2>Who we are</h2>
         <p>
           {PUBLISHER.displayName} ({PUBLISHER.legalName}) is a software company.
-          We build and maintain {PRODUCT.name} — the web tool at {SITE_URL} and
-          its companion iOS and Android apps — as a single, focused product: a
+          We build and maintain {PRODUCT.name}, the web tool at {SITE_URL} and
+          its companion iOS and Android apps, as a single, focused product: a
           market-hours utility for people who trade or follow the
           foreign-exchange market. We are not a bank, a brokerage, or an
           investment firm.
@@ -48,17 +48,17 @@ const COPY = {
           that follows the markets ourselves, we were tired of doing GMT maths in
           our heads and second-guessing whether London had already moved to
           summer time. The tool started as the utility we wanted for our own use,
-          and we still use it every trading day — which is the fastest way we
+          and we still use it every trading day, which is the fastest way we
           notice when anything looks wrong.
         </p>
 
-        <h2>What Forex Market Hours is — and isn&apos;t</h2>
+        <h2>What Forex Market Hours is, and isn&apos;t</h2>
         <p>
           {PRODUCT.name} is a market-hours utility. It shows when the major forex
           sessions open, close and overlap, converted to your local timezone. It
           is <strong>not</strong> a broker, a financial adviser, or a signals
           service, and it does not offer trading, deposit or withdrawal services.
-          Nothing on this site is personalised financial advice — see our{" "}
+          Nothing on this site is personalised financial advice, see our{" "}
           <Link href="/disclaimer">risk and trading disclaimer</Link> for the full
           detail.
         </p>
@@ -112,8 +112,8 @@ const COPY = {
         <h2>Quiénes somos</h2>
         <p>
           {PUBLISHER.displayName} ({PUBLISHER.legalName}) es una empresa de
-          software. Creamos y mantenemos {PRODUCT.name} —la herramienta web en{" "}
-          {SITE_URL} y sus apps para iOS y Android— como un único producto
+          software. Creamos y mantenemos {PRODUCT.name}, la herramienta web en{" "}
+          {SITE_URL} y sus apps para iOS y Android, como un único producto
           específico: una utilidad de horarios de mercado para quienes operan o
           siguen el mercado de divisas. No somos un banco, un bróker ni una
           gestora de inversiones.

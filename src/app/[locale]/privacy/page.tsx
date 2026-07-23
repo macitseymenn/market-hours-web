@@ -18,8 +18,8 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     <>
       <h2>Analytics</h2>
       <p>
-        We use privacy-respecting analytics to understand aggregate usage — which
-        pages are popular and roughly where visitors come from — so we can improve
+        We use privacy-respecting analytics to understand aggregate usage, which
+        pages are popular and roughly where visitors come from, so we can improve
         the tool. We never run advertising trackers and never sell or share your
         data.
       </p>
@@ -54,8 +54,8 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
       <h2>Analítica</h2>
       <p>
         Usamos analítica respetuosa con la privacidad para entender el uso
-        agregado —qué páginas son populares y, de forma aproximada, de dónde vienen
-        los visitantes— y así mejorar la herramienta. Nunca usamos rastreadores
+        agregado, qué páginas son populares y, de forma aproximada, de dónde vienen
+        los visitantes, y así mejorar la herramienta. Nunca usamos rastreadores
         publicitarios ni vendemos o compartimos tus datos.
       </p>
       {hasCookieAnalytics ? (

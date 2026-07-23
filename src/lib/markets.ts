@@ -5,7 +5,7 @@
  * so daylight-saving shifts are always correct with no data source needed.
  *
  * Sessions are defined by their LOCAL open/close hour in each market's own
- * timezone — that is what makes DST automatic (London always opens 08:00 local,
+ * timezone, that is what makes DST automatic (London always opens 08:00 local,
  * whether that's GMT or BST).
  */
 
@@ -21,7 +21,7 @@ export type Market = {
   color: string;
 };
 
-// Editorial categorical colours — muted, cohesive, distinct per market.
+// Editorial categorical colours, muted, cohesive, distinct per market.
 export const MARKETS: Market[] = [
   { city: "Sydney", flag: "🇦🇺", tz: "Australia/Sydney", open: 8, close: 17, color: "#4e6e81" },
   { city: "Tokyo", flag: "🇯🇵", tz: "Asia/Tokyo", open: 9, close: 18, color: "#8a6d9b" },

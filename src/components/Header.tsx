@@ -59,7 +59,7 @@ export async function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          {/* Desktop only — on mobile the language switcher lives inside the
+          {/* Desktop only, on mobile the language switcher lives inside the
               nav menu panel (see MobileNav), so it isn't duplicated here. */}
           <div className="hidden lg:block">
             <LocaleSwitcher />

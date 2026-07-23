@@ -32,7 +32,7 @@ export function Analytics() {
       const saved = localStorage.getItem(CONSENT_KEY);
       if (saved === "granted" || saved === "denied") setConsent(saved);
     } catch {
-      /* private mode / storage unavailable — treat as undecided */
+      /* private mode / storage unavailable, treat as undecided */
     }
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
@@ -51,7 +51,7 @@ export function Analytics() {
 
   return (
     <>
-      {/* Cookieless — no consent required. */}
+      {/* Cookieless, no consent required. */}
       {hasCookielessAnalytics && analytics.plausible && (
         <Script
           defer
@@ -61,7 +61,7 @@ export function Analytics() {
         />
       )}
 
-      {/* Clicky — loaded unconditionally (no banner gate). */}
+      {/* Clicky, loaded unconditionally (no banner gate). */}
       {analytics.clicky && (
         <Script
           async
@@ -71,7 +71,7 @@ export function Analytics() {
         />
       )}
 
-      {/* Cookie-based — only after explicit consent. */}
+      {/* Cookie-based, only after explicit consent. */}
       {cookieAllowed && analytics.ga && (
         <>
           <Script

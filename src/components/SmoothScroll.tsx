@@ -23,7 +23,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
     // Smoothly scroll to hash targets, offset for the sticky header. Handles
     // bare "#id" links and locale-prefixed home links like "/en#id" / "/es#id",
-    // but only when the link points at the page we're already on — otherwise the
+    // but only when the link points at the page we're already on, otherwise the
     // browser navigates normally (e.g. from a blog post back to a home section).
     const onClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement)?.closest?.('a[href*="#"]');

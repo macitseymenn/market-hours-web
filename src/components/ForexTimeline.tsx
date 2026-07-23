@@ -35,7 +35,7 @@ function cityLabel(tr: CityTranslator, city: string): string {
  * (shared with the alarm system).
  */
 
-// Selectable timezones — a broad list of major cities spanning every UTC offset,
+// Selectable timezones, a broad list of major cities spanning every UTC offset,
 // ordered roughly west → east. The live "(GMT +2)" suffix is appended at render
 // time from the current offset, and the visitor's own timezone is auto-detected
 // and pre-selected on load (added to the top of the list if not already here).
@@ -108,7 +108,7 @@ function gmtLabel(ms: number) {
 
 type Bar = { leftPct: number; widthPct: number };
 
-/** Minimal analog clock shown inside the "now" pin — white face, dark hands. */
+/** Minimal analog clock shown inside the "now" pin, white face, dark hands. */
 function PinClock({ h, m, s }: { h: number; m: number; s: number }) {
   const C = 15;
   const hand = (deg: number, len: number, w: number, color: string) => {
@@ -147,8 +147,8 @@ export function ForexTimeline() {
   const [optionsOpen, setOptionsOpen] = useState(false);
 
   useEffect(() => {
-    // Initialise client-only values after mount — the visitor's detected timezone
-    // and the current time — to avoid a hydration mismatch. Runs once, not per
+    // Initialise client-only values after mount, the visitor's detected timezone
+    // and the current time, to avoid a hydration mismatch. Runs once, not per
     // render, so the cascading-render concern the lint rule guards against does
     // not apply here.
     /* eslint-disable react-hooks/set-state-in-effect */
@@ -442,7 +442,7 @@ function CityRow({
           minute: "2-digit",
           hour12: !hour24,
         }).format(now)
-      : "—";
+      : "–";
 
   const localDate =
     now !== null
@@ -481,9 +481,9 @@ function CityRow({
         >
           {openNow ? statusOpen : statusClosed}
         </span>
-        {/* Empty rail — a clean track for each market (no hour gridlines). */}
+        {/* Empty rail, a clean track for each market (no hour gridlines). */}
         <div className="absolute inset-x-0 bottom-2 h-6 rounded-md bg-surface-2/50" />
-        {/* Open-window bars — solid and prominent when open, faded when closed. */}
+        {/* Open-window bars, solid and prominent when open, faded when closed. */}
         {bars.map((b, i) => (
           <div
             key={i}
@@ -498,7 +498,7 @@ function CityRow({
         ))}
       </div>
 
-      {/* Alarm toggle in its own column — never overlaps the bars or now-line. */}
+      {/* Alarm toggle in its own column, never overlaps the bars or now-line. */}
       <div className={`${ALARM_COL} flex items-center justify-end pl-3`}>
         <AlarmBell city={city.city} cityName={cityName} now={now} />
       </div>

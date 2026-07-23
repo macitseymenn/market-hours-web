@@ -3,7 +3,7 @@ import { SESSIONS } from "@/lib/site";
 /**
  * Static 24-hour session clock used inside the phone-mockup screenshot. Draws
  * every session arc from the shared SESSIONS data (so it always matches the live
- * clock and the table). No time logic — this is a decorative preview.
+ * clock and the table). No time logic, this is a decorative preview.
  */
 
 const CENTER = 130;

@@ -75,7 +75,7 @@ export async function Footer() {
           </div>
         </div>
 
-        {/* Prominent, honest disclaimer — a core E-E-A-T trust signal. */}
+        {/* Prominent, honest disclaimer, a core E-E-A-T trust signal. */}
         <p className="mt-10 border-t border-surface-2/70 pt-6 text-xs leading-relaxed text-muted">
           {tc("disclaimer")}
         </p>

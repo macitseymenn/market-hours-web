@@ -1,9 +1,9 @@
 /**
- * Analytics configuration — entirely environment-driven.
+ * Analytics configuration, entirely environment-driven.
  *
  * Nothing loads unless the matching env var is set (e.g. in Netlify's site
  * settings). With no vars set, the site stays exactly as it is today: zero
- * third-party scripts, zero cookies, zero tracking — so the "collects no data"
+ * third-party scripts, zero cookies, zero tracking, so the "collects no data"
  * promise remains true by default.
  *
  * Providers are split by privacy impact:
@@ -29,10 +29,10 @@ export const analytics = {
   plausible: clean(process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN),
 } as const;
 
-/** Cookie-setting providers — these must wait for explicit consent. */
+/** Cookie-setting providers, these must wait for explicit consent. */
 export const hasCookieAnalytics = Boolean(analytics.ga || analytics.gtm);
 
-/** No-banner providers — loaded on every visit without a consent banner. */
+/** No-banner providers, loaded on every visit without a consent banner. */
 export const hasCookielessAnalytics = Boolean(
   analytics.plausible || analytics.clicky,
 );

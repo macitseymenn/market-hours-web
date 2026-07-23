@@ -79,6 +79,11 @@ export default async function PostPage({
   const post = getPost(slug, l);
   if (!post) notFound();
 
+  // Slugs of posts that are actually live right now (current locale). Used to
+  // neutralise in-body cross-links to posts still behind the scheduled-publish
+  // gate, so they never lead to a 404 before their date arrives.
+  const publishedBlogSlugs = new Set(getAllPosts(l).map((p) => p.slug));
+
   const author = getAuthor(post.authorSlug);
   // A byline is only a named person once real author data is wired in; until then
   // we attribute honestly to the Organization (correct E-E-A-T for a YMYL topic).
@@ -99,7 +104,7 @@ export default async function PostPage({
     wordCount: post.body.trim().split(/\s+/).length,
     keywords: post.tags.join(", "),
     // Named Person once a real author is wired in; otherwise honestly the
-    // Organization — never a fabricated Person for a YMYL topic.
+    // Organization, never a fabricated Person for a YMYL topic.
     author: namedAuthor
       ? {
           "@type": "Person",
@@ -214,6 +219,16 @@ export default async function PostPage({
           components={{
             a: ({ href, children }) => {
               const external = href?.startsWith("http");
+              // A cross-link to a post that hasn't reached its publish date yet
+              // would 404 (getPost -> notFound). Render those as plain text so
+              // they never break; once the target goes live its slug enters
+              // publishedBlogSlugs on the next ISR pass and the link comes back.
+              if (href && !external) {
+                const m = href.match(/^\/[a-z]{2}\/blog\/([^/#?]+)/);
+                if (m && !publishedBlogSlugs.has(m[1])) {
+                  return <span>{children}</span>;
+                }
+              }
               return (
                 <a
                   href={href}

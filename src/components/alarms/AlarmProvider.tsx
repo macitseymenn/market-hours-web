@@ -15,14 +15,14 @@ import { playSound, type SoundId } from "@/lib/sounds";
 
 /**
  * In-tab alarm system (no backend). Two kinds of alarm:
- *   • Market alarms — arm a market's 🔔; rings the moment that market OPENS or
+ *   • Market alarms, arm a market's 🔔; rings the moment that market OPENS or
  *     CLOSES (each direction armed independently).
- *   • Custom alarms — a one-shot alarm at any date/time the user picks.
+ *   • Custom alarms, a one-shot alarm at any date/time the user picks.
  *
  * Persistent ringing: if an alarm triggers while THIS tab is in the background
- * (the user is on another tab), we keep the alarm going — the tab TITLE flashes,
+ * (the user is on another tab), we keep the alarm going, the tab TITLE flashes,
  * the notification stays on screen (requireInteraction), and we re-attempt the
- * sound — until the user returns to this tab, at which point it stops and plays
+ * sound, until the user returns to this tab, at which point it stops and plays
  * once in the foreground. Everything persists in localStorage; no backend.
  */
 
@@ -34,7 +34,7 @@ export type CustomAlarm = { id: string; at: number; label: string };
 export type AlarmEvent = "open" | "close";
 
 /** Armed market alarms are stored as canonical `"City:event"` keys (e.g.
- *  "London:open"). Legacy entries were bare city names — those migrate to
+ *  "London:open"). Legacy entries were bare city names, those migrate to
  *  `open` on load. City names contain no colon, so the last ":" splits safely. */
 export function armKey(city: string, event: AlarmEvent): string {
   return `${city}:${event}`;
@@ -115,7 +115,7 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
   const [sound, setSoundState] = useState<SoundId>("chime");
   const [permission, setPermission] = useState<Perm>("default");
 
-  // Load persisted state (client only, after mount) — one-time hydration.
+  // Load persisted state (client only, after mount), one-time hydration.
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect */
     try {
@@ -225,7 +225,7 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
 
   // Silently turn notifications on when the user first arms an alarm. Called
   // directly from the arming click handler (a user gesture) so the browser's
-  // native permission prompt fires immediately — no separate "Enable
+  // native permission prompt fires immediately, no separate "Enable
   // notifications" step. No-ops once the choice is made (granted/denied), and
   // when the browser can't prompt (denied never re-prompts, unsupported).
   const ensureNotifyPermission = useCallback(() => {
@@ -409,7 +409,7 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
       if (ringingRef.current) return;
 
       if (nearest) {
-        document.title = `⏰ ${formatCountdown(nearest.at - now)} · ${nearest.text} — Forex Market Hours`;
+        document.title = `⏰ ${formatCountdown(nearest.at - now)} · ${nearest.text}, Forex Market Hours`;
       } else if (document.title.startsWith("⏰") && baseTitleRef.current) {
         document.title = baseTitleRef.current;
       }

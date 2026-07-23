@@ -5,8 +5,8 @@ import { getMarket, nextOpen, nextClose } from "@/lib/markets";
 import { formatCountdown, useAlarms, type AlarmEvent } from "./AlarmProvider";
 
 /**
- * Per-market alarm control. Two independent toggles — one for the session OPEN
- * (▲) and one for the CLOSE (▼) — each showing a live "in …" countdown when
+ * Per-market alarm control. Two independent toggles, one for the session OPEN
+ * (▲) and one for the CLOSE (▼), each showing a live "in …" countdown when
  * armed. `city` is the internal market key; `cityName` is the localized display
  * name shown to the user.
  */

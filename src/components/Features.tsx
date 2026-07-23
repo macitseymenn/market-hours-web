@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { FEATURES } from "@/lib/site";
 
-// Minimal stroke icons keyed to each feature. aria-hidden — the heading carries
+// Minimal stroke icons keyed to each feature. aria-hidden, the heading carries
 // the meaning for assistive tech.
 const ICONS: Record<string, React.ReactNode> = {
   clock: (

@@ -9,17 +9,17 @@ const COPY = {
   en: {
     metaTitle: "Risk & Trading Disclaimer",
     metaDescription:
-      "Forex Market Hours is a market-hours tool only — not financial advice and not a broker. Read our full risk and trading disclaimer.",
+      "Forex Market Hours is a market-hours tool only, not financial advice and not a broker. Read our full risk and trading disclaimer.",
     ogDescription:
-      "Forex Market Hours is a market-hours tool only — not financial advice and not a broker.",
+      "Forex Market Hours is a market-hours tool only, not financial advice and not a broker.",
     breadcrumb: "Disclaimer",
     h1: "Risk & Trading Disclaimer",
     body: (
       <>
         <h2>Not financial advice</h2>
         <p>
-          Nothing on {PRODUCT.name} — including the web tool, the mobile app, the
-          blog, or any other page on this site — constitutes financial, investment,
+          Nothing on {PRODUCT.name}, including the web tool, the mobile app, the
+          blog, or any other page on this site, constitutes financial, investment,
           trading, tax or legal advice. We do not recommend buying, selling, or
           holding any currency, security, or other financial instrument. Any
           decision to trade is yours alone, and you should seek independent,
@@ -47,7 +47,7 @@ const COPY = {
         <p>
           The session hours shown by {PRODUCT.name} are computed from each financial
           centre&apos;s timezone rules and follow daylight-saving changes
-          automatically — see our <Link href="/methodology">methodology</Link> for
+          automatically. See our <Link href="/methodology">methodology</Link> for
           how. They are provided for general orientation, reflect a normal trading
           day, and exclude market holidays and unscheduled closures. Always confirm
           exact hours with your broker or exchange before relying on them for a
@@ -74,8 +74,8 @@ const COPY = {
       <>
         <h2>No es asesoramiento financiero</h2>
         <p>
-          Nada en {PRODUCT.name} —ni la herramienta web, ni la app para móvil, ni
-          el blog, ni ninguna otra página de este sitio— constituye asesoramiento
+          Nada en {PRODUCT.name}, ni la herramienta web, ni la app para móvil, ni
+          el blog, ni ninguna otra página de este sitio, constituye asesoramiento
           financiero, de inversión, de trading, fiscal o legal. No recomendamos
           comprar, vender ni mantener ninguna divisa, valor u otro instrumento
           financiero. Cualquier decisión de operar es únicamente tuya, y deberías

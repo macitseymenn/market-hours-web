@@ -57,7 +57,7 @@ export function AlarmModal({ open, onClose }: { open: boolean; onClose: () => vo
       aria-modal="true"
       aria-labelledby="alarm-options-title"
     >
-      {/* Decorative click-to-close backdrop — kept out of the tab order and the
+      {/* Decorative click-to-close backdrop, kept out of the tab order and the
           a11y tree so the focus trap only sees elements inside the panel. */}
       <button
         type="button"

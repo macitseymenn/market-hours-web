@@ -1,13 +1,13 @@
 /**
  * Author profiles. These power the byline, the /author/[slug] page, and the
- * Person structured data — all strong E-E-A-T (Experience / Expertise /
+ * Person structured data, all strong E-E-A-T (Experience / Expertise /
  * Authoritativeness / Trust) signals for Google and answer engines.
  *
  * ─────────────────────────────────────────────────────────────────────────────
  * HOW TO WIRE IN THE REAL AUTHOR (orchestrator)
  * ─────────────────────────────────────────────────────────────────────────────
  * Replace ONLY the bracketed placeholder fields on the entry below with the real,
- * verifiable person the site owner provides. Nothing else needs to change — the
+ * verifiable person the site owner provides. Nothing else needs to change, the
  * moment the placeholders are gone, `isPlaceholderAuthor()` returns false and the
  * whole site lights up automatically:
  *
@@ -42,7 +42,7 @@ export type Author = {
   slug: string;
   /**
    * "team" = honest organization-level attribution (the current, deliberate
-   * state — no named individual, so no Person structured data and no indexed
+   * state, no named individual, so no Person structured data and no indexed
    * profile). "person" = a real, verifiable individual (name/photo/sameAs), which
    * unlocks Person JSON-LD + an indexed author page. Never fabricate a person.
    */
@@ -84,8 +84,7 @@ export const AUTHORS: Author[] = [
     slug: "author",
     // Deliberate, honest organization-level attribution (see EDITORIAL_TEAM).
     // To publish under a REAL named individual instead, add a second entry with
-    // kind: "person" and real, verifiable data (name, photo, LinkedIn/X sameAs) —
-    // that unlocks Person JSON-LD + an indexed author page automatically. Never
+    // kind: "person" and real, verifiable data (name, photo, LinkedIn/X sameAs),     // that unlocks Person JSON-LD + an indexed author page automatically. Never
     // fabricate a person or credentials.
     kind: "team",
     name: EDITORIAL_TEAM.name,
@@ -94,7 +93,7 @@ export const AUTHORS: Author[] = [
     longBio:
       "The Forex Market Hours editorial team builds and maintains the live " +
       "session tool and writes every guide, checking each session time against " +
-      "primary sources — the IANA time-zone database, central-bank trading " +
+      "primary sources, the IANA time-zone database, central-bank trading " +
       "calendars and the Bank for International Settlements. We publish market-" +
       "hours information only and do not provide financial advice.",
     avatar: EDITORIAL_TEAM.avatar,
@@ -118,7 +117,7 @@ export function getAuthor(slug: string): Author | undefined {
  *   • blog bylines           → attributed to the Organization while placeholder
  *
  * It flips to false automatically when the orchestrator fills in real data, so no
- * code change is needed — only `authors.ts` edits. Detection is intentionally
+ * code change is needed, only `authors.ts` edits. Detection is intentionally
  * conservative: any bracketed placeholder field marks the whole entry as unready.
  */
 export function isPlaceholderAuthor(author: Author): boolean {

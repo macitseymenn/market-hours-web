@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-// Native <details>/<summary> accordion — fully keyboard-accessible and works
+// Native <details>/<summary> accordion, fully keyboard-accessible and works
 // with no client-side JavaScript.
 export async function Faq() {
   const t = await getTranslations("home.faq");

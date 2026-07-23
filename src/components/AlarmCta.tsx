@@ -6,7 +6,7 @@ import { OPEN_ALARMS_EVENT } from "./ForexTimeline";
 /**
  * Prominent hero call-to-action that invites visitors to set a session alarm.
  * The alarm modal lives inside <ForexTimeline> (it owns the open/close state),
- * so this button just fires a window event that the timeline listens for — no
+ * so this button just fires a window event that the timeline listens for, no
  * shared context needed, and the two components stay decoupled.
  */
 export function AlarmCta() {

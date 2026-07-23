@@ -38,7 +38,7 @@
     "disclaimer": "Horario del Mercado Forex es únicamente una herramienta de horarios de mercado. No ofrece asesoramiento financiero ni servicios de trading, depósito o retiro. Operar en el mercado de divisas conlleva riesgo. Los horarios de las sesiones se facilitan a título informativo y se ajustan a los cambios de horario de verano."
   },
   "schema": {
-    "webAppDescription": "Una herramienta gratuita y en vivo que muestra qué sesiones forex —Sídney, Tokio, Fráncfort, Londres y Nueva York— están abiertas ahora mismo, en tu propia zona horaria. Consulta de un vistazo los solapamientos de sesiones, los horarios de apertura y los cambios de horario de verano, directamente en tu navegador. También disponible como app para iOS y Android.",
+    "webAppDescription": "Una herramienta gratuita y en vivo que muestra qué sesiones forex, Sídney, Tokio, Fráncfort, Londres y Nueva York, están abiertas ahora mismo, en tu propia zona horaria. Consulta de un vistazo los solapamientos de sesiones, los horarios de apertura y los cambios de horario de verano, directamente en tu navegador. También disponible como app para iOS y Android.",
     "appDescription": "La app Horario del Mercado Forex muestra exactamente cuándo abren y cierran las sesiones forex de Londres, Nueva York, Tokio, Sídney y Fráncfort en tu propia zona horaria, con un reloj de sesiones en vivo de 24 horas, widgets, alertas de sesión y un calendario económico. Una utilidad de seguimiento del mercado, no un bróker.",
     "howToName": "Cómo leer el reloj del horario del mercado forex",
     "featureList": [
@@ -51,12 +51,12 @@
   "home": {
     "hero": {
       "h1": "Horario del mercado forex, en vivo en tu zona horaria",
-      "definition": "El horario del mercado forex son las horas en que cada gran mercado de divisas está abierto para operar. El mercado forex funciona las 24 horas del día, cinco días a la semana, a través de cuatro sesiones —Sídney, Tokio, Londres y Nueva York— y cierra los fines de semana. Este reloj en vivo muestra qué sesiones están abiertas ahora mismo en tu zona horaria.",
-      "converterH2": "Convertidor de horarios del mercado forex — ve cada sesión en tu zona horaria",
+      "definition": "El horario del mercado forex son las horas en que cada gran mercado de divisas está abierto para operar. El mercado forex funciona las 24 horas del día, cinco días a la semana, a través de cuatro sesiones, Sídney, Tokio, Londres y Nueva York, y cierra los fines de semana. Este reloj en vivo muestra qué sesiones están abiertas ahora mismo en tu zona horaria.",
+      "converterH2": "Convertidor de horarios del mercado forex: ve cada sesión en tu zona horaria",
       "converterIntro": "Convierte automáticamente cada sesión de trading a tu hora local, sin cálculos manuales de GMT ni conjeturas sobre el horario de verano. Elige cualquier ciudad o usa la zona horaria que detecte tu dispositivo, abajo.",
       "phonePrompt": "¿Lo prefieres en tu móvil?",
       "phoneLink": "Descarga la app gratis para iOS y Android ↓",
-      "alarmCta": "No te pierdas ninguna sesión — pon tu alarma"
+      "alarmCta": "No te pierdas ninguna sesión, pon tu alarma"
     },
     "status": {
       "statusLine": "{count, plural, =0 {Ahora mismo no hay ninguna sesión importante abierta: la negociación se reanuda cuando abre la sesión de Sídney para la semana.} =1 {Ahora mismo, la sesión de {list} está abierta.} other {Ahora mismo, las sesiones de {list} están abiertas.}}",
@@ -129,7 +129,7 @@
       "diagramAlt": "Diagrama de línea de tiempo de las sesiones forex de Sídney, Tokio, Fráncfort, Londres y Nueva York a lo largo de un día de 24 horas en GMT, con el solapamiento Londres–Nueva York destacado.",
       "diagramCaption": "Las cinco grandes sesiones forex a lo largo de un día de 24 horas en GMT. La banda resaltada marca el solapamiento Londres–Nueva York (≈13:00–17:00 GMT), la ventana de mayor liquidez del día.",
       "statTurnover": "Para dimensionarlo: el volumen medio diario de negociación de forex alcanzó los 7,5 billones de dólares en abril de 2022, con las mesas del Reino Unido (Londres) gestionando la mayor cuota mundial, según la <link>Encuesta Trienal de Bancos Centrales</link> del Banco de Pagos Internacionales.",
-      "statIana": "Cada hora en esta página se calcula en tiempo real a partir de la <link>Base de Datos de Zonas Horarias de IANA</link> —la referencia de zonas horarias integrada en prácticamente todos los navegadores y sistemas operativos—, por lo que los cambios de horario de verano siempre son precisos.",
+      "statIana": "Cada hora en esta página se calcula en tiempo real a partir de la <link>Base de Datos de Zonas Horarias de IANA</link>, la referencia de zonas horarias integrada en prácticamente todos los navegadores y sistemas operativos, por lo que los cambios de horario de verano siempre son precisos.",
       "relatedReading": "¿Quieres más detalle? Lee sobre las <bestTime>cuatro sesiones principales de trading</bestTime>, consulta el <overlap>horario del mercado forex por zona horaria</overlap>, o descubre <methodology>cómo calculamos estos horarios</methodology>.",
       "dstNote": "Los horarios de las sesiones se facilitan a título informativo y varían con el horario de verano (por ejemplo, Londres sigue el GMT en invierno y el BST en verano). La app siempre refleja los horarios actuales, correctamente ajustados."
     },
@@ -147,7 +147,7 @@
         },
         {
           "title": "Calendario económico en vivo",
-          "body": "Sigue las publicaciones de alto impacto —NFP, IPC, PIB, PMI y decisiones de tipos de los bancos centrales— antes de que muevan el mercado."
+          "body": "Sigue las publicaciones de alto impacto, NFP, IPC, PIB, PMI y decisiones de tipos de los bancos centrales, antes de que muevan el mercado."
         },
         {
           "title": "Alertas de sesiones y noticias",
@@ -186,7 +186,7 @@
         },
         {
           "q": "¿Qué sesiones forex muestra?",
-          "a": "Las principales sesiones —Sídney, Tokio, Fráncfort, Londres y Nueva York— además de los solapamientos de alto volumen, donde la volatilidad suele alcanzar su punto máximo."
+          "a": "Las principales sesiones, Sídney, Tokio, Fráncfort, Londres y Nueva York, además de los solapamientos de alto volumen, donde la volatilidad suele alcanzar su punto máximo."
         },
         {
           "q": "¿Los horarios son correctos con el horario de verano?",
@@ -206,7 +206,7 @@
         },
         {
           "q": "¿Está abierto el mercado forex ahora mismo?",
-          "a": "El mercado forex está abierto las 24 horas desde el domingo a las 17:00 ET hasta el viernes a las 17:00 ET. Para ver si una sesión concreta —Sídney, Tokio, Londres o Nueva York— está operando en este momento en tu zona horaria, consulta el reloj en vivo en la parte superior de esta página."
+          "a": "El mercado forex está abierto las 24 horas desde el domingo a las 17:00 ET hasta el viernes a las 17:00 ET. Para ver si una sesión concreta, Sídney, Tokio, Londres o Nueva York, está operando en este momento en tu zona horaria, consulta el reloj en vivo en la parte superior de esta página."
         },
         {
           "q": "¿Cuál es el mejor momento para operar en forex?",
@@ -354,16 +354,16 @@
     "switchToDark": "Cambiar al modo oscuro"
   },
   "badges": {
-    "appStoreAria": "Descárgalo en la App Store — {app} (se abre en una pestaña nueva)",
+    "appStoreAria": "Descárgalo en la App Store, {app} (se abre en una pestaña nueva)",
     "appStoreLine1": "Descárgalo en la",
     "appStoreLine2": "App Store",
-    "googlePlayAria": "Consíguelo en Google Play — {app} (se abre en una pestaña nueva)",
+    "googlePlayAria": "Consíguelo en Google Play, {app} (se abre en una pestaña nueva)",
     "googlePlayLine1": "Consíguelo en",
     "googlePlayLine2": "Google Play",
     "newTab": "(se abre en una pestaña nueva)"
   },
   "blog": {
-    "metaTitle": "Blog de Horario del Mercado Forex — Sesiones y horarios de trading",
+    "metaTitle": "Blog de Horario del Mercado Forex: Sesiones y horarios de trading",
     "metaDesc": "Guías claras sobre el horario del mercado forex, las sesiones de trading, los solapamientos y las zonas horarias, del equipo de Horario del Mercado Forex.",
     "indexTitle": "Blog",
     "indexIntro": "Guías claras y prácticas sobre el horario del mercado forex, las sesiones de trading y las zonas horarias que las determinan.",

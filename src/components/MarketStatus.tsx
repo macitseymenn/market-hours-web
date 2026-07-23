@@ -6,8 +6,8 @@ import { NextSessionCountdown } from "./NextSessionCountdown";
 /**
  * Server-rendered "is the forex market open right now" status, computed at
  * render time from `markets.ts` (the same DST-accurate model the live tool and
- * alarms use). Session open/closed state is a GLOBAL fact — identical for
- * every visitor regardless of their own timezone — so it is safe to render on
+ * alarms use). Session open/closed state is a GLOBAL fact, identical for
+ * every visitor regardless of their own timezone, so it is safe to render on
  * the server and cache: the homepage sets `export const revalidate = 300`, so
  * this sentence is at most 5 minutes stale, which is accurate enough since
  * sessions only change on hour boundaries.
@@ -18,7 +18,7 @@ export async function MarketStatus() {
   const tc = await getTranslations("home.sessions");
   const intlLocale = locale === "es" ? "es-ES" : "en-US";
 
-  // `new Date().getTime()` rather than `Date.now()` — the React Compiler ESLint
+  // `new Date().getTime()` rather than `Date.now()`, the React Compiler ESLint
   // rule flags `Date.now()` specifically as an "impure function call" during
   // render, even in an async server component computing a legitimately fresh
   // value once per (ISR-cached) request. Behaviourally identical.

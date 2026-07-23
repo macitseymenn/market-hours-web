@@ -4,8 +4,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 /*
   Real App Store screenshots, each shown full-bleed inside a phone frame.
   Images are localized AND given keyword-rich, SEO-friendly filenames per locale
-  (see SHOTS below) so the file paths themselves reinforce the page keywords —
-  the app UI in each shot matches the visitor's language. Drop replacement images
+  (see SHOTS below) so the file paths themselves reinforce the page keywords,   the app UI in each shot matches the visitor's language. Drop replacement images
   in /public/screenshots/<locale>/ under the same names to update. The frame's
   aspect ratio (9/19) matches a modern phone; `object-cover` fills it with a
   negligible top/bottom crop for the ~9/18.4 source images.
@@ -56,7 +55,7 @@ function PhoneFrame({
 
 export async function Screenshots() {
   const t = await getTranslations("home.screenshots");
-  // Localized screenshot set — Spanish shots for `es`, English for everything else.
+  // Localized screenshot set, Spanish shots for `es`, English for everything else.
   const dir = (await getLocale()) === "es" ? "es" : "en";
   const shot = SHOTS[dir];
 

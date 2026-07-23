@@ -10,7 +10,7 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
 // ISR: re-render hourly so scheduled (future-dated) posts appear automatically
-// once their publish date arrives — see `isPublished` in @/content/blog.
+// once their publish date arrives, see `isPublished` in @/content/blog.
 export const revalidate = 3600;
 
 export async function generateMetadata({
@@ -43,7 +43,7 @@ export async function generateMetadata({
   };
 }
 
-// Blog structured data — lists the posts for search engines.
+// Blog structured data, lists the posts for search engines.
 function blogJsonLd(locale: BlogLocale) {
   return {
     "@context": "https://schema.org",

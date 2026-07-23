@@ -10,8 +10,7 @@ export const SITE_URL = "https://forexmarkethours.app";
 /**
  * Homepage content freshness, used for JSON-LD `datePublished`/`dateModified`
  * and the visible "Session times verified {Month Year}" line. Bump `modified`
- * whenever the homepage copy or session data is materially reviewed/updated —
- * it is a manual editorial signal, not a build timestamp, so it stays accurate
+ * whenever the homepage copy or session data is materially reviewed/updated,  * it is a manual editorial signal, not a build timestamp, so it stays accurate
  * even though the page itself is served from an ISR cache.
  */
 export const CONTENT_DATES = {
@@ -26,8 +25,8 @@ export const PRODUCT = {
   tagline: "Live forex market hours in your timezone",
   // Tool-first description used for meta + hero support copy.
   description:
-    "A free live tool that shows which forex sessions — Sydney, Tokyo, " +
-    "Frankfurt, London and New York — are open right now, in your own " +
+    "A free live tool that shows which forex sessions, Sydney, Tokyo, " +
+    "Frankfurt, London and New York, are open right now, in your own " +
     "timezone. See session overlaps, opening times and daylight-saving shifts " +
     "at a glance, right in your browser. Also available as an iOS and Android app.",
 } as const;
@@ -39,7 +38,7 @@ export const APP = {
   // Description of the mobile app specifically (used for app JSON-LD + app CTA).
   description:
     "The Forex Market Hours app shows exactly when the London, New York, Tokyo, " +
-    "Sydney and Frankfurt forex sessions open and close in your own timezone — " +
+    "Sydney and Frankfurt forex sessions open and close in your own timezone, " +
     "with a live 24-hour session clock, widgets, session alerts and an economic " +
     "calendar. A market-tracking utility, not a broker.",
   appStoreUrl:
@@ -59,7 +58,7 @@ export const PUBLISHER = {
 
 /**
  * Primary navigation. Section links are absolute (`/#id`) so they work from any
- * page (blog, author) — on the homepage they still smooth-scroll via Lenis.
+ * page (blog, author), on the homepage they still smooth-scroll via Lenis.
  */
 /**
  * Primary navigation. `hash` items scroll to a section on the home page (the
@@ -103,11 +102,11 @@ export const LEGAL_NAV = [
 export const HERO_DEFINITION =
   "Forex market hours are the times each major currency market is open for " +
   "trading. The forex market runs 24 hours a day, five days a week, across " +
-  "four sessions — Sydney, Tokyo, London and New York — and is closed on " +
+  "four sessions, Sydney, Tokyo, London and New York, and is closed on " +
   "weekends. This live clock shows which sessions are open right now in your " +
   "timezone.";
 
-/** Feature cards — each has an icon key resolved in the Features component. */
+/** Feature cards, each has an icon key resolved in the Features component. */
 export const FEATURES = [
   {
     icon: "clock",
@@ -122,7 +121,7 @@ export const FEATURES = [
   {
     icon: "calendar",
     title: "Live economic calendar",
-    body: "Track high-impact releases — NFP, CPI, GDP, PMI and central-bank rate decisions — before they move the market.",
+    body: "Track high-impact releases, NFP, CPI, GDP, PMI and central-bank rate decisions, before they move the market.",
   },
   {
     icon: "bell",
@@ -212,10 +211,10 @@ export function isSessionOpen(session: Session, t: number): boolean {
 export const OVERLAP = {
   title: "London – New York overlap",
   gmt: "≈ 13:00 – 17:00 GMT",
-  body: "When London and New York are open together, the two largest markets trade at once — typically the deepest liquidity and sharpest moves of the day.",
+  body: "When London and New York are open together, the two largest markets trade at once, typically the deepest liquidity and sharpest moves of the day.",
 } as const;
 
-/** How to use the web tool — no download needed. */
+/** How to use the web tool, no download needed. */
 export const STEPS = [
   {
     title: "Set your timezone",
@@ -223,7 +222,7 @@ export const STEPS = [
   },
   {
     title: "Read the open markets",
-    body: "Each coloured bar is a session's trading window. The moving line is now — wherever it crosses a bar, that market is open.",
+    body: "Each coloured bar is a session's trading window. The moving line is now: wherever it crosses a bar, that market is open.",
   },
   {
     title: "Plan around the overlaps",
@@ -231,7 +230,7 @@ export const STEPS = [
   },
 ] as const;
 
-/** FAQ — mirrored 1:1 into FAQPage structured data. */
+/** FAQ, mirrored 1:1 into FAQPage structured data. */
 export const FAQ = [
   {
     q: "Is this free to use?",
@@ -247,7 +246,7 @@ export const FAQ = [
   },
   {
     q: "Which forex sessions does it show?",
-    a: "The major sessions — Sydney, Tokyo, Frankfurt, London and New York — plus the high-volume session overlaps where volatility tends to peak.",
+    a: "The major sessions, Sydney, Tokyo, Frankfurt, London and New York, plus the high-volume session overlaps where volatility tends to peak.",
   },
   {
     q: "Are the times correct for daylight saving?",
@@ -267,7 +266,7 @@ export const FAQ = [
   },
   {
     q: "Is the forex market open right now?",
-    a: "The forex market is open 24 hours from Sunday 5 PM ET to Friday 5 PM ET. To see whether a specific session — Sydney, Tokyo, London or New York — is trading at this moment in your timezone, check the live clock at the top of this page.",
+    a: "The forex market is open 24 hours from Sunday 5 PM ET to Friday 5 PM ET. To see whether a specific session, Sydney, Tokyo, London or New York, is trading at this moment in your timezone, check the live clock at the top of this page.",
   },
   {
     q: "What is the best time to trade forex?",
@@ -275,11 +274,11 @@ export const FAQ = [
   },
   {
     q: "Why is the London session the most important?",
-    a: "London is the largest forex trading centre by volume — the UK handles the biggest share of global FX turnover (BIS Triennial Survey). The London open often sets the day's direction, and its afternoon overlaps with New York, creating the busiest hours of the day.",
+    a: "London is the largest forex trading centre by volume, the UK handles the biggest share of global FX turnover (BIS Triennial Survey). The London open often sets the day's direction, and its afternoon overlaps with New York, creating the busiest hours of the day.",
   },
   {
     q: "What are the forex market hours in my timezone?",
-    a: "Session times are usually quoted in GMT, but this tool converts every session to your local timezone automatically and adjusts for daylight saving — so you see the exact hour each market opens and closes on your own clock, with no manual conversion.",
+    a: "Session times are usually quoted in GMT, but this tool converts every session to your local timezone automatically and adjusts for daylight saving, so you see the exact hour each market opens and closes on your own clock, with no manual conversion.",
   },
 ] as const;
 

@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
  * there's no flash).
  *
  * The current theme is read from the <html> `dark` class via useSyncExternalStore
- * — the React-sanctioned way to read client-only/external state without a
+ *, the React-sanctioned way to read client-only/external state without a
  * setState-in-effect. The server snapshot is Light, then the client corrects it
  * on mount.
  */

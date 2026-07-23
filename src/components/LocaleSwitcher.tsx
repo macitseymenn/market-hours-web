@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
 
 /**
- * Language switcher — a dropdown that lists every configured locale, so adding
+ * Language switcher, a dropdown that lists every configured locale, so adding
  * a new language to `routing.locales` automatically surfaces it here. Selecting
  * a language navigates to the equivalent page in that locale, respecting
  * localized slugs by reading the page's own hreflang alternates (with a

@@ -9,7 +9,7 @@ const COPY = {
   en: {
     metaTitle: "Editorial Standards & Accuracy Policy",
     metaDescription:
-      "How we research, source and review forex market-hours content — our accuracy, corrections and non-advice editorial standards.",
+      "How we research, source and review forex market-hours content, our accuracy, corrections and non-advice editorial standards.",
     breadcrumb: "Editorial Policy",
     h1: "Editorial Standards & Accuracy Policy",
     lead: (
@@ -55,7 +55,7 @@ const COPY = {
         <p>
           Editorial responsibility for {PRODUCT.name} sits with the{" "}
           {PUBLISHER.displayName} team, the software company that builds and
-          maintains the tool — see our <Link href="/about">About page</Link>. The
+          maintains the tool. See our <Link href="/about">About page</Link>. The
           same team both writes the guides and maintains the live tool, so the
           data behind an article and the words describing it are checked together
           rather than in isolation. When a real named editor is credited on an
@@ -64,7 +64,7 @@ const COPY = {
 
         <h2>Corrections</h2>
         <p>
-          If we find — or are told about — an inaccuracy, we correct it and, for
+          If we find, or are told about, an inaccuracy, we correct it and, for
           substantial changes, update the article&apos;s &quot;last updated&quot;
           date. We would rather fix a mistake quickly than leave it live for the
           sake of appearances.
@@ -76,13 +76,13 @@ const COPY = {
           buy/sell recommendations of any kind, and none of our content should be
           read as a suggestion to trade a specific instrument at a specific time.
           We publish general, educational information about how forex sessions and
-          their hours work — see our full{" "}
+          their hours work. See our full{" "}
           <Link href="/disclaimer">risk and trading disclaimer</Link>.
         </p>
 
         <h2>Report an inaccuracy</h2>
         <p>
-          Spotted something wrong — a session time, a source link, a date? Tell us
+          Spotted something wrong, a session time, a source link, a date? Tell us
           at{" "}
           <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
           and we will look into it.
@@ -152,7 +152,7 @@ const COPY = {
 
         <h2>Correcciones</h2>
         <p>
-          Si detectamos —o nos avisan de— una imprecisión, la corregimos y, en los
+          Si detectamos, o nos avisan de, una imprecisión, la corregimos y, en los
           cambios sustanciales, actualizamos la fecha de «última actualización» del
           artículo. Preferimos corregir un error con rapidez antes que dejarlo
           publicado por guardar las apariencias.

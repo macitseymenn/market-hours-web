@@ -9,9 +9,9 @@ const COPY = {
   en: {
     metaTitle: "Contact Us",
     metaDescription:
-      "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries. info@forexmarkethours.app.",
+      "Get in touch with the Forex Market Hours team, corrections, feedback and partnership enquiries. info@forexmarkethours.app.",
     ogDescription:
-      "Get in touch with the Forex Market Hours team — corrections, feedback and partnership enquiries.",
+      "Get in touch with the Forex Market Hours team, corrections, feedback and partnership enquiries.",
     breadcrumb: "Contact",
     h1: "Contact Us",
     lead: (
@@ -32,17 +32,17 @@ const COPY = {
         <h2>What to contact us about</h2>
         <ul>
           <li>
-            <strong>Corrections</strong> — spotted an inaccurate session time, a
+            <strong>Corrections</strong>: spotted an inaccurate session time, a
             broken source link, or an outdated date in an article? Let us know and
             we will review it (see our{" "}
             <Link href="/editorial-policy">editorial policy</Link>).
           </li>
           <li>
-            <strong>Feedback</strong> — feature requests, bug reports, or general
+            <strong>Feedback</strong>: feature requests, bug reports, or general
             thoughts on the web tool or the app.
           </li>
           <li>
-            <strong>Partnerships</strong> — press, collaboration, or integration
+            <strong>Partnerships</strong>: press, collaboration, or integration
             enquiries.
           </li>
         </ul>

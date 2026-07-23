@@ -8,7 +8,7 @@ export async function SessionTimes() {
   const t = await getTranslations("home.sessions");
   const locale = (await getLocale()) as BlogLocale;
 
-  // Contextual internal links to the two most relevant guides — looked up by
+  // Contextual internal links to the two most relevant guides, looked up by
   // their stable English slug so the correct localized slug/href resolves
   // for both locales.
   const bestTimePost = POSTS.find((p) => p.slug.en === "forex-trading-sessions-explained");
@@ -88,7 +88,7 @@ export async function SessionTimes() {
           </table>
         </div>
 
-        {/* The overlap — the highest-liquidity window traders care about. */}
+        {/* The overlap, the highest-liquidity window traders care about. */}
         <div className="mt-6 rounded-2xl border border-emerald/30 bg-emerald/5 p-6">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h3 className="font-display text-lg font-semibold text-ivory">
@@ -101,7 +101,7 @@ export async function SessionTimes() {
           </p>
         </div>
 
-        {/* Session-overlap diagram — a lightweight SVG so the page qualifies for
+        {/* Session-overlap diagram, a lightweight SVG so the page qualifies for
             image-pack results, with a descriptive, localized alt text. */}
         <div className="mt-8 overflow-hidden rounded-2xl border border-surface-2 bg-surface/30 p-4 sm:p-5">
           <Image
@@ -114,7 +114,7 @@ export async function SessionTimes() {
           <p className="mt-3 text-center text-xs text-muted">{t("diagramCaption")}</p>
         </div>
 
-        {/* Dated, cited stats — concrete GEO/AEO signals with real outbound
+        {/* Dated, cited stats, concrete GEO/AEO signals with real outbound
             links (BIS turnover survey, IANA timezone database). */}
         <p className="mt-6 max-w-3xl text-sm leading-relaxed text-fog">
           {t.rich("statTurnover", {
@@ -147,7 +147,7 @@ export async function SessionTimes() {
           })}
         </p>
 
-        {/* Internal linking depth — contextual links into the two most
+        {/* Internal linking depth, contextual links into the two most
             relevant guides, plus the methodology page (owned elsewhere). */}
         {bestTimePost && overlapPost && (
           <p className="mt-4 max-w-3xl text-sm text-fog">

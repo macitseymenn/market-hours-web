@@ -15,7 +15,7 @@ const XSL = `<?xml version="1.0" encoding="UTF-8"?>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="robots" content="noindex"/>
-        <title>Forex Market Hours — XML Sitemap</title>
+        <title>Forex Market Hours: XML Sitemap</title>
         <style>
           :root {
             --bg: #fbf3e9; --card: #fffcf6; --ink: #23201c; --fg: #4a443b;

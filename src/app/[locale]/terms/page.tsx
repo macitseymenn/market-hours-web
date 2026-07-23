@@ -27,7 +27,7 @@ const COPY = {
       <>
         <blockquote>
           This is a general terms-of-use template intended to describe how the
-          service actually works. It is not a substitute for legal advice — please
+          service actually works. It is not a substitute for legal advice, please
           have it reviewed by qualified counsel before relying on it for any dispute
           or compliance purpose.
         </blockquote>

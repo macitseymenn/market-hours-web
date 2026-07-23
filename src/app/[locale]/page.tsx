@@ -13,7 +13,7 @@ import { jsonLdScript } from "@/lib/jsonld";
 
 // ISR: the page is still served from cache (static perf), but regenerates at
 // most every 5 minutes so the server-rendered "open right now" sentence in
-// <MarketStatus> never drifts far from the true session state — sessions only
+// <MarketStatus> never drifts far from the true session state, sessions only
 // change on hour boundaries, so a 5-minute staleness window is accurate enough.
 export const revalidate = 300;
 
@@ -36,7 +36,7 @@ export default async function Home({
 
   const diagramUrl = `${SITE_URL}/session-overlap-timeline.svg`;
 
-  // WebApplication — the free browser tool that IS the hero of this page (distinct
+  // WebApplication, the free browser tool that IS the hero of this page (distinct
   // from the mobile app below). This is the entity searchers land on.
   // datePublished/dateModified give AI Overviews and Google a freshness signal;
   // `modified` is a manual editorial date (see CONTENT_DATES), bumped whenever
@@ -58,7 +58,7 @@ export default async function Home({
     publisher: { "@type": "Organization", name: PUBLISHER.legalName },
   };
 
-  // ImageObject — the session-overlap timeline diagram, so the page is
+  // ImageObject, the session-overlap timeline diagram, so the page is
   // eligible for Google's image-pack results alongside the text result.
   const imageJsonLd = {
     "@context": "https://schema.org",
@@ -69,7 +69,7 @@ export default async function Home({
     representativeOfPage: true,
   };
 
-  // BreadcrumbList — Home continuity for the site's top-level entry point
+  // BreadcrumbList, Home continuity for the site's top-level entry point
   // (every inner page already has one; the homepage was missing it).
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -84,7 +84,7 @@ export default async function Home({
     ],
   };
 
-  // SoftwareApplication — the companion mobile app (distinct entity from the web
+  // SoftwareApplication, the companion mobile app (distinct entity from the web
   // tool). aggregateRating is intentionally omitted: the app's store ratings are
   // not shown on this page, and an invisible self-rating is a YMYL policy risk.
   const appJsonLd = {
@@ -105,7 +105,7 @@ export default async function Home({
     publisher: { "@type": "Organization", name: PUBLISHER.legalName },
   };
 
-  // HowTo — the "how to read the clock" steps. Aids semantic/AEO understanding.
+  // HowTo, the "how to read the clock" steps. Aids semantic/AEO understanding.
   const howToJsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -117,7 +117,7 @@ export default async function Home({
     })),
   };
 
-  // FAQPage — mirrors the on-page FAQ exactly, feeds AI Overviews / PAA.
+  // FAQPage, mirrors the on-page FAQ exactly, feeds AI Overviews / PAA.
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
