@@ -32,8 +32,14 @@ const A = {
   clicky: !!process.env.NEXT_PUBLIC_CLICKY_ID,
   plausible: !!process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN,
 };
-const scriptHosts: string[] = [];
-const connectHosts: string[] = [];
+// Cloudflare Web Analytics beacon (static.cloudflareinsights.com/beacon.min.js)
+// is injected at the edge by Cloudflare when Web Analytics is enabled for the
+// domain — it is not loaded by this app's code, and it is cookieless (no
+// consent banner needed). Always allow its script host and its RUM beacon
+// endpoint (cloudflareinsights.com/cdn-cgi/rum) so the CSP never blocks the
+// edge-injected beacon.
+const scriptHosts: string[] = ["https://static.cloudflareinsights.com"];
+const connectHosts: string[] = ["https://cloudflareinsights.com"];
 const imgHosts: string[] = [];
 if (A.google) {
   scriptHosts.push("https://www.googletagmanager.com");

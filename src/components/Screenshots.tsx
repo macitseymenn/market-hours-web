@@ -3,12 +3,28 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 /*
   Real App Store screenshots, each shown full-bleed inside a phone frame.
-  Images are localized: /public/screenshots/<locale>/{markets,calendar,alarms}.jpeg
-  — the app UI in the shot matches the visitor's language. Drop replacement
-  images in those folders (one set per locale) to update. The frame's aspect
-  ratio (9/19) matches a modern phone; `object-cover` fills it with a negligible
-  top/bottom crop for the ~9/18.4 source images.
+  Images are localized AND given keyword-rich, SEO-friendly filenames per locale
+  (see SHOTS below) so the file paths themselves reinforce the page keywords —
+  the app UI in each shot matches the visitor's language. Drop replacement images
+  in /public/screenshots/<locale>/ under the same names to update. The frame's
+  aspect ratio (9/19) matches a modern phone; `object-cover` fills it with a
+  negligible top/bottom crop for the ~9/18.4 source images.
 */
+
+// Keyword-rich, localized screenshot filenames (no extension). English uses the
+// primary English keywords; Spanish uses the equivalent Spanish search terms.
+const SHOTS = {
+  en: {
+    clock: "forex-market-hours-live-session-clock",
+    calendar: "forex-economic-calendar",
+    alerts: "forex-session-open-close-alerts",
+  },
+  es: {
+    clock: "horario-mercado-forex-reloj-sesiones",
+    calendar: "calendario-economico-forex",
+    alerts: "alertas-apertura-cierre-sesiones-forex",
+  },
+} as const;
 function PhoneFrame({
   src,
   alt,
@@ -42,6 +58,7 @@ export async function Screenshots() {
   const t = await getTranslations("home.screenshots");
   // Localized screenshot set — Spanish shots for `es`, English for everything else.
   const dir = (await getLocale()) === "es" ? "es" : "en";
+  const shot = SHOTS[dir];
 
   return (
     <section className="border-t border-surface-2/60 bg-surface/30 py-20 md:py-24">
@@ -54,9 +71,9 @@ export async function Screenshots() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          <PhoneFrame src={`/screenshots/${dir}/markets.jpeg`} alt={t("clockAlt")} label={t("clockLabel")} />
-          <PhoneFrame src={`/screenshots/${dir}/calendar.jpeg`} alt={t("calendarAlt")} label={t("calendarLabel")} />
-          <PhoneFrame src={`/screenshots/${dir}/alarms.jpeg`} alt={t("alertsAlt")} label={t("alertsLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/${shot.clock}.jpeg`} alt={t("clockAlt")} label={t("clockLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/${shot.calendar}.jpeg`} alt={t("calendarAlt")} label={t("calendarLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/${shot.alerts}.jpeg`} alt={t("alertsAlt")} label={t("alertsLabel")} />
         </div>
 
         <p className="mt-8 text-center text-xs text-muted">{t("disclaimer")}</p>
