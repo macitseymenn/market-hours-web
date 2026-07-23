@@ -129,7 +129,7 @@
       "diagramCaption": "The five major forex sessions across a 24-hour GMT day. The shaded band marks the London–New York overlap (≈13:00–17:00 GMT), the day's highest-liquidity window.",
       "statTurnover": "For scale: global average daily forex turnover reached $7.5 trillion in April 2022, with UK (London) desks handling the largest share worldwide, according to the Bank for International Settlements' <link>Triennial Central Bank Survey</link>.",
       "statIana": "Every hour on this page is computed live from the <link>IANA Time Zone Database</link> — the timezone reference built into virtually every browser and operating system — so daylight-saving shifts are always accurate.",
-      "relatedReading": "Want more detail? Read about the <bestTime>best time to trade forex by session</bestTime>, dig into the <overlap>London–New York overlap</overlap>, or see <methodology>how we calculate these times</methodology>.",
+      "relatedReading": "Want more detail? Read about the <bestTime>four major trading sessions</bestTime>, see <overlap>forex market hours by timezone</overlap>, or learn <methodology>how we calculate these times</methodology>.",
       "dstNote": "Session windows are provided for general information and shift with daylight-saving time (for example, London observes GMT in winter and BST in summer). The app always reflects the current, correctly-adjusted times."
     },
     "features": {
@@ -380,7 +380,7 @@
   "consent": {
     "title": "Cookie consent",
     "message": "We use privacy-friendly analytics to understand how the tool is used. No ads, ever.",
-    "learnMore": "Learn more",
+    "learnMore": "Read our privacy policy",
     "accept": "Accept",
     "decline": "Decline"
   }

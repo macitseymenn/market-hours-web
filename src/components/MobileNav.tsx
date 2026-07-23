@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { NAV } from "@/lib/site";
 import { Link } from "@/i18n/navigation";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 const FOCUSABLE =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -131,6 +132,14 @@ export function MobileNav({ locale }: { locale: string }) {
                 </li>
               ))}
             </ul>
+
+            {/* Language selector, surfaced inside the menu on mobile. */}
+            <div className="mt-3 border-t border-surface-2 pt-3">
+              <p className="px-3 pb-2 text-xs font-medium uppercase tracking-wide text-muted">
+                {th("language")}
+              </p>
+              <LocaleSwitcher />
+            </div>
           </div>
         </>
       )}

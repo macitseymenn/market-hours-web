@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 /*
   Real App Store screenshots, each shown full-bleed inside a phone frame.
-  Drop replacement images in /public and update the `src` below. The frame's
-  aspect ratio (9/19) matches a modern phone; `object-cover` fills it with a
-  negligible top/bottom crop for the ~9/18.4 source images.
+  Images are localized: /public/screenshots/<locale>/{markets,calendar,alarms}.jpeg
+  — the app UI in the shot matches the visitor's language. Drop replacement
+  images in those folders (one set per locale) to update. The frame's aspect
+  ratio (9/19) matches a modern phone; `object-cover` fills it with a negligible
+  top/bottom crop for the ~9/18.4 source images.
 */
 function PhoneFrame({
   src,
@@ -38,6 +40,8 @@ function PhoneFrame({
 
 export async function Screenshots() {
   const t = await getTranslations("home.screenshots");
+  // Localized screenshot set — Spanish shots for `es`, English for everything else.
+  const dir = (await getLocale()) === "es" ? "es" : "en";
 
   return (
     <section className="border-t border-surface-2/60 bg-surface/30 py-20 md:py-24">
@@ -50,9 +54,9 @@ export async function Screenshots() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          <PhoneFrame src="/2.jpeg" alt={t("clockAlt")} label={t("clockLabel")} />
-          <PhoneFrame src="/3.jpeg" alt={t("calendarAlt")} label={t("calendarLabel")} />
-          <PhoneFrame src="/1.jpeg" alt={t("alertsAlt")} label={t("alertsLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/markets.jpeg`} alt={t("clockAlt")} label={t("clockLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/calendar.jpeg`} alt={t("calendarAlt")} label={t("calendarLabel")} />
+          <PhoneFrame src={`/screenshots/${dir}/alarms.jpeg`} alt={t("alertsAlt")} label={t("alertsLabel")} />
         </div>
 
         <p className="mt-8 text-center text-xs text-muted">{t("disclaimer")}</p>

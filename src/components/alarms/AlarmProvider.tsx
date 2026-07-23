@@ -223,6 +223,19 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
       .catch(() => {});
   }, []);
 
+  // Silently turn notifications on when the user first arms an alarm. Called
+  // directly from the arming click handler (a user gesture) so the browser's
+  // native permission prompt fires immediately — no separate "Enable
+  // notifications" step. No-ops once the choice is made (granted/denied), and
+  // when the browser can't prompt (denied never re-prompts, unsupported).
+  const ensureNotifyPermission = useCallback(() => {
+    if (typeof Notification !== "undefined" && Notification.permission === "default") {
+      Notification.requestPermission()
+        .then((p) => setPermission(p))
+        .catch(() => {});
+    }
+  }, []);
+
   const notify = useCallback(
     (title: string, body: string, tag: string, persistent = false) => {
       try {
@@ -412,38 +425,37 @@ export function AlarmProvider({ children }: { children: React.ReactNode }) {
     };
   }, [armed, customAlarms, ring, trigger, stopRinging, removeCustomAlarm]);
 
-  const toggle = useCallback((city: string, event: AlarmEvent) => {
-    const key = armKey(city, event);
-    setArmed((prev) => {
-      if (prev.includes(key)) {
+  const toggle = useCallback(
+    (city: string, event: AlarmEvent) => {
+      const key = armKey(city, event);
+      const arming = !armed.includes(key);
+      if (arming) {
+        // One tap on the Open/Close bell both arms the alarm AND enables
+        // notifications: the permission request runs here, in the click
+        // handler's user gesture, so the browser prompt appears right away.
+        ensureNotifyPermission();
+      } else {
         delete prevOpenRef.current[key];
-        return prev.filter((k) => k !== key);
       }
-      if (typeof Notification !== "undefined" && Notification.permission === "default") {
-        Notification.requestPermission()
-          .then((p) => setPermission(p))
-          .catch(() => {});
-      }
-      return [...prev, key];
-    });
-  }, []);
+      setArmed((prev) =>
+        prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key],
+      );
+    },
+    [armed, ensureNotifyPermission],
+  );
 
   const addCustomAlarm = useCallback((at: number, label: string) => {
     const id =
       typeof crypto !== "undefined" && crypto.randomUUID
         ? crypto.randomUUID()
         : `${at}-${Math.round(at % 100000)}`;
-    if (typeof Notification !== "undefined" && Notification.permission === "default") {
-      Notification.requestPermission()
-        .then((p) => setPermission(p))
-        .catch(() => {});
-    }
+    ensureNotifyPermission();
     setCustomAlarms((prev) =>
       [...prev, { id, at, label: label.trim() || msgRef.current.t("defaultLabel") }].sort(
         (a, b) => a.at - b.at,
       ),
     );
-  }, []);
+  }, [ensureNotifyPermission]);
 
   const clearAll = useCallback(() => {
     prevOpenRef.current = {};

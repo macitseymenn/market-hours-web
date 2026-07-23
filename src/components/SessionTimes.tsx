@@ -11,8 +11,8 @@ export async function SessionTimes() {
   // Contextual internal links to the two most relevant guides — looked up by
   // their stable English slug so the correct localized slug/href resolves
   // for both locales.
-  const bestTimePost = POSTS.find((p) => p.slug.en === "best-time-to-trade-forex");
-  const overlapPost = POSTS.find((p) => p.slug.en === "london-new-york-overlap");
+  const bestTimePost = POSTS.find((p) => p.slug.en === "forex-trading-sessions-explained");
+  const overlapPost = POSTS.find((p) => p.slug.en === "forex-market-hours-by-timezone");
 
   return (
     <section

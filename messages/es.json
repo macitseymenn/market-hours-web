@@ -129,7 +129,7 @@
       "diagramCaption": "Las cinco grandes sesiones forex a lo largo de un día de 24 horas en GMT. La banda resaltada marca el solapamiento Londres–Nueva York (≈13:00–17:00 GMT), la ventana de mayor liquidez del día.",
       "statTurnover": "Para dimensionarlo: el volumen medio diario de negociación de forex alcanzó los 7,5 billones de dólares en abril de 2022, con las mesas del Reino Unido (Londres) gestionando la mayor cuota mundial, según la <link>Encuesta Trienal de Bancos Centrales</link> del Banco de Pagos Internacionales.",
       "statIana": "Cada hora en esta página se calcula en tiempo real a partir de la <link>Base de Datos de Zonas Horarias de IANA</link> —la referencia de zonas horarias integrada en prácticamente todos los navegadores y sistemas operativos—, por lo que los cambios de horario de verano siempre son precisos.",
-      "relatedReading": "¿Quieres más detalle? Lee sobre la <bestTime>mejor hora para operar forex por sesión</bestTime>, profundiza en el <overlap>solapamiento Londres–Nueva York</overlap>, o consulta <methodology>cómo calculamos estos horarios</methodology>.",
+      "relatedReading": "¿Quieres más detalle? Lee sobre las <bestTime>cuatro sesiones principales de trading</bestTime>, consulta el <overlap>horario del mercado forex por zona horaria</overlap>, o descubre <methodology>cómo calculamos estos horarios</methodology>.",
       "dstNote": "Los horarios de las sesiones se facilitan a título informativo y varían con el horario de verano (por ejemplo, Londres sigue el GMT en invierno y el BST en verano). La app siempre refleja los horarios actuales, correctamente ajustados."
     },
     "features": {
@@ -380,7 +380,7 @@
   "consent": {
     "title": "Consentimiento de cookies",
     "message": "Usamos analítica respetuosa con la privacidad para entender cómo se usa la herramienta. Sin publicidad, nunca.",
-    "learnMore": "Más información",
+    "learnMore": "Lee nuestra política de privacidad",
     "accept": "Aceptar",
     "decline": "Rechazar"
   }
