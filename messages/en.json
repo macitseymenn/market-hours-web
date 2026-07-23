@@ -246,6 +246,7 @@
     "yourTimezone": "Your timezone",
     "hour24": "24-hour time",
     "options": "Options",
+    "alarms": "Alarms",
     "timelineAria": "Forex market hours converter — 24-hour session timeline, scroll horizontally to see all sessions in your timezone",
     "sessionOpen": "{city} session open",
     "sessionClosed": "{city} session closed",

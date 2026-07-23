@@ -46,12 +46,28 @@ export async function Hero() {
             converter framing, just above the app prompt. */}
         <MarketStatus />
 
-        <p className="mt-6 text-center text-sm text-muted">
-          {t("phonePrompt")}{" "}
-          <a href="#apps" className="text-emerald underline-offset-4 hover:underline">
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <p className="text-center text-sm text-muted">{t("phonePrompt")}</p>
+          <a
+            href="#apps"
+            className="inline-flex items-center gap-2 rounded-full border border-emerald/40 bg-emerald/10 px-5 py-2.5 text-sm font-semibold text-emerald transition-colors hover:border-emerald hover:bg-emerald/15"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4 w-4"
+              aria-hidden="true"
+            >
+              <rect x="7" y="2" width="10" height="20" rx="2.5" />
+              <path d="M11 18h2" />
+            </svg>
             {t("phoneLink")}
           </a>
-        </p>
+        </div>
       </div>
     </section>
   );

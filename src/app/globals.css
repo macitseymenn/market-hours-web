@@ -181,3 +181,26 @@ html.theme-transition *::after {
 .article-prose em {
   color: var(--color-muted);
 }
+
+/*
+  Mobile-only soft edge fade on the horizontally-scrollable session timeline.
+  The 24h timeline is wider than a phone screen and scrolls sideways; a hard
+  right-edge cutoff reads as abrupt, so the last ~2.5rem softly fades out — it
+  looks like an intentional, polished edge and hints "there's more, scroll →".
+  A luminance mask is background-agnostic, so it always matches the card behind
+  it (no colour to keep in sync). Disabled from `sm` up where the timeline fits.
+*/
+@media (max-width: 640px) {
+  .timeline-scroll {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 calc(100% - 2.5rem),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      #000 calc(100% - 2.5rem),
+      transparent 100%
+    );
+  }
+}

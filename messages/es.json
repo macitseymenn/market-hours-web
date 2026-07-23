@@ -246,6 +246,7 @@
     "yourTimezone": "Tu zona horaria",
     "hour24": "Formato de 24 horas",
     "options": "Opciones",
+    "alarms": "Alarmas",
     "timelineAria": "Convertidor de horarios del mercado forex: línea de tiempo de sesiones de 24 horas, desplázate horizontalmente para ver todas las sesiones en tu zona horaria",
     "sessionOpen": "Sesión de {city} abierta",
     "sessionClosed": "Sesión de {city} cerrada",
