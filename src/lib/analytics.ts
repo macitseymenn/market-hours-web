@@ -7,9 +7,10 @@
  * promise remains true by default.
  *
  * Providers are split by privacy impact:
- *   • Cookie-based (GA4, GTM, Clicky) → loaded ONLY after the visitor grants
- *     consent via the banner (GDPR / ePrivacy compliant).
- *   • Cookieless (Plausible) → loaded without a banner; discloses in the policy.
+ *   • Cookie-based (GA4, GTM) → loaded ONLY after the visitor grants consent
+ *     via the banner (GDPR / ePrivacy compliant).
+ *   • No-banner (Plausible, Clicky) → loaded without a banner; disclosed in the
+ *     policy. Clicky loads unconditionally on every visit.
  *
  * Set these in Netlify → Site settings → Environment variables, then redeploy:
  *   NEXT_PUBLIC_GA_ID              e.g. G-XXXXXXXXXX   (Google Analytics 4)
@@ -29,12 +30,12 @@ export const analytics = {
 } as const;
 
 /** Cookie-setting providers — these must wait for explicit consent. */
-export const hasCookieAnalytics = Boolean(
-  analytics.ga || analytics.gtm || analytics.clicky,
-);
+export const hasCookieAnalytics = Boolean(analytics.ga || analytics.gtm);
 
-/** Cookieless providers — no consent banner legally required. */
-export const hasCookielessAnalytics = Boolean(analytics.plausible);
+/** No-banner providers — loaded on every visit without a consent banner. */
+export const hasCookielessAnalytics = Boolean(
+  analytics.plausible || analytics.clicky,
+);
 
 /** True when ANY analytics is configured (drives policy + trust-copy wording). */
 export const analyticsEnabled = hasCookieAnalytics || hasCookielessAnalytics;
