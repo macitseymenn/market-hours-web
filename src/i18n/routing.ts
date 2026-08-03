@@ -22,6 +22,10 @@ export const routing = defineRouting({
     "/editorial-policy": { en: "/editorial-policy", es: "/politica-editorial" },
     "/disclaimer": { en: "/disclaimer", es: "/aviso-de-riesgo" },
     "/privacy": { en: "/privacy", es: "/privacidad" },
+    // Privacy policy for the separate "FX Lot Size Calculator:Lotwise" app,
+    // hosted here for its store listing. Same slug in both locales so the URL
+    // we submit to the stores is stable.
+    "/lotwise-privacy": "/lotwise-privacy",
     "/terms": { en: "/terms", es: "/terminos" },
     "/contact": { en: "/contact", es: "/contacto" },
   },
