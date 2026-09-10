@@ -30,7 +30,7 @@ Bu dosya, siteye yeni bir dil eklerken tek referanstir. Blog yazisi uretimi icin
      intlClock: "fr-FR",        // canli saat (en disinda intl ile ayni)
      ogLocale: "fr_FR",
      dir: "ltr",
-     availableFrom: "2026-09-17",
+     availableFrom: "2026-09-17",   // bir sonraki Persembe
    },
    ```
 
@@ -148,6 +148,7 @@ otomatik turer. Yeni dil icin bu dosyalara dokunmana gerek yok.
 | Tarih/saat/liste bicimi | Registry `intl` / `intlClock` |
 | Ekran goruntusu klasoru | O dilin kendi seti varsa o, yoksa `en` |
 | `llms.txt` dil listesi | Canli diller |
+| 404 sayfasi (baslik, metin, onerilen rehberler) | `notFound` mesaj namespace'i + o dilde yayinda olan yazilar |
 
 ---
 ---
@@ -156,7 +157,7 @@ otomatik turer. Yeni dil icin bu dosyalara dokunmana gerek yok.
 
 Bir dil su kapsamla acilir:
 
-- [ ] `messages/<code>.json` %100 (238 anahtar)
+- [ ] `messages/<code>.json` %100 (245 anahtar, `notFound` namespace'i dahil)
 - [ ] 9 sayfanin `COPY` objesi (Bolum 4)
 - [ ] `routing.ts` icinde lokalize slug'lar
 - [ ] **En az 5 blog yazisi** cevrilmis
@@ -234,13 +235,101 @@ sonradan eklemek dili bozmaz.
 ---
 ---
 
+# BOLUM 10: TARIHLER VE TAZELIK SINYALI (SEO)
+
+Google'a "bu site surekli yenileniyor" mesajini vermek istiyoruz, ama tarih
+spam'i yapmadan. Kural tek cumleyle: **her tarih gercek bir editoryal olguyu
+gostermeli.**
+
+## 10.1 Temel ilke
+
+Bir cevirinin yayinlandigi gun, o URL icin GERCEKTEN yeni icerik demektir.
+Ingilizce orijinali Temmuz'da yazilmis olabilir, ama `/fr/blog/...` adresi o
+gune kadar var degildi. Dolayisiyla:
+
+- Ceviri, **kendi yayin tarihini** tasir (`localeDate`), orijinalinkini degil.
+- Orijinal dildeki sayfanin tarihi, yeni bir dil ciktiginda **DEGISMEZ**.
+
+Ikisi de dogru oldugu icin bu spam degil. Tersi ikisi de yanlis olurdu:
+orijinalin tarihini devralmak yepyeni bir URL'i geriye tarihler ve gercek
+tazelik sinyalini cope atar; degismemis Ingilizce sayfaya bugunun tarihini
+yazmak ise Google'in tam olarak degersizlestirdigi sahte sinyaldir.
+
+## 10.2 Alanlar
+
+| Alan | Anlami |
+|---|---|
+| `date` | Orijinal (varsayilan dil) surumunun yayin tarihi |
+| `updated` | Orijinal surumun son anlamli guncelleme tarihi |
+| `localeDate` | Dil basina ILK yayin tarihi. Ceviri icin doldur |
+| `localeUpdated` | Dil basina son anlamli guncelleme tarihi |
+
+`localeDate` verilen bir dilde `updated`, orijinalin duzenleme gecmisini DEVRALMAZ,
+cunku o gecmis bu cevirinin oncesine aittir. Sadece `localeUpdated` gecerlidir.
+
+## 10.3 Bu alanlar neyi besliyor
+
+| Cikti | Kaynak |
+|---|---|
+| JSON-LD `datePublished` / `dateModified` | O dilin kendi tarihi |
+| Sayfada gorunen tarih ve "Derniere mise a jour" | O dilin kendi tarihi |
+| Sitemap `lastmod` | `max(icerigin kendi degisim tarihi, o dilin yayin tarihi)` |
+| Blog listesi sirasi | O dilin kendi tarihine gore, yeniden eskiye |
+
+## 10.4 Sitemap `lastmod` politikasi
+
+**Build zamani ASLA kullanilmaz.** Google `lastmod`'a yalnizca gercek degisimle
+tutarli kaldigi surece guvenir; her yeniden derlemede oynayan bir dosyada tum
+`lastmod` degerlerini toptan yok sayar. Bu da gercekten yeni olan URL'leri
+degismeyenlerin arasinda gomerdi.
+
+Yeni dil ciktiginda sitemap'in gorunumu (fr, 2026-09-10):
+
+```
+14 URL  2026-09-10   <- sadece Fransizca, hepsi o gun gercekten yeni
+16 URL  2026-07-22   <- degismemis legal sayfalar, kipirdamadi
+ 2 URL  2026-07-29   <- Ingilizce/Ispanyolca blog arsivi, kipirdamadi
+```
+
+Legal sayfalarin `updated` tarihi `src/lib/site.ts` icindeki `LEGAL_NAV`'dadir.
+Sayfayi yeniden yazdiginda elle bump et; yeni dil ciktigi icin ASLA bump etme.
+
+## 10.5 Zamanlanmis ceviri yayini
+
+`isPublished` artik dil-farkindadir: bir cevirinin `localeDate`'ine ileri tarih
+verirsen, o yazi **sadece o dilde** gizli kalir, orijinali yayinda kalmaya devam
+eder. Kapi acilinca ceviri kendi dogru tarihiyle canliya cikar.
+
+Gizli kaldigi surece o dil, yazinin hreflang kumesinden de dusulur; yani hicbir
+zaman 404'e giden bir alternate uretilmez (bu, tum hreflang kumesinin Google
+tarafindan atilmasina yol acardi).
+
+**Istikrarli tazelik icin onerilen kullanim:** bir dilin kalan cevirilerini tek
+seferde degil, haftaya yayarak yayinla. Her hafta gercekten yeni URL'ler,
+gercekten yeni tarihlerle cikar. Google'a "surekli yenilenen site" sinyalini
+veren sey tarih oynatmak degil, gercek yayin temposudur.
+
+---
+---
+
 # EK A: DIL KUYRUGU
+
+Tempo: **haftada bir dil**, her Persembe yayin.
 
 | Sira | Dil | Kod | Yayin | Durum |
 |---|---|---|---|---|
-| 1 | Francais | `fr` | 2026-09-17 | UI + legal + 5 yazi hazir, tarih bekliyor |
-| 2 | Portugues | `pt` | 2026-09-24 | siradaki |
-| 3+ | - | - | - | belirlenecek |
+| 1 | Francais | `fr` | 2026-09-10 | CANLI (UI + legal + 5 yazi) |
+| 2 | Portugues | `pt` | 2026-09-17 | siradaki |
+| 3 | - | - | 2026-09-24 | belirlenecek |
+| 4 | - | - | 2026-10-01 | belirlenecek |
+| 5 | - | - | 2026-10-08 | belirlenecek |
+
+Her dil, kendisinden bir onceki dilin yayin gununden 7 gun sonrasina
+`availableFrom` alir. Icerik o tarihten once commit edilir; tarih geldiginde dil
+kendiliginden acilir.
+
+**`fr` icin kalan is (sonraki partiler):** 10 yazi daha, EK B'deki rezerve
+slug'larla. Ayrica `public/screenshots/fr/` yok, su an Ingilizce sete dusuyor.
 
 `pt` icin not: tek Portekizce surum planlandigi icin kod `pt` (Brezilya +
 Portekiz'i birlikte kapsar). Ileride ayri bir Portekiz surumu istenirse
@@ -249,34 +338,40 @@ Portekiz'i birlikte kapsar). Ileride ayri bir Portekiz surumu istenirse
 ---
 ---
 
-# EK B: REZERVE EDILMIS FRANSIZCA SLUG'LAR
+# EK B: FRANSIZCA SLUG'LAR VE YAYIN TAKVIMI
 
-Yayindaki 5 Fransizca yazi, henuz cevrilmemis 10 yaziya bugunden link veriyor.
-Render katmani bu linkleri simdilik duz metne ceviriyor; hedef yazi cevrildigi
-an link kendiliginden aktiflesir. **Bu yuzden asagidaki slug'lar baglayicidir:**
-kalan 10 yaziyi Fransizca'ya cevirirken TAM OLARAK bu slug'lari kullan, yoksa
-mevcut yazilardaki ic linkler sessizce olu kalir.
+Fransizca'nin 15 yazisi da yazildi. Ilk 5'i 10 Eylul'de canli; kalan 10'u haftada
+2 (Pazartesi + Persembe) kendi tarihlerinde otomatik acilir. Yazilar birbirine
+bugunden link veriyor: henuz cikmamis bir hedefe giden link duz metin olarak
+render edilir ve hedef yayinlandigi an kendiliginden aktiflesir.
 
-| Ingilizce slug | Rezerve Fransizca slug | Durum |
-|---|---|---|
-| `forex-trading-sessions-explained` | `seances-de-trading-forex-expliquees` | ✅ cevrildi |
-| `what-time-does-the-forex-market-open` | `a-quelle-heure-ouvre-le-marche-du-forex` | ✅ cevrildi |
-| `best-time-to-trade-forex` | `meilleur-moment-pour-trader-le-forex` | ✅ cevrildi |
-| `london-new-york-overlap` | `chevauchement-londres-new-york` | ✅ cevrildi |
-| `forex-market-hours-by-timezone` | `horaires-du-forex-par-fuseau-horaire` | ✅ cevrildi |
-| `what-time-does-the-london-session-open` | `a-quelle-heure-ouvre-la-seance-de-londres` | rezerve (4 yaziden link aliyor) |
-| `tokyo-asian-forex-session` | `seance-forex-de-tokyo-asie` | rezerve (2 yaziden link aliyor) |
-| `sydney-forex-session` | `seance-forex-de-sydney` | rezerve (2 yaziden link aliyor) |
-| `new-york-forex-session` | `seance-forex-de-new-york` | rezerve (2 yaziden link aliyor) |
-| `is-the-forex-market-open-today` | `le-marche-du-forex-est-il-ouvert-aujourd-hui` | rezerve (2 yaziden link aliyor) |
-| `daylight-saving-time-forex` | `heure-d-ete-et-forex` | rezerve |
-| `frankfurt-european-forex-session` | `seance-forex-de-francfort-europe` | rezerve |
-| `most-traded-currency-pairs` | `paires-de-devises-les-plus-tradees` | rezerve |
-| `forex-economic-calendar-and-news-times` | `calendrier-economique-forex-et-horaires-des-annonces` | rezerve |
-| `why-forex-is-open-24-hours` | `pourquoi-le-forex-est-ouvert-24h-24` | rezerve |
+| Yayin | Ingilizce slug | Fransizca slug | Kelime |
+|---|---|---|---|
+| 2026-09-10 | `forex-trading-sessions-explained` | `seances-de-trading-forex-expliquees` | 2354 |
+| 2026-09-10 | `forex-market-hours-by-timezone` | `horaires-du-forex-par-fuseau-horaire` | 2313 |
+| 2026-09-10 | `london-new-york-overlap` | `chevauchement-londres-new-york` | 1749 |
+| 2026-09-10 | `best-time-to-trade-forex` | `meilleur-moment-pour-trader-le-forex` | 1773 |
+| 2026-09-10 | `what-time-does-the-forex-market-open` | `a-quelle-heure-ouvre-le-marche-du-forex` | 1331 |
+| 2026-09-14 | `what-time-does-the-london-session-open` | `a-quelle-heure-ouvre-la-seance-de-londres` | 2334 |
+| 2026-09-17 | `is-the-forex-market-open-today` | `le-marche-du-forex-est-il-ouvert-aujourd-hui` | 2385 |
+| 2026-09-21 | `new-york-forex-session` | `seance-forex-de-new-york` | 1734 |
+| 2026-09-24 | `sydney-forex-session` | `seance-forex-de-sydney` | 1766 |
+| 2026-09-28 | `tokyo-asian-forex-session` | `seance-forex-de-tokyo-asie` | 2525 |
+| 2026-10-01 | `daylight-saving-time-forex` | `heure-d-ete-et-forex` | 1463 |
+| 2026-10-05 | `forex-economic-calendar-and-news-times` | `calendrier-economique-forex-et-horaires-des-annonces` | 1424 |
+| 2026-10-08 | `frankfurt-european-forex-session` | `seance-forex-de-francfort-europe` | 1358 |
+| 2026-10-12 | `most-traded-currency-pairs` | `paires-de-devises-les-plus-tradees` | 1371 |
+| 2026-10-15 | `why-forex-is-open-24-hours` | `pourquoi-le-forex-est-ouvert-24h-24` | 1263 |
 
-Ayni disiplini her yeni dil icin uygula: ilk parti yazilirken kalan yazilarin
-slug'larini burada rezerve et, sonraki partiler o slug'lari kullansin.
+Toplam 27.143 Fransizca kelime.
+
+**Siralama neden bu:** en cok ic link alan yazi en erken cikar, boylece mevcut
+yazilardaki uyuyan linkler mumkun olan en kisa surede aktiflesir. Yeni bir dil
+icin ayni mantigi uygula.
+
+**Sonraki diller icin ayni disiplin:** ilk parti yazilirken kalan yazilarin
+slug'larini burada rezerve et ve tarihlerini haftaya yay. Slug'lar baglayicidir;
+farkli bir slug kullanilirsa mevcut yazilardaki linkler sessizce olu kalir.
 
 ---
 ---

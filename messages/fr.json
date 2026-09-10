@@ -34,6 +34,15 @@
     "disclaimer": "Forex Market Hours est uniquement un outil d’horaires de marché. Il ne fournit aucun conseil financier et ne propose aucun service de trading, de dépôt ou de retrait. Le trading sur le marché des changes comporte des risques. Les horaires des séances sont donnés à titre d’information générale et suivent les changements d’heure saisonniers.",
     "home": "Accueil"
   },
+  "notFound": {
+    "metaTitle": "Page introuvable",
+    "code": "404",
+    "h1": "Cette page n’existe pas",
+    "lead": "Le lien est peut-être obsolète, ou la page a été déplacée. L’horloge des séances en direct, elle, est toujours ici.",
+    "toolCta": "Ouvrir l’horloge des séances en direct",
+    "blogLink": "Voir tous les guides",
+    "popular": "Guides populaires"
+  },
   "schema": {
     "webAppDescription": "Un outil gratuit et en direct qui montre quelles séances de forex, Sydney, Tokyo, Francfort, Londres et New York, sont ouvertes en ce moment, dans votre propre fuseau horaire. Visualisez d’un coup d’œil les chevauchements de séances, les heures d’ouverture et les décalages liés à l’heure d’été, directement dans votre navigateur. Également disponible en application iOS et Android.",
     "appDescription": "L’application Forex Market Hours indique précisément quand les séances forex de Londres, New York, Tokyo, Sydney et Francfort ouvrent et ferment dans votre propre fuseau horaire, avec une horloge de séance sur 24 heures, des widgets, des alertes de séance et un calendrier économique. Un utilitaire de suivi de marché, pas un courtier.",

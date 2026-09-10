@@ -83,14 +83,25 @@ export const CTA_ID = "apps";
  * trust the site: who we are, how we compute times, editorial standards, and
  * the standard legal set.
  */
+/**
+ * `updated` is the date each page's COPY last materially changed, and it is the
+ * only thing that drives its sitemap `lastmod`. Bump it when you rewrite the
+ * page, never because the site was rebuilt or a new language launched: a
+ * `lastmod` that moves without the content moving is the signal Google stops
+ * trusting, and it discredits the dates on every other URL in the file.
+ *
+ * A new locale is handled separately and honestly: that locale's URLs are
+ * genuinely new on its launch date, so the sitemap takes whichever is later of
+ * this date and the locale's launch date. See @/app/sitemap.xml/route.
+ */
 export const LEGAL_NAV = [
-  { key: "about", href: "/about" },
-  { key: "methodology", href: "/methodology" },
-  { key: "editorialPolicy", href: "/editorial-policy" },
-  { key: "disclaimer", href: "/disclaimer" },
-  { key: "privacy", href: "/privacy" },
-  { key: "terms", href: "/terms" },
-  { key: "contact", href: "/contact" },
+  { key: "about", href: "/about", updated: "2026-07-22" },
+  { key: "methodology", href: "/methodology", updated: "2026-07-22" },
+  { key: "editorialPolicy", href: "/editorial-policy", updated: "2026-07-22" },
+  { key: "disclaimer", href: "/disclaimer", updated: "2026-07-22" },
+  { key: "privacy", href: "/privacy", updated: "2026-07-22" },
+  { key: "terms", href: "/terms", updated: "2026-07-22" },
+  { key: "contact", href: "/contact", updated: "2026-07-22" },
 ] as const;
 
 /**

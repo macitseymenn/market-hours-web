@@ -34,6 +34,15 @@
     "disclaimer": "Forex Market Hours is a market-hours tool only. It does not provide financial advice and does not offer trading, deposit, or withdrawal services. Trading foreign exchange carries risk. Session times are provided for general information and follow daylight-saving changes.",
     "home": "Home"
   },
+  "notFound": {
+    "metaTitle": "Page not found",
+    "code": "404",
+    "h1": "This page doesn’t exist",
+    "lead": "The link may be out of date, or the page may have moved. The live session clock is still right here, though.",
+    "toolCta": "Open the live session clock",
+    "blogLink": "Browse all guides",
+    "popular": "Popular guides"
+  },
   "schema": {
     "webAppDescription": "A free live tool that shows which forex sessions, Sydney, Tokyo, Frankfurt, London and New York, are open right now, in your own timezone. See session overlaps, opening times and daylight-saving shifts at a glance, right in your browser. Also available as an iOS and Android app.",
     "appDescription": "The Forex Market Hours app shows exactly when the London, New York, Tokyo, Sydney and Frankfurt forex sessions open and close in your own timezone, with a live 24-hour session clock, widgets, session alerts and an economic calendar. A market-tracking utility, not a broker.",

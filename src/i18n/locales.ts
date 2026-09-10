@@ -88,7 +88,7 @@ export const LOCALES = [
     intlClock: "fr-FR",
     ogLocale: "fr_FR",
     dir: "ltr",
-    availableFrom: "2026-09-17",
+    availableFrom: "2026-09-10",
   },
 ] as const satisfies readonly LocaleMeta[];
 

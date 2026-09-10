@@ -34,6 +34,15 @@
     "disclaimer": "Horario del Mercado Forex es únicamente una herramienta de horarios de mercado. No ofrece asesoramiento financiero ni servicios de trading, depósito o retiro. Operar en el mercado de divisas conlleva riesgo. Los horarios de las sesiones se facilitan a título informativo y se ajustan a los cambios de horario de verano.",
     "home": "Inicio"
   },
+  "notFound": {
+    "metaTitle": "Página no encontrada",
+    "code": "404",
+    "h1": "Esta página no existe",
+    "lead": "Puede que el enlace esté desactualizado o que la página se haya movido. El reloj de sesiones en vivo sigue aquí mismo.",
+    "toolCta": "Abrir el reloj de sesiones en vivo",
+    "blogLink": "Ver todas las guías",
+    "popular": "Guías populares"
+  },
   "schema": {
     "webAppDescription": "Una herramienta gratuita y en vivo que muestra qué sesiones forex, Sídney, Tokio, Fráncfort, Londres y Nueva York, están abiertas ahora mismo, en tu propia zona horaria. Consulta de un vistazo los solapamientos de sesiones, los horarios de apertura y los cambios de horario de verano, directamente en tu navegador. También disponible como app para iOS y Android.",
     "appDescription": "La app Horario del Mercado Forex muestra exactamente cuándo abren y cierran las sesiones forex de Londres, Nueva York, Tokio, Sídney y Fráncfort en tu propia zona horaria, con un reloj de sesiones en vivo de 24 horas, widgets, alertas de sesión y un calendario económico. Una utilidad de seguimiento del mercado, no un bróker.",

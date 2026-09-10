@@ -10,6 +10,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { APP, CONTENT_DATES, PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
+import { localeMeta } from "@/i18n/locales";
 
 // ISR: the page is still served from cache (static perf), but regenerates at
 // most every 5 minutes so the server-rendered "open right now" sentence in
@@ -51,7 +52,16 @@ export default async function Home({
     operatingSystem: "Any",
     url: SITE_URL,
     datePublished: CONTENT_DATES.published,
-    dateModified: CONTENT_DATES.modified,
+    // The later of the last editorial review and this locale's launch day. A
+    // newly launched locale's homepage genuinely is new content at its URL, so
+    // it is dated accordingly; the English and Spanish homepages keep their own
+    // real review date and are untouched by another language shipping.
+    dateModified: (() => {
+      const launched = localeMeta(locale).availableFrom;
+      return launched && launched > CONTENT_DATES.modified
+        ? launched
+        : CONTENT_DATES.modified;
+    })(),
     image: diagramUrl,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     featureList: ts.raw("featureList") as string[],

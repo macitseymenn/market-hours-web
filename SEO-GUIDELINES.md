@@ -35,8 +35,10 @@ type Post = {
   slug: Localized<string>;         // dil basina dogal slug
   title: Localized<string>;        // H1 buradan gelir, markdown'da # KULLANMA
   description: Localized<string>;  // meta description = SERP snippet
-  date: string;                    // ISO "YYYY-MM-DD", yayin gunu
-  updated?: string;                // ISO, guncellenirse
+  date: string;                    // ISO "YYYY-MM-DD", orijinalin yayin gunu
+  updated?: string;                // ISO, orijinal guncellenirse
+  localeDate?: Localized<string>;  // ceviri basina yayin gunu (Bolum 2.4)
+  localeUpdated?: Localized<string>;
   authorSlug: string;              // "author" (team atif, Bolum 6)
   tags: Localized<string[]>;       // dil basina
   cover: string;                   // /blog/<slug>.svg (tek, dile bagli degil)
@@ -68,9 +70,17 @@ type Post = {
 - Ana keyword + 1-2 secondary + kullanicinin sorusuna dogrudan cevap ipucu.
 - Ornek: `"Forex trading sessions explained: Sydney, Tokyo, London and New York hours in GMT, how they overlap, and how to see each session in your own timezone."`
 
-## 2.4 date & updated
-- `date`: yayin gunu (ISO). Zamanlanmis rollout icin ileri tarih verilebilir (Bolum 7).
-- `updated`: icerik anlamli sekilde guncellenince ekle. `dateModified` (JSON-LD) + "Last updated" satirini besler. Kucuk typo icin ekleme.
+## 2.4 date & updated & localeDate
+- `date`: ORIJINAL surumun yayin gunu (ISO). Zamanlanmis rollout icin ileri tarih verilebilir (Bolum 7).
+- `updated`: orijinal icerik anlamli sekilde guncellenince ekle. Kucuk typo icin ekleme.
+- `localeDate`: **ceviri eklerken doldur.** Cevirinin yayinlandigi gun, ornek
+  `localeDate: { fr: "2026-09-10" }`. Ceviri o URL icin yeni icerik oldugundan
+  kendi tarihini tasir; orijinalin tarihini devralmak yepyeni bir sayfayi
+  geriye tarihler ve tazelik sinyalini yok eder.
+- `localeUpdated`: bir cevirinin kendisi guncellenince.
+- **Yeni bir dil ciktiginda mevcut dillerin tarihlerine DOKUNMA.** Onlarin
+  icerigi degismedi; degismemis sayfaya yeni tarih yazmak Google'in
+  degersizlestirdigi tarih spam'idir. Detay: `LOCALIZATION.md` Bolum 10.
 
 ## 2.5 tags (localized)
 - Her dilde 2-4 tag. Ingilizce `["Sessions", "Basics"]`, Ispanyolca karsiligi `["Sesiones", "Fundamentos"]`. Tag eksikse yazi gizlenmez, sadece rozet gorunmez.
