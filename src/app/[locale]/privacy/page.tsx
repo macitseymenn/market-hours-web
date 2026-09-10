@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
 import { analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const LAST_UPDATED = "2026-07-22";
 
@@ -84,6 +91,45 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
         electrónico, direcciones IP ni ningún otro dato personal o de trading a
         través de la herramienta web, y no tenemos nada tuyo que vender ni
         compartir.
+      </p>
+    </>
+  ),
+  fr: analyticsEnabled ? (
+    <>
+      <h2>Analyse d’audience</h2>
+      <p>
+        Nous utilisons une analyse d’audience respectueuse de la vie privée pour
+        comprendre l’usage agrégé, quelles pages sont populaires et, de façon
+        approximative, d’où viennent les visiteurs, afin d’améliorer l’outil. Nous
+        n’utilisons jamais de traqueurs publicitaires et ne vendons ni ne partageons
+        jamais vos données.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          L’analyse d’audience que nous utilisons peut déposer des cookies. Ils ne
+          se chargent <strong>qu’après votre acceptation</strong> de la bannière de
+          consentement ; si vous refusez, aucun cookie d’analyse n’est déposé.
+          Google Analytics, lorsqu’il est utilisé, est configuré pour anonymiser les
+          adresses IP. Vous pouvez modifier votre choix à tout moment en effaçant
+          les données de ce site dans votre navigateur.
+        </p>
+      ) : (
+        <p>
+          Notre analyse d’audience n’utilise ni cookie ni identifiant persistant et
+          ne vous suit pas d’un site à l’autre : aucune bannière de consentement
+          n’est donc nécessaire.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Nous ne collectons aucune donnée personnelle</h2>
+      <p>
+        Nous n’utilisons aucune analyse d’audience, aucun traqueur publicitaire et
+        ne déposons aucun cookie de suivi sur ce site. Nous ne collectons ni noms,
+        ni adresses e-mail, ni adresses IP, ni aucune autre donnée personnelle ou de
+        trading via l’outil web, et nous n’avons donc rien de vous à vendre ou à
+        partager.
       </p>
     </>
   ),
@@ -261,6 +307,95 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Politique de confidentialité",
+    metaDescription: analyticsEnabled
+      ? "Comment Forex Market Hours traite les données : l’outil web s’exécute dans votre navigateur, utilise une analyse respectueuse de la vie privée et ne vend jamais vos données."
+      : "Comment Forex Market Hours traite les données. L’outil web s’exécute dans votre navigateur ; nous ne collectons aucune donnée personnelle de trading.",
+    breadcrumb: "Politique de confidentialité",
+    h1: "Politique de confidentialité",
+    lead: analyticsEnabled ? (
+      <>
+        En bref : {PRODUCT.name} s’exécute dans votre navigateur, utilise une
+        analyse d’audience respectueuse de la vie privée, n’affiche aucune publicité
+        et ne vend jamais vos données.
+      </>
+    ) : (
+      <>
+        En bref : {PRODUCT.name} s’exécute dans votre navigateur, ne collecte aucune
+        donnée personnelle et ne vous suit pas.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Dernière mise à jour : {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>L’outil web s’exécute dans votre navigateur</h2>
+        <p>
+          {PRODUCT.name}, sur {SITE_URL}, est un outil côté client : l’horloge de
+          séance en direct, la conversion de fuseau horaire et les calculs
+          s’exécutent tous sur votre propre appareil. Nous n’exploitons aucun serveur
+          qui enregistrerait les séances que vous consultez, le fuseau horaire que
+          vous utilisez ou la façon dont vous naviguez sur le site.
+        </p>
+
+        {dataSection}
+
+        <h2>Stockage local : thème et alarmes uniquement</h2>
+        <p>
+          Les seules données stockées par le site restent dans le{" "}
+          <code>localStorage</code> de votre propre navigateur et ne nous sont jamais
+          transmises :
+        </p>
+        <ul>
+          <li>votre préférence de thème clair ou sombre ; et</li>
+          <li>
+            les alarmes de séance que vous choisissez de régler, afin qu’elles
+            persistent d’une visite à l’autre.
+          </li>
+        </ul>
+        <p>
+          Effacer les données de site de votre navigateur supprime complètement ces
+          informations. Elles ne quittent jamais votre appareil.
+        </p>
+
+        <h2>Notifications et audio</h2>
+        <p>
+          Si vous activez une alarme de séance, le site utilise l’autorisation native
+          de notifications de votre navigateur et l’API Web Audio pour vous alerter
+          localement. Cela ne s’active que si vous y consentez explicitement, et
+          aucune donnée d’alarme n’est transmise où que ce soit.
+        </p>
+
+        <h2>L’application mobile</h2>
+        <p>
+          L’application {PRODUCT.name} pour iOS et Android, conformément à ses fiches
+          App Store et Google Play, ne collecte aucune donnée de ses utilisateurs.
+        </p>
+
+        <h2>Liens de tiers</h2>
+        <p>
+          Ce site renvoie vers l’App Store d’Apple et Google Play pour télécharger
+          l’application, ainsi que vers les sources externes que nous citons dans nos
+          articles. Ces sites tiers ont leurs propres politiques de confidentialité,
+          que nous vous encourageons à consulter ; nous ne sommes pas responsables de
+          leur contenu ni de leurs pratiques.
+        </p>
+
+        <h2>Modification de cette politique</h2>
+        <p>
+          Si cette politique change, nous mettrons à jour cette page ainsi que la
+          date de « dernière mise à jour » ci-dessus.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Les questions relatives à cette politique peuvent être envoyées à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          {PRODUCT.name} est publié par {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -276,14 +411,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -303,11 +432,13 @@ export default async function PrivacyPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

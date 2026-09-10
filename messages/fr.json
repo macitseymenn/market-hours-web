@@ -1,0 +1,394 @@
+{
+  "nav": {
+    "liveHours": "Horaires en direct",
+    "sessions": "Séances",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "getApp": "Obtenir l’application"
+  },
+  "header": {
+    "homeAria": "Accueil Forex Market Hours",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "primaryNav": "Navigation principale",
+    "skipToContent": "Aller au contenu",
+    "language": "Langue"
+  },
+  "footer": {
+    "explore": "Explorer",
+    "companyLegal": "Société et mentions légales",
+    "publishedBy": "Publié par {publisher}.",
+    "appStore": "App Store",
+    "rights": "© {year} {legalName}. Sans affiliation avec Apple Inc. « App Store » est une marque d’Apple Inc. · {host}"
+  },
+  "legalNav": {
+    "about": "À propos",
+    "methodology": "Comment nous calculons les horaires",
+    "editorialPolicy": "Politique éditoriale",
+    "disclaimer": "Avertissement",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact"
+  },
+  "common": {
+    "disclaimer": "Forex Market Hours est uniquement un outil d’horaires de marché. Il ne fournit aucun conseil financier et ne propose aucun service de trading, de dépôt ou de retrait. Le trading sur le marché des changes comporte des risques. Les horaires des séances sont donnés à titre d’information générale et suivent les changements d’heure saisonniers.",
+    "home": "Accueil"
+  },
+  "schema": {
+    "webAppDescription": "Un outil gratuit et en direct qui montre quelles séances de forex, Sydney, Tokyo, Francfort, Londres et New York, sont ouvertes en ce moment, dans votre propre fuseau horaire. Visualisez d’un coup d’œil les chevauchements de séances, les heures d’ouverture et les décalages liés à l’heure d’été, directement dans votre navigateur. Également disponible en application iOS et Android.",
+    "appDescription": "L’application Forex Market Hours indique précisément quand les séances forex de Londres, New York, Tokyo, Sydney et Francfort ouvrent et ferment dans votre propre fuseau horaire, avec une horloge de séance sur 24 heures, des widgets, des alertes de séance et un calendrier économique. Un utilitaire de suivi de marché, pas un courtier.",
+    "howToName": "Comment lire l’horloge des horaires du marché du forex",
+    "featureList": [
+      "Horloge des séances forex en direct",
+      "Conversion automatique du fuseau horaire",
+      "Détection des chevauchements de séances",
+      "Ajustement à l’heure d’été"
+    ]
+  },
+  "home": {
+    "hero": {
+      "h1": "Horaires du marché du forex, en direct dans votre fuseau horaire",
+      "definition": "Les horaires du marché du forex sont les périodes pendant lesquelles chaque grande place de change est ouverte aux échanges. Le marché du forex fonctionne 24 heures sur 24, cinq jours par semaine, à travers quatre séances, Sydney, Tokyo, Londres et New York, et il est fermé le week-end. Cette horloge en direct montre quelles séances sont ouvertes en ce moment dans votre fuseau horaire.",
+      "converterH2": "Convertisseur d’horaires du forex : chaque séance dans votre fuseau horaire",
+      "converterIntro": "Convertissez automatiquement chaque séance de trading en heure locale, sans calcul GMT manuel ni approximation sur l’heure d’été. Choisissez une ville ou utilisez le fuseau horaire détecté sur votre appareil ci-dessous.",
+      "phonePrompt": "Vous préférez l’avoir sur votre téléphone ?",
+      "phoneLink": "Obtenir l’application gratuite iOS et Android ↓",
+      "alarmCta": "Ne manquez plus une séance, réglez votre alarme"
+    },
+    "status": {
+      "statusLine": "{count, plural, =0 {Aucune séance majeure du forex n’est ouverte en ce moment. Les échanges reprennent à l’ouverture de la séance de Sydney.} =1 {En ce moment, la séance de {list} est ouverte.} other {En ce moment, les séances de {list} sont ouvertes.}}",
+      "fact": "Le marché du forex fonctionne 24 heures sur 24, cinq jours par semaine, du dimanche 22:00 GMT au vendredi 22:00 GMT.",
+      "countdown": "Prochaine séance dans {hours} h {minutes} min ({city}).",
+      "verified": "Horaires des séances vérifiés en {date}."
+    },
+    "trust": {
+      "aria": "En un coup d’œil",
+      "items": [
+        "Gratuit pour toujours",
+        "Aucune publicité",
+        "Aucun compte requis",
+        "Ne collecte aucune donnée",
+        "Plus de 60 langues"
+      ],
+      "privacyFirst": "Confidentialité d’abord"
+    },
+    "how": {
+      "h2": "Comment lire l’horloge des horaires du marché du forex",
+      "intro": "Aucune inscription, aucun téléchargement : ouvrez la page et lisez les horaires du marché en direct en trois étapes.",
+      "steps": [
+        {
+          "title": "Réglez votre fuseau horaire",
+          "body": "La frise s’ouvre automatiquement dans votre fuseau horaire local. Changez-le pour comparer n’importe quelle place financière depuis n’importe où dans le monde."
+        },
+        {
+          "title": "Repérez les marchés ouverts",
+          "body": "Chaque barre colorée correspond à la plage de trading d’une séance. La ligne mobile indique l’instant présent : partout où elle croise une barre, ce marché est ouvert."
+        },
+        {
+          "title": "Organisez-vous autour des chevauchements",
+          "body": "Repérez d’un coup d’œil le chevauchement Londres-New York et les autres fenêtres de forte liquidité, puis calez vos horaires de trading dessus."
+        }
+      ]
+    },
+    "sessions": {
+      "h2": "Séances de trading forex et horaires des séances",
+      "intro": "Le marché du forex fonctionne 24 heures sur 24 à travers les grandes séances ci-dessous. Ce sont les plages standard en GMT ; l’outil ci-dessus les ajuste automatiquement à votre fuseau horaire et à l’heure d’été.",
+      "caption": "Principales séances de trading forex et leurs heures d’ouverture approximatives en GMT.",
+      "colSession": "Séance",
+      "colRegion": "Région",
+      "colHours": "Horaires (GMT)",
+      "colWhy": "Pourquoi c’est important",
+      "largest": "La plus grande",
+      "cities": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "Frankfurt": "Francfort",
+        "London": "Londres",
+        "New York": "New York"
+      },
+      "regions": {
+        "Sydney": "Australie",
+        "Tokyo": "Japon",
+        "Frankfurt": "Allemagne",
+        "London": "Royaume-Uni",
+        "New York": "États-Unis"
+      },
+      "notes": {
+        "Sydney": "Ouvre la semaine de trading ; donne le ton initial pour l’AUD et le NZD.",
+        "Tokyo": "La séance asiatique ; la plus active sur les paires en JPY.",
+        "Frankfurt": "Ouvre l’Europe une heure avant Londres ; déterminante pour les paires en EUR.",
+        "London": "La plus grande séance forex au monde en volume.",
+        "New York": "Alimente la volatilité du USD ; chevauche Londres en milieu d’après-midi."
+      },
+      "overlapTitle": "Chevauchement Londres – New York",
+      "overlapGmt": "≈ 13:00 – 17:00 GMT",
+      "overlapBody": "Quand Londres et New York sont ouvertes en même temps, les deux plus grands marchés négocient simultanément : c’est généralement la liquidité la plus profonde et les mouvements les plus marqués de la journée.",
+      "diagramAlt": "Frise chronologique des séances forex de Sydney, Tokyo, Francfort, Londres et New York sur une journée GMT de 24 heures, avec le chevauchement Londres-New York mis en évidence.",
+      "diagramCaption": "Les cinq grandes séances du forex sur une journée GMT de 24 heures. La bande ombrée marque le chevauchement Londres-New York (≈13:00-17:00 GMT), la fenêtre la plus liquide de la journée.",
+      "statTurnover": "Pour donner l’échelle : le volume quotidien moyen des échanges de devises dans le monde a atteint 7 500 milliards de dollars en avril 2022, les salles de marché britanniques (Londres) en traitant la plus grande part, selon l’<link>Enquête triennale des banques centrales</link> de la Banque des règlements internationaux.",
+      "statIana": "Chaque horaire de cette page est calculé en direct à partir de la <link>base de données des fuseaux horaires IANA</link>, la référence intégrée à pratiquement tous les navigateurs et systèmes d’exploitation, afin que les changements d’heure saisonniers soient toujours exacts.",
+      "relatedReading": "Envie d’aller plus loin ? Découvrez les <bestTime>quatre grandes séances de trading</bestTime>, consultez les <overlap>horaires du forex par fuseau horaire</overlap>, ou apprenez <methodology>comment nous calculons ces horaires</methodology>.",
+      "dstNote": "Les plages horaires des séances sont fournies à titre d’information générale et se décalent avec l’heure d’été (par exemple, Londres suit GMT en hiver et BST en été). L’application reflète toujours les horaires actuels, correctement ajustés."
+    },
+    "features": {
+      "h2": "Outils de séance forex : horloge, alertes et calendrier économique",
+      "intro": "L’outil web vous donne les horaires en direct ; l’application gratuite y ajoute des widgets, un calendrier économique et des alertes. Voici le tableau complet.",
+      "items": [
+        {
+          "title": "Horloge de séance 24 heures en direct",
+          "body": "Une horloge circulaire interactive cartographie toute la journée de trading pour voir d’un coup d’œil quels marchés sont ouverts."
+        },
+        {
+          "title": "Widgets écran d’accueil et écran verrouillé",
+          "body": "Gardez la prochaine séance sous les yeux sur votre écran d’accueil et votre écran verrouillé, mis à jour en temps réel sans ouvrir l’application."
+        },
+        {
+          "title": "Calendrier économique en direct",
+          "body": "Suivez les publications à fort impact, NFP, IPC, PIB, PMI et décisions de taux des banques centrales, avant qu’elles ne fassent bouger le marché."
+        },
+        {
+          "title": "Alertes de séance et d’actualité",
+          "body": "Soyez prévenu 15 minutes avant l’ouverture d’une séance, avec en plus des alertes sur les événements économiques qui comptent pour vous."
+        },
+        {
+          "title": "Fuseau horaire automatique",
+          "body": "Chaque horaire est converti dans votre fuseau horaire local et ajusté pour GMT/BST : aucun calcul manuel."
+        },
+        {
+          "title": "Mode sombre et économe en batterie",
+          "body": "Une interface sombre conçue pour de longues séances d’analyse, pensée pour ménager votre batterie."
+        }
+      ]
+    },
+    "blogPreview": {
+      "h2": "Guides sur les horaires du marché du forex",
+      "intro": "Guides et explications sur les horaires du forex, les séances et les fuseaux horaires qui les structurent.",
+      "viewAll": "Voir tous les articles →",
+      "learnMore": "En savoir plus →"
+    },
+    "faq": {
+      "h2": "Horaires du marché du forex : questions fréquentes",
+      "items": [
+        {
+          "q": "L’utilisation est-elle gratuite ?",
+          "a": "Oui. L’outil web Forex Market Hours est entièrement gratuit, sans publicité et sans inscription. Les applications iOS et Android qui l’accompagnent sont gratuites elles aussi."
+        },
+        {
+          "q": "Dois-je créer un compte ?",
+          "a": "Aucun compte n’est nécessaire. Ouvrez la page et les horaires du marché en direct apparaissent immédiatement dans votre fuseau horaire."
+        },
+        {
+          "q": "Donne-t-il des signaux de trading ou des conseils financiers ?",
+          "a": "Non. C’est un outil d’horaires de marché qui montre quand les séances ouvrent et ferment. Il ne fournit ni conseil financier, ni signaux de trading, ni aucun service de trading, de dépôt ou de retrait."
+        },
+        {
+          "q": "Quelles séances de forex affiche-t-il ?",
+          "a": "Les grandes séances, Sydney, Tokyo, Francfort, Londres et New York, ainsi que les chevauchements de séances à fort volume où la volatilité culmine généralement."
+        },
+        {
+          "q": "Les horaires tiennent-ils compte de l’heure d’été ?",
+          "a": "Oui. Les horaires de chaque marché sont calculés à partir des règles de son propre fuseau horaire, si bien que les changements d’heure saisonniers (GMT/BST, EST/EDT, et ainsi de suite) sont toujours appliqués automatiquement."
+        },
+        {
+          "q": "Existe-t-il une application mobile ?",
+          "a": "Oui. Forex Market Hours est disponible sur l’App Store (iPhone, iPad, Mac, Apple Vision Pro) et sur Google Play pour Android, avec en plus des widgets, un calendrier économique et des alertes 15 minutes avant chaque ouverture de séance."
+        },
+        {
+          "q": "Collecte-t-il mes données ?",
+          "a": "Non. L’outil fonctionne dans votre navigateur et l’application ne collecte aucune donnée."
+        },
+        {
+          "q": "À quelle heure le marché du forex ouvre-t-il et ferme-t-il ?",
+          "a": "Le marché du forex ouvre le dimanche à 17h00 heure de New York (22:00 GMT), quand Sydney commence à négocier, et ferme le vendredi à 17h00 heure de New York. Il fonctionne 24 heures sur 24, cinq jours par semaine, et reste fermé le week-end."
+        },
+        {
+          "q": "Le marché du forex est-il ouvert en ce moment ?",
+          "a": "Le marché du forex est ouvert 24 heures sur 24 du dimanche 17h00 ET au vendredi 17h00 ET. Pour savoir si une séance précise, Sydney, Tokyo, Londres ou New York, est en cours à cet instant dans votre fuseau horaire, consultez l’horloge en direct en haut de cette page."
+        },
+        {
+          "q": "Quel est le meilleur moment pour trader le forex ?",
+          "a": "La fenêtre la plus active est le chevauchement Londres-New York, environ 13:00-17:00 GMT, quand les deux plus grands marchés négocient en même temps. La liquidité y est la plus profonde et les spreads les plus serrés, même si la volatilité est plus élevée. Le meilleur moment dépend aussi des paires de devises que vous tradez."
+        },
+        {
+          "q": "Pourquoi la séance de Londres est-elle la plus importante ?",
+          "a": "Londres est la plus grande place de trading forex en volume : le Royaume-Uni traite la plus grande part du volume mondial des changes (enquête triennale de la BRI). L’ouverture de Londres donne souvent la direction de la journée, et son après-midi chevauche New York, ce qui crée les heures les plus actives de la journée."
+        },
+        {
+          "q": "Quels sont les horaires du forex dans mon fuseau horaire ?",
+          "a": "Les horaires des séances sont habituellement indiqués en GMT, mais cet outil convertit automatiquement chaque séance dans votre fuseau horaire local et l’ajuste à l’heure d’été : vous voyez donc l’heure exacte d’ouverture et de fermeture de chaque marché sur votre propre montre, sans conversion manuelle."
+        }
+      ]
+    },
+    "screenshots": {
+      "h2": "L’horloge des séances forex sur votre téléphone",
+      "intro": "Des écrans épurés et lisibles, conçus pour un coup d’œil rapide pendant la journée de trading, sur iPhone, iPad, Mac et Android.",
+      "clockLabel": "Horloge de séance en direct",
+      "clockCaption": "Ouverture de Londres dans 42 min",
+      "clockAlt": "Application Forex Market Hours, horloge de séance forex 24 heures en direct montrant quelles séances (Sydney, Tokyo, Londres, New York) sont ouvertes en ce moment dans votre fuseau horaire",
+      "calendarLabel": "Calendrier économique",
+      "calendarAlt": "Application Forex Market Hours, calendrier économique forex des événements à fort impact (NFP, IPC, décisions de taux des banques centrales) avec horaires et prévisions",
+      "alertsLabel": "Alertes de séance",
+      "alertsAlt": "Application Forex Market Hours, alertes de séance forex avec alarmes d’ouverture et de fermeture pour chaque séance de marché (Sydney, Tokyo, Francfort, Londres, New York)",
+      "alertTitle": "Ouverture de la séance de Londres",
+      "alertBody": "Ouvre dans 15 minutes · 08:00 GMT",
+      "disclaimer": "Captures d’écran réelles de l’application. Les horaires et événements affichés sont des exemples."
+    },
+    "cta": {
+      "eyebrow": "Emportez-le partout",
+      "h2": "Obtenez l’application gratuite pour iOS et Android",
+      "body": "Tout ce que fait l’outil web, plus des widgets pour l’écran d’accueil et l’écran verrouillé, un calendrier économique et des alertes 15 minutes avant chaque ouverture de séance.",
+      "platformsSuffix": "Sans publicité · Ne collecte aucune donnée"
+    }
+  },
+  "tool": {
+    "yourTimezone": "Votre fuseau horaire",
+    "hour24": "Format 24 heures",
+    "options": "Options",
+    "alarms": "Alarmes",
+    "timelineAria": "Convertisseur d’horaires du forex, frise des séances sur 24 heures, faites défiler horizontalement pour voir toutes les séances dans votre fuseau horaire",
+    "sessionOpen": "Séance de {city} ouverte",
+    "sessionClosed": "Séance de {city} fermée",
+    "footnote": "Ce convertisseur met à jour chaque séance dans le fuseau horaire sélectionné en direct et suit automatiquement les changements d’heure saisonniers. Les plages de séance correspondent à des journées de trading normales et excluent les jours fériés de marché.",
+    "clockAria": "Horloge 24 heures montrant les grandes séances du forex en GMT.",
+    "cities": {
+      "Sydney": "Sydney",
+      "Tokyo": "Tokyo",
+      "Frankfurt": "Francfort",
+      "London": "Londres",
+      "New York": "New York",
+      "Berlin": "Berlin",
+      "Istanbul": "Istanbul",
+      "Cairo": "Le Caire",
+      "Dubai": "Dubaï",
+      "Los Angeles": "Los Angeles",
+      "Shanghai": "Shanghai",
+      "Mumbai": "Bombay",
+      "UTC": "UTC",
+      "Honolulu": "Honolulu",
+      "Anchorage": "Anchorage",
+      "Denver": "Denver",
+      "Chicago": "Chicago",
+      "Mexico City": "Mexico",
+      "Toronto": "Toronto",
+      "São Paulo": "São Paulo",
+      "Buenos Aires": "Buenos Aires",
+      "Lisbon": "Lisbonne",
+      "Madrid": "Madrid",
+      "Paris": "Paris",
+      "Lagos": "Lagos",
+      "Athens": "Athènes",
+      "Johannesburg": "Johannesburg",
+      "Moscow": "Moscou",
+      "Riyadh": "Riyad",
+      "Tehran": "Téhéran",
+      "Karachi": "Karachi",
+      "Dhaka": "Dacca",
+      "Bangkok": "Bangkok",
+      "Jakarta": "Jakarta",
+      "Singapore": "Singapour",
+      "Hong Kong": "Hong Kong",
+      "Perth": "Perth",
+      "Seoul": "Séoul",
+      "Adelaide": "Adélaïde",
+      "Brisbane": "Brisbane",
+      "Auckland": "Auckland"
+    }
+  },
+  "alarms": {
+    "bellLabel": "Alarme",
+    "eventOpen": "Ouverture",
+    "eventClose": "Fermeture",
+    "setAria": "Régler une alarme à l’ouverture de {city}",
+    "cancelAria": "Annuler l’alarme à l’ouverture de {city}",
+    "titleOn": "Alarme activée : sonne à l’ouverture de {city} (dans {countdown})",
+    "titleOff": "M’alerter à l’ouverture de {city}",
+    "setAriaClose": "Régler une alarme à la fermeture de {city}",
+    "cancelAriaClose": "Annuler l’alarme à la fermeture de {city}",
+    "titleOnClose": "Alarme activée : sonne à la fermeture de {city} (dans {countdown})",
+    "titleOffClose": "M’alerter à la fermeture de {city}",
+    "options": "Options d’alarme",
+    "close": "Fermer",
+    "sound": "Son de l’alarme",
+    "soundOn": "🔊 Son activé",
+    "soundOff": "🔈 Son coupé",
+    "soundHint": "Cliquez sur un son pour le sélectionner et l’écouter.",
+    "testSound": "▶ Tester le son sélectionné",
+    "notifications": "Notifications",
+    "notifEnabled": "✓ Notifications du navigateur activées.",
+    "notifPrompt": "Afficher une fenêtre quand une alarme sonne.",
+    "notifEnable": "Activer les notifications",
+    "notifDenied": "Les notifications sont bloquées dans les réglages de votre navigateur. Le son et le compte à rebours dans le titre de l’onglet fonctionnent toujours.",
+    "notifUnsupported": "Votre navigateur ne prend pas en charge les notifications : le son et le compte à rebours dans le titre de l’onglet sont utilisés à la place.",
+    "notifTabHint": "Vous êtes sur un autre onglet quand une alarme sonne ? Cet onglet continue de faire clignoter 🔔 dans son titre jusqu’à votre retour. Pour être alerté site complètement fermé, utilisez l’<link>application mobile</link>.",
+    "customTitle": "Créer une alarme personnalisée",
+    "customHint": "Choisissez une date et une heure : le son sélectionné retentira à ce moment-là.",
+    "dateTime": "Date et heure",
+    "labelOptional": "Libellé (facultatif)",
+    "labelPlaceholder": "ex. Vérifier EUR/USD",
+    "addAlarm": "Ajouter l’alarme",
+    "errPickDateTime": "Choisissez une date et une heure.",
+    "errFuture": "Choisissez un moment dans le futur.",
+    "activeTitle": "Alarmes actives",
+    "activeEmpty": "Aucune alarme pour l’instant. Créez-en une ci-dessus, ou touchez le 🔔 à côté d’un marché dans la frise.",
+    "opens": "ouvre",
+    "closes": "ferme",
+    "inTime": "dans {countdown}",
+    "removeMarketAria": "Supprimer l’alarme de {event} de {city}",
+    "removeCustomAria": "Supprimer l’alarme {label}",
+    "clearAll": "Supprimer toutes les alarmes",
+    "defaultLabel": "Alarme",
+    "notifSessionOpenTitle": "La séance de {city} est ouverte",
+    "notifSessionOpenBody": "La séance forex de {city} vient d’ouvrir.",
+    "notifSessionCloseTitle": "La séance de {city} est fermée",
+    "notifSessionCloseBody": "La séance forex de {city} vient de fermer.",
+    "notifCustomBody": "Votre alarme sonne.",
+    "titleOpens": "{city} ouvre",
+    "titleCloses": "{city} ferme",
+    "titleReturn": "‼️ Alarme : cliquez pour revenir"
+  },
+  "theme": {
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre"
+  },
+  "badges": {
+    "appStoreAria": "Télécharger dans l’App Store, {app} (ouvre un nouvel onglet)",
+    "appStoreLine1": "Télécharger dans l’",
+    "appStoreLine2": "App Store",
+    "googlePlayAria": "Disponible sur Google Play, {app} (ouvre un nouvel onglet)",
+    "googlePlayLine1": "Disponible sur",
+    "googlePlayLine2": "Google Play",
+    "newTab": "(ouvre un nouvel onglet)"
+  },
+  "blog": {
+    "metaTitle": "Blog Forex Market Hours : séances et horaires de trading",
+    "metaDesc": "Des guides clairs sur les horaires du marché du forex, les séances de trading, les chevauchements et les fuseaux horaires, par l’équipe Forex Market Hours.",
+    "indexTitle": "Blog",
+    "indexIntro": "Des guides clairs et pratiques sur les horaires du marché du forex, les séances de trading et les fuseaux horaires qui les structurent.",
+    "minRead": "{minutes} min de lecture",
+    "by": "Par <link>{name}</link>",
+    "backToBlog": "← Blog",
+    "lastUpdated": "Dernière mise à jour le {date}.",
+    "writtenBy": "Rédigé par",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbBlog": "Blog",
+    "authorAbout": "À propos",
+    "authorExperience": "Expérience",
+    "authorElsewhere": "Ailleurs",
+    "authorArticles": "Articles de {name}",
+    "teamRole": "Contenu vérifié auprès de sources primaires",
+    "teamBio": "Contenu recherché et relu par l’équipe éditoriale de Forex Market Hours. Consultez notre politique éditoriale."
+  },
+  "author": {
+    "teamRole": "Équipe éditoriale",
+    "teamMetaDesc": "Profil éditorial de {publisher}, responsable du contenu de Forex Market Hours.",
+    "teamBio": "Le contenu de Forex Market Hours est maintenu par {publisher}. Un profil d’auteur nommé apparaîtra ici lorsqu’il sera disponible.",
+    "teamAbout": "Découvrez qui développe et maintient cet outil sur la <about>page À propos</about>, et comment le contenu est relu dans notre <policy>politique éditoriale</policy>."
+  },
+  "consent": {
+    "title": "Consentement aux cookies",
+    "message": "Nous utilisons une analyse d’audience respectueuse de la vie privée pour comprendre comment l’outil est utilisé. Aucune publicité, jamais.",
+    "learnMore": "Lire notre politique de confidentialité",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  }
+}

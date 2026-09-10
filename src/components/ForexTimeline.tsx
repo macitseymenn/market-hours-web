@@ -10,6 +10,7 @@ import {
   tzOffset,
   wallToUtc,
 } from "@/lib/markets";
+import { localeMeta } from "@/i18n/locales";
 import { AlarmBell } from "./alarms/AlarmBell";
 import { AlarmModal } from "./alarms/AlarmModal";
 
@@ -140,7 +141,7 @@ export function ForexTimeline() {
   const t = useTranslations("tool");
   const tr: CityTranslator = { has: (k) => t.has(k), t: (k) => t(k) };
   // Format live clock weekdays/dates in the active locale (es -> "miércoles").
-  const dtLocale = useLocale() === "es" ? "es-ES" : "en-US";
+  const dtLocale = localeMeta(useLocale()).intlClock;
   const [now, setNow] = useState<number | null>(null);
   const [displayTz, setDisplayTz] = useState("UTC");
   const [hour24, setHour24] = useState(true);

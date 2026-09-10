@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
+import { DEFAULT_LOCALE, type LocaleCode } from "@/i18n/locales";
 
 /*
   Real App Store screenshots, each shown full-bleed inside a phone frame.
@@ -10,9 +11,16 @@ import { getLocale, getTranslations } from "next-intl/server";
   negligible top/bottom crop for the ~9/18.4 source images.
 */
 
+type Shot = { clock: string; calendar: string; alerts: string };
+
 // Keyword-rich, localized screenshot filenames (no extension). English uses the
 // primary English keywords; Spanish uses the equivalent Spanish search terms.
-const SHOTS = {
+//
+// A locale is optional here: until a language has its own localized shots in
+// /public/screenshots/<locale>/, it falls back to the English set rather than
+// pointing at files that do not exist. Add an entry (plus the images) to switch
+// that language over.
+const SHOTS: Record<typeof DEFAULT_LOCALE, Shot> & Partial<Record<LocaleCode, Shot>> = {
   en: {
     clock: "forex-market-hours-live-session-clock",
     calendar: "forex-economic-calendar",
@@ -55,9 +63,11 @@ function PhoneFrame({
 
 export async function Screenshots() {
   const t = await getTranslations("home.screenshots");
-  // Localized screenshot set, Spanish shots for `es`, English for everything else.
-  const dir = (await getLocale()) === "es" ? "es" : "en";
-  const shot = SHOTS[dir];
+  // Localized screenshot set where one exists, English otherwise.
+  const locale = (await getLocale()) as LocaleCode;
+  const localized = SHOTS[locale];
+  const dir = localized ? locale : DEFAULT_LOCALE;
+  const shot = localized ?? SHOTS[DEFAULT_LOCALE];
 
   return (
     <section className="border-t border-surface-2/60 bg-surface/30 py-20 md:py-24">

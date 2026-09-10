@@ -4,6 +4,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const COPY = {
   en: {
@@ -120,6 +127,67 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Avertissement sur les risques et le trading",
+    metaDescription:
+      "Forex Market Hours est uniquement un outil d’horaires de marché : ni conseil financier, ni courtier. Lisez notre avertissement complet sur les risques.",
+    ogDescription:
+      "Forex Market Hours est uniquement un outil d’horaires de marché : ni conseil financier, ni courtier.",
+    breadcrumb: "Avertissement",
+    h1: "Avertissement sur les risques et le trading",
+    body: (
+      <>
+        <h2>Aucun conseil financier</h2>
+        <p>
+          Rien sur {PRODUCT.name}, ni l’outil web, ni l’application mobile, ni le
+          blog, ni aucune autre page de ce site, ne constitue un conseil financier,
+          d’investissement, de trading, fiscal ou juridique. Nous ne recommandons ni
+          d’acheter, ni de vendre, ni de conserver une devise, un titre ou tout
+          autre instrument financier. Toute décision de trading n’appartient qu’à
+          vous, et il convient de consulter un conseil indépendant et agréé avant
+          de la prendre.
+        </p>
+
+        <h2>Nous ne sommes pas un courtier</h2>
+        <p>
+          {PRODUCT.name} est un utilitaire d’horaires de marché. Il n’exécute aucun
+          ordre, ne détient aucun fonds de client et ne propose aucun service de
+          dépôt ou de retrait. Nous ne sommes ni courtier, ni place de marché, ni
+          prestataire de paiement, et nous ne vous demandons jamais les identifiants
+          de votre compte de trading ni vos fonds.
+        </p>
+
+        <h2>Le trading sur devises comporte des risques</h2>
+        <p>
+          Le trading sur le marché des changes comporte un risque de perte
+          important et ne convient pas à tous les investisseurs. Les performances
+          passées d’un marché ou d’une stratégie ne préjugent pas des résultats
+          futurs. Si vous choisissez de trader, faites-le uniquement auprès d’un
+          courtier dûment réglementé et uniquement avec de l’argent que vous pouvez
+          vous permettre de perdre.
+        </p>
+
+        <h2>Les horaires des séances sont indicatifs</h2>
+        <p>
+          Les horaires de séance affichés par {PRODUCT.name} sont calculés à partir
+          des règles de fuseau horaire de chaque place financière et suivent
+          automatiquement les changements d’heure saisonniers. Voir notre{" "}
+          <Link href="/methodology">méthodologie</Link> pour le détail. Ils sont
+          fournis à titre d’orientation générale, correspondent à une journée de
+          trading normale et excluent les jours fériés de marché et les fermetures
+          imprévues. Vérifiez toujours les horaires exacts auprès de votre courtier
+          ou de votre place de marché avant de vous y fier pour une décision de
+          trading.
+        </p>
+
+        <h2>Questions</h2>
+        <p>
+          Si quelque chose ici n’est pas clair, écrivez-nous à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -135,14 +203,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -167,7 +229,7 @@ export default async function DisclaimerPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

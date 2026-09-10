@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { MARKETS, isMarketOpen, nextOpen } from "@/lib/markets";
+import { localeMeta } from "@/i18n/locales";
 import { CONTENT_DATES } from "@/lib/site";
 import { NextSessionCountdown } from "./NextSessionCountdown";
 
@@ -16,7 +17,7 @@ export async function MarketStatus() {
   const locale = await getLocale();
   const t = await getTranslations("home.status");
   const tc = await getTranslations("home.sessions");
-  const intlLocale = locale === "es" ? "es-ES" : "en-US";
+  const intlLocale = localeMeta(locale).intl;
 
   // `new Date().getTime()` rather than `Date.now()`, the React Compiler ESLint
   // rule flags `Date.now()` specifically as an "impure function call" during

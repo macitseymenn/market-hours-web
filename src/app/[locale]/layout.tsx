@@ -11,6 +11,8 @@ import { AlarmProvider } from "@/components/alarms/AlarmProvider";
 import { APP, PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { routing, type Locale } from "@/i18n/routing";
+import { localeMeta } from "@/i18n/locales";
+import { sharedAlternates } from "@/i18n/alternates";
 import { Analytics } from "@/components/analytics/Analytics";
 
 // Applied before paint so the theme never flashes. An explicit saved choice wins;
@@ -19,6 +21,9 @@ const themeInitScript = `try{var t=localStorage.getItem('theme');if(t==='dark'||
 
 // Home title/description per locale. Front-loads the primary keyword without
 // doubling the brand (the title template appends the brand on inner pages).
+// Intentionally a total `Record`: registering a new locale makes this a compile
+// error until its home title/description are written, which is how a language
+// is prevented from launching with English metadata.
 const HOME_META: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Forex Market Hours: Live Session Clock in Your Timezone",
@@ -30,9 +35,12 @@ const HOME_META: Record<Locale, { title: string; description: string }> = {
     description:
       "Descubre qué sesiones de forex están abiertas ahora, Sídney, Tokio, Londres y Nueva York, en tu zona horaria. Reloj de sesiones gratis, sin registro.",
   },
+  fr: {
+    title: "Horaires du Marché Forex : Horloge des Séances en Direct",
+    description:
+      "Découvrez quelles séances forex sont ouvertes maintenant : Sydney, Tokyo, Londres et New York, dans votre fuseau horaire. Horloge gratuite, sans inscription.",
+  },
 };
-
-const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES" };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -58,10 +66,9 @@ export async function generateMetadata({
     authors: [{ name: PUBLISHER.displayName }],
     creator: PUBLISHER.displayName,
     publisher: PUBLISHER.legalName,
-    alternates: {
-      canonical: `/${l}`,
-      languages: { en: "/en", es: "/es", "x-default": "/en" },
-    },
+    // Canonical + hreflang for every locale that is currently live, derived
+    // from the registry so a new language needs no edit here.
+    alternates: sharedAlternates(l, "/"),
     robots: {
       index: true,
       follow: true,
@@ -73,7 +80,7 @@ export async function generateMetadata({
       title: meta.title,
       description: meta.description,
       url: `${SITE_URL}/${l}`,
-      locale: OG_LOCALE[l],
+      locale: localeMeta(l).ogLocale,
     },
     twitter: {
       card: "summary_large_image",
@@ -139,7 +146,12 @@ export default async function LocaleLayout({
   const th = await getTranslations("header");
 
   return (
-    <html lang={locale} className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang={locale}
+      dir={localeMeta(locale).dir}
+      className="h-full antialiased"
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col bg-charcoal text-fog">
         {/* Theme applied before paint (no flash). Rendered via next/script with
             the `beforeInteractive` strategy, the framework-supported way to emit

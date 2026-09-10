@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, SESSIONS, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const CITY: Record<Locale, Record<string, string>> = {
   en: {
@@ -20,6 +27,13 @@ const CITY: Record<Locale, Record<string, string>> = {
     Frankfurt: "Fráncfort",
     London: "Londres",
     "New York": "Nueva York",
+  },
+  fr: {
+    Sydney: "Sydney",
+    Tokyo: "Tokyo",
+    Frankfurt: "Francfort",
+    London: "Londres",
+    "New York": "New York",
   },
 };
 
@@ -38,15 +52,22 @@ const REGION: Record<Locale, Record<string, string>> = {
     London: "Reino Unido",
     "New York": "Estados Unidos",
   },
+  fr: {
+    Sydney: "Australie",
+    Tokyo: "Japon",
+    Frankfurt: "Allemagne",
+    London: "Royaume-Uni",
+    "New York": "États-Unis",
+  },
 };
 
 const COPY = {
   en: {
     metaTitle: "How We Calculate Forex Session Times",
     metaDescription:
-      "Our methodology: how Forex Market Hours computes each session's open and close from live timezone rules, including daylight-saving shifts.",
+      "Our methodology: how Forex Market Hours computes each session’s open and close from live timezone rules, including daylight-saving shifts.",
     ogDescription:
-      "How Forex Market Hours computes each session's open and close from live timezone rules, including daylight-saving shifts.",
+      "How Forex Market Hours computes each session’s open and close from live timezone rules, including daylight-saving shifts.",
     breadcrumb: "Methodology",
     h1: "How We Calculate Forex Session Times",
     lead: (
@@ -263,6 +284,121 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Comment nous calculons les horaires des séances forex",
+    metaDescription:
+      "Notre méthodologie : comment Forex Market Hours calcule l’ouverture et la fermeture de chaque séance à partir de règles de fuseau horaire en direct, heure d’été comprise.",
+    ogDescription:
+      "Comment Forex Market Hours calcule l’ouverture et la fermeture de chaque séance à partir de règles de fuseau horaire en direct, heure d’été comprise.",
+    breadcrumb: "Méthodologie",
+    h1: "Comment nous calculons les horaires des séances forex",
+    lead: (
+      <>
+        Chaque horaire de séance dans {PRODUCT.name} est calculé en direct à partir
+        des règles de fuseau horaire propres à chaque place financière, et non lu
+        dans un tableau GMT figé : les changements d’heure saisonniers sont donc
+        toujours appliqués automatiquement.
+      </>
+    ),
+    body: (sessionList: ReactNode) => (
+      <>
+        <h2>La réponse courte</h2>
+        <p>
+          Chaque séance du forex est définie par les horaires de trading{" "}
+          <strong>locaux</strong> de sa place financière : Londres, par exemple,
+          négocie approximativement de 08:00 à 17:00 à son heure locale, toute
+          l’année. Nous calculons l’équivalent UTC/GMT actuel de cette plage locale à
+          partir des règles de fuseau horaire IANA de chaque ville, via l’API{" "}
+          <code>Intl</code> intégrée au navigateur. Comme le calcul part toujours de
+          l’heure locale, il suit automatiquement chaque changement d’heure
+          saisonnier (GMT/BST, EST/EDT, AEST/AEDT, etc.) sans que nous ayons à
+          publier un nouveau tableau deux fois par an.
+        </p>
+
+        <h2>Plages horaires des séances en heure standard</h2>
+        <p>
+          À titre de repère, voici les plages approximatives des cinq grandes
+          séances en GMT pendant l’hiver de l’hémisphère nord (heure standard).
+          Elles se décalent d’une heure pour les places qui appliquent l’heure d’été
+          pendant leur été local :
+        </p>
+        <ul>{sessionList}</ul>
+
+        <h2>Comment fonctionne le calcul</h2>
+        <p>
+          Plutôt que de coder en dur un décalage du type « GMT+1 » pour Londres,
+          nous demandons au navigateur quelle heure il est actuellement dans le
+          fuseau <code>Europe/London</code> (et dans le fuseau IANA équivalent pour
+          chaque autre ville de séance), en utilisant la même base de données de
+          fuseaux horaires que celle qui sous-tend la plupart des systèmes
+          d’exploitation et navigateurs modernes : la{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            base de données des fuseaux horaires IANA
+          </a>
+          . Cette base est maintenue précisément parce que les règles d’heure d’été
+          changent d’un pays à l’autre et d’une année à l’autre : y puiser, au lieu
+          d’un tableau figé que nous devrions mettre à jour à la main, est ce qui
+          garde l’outil exact sans qu’il ne se périme. En pratique, nous vérifions
+          aussi l’outil par sondage face aux horloges locales réelles de chaque
+          ville de séance, en particulier autour des week-ends de changement d’heure
+          du printemps et de l’automne, où les écarts sont les plus probables.
+        </p>
+
+        <h2>Pourquoi pas un tableau GMT figé ?</h2>
+        <p>
+          Les pays changent d’heure à des dates différentes. Le Royaume-Uni et l’UE
+          passent à l’heure d’été le dernier dimanche de mars ; les États-Unis
+          basculent quelques semaines plus tôt, le deuxième dimanche de mars ;
+          l’Australie, dans l’hémisphère sud, va dans le sens inverse. Le
+          gouvernement britannique publie les dates exactes de ses propres
+          changements d’heure sur{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            gov.uk/when-do-the-clocks-change
+          </a>
+          . Un tableau statique devient rapidement obsolète au fil de l’une ou
+          l’autre de ces transitions ; un calcul fondé sur des règles de fuseau
+          horaire en direct, non.
+        </p>
+
+        <h2>Sources</h2>
+        <ul>
+          <li>
+            <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+              Banque des règlements internationaux : enquête triennale des banques
+              centrales
+            </a>{" "}
+            pour la position de Londres comme première place de change en volume.
+          </li>
+          <li>
+            La{" "}
+            <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+              base de données des fuseaux horaires IANA
+            </a>{" "}
+            pour la conversion des horaires de trading locaux en UTC et les règles
+            d’heure d’été.
+          </li>
+          <li>
+            <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+              Informations du gouvernement britannique sur le changement d’heure
+            </a>{" "}
+            comme référence pour l’une des grandes dates de transition.
+          </li>
+        </ul>
+
+        <h2>Limites</h2>
+        <p>
+          Les plages de séance ci-dessus sont indicatives d’une journée de trading
+          normale et excluent les jours fériés de marché, les séances écourtées et
+          les fermetures imprévues, que chaque banque et chaque place fixent
+          indépendamment. Utilisez l’
+          <Link href="/">outil en direct sur notre page d’accueil</Link> pour
+          connaître l’état actuel ajusté à votre fuseau horaire, et considérez tout
+          horaire de séance comme une information générale plutôt que comme une
+          garantie qu’un marché donné est bien en train de négocier.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -278,14 +414,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -311,11 +441,13 @@ export default async function MethodologyPage({
     </li>
   ));
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
 import { analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const LAST_UPDATED = "2026-08-03";
 
@@ -94,6 +101,47 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
         electrónico, direcciones IP, identificadores de dispositivo ni ningún dato
         de cuenta, bróker o trading. No hay registro ni cuenta de usuario, así que
         no tenemos nada tuyo que vender ni compartir.
+      </p>
+    </>
+  ),
+  fr: analyticsEnabled ? (
+    <>
+      <h2>Analyse d’audience sur ce site web</h2>
+      <p>
+        Cette page de politique est hébergée sur notre site web, qui utilise une
+        analyse d’audience respectueuse de la vie privée pour comprendre l’usage
+        agrégé, quelles pages sont populaires et, de façon approximative, d’où
+        viennent les visiteurs. L’application {LOTWISE.shortName} elle-même ne
+        contient aucun SDK d’analyse. Nous n’utilisons jamais de traqueurs
+        publicitaires et ne vendons ni ne partageons jamais vos données.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          L’analyse d’audience que nous utilisons sur le site web peut déposer des
+          cookies. Ils ne se chargent{" "}
+          <strong>qu’après votre acceptation</strong> de la bannière de
+          consentement ; si vous refusez, aucun cookie d’analyse n’est déposé.
+          Google Analytics, lorsqu’il est utilisé, est configuré pour anonymiser les
+          adresses IP. Vous pouvez modifier votre choix à tout moment en effaçant les
+          données de ce site dans votre navigateur.
+        </p>
+      ) : (
+        <p>
+          L’analyse d’audience de notre site web n’utilise ni cookie ni identifiant
+          persistant et ne vous suit pas d’un site à l’autre : aucune bannière de
+          consentement n’est donc nécessaire.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Nous ne collectons aucune donnée personnelle</h2>
+      <p>
+        {LOTWISE.shortName} n’utilise aucune analyse d’audience, aucun traqueur
+        publicitaire et aucun SDK tiers. Nous ne collectons ni noms, ni adresses
+        e-mail, ni adresses IP, ni identifiants d’appareil, ni aucune donnée de
+        compte, de courtier ou de trading. Il n’y a ni inscription ni compte
+        utilisateur : nous n’avons donc rien de vous à vendre ou à partager.
       </p>
     </>
   ),
@@ -301,6 +349,108 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: `${LOTWISE.name} : politique de confidentialité`,
+    metaDescription: analyticsEnabled
+      ? `Comment ${LOTWISE.name} traite les données : chaque calcul s’exécute sur votre appareil, l’application n’utilise aucun SDK d’analyse, n’affiche aucune publicité et ne vend jamais vos données.`
+      : `Comment ${LOTWISE.name} traite les données. Chaque calcul s’exécute sur votre appareil ; nous ne collectons aucune donnée personnelle ni de trading.`,
+    breadcrumb: "Politique de confidentialité de Lotwise",
+    h1: "Politique de confidentialité",
+    lead: analyticsEnabled ? (
+      <>
+        En bref : {LOTWISE.name} fonctionne entièrement sur votre appareil,
+        n’affiche aucune publicité et ne vend jamais vos données.
+      </>
+    ) : (
+      <>
+        En bref : {LOTWISE.name} fonctionne entièrement sur votre appareil, ne
+        collecte aucune donnée personnelle et ne vous suit pas.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Dernière mise à jour : {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>L’application fonctionne sur votre appareil</h2>
+        <p>
+          {LOTWISE.name} est une calculatrice qui fonctionne hors ligne : la taille
+          de position, la taille de lot, la valeur du pip, le risque et la marge sont
+          tous calculés localement sur votre propre téléphone ou tablette. Nous
+          n’exploitons aucun serveur qui recevrait le solde de votre compte, votre
+          pourcentage de risque, votre stop loss, votre paire de devises ou toute
+          autre donnée que vous saisissez dans l’application.
+        </p>
+
+        {dataSection}
+
+        <h2>Données conservées uniquement sur votre appareil</h2>
+        <p>
+          Les seules données que {LOTWISE.shortName} conserve sont stockées dans
+          l’espace de stockage propre à l’application sur votre appareil et ne nous
+          sont jamais envoyées :
+        </p>
+        <ul>
+          <li>la devise de votre compte, votre solde et vos réglages de risque par défaut ;</li>
+          <li>vos instruments préférés, vos unités et vos réglages d’apparence ; et</li>
+          <li>
+            les calculs ou l’historique que vous choisissez de conserver, afin qu’ils
+            persistent d’une session à l’autre.
+          </li>
+        </ul>
+        <p>
+          Désinstaller l’application supprime complètement ces informations. Elles ne
+          quittent jamais votre appareil.
+        </p>
+
+        <h2>Notifications et autorisations</h2>
+        <p>
+          {LOTWISE.shortName} ne demande aucun accès à votre localisation, à vos
+          contacts, à vos photos, à votre microphone ni à votre caméra. Si une
+          future version propose des notifications facultatives, elles utiliseront
+          l’autorisation native de votre appareil, ne s’activeront que si vous y
+          consentez explicitement et seront générées localement : aucune donnée de
+          notification n’est transmise où que ce soit.
+        </p>
+
+        <h2>Achats</h2>
+        <p>
+          Si l’application propose une version payante ou des achats intégrés, la
+          transaction est entièrement gérée par Apple ou Google. Nous ne voyons ni ne
+          stockons jamais vos informations de paiement ; nous recevons uniquement
+          l’état anonyme du reçu fourni par la plateforme afin que l’application
+          débloque ce que vous avez acheté.
+        </p>
+
+        <h2>Mineurs</h2>
+        <p>
+          {LOTWISE.shortName} est un utilitaire tout public, non destiné aux enfants,
+          et comme il ne collecte aucune donnée, il ne collecte sciemment rien auprès
+          de personnes de moins de 13 ans.
+        </p>
+
+        <h2>Liens de tiers</h2>
+        <p>
+          Ce site renvoie vers l’App Store d’Apple et Google Play pour télécharger
+          l’application, ainsi que vers les sources externes que nous citons. Ces
+          sites tiers ont leurs propres politiques de confidentialité, que nous vous
+          encourageons à consulter ; nous ne sommes pas responsables de leur contenu
+          ni de leurs pratiques.
+        </p>
+
+        <h2>Modification de cette politique</h2>
+        <p>
+          Si cette politique change, nous mettrons à jour cette page ainsi que la
+          date de « dernière mise à jour » ci-dessus.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Les questions relatives à cette politique peuvent être envoyées à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          {LOTWISE.name} est publié par {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -316,14 +466,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -343,11 +487,13 @@ export default async function LotwisePrivacyPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

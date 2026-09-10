@@ -12,11 +12,7 @@
     "closeMenu": "Close menu",
     "primaryNav": "Primary navigation",
     "skipToContent": "Skip to content",
-    "language": "Language",
-    "languageNames": {
-      "en": "English",
-      "es": "Español"
-    }
+    "language": "Language"
   },
   "footer": {
     "explore": "Explore",
@@ -35,7 +31,8 @@
     "contact": "Contact"
   },
   "common": {
-    "disclaimer": "Forex Market Hours is a market-hours tool only. It does not provide financial advice and does not offer trading, deposit, or withdrawal services. Trading foreign exchange carries risk. Session times are provided for general information and follow daylight-saving changes."
+    "disclaimer": "Forex Market Hours is a market-hours tool only. It does not provide financial advice and does not offer trading, deposit, or withdrawal services. Trading foreign exchange carries risk. Session times are provided for general information and follow daylight-saving changes.",
+    "home": "Home"
   },
   "schema": {
     "webAppDescription": "A free live tool that shows which forex sessions, Sydney, Tokyo, Frankfurt, London and New York, are open right now, in your own timezone. See session overlaps, opening times and daylight-saving shifts at a glance, right in your browser. Also available as an iOS and Android app.",
@@ -377,7 +374,15 @@
     "authorAbout": "About",
     "authorExperience": "Experience",
     "authorElsewhere": "Elsewhere",
-    "authorArticles": "Articles by {name}"
+    "authorArticles": "Articles by {name}",
+    "teamRole": "Content reviewed against primary sources",
+    "teamBio": "Content researched and reviewed by the Forex Market Hours editorial team. See our editorial policy."
+  },
+  "author": {
+    "teamRole": "Editorial Team",
+    "teamMetaDesc": "Editorial profile for {publisher}, responsible for Forex Market Hours content.",
+    "teamBio": "Forex Market Hours content is maintained by {publisher}. A named author profile will appear here when available.",
+    "teamAbout": "Learn who builds and maintains this tool on the <about>About page</about>, and how content is reviewed in our <policy>editorial policy</policy>."
   },
   "consent": {
     "title": "Cookie consent",

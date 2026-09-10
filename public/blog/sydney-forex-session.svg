@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#141a16"/>
+  <path d="M250 130a78 78 0 1 0 70 116 62 62 0 0 1-70-116Z" fill="#5a8a6d"/>
+  <circle cx="360" cy="150" r="3" fill="#b0c3a9"/>
+  <circle cx="330" cy="290" r="2.5" fill="#b0c3a9"/>
+  <circle cx="400" cy="230" r="2" fill="#b0c3a9"/>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#5a8a6d" opacity="0.9"/>
+  <text x="470" y="240" fill="#77897d" font-family="sans-serif" font-size="14">SYDNEY 22:00–07:00 GMT</text>
+  <text x="470" y="150" fill="#d9ece0" font-family="sans-serif" font-size="30" font-weight="700">The Sydney session</text>
+  <text x="470" y="190" fill="#b0c3a9" font-family="sans-serif" font-size="16">Where the trading week begins</text>
+</svg>

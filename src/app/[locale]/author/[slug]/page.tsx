@@ -15,6 +15,7 @@ import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
 
 // ISR: re-render hourly so a scheduled post appears in its author's post list as
 // soon as it publishes, see `isPublished` in @/content/blog.
@@ -40,24 +41,16 @@ export async function generateMetadata({
   // orchestrator drops in a real, credentialed author (see authors.ts), the
   // guard flips and the page becomes indexable automatically, no code change.
   const placeholder = isPlaceholderAuthor(author);
+  const t = await getTranslations({ locale: l, namespace: "author" });
 
   return {
     title: placeholder
-      ? `${PUBLISHER.displayName}: ${l === "es" ? "Equipo editorial" : "Editorial Team"}`
+      ? `${PUBLISHER.displayName}: ${t("teamRole")}`
       : `${author.name}: ${author.role}`,
     description: placeholder
-      ? l === "es"
-        ? `Perfil editorial de ${PUBLISHER.displayName}, responsable del contenido de Forex Market Hours.`
-        : `Editorial profile for ${PUBLISHER.displayName}, responsible for Forex Market Hours content.`
+      ? t("teamMetaDesc", { publisher: PUBLISHER.displayName })
       : author.bio,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    alternates: sharedAlternates(l, href),
     robots: { index: !placeholder, follow: true },
   };
 }
@@ -71,6 +64,7 @@ export default async function AuthorPage({
   setRequestLocale(locale);
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as BlogLocale;
   const t = await getTranslations("blog");
+  const ta = await getTranslations("author");
 
   const author = getAuthor(slug);
   if (!author) notFound();
@@ -82,15 +76,9 @@ export default async function AuthorPage({
   // to the Organization rather than render a fake person. Once real data lands,
   // the named author renders instead.
   const displayName = placeholder ? PUBLISHER.displayName : author.name;
-  const displayRole = placeholder
-    ? l === "es"
-      ? "Equipo editorial"
-      : "Editorial Team"
-    : author.role;
+  const displayRole = placeholder ? ta("teamRole") : author.role;
   const displayBio = placeholder
-    ? l === "es"
-      ? `El contenido de Forex Market Hours lo mantiene ${PUBLISHER.displayName}. El perfil de autor con nombre se publicará aquí cuando esté disponible.`
-      : `Forex Market Hours content is maintained by ${PUBLISHER.displayName}. A named author profile will appear here when available.`
+    ? ta("teamBio", { publisher: PUBLISHER.displayName })
     : author.bio;
 
   // Person structured data, establishes a real author's identity, expertise and
@@ -150,31 +138,18 @@ export default async function AuthorPage({
         </h2>
         {placeholder ? (
           <p className="mt-3 text-fog">
-            {l === "es" ? (
-              <>
-                Conoce quién desarrolla y mantiene esta herramienta en la{" "}
+            {ta.rich("teamAbout", {
+              about: (chunks) => (
                 <Link href="/about" className="text-emerald hover:underline">
-                  página Acerca de
+                  {chunks}
                 </Link>
-                , y cómo revisamos el contenido en nuestra{" "}
+              ),
+              policy: (chunks) => (
                 <Link href="/editorial-policy" className="text-emerald hover:underline">
-                  política editorial
+                  {chunks}
                 </Link>
-                .
-              </>
-            ) : (
-              <>
-                Learn who builds and maintains this tool on the{" "}
-                <Link href="/about" className="text-emerald hover:underline">
-                  About page
-                </Link>
-                , and how content is reviewed in our{" "}
-                <Link href="/editorial-policy" className="text-emerald hover:underline">
-                  editorial policy
-                </Link>
-                .
-              </>
-            )}
+              ),
+            })}
           </p>
         ) : (
           <p className="mt-3 text-fog">{author.longBio}</p>

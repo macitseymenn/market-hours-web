@@ -12,11 +12,7 @@
     "closeMenu": "Cerrar menú",
     "primaryNav": "Navegación principal",
     "skipToContent": "Saltar al contenido",
-    "language": "Idioma",
-    "languageNames": {
-      "en": "English",
-      "es": "Español"
-    }
+    "language": "Idioma"
   },
   "footer": {
     "explore": "Explorar",
@@ -35,7 +31,8 @@
     "contact": "Contacto"
   },
   "common": {
-    "disclaimer": "Horario del Mercado Forex es únicamente una herramienta de horarios de mercado. No ofrece asesoramiento financiero ni servicios de trading, depósito o retiro. Operar en el mercado de divisas conlleva riesgo. Los horarios de las sesiones se facilitan a título informativo y se ajustan a los cambios de horario de verano."
+    "disclaimer": "Horario del Mercado Forex es únicamente una herramienta de horarios de mercado. No ofrece asesoramiento financiero ni servicios de trading, depósito o retiro. Operar en el mercado de divisas conlleva riesgo. Los horarios de las sesiones se facilitan a título informativo y se ajustan a los cambios de horario de verano.",
+    "home": "Inicio"
   },
   "schema": {
     "webAppDescription": "Una herramienta gratuita y en vivo que muestra qué sesiones forex, Sídney, Tokio, Fráncfort, Londres y Nueva York, están abiertas ahora mismo, en tu propia zona horaria. Consulta de un vistazo los solapamientos de sesiones, los horarios de apertura y los cambios de horario de verano, directamente en tu navegador. También disponible como app para iOS y Android.",
@@ -377,7 +374,15 @@
     "authorAbout": "Perfil",
     "authorExperience": "Experiencia",
     "authorElsewhere": "En otros sitios",
-    "authorArticles": "Artículos de {name}"
+    "authorArticles": "Artículos de {name}",
+    "teamRole": "Contenido revisado con fuentes primarias",
+    "teamBio": "Contenido investigado y revisado por el equipo editorial de Forex Market Hours. Consulta nuestra política editorial."
+  },
+  "author": {
+    "teamRole": "Equipo editorial",
+    "teamMetaDesc": "Perfil editorial de {publisher}, responsable del contenido de Forex Market Hours.",
+    "teamBio": "El contenido de Forex Market Hours lo mantiene {publisher}. El perfil de autor con nombre se publicará aquí cuando esté disponible.",
+    "teamAbout": "Conoce quién desarrolla y mantiene esta herramienta en la <about>página Acerca de</about>, y cómo revisamos el contenido en nuestra <policy>política editorial</policy>."
   },
   "consent": {
     "title": "Consentimiento de cookies",

@@ -12,6 +12,7 @@ import { PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { alternatesFor } from "@/i18n/alternates";
 
 // ISR: re-render hourly. A future-dated post is not prebuilt (it's excluded from
 // generateStaticParams while unpublished) and its URL 404s until 00:00 UTC on its
@@ -36,25 +37,26 @@ export async function generateMetadata({
   const post = getPost(slug, l as BlogLocale);
   if (!post) return {};
   const author = getAuthor(post.authorSlug);
-  const hrefFor = (loc: BlogLocale) =>
-    ({ pathname: "/blog/[slug]", params: { slug: post.slugs[loc] } }) as const;
+  // A post only has a URL in the locales it is actually translated into, so
+  // hreflang lists exactly those and nothing else.
+  const hrefFor = (loc: Locale) => {
+    const slug = post.slugs[loc];
+    return slug
+      ? ({ pathname: "/blog/[slug]", params: { slug } } as const)
+      : undefined;
+  };
+  // The rendering locale always has a slug (getPost() just resolved it there).
+  const ownHref = { pathname: "/blog/[slug]", params: { slug: post.slug } } as const;
 
   return {
     title: post.title,
     description: post.description,
-    alternates: {
-      canonical: getPathname({ locale: l, href: hrefFor(l as BlogLocale) }),
-      languages: {
-        en: getPathname({ locale: "en", href: hrefFor("en") }),
-        es: getPathname({ locale: "es", href: hrefFor("es") }),
-        "x-default": getPathname({ locale: "en", href: hrefFor("en") }),
-      },
-    },
+    alternates: alternatesFor(l, hrefFor),
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `${SITE_URL}${getPathname({ locale: l, href: hrefFor(l as BlogLocale) })}`,
+      url: `${SITE_URL}${getPathname({ locale: l, href: ownHref })}`,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
       // Attribute to the real author once wired; until then, honestly to the org.
@@ -203,11 +205,7 @@ export default async function PostPage({
               >
                 {EDITORIAL_TEAM.name}
               </Link>
-              <p className="text-muted">
-                {l === "es"
-                  ? "Contenido revisado con fuentes primarias"
-                  : "Content reviewed against primary sources"}
-              </p>
+              <p className="text-muted">{t("teamRole")}</p>
             </div>
           </div>
         )}
@@ -292,11 +290,7 @@ export default async function PostPage({
               >
                 {EDITORIAL_TEAM.name}
               </Link>
-              <p className="mt-1 text-sm text-fog">
-                {l === "es"
-                  ? "Contenido investigado y revisado por el equipo editorial de Forex Market Hours. Consulta nuestra política editorial."
-                  : "Content researched and reviewed by the Forex Market Hours editorial team. See our editorial policy."}
-              </p>
+              <p className="mt-1 text-sm text-fog">{t("teamBio")}</p>
             </div>
           </div>
         </footer>

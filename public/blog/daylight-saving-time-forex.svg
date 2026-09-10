@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#14161c"/>
+  <circle cx="290" cy="210" r="86" fill="none" stroke="#6d7a9b" stroke-width="14"/>
+  <line x1="290" y1="210" x2="290" y2="150" stroke="#a9b4d6" stroke-width="6" stroke-linecap="round"/>
+  <line x1="290" y1="210" x2="325" y2="210" stroke="#a9b4d6" stroke-width="6" stroke-linecap="round"/>
+  <path d="M355 175a40 40 0 1 1 0 70" fill="none" stroke="#a9b4d6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M355 175l-10 4 4 12Z" fill="#a9b4d6"/>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#6d7a9b" opacity="0.9"/>
+  <text x="470" y="240" fill="#767d8a" font-family="sans-serif" font-size="14">±1 HOUR, TWICE A YEAR</text>
+  <text x="470" y="150" fill="#d6dbec" font-family="sans-serif" font-size="30" font-weight="700">Daylight saving time</text>
+  <text x="470" y="190" fill="#a9b4d6" font-family="sans-serif" font-size="16">How clock changes shift forex hours</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#141a1c"/>
+  <path d="M250 130a78 78 0 1 0 70 116 62 62 0 0 1-70-116Z" fill="#4a90a4"/>
+  <circle cx="360" cy="150" r="3" fill="#a9c3c0"/>
+  <circle cx="330" cy="290" r="2.5" fill="#a9c3c0"/>
+  <circle cx="400" cy="230" r="2" fill="#a9c3c0"/>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#4a90a4" opacity="0.9"/>
+  <text x="470" y="240" fill="#70898a" font-family="sans-serif" font-size="14">NEW YORK 13:00–22:00 GMT</text>
+  <text x="470" y="150" fill="#d6ece9" font-family="sans-serif" font-size="30" font-weight="700">The New York session</text>
+  <text x="470" y="190" fill="#a9c3c0" font-family="sans-serif" font-size="16">Hours, best pairs and the overlap</text>
+</svg>

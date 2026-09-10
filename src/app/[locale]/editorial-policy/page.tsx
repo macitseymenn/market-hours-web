@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const COPY = {
   en: {
@@ -179,6 +186,95 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Normes éditoriales et politique d’exactitude",
+    metaDescription:
+      "Comment nous recherchons, sourçons et relisons le contenu sur les horaires du forex : nos normes d’exactitude, de correction et de non-conseil.",
+    breadcrumb: "Politique éditoriale",
+    h1: "Normes éditoriales et politique d’exactitude",
+    lead: (
+      <>
+        Le forex est un sujet où l’exactitude compte. Cette page explique comment
+        nous recherchons, rédigeons et corrigeons le contenu de {PRODUCT.name}, et
+        ce que nous nous interdisons délibérément de faire.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Comment nous recherchons et sourçons le contenu</h2>
+        <p>
+          Nos articles et nos pages de référence sont construits à partir de
+          sources primaires et officielles chaque fois que c’est possible :
+          publications des banques centrales et des autorités monétaires,{" "}
+          <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+            enquête triennale des banques centrales
+          </a>{" "}
+          de la Banque des règlements internationaux sur le volume mondial des
+          changes, informations officielles des gouvernements comme les{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            pages britanniques sur le changement d’heure
+          </a>
+          , et la{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            base de données des fuseaux horaires IANA
+          </a>{" "}
+          qui alimente également l’outil lui-même. Lorsque nous citons un chiffre
+          ou une affirmation, nous renvoyons à la source plutôt que de la présenter
+          comme un fait sans attribution.
+        </p>
+
+        <h2>Comment nous vérifions l’exactitude</h2>
+        <p>
+          Avant publication, le contenu portant sur les horaires de séance est
+          confronté aux mêmes données de fuseaux horaires que celles utilisées par
+          notre outil en direct (voir notre{" "}
+          <Link href="/methodology">page méthodologie</Link>), afin que les guides
+          rédigés et l’horloge interactive ne se contredisent jamais. Le contenu est
+          revérifié périodiquement, à mesure que les dates de changement d’heure et
+          les usages de marché sont confirmés chaque année.
+        </p>
+
+        <h2>Supervision éditoriale</h2>
+        <p>
+          La responsabilité éditoriale de {PRODUCT.name} incombe à l’équipe{" "}
+          {PUBLISHER.displayName}, la société qui développe et maintient l’outil.
+          Voir notre <Link href="/about">page À propos</Link>. La même équipe rédige
+          les guides et maintient l’outil en direct : les données derrière un
+          article et les mots qui les décrivent sont donc vérifiés ensemble plutôt
+          qu’isolément. Lorsqu’un rédacteur réel et nommé signera un article, son
+          profil et son parcours seront liés depuis la signature.
+        </p>
+
+        <h2>Corrections</h2>
+        <p>
+          Si nous constatons une inexactitude, ou si on nous la signale, nous la
+          corrigeons et, pour les modifications substantielles, nous mettons à jour
+          la date de « dernière mise à jour » de l’article. Nous préférons corriger
+          rapidement une erreur plutôt que de la laisser en ligne pour sauver les
+          apparences.
+        </p>
+
+        <h2>Ce que nous ne faisons pas</h2>
+        <p>
+          {PRODUCT.name} ne fournit ni conseil financier, ni signaux de trading, ni
+          recommandation d’achat ou de vente de quelque nature que ce soit, et aucun
+          de nos contenus ne doit être lu comme une suggestion de trader un
+          instrument précis à un moment précis. Nous publions des informations
+          générales et pédagogiques sur le fonctionnement des séances du forex et
+          de leurs horaires. Voir notre{" "}
+          <Link href="/disclaimer">avertissement complet sur les risques</Link>.
+        </p>
+
+        <h2>Signaler une inexactitude</h2>
+        <p>
+          Vous avez repéré une erreur : un horaire de séance, un lien source, une
+          date ? Dites-le-nous à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          et nous examinerons cela.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -194,14 +290,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -221,11 +311,13 @@ export default async function EditorialPolicyPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

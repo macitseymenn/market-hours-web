@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const LAST_UPDATED = "2026-07-22";
 
@@ -228,6 +235,121 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Conditions d’utilisation",
+    metaDescription:
+      "Les conditions régissant l’utilisation de l’outil web Forex Market Hours et de ses applications mobiles.",
+    breadcrumb: "Conditions d’utilisation",
+    h1: "Conditions d’utilisation",
+    lead: (
+      <>
+        Les présentes conditions régissent votre utilisation de l’outil web{" "}
+        {PRODUCT.name} disponible sur {SITE_URL} et des applications iOS et Android
+        qui l’accompagnent, publiées par {PUBLISHER.displayName}.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Dernière mise à jour : {date}.</>,
+    body: (
+      <>
+        <blockquote>
+          Il s’agit d’un modèle général de conditions d’utilisation destiné à
+          décrire le fonctionnement réel du service. Il ne remplace pas un conseil
+          juridique : faites-le relire par un conseil qualifié avant de vous y fier
+          à des fins contentieuses ou de conformité.
+        </blockquote>
+
+        <h2>1. Acceptation des présentes conditions</h2>
+        <p>
+          En accédant à {PRODUCT.name} (le « Service ») ou en l’utilisant, vous
+          acceptez les présentes conditions d’utilisation. Si vous ne les acceptez
+          pas, veuillez ne pas utiliser le Service.
+        </p>
+
+        <h2>2. Description du service</h2>
+        <p>
+          {PRODUCT.name} est un utilitaire d’horaires de marché qui affiche les
+          heures d’ouverture, de fermeture et de chevauchement des grandes séances
+          de trading forex, converties dans votre fuseau horaire local, ainsi que
+          des contenus informatifs associés. Le Service est fourni gratuitement et
+          l’outil web ne nécessite aucun compte.
+        </p>
+
+        <h2>3. Aucun conseil financier</h2>
+        <p>
+          Le Service est fourni à des fins d’information générale uniquement. Il ne
+          constitue ni un conseil financier, d’investissement, de trading, fiscal ou
+          juridique, et rien dans le Service ne doit être considéré comme une
+          recommandation d’acheter, de vendre ou de conserver un instrument. Voir
+          notre <Link href="/disclaimer">avertissement complet sur les risques</Link>.
+        </p>
+
+        <h2>4. Aucune garantie d’exactitude pour vos décisions de trading</h2>
+        <p>
+          Bien que nous fassions des efforts raisonnables pour maintenir l’exactitude
+          des horaires de séance et des contenus associés (voir notre{" "}
+          <Link href="/methodology">méthodologie</Link> et notre{" "}
+          <Link href="/editorial-policy">politique éditoriale</Link>), le Service est
+          fourni « en l’état » et « selon disponibilité », sans garantie d’aucune
+          sorte, expresse ou implicite, y compris quant à l’exactitude, à
+          l’exhaustivité ou à l’adéquation à un usage particulier. Il vous appartient
+          de vérifier de manière indépendante toute information sensible au temps
+          avant d’agir en conséquence.
+        </p>
+
+        <h2>5. Utilisation acceptable</h2>
+        <p>
+          Vous vous engagez à ne pas détourner l’usage du Service, notamment en
+          tentant de le perturber, en l’extrayant à un rythme disproportionné, en
+          procédant à une ingénierie inverse de l’application au-delà de ce que la
+          loi applicable autorise, ou en l’utilisant à des fins illicites.
+        </p>
+
+        <h2>6. Propriété intellectuelle</h2>
+        <p>
+          Le Service, y compris son design, ses textes, ses graphismes et son code
+          sous-jacent, appartient à {PUBLISHER.displayName} ou à ses concédants de
+          licence et est protégé par les lois applicables en matière de propriété
+          intellectuelle. Vous pouvez utiliser le Service à des fins personnelles et
+          non commerciales ; vous ne pouvez ni le reproduire, ni le redistribuer, ni
+          en tirer des produits dérivés sans notre autorisation écrite.
+        </p>
+
+        <h2>7. Liens tiers et boutiques d’applications</h2>
+        <p>
+          Le Service renvoie vers l’App Store d’Apple et Google Play, ainsi que vers
+          les sources tierces citées dans nos contenus. Votre utilisation de ces
+          plateformes est régie par leurs propres conditions, que nous ne
+          contrôlons pas.
+        </p>
+
+        <h2>8. Limitation de responsabilité</h2>
+        <p>
+          Dans toute la mesure permise par la loi, {PUBLISHER.displayName} ne saurait
+          être tenue responsable de tout dommage indirect, accessoire ou consécutif,
+          y compris les pertes de trading, résultant de votre utilisation du Service
+          ou de l’impossibilité de l’utiliser.
+        </p>
+
+        <h2>9. Entité éditrice</h2>
+        <p>
+          Le Service est publié par {PUBLISHER.displayName} ({PUBLISHER.legalName}).
+        </p>
+
+        <h2>10. Modification des présentes conditions</h2>
+        <p>
+          Nous pouvons mettre à jour ces conditions de temps à autre. La poursuite de
+          l’utilisation du Service après une modification vaut acceptation des
+          conditions mises à jour.
+        </p>
+
+        <h2>11. Contact</h2>
+        <p>
+          Les questions relatives aux présentes conditions peuvent être envoyées à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -243,14 +365,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -270,11 +386,13 @@ export default async function TermsPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

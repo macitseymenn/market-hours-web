@@ -8,6 +8,7 @@ import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { jsonLdScript } from "@/lib/jsonld";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
 
 // ISR: re-render hourly so scheduled (future-dated) posts appear automatically
 // once their publish date arrives, see `isPublished` in @/content/blog.
@@ -26,14 +27,7 @@ export async function generateMetadata({
   return {
     title: { absolute: t("metaTitle") },
     description: t("metaDesc"),
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: t("metaTitle"),

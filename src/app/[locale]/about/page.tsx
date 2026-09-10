@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { APP, PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const COPY = {
   en: {
@@ -180,6 +187,96 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: `À propos de ${PRODUCT.name}`,
+    metaDescription:
+      "Qui développe Forex Market Hours, pourquoi nous avons créé une horloge de séances gratuite et en direct, et comment nous gardons les horaires exacts.",
+    ogDescription:
+      "Qui développe Forex Market Hours, pourquoi nous avons créé une horloge de séances gratuite et en direct, et comment nous gardons les horaires exacts.",
+    breadcrumb: "À propos",
+    h1: `À propos de ${PRODUCT.name}`,
+    lead: (
+      <>
+        {PRODUCT.name} est une horloge de séances forex gratuite et en direct,
+        développée par {PUBLISHER.displayName}, une société logicielle qui conçoit
+        de petits outils ciblés plutôt que de larges produits financiers.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Qui nous sommes</h2>
+        <p>
+          {PUBLISHER.displayName} ({PUBLISHER.legalName}) est une société
+          logicielle. Nous développons et maintenons {PRODUCT.name}, l’outil web
+          disponible sur {SITE_URL} et les applications iOS et Android qui
+          l’accompagnent, comme un seul produit ciblé : un utilitaire d’horaires de
+          marché pour celles et ceux qui tradent ou suivent le marché des changes.
+          Nous ne sommes ni une banque, ni un courtier, ni une société
+          d’investissement.
+        </p>
+
+        <h2>Pourquoi nous l’avons créé</h2>
+        <p>
+          Le trading sur le forex fonctionne 24 heures sur 24, cinq jours par
+          semaine, réparti entre les séances régionales de Sydney, Tokyo, Francfort,
+          Londres et New York. Savoir laquelle de ces séances est ouverte en ce
+          moment, dans votre propre fuseau horaire, supposait généralement de
+          convertir le GMT à la main et de tout revérifier dès qu’un pays changeait
+          d’heure. Nous avons créé {PRODUCT.name} pour que cette conversion se fasse
+          automatiquement, en permanence et gratuitement.
+        </p>
+        <p>
+          C’est un problème que nous avons rencontré nous-mêmes : petite équipe
+          logicielle qui suit les marchés, nous en avions assez de faire des calculs
+          GMT de tête et de nous demander si Londres était déjà passée à l’heure
+          d’été. L’outil est né comme l’utilitaire que nous voulions pour notre
+          propre usage, et nous nous en servons encore chaque jour de trading, ce
+          qui reste le moyen le plus rapide de repérer une anomalie.
+        </p>
+
+        <h2>Ce qu’est Forex Market Hours, et ce qu’il n’est pas</h2>
+        <p>
+          {PRODUCT.name} est un utilitaire d’horaires de marché. Il montre quand les
+          grandes séances du forex ouvrent, ferment et se chevauchent, converties
+          dans votre fuseau horaire local. Ce n’est <strong>pas</strong> un
+          courtier, ni un conseiller financier, ni un service de signaux, et il ne
+          propose aucun service de trading, de dépôt ou de retrait. Rien sur ce site
+          ne constitue un conseil financier personnalisé : voir notre{" "}
+          <Link href="/disclaimer">avertissement sur les risques</Link> pour le
+          détail complet.
+        </p>
+
+        <h2>Comment nous maintenons l’exactitude</h2>
+        <p>
+          Chaque horaire de séance est calculé à partir des règles de fuseau horaire
+          propres à chaque place financière plutôt qu’à partir d’un tableau figé :
+          les changements d’heure saisonniers sont donc appliqués automatiquement.
+          Nous expliquons précisément comment cela fonctionne, ainsi que les sources
+          sur lesquelles nous nous appuyons, sur notre{" "}
+          <Link href="/methodology">page méthodologie</Link>. La manière dont nous
+          recherchons, relisons et corrigeons nos contenus rédigés est décrite dans
+          notre <Link href="/editorial-policy">politique éditoriale</Link>.
+        </p>
+
+        <h2>L’outil web gratuit et l’application</h2>
+        <p>
+          L’outil web disponible sur {SITE_URL} fonctionne entièrement dans votre
+          navigateur, sans inscription et sans publicité. Il s’accompagne d’une
+          application iOS et Android gratuite qui ajoute des widgets d’écran
+          d’accueil, un calendrier économique et des alertes de séance, pour celles
+          et ceux qui veulent la même horloge en direct sans garder un onglet
+          ouvert.
+        </p>
+
+        <h2>Nous contacter</h2>
+        <p>
+          Questions, corrections ou demandes de partenariat sont les bienvenues à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>
+          , ou consultez notre <Link href="/contact">page contact</Link>.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -195,14 +292,8 @@ export async function generateMetadata({
   return {
     title: { absolute: c.metaTitle },
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -222,11 +313,13 @@ export default async function AboutPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

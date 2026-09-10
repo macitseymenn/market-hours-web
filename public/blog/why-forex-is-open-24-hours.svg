@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#16121c"/>
+  <circle cx="290" cy="210" r="86" fill="none" stroke="#7a5ac9" stroke-width="14"/>
+  <path d="M290 124a86 86 0 0 1 0 172" fill="none" stroke="#b9a9e6" stroke-width="14"/>
+  <text x="290" y="222" fill="#d6ccec" font-family="sans-serif" font-size="40" font-weight="700" text-anchor="middle">24</text>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#7a5ac9" opacity="0.9"/>
+  <text x="470" y="240" fill="#7d768a" font-family="sans-serif" font-size="14">SUN 22:00 – FRI 22:00 GMT</text>
+  <text x="470" y="150" fill="#e2d6ec" font-family="sans-serif" font-size="30" font-weight="700">24-hour forex</text>
+  <text x="470" y="190" fill="#b9a9e6" font-family="sans-serif" font-size="16">Why the market never sleeps</text>
+</svg>

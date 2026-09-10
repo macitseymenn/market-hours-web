@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { sharedAlternates } from "@/i18n/alternates";
+
+// ISR: re-render daily. The page's own copy is static, but the shared chrome
+// (header language switcher, footer) lists the locales that are currently live,
+// so a scheduled locale reaching its date must be able to appear here without a
+// deploy. See @/i18n/locales.
+export const revalidate = 86400;
 
 const COPY = {
   en: {
@@ -107,6 +114,57 @@ const COPY = {
       </>
     ),
   },
+  fr: {
+    metaTitle: "Nous contacter",
+    metaDescription:
+      "Contactez l’équipe Forex Market Hours : corrections, retours et demandes de partenariat. info@forexmarkethours.app.",
+    ogDescription:
+      "Contactez l’équipe Forex Market Hours : corrections, retours et demandes de partenariat.",
+    breadcrumb: "Contact",
+    h1: "Nous contacter",
+    lead: (
+      <>
+        Le moyen le plus rapide de joindre l’équipe {PRODUCT.name} est l’e-mail, à
+        l’adresse{" "}
+        <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Écrivez-nous</h2>
+        <p>
+          Envoyez-nous un message à{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          et nous vous répondrons dès que possible.
+        </p>
+
+        <h2>Pour quoi nous contacter</h2>
+        <ul>
+          <li>
+            <strong>Corrections</strong> : vous avez repéré un horaire de séance
+            inexact, un lien source cassé ou une date obsolète dans un article ?
+            Signalez-le-nous et nous l’examinerons (voir notre{" "}
+            <Link href="/editorial-policy">politique éditoriale</Link>).
+          </li>
+          <li>
+            <strong>Retours</strong> : demandes de fonctionnalités, signalements de
+            bugs ou impressions générales sur l’outil web ou l’application.
+          </li>
+          <li>
+            <strong>Partenariats</strong> : presse, collaboration ou demandes
+            d’intégration.
+          </li>
+        </ul>
+
+        <h2>Publié par</h2>
+        <p>
+          {PRODUCT.name} est publié par {PUBLISHER.displayName} ({PUBLISHER.legalName}),
+          la société à l’origine de l’outil web gratuit disponible sur {SITE_URL} et
+          des applications iOS et Android qui l’accompagnent.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({
@@ -122,14 +180,8 @@ export async function generateMetadata({
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: getPathname({ locale: l, href }),
-      languages: {
-        en: getPathname({ locale: "en", href }),
-        es: getPathname({ locale: "es", href }),
-        "x-default": getPathname({ locale: "en", href }),
-      },
-    },
+    // Canonical + hreflang over the locales that are live, from the registry.
+    alternates: sharedAlternates(l, href),
     openGraph: {
       type: "website",
       title: c.metaTitle,
@@ -149,11 +201,13 @@ export default async function ContactPage({
   const l = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as Locale;
   const c = COPY[l];
 
+  const tc = await getTranslations("common");
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: l === "es" ? "Inicio" : "Home", item: `${SITE_URL}/${l}` },
+      { "@type": "ListItem", position: 1, name: tc("home"), item: `${SITE_URL}/${l}` },
       {
         "@type": "ListItem",
         position: 2,

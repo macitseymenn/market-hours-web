@@ -9,10 +9,14 @@ export async function SessionTimes() {
   const locale = (await getLocale()) as BlogLocale;
 
   // Contextual internal links to the two most relevant guides, looked up by
-  // their stable English slug so the correct localized slug/href resolves
-  // for both locales.
-  const bestTimePost = POSTS.find((p) => p.slug.en === "forex-trading-sessions-explained");
-  const overlapPost = POSTS.find((p) => p.slug.en === "forex-market-hours-by-timezone");
+  // their stable English slug so the correct localized slug resolves for the
+  // active locale. A guide that is not translated into this locale yet has no
+  // slug here, and the related-reading line is left out rather than linking to
+  // a page in another language.
+  const bestTimeSlug = POSTS.find((p) => p.slug.en === "forex-trading-sessions-explained")
+    ?.slug[locale];
+  const overlapSlug = POSTS.find((p) => p.slug.en === "forex-market-hours-by-timezone")
+    ?.slug[locale];
 
   return (
     <section
@@ -149,14 +153,14 @@ export async function SessionTimes() {
 
         {/* Internal linking depth, contextual links into the two most
             relevant guides, plus the methodology page (owned elsewhere). */}
-        {bestTimePost && overlapPost && (
+        {bestTimeSlug && overlapSlug && (
           <p className="mt-4 max-w-3xl text-sm text-fog">
             {t.rich("relatedReading", {
               bestTime: (chunks) => (
                 <Link
                   href={{
                     pathname: "/blog/[slug]",
-                    params: { slug: bestTimePost.slug[locale] },
+                    params: { slug: bestTimeSlug },
                   }}
                   className="text-emerald underline underline-offset-4 hover:text-emerald-600"
                 >
@@ -167,7 +171,7 @@ export async function SessionTimes() {
                 <Link
                   href={{
                     pathname: "/blog/[slug]",
-                    params: { slug: overlapPost.slug[locale] },
+                    params: { slug: overlapSlug },
                   }}
                   className="text-emerald underline underline-offset-4 hover:text-emerald-600"
                 >

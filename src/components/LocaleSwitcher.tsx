@@ -3,10 +3,15 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { localeMeta } from "@/i18n/locales";
 
 /**
- * Language switcher, a dropdown that lists every configured locale, so adding
- * a new language to `routing.locales` automatically surfaces it here. Selecting
+ * Language switcher, a dropdown that lists every locale that is currently live,
+ * so registering a new language surfaces it here on its release date with no
+ * change to this component. Names come from the locale registry as endonyms
+ * ("Français", not "French"), which is both the convention for a language picker
+ * and the reason no catalogue has to translate every other language's name.
+ * Selecting
  * a language navigates to the equivalent page in that locale, respecting
  * localized slugs by reading the page's own hreflang alternates (with a
  * locale-segment-swap fallback).
@@ -90,7 +95,7 @@ export function LocaleSwitcher() {
           <circle cx="12" cy="12" r="9" />
           <path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" />
         </svg>
-        <span className="hidden sm:inline">{t("languageNames." + active)}</span>
+        <span className="hidden sm:inline">{localeMeta(active).name}</span>
         <span className="font-semibold uppercase sm:hidden">{active}</span>
         <svg
           width="12"
@@ -127,7 +132,7 @@ export function LocaleSwitcher() {
                     isActive ? "text-emerald" : "text-fog hover:text-ivory"
                   }`}
                 >
-                  {t("languageNames." + l)}
+                  {localeMeta(l).name}
                   {isActive && (
                     <svg
                       width="14"

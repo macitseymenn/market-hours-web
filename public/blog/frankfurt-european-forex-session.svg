@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#1c1712"/>
+  <path d="M250 130a78 78 0 1 0 70 116 62 62 0 0 1-70-116Z" fill="#c98a4a"/>
+  <circle cx="360" cy="150" r="3" fill="#e6cfa9"/>
+  <circle cx="330" cy="290" r="2.5" fill="#e6cfa9"/>
+  <circle cx="400" cy="230" r="2" fill="#e6cfa9"/>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#c98a4a" opacity="0.9"/>
+  <text x="470" y="240" fill="#8a7a70" font-family="sans-serif" font-size="14">FRANKFURT 07:00 GMT</text>
+  <text x="470" y="150" fill="#ece4d6" font-family="sans-serif" font-size="30" font-weight="700">The European session</text>
+  <text x="470" y="190" fill="#e6cfa9" font-family="sans-serif" font-size="16">Frankfurt, the opener before London</text>
+</svg>

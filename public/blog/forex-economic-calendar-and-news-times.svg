@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Article cover">
+  <rect width="800" height="420" fill="#1c1216"/>
+  <rect x="190" y="130" width="150" height="160" rx="12" fill="#b54a6d" opacity="0.85"/>
+  <rect x="190" y="130" width="150" height="34" rx="12" fill="#d96a8a" opacity="0.9"/>
+  <line x1="215" y1="200" x2="315" y2="200" stroke="#e6a9bc" stroke-width="5" stroke-linecap="round"/>
+  <line x1="215" y1="230" x2="300" y2="230" stroke="#e6a9bc" stroke-width="5" stroke-linecap="round"/>
+  <line x1="215" y1="260" x2="290" y2="260" stroke="#e6a9bc" stroke-width="5" stroke-linecap="round"/>
+  <rect x="470" y="250" width="250" height="30" rx="15" fill="#b54a6d" opacity="0.9"/>
+  <text x="470" y="240" fill="#8a7078" font-family="sans-serif" font-size="14">NFP · CPI · RATE DECISIONS</text>
+  <text x="470" y="150" fill="#ecd6de" font-family="sans-serif" font-size="30" font-weight="700">Forex news times</text>
+  <text x="470" y="190" fill="#e6a9bc" font-family="sans-serif" font-size="16">When data hits each session</text>
+</svg>
