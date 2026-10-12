@@ -1,4 +1,4 @@
-# Blog Uretim Handbook - Forex Market Hours
+# Blog Uretim Handbook - Forex Market Hours - Selam
 
 Bu dosya, `forexmarkethours.app` projesinde blog yazisi ureten kisi/AI icin
 tek referanstir. Amaci: her yeni yazinin bu projedeki sisteme dogru sekilde
