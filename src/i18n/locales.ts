@@ -90,6 +90,42 @@ export const LOCALES = [
     dir: "ltr",
     availableFrom: "2026-09-10",
   },
+  {
+    code: "pt",
+    name: "Português",
+    intl: "pt-BR",
+    intlClock: "pt-BR",
+    ogLocale: "pt_BR",
+    dir: "ltr",
+    availableFrom: "2026-10-12",
+  },
+  {
+    code: "tr",
+    name: "Türkçe",
+    intl: "tr-TR",
+    intlClock: "tr-TR",
+    ogLocale: "tr_TR",
+    dir: "ltr",
+    availableFrom: "2026-10-22",
+  },
+  {
+    code: "de",
+    name: "Deutsch",
+    intl: "de-DE",
+    intlClock: "de-DE",
+    ogLocale: "de_DE",
+    dir: "ltr",
+    availableFrom: "2026-11-01",
+  },
+  {
+    code: "it",
+    name: "Italiano",
+    intl: "it-IT",
+    intlClock: "it-IT",
+    ogLocale: "it_IT",
+    dir: "ltr",
+    availableFrom: "2026-11-11",
+  },
 ] as const satisfies readonly LocaleMeta[];
 
 export type LocaleCode = (typeof LOCALES)[number]["code"];

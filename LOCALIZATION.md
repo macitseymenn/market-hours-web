@@ -3,7 +3,7 @@
 Bu dosya, siteye yeni bir dil eklerken tek referanstir. Blog yazisi uretimi icin
 `SEO-GUIDELINES.md`'e bak; bu dosya bir DILIN nasil eklendigini anlatir.
 
-> Hedef tempo: haftada bir dil. Sistem bunu destekleyecek sekilde kuruldu,
+> Hedef tempo: 10 gunde bir dil. Sistem bunu destekleyecek sekilde kuruldu,
 > yani mekanizma otomatik, is yuku ceviridir.
 
 **Temel gercekler:**
@@ -314,22 +314,27 @@ veren sey tarih oynatmak degil, gercek yayin temposudur.
 
 # EK A: DIL KUYRUGU
 
-Tempo: **haftada bir dil**, her Persembe yayin.
+Tempo: **10 gunde bir dil**.
 
 | Sira | Dil | Kod | Yayin | Durum |
 |---|---|---|---|---|
-| 1 | Francais | `fr` | 2026-09-10 | CANLI (UI + legal + 5 yazi) |
-| 2 | Portugues | `pt` | 2026-09-17 | siradaki |
-| 3 | - | - | 2026-09-24 | belirlenecek |
-| 4 | - | - | 2026-10-01 | belirlenecek |
-| 5 | - | - | 2026-10-08 | belirlenecek |
+| 1 | Francais | `fr` | 2026-09-10 | CANLI (UI + legal + 15 yazi) |
+| 2 | Portugues | `pt` | 2026-10-12 | hazir (UI + legal + 15 yazi, 5'i acilista) |
+| 3 | Turkce | `tr` | 2026-10-22 | hazir (UI + legal + 15 yazi, 5'i acilista) |
+| 4 | Deutsch | `de` | 2026-11-01 | hazir (UI + legal + 15 yazi, 5'i acilista) |
+| 5 | Italiano | `it` | 2026-11-11 | hazir (UI + legal + 15 yazi, 5'i acilista) |
+| 6 | - | - | 2026-11-21 | belirlenecek |
 
-Her dil, kendisinden bir onceki dilin yayin gununden 7 gun sonrasina
-`availableFrom` alir. Icerik o tarihten once commit edilir; tarih geldiginde dil
-kendiliginden acilir.
+**Onemli:** mekanizma dili otomatik YAYINLAR, otomatik URETMEZ. Bir dilin
+kendi gununde acilip dil secicide gorunmesi icin icerigi o tarihten ONCE commit
+edilmis ve deploy edilmis olmali. Kuyrukta "belirlenecek" kalan bir slot
+hicbir sey yapmaz (Eylul 2026'da `pt` bu yuzden 17 Eylul'de acilmadi).
 
-**`fr` icin kalan is (sonraki partiler):** 10 yazi daha, EK B'deki rezerve
-slug'larla. Ayrica `public/screenshots/fr/` yok, su an Ingilizce sete dusuyor.
+Her dil, kendisinden bir onceki dilin yayin gununden 10 gun sonrasina
+`availableFrom` alir. Kuyruk bitmeden en az bir sonraki dili hazirla.
+
+`public/screenshots/<code>/` henuz `fr`, `pt`, `tr`, `de`, `it` icin yok; hepsi
+Ingilizce sete dusuyor (Bolum 9).
 
 `pt` icin not: tek Portekizce surum planlandigi icin kod `pt` (Brezilya +
 Portekiz'i birlikte kapsar). Ileride ayri bir Portekiz surumu istenirse
@@ -389,3 +394,92 @@ farkli bir slug kullanilirsa mevcut yazilardaki linkler sessizce olu kalir.
 `pt` icin not: tek Portekizce surum planlandigi icin kod `pt` (Brezilya +
 Portekiz'i birlikte kapsar). Ileride ayri bir Portekiz surumu istenirse
 `pt-BR` / `pt-PT` olarak bolunur ve eski `pt` URL'leri yonlendirilir.
+
+---
+---
+
+# EK D: PT / TR / DE / IT SLUG'LARI VE YAYIN TAKVIMI
+
+Dort dilin 15 yazisi da yazildi. Her dilde ilk 5 yazi dilin acildigi gun, kalan
+10 yazi haftada 2 (Pazartesi + Persembe) kendi `localeDate` tarihinde acilir.
+Siralama EK B ile ayni (en cok ic link alan yazi en once). Slug'lar baglayicidir.
+
+## PORTEKIZCE (`pt`), dil yayini 2026-10-12
+
+| Yayin | Ingilizce slug | Slug |
+|---|---|---|
+| 2026-10-12 | `forex-trading-sessions-explained` | `sessoes-de-negociacao-forex-explicadas` |
+| 2026-10-12 | `forex-market-hours-by-timezone` | `horario-do-forex-por-fuso-horario` |
+| 2026-10-12 | `london-new-york-overlap` | `sobreposicao-londres-nova-york` |
+| 2026-10-12 | `best-time-to-trade-forex` | `melhor-horario-para-operar-forex` |
+| 2026-10-12 | `what-time-does-the-forex-market-open` | `que-horas-abre-o-mercado-forex` |
+| 2026-10-15 | `what-time-does-the-london-session-open` | `que-horas-abre-a-sessao-de-londres` |
+| 2026-10-19 | `is-the-forex-market-open-today` | `o-mercado-forex-esta-aberto-hoje` |
+| 2026-10-22 | `new-york-forex-session` | `sessao-forex-de-nova-york` |
+| 2026-10-26 | `sydney-forex-session` | `sessao-forex-de-sydney` |
+| 2026-10-29 | `tokyo-asian-forex-session` | `sessao-forex-de-toquio-asia` |
+| 2026-11-02 | `daylight-saving-time-forex` | `horario-de-verao-e-forex` |
+| 2026-11-05 | `forex-economic-calendar-and-news-times` | `calendario-economico-forex-e-horarios-das-noticias` |
+| 2026-11-09 | `frankfurt-european-forex-session` | `sessao-forex-de-frankfurt-europa` |
+| 2026-11-12 | `most-traded-currency-pairs` | `pares-de-moedas-mais-negociados` |
+| 2026-11-16 | `why-forex-is-open-24-hours` | `por-que-o-forex-funciona-24-horas` |
+
+## TURKCE (`tr`), dil yayini 2026-10-22
+
+| Yayin | Ingilizce slug | Slug |
+|---|---|---|
+| 2026-10-22 | `forex-trading-sessions-explained` | `forex-islem-seanslari-rehberi` |
+| 2026-10-22 | `forex-market-hours-by-timezone` | `saat-dilimine-gore-forex-piyasa-saatleri` |
+| 2026-10-22 | `london-new-york-overlap` | `londra-new-york-cakismasi` |
+| 2026-10-22 | `best-time-to-trade-forex` | `forex-islem-yapmak-icin-en-iyi-saat` |
+| 2026-10-22 | `what-time-does-the-forex-market-open` | `forex-piyasasi-saat-kacta-acilir` |
+| 2026-10-26 | `what-time-does-the-london-session-open` | `londra-seansi-saat-kacta-acilir` |
+| 2026-10-29 | `is-the-forex-market-open-today` | `forex-piyasasi-bugun-acik-mi` |
+| 2026-11-02 | `new-york-forex-session` | `new-york-forex-seansi` |
+| 2026-11-05 | `sydney-forex-session` | `sidney-forex-seansi` |
+| 2026-11-09 | `tokyo-asian-forex-session` | `tokyo-asya-forex-seansi` |
+| 2026-11-12 | `daylight-saving-time-forex` | `yaz-saati-uygulamasi-ve-forex` |
+| 2026-11-16 | `forex-economic-calendar-and-news-times` | `forex-ekonomik-takvim-ve-haber-saatleri` |
+| 2026-11-19 | `frankfurt-european-forex-session` | `frankfurt-avrupa-forex-seansi` |
+| 2026-11-23 | `most-traded-currency-pairs` | `en-cok-islem-goren-pariteler` |
+| 2026-11-26 | `why-forex-is-open-24-hours` | `forex-neden-24-saat-acik` |
+
+## ALMANCA (`de`), dil yayini 2026-11-01
+
+| Yayin | Ingilizce slug | Slug |
+|---|---|---|
+| 2026-11-01 | `forex-trading-sessions-explained` | `forex-handelssitzungen-erklaert` |
+| 2026-11-01 | `forex-market-hours-by-timezone` | `forex-handelszeiten-nach-zeitzone` |
+| 2026-11-01 | `london-new-york-overlap` | `ueberschneidung-london-new-york` |
+| 2026-11-01 | `best-time-to-trade-forex` | `beste-zeit-fuer-forex-trading` |
+| 2026-11-01 | `what-time-does-the-forex-market-open` | `wann-oeffnet-der-forex-markt` |
+| 2026-11-02 | `what-time-does-the-london-session-open` | `wann-oeffnet-die-london-session` |
+| 2026-11-05 | `is-the-forex-market-open-today` | `ist-der-forex-markt-heute-geoeffnet` |
+| 2026-11-09 | `new-york-forex-session` | `forex-session-new-york` |
+| 2026-11-12 | `sydney-forex-session` | `forex-session-sydney` |
+| 2026-11-16 | `tokyo-asian-forex-session` | `forex-session-tokio-asien` |
+| 2026-11-19 | `daylight-saving-time-forex` | `sommerzeit-und-forex` |
+| 2026-11-23 | `forex-economic-calendar-and-news-times` | `forex-wirtschaftskalender-und-nachrichtenzeiten` |
+| 2026-11-26 | `frankfurt-european-forex-session` | `forex-session-frankfurt-europa` |
+| 2026-11-30 | `most-traded-currency-pairs` | `meistgehandelte-waehrungspaare` |
+| 2026-12-03 | `why-forex-is-open-24-hours` | `warum-forex-24-stunden-geoeffnet-ist` |
+
+## ITALYANCA (`it`), dil yayini 2026-11-11
+
+| Yayin | Ingilizce slug | Slug |
+|---|---|---|
+| 2026-11-11 | `forex-trading-sessions-explained` | `sessioni-di-trading-forex-spiegate` |
+| 2026-11-11 | `forex-market-hours-by-timezone` | `orari-del-forex-per-fuso-orario` |
+| 2026-11-11 | `london-new-york-overlap` | `sovrapposizione-londra-new-york` |
+| 2026-11-11 | `best-time-to-trade-forex` | `miglior-orario-per-fare-trading-forex` |
+| 2026-11-11 | `what-time-does-the-forex-market-open` | `a-che-ora-apre-il-mercato-forex` |
+| 2026-11-12 | `what-time-does-the-london-session-open` | `a-che-ora-apre-la-sessione-di-londra` |
+| 2026-11-16 | `is-the-forex-market-open-today` | `il-mercato-forex-e-aperto-oggi` |
+| 2026-11-19 | `new-york-forex-session` | `sessione-forex-di-new-york` |
+| 2026-11-23 | `sydney-forex-session` | `sessione-forex-di-sydney` |
+| 2026-11-26 | `tokyo-asian-forex-session` | `sessione-forex-di-tokyo-asia` |
+| 2026-11-30 | `daylight-saving-time-forex` | `ora-legale-e-forex` |
+| 2026-12-03 | `forex-economic-calendar-and-news-times` | `calendario-economico-forex-e-orari-delle-notizie` |
+| 2026-12-07 | `frankfurt-european-forex-session` | `sessione-forex-di-francoforte-europa` |
+| 2026-12-10 | `most-traded-currency-pairs` | `coppie-di-valute-piu-scambiate` |
+| 2026-12-14 | `why-forex-is-open-24-hours` | `perche-il-forex-e-aperto-24-ore` |

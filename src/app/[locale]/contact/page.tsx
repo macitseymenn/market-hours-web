@@ -165,6 +165,209 @@ const COPY = {
       </>
     ),
   },
+  pt: {
+    metaTitle: "Fale conosco",
+    metaDescription:
+      "Entre em contato com a equipe do Forex Market Hours: correções, feedback e propostas de parceria. info@forexmarkethours.app.",
+    ogDescription:
+      "Entre em contato com a equipe do Forex Market Hours: correções, feedback e propostas de parceria.",
+    breadcrumb: "Contato",
+    h1: "Fale conosco",
+    lead: (
+      <>
+        O jeito mais rápido de falar com a equipe do {PRODUCT.name} é por e-mail,
+        no endereço{" "}
+        <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Envie um e-mail</h2>
+        <p>
+          Mande sua mensagem para{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          e responderemos assim que possível.
+        </p>
+
+        <h2>Sobre o que falar com a gente</h2>
+        <ul>
+          <li>
+            <strong>Correções</strong>: encontrou um horário de sessão incorreto,
+            um link de fonte quebrado ou uma data desatualizada em um artigo? Avise
+            a gente e vamos revisar (veja nossa{" "}
+            <Link href="/editorial-policy">política editorial</Link>).
+          </li>
+          <li>
+            <strong>Feedback</strong>: pedidos de recursos, relatos de bugs ou
+            opiniões gerais sobre a ferramenta web ou o app.
+          </li>
+          <li>
+            <strong>Parcerias</strong>: imprensa, colaborações ou propostas de
+            integração.
+          </li>
+        </ul>
+
+        <h2>Publicado por</h2>
+        <p>
+          O {PRODUCT.name} é publicado pela {PUBLISHER.displayName} ({PUBLISHER.legalName}),
+          a empresa por trás da ferramenta web gratuita em {SITE_URL} e dos apps
+          complementares para iOS e Android.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: "Contattaci",
+    metaDescription:
+      "Contatta il team di Forex Market Hours per correzioni, feedback e proposte di collaborazione. info@forexmarkethours.app.",
+    ogDescription:
+      "Contatta il team di Forex Market Hours per correzioni, feedback e proposte di collaborazione.",
+    breadcrumb: "Contatti",
+    h1: "Contattaci",
+    lead: (
+      <>
+        Il modo più rapido per raggiungere il team di {PRODUCT.name} è scriverci
+        all’indirizzo{" "}
+        <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Scrivici</h2>
+        <p>
+          Inviaci un messaggio all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          e ti risponderemo il prima possibile.
+        </p>
+
+        <h2>Per cosa contattarci</h2>
+        <ul>
+          <li>
+            <strong>Correzioni</strong>: hai notato un orario di sessione
+            inesatto, un link a una fonte non funzionante o una data non aggiornata
+            in un articolo? Segnalacelo e lo verificheremo (consulta la nostra{" "}
+            <Link href="/editorial-policy">politica editoriale</Link>).
+          </li>
+          <li>
+            <strong>Feedback</strong>: richieste di nuove funzioni, segnalazioni di
+            bug o impressioni generali sullo strumento web o sull’app.
+          </li>
+          <li>
+            <strong>Collaborazioni</strong>: richieste da parte della stampa,
+            proposte di collaborazione o di integrazione.
+          </li>
+        </ul>
+
+        <h2>Pubblicato da</h2>
+        <p>
+          {PRODUCT.name} è pubblicato da {PUBLISHER.displayName} ({PUBLISHER.legalName}),
+          l’azienda che sviluppa sia lo strumento web gratuito su {SITE_URL} sia le
+          app per iOS e Android che lo accompagnano.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: "Kontakt",
+    metaDescription:
+      "Kontaktieren Sie das Team von Forex Market Hours: Korrekturen, Feedback und Partnerschaftsanfragen. info@forexmarkethours.app.",
+    ogDescription:
+      "Kontaktieren Sie das Team von Forex Market Hours: Korrekturen, Feedback und Partnerschaftsanfragen.",
+    breadcrumb: "Kontakt",
+    h1: "Kontakt",
+    lead: (
+      <>
+        Am schnellsten erreichen Sie das Team von {PRODUCT.name} per E-Mail an{" "}
+        <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Schreiben Sie uns</h2>
+        <p>
+          Senden Sie uns eine Nachricht an{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          und wir melden uns so schnell wie möglich bei Ihnen.
+        </p>
+
+        <h2>Worum es gehen kann</h2>
+        <ul>
+          <li>
+            <strong>Korrekturen</strong>: Sie haben eine ungenaue Session-Zeit,
+            einen defekten Quellenlink oder ein veraltetes Datum in einem Artikel
+            entdeckt? Geben Sie uns Bescheid, und wir prüfen es (siehe unsere{" "}
+            <Link href="/editorial-policy">redaktionellen Richtlinien</Link>).
+          </li>
+          <li>
+            <strong>Feedback</strong>: Funktionswünsche, Fehlermeldungen oder
+            allgemeine Anmerkungen zum Web-Tool oder zur App.
+          </li>
+          <li>
+            <strong>Partnerschaften</strong>: Presse-, Kooperations- oder
+            Integrationsanfragen.
+          </li>
+        </ul>
+
+        <h2>Herausgeber</h2>
+        <p>
+          {PRODUCT.name} wird herausgegeben von {PUBLISHER.displayName} ({PUBLISHER.legalName}),
+          dem Unternehmen hinter dem kostenlosen Web-Tool unter {SITE_URL} und den
+          begleitenden Apps für iOS und Android.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: "Bize Ulaşın",
+    metaDescription:
+      "Forex Market Hours ekibiyle iletişime geçin: düzeltmeler, geri bildirimler ve iş birliği talepleri. info@forexmarkethours.app.",
+    ogDescription:
+      "Forex Market Hours ekibiyle iletişime geçin: düzeltmeler, geri bildirimler ve iş birliği talepleri.",
+    breadcrumb: "İletişim",
+    h1: "Bize Ulaşın",
+    lead: (
+      <>
+        {PRODUCT.name} ekibine ulaşmanın en hızlı yolu,{" "}
+        <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+        adresine e-posta göndermektir.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Bize e-posta gönderin</h2>
+        <p>
+          Mesajınızı{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresine gönderin, size en kısa sürede dönüş yapalım.
+        </p>
+
+        <h2>Hangi konularda bize yazabilirsiniz</h2>
+        <ul>
+          <li>
+            <strong>Düzeltmeler</strong>: Bir makalede hatalı bir seans saati,
+            çalışmayan bir kaynak bağlantısı veya güncelliğini yitirmiş bir tarih mi
+            fark ettiniz? Bize bildirin, inceleyelim (bkz.{" "}
+            <Link href="/editorial-policy">yayın ilkelerimiz</Link>).
+          </li>
+          <li>
+            <strong>Geri bildirim</strong>: Web aracı veya uygulamayla ilgili özellik
+            talepleri, hata bildirimleri ya da genel görüşleriniz.
+          </li>
+          <li>
+            <strong>İş birlikleri</strong>: Basın, iş birliği veya entegrasyon
+            talepleri.
+          </li>
+        </ul>
+
+        <h2>Yayıncı</h2>
+        <p>
+          {PRODUCT.name}, hem {SITE_URL} adresindeki ücretsiz web aracının hem de ona
+          eşlik eden iOS ve Android uygulamalarının arkasındaki şirket olan{" "}
+          {PUBLISHER.displayName} ({PUBLISHER.legalName}) tarafından yayımlanır.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({

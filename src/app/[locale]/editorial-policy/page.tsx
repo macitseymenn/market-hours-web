@@ -275,6 +275,356 @@ const COPY = {
       </>
     ),
   },
+  pt: {
+    metaTitle: "Padrões Editoriais e Política de Precisão",
+    metaDescription:
+      "Como pesquisamos, citamos fontes e revisamos o conteúdo sobre horários do forex: nossos padrões editoriais de precisão, correções e não aconselhamento.",
+    breadcrumb: "Política editorial",
+    h1: "Padrões Editoriais e Política de Precisão",
+    lead: (
+      <>
+        Forex é um assunto em que a precisão importa. Esta página explica como
+        pesquisamos, escrevemos e corrigimos o conteúdo do {PRODUCT.name}, e o que
+        deliberadamente não fazemos.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Como pesquisamos e escolhemos as fontes</h2>
+        <p>
+          Nossos artigos e páginas de referência são construídos a partir de
+          fontes primárias e oficiais sempre que possível: publicações de bancos
+          centrais e autoridades monetárias, a{" "}
+          <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+            Pesquisa Trienal dos Bancos Centrais do Banco de Compensações Internacionais
+          </a>{" "}
+          sobre o giro global do mercado de câmbio, orientações oficiais de
+          governos, como as{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            páginas do governo britânico sobre a mudança de horário
+          </a>
+          , e o{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            banco de dados de fusos horários da IANA
+          </a>{" "}
+          que também alimenta a própria ferramenta. Quando citamos um número ou uma
+          afirmação, colocamos o link para a fonte em vez de apresentá-lo como um
+          fato sem atribuição.
+        </p>
+
+        <h2>Como revisamos a precisão</h2>
+        <p>
+          Antes da publicação, o conteúdo sobre horários de sessão é conferido com
+          os mesmos dados de fuso horário que a nossa ferramenta ao vivo usa (veja
+          nossa <Link href="/methodology">página de metodologia</Link>), para que
+          os guias escritos e o relógio interativo nunca se contradigam. O
+          conteúdo é revisado periodicamente, à medida que as datas de mudança de
+          horário e as convenções de mercado são confirmadas a cada ano.
+        </p>
+
+        <h2>Supervisão editorial</h2>
+        <p>
+          A responsabilidade editorial pelo {PRODUCT.name} é da equipe da{" "}
+          {PUBLISHER.displayName}, a empresa de software que desenvolve e mantém a
+          ferramenta. Veja nossa <Link href="/about">página Sobre</Link>. A mesma
+          equipe escreve os guias e mantém a ferramenta ao vivo, então os dados por
+          trás de um artigo e as palavras que os descrevem são verificados juntos,
+          e não de forma isolada. Quando um editor real e identificado assinar um
+          artigo, o perfil e a trajetória dele estarão linkados na assinatura.
+        </p>
+
+        <h2>Correções</h2>
+        <p>
+          Se encontrarmos uma imprecisão, ou se alguém nos avisar de uma, nós a
+          corrigimos e, em mudanças substanciais, atualizamos a data de “última
+          atualização” do artigo. Preferimos corrigir um erro rapidamente a deixá-lo
+          no ar só para manter as aparências.
+        </p>
+
+        <h2>O que não fazemos</h2>
+        <p>
+          O {PRODUCT.name} não oferece aconselhamento financeiro, sinais de trading
+          nem recomendações de compra ou venda de nenhum tipo, e nenhum conteúdo
+          nosso deve ser lido como sugestão para negociar um instrumento específico
+          em um momento específico. Publicamos informações gerais e educativas
+          sobre como funcionam as sessões do forex e seus horários. Veja nosso{" "}
+          <Link href="/disclaimer">aviso completo sobre riscos e trading</Link>.
+        </p>
+
+        <h2>Informe uma imprecisão</h2>
+        <p>
+          Viu algo errado, um horário de sessão, um link de fonte, uma data? Conte
+          para a gente em{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          e vamos verificar.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: "Standard editoriali e politica di accuratezza",
+    metaDescription:
+      "Come ricerchiamo, documentiamo e revisioniamo i contenuti sugli orari del mercato forex: i nostri standard di accuratezza, correzione e assenza di consulenza.",
+    breadcrumb: "Politica editoriale",
+    h1: "Standard editoriali e politica di accuratezza",
+    lead: (
+      <>
+        Il forex è un argomento in cui l’accuratezza conta. Questa pagina spiega
+        come ricerchiamo, scriviamo e correggiamo i contenuti di {PRODUCT.name}, e
+        cosa scegliamo deliberatamente di non fare.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Come ricerchiamo e documentiamo i contenuti</h2>
+        <p>
+          I nostri articoli e le pagine di riferimento si basano, ogni volta che è
+          possibile, su fonti primarie e ufficiali: pubblicazioni delle banche
+          centrali e delle autorità monetarie, la{" "}
+          <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+            Triennial Central Bank Survey della Banca dei Regolamenti Internazionali
+          </a>{" "}
+          sul volume globale degli scambi valutari, indicazioni governative
+          ufficiali come le{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            pagine britanniche sul cambio dell’ora
+          </a>
+          , e il{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            database dei fusi orari IANA
+          </a>{" "}
+          su cui si basa anche lo strumento stesso. Quando citiamo un dato o
+          un’affermazione, rimandiamo alla fonte invece di riportarlo come un fatto
+          senza attribuzione.
+        </p>
+
+        <h2>Come verifichiamo l’accuratezza</h2>
+        <p>
+          Prima della pubblicazione, i contenuti sugli orari delle sessioni vengono
+          confrontati con gli stessi dati sui fusi orari usati dal nostro strumento
+          in tempo reale (consulta la nostra{" "}
+          <Link href="/methodology">pagina sulla metodologia</Link>), così le guide
+          scritte e l’orologio interattivo non si contraddicono mai. I contenuti
+          vengono ricontrollati periodicamente, man mano che ogni anno vengono
+          confermate le date del cambio dell’ora e le convenzioni di mercato.
+        </p>
+
+        <h2>Supervisione editoriale</h2>
+        <p>
+          La responsabilità editoriale di {PRODUCT.name} spetta al team di{" "}
+          {PUBLISHER.displayName}, la software house che sviluppa e gestisce lo
+          strumento. Consulta la nostra <Link href="/about">pagina Chi siamo</Link>.
+          Lo stesso team scrive le guide e gestisce lo strumento in tempo reale,
+          quindi i dati alla base di un articolo e le parole che li descrivono
+          vengono verificati insieme e non separatamente. Quando un articolo sarà
+          firmato da un editor reale con nome e cognome, il suo profilo e il suo
+          percorso saranno collegati dalla firma.
+        </p>
+
+        <h2>Correzioni</h2>
+        <p>
+          Se troviamo un’inesattezza, o se qualcuno ce la segnala, la correggiamo e,
+          in caso di modifiche sostanziali, aggiorniamo la data di «ultimo
+          aggiornamento» dell’articolo. Preferiamo correggere in fretta un errore
+          piuttosto che lasciarlo online per salvare le apparenze.
+        </p>
+
+        <h2>Cosa non facciamo</h2>
+        <p>
+          {PRODUCT.name} non fornisce consulenza finanziaria, segnali di trading né
+          raccomandazioni di acquisto o vendita di alcun tipo, e nessuno dei nostri
+          contenuti va letto come un suggerimento a negoziare uno strumento
+          specifico in un momento specifico. Pubblichiamo informazioni generali e
+          didattiche su come funzionano le sessioni forex e i loro orari. Consulta
+          le nostre{" "}
+          <Link href="/disclaimer">avvertenze complete su rischi e trading</Link>.
+        </p>
+
+        <h2>Segnala un’inesattezza</h2>
+        <p>
+          Hai notato qualcosa di sbagliato, un orario di sessione, un link a una
+          fonte, una data? Scrivici all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          e lo verificheremo.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: "Redaktionelle Standards und Richtlinie zur Genauigkeit",
+    metaDescription:
+      "Wie wir Inhalte zu Forex-Handelszeiten recherchieren, belegen und prüfen: unsere Standards für Genauigkeit, Korrekturen und den Verzicht auf Beratung.",
+    breadcrumb: "Redaktionelle Richtlinien",
+    h1: "Redaktionelle Standards und Richtlinie zur Genauigkeit",
+    lead: (
+      <>
+        Beim Thema Forex kommt es auf Genauigkeit an. Diese Seite erklärt, wie
+        wir die Inhalte auf {PRODUCT.name} recherchieren, schreiben und
+        korrigieren, und was wir bewusst nicht tun.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Wie wir Inhalte recherchieren und belegen</h2>
+        <p>
+          Unsere Artikel und Referenzseiten stützen sich wo immer möglich auf
+          Primärquellen und offizielle Quellen: Veröffentlichungen von
+          Zentralbanken und Währungsbehörden, den{" "}
+          <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+            Triennial Central Bank Survey der Bank für Internationalen Zahlungsausgleich
+          </a>{" "}
+          zum weltweiten Devisenumsatz, offizielle Regierungsinformationen wie die
+          britischen{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            Seiten zur Zeitumstellung
+          </a>
+          {" "}sowie die{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            IANA Time Zone Database
+          </a>
+          , auf der auch das Tool selbst basiert. Wenn wir eine Zahl oder
+          Aussage anführen, verlinken wir die Quelle, statt sie als Tatsache ohne
+          Herkunftsangabe wiederzugeben.
+        </p>
+
+        <h2>Wie wir die Genauigkeit prüfen</h2>
+        <p>
+          Vor der Veröffentlichung werden Inhalte zu Session-Zeiten mit denselben
+          Zeitzonendaten abgeglichen, die auch unser Live-Tool verwendet (siehe
+          unsere <Link href="/methodology">Methodik-Seite</Link>). So
+          widersprechen sich die schriftlichen Ratgeber und die interaktive Uhr
+          nie. Die Inhalte werden regelmäßig erneut geprüft, sobald die Termine
+          der Zeitumstellung und die Marktkonventionen jedes Jahr bestätigt sind.
+        </p>
+
+        <h2>Redaktionelle Verantwortung</h2>
+        <p>
+          Die redaktionelle Verantwortung für {PRODUCT.name} liegt beim Team von{" "}
+          {PUBLISHER.displayName}, dem Softwareunternehmen, das das Tool
+          entwickelt und pflegt. Siehe unsere{" "}
+          <Link href="/about">Über-uns-Seite</Link>. Dasselbe Team schreibt die
+          Ratgeber und pflegt das Live-Tool, sodass die Daten hinter einem Artikel
+          und die Worte, die sie beschreiben, gemeinsam statt getrennt geprüft
+          werden. Wird ein Artikel einem namentlich genannten Redakteur
+          zugeschrieben, sind dessen Profil und Werdegang über die Autorenzeile
+          verlinkt.
+        </p>
+
+        <h2>Korrekturen</h2>
+        <p>
+          Wenn wir selbst eine Ungenauigkeit finden oder darauf hingewiesen
+          werden, korrigieren wir sie und aktualisieren bei wesentlichen
+          Änderungen das Datum „Zuletzt aktualisiert“ des Artikels. Wir beheben
+          einen Fehler lieber schnell, als ihn des Anscheins wegen online zu
+          lassen.
+        </p>
+
+        <h2>Was wir nicht tun</h2>
+        <p>
+          {PRODUCT.name} bietet keine Finanzberatung, keine Handelssignale und
+          keinerlei Kauf- oder Verkaufsempfehlungen, und keiner unserer Inhalte
+          sollte als Anregung verstanden werden, ein bestimmtes Instrument zu
+          einem bestimmten Zeitpunkt zu handeln. Wir veröffentlichen allgemeine,
+          lehrreiche Informationen darüber, wie Forex-Sessions und ihre Zeiten
+          funktionieren. Siehe unseren vollständigen{" "}
+          <Link href="/disclaimer">Risiko- und Handelshinweis</Link>.
+        </p>
+
+        <h2>Ungenauigkeit melden</h2>
+        <p>
+          Haben Sie einen Fehler entdeckt, etwa eine Session-Zeit, einen
+          Quellenlink oder ein Datum? Schreiben Sie uns an{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          und wir sehen uns das an.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: "Yayın Standartları ve Doğruluk Politikası",
+    metaDescription:
+      "Forex piyasa saatleri içeriğini nasıl araştırdığımız, kaynaklandırdığımız ve incelediğimiz: doğruluk, düzeltme ve tavsiye vermeme ilkelerimiz.",
+    breadcrumb: "Yayın İlkeleri",
+    h1: "Yayın Standartları ve Doğruluk Politikası",
+    lead: (
+      <>
+        Forex, doğruluğun önemli olduğu bir konudur. Bu sayfa, {PRODUCT.name}{" "}
+        üzerindeki içeriği nasıl araştırdığımızı, yazdığımızı ve düzelttiğimizi,
+        bilinçli olarak neleri yapmadığımızı açıklar.
+      </>
+    ),
+    body: (
+      <>
+        <h2>İçeriği nasıl araştırıyor ve kaynaklandırıyoruz</h2>
+        <p>
+          Makalelerimiz ve başvuru sayfalarımız, mümkün olan her durumda birincil ve
+          resmi kaynaklara dayanır: merkez bankalarının ve para otoritelerinin
+          yayınları, küresel döviz işlem hacmine ilişkin{" "}
+          <a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">
+            Uluslararası Ödemeler Bankası Üç Yıllık Merkez Bankası Anketi
+          </a>
+          , Birleşik Krallık’ın{" "}
+          <a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener noreferrer">
+            saat değişikliği sayfaları
+          </a>{" "}
+          gibi resmi hükümet bilgilendirmeleri ve aracın kendisine de güç veren{" "}
+          <a href="https://www.iana.org/time-zones" target="_blank" rel="noopener noreferrer">
+            IANA Saat Dilimi Veritabanı
+          </a>
+          . Bir rakam veya iddiaya atıf yaptığımızda, onu kaynağı belirtilmemiş bir
+          gerçek gibi yeniden ifade etmek yerine kaynağa bağlantı veririz.
+        </p>
+
+        <h2>Doğruluğu nasıl inceliyoruz</h2>
+        <p>
+          Seans saatleriyle ilgili içerik, yayımlanmadan önce canlı aracımızın
+          kullandığı saat dilimi verileriyle karşılaştırılarak kontrol edilir (bkz.{" "}
+          <Link href="/methodology">metodoloji sayfamız</Link>); böylece yazılı
+          rehberler ile etkileşimli saat hiçbir zaman birbiriyle çelişmez. Saat
+          değişikliği tarihleri ve piyasa teamülleri her yıl teyit edildikçe içerik
+          düzenli aralıklarla yeniden kontrol edilir.
+        </p>
+
+        <h2>Yayın denetimi</h2>
+        <p>
+          {PRODUCT.name} için yayın sorumluluğu, aracı geliştiren ve sürdüren
+          yazılım şirketi {PUBLISHER.displayName} ekibine aittir. Bkz.{" "}
+          <Link href="/about">Hakkımızda sayfası</Link>. Rehberleri yazan ve canlı
+          aracı sürdüren aynı ekip olduğundan, bir makalenin arkasındaki veriler ile
+          onu anlatan ifadeler ayrı ayrı değil, birlikte kontrol edilir. Bir
+          makalede gerçek ve adı belirtilen bir editöre yer verildiğinde, editörün
+          profili ve geçmişi yazar satırından bağlantıyla verilecektir.
+        </p>
+
+        <h2>Düzeltmeler</h2>
+        <p>
+          Bir hata tespit ettiğimizde veya bize bildirildiğinde onu düzeltiriz ve
+          esaslı değişikliklerde makalenin “son güncelleme” tarihini yeniliriz. Bir
+          hatayı görüntü kurtarmak adına yayında bırakmaktansa hızla düzeltmeyi
+          tercih ederiz.
+        </p>
+
+        <h2>Neleri yapmıyoruz</h2>
+        <p>
+          {PRODUCT.name} hiçbir şekilde finansal tavsiye, işlem sinyali veya
+          alım/satım önerisi sunmaz ve içeriklerimizin hiçbiri belirli bir aracı
+          belirli bir zamanda işlem yapma önerisi olarak okunmamalıdır. Forex
+          seanslarının ve saatlerinin nasıl işlediğine dair genel, eğitim amaçlı
+          bilgiler yayımlarız. Ayrıntılar için{" "}
+          <Link href="/disclaimer">risk ve işlem sorumluluk reddi</Link> metninin
+          tamamına bakın.
+        </p>
+
+        <h2>Bir hatayı bildirin</h2>
+        <p>
+          Bir seans saati, bir kaynak bağlantısı ya da bir tarih gibi yanlış bir şey
+          mi fark ettiniz? Bunu{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresinden bize bildirin, inceleyelim.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({

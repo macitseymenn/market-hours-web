@@ -350,6 +350,463 @@ const COPY = {
       </>
     ),
   },
+  pt: {
+    metaTitle: "Termos de Uso",
+    metaDescription:
+      "Os termos que regem o uso da ferramenta web Forex Market Hours e dos seus apps para celular.",
+    breadcrumb: "Termos de Uso",
+    h1: "Termos de Uso",
+    lead: (
+      <>
+        Estes termos regem o seu uso da ferramenta web {PRODUCT.name} em {SITE_URL}{" "}
+        e dos apps complementares para iOS e Android, publicados pela{" "}
+        {PUBLISHER.displayName}.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Última atualização: {date}.</>,
+    body: (
+      <>
+        <blockquote>
+          Este é um modelo geral de termos de uso destinado a descrever como o
+          serviço realmente funciona. Ele não substitui uma orientação jurídica;
+          peça que um advogado qualificado o revise antes de se basear nele para
+          qualquer disputa ou finalidade de conformidade.
+        </blockquote>
+
+        <h2>1. Aceitação destes termos</h2>
+        <p>
+          Ao acessar ou usar o {PRODUCT.name} (o “Serviço”), você concorda com
+          estes Termos de Uso. Se não concordar, por favor, não use o Serviço.
+        </p>
+
+        <h2>2. Descrição do serviço</h2>
+        <p>
+          O {PRODUCT.name} é um utilitário de horários de mercado que exibe os
+          horários de abertura, fechamento e sobreposição das principais sessões de
+          negociação do forex, convertidos para o seu fuso horário local, junto com
+          conteúdo informativo relacionado. O Serviço é oferecido gratuitamente, e a
+          ferramenta web não exige conta.
+        </p>
+
+        <h2>3. Não é aconselhamento financeiro</h2>
+        <p>
+          O Serviço é fornecido apenas para fins gerais e informativos. Ele não é
+          aconselhamento financeiro, de investimentos, de trading, tributário ou
+          jurídico, e nada no Serviço deve ser tratado como recomendação para
+          comprar, vender ou manter qualquer instrumento. Veja nosso{" "}
+          <Link href="/disclaimer">aviso completo sobre riscos e trading</Link>.
+        </p>
+
+        <h2>4. Sem garantia de precisão para decisões de trading</h2>
+        <p>
+          Embora façamos esforços razoáveis para manter precisos os horários das
+          sessões e o conteúdo relacionado (veja nossa{" "}
+          <Link href="/methodology">metodologia</Link> e nossa{" "}
+          <Link href="/editorial-policy">política editorial</Link>), o Serviço é
+          fornecido “no estado em que se encontra” e “conforme disponível”, sem
+          garantias de qualquer tipo, expressas ou implícitas, incluindo precisão,
+          integridade ou adequação a uma finalidade específica. Você deve verificar
+          de forma independente qualquer informação sensível ao tempo antes de agir
+          com base nela.
+        </p>
+
+        <h2>5. Uso aceitável</h2>
+        <p>
+          Você concorda em não fazer mau uso do Serviço, incluindo tentar
+          interrompê-lo, extrair dados dele em um ritmo desproporcional, fazer
+          engenharia reversa do app além do que a lei aplicável permite ou usá-lo
+          para qualquer finalidade ilegal.
+        </p>
+
+        <h2>6. Propriedade intelectual</h2>
+        <p>
+          O Serviço, incluindo seu design, textos, gráficos e código subjacente,
+          pertence à {PUBLISHER.displayName} ou aos seus licenciadores e é protegido
+          pelas leis de propriedade intelectual aplicáveis. Você pode usar o Serviço
+          para fins pessoais e não comerciais; não pode reproduzi-lo, redistribuí-lo
+          nem criar produtos derivados dele sem nossa autorização por escrito.
+        </p>
+
+        <h2>7. Links de terceiros e lojas de apps</h2>
+        <p>
+          O Serviço contém links para a App Store da Apple e para o Google Play,
+          além de fontes de terceiros citadas no nosso conteúdo. O seu uso dessas
+          plataformas é regido pelos termos delas, que não controlamos.
+        </p>
+
+        <h2>8. Limitação de responsabilidade</h2>
+        <p>
+          Na máxima extensão permitida por lei, a {PUBLISHER.displayName} não será
+          responsável por quaisquer danos indiretos, incidentais ou consequentes,
+          incluindo perdas em operações, decorrentes do seu uso, ou da
+          impossibilidade de uso, do Serviço.
+        </p>
+
+        <h2>9. Entidade responsável</h2>
+        <p>
+          O Serviço é publicado pela {PUBLISHER.displayName} ({PUBLISHER.legalName}).
+        </p>
+
+        <h2>10. Alterações nestes termos</h2>
+        <p>
+          Podemos atualizar estes termos de tempos em tempos. Continuar usando o
+          Serviço após uma alteração significa aceitar os termos atualizados.
+        </p>
+
+        <h2>11. Contato</h2>
+        <p>
+          Dúvidas sobre estes termos podem ser enviadas para{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: "Termini di utilizzo",
+    metaDescription:
+      "I termini che regolano l’utilizzo dello strumento web Forex Market Hours e delle relative app mobili.",
+    breadcrumb: "Termini di utilizzo",
+    h1: "Termini di utilizzo",
+    lead: (
+      <>
+        I presenti termini regolano l’utilizzo dello strumento web {PRODUCT.name}{" "}
+        disponibile su {SITE_URL} e delle app per iOS e Android che lo
+        accompagnano, pubblicati da {PUBLISHER.displayName}.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Ultimo aggiornamento: {date}.</>,
+    body: (
+      <>
+        <blockquote>
+          Questo è un modello generale di termini di utilizzo pensato per descrivere
+          il funzionamento effettivo del servizio. Non sostituisce una consulenza
+          legale: fallo esaminare da un legale qualificato prima di farvi
+          affidamento per qualsiasi controversia o finalità di conformità.
+        </blockquote>
+
+        <h2>1. Accettazione dei presenti termini</h2>
+        <p>
+          Accedendo a {PRODUCT.name} (il «Servizio») o utilizzandolo, accetti i
+          presenti Termini di utilizzo. Se non li accetti, ti preghiamo di non
+          utilizzare il Servizio.
+        </p>
+
+        <h2>2. Descrizione del servizio</h2>
+        <p>
+          {PRODUCT.name} è un’utility per gli orari di mercato che mostra gli orari
+          di apertura, chiusura e sovrapposizione delle principali sessioni di
+          trading forex, convertiti nel tuo fuso orario locale, insieme a contenuti
+          informativi correlati. Il Servizio è fornito gratuitamente e lo strumento
+          web non richiede alcun account.
+        </p>
+
+        <h2>3. Non è consulenza finanziaria</h2>
+        <p>
+          Il Servizio è fornito esclusivamente a scopo informativo generale. Non
+          costituisce consulenza finanziaria, d’investimento, di trading, fiscale o
+          legale, e nulla nel Servizio deve essere considerato una raccomandazione
+          ad acquistare, vendere o detenere alcuno strumento. Consulta le nostre{" "}
+          <Link href="/disclaimer">avvertenze complete su rischi e trading</Link>.
+        </p>
+
+        <h2>4. Nessuna garanzia di accuratezza per le decisioni di trading</h2>
+        <p>
+          Pur impegnandoci in modo ragionevole per mantenere accurati gli orari
+          delle sessioni e i contenuti correlati (consulta la nostra{" "}
+          <Link href="/methodology">metodologia</Link> e la nostra{" "}
+          <Link href="/editorial-policy">politica editoriale</Link>), il Servizio è
+          fornito «così com’è» e «come disponibile», senza garanzie di alcun tipo,
+          esplicite o implicite, incluse quelle di accuratezza, completezza o
+          idoneità a uno scopo particolare. Ti invitiamo a verificare in modo
+          indipendente qualsiasi informazione legata agli orari prima di agire di
+          conseguenza.
+        </p>
+
+        <h2>5. Uso consentito</h2>
+        <p>
+          Ti impegni a non fare un uso improprio del Servizio, ad esempio tentando
+          di interromperne il funzionamento, estraendone i contenuti in modo
+          automatizzato con una frequenza sproporzionata, decompilando l’app oltre
+          quanto consentito dalla legge applicabile o utilizzandolo per scopi
+          illeciti.
+        </p>
+
+        <h2>6. Proprietà intellettuale</h2>
+        <p>
+          Il Servizio, compresi il design, i testi, la grafica e il codice
+          sottostante, è di proprietà di {PUBLISHER.displayName} o dei suoi
+          licenzianti ed è tutelato dalle leggi applicabili in materia di proprietà
+          intellettuale. Puoi utilizzare il Servizio per scopi personali e non
+          commerciali; non puoi riprodurlo, ridistribuirlo o crearne prodotti
+          derivati senza la nostra autorizzazione scritta.
+        </p>
+
+        <h2>7. Link di terze parti e app store</h2>
+        <p>
+          Il Servizio contiene link all’Apple App Store e a Google Play, oltre che a
+          fonti di terze parti citate nei nostri contenuti. L’utilizzo di queste
+          piattaforme è regolato dai rispettivi termini, sui quali non abbiamo alcun
+          controllo.
+        </p>
+
+        <h2>8. Limitazione di responsabilità</h2>
+        <p>
+          Nella misura massima consentita dalla legge, {PUBLISHER.displayName} non
+          sarà responsabile di alcun danno indiretto, incidentale o consequenziale,
+          incluse le perdite di trading, derivante dall’utilizzo del Servizio o
+          dall’impossibilità di utilizzarlo.
+        </p>
+
+        <h2>9. Soggetto responsabile</h2>
+        <p>
+          Il Servizio è pubblicato da {PUBLISHER.displayName} ({PUBLISHER.legalName}).
+        </p>
+
+        <h2>10. Modifiche ai presenti termini</h2>
+        <p>
+          Possiamo aggiornare questi termini di tanto in tanto. L’uso continuato del
+          Servizio dopo una modifica costituisce accettazione dei termini
+          aggiornati.
+        </p>
+
+        <h2>11. Contatti</h2>
+        <p>
+          Puoi inviare domande su questi termini all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: "Nutzungsbedingungen",
+    metaDescription:
+      "Die Bedingungen für die Nutzung des Web-Tools Forex Market Hours und der zugehörigen mobilen Apps.",
+    breadcrumb: "Nutzungsbedingungen",
+    h1: "Nutzungsbedingungen",
+    lead: (
+      <>
+        Diese Bedingungen regeln Ihre Nutzung des Web-Tools {PRODUCT.name} unter{" "}
+        {SITE_URL} und der begleitenden Apps für iOS und Android, herausgegeben
+        von {PUBLISHER.displayName}.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Zuletzt aktualisiert: {date}.</>,
+    body: (
+      <>
+        <blockquote>
+          Dies ist eine allgemeine Vorlage für Nutzungsbedingungen, die
+          beschreiben soll, wie der Dienst tatsächlich funktioniert. Sie ersetzt
+          keine Rechtsberatung. Bitte lassen Sie sie von einem qualifizierten
+          Rechtsbeistand prüfen, bevor Sie sich bei einem Streitfall oder für
+          Compliance-Zwecke darauf stützen.
+        </blockquote>
+
+        <h2>1. Annahme dieser Bedingungen</h2>
+        <p>
+          Indem Sie {PRODUCT.name} (den „Dienst“) aufrufen oder nutzen, stimmen
+          Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht einverstanden sind,
+          nutzen Sie den Dienst bitte nicht.
+        </p>
+
+        <h2>2. Beschreibung des Dienstes</h2>
+        <p>
+          {PRODUCT.name} ist ein Tool für Handelszeiten, das die Öffnungs-,
+          Schließungs- und Überschneidungszeiten der großen Forex-Handelssitzungen
+          umgerechnet in Ihre lokale Zeitzone anzeigt, zusammen mit zugehörigen
+          informativen Inhalten. Der Dienst wird kostenlos bereitgestellt, und für
+          das Web-Tool ist kein Konto erforderlich.
+        </p>
+
+        <h2>3. Keine Finanzberatung</h2>
+        <p>
+          Der Dienst dient ausschließlich allgemeinen Informationszwecken. Er
+          stellt keine Finanz-, Anlage-, Handels-, Steuer- oder Rechtsberatung dar,
+          und nichts im Dienst sollte als Empfehlung verstanden werden, ein
+          Instrument zu kaufen, zu verkaufen oder zu halten. Siehe unseren
+          vollständigen <Link href="/disclaimer">Risiko- und Handelshinweis</Link>.
+        </p>
+
+        <h2>4. Keine Gewähr für die Genauigkeit bei Handelsentscheidungen</h2>
+        <p>
+          Wir unternehmen zwar angemessene Anstrengungen, um Session-Zeiten und
+          zugehörige Inhalte genau zu halten (siehe unsere{" "}
+          <Link href="/methodology">Methodik</Link> und unsere{" "}
+          <Link href="/editorial-policy">redaktionellen Richtlinien</Link>), doch
+          der Dienst wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne
+          ausdrückliche oder stillschweigende Gewährleistung jeglicher Art,
+          einschließlich Genauigkeit, Vollständigkeit oder Eignung für einen
+          bestimmten Zweck. Sie sollten zeitkritische Informationen unabhängig
+          überprüfen, bevor Sie danach handeln.
+        </p>
+
+        <h2>5. Zulässige Nutzung</h2>
+        <p>
+          Sie verpflichten sich, den Dienst nicht zu missbrauchen, etwa indem Sie
+          versuchen, ihn zu stören, ihn in unverhältnismäßigem Umfang automatisiert
+          auszulesen, die App über das gesetzlich zulässige Maß hinaus
+          zurückzuentwickeln oder ihn für rechtswidrige Zwecke zu verwenden.
+        </p>
+
+        <h2>6. Geistiges Eigentum</h2>
+        <p>
+          Der Dienst, einschließlich Design, Texten, Grafiken und zugrunde
+          liegendem Code, ist Eigentum von {PUBLISHER.displayName} oder seinen
+          Lizenzgebern und durch die geltenden Gesetze zum Schutz des geistigen
+          Eigentums geschützt. Sie dürfen den Dienst für persönliche,
+          nichtkommerzielle Zwecke nutzen; ohne unsere schriftliche Genehmigung
+          dürfen Sie ihn weder vervielfältigen noch weiterverbreiten noch
+          abgeleitete Produkte daraus erstellen.
+        </p>
+
+        <h2>7. Links zu Dritten und App-Stores</h2>
+        <p>
+          Der Dienst verlinkt auf den Apple App Store und Google Play sowie auf
+          Quellen Dritter, die in unseren Inhalten zitiert werden. Ihre Nutzung
+          dieser Plattformen unterliegt deren eigenen Bedingungen, auf die wir
+          keinen Einfluss haben.
+        </p>
+
+        <h2>8. Haftungsbeschränkung</h2>
+        <p>
+          Soweit gesetzlich zulässig, haftet {PUBLISHER.displayName} nicht für
+          indirekte, zufällige oder Folgeschäden, einschließlich Handelsverlusten,
+          die aus Ihrer Nutzung des Dienstes oder der Unmöglichkeit seiner Nutzung
+          entstehen.
+        </p>
+
+        <h2>9. Verantwortliche Stelle</h2>
+        <p>
+          Der Dienst wird herausgegeben von {PUBLISHER.displayName} ({PUBLISHER.legalName}).
+        </p>
+
+        <h2>10. Änderungen dieser Bedingungen</h2>
+        <p>
+          Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wenn Sie
+          den Dienst nach einer Änderung weiter nutzen, gilt dies als Annahme der
+          aktualisierten Bedingungen.
+        </p>
+
+        <h2>11. Kontakt</h2>
+        <p>
+          Fragen zu diesen Bedingungen können Sie an{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          senden.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: "Kullanım Koşulları",
+    metaDescription:
+      "Forex Market Hours web aracının ve mobil uygulamalarının kullanımına ilişkin koşullar.",
+    breadcrumb: "Kullanım Koşulları",
+    h1: "Kullanım Koşulları",
+    lead: (
+      <>
+        Bu koşullar, {PUBLISHER.displayName} tarafından yayımlanan, {SITE_URL}{" "}
+        adresindeki {PRODUCT.name} web aracını ve ona eşlik eden iOS ve Android
+        uygulamalarını kullanımınızı düzenler.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Son güncelleme: {date}.</>,
+    body: (
+      <>
+        <blockquote>
+          Bu metin, hizmetin fiilen nasıl işlediğini açıklamayı amaçlayan genel bir
+          kullanım koşulları şablonudur. Hukuki danışmanlığın yerini tutmaz; herhangi
+          bir uyuşmazlık veya mevzuata uyum amacıyla bu metne dayanmadan önce
+          lütfen yetkin bir hukuk danışmanına inceletin.
+        </blockquote>
+
+        <h2>1. Bu koşulların kabulü</h2>
+        <p>
+          {PRODUCT.name} hizmetine (“Hizmet”) erişerek veya Hizmeti kullanarak bu
+          Kullanım Koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız lütfen
+          Hizmeti kullanmayın.
+        </p>
+
+        <h2>2. Hizmetin tanımı</h2>
+        <p>
+          {PRODUCT.name}, başlıca forex işlem seanslarının açılış, kapanış ve
+          çakışma saatlerini yerel saat diliminize çevrilmiş olarak gösteren ve
+          bunlarla ilgili bilgilendirici içerikler sunan bir piyasa saatleri
+          aracıdır. Hizmet ücretsiz olarak sunulur; web aracı için hesap gerekmez.
+        </p>
+
+        <h2>3. Finansal tavsiye değildir</h2>
+        <p>
+          Hizmet yalnızca genel bilgilendirme amacıyla sunulmaktadır. Finansal,
+          yatırım, işlem, vergi veya hukuki tavsiye niteliği taşımaz ve Hizmetteki
+          hiçbir içerik herhangi bir aracın alınması, satılması veya elde tutulması
+          yönünde bir öneri olarak değerlendirilmemelidir. Ayrıntılar için{" "}
+          <Link href="/disclaimer">risk ve işlem sorumluluk reddi</Link> metninin
+          tamamına bakın.
+        </p>
+
+        <h2>4. İşlem kararları için doğruluk garantisi verilmez</h2>
+        <p>
+          Seans saatlerini ve ilgili içeriği doğru tutmak için makul çabayı
+          göstermemize rağmen (bkz. <Link href="/methodology">metodolojimiz</Link> ve{" "}
+          <Link href="/editorial-policy">yayın ilkelerimiz</Link>), Hizmet doğruluk,
+          eksiksizlik veya belirli bir amaca uygunluk dahil olmak üzere açık ya da
+          zımni hiçbir garanti verilmeksizin “olduğu gibi” ve “mevcut olduğu
+          şekliyle” sunulur. Zamana duyarlı herhangi bir bilgiye dayanarak hareket
+          etmeden önce bu bilgiyi bağımsız olarak doğrulamanız gerekir.
+        </p>
+
+        <h2>5. Kabul edilebilir kullanım</h2>
+        <p>
+          Hizmeti kötüye kullanmamayı kabul edersiniz; buna Hizmeti aksatmaya
+          çalışmak, orantısız bir hızla veri kazımak, uygulamada yürürlükteki
+          mevzuatın izin verdiği sınırın ötesinde tersine mühendislik yapmak veya
+          Hizmeti hukuka aykırı herhangi bir amaçla kullanmak dahildir.
+        </p>
+
+        <h2>6. Fikri mülkiyet</h2>
+        <p>
+          Tasarımı, metinleri, grafikleri ve altyapı kodu dahil olmak üzere Hizmet,{" "}
+          {PUBLISHER.displayName} veya lisans verenlerinin mülkiyetindedir ve
+          yürürlükteki fikri mülkiyet mevzuatıyla korunur. Hizmeti kişisel ve ticari
+          olmayan amaçlarla kullanabilirsiniz; yazılı iznimiz olmadan Hizmeti
+          çoğaltamaz, yeniden dağıtamaz veya Hizmetten türev ürünler oluşturamazsınız.
+        </p>
+
+        <h2>7. Üçüncü taraf bağlantıları ve uygulama mağazaları</h2>
+        <p>
+          Hizmet, Apple App Store’a ve Google Play’e ve içeriğimizde atıf yapılan
+          üçüncü taraf kaynaklara bağlantı verir. Bu platformları kullanımınız,
+          kontrolümüzde olmayan kendi koşullarına tabidir.
+        </p>
+
+        <h2>8. Sorumluluğun sınırlandırılması</h2>
+        <p>
+          Yürürlükteki hukukun izin verdiği azami ölçüde, {PUBLISHER.displayName},
+          Hizmeti kullanmanızdan veya kullanamamanızdan doğan, işlem zararları dahil
+          hiçbir dolaylı, arızi veya netice kabilinden zarardan sorumlu tutulamaz.
+        </p>
+
+        <h2>9. Hizmeti sunan kuruluş</h2>
+        <p>
+          Hizmet, {PUBLISHER.displayName} ({PUBLISHER.legalName}) tarafından
+          yayımlanmaktadır.
+        </p>
+
+        <h2>10. Bu koşullarda yapılacak değişiklikler</h2>
+        <p>
+          Bu koşulları zaman zaman güncelleyebiliriz. Bir değişiklikten sonra
+          Hizmeti kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz
+          anlamına gelir.
+        </p>
+
+        <h2>11. İletişim</h2>
+        <p>
+          Bu koşullarla ilgili sorularınızı{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresine gönderebilirsiniz.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({

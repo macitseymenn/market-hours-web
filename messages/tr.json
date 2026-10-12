@@ -1,0 +1,403 @@
+{
+  "nav": {
+    "liveHours": "Canlı saatler",
+    "sessions": "Seanslar",
+    "blog": "Blog",
+    "faq": "SSS",
+    "getApp": "Uygulamayı edinin"
+  },
+  "header": {
+    "homeAria": "Forex Market Hours ana sayfa",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "primaryNav": "Ana gezinme",
+    "skipToContent": "İçeriğe geç",
+    "language": "Dil"
+  },
+  "footer": {
+    "explore": "Keşfedin",
+    "companyLegal": "Şirket ve yasal bilgiler",
+    "publishedBy": "Yayıncı: {publisher}.",
+    "appStore": "App Store",
+    "rights": "© {year} {legalName}. Apple Inc. ile herhangi bir bağlantısı yoktur. “App Store”, Apple Inc. şirketinin ticari markasıdır. · {host}"
+  },
+  "legalNav": {
+    "about": "Hakkımızda",
+    "methodology": "Saatleri nasıl hesaplıyoruz",
+    "editorialPolicy": "Yayın ilkeleri",
+    "disclaimer": "Sorumluluk reddi",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım koşulları",
+    "contact": "İletişim"
+  },
+  "common": {
+    "disclaimer": "Forex Market Hours yalnızca bir piyasa saatleri aracıdır. Finansal tavsiye vermez; alım satım, para yatırma veya para çekme hizmeti sunmaz. Döviz piyasasında işlem yapmak risk içerir. Seans saatleri genel bilgilendirme amacıyla sunulur ve yaz saati değişikliklerini takip eder.",
+    "home": "Ana sayfa"
+  },
+  "notFound": {
+    "metaTitle": "Sayfa bulunamadı",
+    "code": "404",
+    "h1": "Bu sayfa mevcut değil",
+    "lead": "Bağlantı eskimiş ya da sayfa taşınmış olabilir. Canlı seans saati ise hâlâ burada.",
+    "toolCta": "Canlı seans saatini açın",
+    "blogLink": "Tüm rehberlere göz atın",
+    "popular": "Popüler rehberler"
+  },
+  "schema": {
+    "webAppDescription": "Sidney, Tokyo, Frankfurt, Londra ve New York forex seanslarından hangilerinin şu anda açık olduğunu kendi saat diliminizde gösteren ücretsiz, canlı bir araç. Seans çakışmalarını, açılış saatlerini ve yaz saati kaymalarını tek bakışta, doğrudan tarayıcınızda görün. iOS ve Android uygulaması olarak da sunulur.",
+    "appDescription": "Forex Market Hours uygulaması; Londra, New York, Tokyo, Sidney ve Frankfurt forex seanslarının kendi saat diliminizde tam olarak ne zaman açılıp kapandığını canlı 24 saatlik seans saati, widget’lar, seans uyarıları ve ekonomik takvimle gösterir. Bir aracı kurum değil, piyasa takip aracıdır.",
+    "howToName": "Forex piyasa saatleri göstergesi nasıl okunur",
+    "featureList": [
+      "Canlı forex seans saati",
+      "Otomatik saat dilimi dönüşümü",
+      "Seans çakışması tespiti",
+      "Yaz saati ayarlaması"
+    ]
+  },
+  "home": {
+    "hero": {
+      "h1": "Forex piyasa saatleri, kendi saat diliminizde canlı",
+      "definition": "Forex piyasa saatleri, her büyük döviz piyasasının işleme açık olduğu zaman dilimleridir. Forex piyasası haftada beş gün, günde 24 saat boyunca dört seans halinde (Sidney, Tokyo, Londra ve New York) çalışır ve hafta sonları kapalıdır. Bu canlı saat, şu anda hangi seansların açık olduğunu kendi saat diliminizde gösterir.",
+      "converterH2": "Forex piyasa saatleri dönüştürücü: her seansı kendi saat diliminizde görün",
+      "converterIntro": "Tüm işlem seanslarını otomatik olarak yerel saatinize çevirin; elle GMT hesabı yapmanıza ya da yaz saatini tahmin etmenize gerek kalmaz. Aşağıdan bir şehir seçin veya cihazınızın algıladığı saat dilimini kullanın.",
+      "phonePrompt": "Telefonunuzda kullanmayı mı tercih edersiniz?",
+      "phoneLink": "Ücretsiz iOS ve Android uygulamasını edinin ↓",
+      "alarmCta": "Hiçbir seansı kaçırmayın, alarmınızı kurun"
+    },
+    "status": {
+      "statusLine": "{count, plural, =0 {Şu anda açık olan büyük bir forex seansı yok. İşlemler, Sidney seansı haftanın açılışını yaptığında yeniden başlar.} =1 {Şu anda {list} seansı açık.} other {Şu anda {list} seansları açık.}}",
+      "fact": "Forex piyasasında işlemler, Pazar 22:00 GMT’den Cuma 22:00 GMT’ye kadar haftada beş gün, günde 24 saat sürer.",
+      "countdown": "Bir sonraki seans {hours} sa {minutes} dk sonra açılıyor ({city}).",
+      "verified": "Seans saatlerinin son doğrulanma tarihi: {date}."
+    },
+    "trust": {
+      "aria": "Bir bakışta",
+      "items": [
+        "Her zaman ücretsiz",
+        "Reklam yok",
+        "Hesap gerekmez",
+        "Hiçbir veri toplamaz",
+        "60’tan fazla dil"
+      ],
+      "privacyFirst": "Gizlilik öncelikli"
+    },
+    "how": {
+      "h2": "Forex piyasa saatleri göstergesi nasıl okunur",
+      "intro": "Kayıt yok, indirme yok: sayfayı açın ve canlı piyasa saatlerini üç adımda okuyun.",
+      "steps": [
+        {
+          "title": "Saat diliminizi ayarlayın",
+          "body": "Zaman çizelgesi otomatik olarak yerel saat diliminizde açılır. Dünyanın herhangi bir yerinden herhangi bir piyasayı karşılaştırmak için saat dilimini değiştirebilirsiniz."
+        },
+        {
+          "title": "Açık piyasaları okuyun",
+          "body": "Her renkli çubuk bir seansın işlem aralığını gösterir. Hareket eden çizgi şu anı temsil eder: bir çubuğu kestiği her yerde o piyasa açıktır."
+        },
+        {
+          "title": "Çakışmalara göre plan yapın",
+          "body": "Londra-New York çakışmasını ve diğer yüksek likiditeli zaman aralıklarını tek bakışta görün, ardından işlemlerinizi bunlara göre zamanlayın."
+        }
+      ]
+    },
+    "sessions": {
+      "h2": "Forex işlem seansları ve seans saatleri",
+      "intro": "Forex piyasası, aşağıdaki ana seanslar boyunca günde 24 saat çalışır. Bunlar GMT cinsinden standart zaman aralıklarıdır; yukarıdaki araç bunları otomatik olarak saat diliminize ve yaz saatine göre ayarlar.",
+      "caption": "Başlıca forex işlem seansları ve GMT cinsinden yaklaşık açılış saatleri.",
+      "colSession": "Seans",
+      "colRegion": "Bölge",
+      "colHours": "Saatler (GMT)",
+      "colWhy": "Neden önemli",
+      "largest": "En büyük",
+      "cities": {
+        "Sydney": "Sidney",
+        "Tokyo": "Tokyo",
+        "Frankfurt": "Frankfurt",
+        "London": "Londra",
+        "New York": "New York"
+      },
+      "regions": {
+        "Sydney": "Avustralya",
+        "Tokyo": "Japonya",
+        "Frankfurt": "Almanya",
+        "London": "Birleşik Krallık",
+        "New York": "Amerika Birleşik Devletleri"
+      },
+      "notes": {
+        "Sydney": "İşlem haftasını açar; AUD ve NZD için ilk yönü belirler.",
+        "Tokyo": "Asya seansı; JPY paritelerinde en hareketli dönem.",
+        "Frankfurt": "Avrupa’yı Londra’dan bir saat önce açar; EUR pariteleri için kilit önemde.",
+        "London": "İşlem hacmine göre dünyanın en büyük forex seansı.",
+        "New York": "USD oynaklığını belirler; öğleden sonranın ortasında Londra ile çakışır."
+      },
+      "overlapTitle": "Londra – New York çakışması",
+      "overlapGmt": "≈ 13:00 – 17:00 GMT",
+      "overlapBody": "Londra ve New York aynı anda açık olduğunda dünyanın en büyük iki piyasasında eş zamanlı işlem yapılır; bu, genellikle günün en derin likiditesi ve en keskin fiyat hareketleri anlamına gelir.",
+      "diagramAlt": "Sidney, Tokyo, Frankfurt, Londra ve New York forex seanslarını 24 saatlik bir GMT günü boyunca gösteren, Londra-New York çakışmasının vurgulandığı zaman çizelgesi diyagramı.",
+      "diagramCaption": "24 saatlik bir GMT günü boyunca beş büyük forex seansı. Gölgeli bant, günün en yüksek likiditeye sahip zaman aralığı olan Londra-New York çakışmasını (≈13:00–17:00 GMT) gösterir.",
+      "statTurnover": "Ölçek hakkında fikir vermesi için: Uluslararası Ödemeler Bankası’nın (BIS) <link>Üç Yıllık Merkez Bankası Anketi</link> sonuçlarına göre, küresel ortalama günlük forex işlem hacmi Nisan 2022’de 7,5 trilyon dolara ulaştı ve dünya genelinde en büyük payı Birleşik Krallık (Londra) masaları üstlendi.",
+      "statIana": "Bu sayfadaki her saat, neredeyse tüm tarayıcılarda ve işletim sistemlerinde yerleşik olarak bulunan saat dilimi referansı <link>IANA Saat Dilimi Veritabanı</link> esas alınarak canlı hesaplanır; böylece yaz saati geçişleri her zaman doğru yansır.",
+      "relatedReading": "Daha fazla ayrıntı mı istiyorsunuz? <bestTime>Dört ana işlem seansı</bestTime> hakkında okuyun, <overlap>saat dilimine göre forex piyasa saatlerine</overlap> göz atın ya da <methodology>bu saatleri nasıl hesapladığımızı</methodology> öğrenin.",
+      "dstNote": "Seans aralıkları genel bilgilendirme amacıyla verilmiştir ve yaz saati uygulamasıyla birlikte kayar (örneğin Londra kışın GMT, yazın BST kullanır). Uygulama her zaman güncel ve doğru şekilde ayarlanmış saatleri gösterir."
+    },
+    "features": {
+      "h2": "Forex seans araçları: saat, uyarılar ve ekonomik takvim",
+      "intro": "Web aracı size canlı saatleri gösterir; ücretsiz uygulama ise buna widget’lar, ekonomik takvim ve uyarılar ekler. İşte tüm tablo.",
+      "items": [
+        {
+          "title": "Canlı 24 saatlik seans saati",
+          "body": "Etkileşimli dairesel bir saat tüm işlem gününü haritalandırır; hangi piyasaların açık olduğunu tek bakışta görürsünüz."
+        },
+        {
+          "title": "Ana Ekran ve Kilitli Ekran widget’ları",
+          "body": "Bir sonraki seansı uygulamayı açmadan, gerçek zamanlı güncellenen şekilde Ana Ekranınızda ve Kilitli Ekranınızda görün."
+        },
+        {
+          "title": "Canlı ekonomik takvim",
+          "body": "Tarım dışı istihdam (NFP), TÜFE, GSYH, PMI ve merkez bankası faiz kararları gibi yüksek etkili verileri piyasayı hareketlendirmeden önce takip edin."
+        },
+        {
+          "title": "Seans ve haber uyarıları",
+          "body": "Bir seans açılmadan 15 dakika önce haberdar olun; sizin için önemli ekonomik olaylar için de uyarı alın."
+        },
+        {
+          "title": "Otomatik saat dilimi",
+          "body": "Her saat yerel saat diliminize çevrilir ve GMT/BST’ye göre ayarlanır; elle hesap yapmanız gerekmez."
+        },
+        {
+          "title": "Karanlık mod ve pil dostu tasarım",
+          "body": "Uzun analiz seansları için tasarlanmış, pilinizi yormayacak karanlık bir arayüz."
+        }
+      ]
+    },
+    "blogPreview": {
+      "h2": "Forex piyasa saatleri rehberleri",
+      "intro": "Forex piyasa saatleri, seanslar ve bunları şekillendiren saat dilimleri üzerine rehberler ve açıklayıcı yazılar.",
+      "viewAll": "Tüm yazıları görün →",
+      "learnMore": "Devamını okuyun →"
+    },
+    "faq": {
+      "h2": "Forex piyasa saatleri: sıkça sorulan sorular",
+      "items": [
+        {
+          "q": "Kullanımı ücretsiz mi?",
+          "a": "Evet. Forex Market Hours web aracı tamamen ücretsizdir; reklam ve kayıt yoktur. Yanındaki iOS ve Android uygulamaları da ücretsizdir."
+        },
+        {
+          "q": "Hesap oluşturmam gerekiyor mu?",
+          "a": "Hayır, hesap gerekmez. Sayfayı açtığınızda canlı piyasa saatleri anında kendi saat diliminizde görünür."
+        },
+        {
+          "q": "İşlem sinyali veya finansal tavsiye veriyor mu?",
+          "a": "Hayır. Bu, seansların ne zaman açılıp kapandığını gösteren bir piyasa saatleri aracıdır. Finansal tavsiye, işlem sinyali ya da herhangi bir alım satım, para yatırma veya para çekme hizmeti sunmaz."
+        },
+        {
+          "q": "Hangi forex seanslarını gösteriyor?",
+          "a": "Ana seansları (Sidney, Tokyo, Frankfurt, Londra ve New York) ve oynaklığın genellikle zirveye ulaştığı yüksek hacimli seans çakışmalarını gösterir."
+        },
+        {
+          "q": "Saatler yaz saatine göre doğru mu?",
+          "a": "Evet. Her piyasanın saatleri kendi saat dilimi kurallarına göre hesaplanır; bu sayede yaz saati geçişleri (GMT/BST, EST/EDT vb.) her zaman otomatik olarak uygulanır."
+        },
+        {
+          "q": "Mobil uygulaması var mı?",
+          "a": "Evet. Forex Market Hours, App Store’da (iPhone, iPad, Mac, Apple Vision Pro) ve Android için Google Play’de mevcuttur; widget’lar, ekonomik takvim ve her seans açılmadan 15 dakika önce gelen uyarılar ekler."
+        },
+        {
+          "q": "Verilerimi topluyor mu?",
+          "a": "Hayır. Araç tarayıcınızda çalışır ve uygulama hiçbir veri toplamaz."
+        },
+        {
+          "q": "Forex piyasası saat kaçta açılır ve kapanır?",
+          "a": "Forex piyasası, Sidney’de işlemlerin başladığı Pazar günü New York saatiyle 17:00’de (22:00 GMT) açılır ve Cuma günü New York saatiyle 17:00’de kapanır. Haftada beş gün, günde 24 saat çalışır ve hafta sonları kapalıdır."
+        },
+        {
+          "q": "Forex piyasası şu anda açık mı?",
+          "a": "Forex piyasası, Pazar 17:00 ET ile Cuma 17:00 ET arasında 24 saat açıktır. Sidney, Tokyo, Londra veya New York gibi belirli bir seansta şu anda kendi saat diliminizde işlem yapılıp yapılmadığını görmek için bu sayfanın üst kısmındaki canlı saate bakın."
+        },
+        {
+          "q": "Forex işlemi için en iyi zaman ne zamandır?",
+          "a": "En hareketli zaman aralığı, dünyanın en büyük iki piyasasının aynı anda işlem gördüğü yaklaşık 13:00–17:00 GMT arasındaki Londra-New York çakışmasıdır. Bu saatlerde likidite en derin, spread’ler en dar seviyededir; ancak oynaklık da daha yüksektir. En iyi zaman, işlem yaptığınız paritelere de bağlıdır."
+        },
+        {
+          "q": "Londra seansı neden en önemlisidir?",
+          "a": "Londra, işlem hacmine göre en büyük forex merkezidir; küresel döviz işlem hacminin en büyük payı Birleşik Krallık’ta gerçekleşir (BIS Üç Yıllık Anketi). Londra açılışı çoğu zaman günün yönünü belirler ve öğleden sonrası New York ile çakışarak günün en yoğun saatlerini oluşturur."
+        },
+        {
+          "q": "Benim saat dilimimde forex piyasa saatleri nedir?",
+          "a": "Seans saatleri genellikle GMT cinsinden verilir; ancak bu araç her seansı otomatik olarak yerel saat diliminize çevirir ve yaz saatine göre ayarlar. Böylece her piyasanın açılış ve kapanış saatini elle dönüştürme yapmadan doğrudan kendi saatinizde görürsünüz."
+        }
+      ]
+    },
+    "screenshots": {
+      "h2": "Forex seans saati telefonunuzda",
+      "intro": "iPhone, iPad, Mac ve Android’de, işlem günü boyunca hızlı göz atmalar için tasarlanmış sade ve odaklı ekranlar.",
+      "clockLabel": "Canlı seans saati",
+      "clockCaption": "Londra açılışına 42 dk",
+      "clockAlt": "Forex Market Hours uygulaması, hangi seansların (Sidney, Tokyo, Londra, New York) şu anda kendi saat diliminizde açık olduğunu gösteren canlı 24 saatlik forex seans saati",
+      "calendarLabel": "Ekonomik takvim",
+      "calendarAlt": "Forex Market Hours uygulaması, yüksek etkili olayları (NFP, TÜFE, merkez bankası faiz kararları) saatleri ve beklentileriyle gösteren forex ekonomik takvimi",
+      "alertsLabel": "Seans uyarıları",
+      "alertsAlt": "Forex Market Hours uygulaması, her piyasa seansı (Sidney, Tokyo, Frankfurt, Londra, New York) için açılış ve kapanış alarmlarıyla forex seans uyarıları",
+      "alertTitle": "Londra seansı açılıyor",
+      "alertBody": "15 dakika sonra açılıyor · 08:00 GMT",
+      "disclaimer": "Gerçek uygulama ekran görüntüleri. Gösterilen saatler ve olaylar örnektir."
+    },
+    "cta": {
+      "eyebrow": "Her yerde yanınızda",
+      "h2": "iOS ve Android için ücretsiz uygulamayı edinin",
+      "body": "Web aracının yaptığı her şey, artı Ana Ekran ve Kilitli Ekran widget’ları, ekonomik takvim ve her seans açılmadan 15 dakika önce gelen uyarılar.",
+      "platformsSuffix": "Reklam yok · Hiçbir veri toplamaz"
+    }
+  },
+  "tool": {
+    "yourTimezone": "Saat diliminiz",
+    "hour24": "24 saat biçimi",
+    "options": "Seçenekler",
+    "alarms": "Alarmlar",
+    "timelineAria": "Forex piyasa saatleri dönüştürücü, 24 saatlik seans zaman çizelgesi; tüm seansları kendi saat diliminizde görmek için yatay olarak kaydırın",
+    "sessionOpen": "{city} seansı açık",
+    "sessionClosed": "{city} seansı kapalı",
+    "footnote": "Bu dönüştürücü her seansı seçtiğiniz saat dilimine göre canlı olarak günceller ve yaz saati değişikliklerini otomatik olarak takip eder. Seans aralıkları normal işlem günlerini temsil eder ve piyasa tatillerini kapsamaz.",
+    "clockAria": "Başlıca forex seanslarını GMT cinsinden gösteren 24 saatlik saat.",
+    "cities": {
+      "Sydney": "Sidney",
+      "Tokyo": "Tokyo",
+      "Frankfurt": "Frankfurt",
+      "London": "Londra",
+      "New York": "New York",
+      "Berlin": "Berlin",
+      "Istanbul": "İstanbul",
+      "Cairo": "Kahire",
+      "Dubai": "Dubai",
+      "Los Angeles": "Los Angeles",
+      "Shanghai": "Şanghay",
+      "Mumbai": "Mumbai",
+      "UTC": "UTC",
+      "Honolulu": "Honolulu",
+      "Anchorage": "Anchorage",
+      "Denver": "Denver",
+      "Chicago": "Chicago",
+      "Mexico City": "Meksiko",
+      "Toronto": "Toronto",
+      "São Paulo": "São Paulo",
+      "Buenos Aires": "Buenos Aires",
+      "Lisbon": "Lizbon",
+      "Madrid": "Madrid",
+      "Paris": "Paris",
+      "Lagos": "Lagos",
+      "Athens": "Atina",
+      "Johannesburg": "Johannesburg",
+      "Moscow": "Moskova",
+      "Riyadh": "Riyad",
+      "Tehran": "Tahran",
+      "Karachi": "Karaçi",
+      "Dhaka": "Dakka",
+      "Bangkok": "Bangkok",
+      "Jakarta": "Cakarta",
+      "Singapore": "Singapur",
+      "Hong Kong": "Hong Kong",
+      "Perth": "Perth",
+      "Seoul": "Seul",
+      "Adelaide": "Adelaide",
+      "Brisbane": "Brisbane",
+      "Auckland": "Auckland"
+    }
+  },
+  "alarms": {
+    "bellLabel": "Alarm",
+    "eventOpen": "Açılış",
+    "eventClose": "Kapanış",
+    "setAria": "{city} açıldığında çalacak bir alarm kurun",
+    "cancelAria": "{city} açılış alarmını iptal edin",
+    "titleOn": "Alarm açık: {city} açıldığında çalacak (kalan süre: {countdown})",
+    "titleOff": "{city} açıldığında beni uyar",
+    "setAriaClose": "{city} kapandığında çalacak bir alarm kurun",
+    "cancelAriaClose": "{city} kapanış alarmını iptal edin",
+    "titleOnClose": "Alarm açık: {city} kapandığında çalacak (kalan süre: {countdown})",
+    "titleOffClose": "{city} kapandığında beni uyar",
+    "options": "Alarm seçenekleri",
+    "close": "Kapat",
+    "sound": "Alarm sesi",
+    "soundOn": "🔊 Ses açık",
+    "soundOff": "🔈 Ses kapalı",
+    "soundHint": "Seçmek ve önizlemesini dinlemek için bir sese tıklayın.",
+    "testSound": "▶ Seçili sesi test et",
+    "notifications": "Bildirimler",
+    "notifEnabled": "✓ Tarayıcı bildirimleri etkin.",
+    "notifPrompt": "Alarm çaldığında bir açılır pencere göster.",
+    "notifEnable": "Bildirimleri etkinleştir",
+    "notifDenied": "Bildirimler tarayıcı ayarlarınızda engellenmiş. Ses ve sekme başlığındaki geri sayım yine de çalışır.",
+    "notifUnsupported": "Tarayıcınız bildirimleri desteklemiyor; bunun yerine ses ve sekme başlığındaki geri sayım kullanılıyor.",
+    "notifTabHint": "Alarm çaldığında başka bir sekmede misiniz? Bu sekme, siz geri dönene kadar başlığında 🔔 simgesini yanıp söndürmeye devam eder. Site tamamen kapalıyken de uyarı almak için <link>mobil uygulamayı</link> kullanın.",
+    "customTitle": "Özel alarm kurun",
+    "customHint": "İstediğiniz tarih ve saati seçin, seçtiğiniz ses o anda çalsın.",
+    "dateTime": "Tarih ve saat",
+    "labelOptional": "Etiket (isteğe bağlı)",
+    "labelPlaceholder": "ör. EUR/USD’yi kontrol et",
+    "addAlarm": "Alarm ekle",
+    "errPickDateTime": "Bir tarih ve saat seçin.",
+    "errFuture": "Gelecekte bir zaman seçin.",
+    "activeTitle": "Etkin alarmlar",
+    "activeEmpty": "Henüz alarm yok. Yukarıdan bir alarm kurun ya da zaman çizelgesinde bir piyasanın yanındaki 🔔 simgesine dokunun.",
+    "opens": "açılış",
+    "closes": "kapanış",
+    "inTime": "kalan: {countdown}",
+    "removeMarketAria": "{city} {event} alarmını kaldır",
+    "removeCustomAria": "Alarmı kaldır: {label}",
+    "clearAll": "Tüm alarmları temizle",
+    "defaultLabel": "Alarm",
+    "notifSessionOpenTitle": "{city} seansı açıldı",
+    "notifSessionOpenBody": "{city} forex seansı az önce açıldı.",
+    "notifSessionCloseTitle": "{city} seansı kapandı",
+    "notifSessionCloseBody": "{city} forex seansı az önce kapandı.",
+    "notifCustomBody": "Alarmınız çalıyor.",
+    "titleOpens": "{city} açılıyor",
+    "titleCloses": "{city} kapanıyor",
+    "titleReturn": "‼️ Alarm: geri dönmek için tıklayın"
+  },
+  "theme": {
+    "switchToLight": "Açık moda geç",
+    "switchToDark": "Karanlık moda geç"
+  },
+  "badges": {
+    "appStoreAria": "App Store’dan indirin, {app} (yeni sekmede açılır)",
+    "appStoreLine1": "Hemen indirin",
+    "appStoreLine2": "App Store",
+    "googlePlayAria": "Google Play’den edinin, {app} (yeni sekmede açılır)",
+    "googlePlayLine1": "Hemen alın",
+    "googlePlayLine2": "Google Play",
+    "newTab": "(yeni sekmede açılır)"
+  },
+  "blog": {
+    "metaTitle": "Forex Piyasa Saatleri Blogu: Seanslar ve İşlem Saatleri",
+    "metaDesc": "Forex Market Hours ekibinden forex piyasa saatleri, işlem seansları, seans çakışmaları ve saat dilimleri üzerine anlaşılır rehberler.",
+    "indexTitle": "Blog",
+    "indexIntro": "Forex piyasa saatleri, işlem seansları ve bunları şekillendiren saat dilimleri üzerine anlaşılır, pratik rehberler.",
+    "minRead": "{minutes} dk okuma",
+    "by": "Yazar: <link>{name}</link>",
+    "backToBlog": "← Blog",
+    "lastUpdated": "Son güncelleme: {date}.",
+    "writtenBy": "Yazan",
+    "breadcrumbHome": "Ana sayfa",
+    "breadcrumbBlog": "Blog",
+    "authorAbout": "Hakkında",
+    "authorExperience": "Deneyim",
+    "authorElsewhere": "Diğer platformlar",
+    "authorArticles": "Yazarın makaleleri: {name}",
+    "teamRole": "İçerik birincil kaynaklarla karşılaştırılarak incelenir",
+    "teamBio": "İçerik, Forex Market Hours yayın ekibi tarafından araştırılır ve incelenir. Yayın ilkelerimize göz atın."
+  },
+  "author": {
+    "teamRole": "Yayın Ekibi",
+    "teamMetaDesc": "Forex Market Hours içeriğinden sorumlu yayıncı {publisher} için yayın profili.",
+    "teamBio": "Forex Market Hours içeriğinin bakımını yapan yayıncı: {publisher}. Bir yazar profili hazır olduğunda burada görünecek.",
+    "teamAbout": "Bu aracı kimin geliştirip sürdürdüğünü <about>Hakkımızda sayfasında</about>, içeriğin nasıl incelendiğini ise <policy>yayın ilkelerimizde</policy> öğrenebilirsiniz."
+  },
+  "consent": {
+    "title": "Çerez onayı",
+    "message": "Aracın nasıl kullanıldığını anlamak için gizlilik dostu analiz araçları kullanıyoruz. Reklam asla yok.",
+    "learnMore": "Gizlilik politikamızı okuyun",
+    "accept": "Kabul et",
+    "decline": "Reddet"
+  }
+}

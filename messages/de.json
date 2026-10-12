@@ -1,0 +1,403 @@
+{
+  "nav": {
+    "liveHours": "Live-Zeiten",
+    "sessions": "Sessions",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "getApp": "App laden"
+  },
+  "header": {
+    "homeAria": "Forex Market Hours Startseite",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "primaryNav": "Hauptnavigation",
+    "skipToContent": "Zum Inhalt springen",
+    "language": "Sprache"
+  },
+  "footer": {
+    "explore": "Entdecken",
+    "companyLegal": "Unternehmen und Rechtliches",
+    "publishedBy": "Herausgegeben von {publisher}.",
+    "appStore": "App Store",
+    "rights": "© {year} {legalName}. Nicht mit Apple Inc. verbunden. „App Store“ ist eine Marke von Apple Inc. · {host}"
+  },
+  "legalNav": {
+    "about": "Über uns",
+    "methodology": "So berechnen wir die Zeiten",
+    "editorialPolicy": "Redaktionelle Richtlinien",
+    "disclaimer": "Haftungsausschluss",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "disclaimer": "Forex Market Hours ist ausschließlich ein Tool für Handelszeiten. Es bietet keine Finanzberatung und keine Handels-, Einzahlungs- oder Auszahlungsdienste an. Der Devisenhandel ist mit Risiken verbunden. Die Session-Zeiten dienen der allgemeinen Information und berücksichtigen die Zeitumstellung (Sommerzeit).",
+    "home": "Startseite"
+  },
+  "notFound": {
+    "metaTitle": "Seite nicht gefunden",
+    "code": "404",
+    "h1": "Diese Seite gibt es nicht",
+    "lead": "Der Link ist möglicherweise veraltet, oder die Seite wurde verschoben. Die Live-Uhr der Handelssitzungen ist aber weiterhin hier.",
+    "toolCta": "Live-Sessionuhr öffnen",
+    "blogLink": "Alle Ratgeber ansehen",
+    "popular": "Beliebte Ratgeber"
+  },
+  "schema": {
+    "webAppDescription": "Ein kostenloses Live-Tool, das zeigt, welche Forex-Sessions (Sydney, Tokio, Frankfurt, London und New York) gerade geöffnet sind, in Ihrer eigenen Zeitzone. Überschneidungen der Sessions, Öffnungszeiten und Verschiebungen durch die Sommerzeit auf einen Blick, direkt im Browser. Auch als App für iOS und Android erhältlich.",
+    "appDescription": "Die App Forex Market Hours zeigt genau, wann die Forex-Sessions in London, New York, Tokio, Sydney und Frankfurt in Ihrer eigenen Zeitzone öffnen und schließen, mit einer Live-Sessionuhr über 24 Stunden, Widgets, Session-Alarmen und einem Wirtschaftskalender. Ein Tool zur Marktbeobachtung, kein Broker.",
+    "howToName": "So lesen Sie die Uhr der Forex-Handelszeiten",
+    "featureList": [
+      "Live-Uhr der Forex-Sessions",
+      "Automatische Umrechnung der Zeitzone",
+      "Erkennung von Session-Überschneidungen",
+      "Anpassung an die Sommerzeit"
+    ]
+  },
+  "home": {
+    "hero": {
+      "h1": "Forex-Handelszeiten live in Ihrer Zeitzone",
+      "definition": "Die Forex-Handelszeiten sind die Zeiten, zu denen die großen Devisenmärkte für den Handel geöffnet sind. Der Devisenmarkt ist 24 Stunden am Tag, fünf Tage die Woche geöffnet, verteilt auf vier Handelssitzungen (Sydney, Tokio, London und New York), und am Wochenende geschlossen. Diese Live-Uhr zeigt, welche Sessions gerade in Ihrer Zeitzone geöffnet sind.",
+      "converterH2": "Forex-Zeitrechner: jede Session in Ihrer Zeitzone",
+      "converterIntro": "Rechnen Sie jede Handelssitzung automatisch in Ihre Ortszeit um, ohne manuelle GMT-Rechnerei und ohne Rätselraten bei der Sommerzeit. Wählen Sie unten eine beliebige Stadt oder nutzen Sie die erkannte Zeitzone Ihres Geräts.",
+      "phonePrompt": "Lieber auf dem Smartphone?",
+      "phoneLink": "Kostenlose App für iOS und Android laden ↓",
+      "alarmCta": "Keine Session mehr verpassen: Wecker stellen"
+    },
+    "status": {
+      "statusLine": "{count, plural, =0 {Derzeit ist keine große Forex-Session geöffnet. Der Handel beginnt wieder, wenn die Sydney-Session die Woche eröffnet.} =1 {Derzeit ist die Session in {list} geöffnet.} other {Derzeit sind die Sessions in {list} geöffnet.}}",
+      "fact": "Der Devisenmarkt handelt 24 Stunden am Tag, fünf Tage die Woche, von Sonntag 22:00 GMT bis Freitag 22:00 GMT.",
+      "countdown": "Nächste Session öffnet in {hours} Std. {minutes} Min. ({city}).",
+      "verified": "Session-Zeiten geprüft am {date}."
+    },
+    "trust": {
+      "aria": "Auf einen Blick",
+      "items": [
+        "Dauerhaft kostenlos",
+        "Keine Werbung",
+        "Kein Konto nötig",
+        "Erfasst keine Daten",
+        "Über 60 Sprachen"
+      ],
+      "privacyFirst": "Datenschutz zuerst"
+    },
+    "how": {
+      "h2": "So lesen Sie die Uhr der Forex-Handelszeiten",
+      "intro": "Keine Anmeldung, kein Download: Öffnen Sie einfach die Seite und lesen Sie die Live-Handelszeiten in drei Schritten ab.",
+      "steps": [
+        {
+          "title": "Zeitzone festlegen",
+          "body": "Die Zeitleiste öffnet sich automatisch in Ihrer lokalen Zeitzone. Wechseln Sie sie, um jeden Markt von überall auf der Welt zu vergleichen."
+        },
+        {
+          "title": "Geöffnete Märkte ablesen",
+          "body": "Jeder farbige Balken ist das Handelsfenster einer Session. Die bewegliche Linie markiert das Jetzt: Wo sie einen Balken kreuzt, ist dieser Markt geöffnet."
+        },
+        {
+          "title": "Rund um die Überschneidungen planen",
+          "body": "Erkennen Sie die Überschneidung London–New York und andere Phasen hoher Liquidität auf einen Blick und richten Sie Ihr Trading danach aus."
+        }
+      ]
+    },
+    "sessions": {
+      "h2": "Forex-Handelssitzungen und Session-Zeiten",
+      "intro": "Der Devisenmarkt läuft rund um die Uhr über die unten aufgeführten großen Sessions. Dies sind die Standardzeiten in GMT; das Tool oben passt sie automatisch an Ihre Zeitzone und an die Sommerzeit an.",
+      "caption": "Die wichtigsten Forex-Handelssitzungen und ihre ungefähren Öffnungszeiten in GMT.",
+      "colSession": "Session",
+      "colRegion": "Region",
+      "colHours": "Zeiten (GMT)",
+      "colWhy": "Warum sie wichtig ist",
+      "largest": "Größte",
+      "cities": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokio",
+        "Frankfurt": "Frankfurt",
+        "London": "London",
+        "New York": "New York"
+      },
+      "regions": {
+        "Sydney": "Australien",
+        "Tokyo": "Japan",
+        "Frankfurt": "Deutschland",
+        "London": "Vereinigtes Königreich",
+        "New York": "Vereinigte Staaten"
+      },
+      "notes": {
+        "Sydney": "Eröffnet die Handelswoche; gibt früh den Ton für AUD und NZD vor.",
+        "Tokyo": "Die asiatische Session; am aktivsten bei JPY-Paaren.",
+        "Frankfurt": "Eröffnet Europa eine Stunde vor London; wichtig für EUR-Paare.",
+        "London": "Die weltweit größte Forex-Session nach Volumen.",
+        "New York": "Treibt die USD-Volatilität; überschneidet sich am Nachmittag mit London."
+      },
+      "overlapTitle": "Überschneidung London – New York",
+      "overlapGmt": "≈ 13:00 – 17:00 GMT",
+      "overlapBody": "Wenn London und New York gleichzeitig geöffnet sind, handeln die beiden größten Märkte zur selben Zeit: Das bringt in der Regel die höchste Liquidität und die stärksten Kursbewegungen des Tages.",
+      "diagramAlt": "Zeitleisten-Diagramm der Forex-Sessions in Sydney, Tokio, Frankfurt, London und New York über einen 24-Stunden-Tag in GMT, mit hervorgehobener Überschneidung London–New York.",
+      "diagramCaption": "Die fünf großen Forex-Sessions über einen 24-Stunden-Tag in GMT. Das schattierte Band markiert die Überschneidung London–New York (≈13:00–17:00 GMT), das Zeitfenster mit der höchsten Liquidität des Tages.",
+      "statTurnover": "Zur Einordnung: Der durchschnittliche tägliche Devisenumsatz weltweit erreichte im April 2022 7,5 Billionen US-Dollar, wobei Handelsdesks im Vereinigten Königreich (London) weltweit den größten Anteil abwickelten, so der <link>Triennial Central Bank Survey</link> der Bank für Internationalen Zahlungsausgleich.",
+      "statIana": "Jede Uhrzeit auf dieser Seite wird live aus der <link>IANA Time Zone Database</link> berechnet, der Zeitzonen-Referenz, die in praktisch jeden Browser und jedes Betriebssystem eingebaut ist. So sind Umstellungen auf die Sommerzeit immer korrekt.",
+      "relatedReading": "Sie möchten mehr wissen? Lesen Sie über die <bestTime>vier großen Handelssitzungen</bestTime>, sehen Sie sich die <overlap>Forex-Handelszeiten nach Zeitzone</overlap> an oder erfahren Sie, <methodology>wie wir diese Zeiten berechnen</methodology>.",
+      "dstNote": "Die Session-Zeiten dienen der allgemeinen Information und verschieben sich mit der Sommerzeit (London gilt zum Beispiel im Winter GMT und im Sommer BST). Die App zeigt immer die aktuellen, korrekt angepassten Zeiten."
+    },
+    "features": {
+      "h2": "Forex-Session-Tools: Uhr, Alarme und Wirtschaftskalender",
+      "intro": "Das Web-Tool zeigt Ihnen die Live-Zeiten; die kostenlose App ergänzt Widgets, einen Wirtschaftskalender und Alarme. Hier der Überblick.",
+      "items": [
+        {
+          "title": "Live-Sessionuhr über 24 Stunden",
+          "body": "Eine interaktive runde Uhr bildet den gesamten Handelstag ab, sodass Sie auf einen Blick sehen, welche Märkte geöffnet sind."
+        },
+        {
+          "title": "Widgets für Home- und Sperrbildschirm",
+          "body": "Behalten Sie die nächste Session direkt auf Ihrem Home- und Sperrbildschirm im Blick, in Echtzeit aktualisiert, ohne die App zu öffnen."
+        },
+        {
+          "title": "Live-Wirtschaftskalender",
+          "body": "Verfolgen Sie wichtige Veröffentlichungen wie NFP, CPI, BIP, PMI und Zinsentscheide der Notenbanken, bevor sie den Markt bewegen."
+        },
+        {
+          "title": "Session- und News-Alarme",
+          "body": "Erhalten Sie 15 Minuten vor der Öffnung einer Session einen Hinweis, dazu Alarme für die Wirtschaftsereignisse, die für Sie zählen."
+        },
+        {
+          "title": "Automatische Zeitzone",
+          "body": "Jede Uhrzeit wird in Ihre lokale Zeitzone umgerechnet und für GMT/BST angepasst, Sie müssen also nichts von Hand rechnen."
+        },
+        {
+          "title": "Dunkelmodus und akkuschonend",
+          "body": "Eine dunkle Oberfläche für lange Analysesitzungen, die Ihren Akku schont."
+        }
+      ]
+    },
+    "blogPreview": {
+      "h2": "Ratgeber zu den Forex-Handelszeiten",
+      "intro": "Ratgeber und Erklärungen zu Forex-Handelszeiten, Sessions und den Zeitzonen, die sie prägen.",
+      "viewAll": "Alle Beiträge ansehen →",
+      "learnMore": "Mehr erfahren →"
+    },
+    "faq": {
+      "h2": "Forex-Handelszeiten: häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Ist die Nutzung kostenlos?",
+          "a": "Ja. Das Web-Tool Forex Market Hours ist komplett kostenlos, ohne Werbung und ohne Anmeldung. Auch die begleitenden Apps für iOS und Android sind kostenlos."
+        },
+        {
+          "q": "Muss ich ein Konto erstellen?",
+          "a": "Nein, ein Konto ist nicht nötig. Öffnen Sie die Seite, und die Live-Handelszeiten erscheinen sofort in Ihrer Zeitzone."
+        },
+        {
+          "q": "Gibt das Tool Handelssignale oder Finanzberatung?",
+          "a": "Nein. Es ist ein Tool für Handelszeiten, das zeigt, wann Sessions öffnen und schließen. Es bietet keine Finanzberatung, keine Handelssignale und keine Handels-, Einzahlungs- oder Auszahlungsdienste."
+        },
+        {
+          "q": "Welche Forex-Sessions werden angezeigt?",
+          "a": "Die großen Sessions (Sydney, Tokio, Frankfurt, London und New York) sowie die umsatzstarken Überschneidungen, in denen die Volatilität meist am höchsten ist."
+        },
+        {
+          "q": "Stimmen die Zeiten auch bei der Sommerzeit?",
+          "a": "Ja. Die Zeiten jedes Marktes werden aus den Regeln seiner eigenen Zeitzone berechnet, sodass Zeitumstellungen (GMT/BST, EST/EDT und so weiter) immer automatisch berücksichtigt werden."
+        },
+        {
+          "q": "Gibt es eine mobile App?",
+          "a": "Ja. Forex Market Hours ist im App Store (iPhone, iPad, Mac, Apple Vision Pro) und bei Google Play für Android erhältlich und bietet zusätzlich Widgets, einen Wirtschaftskalender und Alarme 15 Minuten vor jeder Session-Öffnung."
+        },
+        {
+          "q": "Erfasst das Tool meine Daten?",
+          "a": "Nein. Das Tool läuft in Ihrem Browser, und die App erfasst keine Daten."
+        },
+        {
+          "q": "Wann öffnet und schließt der Devisenmarkt?",
+          "a": "Der Devisenmarkt öffnet am Sonntag um 17:00 Uhr New Yorker Zeit (22:00 GMT), wenn in Sydney der Handel beginnt, und schließt am Freitag um 17:00 Uhr New Yorker Zeit. Er ist 24 Stunden am Tag, fünf Tage die Woche geöffnet und am Wochenende geschlossen."
+        },
+        {
+          "q": "Ist der Devisenmarkt gerade geöffnet?",
+          "a": "Der Devisenmarkt ist von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET rund um die Uhr geöffnet. Ob eine bestimmte Session (Sydney, Tokio, London oder New York) in diesem Moment in Ihrer Zeitzone handelt, sehen Sie auf der Live-Uhr oben auf dieser Seite."
+        },
+        {
+          "q": "Wann ist die beste Zeit für den Forex-Handel?",
+          "a": "Das aktivste Zeitfenster ist die Überschneidung London–New York, etwa 13:00–17:00 GMT, wenn die beiden größten Märkte gleichzeitig handeln. Dann ist die Liquidität am höchsten und die Spreads sind am engsten, allerdings ist auch die Volatilität höher. Die beste Zeit hängt außerdem von den Währungspaaren ab, die Sie handeln."
+        },
+        {
+          "q": "Warum ist die London-Session die wichtigste?",
+          "a": "London ist nach Volumen das größte Forex-Handelszentrum: Das Vereinigte Königreich wickelt den größten Anteil des weltweiten Devisenumsatzes ab (BIZ Triennial Survey). Die Londoner Eröffnung gibt oft die Richtung des Tages vor, und am Nachmittag überschneidet sich London mit New York, was die lebhaftesten Stunden des Tages ergibt."
+        },
+        {
+          "q": "Welche Forex-Handelszeiten gelten in meiner Zeitzone?",
+          "a": "Session-Zeiten werden meist in GMT angegeben, doch dieses Tool rechnet jede Session automatisch in Ihre lokale Zeitzone um und berücksichtigt die Sommerzeit. So sehen Sie auf Ihrer eigenen Uhr genau, wann jeder Markt öffnet und schließt, ganz ohne manuelle Umrechnung."
+        }
+      ]
+    },
+    "screenshots": {
+      "h2": "Die Forex-Sessionuhr auf Ihrem Smartphone",
+      "intro": "Klare, fokussierte Bildschirme für den schnellen Blick während des Handelstages, auf iPhone, iPad, Mac und Android.",
+      "clockLabel": "Live-Sessionuhr",
+      "clockCaption": "London öffnet in 42 Min.",
+      "clockAlt": "App Forex Market Hours, Live-Forex-Sessionuhr über 24 Stunden, die zeigt, welche Sessions (Sydney, Tokio, London, New York) gerade in Ihrer Zeitzone geöffnet sind",
+      "calendarLabel": "Wirtschaftskalender",
+      "calendarAlt": "App Forex Market Hours, Forex-Wirtschaftskalender mit wichtigen Ereignissen (NFP, CPI, Zinsentscheide der Notenbanken) samt Uhrzeiten und Prognosen",
+      "alertsLabel": "Session-Alarme",
+      "alertsAlt": "App Forex Market Hours, Forex-Session-Alarme mit Öffnungs- und Schließungsweckern für jede Markt-Session (Sydney, Tokio, Frankfurt, London, New York)",
+      "alertTitle": "London-Session öffnet",
+      "alertBody": "Öffnet in 15 Minuten · 08:00 GMT",
+      "disclaimer": "Echte Screenshots der App. Die gezeigten Zeiten und Ereignisse sind Beispiele."
+    },
+    "cta": {
+      "eyebrow": "Für unterwegs",
+      "h2": "Holen Sie sich die kostenlose App für iOS und Android",
+      "body": "Alles, was das Web-Tool kann, plus Widgets für Home- und Sperrbildschirm, einen Wirtschaftskalender und Alarme 15 Minuten vor jeder Session-Öffnung.",
+      "platformsSuffix": "Keine Werbung · Erfasst keine Daten"
+    }
+  },
+  "tool": {
+    "yourTimezone": "Ihre Zeitzone",
+    "hour24": "24-Stunden-Format",
+    "options": "Optionen",
+    "alarms": "Alarme",
+    "timelineAria": "Forex-Zeitrechner, Zeitleiste der Sessions über 24 Stunden, horizontal scrollen, um alle Sessions in Ihrer Zeitzone zu sehen",
+    "sessionOpen": "Session {city} geöffnet",
+    "sessionClosed": "Session {city} geschlossen",
+    "footnote": "Dieser Rechner aktualisiert jede Session live auf Ihre gewählte Zeitzone und berücksichtigt Zeitumstellungen automatisch. Die Session-Zeiten beziehen sich auf normale Handelstage und schließen Börsenfeiertage aus.",
+    "clockAria": "24-Stunden-Uhr mit den großen Forex-Sessions in GMT.",
+    "cities": {
+      "Sydney": "Sydney",
+      "Tokyo": "Tokio",
+      "Frankfurt": "Frankfurt",
+      "London": "London",
+      "New York": "New York",
+      "Berlin": "Berlin",
+      "Istanbul": "Istanbul",
+      "Cairo": "Kairo",
+      "Dubai": "Dubai",
+      "Los Angeles": "Los Angeles",
+      "Shanghai": "Shanghai",
+      "Mumbai": "Mumbai",
+      "UTC": "UTC",
+      "Honolulu": "Honolulu",
+      "Anchorage": "Anchorage",
+      "Denver": "Denver",
+      "Chicago": "Chicago",
+      "Mexico City": "Mexiko-Stadt",
+      "Toronto": "Toronto",
+      "São Paulo": "São Paulo",
+      "Buenos Aires": "Buenos Aires",
+      "Lisbon": "Lissabon",
+      "Madrid": "Madrid",
+      "Paris": "Paris",
+      "Lagos": "Lagos",
+      "Athens": "Athen",
+      "Johannesburg": "Johannesburg",
+      "Moscow": "Moskau",
+      "Riyadh": "Riad",
+      "Tehran": "Teheran",
+      "Karachi": "Karatschi",
+      "Dhaka": "Dhaka",
+      "Bangkok": "Bangkok",
+      "Jakarta": "Jakarta",
+      "Singapore": "Singapur",
+      "Hong Kong": "Hongkong",
+      "Perth": "Perth",
+      "Seoul": "Seoul",
+      "Adelaide": "Adelaide",
+      "Brisbane": "Brisbane",
+      "Auckland": "Auckland"
+    }
+  },
+  "alarms": {
+    "bellLabel": "Alarm",
+    "eventOpen": "Öffnung",
+    "eventClose": "Schließung",
+    "setAria": "Alarm für die Öffnung von {city} stellen",
+    "cancelAria": "Alarm für die Öffnung von {city} löschen",
+    "titleOn": "Alarm aktiv: klingelt, wenn {city} öffnet (in {countdown})",
+    "titleOff": "Alarm, wenn {city} öffnet",
+    "setAriaClose": "Alarm für die Schließung von {city} stellen",
+    "cancelAriaClose": "Alarm für die Schließung von {city} löschen",
+    "titleOnClose": "Alarm aktiv: klingelt, wenn {city} schließt (in {countdown})",
+    "titleOffClose": "Alarm, wenn {city} schließt",
+    "options": "Alarm-Optionen",
+    "close": "Schließen",
+    "sound": "Alarmton",
+    "soundOn": "🔊 Ton an",
+    "soundOff": "🔈 Ton aus",
+    "soundHint": "Klicken Sie auf einen Ton, um ihn auszuwählen und probezuhören.",
+    "testSound": "▶ Ausgewählten Ton testen",
+    "notifications": "Benachrichtigungen",
+    "notifEnabled": "✓ Browser-Benachrichtigungen aktiviert.",
+    "notifPrompt": "Ein Pop-up anzeigen, wenn ein Alarm klingelt.",
+    "notifEnable": "Benachrichtigungen aktivieren",
+    "notifDenied": "Benachrichtigungen sind in Ihren Browser-Einstellungen blockiert. Der Ton und der Countdown im Tab-Titel funktionieren weiterhin.",
+    "notifUnsupported": "Ihr Browser unterstützt keine Benachrichtigungen, daher werden Ton und Countdown im Tab-Titel verwendet.",
+    "notifTabHint": "Sind Sie in einem anderen Tab, wenn ein Alarm klingelt? Dieser Tab blinkt dann mit 🔔 im Titel, bis Sie zurückkehren. Für Alarme bei komplett geschlossener Website nutzen Sie die <link>mobile App</link>.",
+    "customTitle": "Eigenen Alarm stellen",
+    "customHint": "Wählen Sie ein beliebiges Datum und eine Uhrzeit, dann ertönt zu diesem Zeitpunkt Ihr gewählter Ton.",
+    "dateTime": "Datum und Uhrzeit",
+    "labelOptional": "Bezeichnung (optional)",
+    "labelPlaceholder": "z. B. EUR/USD prüfen",
+    "addAlarm": "Alarm hinzufügen",
+    "errPickDateTime": "Wählen Sie ein Datum und eine Uhrzeit.",
+    "errFuture": "Wählen Sie einen Zeitpunkt in der Zukunft.",
+    "activeTitle": "Aktive Alarme",
+    "activeEmpty": "Noch keine Alarme. Stellen Sie oben einen ein oder tippen Sie in der Zeitleiste auf die 🔔 neben einem Markt.",
+    "opens": "öffnet",
+    "closes": "schließt",
+    "inTime": "in {countdown}",
+    "removeMarketAria": "Alarm ({city}, {event}) entfernen",
+    "removeCustomAria": "Alarm {label} entfernen",
+    "clearAll": "Alle Alarme löschen",
+    "defaultLabel": "Alarm",
+    "notifSessionOpenTitle": "Session {city} ist geöffnet",
+    "notifSessionOpenBody": "Die Forex-Session {city} hat gerade geöffnet.",
+    "notifSessionCloseTitle": "Session {city} ist geschlossen",
+    "notifSessionCloseBody": "Die Forex-Session {city} hat gerade geschlossen.",
+    "notifCustomBody": "Ihr Alarm klingelt.",
+    "titleOpens": "{city} öffnet",
+    "titleCloses": "{city} schließt",
+    "titleReturn": "‼️ Alarm: klicken, um zurückzukehren"
+  },
+  "theme": {
+    "switchToLight": "Zum hellen Modus wechseln",
+    "switchToDark": "Zum dunklen Modus wechseln"
+  },
+  "badges": {
+    "appStoreAria": "Laden im App Store, {app} (öffnet in neuem Tab)",
+    "appStoreLine1": "Laden im",
+    "appStoreLine2": "App Store",
+    "googlePlayAria": "Jetzt bei Google Play, {app} (öffnet in neuem Tab)",
+    "googlePlayLine1": "Jetzt bei",
+    "googlePlayLine2": "Google Play",
+    "newTab": "(öffnet in neuem Tab)"
+  },
+  "blog": {
+    "metaTitle": "Forex Market Hours Blog: Sessions und Handelszeiten",
+    "metaDesc": "Verständliche Ratgeber zu Forex-Handelszeiten, Handelssitzungen, Session-Überschneidungen und Zeitzonen, vom Team von Forex Market Hours.",
+    "indexTitle": "Blog",
+    "indexIntro": "Verständliche, praxisnahe Ratgeber zu Forex-Handelszeiten, Handelssitzungen und den Zeitzonen, die sie prägen.",
+    "minRead": "{minutes} Min. Lesezeit",
+    "by": "Von <link>{name}</link>",
+    "backToBlog": "← Blog",
+    "lastUpdated": "Zuletzt aktualisiert am {date}.",
+    "writtenBy": "Verfasst von",
+    "breadcrumbHome": "Startseite",
+    "breadcrumbBlog": "Blog",
+    "authorAbout": "Über",
+    "authorExperience": "Erfahrung",
+    "authorElsewhere": "Anderswo",
+    "authorArticles": "Artikel von {name}",
+    "teamRole": "Inhalte anhand von Primärquellen geprüft",
+    "teamBio": "Inhalte recherchiert und geprüft von der Redaktion von Forex Market Hours. Siehe unsere redaktionellen Richtlinien."
+  },
+  "author": {
+    "teamRole": "Redaktionsteam",
+    "teamMetaDesc": "Redaktionsprofil von {publisher}, verantwortlich für die Inhalte von Forex Market Hours.",
+    "teamBio": "Die Inhalte von Forex Market Hours werden von {publisher} gepflegt. Ein namentliches Autorenprofil erscheint hier, sobald verfügbar.",
+    "teamAbout": "Wer dieses Tool entwickelt und pflegt, erfahren Sie auf der <about>Über-uns-Seite</about>, und wie Inhalte geprüft werden, in unseren <policy>redaktionellen Richtlinien</policy>."
+  },
+  "consent": {
+    "title": "Cookie-Einwilligung",
+    "message": "Wir nutzen datenschutzfreundliche Analysen, um zu verstehen, wie das Tool verwendet wird. Niemals Werbung.",
+    "learnMore": "Unsere Datenschutzerklärung lesen",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  }
+}

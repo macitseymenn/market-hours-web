@@ -81,24 +81,46 @@ export const POSTS: Post[] = [
       en: "forex-trading-sessions-explained",
       es: "sesiones-de-trading-forex-explicadas",
       fr: "seances-de-trading-forex-expliquees",
+      pt: "sessoes-de-negociacao-forex-explicadas",
+      it: "sessioni-di-trading-forex-spiegate",
+      de: "forex-handelssitzungen-erklaert",
+      tr: "forex-islem-seanslari-rehberi",
     },
     title: {
       en: "Forex Trading Sessions Explained: The Four Major Markets",
       es: "Sesiones de trading en forex explicadas: los cuatro mercados principales",
       fr: "Séances de trading forex expliquées : les quatre marchés",
+      pt: "Sessões de Negociação Forex Explicadas: Os Quatro Grandes Mercados",
+      it: "Sessioni di trading forex spiegate: i quattro mercati principali",
+      de: "Forex-Handelssitzungen erklärt: Die vier großen Märkte",
+      tr: "Forex İşlem Seansları Rehberi: Dört Büyük Piyasa",
     },
     description: {
       en: "Forex trading sessions explained: Sydney, Tokyo, London and New York hours in GMT, how they overlap, and how to see each session in your own timezone.",
       es: "Sesiones de trading en forex explicadas: horarios de Sídney, Tokio, Londres y Nueva York en GMT, sus solapamientos y cómo verlas en tu zona horaria.",
       fr: "Les séances de trading forex expliquées : horaires de Sydney, Tokyo, Londres et New York en GMT, leurs chevauchements et comment les voir dans votre fuseau.",
+      pt: "Sessões do forex explicadas: horários de Sydney, Tóquio, Londres e Nova York em GMT, como se sobrepõem e como ver cada sessão no seu próprio fuso horário.",
+      it: "Sessioni di trading forex spiegate: gli orari di Sydney, Tokyo, Londra e New York in GMT, come si sovrappongono e come vederle nel tuo fuso orario.",
+      de: "Forex-Handelssitzungen erklärt: Sydney, Tokio, London und New York in GMT, ihre Überschneidungen und wie Sie jede Session in Ihrer eigenen Zeitzone sehen.",
+      tr: "Forex işlem seansları rehberi: GMT’ye göre Sidney, Tokyo, Londra ve New York saatleri, seansların çakışması ve her seansı kendi saat diliminizde görme yolu.",
     },
     date: "2026-07-23",
-    localeDate: { fr: "2026-09-10" },
+    localeDate: {
+      fr: "2026-09-10",
+      pt: "2026-10-12",
+      tr: "2026-10-22",
+      de: "2026-11-01",
+      it: "2026-11-11",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "Basics"],
       es: ["Sesiones", "Fundamentos"],
       fr: ["Séances", "Bases"],
+      pt: ["Sessões", "Fundamentos"],
+      it: ["Sessioni", "Fondamenti"],
+      de: ["Sessions", "Grundlagen"],
+      tr: ["Seanslar", "Temel Bilgiler"],
     },
     cover: "/blog/forex-trading-sessions-explained.svg",
     body: {
@@ -378,6 +400,380 @@ Il n’y a pas de réponse unique : cela dépend de votre fuseau horaire et des 
 Les séances sont liées à l’heure locale de chaque ville : quand une région change ses horloges pour l’heure d’été, la plage GMT se décale d’une heure. C’est pourquoi un outil en direct vaut mieux qu’un tableau imprimé.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `Durante a semana útil, o mercado de câmbio nunca dorme de verdade. As negociações acontecem 24 horas por dia, cinco dias por semana, passando de um centro financeiro para o seguinte conforme a Terra gira. Traders experientes, porém, raramente enxergam esse período como um bloco único. Eles pensam em **sessões**: Sydney, Tóquio, Londres e Nova York. Cada uma tem seu próprio ritmo, suas próprias moedas e seu próprio nível de atividade. Este artigo mostra quais são as quatro grandes sessões do forex, quando funcionam, como se sobrepõem e por que essa divisão importa na hora de decidir quando operar.
+
+## Por que o forex funciona em sessões, e não como um mercado único
+
+Ao contrário de uma bolsa de valores, o forex não tem um prédio central nem um sino de abertura. As negociações acontecem no mercado de balcão, por meio de uma rede global de bancos, corretoras e instituições. A liquidez, ou seja, o volume de compradores e vendedores dispostos a negociar, acompanha o dia útil ao redor do mundo. Quando os grandes bancos de uma região abrem as portas, a atividade ali aumenta. Quando fecham no fim do dia, ela cai.
+
+Pense nisso como uma corrida de revezamento. O dia útil australiano vai chegando ao fim justamente quando a Ásia engrena. Tóquio começa a desacelerar e a Europa acorda. Quando Londres já está no meio da tarde, Nova York está abrindo. Essa passagem de bastão se repete todos os dias úteis, e é por isso que o mercado consegue ficar aberto sem interrupção da abertura de domingo à noite até o fechamento de sexta à noite, sem que nenhum centro precise ficar acordado o tempo todo.
+
+A semana começa no domingo às 22:00 GMT, que equivale às 17h em Nova York, o momento em que Sydney entra em operação. Ela termina na sexta às 22:00 GMT, de novo 17h no horário de Nova York, e o mercado fica fechado durante o fim de semana. No fundo, entender a estrutura das sessões é simplesmente entender como o dia de trabalho viaja pelo planeta.
+
+## As quatro grandes sessões do forex em resumo
+
+As quatro sessões que a maioria dos traders acompanha estão ancoradas nos principais centros financeiros. A tabela abaixo mostra as janelas em horário padrão, em GMT. Elas mudam em uma hora quando o horário de verão está em vigor, já que cada sessão segue a hora local da sua própria cidade, e não o GMT.
+
+| Sessão | Centro financeiro | Horário (GMT, horário padrão) | Perfil |
+|---|---|---|---|
+| Sydney | Sydney | 22:00 - 07:00 | Abre a semana, liquidez mais fraca, foco em AUD e NZD |
+| Tóquio | Tóquio | 00:00 - 09:00 | Negociação asiática, pares com JPY ativos, muitas vezes em lateralização |
+| Londres | Londres | 08:00 - 17:00 | A maior em volume, define boa parte da direção do dia |
+| Nova York | Nova York | 13:00 - 22:00 | Movida pelo USD, alta volatilidade, sobrepõe-se a Londres |
+
+Vale citar também um quinto centro. **Frankfurt**, o polo da sessão europeia, abre por volta das 07:00 GMT, cerca de uma hora antes de Londres. Muitos traders consideram que a sessão europeia começa com Frankfurt e ganha profundidade quando Londres entra. Como Londres domina o volume europeu, a sessão inteira costuma ser chamada simplesmente de sessão de Londres. Essas janelas se sobrepõem de propósito, e é nessa sobreposição que costumam acontecer as negociações mais importantes do dia, como veremos.
+
+## A sessão de Sydney
+
+Sydney abre a semana de negociação. Ao entrar em operação no domingo à noite (GMT), é o primeiro grande centro a reabrir depois do fim de semana, e sua janela em horário padrão vai das 22:00 às 07:00 GMT. Isso faz de Sydney o início tranquilo do revezamento global, e não uma explosão de atividade intensa.
+
+A liquidez durante as horas exclusivas de Sydney costuma ser mais fraca do que em qualquer outro momento do dia. As economias da Austrália e da Nova Zelândia são grandes e importantes, mas seus mercados de câmbio são menores que os da Europa ou dos Estados Unidos, então as amplitudes tendem a ser mais estreitas e os movimentos de preço mais contidos. As moedas mais associadas a esta sessão são o dólar australiano (AUD) e o dólar neozelandês (NZD), além de seus cruzamentos com o dólar americano e o iene japonês.
+
+Para os traders, a sessão de Sydney dá o tom inicial. Notícias da Austrália e da Nova Zelândia, como as decisões do banco central australiano, o Reserve Bank of Australia, podem movimentar esses pares com força em um cenário de resto calmo. Os preços das commodities também pesam aqui, já que o dólar australiano está fortemente ligado às matérias-primas.
+
+Como Sydney fica no hemisfério sul, seu calendário de horário de verão funciona ao contrário do europeu e do americano. Os relógios australianos são adiantados quando os do hemisfério norte são atrasados, então a janela exata em GMT da sessão de Sydney muda em épocas do ano diferentes das janelas de Londres ou de Nova York. É um dos motivos pelos quais uma tabela fixa de horários pode ficar desatualizada sem ninguém perceber.
+
+## A sessão de Tóquio (asiática)
+
+Tóquio é a âncora da sessão asiática, funcionando das 00:00 às 09:00 GMT em horário padrão. Ela se sobrepõe ao final da sessão de Sydney e traz o primeiro volume de liquidez realmente grande do dia de negociação. Tóquio é um dos maiores centros de câmbio do mundo, então a sessão asiática tem muito mais peso do que Sydney sozinha.
+
+O iene japonês (JPY) é o foco natural. Pares como USD/JPY, EUR/JPY e AUD/JPY têm sua negociação local mais ativa nesse horário, impulsionada por bancos japoneses, exportadores e fluxos institucionais. Dados da China e de outros países da região também influenciam o sentimento do mercado, já que boa parte da atividade econômica asiática se concentra nessa janela.
+
+A sessão de Tóquio tem fama de ficar relativamente lateralizada. Grandes movimentos direcionais são menos comuns do que nas sessões europeia e americana, e os preços muitas vezes oscilam dentro de níveis bem definidos. Isso agrada a quem gosta de estratégias de range e frustra quem está atrás de tendências fortes. É uma tendência geral, não uma regra, e notícias importantes podem mudar esse quadro a qualquer momento.
+
+A sessão asiática também importa porque prepara a abertura europeia. As faixas de preço formadas durante a madrugada em Tóquio muitas vezes viram pontos de referência quando Londres chega. Para ver mais de perto como essa sessão se comporta e quais pares merecem atenção, confira nosso guia dedicado à [sessão forex de Tóquio e da Ásia](/pt/blog/sessao-forex-de-toquio-asia).
+
+## A sessão de Londres
+
+Londres é o peso-pesado do dia no forex. Sua janela em horário padrão vai das 08:00 às 17:00 GMT e, em volume negociado, é o maior centro de câmbio do mundo. Isso não é lenda, é medido. O **BIS Triennial Central Bank Survey**, pesquisa trienal conduzida pelo Banco de Compensações Internacionais (BIS), mostra de forma consistente o Reino Unido com a maior fatia individual do volume global de câmbio, bem à frente de qualquer outro país. Você pode consultar a pesquisa diretamente em https://www.bis.org/statistics/rpfx22.htm.
+
+Quando Londres abre, o volume dispara. Os traders costumam descrever a abertura de Londres como o momento em que o dia ganha uma direção de verdade, porque há liquidez suficiente para estabelecer tendências que se estendem pelo resto da sessão. Os spreads dos principais pares geralmente se estreitam à medida que mais participantes entram, e o euro, a libra esterlina e o franco suíço são negociados intensamente contra o dólar americano. EUR/USD e GBP/USD estão entre os pares mais ativos do planeta nesse horário.
+
+A sessão de Londres também absorve a abertura de Frankfurt, uma hora antes, então o impulso europeu já está se formando quando Londres engrena de vez. A partir do meio da manhã, indicadores econômicos da zona do euro e do Reino Unido podem provocar movimentos bruscos: dados de inflação, declarações do Banco da Inglaterra e coisas do tipo. O Banco da Inglaterra publica seu calendário e suas decisões em https://www.bankofengland.co.uk.
+
+Como muita coisa acontece em torno da abertura de Londres, muitos traders organizam o dia em função dela. Para um olhar focado em quando exatamente essa sessão começa e como se comporta sua primeira hora, veja nosso artigo complementar sobre [que horas abre a sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres).
+
+## A sessão de Nova York
+
+Nova York é o segundo pilar do forex global, funcionando das 13:00 às 22:00 GMT em horário padrão. O dólar americano domina essa sessão, já que aparece de um dos lados da grande maioria de todas as operações de câmbio, então os dados econômicos dos EUA e a política do Federal Reserve repercutem no mercado inteiro. Divulgações como o relatório de emprego (non-farm payrolls), os dados de inflação e as decisões de juros do Fed costumam gerar a volatilidade mais forte da semana, e elas saem durante o horário de Nova York. O Federal Reserve publica seu calendário em https://www.federalreserve.gov.
+
+A sessão de Nova York costuma abrir com muita energia e depois vai perdendo fôlego aos poucos à medida que a tarde avança e as mesas europeias encerram o dia. As primeiras horas são agitadas justamente porque Londres ainda está aberta ao mesmo tempo. Quando Londres fecha, por volta das 17:00 GMT, a liquidez começa a secar, e a parte final da sessão de Nova York, a reta até o fechamento das 22:00 GMT, costuma ser o trecho mais calmo de todo o dia de negociação.
+
+Essa sobreposição entre Londres e Nova York é a janela mais importante do dia no forex, então merece uma seção própria.
+## Sobreposições de sessões: onde o volume se concentra
+
+O período mais movimentado do dia de negociação é a **sobreposição Londres-Nova York**, que vai aproximadamente das 13:00 às 17:00 GMT. Durante essas quatro horas, os dois maiores centros financeiros estão abertos ao mesmo tempo. A liquidez está no ponto mais profundo, os spreads dos principais pares costumam estar no nível mais estreito e os movimentos de preço são os mais consistentes. Para muitos traders, essa janela é o coração do dia, especialmente para os pares com dólar e euro.
+
+Há uma segunda sobreposição, menor, mais cedo: a **sobreposição Sydney-Tóquio**, durante a manhã asiática. Ela é bem menos ativa que a janela Londres-Nova York, mas acrescenta liquidez aos pares com iene e dólar australiano e pode gerar movimentos relevantes quando surgem notícias regionais.
+
+As sobreposições importam porque espremem a atividade de duas regiões nas mesmas horas do relógio. Mais participantes significam mais volume, e mais volume geralmente significa execução mais suave e tendências mais claras. Escolher quando operar muitas vezes se resume a qual sobreposição combina com a sua rotina e a sua estratégia.
+## Como ver as sessões no seu próprio fuso horário
+
+Todas as janelas de sessão deste artigo estão em GMT, porque o GMT é a referência comum que o mercado inteiro compartilha. Mas você não opera em GMT. Você opera pelo seu próprio relógio, onde quer que more. Converter essas janelas na mão é fácil de errar, e ainda há outro detalhe: o horário de verão.
+
+Como cada sessão está ancorada à hora local da sua cidade, as janelas em GMT mudam em uma hora sempre que uma região ajusta os relógios. O Reino Unido e a União Europeia mudam no último domingo de março e no último domingo de outubro; os Estados Unidos mudam no segundo domingo de março e no primeiro domingo de novembro; a Austrália vai no sentido contrário. Ou seja, uma tabela impressa uma única vez fica errada por várias semanas todos os anos.
+A forma confiável de contornar tudo isso é deixar uma ferramenta fazer a conversão. Nossa [ferramenta de horário do mercado forex ao vivo](/pt) mostra as quatro sessões no seu fuso horário em tempo real, ajustando automaticamente o horário de verão para que os horários exibidos estejam sempre atualizados.
+
+## Perguntas frequentes
+
+**Quantas sessões de negociação o forex tem?**
+São quatro grandes sessões: Sydney, Tóquio, Londres e Nova York, cada uma com o nome de um centro financeiro de destaque. Frankfurt às vezes é considerada a abertura da sessão europeia, mas normalmente é incluída na sessão de Londres.
+
+**Qual sessão do forex é a mais volátil?**
+Londres e Nova York são as sessões mais voláteis, e a volatilidade atinge o pico durante a sobreposição das duas, aproximadamente das 13:00 às 17:00 GMT, quando os dois centros estão abertos ao mesmo tempo e a liquidez é mais profunda.
+
+**As sessões do forex se sobrepõem?**
+Sim. A principal é a de Londres com Nova York, aproximadamente das 13:00 às 17:00 GMT. Também existe uma sobreposição menor entre Sydney e Tóquio durante a manhã asiática. É nessas sobreposições que o volume de negociação fica mais alto.
+
+**Qual sessão é a melhor para iniciantes?**
+Não existe uma resposta única; depende do seu fuso horário e dos pares que você acompanha. Muitos iniciantes acham que a sessão de Londres oferece as tendências mais claras e os spreads mais estreitos, enquanto as horas mais calmas de Sydney e Tóquio podem ser um ambiente mais tranquilo para aprender. O melhor caminho é observar cada sessão no seu próprio horário e ver qual combina com você.
+
+**Por que os horários das sessões mudam ao longo do ano?**
+As sessões estão ligadas à hora local de cada cidade, então, quando uma região ajusta os relógios para o horário de verão, a janela em GMT muda em uma hora. É por isso que uma ferramenta ao vivo é melhor que uma tabela impressa.
+
+*Este artigo tem caráter apenas informativo e não constitui recomendação financeira.*`,
+      it: `Durante la settimana lavorativa il mercato dei cambi non dorme mai davvero. Si negozia 24 ore su 24, cinque giorni su cinque, e l’attività si sposta da una piazza finanziaria all’altra man mano che la Terra gira. I trader esperti, però, raramente lo immaginano come un unico blocco di tempo. Ragionano per **sessioni**: Sydney, Tokyo, Londra e New York. Ognuna ha il suo ritmo, le sue valute e il suo livello di attività. In questo articolo vediamo quali sono le quattro principali sessioni di trading forex, quando si svolgono, come si sovrappongono e perché questa distinzione conta quando devi decidere in che momento fare trading.
+
+## Perché il forex funziona per sessioni e non come un mercato unico
+
+A differenza di una borsa azionaria, il forex non ha una sede centrale né una campanella di apertura. Le contrattazioni avvengono over the counter, attraverso una rete globale di banche, broker e istituzioni. La liquidità, cioè il volume di compratori e venditori disposti a concludere operazioni, segue la giornata lavorativa intorno al mondo. Quando le grandi banche di una regione aprono gli sportelli, l’attività in quell’area aumenta. Quando chiudono per la sera, cala.
+
+Pensalo come una staffetta. La giornata lavorativa australiana volge al termine proprio mentre l’Asia entra nel vivo. Tokyo comincia a rallentare e l’Europa si sveglia. Quando Londra è nel pieno del pomeriggio, New York sta aprendo. Questo passaggio di testimone si ripete ogni giorno feriale ed è il motivo per cui il mercato può restare aperto senza interruzioni dall’apertura della domenica sera alla chiusura del venerdì sera, senza che una singola piazza debba restare sveglia tutto il tempo.
+
+La settimana inizia la domenica alle 22:00 GMT, ossia le 17:00 a New York, il momento in cui entra in scena Sydney. Chiude il venerdì alle 22:00 GMT, di nuovo le 17:00 ora di New York, e poi resta ferma per tutto il fine settimana. In fondo, capire la struttura delle sessioni significa semplicemente capire come la giornata lavorativa viaggia attorno al globo.
+
+## Le quattro principali sessioni forex in sintesi
+
+Le quattro sessioni seguite dalla maggior parte dei trader sono legate alle grandi piazze finanziarie. La tabella qui sotto riporta le fasce orarie in GMT con l’ora solare. Quando è in vigore l’ora legale si spostano di un’ora, perché ogni sessione segue l’ora locale della propria città e non il GMT.
+
+| Sessione | Piazza finanziaria | Orari (GMT, ora solare) | Caratteristiche |
+|---|---|---|---|
+| Sydney | Sydney | 22:00 - 07:00 | Apre la settimana, liquidità più bassa, focus su AUD e NZD |
+| Tokyo | Tokyo | 00:00 - 09:00 | Scambi asiatici, coppie con lo JPY attive, spesso in laterale |
+| Londra | Londra | 08:00 - 17:00 | La più grande per volumi, imposta gran parte della direzione della giornata |
+| New York | New York | 13:00 - 22:00 | Guidata dall’USD, volatilità elevata, si sovrappone a Londra |
+
+C’è anche una quinta piazza che vale la pena citare. **Francoforte**, il fulcro della sessione europea, apre intorno alle 07:00 GMT, circa un’ora prima di Londra. Molti trader considerano la sessione europea come se iniziasse con Francoforte e diventasse più profonda una volta entrata Londra. Dato che Londra domina gli scambi europei, di solito l’intera sessione viene chiamata semplicemente sessione di Londra. Queste fasce si sovrappongono di proposito, ed è proprio nella sovrapposizione che tende a concentrarsi il trading più importante della giornata, come vedremo.
+
+## La sessione di Sydney
+
+Sydney apre la settimana di trading. Entrando in attività la domenica sera (ora GMT), è la prima grande piazza a riaprire dopo il weekend e la sua fascia in ora solare va dalle 22:00 alle 07:00 GMT. Questo fa di Sydney l’avvio tranquillo della staffetta globale, più che un’esplosione di attività.
+
+La liquidità nelle ore in cui è aperta solo Sydney è di solito la più bassa dell’intera giornata. Le economie di Australia e Nuova Zelanda sono grandi e importanti, ma i loro mercati valutari sono più piccoli di quelli europei o americani, quindi i range tendono a essere più stretti e i movimenti di prezzo più contenuti. Le valute più associate a questa sessione sono il dollaro australiano (AUD) e il dollaro neozelandese (NZD), oltre ai loro cross contro il dollaro USA e lo yen giapponese.
+
+Per i trader, la sessione di Sydney dà un primo tono alla settimana. Le notizie in arrivo da Australia e Nuova Zelanda, come le decisioni della Reserve Bank of Australia, possono muovere bruscamente queste coppie in un contesto per il resto calmo. Contano anche i prezzi delle materie prime, perché il dollaro australiano è strettamente legato alle commodity.
+
+Poiché Sydney si trova nell’emisfero australe, il suo calendario dell’ora legale è opposto a quello di Europa e America. Gli orologi australiani vanno avanti quando quelli dell’emisfero nord tornano indietro, per cui la fascia GMT esatta della sessione di Sydney cambia in periodi dell’anno diversi rispetto a quelle di Londra o New York. È uno dei motivi per cui una tabella stampata con gli orari delle sessioni può diventare obsoleta senza che te ne accorga.
+
+## La sessione di Tokyo (asiatica)
+
+Tokyo è il perno della sessione asiatica, che va dalle 00:00 alle 09:00 GMT in ora solare. Si sovrappone alla parte finale di Sydney e porta il primo bacino di liquidità davvero consistente della giornata di trading. Tokyo è uno dei maggiori centri di negoziazione valutaria al mondo, quindi la sessione asiatica pesa parecchio di più rispetto alla sola Sydney.
+
+Lo yen giapponese (JPY) è il protagonista naturale. Coppie come USD/JPY, EUR/JPY e AUD/JPY registrano in queste ore gli scambi locali più intensi, spinti da banche giapponesi, esportatori e flussi istituzionali. Anche i dati cinesi e quelli di altri Paesi della regione incidono sul sentiment, dato che gran parte dell’attività economica asiatica si concentra in questa fascia.
+
+La sessione di Tokyo ha la fama di restare relativamente laterale. I grandi movimenti direzionali sono meno frequenti che nelle sessioni europea e americana, e i prezzi spesso oscillano entro livelli ben definiti. Questo piace ai trader che amano le strategie di range e frustra chi cerca trend forti. È una tendenza generale, non una regola, e una notizia importante può ribaltarla in qualsiasi momento.
+
+La sessione asiatica conta anche perché prepara l’apertura europea. I range costruiti durante la notte a Tokyo diventano spesso punti di riferimento quando arriva Londra. Per uno sguardo più da vicino a come si comporta questa sessione e a quali coppie meritano attenzione, leggi la nostra guida dedicata alla [sessione forex di Tokyo e dell’Asia](/it/blog/sessione-forex-di-tokyo-asia).
+
+## La sessione di Londra
+
+Londra è il peso massimo della giornata forex. La sua fascia in ora solare va dalle 08:00 alle 17:00 GMT e, per volumi scambiati, è il più grande centro di negoziazione valutaria al mondo. Non è una leggenda: è un dato misurato. La **BIS Triennial Central Bank Survey**, condotta dalla Banca dei Regolamenti Internazionali, mostra regolarmente che il Regno Unito gestisce da solo la quota più ampia del turnover FX globale, ben davanti a qualsiasi altro Paese. Puoi consultare l’indagine direttamente su https://www.bis.org/statistics/rpfx22.htm.
+
+Quando apre Londra, i volumi esplodono. I trader descrivono spesso l’apertura di Londra come il momento in cui la giornata prende una direzione vera, perché c’è abbastanza profondità di liquidità per creare trend che proseguono per il resto della sessione. Gli spread sulle coppie principali di solito si restringono man mano che entrano più operatori, e l’euro, la sterlina britannica e il franco svizzero vengono scambiati in grandi quantità contro il dollaro USA. In queste ore EUR/USD e GBP/USD sono tra le coppie più attive del pianeta.
+
+La sessione di Londra assorbe anche l’apertura di Francoforte, che avviene un’ora prima, per cui lo slancio europeo è già in crescita quando Londra entra pienamente in attività. Da metà mattina in poi, i dati economici dell’Eurozona e del Regno Unito possono provocare movimenti bruschi: dati sull’inflazione, dichiarazioni della Bank of England e simili. La Bank of England pubblica il suo calendario e le sue decisioni su https://www.bankofengland.co.uk.
+
+Visto che intorno all’apertura di Londra succede così tanto, molti trader organizzano la giornata attorno a questo momento. Per un approfondimento su quando inizia esattamente questa sessione e su come si comporta la sua prima ora, leggi il nostro articolo su [a che ora apre la sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra).
+
+## La sessione di New York
+
+New York è il secondo pilastro del forex globale e va dalle 13:00 alle 22:00 GMT in ora solare. È dominata dal dollaro USA, che si trova su un lato della grande maggioranza di tutte le operazioni in valuta, quindi i dati economici americani e la politica della Federal Reserve si propagano all’intero mercato. Pubblicazioni come i non-farm payrolls, i dati sull’inflazione e le decisioni sui tassi della Fed producono spesso la volatilità più forte della settimana, e arrivano proprio nelle ore di New York. La Federal Reserve pubblica il suo calendario su https://www.federalreserve.gov.
+
+La sessione di New York tende ad aprirsi con molta energia per poi rarefarsi gradualmente nel corso del pomeriggio, quando i desk europei chiudono la giornata. Le prime ore sono vivaci proprio perché Londra è ancora aperta. Una volta che Londra chiude, intorno alle 17:00 GMT, la liquidità comincia a calare, e l’ultima parte della sessione di New York, quella che porta alla chiusura delle 22:00 GMT, è di solito il tratto più tranquillo dell’intera giornata di trading.
+
+La sovrapposizione tra Londra e New York è la fascia più importante della giornata forex, quindi merita una sezione a parte.
+
+## Sovrapposizioni tra sessioni: dove si concentrano i volumi
+
+Il periodo in assoluto più intenso della giornata di trading è la **sovrapposizione Londra-New York**, che va all’incirca dalle 13:00 alle 17:00 GMT. Per queste quattro ore le due maggiori piazze finanziarie sono aperte contemporaneamente. La liquidità è al massimo, gli spread sulle coppie principali sono di solito ai minimi e i movimenti di prezzo sono i più sostenuti. Per molti trader questa fascia è il cuore della giornata, soprattutto sulle coppie in dollari ed euro.
+
+C’è anche una seconda sovrapposizione, più piccola, all’inizio della giornata: la **sovrapposizione Sydney-Tokyo** durante la mattina asiatica. È molto meno attiva di quella Londra-New York, ma aggiunge liquidità alle coppie con lo yen e con il dollaro australiano e può generare movimenti significativi quando escono notizie dalla regione.
+
+Le sovrapposizioni contano perché concentrano l’attività di due regioni nelle stesse ore. Più partecipanti significa più volumi, e più volumi di solito significano esecuzioni più fluide e trend più chiari. Scegliere quando fare trading spesso si riduce a capire quale sovrapposizione si adatta meglio ai tuoi orari e alla tua strategia.
+
+## Come vedere le sessioni nel tuo fuso orario
+
+Tutte le fasce orarie di questo articolo sono espresse in GMT, perché il GMT è il riferimento comune a tutto il mercato. Ma tu non fai trading in GMT. Fai trading con il tuo orologio, ovunque tu viva. Convertire queste fasce a mano è facile da sbagliare, e c’è un’ulteriore complicazione: l’ora legale.
+
+Dato che ogni sessione è ancorata all’ora locale della propria città, le fasce GMT si spostano di un’ora ogni volta che una regione cambia l’orario. Il Regno Unito e l’Unione Europea cambiano l’ultima domenica di marzo e di ottobre; gli Stati Uniti la seconda domenica di marzo e la prima domenica di novembre; l’Australia va nella direzione opposta. Una tabella stampata una volta sola, quindi, è sbagliata per diverse settimane ogni anno.
+
+Il modo affidabile per evitare tutto questo è lasciare la conversione a uno strumento. Il nostro [strumento live sugli orari del mercato forex](/it) mostra tutte e quattro le sessioni nel tuo fuso orario in tempo reale e si adatta automaticamente all’ora legale, così gli orari che vedi sono sempre aggiornati.
+
+## Domande frequenti
+
+**Quante sono le sessioni di trading forex?**
+Le sessioni principali sono quattro: Sydney, Tokyo, Londra e New York, ognuna con il nome di una grande piazza finanziaria. Francoforte a volte viene considerata l’apertura della sessione europea, ma di solito viene inclusa in quella di Londra.
+
+**Qual è la sessione forex più volatile?**
+Londra e New York sono le sessioni più volatili, e la volatilità tocca il massimo durante la loro sovrapposizione, all’incirca dalle 13:00 alle 17:00 GMT, quando entrambe le piazze sono aperte e la liquidità è al massimo.
+
+**Le sessioni forex si sovrappongono?**
+Sì. La sovrapposizione principale è quella tra Londra e New York, all’incirca dalle 13:00 alle 17:00 GMT. Ce n’è anche una più piccola tra Sydney e Tokyo durante la mattina asiatica. È in queste sovrapposizioni che i volumi di scambio raggiungono i livelli più alti.
+
+**Qual è la sessione migliore per chi inizia?**
+Non esiste una risposta unica: dipende dal tuo fuso orario e dalle coppie che segui. Molti principianti trovano che la sessione di Londra offra i trend più chiari e gli spread più stretti, mentre le ore più tranquille di Sydney e Tokyo possono essere un contesto più calmo per imparare. L’approccio migliore è osservare ogni sessione nel tuo orario e vedere quale fa per te.
+
+**Perché gli orari delle sessioni cambiano durante l’anno?**
+Le sessioni sono legate all’ora locale di ogni città, quindi quando una regione cambia l’orario per l’ora legale, la fascia GMT si sposta di un’ora. Ecco perché uno strumento live è meglio di una tabella stampata.
+
+*Questo articolo ha esclusivamente scopo informativo e non costituisce una consulenza finanziaria.*`,
+      de: `Unter der Woche schläft der Devisenmarkt eigentlich nie. Gehandelt wird 24 Stunden am Tag, fünf Tage die Woche, und der Handel wandert mit der Erdrotation von einem Finanzzentrum zum nächsten. Erfahrene Trader stellen sich den Markt allerdings selten als einen einzigen durchgehenden Zeitblock vor. Sie denken in **Sessions**: Sydney, Tokio, London und New York. Jede hat ihren eigenen Rhythmus, ihre eigenen Währungen und ihr eigenes Aktivitätsniveau. Dieser Artikel erklärt, was die vier großen Forex-Handelssitzungen sind, wann sie stattfinden, wie sie sich überschneiden und warum diese Unterscheidung wichtig ist, wenn Sie entscheiden, wann Sie handeln.
+
+## Warum Forex in Sessions abläuft und nicht als ein einziger Markt
+
+Anders als eine Aktienbörse hat der Devisenmarkt kein zentrales Gebäude und keine Eröffnungsglocke. Gehandelt wird außerbörslich (OTC), über ein weltweites Netz aus Banken, Brokern und Institutionen. Die Liquidität, also das Volumen an Käufern und Verkäufern, die zu einem Abschluss bereit sind, folgt dem Geschäftstag rund um den Globus. Öffnen die großen Banken einer Region, steigt dort die Aktivität. Schließen sie am Abend, sinkt sie wieder.
+
+Man kann es sich wie einen Staffellauf vorstellen. Der australische Geschäftstag klingt aus, während Asien gerade in Fahrt kommt. Tokio wird ruhiger, und Europa wacht auf. Wenn London mitten im Nachmittag steckt, öffnet New York. Diese Übergabe wiederholt sich an jedem Werktag, und genau deshalb kann der Markt von der Eröffnung am Sonntagabend bis zum Handelsschluss am Freitagabend durchgehend geöffnet bleiben, ohne dass ein einzelnes Zentrum die ganze Zeit wach sein muss.
+
+Die Woche beginnt am Sonntag um 22:00 GMT, also um 17:00 Uhr in New York, in dem Moment, in dem Sydney online geht. Sie endet am Freitag um 22:00 GMT, ebenfalls 17:00 Uhr New Yorker Zeit, danach bleibt der Markt über das Wochenende geschlossen. Wer die Session-Struktur verstehen will, muss im Grunde nur verstehen, wie der Arbeitstag um die Welt wandert.
+
+## Die vier großen Forex-Sessions im Überblick
+
+Die vier Sessions, die die meisten Trader verfolgen, sind an die großen Finanzzentren gebunden. Die folgende Tabelle zeigt die Zeitfenster in GMT während der Normalzeit (Winterzeit). Während der Sommerzeit verschieben sie sich um eine Stunde, da jede Session der Ortszeit ihrer eigenen Stadt folgt und nicht der GMT.
+
+| Session | Finanzzentrum | Zeiten (GMT, Normalzeit) | Charakter |
+|---|---|---|---|
+| Sydney | Sydney | 22:00 - 07:00 | Eröffnet die Woche, geringere Liquidität, Fokus auf AUD und NZD |
+| Tokio | Tokio | 00:00 - 09:00 | Asiatischer Handel, JPY-Paare aktiv, oft seitwärts |
+| London | London | 08:00 - 17:00 | Größtes Volumen, bestimmt weitgehend die Tagesrichtung |
+| New York | New York | 13:00 - 22:00 | USD-getrieben, hohe Volatilität, Überschneidung mit London |
+
+Ein fünftes Zentrum verdient ebenfalls Erwähnung. **Frankfurt**, das Drehkreuz der europäischen Session, öffnet gegen 07:00 GMT, also etwa eine Stunde vor London. Viele Trader lassen die europäische Session mit Frankfurt beginnen und sehen sie an Tiefe gewinnen, sobald London dazukommt. Weil London den europäischen Umsatz dominiert, wird die gesamte Session meist einfach London-Session genannt. Diese Zeitfenster überschneiden sich nicht zufällig, und genau in diesen Überschneidungen findet, wie wir noch sehen werden, meist der wichtigste Handel des Tages statt.
+
+## Die Sydney-Session
+
+Sydney eröffnet die Handelswoche. Am Sonntagabend (GMT) geht es als erstes großes Zentrum nach dem Wochenende wieder online, und sein Zeitfenster in der Normalzeit reicht von 22:00 bis 07:00 GMT. Damit ist Sydney eher der ruhige Auftakt des globalen Staffellaufs als ein Ausbruch hektischer Aktivität.
+
+Die Liquidität während der reinen Sydney-Stunden ist in der Regel geringer als zu jedem anderen Zeitpunkt des Tages. Die Volkswirtschaften Australiens und Neuseelands sind groß und bedeutend, ihre Devisenmärkte aber kleiner als die Europas oder Amerikas, daher fallen die Handelsspannen meist enger aus und die Kursbewegungen gemäßigter. Die Währungen, die man am stärksten mit dieser Session verbindet, sind der Australische Dollar (AUD) und der Neuseeland-Dollar (NZD), dazu ihre Paare gegen den US-Dollar und den Japanischen Yen.
+
+Für Trader gibt die Sydney-Session früh den Ton an. Nachrichten aus Australien und Neuseeland, etwa Zinsentscheidungen der Reserve Bank of Australia, können diese Paare vor einem ansonsten ruhigen Hintergrund kräftig bewegen. Auch die Rohstoffpreise spielen hier eine Rolle, da der Australische Dollar eng an Rohstoffe gekoppelt ist.
+
+Da Sydney auf der Südhalbkugel liegt, verläuft sein Sommerzeitkalender entgegengesetzt zu dem Europas und Amerikas. Australien stellt die Uhren vor, wenn der Norden sie zurückstellt, deshalb verschiebt sich das GMT-Fenster der Sydney-Session zu anderen Zeitpunkten im Jahr als die Fenster von London oder New York. Das ist einer der Gründe, warum eine fest gedruckte Tabelle der Session-Zeiten unbemerkt veralten kann.
+
+## Die Tokio-Session (Asien)
+
+Tokio ist der Anker der asiatischen Session, die in der Normalzeit von 00:00 bis 09:00 GMT läuft. Sie überschneidet sich mit dem Ende der Sydney-Session und bringt den ersten wirklich großen Liquiditätspool des Handelstages. Tokio zählt zu den größten Devisenhandelsplätzen der Welt, daher hat die asiatische Session deutlich mehr Gewicht als Sydney allein.
+
+Im Mittelpunkt steht naturgemäß der Japanische Yen (JPY). Paare wie USD/JPY, EUR/JPY und AUD/JPY erleben in diesen Stunden ihren regsten lokalen Handel, getragen von japanischen Banken, Exporteuren und institutionellen Kapitalströmen. Auch chinesische und andere regionale Daten fließen in die Stimmung ein, da ein Großteil der asiatischen Wirtschaftsaktivität in dieses Zeitfenster fällt.
+
+Die Tokio-Session gilt als vergleichsweise seitwärts orientiert. Große Richtungsbewegungen sind seltener als in der europäischen und der US-Session, und die Kurse bewegen sich oft innerhalb klar definierter Marken. Das kommt Tradern entgegen, die Range-Strategien mögen, und frustriert jene, die starke Trends suchen. Es handelt sich um eine allgemeine Tendenz, nicht um eine Regel, und wichtige Nachrichten können sie jederzeit außer Kraft setzen.
+
+Die asiatische Session ist auch deshalb wichtig, weil sie die europäische Eröffnung vorbereitet. Spannen, die sich über Nacht in Tokio gebildet haben, werden oft zu Bezugspunkten, sobald London dazukommt. Einen genaueren Blick darauf, wie sich diese Session verhält und welche Paare Aufmerksamkeit verdienen, bietet unser ausführlicher Leitfaden zur [Forex-Session in Tokio und Asien](/de/blog/forex-session-tokio-asien).
+
+## Die London-Session
+
+London ist das Schwergewicht des Forex-Tages. Sein Zeitfenster in der Normalzeit reicht von 08:00 bis 17:00 GMT, und gemessen am Umsatz ist es der größte Devisenhandelsplatz der Welt. Das ist keine Legende, sondern gemessen. Der **BIS Triennial Central Bank Survey** der Bank für Internationalen Zahlungsausgleich zeigt immer wieder, dass das Vereinigte Königreich den mit Abstand größten Anteil am weltweiten Devisenumsatz abwickelt, weit vor jedem anderen Land. Die Erhebung können Sie direkt unter https://www.bis.org/statistics/rpfx22.htm nachlesen.
+
+Mit der Eröffnung Londons steigt das Volumen sprunghaft an. Trader beschreiben die London-Eröffnung oft als den Moment, in dem der Tag eine echte Richtung bekommt, weil nun genug Liquidität vorhanden ist, um Trends zu etablieren, die den Rest der Session tragen. Die Spreads der Hauptwährungspaare werden meist enger, je mehr Marktteilnehmer einsteigen, und Euro, Britisches Pfund und Schweizer Franken werden rege gegen den US-Dollar gehandelt. EUR/USD und GBP/USD gehören in diesen Stunden zu den aktivsten Paaren der Welt.
+
+Die London-Session schließt zudem an die Frankfurter Eröffnung eine Stunde zuvor an, sodass sich das europäische Momentum bereits aufbaut, wenn London voll in Gang kommt. Ab dem Vormittag können Wirtschaftsdaten aus der Eurozone und dem Vereinigten Königreich kräftige Bewegungen auslösen: Inflationszahlen, Äußerungen der Bank of England und Ähnliches. Die Bank of England veröffentlicht ihren Terminkalender und ihre Entscheidungen unter https://www.bankofengland.co.uk.
+
+Weil rund um die London-Eröffnung so viel passiert, richten viele Trader ihren Tag danach aus. Einen gezielten Blick darauf, wann genau diese Session beginnt und wie sich ihre erste Stunde verhält, finden Sie in unserem Begleitartikel [wann die London-Session öffnet](/de/blog/wann-oeffnet-die-london-session).
+
+## Die New-York-Session
+
+New York ist die zweite Säule des globalen Devisenhandels und läuft in der Normalzeit von 13:00 bis 22:00 GMT. Der US-Dollar dominiert diese Session: Er steht auf einer Seite der großen Mehrheit aller Devisengeschäfte, daher wirken sich US-Konjunkturdaten und die Geldpolitik der Federal Reserve auf den gesamten Markt aus. Veröffentlichungen wie die Arbeitsmarktdaten (Non-Farm Payrolls), Inflationsberichte und Zinsentscheidungen der Fed sorgen oft für die heftigste Volatilität der Woche, und sie fallen in die New Yorker Handelszeit. Die Federal Reserve veröffentlicht ihren Kalender unter https://www.federalreserve.gov.
+
+Die New-York-Session startet meist mit viel Schwung und dünnt dann im Laufe des Nachmittags allmählich aus, wenn die europäischen Handelsdesks Feierabend machen. Die ersten Stunden sind gerade deshalb so lebhaft, weil London parallel noch geöffnet ist. Sobald London gegen 17:00 GMT schließt, beginnt die Liquidität abzufließen, und der spätere Teil der New-York-Session, die Strecke bis zum Schluss um 22:00 GMT, ist in der Regel die ruhigste Phase des gesamten Handelstages.
+
+Diese Überschneidung zwischen London und New York ist das wichtigste Zeitfenster des Forex-Tages und verdient daher einen eigenen Abschnitt.
+
+## Session-Überschneidungen: Wo sich das Volumen konzentriert
+
+Die mit Abstand geschäftigste Phase des Handelstages ist die **Überschneidung von London und New York**, die ungefähr von 13:00 bis 17:00 GMT reicht. In diesen vier Stunden sind die beiden größten Finanzzentren gleichzeitig geöffnet. Die Liquidität ist am tiefsten, die Spreads der Hauptwährungspaare sind meist am engsten, und die Kursbewegungen sind am nachhaltigsten. Für viele Trader ist dieses Zeitfenster der Kern des Tages, besonders bei Dollar- und Euro-Paaren.
+
+Früher am Tag gibt es eine zweite, kleinere Überschneidung: die **Überschneidung von Sydney und Tokio** am asiatischen Vormittag. Sie ist weit weniger aktiv als das Fenster London und New York, bringt aber zusätzliche Liquidität in Yen- und Australische-Dollar-Paare und kann spürbare Bewegungen auslösen, wenn regionale Nachrichten eintreffen.
+
+Überschneidungen sind wichtig, weil sie die Aktivität zweier Regionen in dieselben Uhrzeiten bündeln. Mehr Teilnehmer bedeuten mehr Volumen, und mehr Volumen bedeutet in der Regel eine reibungslosere Ausführung und klarere Trends. Die Entscheidung, wann Sie handeln, läuft oft darauf hinaus, welche Überschneidung zu Ihrem Zeitplan und Ihrer Strategie passt.
+
+## So sehen Sie die Sessions in Ihrer eigenen Zeitzone
+
+Alle Session-Zeiten in diesem Artikel sind in GMT angegeben, weil GMT der gemeinsame Bezugspunkt des gesamten Marktes ist. Sie handeln aber nicht in GMT, sondern nach Ihrer eigenen Uhr, wo auch immer Sie leben. Diese Zeitfenster von Hand umzurechnen ist fehleranfällig, und es gibt noch einen weiteren Haken: die Sommerzeit.
+
+Da jede Session an die Ortszeit ihrer eigenen Stadt gebunden ist, verschieben sich die GMT-Fenster um eine Stunde, sobald eine Region ihre Uhren umstellt. Das Vereinigte Königreich und die Europäische Union stellen am letzten Sonntag im März und im Oktober um; die Vereinigten Staaten am zweiten Sonntag im März und am ersten Sonntag im November; Australien stellt in die entgegengesetzte Richtung um. Eine einmal gedruckte Tabelle ist daher in jedem Jahr mehrere Wochen lang falsch.
+
+Der verlässliche Ausweg besteht darin, die Umrechnung einem Tool zu überlassen. Unser [Live-Tool für die Forex-Handelszeiten](/de) zeigt alle vier Sessions in Echtzeit in Ihrer eigenen Zeitzone an und berücksichtigt die Sommerzeit automatisch, sodass die angezeigten Zeiten immer aktuell sind.
+
+## Häufig gestellte Fragen
+
+**Wie viele Forex-Handelssitzungen gibt es?**
+Es gibt vier große Sessions: Sydney, Tokio, London und New York, jeweils benannt nach einem führenden Finanzzentrum. Frankfurt wird manchmal als Auftakt der europäischen Session mitgezählt, meist aber der London-Session zugerechnet.
+
+**Welche Forex-Session ist am volatilsten?**
+London und New York sind die volatilsten Sessions, und die Volatilität erreicht ihren Höhepunkt während ihrer Überschneidung, etwa von 13:00 bis 17:00 GMT, wenn beide Zentren gleichzeitig geöffnet sind und die Liquidität am tiefsten ist.
+
+**Überschneiden sich die Forex-Sessions?**
+Ja. Die wichtigste Überschneidung ist die von London und New York, etwa von 13:00 bis 17:00 GMT. Daneben gibt es eine kleinere Überschneidung von Sydney und Tokio am asiatischen Vormittag. In diesen Phasen ist das Handelsvolumen am höchsten.
+
+**Welche Session eignet sich am besten für Einsteiger?**
+Eine allgemeingültige Antwort gibt es nicht; es hängt von Ihrer Zeitzone und den Paaren ab, die Sie verfolgen. Viele Einsteiger finden, dass die London-Session die klarsten Trends und die engsten Spreads bietet, während die ruhigeren Stunden in Sydney und Tokio ein entspannteres Umfeld zum Lernen sein können. Am besten beobachten Sie jede Session in Ihrer eigenen Ortszeit und prüfen, welche zu Ihnen passt.
+
+**Warum verschieben sich die Session-Zeiten im Laufe des Jahres?**
+Die Sessions sind an die Ortszeit der jeweiligen Stadt gebunden. Stellt eine Region ihre Uhren auf Sommerzeit um, verschiebt sich das GMT-Fenster um eine Stunde. Deshalb ist ein Live-Tool einer gedruckten Tabelle überlegen.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Hafta içi döviz piyasası aslında hiç uyumaz. İşlemler haftada beş gün, günde 24 saat sürer; dünya döndükçe bir finans merkezinden diğerine geçer. Yine de deneyimli yatırımcılar piyasayı nadiren tek parça bir zaman dilimi olarak düşünür. Onlar **seanslar** üzerinden düşünür: Sidney, Tokyo, Londra ve New York. Her birinin kendine özgü bir ritmi, kendi para birimleri ve kendi hareketlilik düzeyi vardır. Bu yazıda dört büyük forex işlem seansının ne olduğunu, hangi saatlerde açık olduğunu, nasıl çakıştığını ve ne zaman işlem yapacağınıza karar verirken bu ayrımın neden önemli olduğunu ele alıyoruz.
+
+## Forex neden tek bir piyasa değil de seanslar halinde işler
+
+Borsadan farklı olarak forex’in merkezi bir binası ya da tek bir açılış zili yoktur. İşlemler tezgah üstü (OTC) piyasada, bankalardan, aracı kurumlardan ve kurumlardan oluşan küresel bir ağ üzerinden gerçekleşir. Likidite, yani işlem yapmaya hazır alıcı ve satıcıların hacmi, dünya genelinde iş gününü takip eder. Bir bölgedeki büyük bankalar kapılarını açtığında oradaki hareketlilik artar. Akşam kapandıklarında ise azalır.
+
+Bunu bir bayrak yarışı gibi düşünebilirsiniz. Avustralya’da iş günü sona ererken Asya hareketlenir. Tokyo sakinleşmeye başladığında Avrupa uyanır. Londra öğleden sonrasını yaşarken New York açılır. Bu devir teslim her iş günü tekrarlanır ve piyasanın, hiçbir merkezin sürekli uyanık kalmasına gerek kalmadan, pazar akşamı açılıştan cuma akşamı kapanışa kadar kesintisiz açık kalabilmesinin nedeni budur.
+
+Hafta pazar günü 22:00 GMT’de, yani New York saatiyle 17:00’de, Sidney’in devreye girdiği anda başlar. Cuma günü yine 22:00 GMT’de, New York saatiyle 17:00’de kapanır ve hafta sonu boyunca kapalı kalır. Aslında seans yapısını anlamak, iş gününün dünya çevresinde nasıl dolaştığını anlamaktan ibarettir.
+
+## Dört büyük forex seansına genel bakış
+
+Yatırımcıların çoğunun takip ettiği dört seans, büyük finans merkezlerine bağlıdır. Aşağıdaki tablo standart saat dönemindeki GMT aralıklarını gösterir. Her seans GMT’yi değil kendi şehrinin yerel saatini takip ettiği için yaz saati uygulaması yürürlükteyken bu aralıklar bir saat kayar.
+
+| Seans | Finans merkezi | Saatler (GMT, standart saat) | Karakter |
+|---|---|---|---|
+| Sidney | Sidney | 22:00 - 07:00 | Haftayı açar, likidite daha düşük, AUD ve NZD ağırlıklı |
+| Tokyo | Tokyo | 00:00 - 09:00 | Asya işlemleri, JPY pariteleri hareketli, çoğu zaman yatay seyir |
+| Londra | Londra | 08:00 - 17:00 | Hacim olarak en büyüğü, günün yönünü büyük ölçüde belirler |
+| New York | New York | 13:00 - 22:00 | USD odaklı, yüksek volatilite, Londra ile çakışır |
+
+Adını anmaya değer beşinci bir merkez daha var. Avrupa seansının merkezi olan **Frankfurt**, Londra’dan yaklaşık bir saat önce, 07:00 GMT civarında açılır. Pek çok yatırımcı Avrupa seansının Frankfurt ile başladığını ve Londra katıldığında derinleştiğini kabul eder. Avrupa’daki işlem hacmine Londra hakim olduğu için seansın tamamına genellikle kısaca Londra seansı denir. Bu aralıklar bilerek iç içe geçer ve göreceğimiz gibi günün en önemli işlemleri genellikle bu çakışmalarda yaşanır.
+
+## Sidney seansı
+
+Sidney işlem haftasını açar. GMT’ye göre pazar akşamı devreye giren Sidney, hafta sonundan sonra yeniden açılan ilk büyük merkezdir ve standart saat dönemindeki aralığı 22:00 ile 07:00 GMT arasıdır. Bu da Sidney’i yoğun bir hareketlilik patlamasından çok, küresel bayrak yarışının sakin başlangıcı yapar.
+
+Yalnızca Sidney’in açık olduğu saatlerde likidite genellikle günün diğer tüm zamanlarından daha düşüktür. Avustralya ve Yeni Zelanda ekonomileri büyük ve önemlidir, ancak döviz piyasaları Avrupa’nın ya da Amerika’nın piyasalarından küçüktür; bu yüzden fiyat aralıkları daha dar, hareketler daha ölçülü olma eğilimindedir. Bu seansla en çok özdeşleşen para birimleri Avustralya doları (AUD) ve Yeni Zelanda doları (NZD), ayrıca bunların ABD doları ve Japon yeni karşısındaki pariteleridir.
+
+Sidney seansı yatırımcılar için günün ilk havasını belirler. Avustralya ve Yeni Zelanda’dan gelen haberler, örneğin Avustralya Merkez Bankası’nın (RBA) kararları, aksi halde sakin olan bir ortamda bu pariteleri sert biçimde hareket ettirebilir. Avustralya doları hammaddelerle yakından bağlantılı olduğu için emtia fiyatları da burada önem taşır.
+
+Sidney güney yarımkürede olduğu için yaz saati takvimi Avrupa ve Amerika’nınkinin tersine işler. Kuzeydeki saatler geri alınırken Avustralya’daki saatler ileri alınır; bu nedenle Sidney seansının GMT aralığı, Londra ya da New York aralıklarından farklı zamanlarda kayar. Basılı ve sabit bir seans saatleri tablosunun fark ettirmeden eskimesinin nedenlerinden biri de budur.
+
+## Tokyo (Asya) seansı
+
+Asya seansının merkezi olan Tokyo, standart saat döneminde 00:00 ile 09:00 GMT arasında açıktır. Sidney’in son saatleriyle çakışır ve işlem gününün gerçekten büyük ilk likidite havuzunu getirir. Tokyo dünyanın en büyük döviz işlem merkezlerinden biridir; bu yüzden Asya seansı tek başına Sidney’den çok daha fazla ağırlık taşır.
+
+Doğal odak noktası Japon yenidir (JPY). USD/JPY, EUR/JPY ve AUD/JPY gibi pariteler, Japon bankaları, ihracatçılar ve kurumsal akışlar sayesinde yerel olarak en hareketli dönemlerini bu saatlerde yaşar. Asya’daki ekonomik faaliyetin büyük kısmı bu zaman diliminde gerçekleştiği için Çin’den ve bölgenin diğer ülkelerinden gelen veriler de piyasa havasını etkiler.
+
+Tokyo seansı görece yatay seyretmesiyle bilinir. Büyük yönlü hareketler Avrupa ve ABD seanslarına göre daha az görülür ve fiyatlar çoğu zaman belirli seviyeler arasında işlem görür. Bu durum yatay piyasa stratejilerini sevenlerin işine gelir, güçlü trend arayanları ise sıkar. Bu bir kural değil, genel bir eğilimdir ve önemli bir haber her an bu tabloyu değiştirebilir.
+
+Asya seansı Avrupa açılışına zemin hazırladığı için de önemlidir. Gece Tokyo’da oluşan fiyat aralıkları, Londra devreye girdiğinde çoğu zaman referans noktasına dönüşür. Bu seansın nasıl davrandığına ve hangi paritelerin dikkat gerektirdiğine daha yakından bakmak için [Tokyo ve Asya forex seansı](/tr/blog/tokyo-asya-forex-seansi) rehberimize göz atın.
+
+## Londra seansı
+
+Londra, forex gününün ağır topudur. Standart saat dönemindeki aralığı 08:00 ile 17:00 GMT arasındadır ve işlem hacmi bakımından dünyanın en büyük döviz merkezidir. Bu bir efsane değil, ölçülmüş bir gerçektir. Uluslararası Ödemeler Bankası’nın yürüttüğü **BIS Üç Yıllık Merkez Bankası Anketi**, küresel döviz işlem hacminin en büyük payının, diğer tüm ülkelerin açık ara önünde, sürekli olarak Birleşik Krallık’ta gerçekleştiğini gösterir. Anketi doğrudan https://www.bis.org/statistics/rpfx22.htm adresinden okuyabilirsiniz.
+
+Londra açıldığında hacim hızla yükselir. Yatırımcılar Londra açılışını çoğu zaman günün gerçek yönünü bulduğu an olarak tanımlar, çünkü seansın geri kalanında süren trendleri oluşturacak kadar derin bir likidite vardır. Piyasaya daha fazla katılımcı girdikçe majör paritelerdeki spreadler genellikle daralır; euro, İngiliz sterlini ve İsviçre frangı ABD doları karşısında yoğun işlem görür. EUR/USD ve GBP/USD bu saatlerde dünyanın en hareketli pariteleri arasında yer alır.
+
+Londra seansı bir saat önceki Frankfurt açılışını da içine alır; bu yüzden Londra tam anlamıyla devreye girdiğinde Avrupa’daki ivme zaten oluşmaya başlamıştır. Sabahın ortasından itibaren Euro Bölgesi ve Birleşik Krallık’tan gelen ekonomik veriler sert hareketlere yol açabilir: enflasyon rakamları, İngiltere Merkez Bankası’ndan (Bank of England) gelen açıklamalar ve benzerleri. İngiltere Merkez Bankası takvimini ve kararlarını https://www.bankofengland.co.uk adresinde yayımlar.
+
+Londra açılışı civarında bu kadar çok şey olduğu için birçok yatırımcı gününü bu saate göre planlar. Bu seansın tam olarak ne zaman başladığına ve açılış saatinin nasıl seyrettiğine odaklanan bir inceleme için [Londra seansı saat kaçta açılır](/tr/blog/londra-seansi-saat-kacta-acilir) başlıklı yazımıza bakın.
+
+## New York seansı
+
+New York, küresel forex piyasasının ikinci ayağıdır ve standart saat döneminde 13:00 ile 22:00 GMT arasında açıktır. Bu seansa ABD doları hakimdir; dolar tüm döviz işlemlerinin büyük çoğunluğunda taraflardan biri olduğu için ABD ekonomik verileri ve Fed politikası tüm piyasaya yayılır. Tarım dışı istihdam (non-farm payrolls), enflasyon raporları ve Fed faiz kararları gibi açıklamalar çoğu zaman haftanın en sert volatilitesini yaratır ve New York saatlerinde gelir. Federal Rezerv takvimini https://www.federalreserve.gov adresinde yayımlar.
+
+New York seansı genellikle yüksek bir enerjiyle açılır, ardından öğleden sonra ilerledikçe ve Avrupa’daki masalar günü kapattıkça yavaş yavaş durulur. Açılış saatlerinin bu kadar canlı olmasının nedeni tam da Londra’nın hâlâ açık olmasıdır. Londra 17:00 GMT civarında kapandığında likidite çekilmeye başlar ve New York seansının son kısmı, yani 22:00 GMT kapanışına giden süre, genellikle tüm işlem gününün en sakin dönemidir.
+
+Londra ile New York arasındaki bu çakışma forex gününün en önemli zaman dilimidir, bu yüzden ayrı bir bölümü hak ediyor.
+## Seans çakışmaları: hacmin yoğunlaştığı yer
+
+İşlem gününün en yoğun dönemi, kabaca 13:00 ile 17:00 GMT arasında yaşanan **Londra-New York çakışmasıdır**. Bu dört saat boyunca dünyanın en büyük iki finans merkezi aynı anda açıktır. Likidite en derin seviyesindedir, majör paritelerdeki spreadler genellikle en dar halindedir ve fiyat hareketleri en istikrarlı biçimde sürer. Pek çok yatırımcı için, özellikle dolar ve euro paritelerinde, bu zaman dilimi günün özüdür.
+
+Günün daha erken saatlerinde ikinci, daha küçük bir çakışma da vardır: Asya sabahındaki **Sidney-Tokyo çakışması**. Londra-New York aralığına göre çok daha sakindir, ancak yen ve Avustralya doları paritelerine likidite katar ve bölgesel bir haber geldiğinde kayda değer hareketler yaratabilir.
+
+Çakışmalar önemlidir, çünkü iki bölgenin hareketliliğini aynı saatlere sıkıştırır. Daha fazla katılımcı daha fazla hacim demektir; daha fazla hacim de genellikle daha akıcı emir gerçekleşmesi ve daha net trendler anlamına gelir. Ne zaman işlem yapacağınızı seçmek çoğu zaman hangi çakışmanın programınıza ve stratejinize uyduğuna bağlıdır.
+## Seansları kendi saat diliminizde görmek
+
+Bu yazıdaki tüm seans aralıkları GMT olarak verilmiştir, çünkü GMT tüm piyasanın paylaştığı ortak referanstır. Ancak siz GMT ile işlem yapmazsınız. Nerede yaşıyorsanız kendi saatinizle işlem yaparsınız. Bu aralıkları elle çevirirken hata yapmak kolaydır, üstelik işi zorlaştıran bir ayrıntı daha vardır: yaz saati uygulaması.
+
+Her seans kendi şehrinin yerel saatine bağlı olduğu için, bir bölge saatlerini değiştirdiğinde GMT aralıkları bir saat kayar. Birleşik Krallık ve Avrupa Birliği saat değişikliğini mart ve ekim aylarının son pazar günü yapar; ABD mart ayının ikinci pazarı ve kasım ayının ilk pazarı geçiş yapar; Avustralya ise ters yönde hareket eder. Bu yüzden bir kez basılmış bir tablo her yıl birkaç hafta boyunca yanlıştır.
+Tüm bunlardan kurtulmanın güvenilir yolu, çevirme işini bir araca bırakmaktır. [Canlı forex piyasa saatleri aracımız](/tr) dört seansı kendi saat diliminizde gerçek zamanlı olarak gösterir ve yaz saatine göre otomatik olarak ayarlanır; böylece gördüğünüz saatler her zaman günceldir.
+
+## Sıkça sorulan sorular
+
+**Kaç tane forex işlem seansı vardır?**
+Her biri önde gelen bir finans merkezinin adını taşıyan dört büyük seans vardır: Sidney, Tokyo, Londra ve New York. Frankfurt bazen Avrupa seansını açan merkez olarak sayılır, ancak genellikle Londra’nın içinde değerlendirilir.
+
+**En volatil forex seansı hangisidir?**
+En volatil seanslar Londra ve New York’tur. Volatilite, iki merkezin aynı anda açık olduğu ve likiditenin en derin olduğu, kabaca 13:00 ile 17:00 GMT arasındaki çakışma sırasında zirve yapar.
+
+**Forex seansları çakışır mı?**
+Evet. En büyüğü kabaca 13:00 ile 17:00 GMT arasındaki Londra ve New York çakışmasıdır. Asya sabahında daha küçük bir Sidney-Tokyo çakışması da vardır. İşlem hacmi en çok bu çakışmalarda yükselir.
+
+**Yeni başlayanlar için en iyi seans hangisidir?**
+Tek bir doğru cevap yoktur; bu, saat diliminize ve takip ettiğiniz paritelere bağlıdır. Yeni başlayanların çoğu en net trendleri ve en dar spreadleri Londra seansında bulur; daha sakin olan Sidney ve Tokyo saatleri ise öğrenmek için daha huzurlu bir ortam sunabilir. En iyi yaklaşım, her seansı kendi saatinizle izleyip size hangisinin uyduğunu görmektir.
+
+**Seans saatleri yıl içinde neden kayar?**
+Seanslar her şehrin yerel saatine bağlıdır; bu yüzden bir bölge yaz saati için saatlerini değiştirdiğinde GMT aralığı bir saat kayar. Canlı bir aracın basılı bir tablodan daha iyi olmasının nedeni budur.
+
+*Bu yazı yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -385,24 +781,46 @@ Les séances sont liées à l’heure locale de chaque ville : quand une région
       en: "what-time-does-the-london-session-open",
       es: "a-que-hora-abre-la-sesion-de-londres",
       fr: "a-quelle-heure-ouvre-la-seance-de-londres",
+      pt: "que-horas-abre-a-sessao-de-londres",
+      it: "a-che-ora-apre-la-sessione-di-londra",
+      de: "wann-oeffnet-die-london-session",
+      tr: "londra-seansi-saat-kacta-acilir",
     },
     title: {
       en: "What Time Does the London Session Open in Your Timezone?",
       es: "¿A qué hora abre la sesión de Londres en tu zona horaria?",
       fr: "À quelle heure ouvre la séance de Londres ? GMT et BST",
+      pt: "Que Horas Abre a Sessão de Londres no Seu Fuso Horário?",
+      it: "A che ora apre la sessione di Londra nel tuo fuso orario?",
+      de: "Wann öffnet die London-Session in Ihrer Zeitzone?",
+      tr: "Londra Seansı Sizin Saat Diliminizde Saat Kaçta Açılır?",
     },
     description: {
       en: "The London session open time is 08:00 UK local, 08:00 GMT in winter and 07:00 GMT in summer. See the London open in EST, IST and more, plus why BST shifts it.",
       es: "La sesión de Londres abre a las 08:00 hora del Reino Unido: 08:00 GMT en invierno y 07:00 GMT en verano. Ve la apertura en EST, IST y por qué el BST la mueve.",
       fr: "La séance de Londres ouvre à 08:00 heure locale, soit 08:00 GMT en hiver et 07:00 GMT en été. Horaires dans votre fuseau, effet BST et paires clés.",
+      pt: "A sessão de Londres abre às 08:00 no horário do Reino Unido: 08:00 GMT no inverno e 07:00 GMT no verão. Veja a abertura em EST, IST e mais, e o efeito do BST.",
+      it: "La sessione di Londra apre alle 08:00 ora britannica: 08:00 GMT d’inverno, 07:00 GMT d’estate. Scopri l’apertura in EST, IST e altri fusi e perché la BST la sposta.",
+      de: "Die London-Session öffnet um 08:00 Uhr britischer Ortszeit: im Winter 08:00 GMT, im Sommer 07:00 GMT. Mit Zeiten für EST, IST und mehr und dem BST-Effekt.",
+      tr: "Londra seansı İngiltere saatiyle 08:00’de açılır: kışın 08:00 GMT, yazın 07:00 GMT. Açılışın EST, IST ve diğer dilimlerdeki saatini ve BST etkisini görün.",
     },
     date: "2026-07-24",
-    localeDate: { fr: "2026-09-14" },
+    localeDate: {
+      fr: "2026-09-14",
+      pt: "2026-10-15",
+      tr: "2026-10-26",
+      de: "2026-11-02",
+      it: "2026-11-12",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "London"],
       es: ["Sesiones", "Londres"],
       fr: ["Séances", "Londres"],
+      pt: ["Sessões", "Londres"],
+      it: ["Sessioni", "Londra"],
+      de: ["Sessions", "London"],
+      tr: ["Seanslar", "Londra"],
     },
     cover: "/blog/what-time-does-the-london-session-open.svg",
     body: {
@@ -703,6 +1121,402 @@ Elle ferme vers 17:00 heure locale britannique, soit 17:00 GMT en hiver et 16:00
 L’outil [forexmarkethours.app](/) convertit l’ouverture et la clôture de Londres, comme toutes les autres séances, à votre heure locale automatiquement, et il s’ajuste aux changements d’heure des deux côtés.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sessão de Londres abre às 08:00 no horário local do Reino Unido. Isso equivale a 08:00 GMT no inverno e 07:00 GMT no verão, durante o British Summer Time. Como a referência é o relógio de Londres, a abertura cai em uma hora diferente no seu fuso horário conforme a época do ano. Este guia mostra o horário exato da abertura de Londres nos principais fusos e explica por que ele muda.
+
+Para a maioria dos traders de varejo, a sessão de Londres é o bloco mais importante do dia de negociação. Ela concentra a maior fatia do volume global, define o tom da manhã europeia e desemboca direto na sobreposição da tarde com Nova York. Saber exatamente quando ela abre onde você mora elimina uma fonte comum de confusão, principalmente nas semanas próximas às mudanças de horário de verão, quando o valor em GMT muda uma hora sem alarde.
+
+## Horário da sessão de Londres: abertura e fechamento
+
+A sessão de Londres vai de aproximadamente **08:00 a 17:00 no horário local do Reino Unido**, todos os dias úteis. Esse é o ponto de referência que nunca muda. Não importa o que diga o calendário, o dia de negociação em Londres é organizado em torno do próprio relógio da cidade: começa cedo, na manhã britânica, e vai perdendo força no fim da tarde.
+
+O que costuma confundir é como esse horário local se traduz em GMT. No inverno, o Reino Unido segue o Greenwich Mean Time, então 08:00 locais também são **08:00 GMT**, e o fechamento às 17:00 locais é **17:00 GMT**. No verão, o país adota o British Summer Time, que é GMT+1, e a mesma abertura às 08:00 locais passa a ser **07:00 GMT**, enquanto o fechamento às 17:00 locais vira **16:00 GMT**.
+
+Ou seja, há duas coisas para ter em mente ao mesmo tempo. A janela local de Londres fica parada, mais ou menos entre 08:00 e 17:00, o ano inteiro. Já a janela em GMT é de 08:00 a 17:00 no inverno e de 07:00 a 16:00 no verão. As duas estão corretas; elas só descrevem a sessão a partir de referências diferentes. Se você pensa no horário local de Londres, a sessão nunca parece se mexer. Se pensa em GMT, ou no seu próprio deslocamento fixo em relação a ele, a sessão parece andar uma hora duas vezes por ano.
+
+## Por que a abertura de Londres é às 07:00 ou 08:00 GMT: o efeito do BST
+
+A abertura de Londres alterna entre 07:00 e 08:00 GMT por causa do horário de verão britânico, conhecido como British Summer Time, ou BST.
+
+Durante parte do ano, o Reino Unido segue o Greenwich Mean Time, e o GMT é a base a partir da qual o mundo inteiro define seus deslocamentos. Enquanto o país está em GMT, o horário local de Londres e o GMT são idênticos, então a abertura às 08:00 locais é às 08:00 GMT. Aí, no último domingo de março, os relógios britânicos são adiantados em uma hora e o país passa para o BST, que é GMT+1. A programação local não muda, então o mercado continua abrindo às 08:00 em Londres, mas como o relógio pulou para a frente, esse mesmo momento agora corresponde a 07:00 GMT. No último domingo de outubro, os relógios são atrasados em uma hora, o Reino Unido volta ao GMT e a abertura retorna para 08:00 GMT.
+
+Na prática, durante cerca de sete meses do ano, do fim de março ao fim de outubro, a abertura de Londres em GMT acontece uma hora antes do que a maioria das tabelas de referência sugere. Se você consultar uma lista fixa de horários das sessões em GMT, vai ficar uma hora defasado o verão inteiro, a menos que a tabela indique o ajuste do BST.
+
+É também por isso que a abertura de Londres pode parecer flutuar no seu próprio fuso. Se o seu país muda os relógios em datas diferentes das do Reino Unido, haverá janelas curtas, geralmente de uma ou duas semanas na primavera e no outono, em que a diferença habitual entre Londres e a sua cidade fica uma hora fora do normal. As datas oficiais de mudança no Reino Unido são publicadas pelo governo em [gov.uk/when-do-the-clocks-change](https://www.gov.uk/when-do-the-clocks-change).
+
+## A abertura de Londres nos principais fusos horários
+
+Como a sessão de Londres segue o horário local do Reino Unido, a abertura cai em uma hora diferente em cada parte do mundo, e muda uma hora quando o Reino Unido entra ou sai do BST. A tabela abaixo mostra a abertura de Londres em vários fusos importantes, tanto no caso de inverno, quando Londres está em GMT, quanto no de verão, quando Londres está em BST.
+
+| Sua cidade / fuso | Abertura de Londres (inverno no Reino Unido, GMT) | Abertura de Londres (verão no Reino Unido, BST) |
+| --- | --- | --- |
+| Londres (horário local do Reino Unido) | 08:00 | 08:00 |
+| Nova York (EST/EDT) | 03:00 | 02:00 |
+| Chicago (CST/CDT) | 02:00 | 01:00 |
+| Los Angeles (PST/PDT) | 00:00 | 23:00 (dia anterior) |
+| Frankfurt / Paris (CET/CEST) | 09:00 | 09:00 |
+| Istambul (TRT) | 11:00 | 10:00 |
+| Dubai (GST) | 12:00 | 11:00 |
+| Mumbai (IST) | 13:30 | 12:30 |
+| Singapura (SGT) | 16:00 | 15:00 |
+| Sydney (AEST/AEDT) | 19:00 | 17:00 |
+
+Algumas dessas linhas merecem um comentário. Nova York e os outros fusos da América do Norte seguem seu próprio calendário de horário de verão, então a relação limpa de uma hora mostrada aqui vale na maior parte do ano, mas se quebra nas curtas janelas de primavera e outono em que Reino Unido e Estados Unidos mudam os relógios em datas diferentes. Istambul e Dubai mantêm um deslocamento fixo o ano todo, então suas colunas apenas acompanham a mudança do BST britânico. Sydney segue o calendário do Hemisfério Sul, com verão e inverno invertidos em relação ao Reino Unido, e é por isso que suas duas colunas diferem em duas horas, e não em uma.
+
+Em vez de acompanhar tudo isso na mão, a ferramenta [forexmarkethours.app](/pt) converte todas as sessões, incluindo a abertura e o fechamento de Londres, para o seu fuso horário automaticamente e acompanha as mudanças de horário de verão dos dois lados. Você também pode conferir o panorama completo no nosso guia de [horário do forex por fuso horário](/pt/blog/horario-do-forex-por-fuso-horario).
+
+## Por que a abertura de Londres movimenta o mercado
+
+Em volume negociado, Londres é o maior centro de câmbio do mundo. O Banco de Compensações Internacionais (BIS), em sua Pesquisa Trienal dos Bancos Centrais, aponta de forma consistente o Reino Unido como responsável pela maior fatia da atividade global de câmbio, bem à frente de qualquer outro centro financeiro. Você pode consultar a pesquisa diretamente em [bis.org](https://www.bis.org/statistics/rpfx22.htm).
+
+Essa concentração de atividade explica por que a abertura de Londres pesa tanto. Quando a sessão começa, um grande conjunto de bancos, fundos e mesas corporativas entra em operação ao mesmo tempo, e o volume de ordens dispara em relação às horas mais tranquilas que vêm antes. Algumas coisas costumam acontecer em seguida. A abertura muitas vezes define a direção do dia ou, pelo menos, desenha a faixa em torno da qual as sessões europeia e americana vão operar. E, com a chegada de liquidez de verdade, os spreads dos principais pares normalmente se estreitam, porque mais participantes estão dispostos a cotar os dois lados do mercado.
+
+O contraste com as horas anteriores à abertura é gritante. O fim da sessão asiática e a calmaria antes de a Europa acordar costumam ser mais finos, com spreads mais largos e preços mais erráticos. Quando Londres chega, o mercado em geral fica mais ordenado e contínuo, ainda que também possa ficar mais volátil nessa primeira hora. Liquidez profunda somada a movimentos relevantes: é essa combinação que torna a sessão central na estrutura do dia de negociação.
+
+Se você quiser ver como Londres se encaixa ao lado de Sydney, Tóquio, Frankfurt e Nova York, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) apresenta cada uma delas e como elas passam o bastão umas para as outras ao longo das 24 horas.
+
+## A sobreposição Londres-Nova York
+
+A janela mais movimentada de todo o dia de negociação é a sobreposição entre Londres e Nova York. Durante as horas em que os dois centros estão abertos ao mesmo tempo, aproximadamente **13:00 a 17:00 GMT**, os dois maiores polos de liquidez do câmbio estão ativos juntos, e o volume atinge seu pico diário.
+
+Nessa sobreposição, em geral você encontra os spreads mais estreitos e os movimentos maiores e mais sustentados, sobretudo nos pares com dólar e nos cruzamentos de euro e libra. Os traders europeus ainda estão em suas mesas enquanto os americanos acabam de chegar, então o fluxo de ordens das duas regiões se soma. A sobreposição também costuma coincidir com a divulgação de dados econômicos dos EUA no começo da manhã de Nova York, o que pode acrescentar picos bruscos de movimento a um volume que já é alto.
+
+Como se apoia no volume de Londres, a sobreposição herda boa parte do que torna a sessão de Londres importante e ainda amplifica tudo isso.
+## Melhores pares de moedas durante a sessão de Londres
+
+A sessão de Londres coloca naturalmente em destaque os pares que envolvem a libra e o euro, já que são essas as moedas cujos mercados domésticos estão abertos e mais ativos nesse horário.
+
+**GBP/USD** é a expressão mais direta da sessão. Com o mercado britânico a todo vapor e os participantes americanos chegando ao longo do dia, o par costuma ter forte participação, boa liquidez e movimentos nítidos. Ele também reage na hora aos dados econômicos do Reino Unido, que geralmente saem no início da manhã, perto da abertura.
+
+**EUR/USD** é o par de moedas mais negociado do mundo, e a sessão de Londres é uma de suas janelas mais ativas. Frankfurt e Paris estão abertas junto com Londres, então o fluxo de ordens europeu está no máximo, e o par geralmente oferece spreads muito estreitos e liquidez profunda durante toda a sessão.
+
+**EUR/GBP** é um cruzamento puramente europeu, negociado quase inteiramente no horário europeu, o que faz da sessão de Londres o seu habitat natural. Ele é útil para quem quer avaliar a força relativa do euro e da libra sem o dólar no meio, embora costume se mover em uma faixa mais estreita do que os principais pares com dólar.
+
+Além desses, outros cruzamentos de euro e libra, como EUR/JPY e GBP/JPY, também têm atividade elevada no horário de Londres. O fio condutor é simples: a sessão favorece os pares cujos mercados de origem estão abertos e, no caso de Londres, isso significa acima de tudo o euro e a libra.
+## Operando a abertura de Londres: observações práticas
+
+A hora ou duas em torno da abertura de Londres é um dos trechos mais agitados do dia, e isso traz implicações práticas que vale a pena entender.
+
+A volatilidade costuma subir quando a sessão começa. A primeira hora depois das 08:00 no horário do Reino Unido muitas vezes traz alguns dos movimentos direcionais mais fortes da manhã, porque as ordens acumuladas na sessão asiática e o novo fluxo europeu chegam ao mercado juntos. Isso pode produzir tendências limpas, mas também reversões bruscas e arrancadas falsas, então os primeiríssimos minutos podem ser ruidosos até que um quadro mais claro se forme.
+
+As notícias pesam muito na abertura. Os indicadores econômicos do Reino Unido, como inflação, emprego e crescimento, costumam sair na janela de **07:00 a 08:00 GMT** no inverno, ou na manhã local equivalente, e podem mexer forte com a libra justamente quando a sessão está começando. Comunicados e dados do [Bank of England](https://www.bankofengland.co.uk) entram na mesma categoria. Conhecer as divulgações programadas do dia ajuda a explicar movimentos repentinos que, de outra forma, pareceriam aleatórios.
+
+Nada disso é uma recomendação para operar a abertura de alguma forma específica. Volatilidade maior significa movimentos maiores nas duas direções, e a faixa da primeira hora pode ser tanto uma fonte de risco quanto de oportunidade. A ideia aqui é apenas descrever o que costuma acontecer, não sugerir quando ou como alguém deve entrar ou sair de uma posição. São o seu próprio plano, a sua tolerância ao risco e as suas circunstâncias que devem guiar essas decisões.
+
+## Perguntas frequentes
+
+**Que horas é a abertura de Londres em EST?**
+No inverno britânico, quando Londres está em GMT, a abertura de Londres às 08:00 corresponde a 03:00 EST. No verão britânico, quando Londres está em BST, ela é às 02:00 EST, supondo que os EUA também estejam no horário de verão. Nas curtas janelas de primavera e outono em que Reino Unido e EUA mudam os relógios em datas diferentes, o horário exato pode ficar uma hora fora durante uma ou duas semanas.
+
+**A abertura de Londres muda com o horário de verão?**
+No horário local de Londres, não; ela fica em torno das 08:00 o ano todo. Em GMT, sim; é às 08:00 GMT no inverno e às 07:00 GMT no verão, por causa do British Summer Time. Por isso, no seu fuso horário a abertura muda uma hora duas vezes por ano, e possivelmente em momentos um pouco diferentes se o seu país mudar os relógios em outras datas.
+
+**A sessão de Londres é boa para iniciantes?**
+É a parte mais líquida e ativa do dia, o que significa spreads estreitos, mas também movimentos mais rápidos. Muitos traders acham natural acompanhar essa sessão porque acontece muita coisa nela, embora a volatilidade maior perto da abertura peça cuidado. Esta é uma informação geral, não uma orientação sobre se ela combina com a sua situação.
+
+**Quando fecha a sessão de Londres?**
+Ela fecha por volta das 17:00 no horário local do Reino Unido, o que equivale a 17:00 GMT no inverno e 16:00 GMT no verão, durante o BST.
+
+**Onde posso ver a abertura de Londres no meu fuso horário?**
+A ferramenta [forexmarkethours.app](/pt) converte a abertura e o fechamento de Londres, assim como todas as outras sessões, para o seu horário local automaticamente, e se ajusta às mudanças de horário de verão dos dois lados.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `La sessione di Londra apre alle 08:00 ora locale del Regno Unito. Significa 08:00 GMT d’inverno e 07:00 GMT d’estate, quando è in vigore l’ora legale britannica (British Summer Time). Dato che è ancorata all’orologio di Londra, l’apertura cade a un’ora diversa nel tuo fuso orario a seconda del periodo dell’anno. Questa guida ti mostra l’orario esatto dell’apertura di Londra nei principali fusi orari e ti spiega perché si sposta.
+
+Per la maggior parte dei trader retail, la sessione di Londra è il blocco più importante della giornata di trading. Concentra la quota più grande del volume mondiale, detta il tono della mattinata europea e poi sfocia direttamente nella sovrapposizione pomeridiana con New York. Sapere con precisione quando apre dove vivi elimina una fonte di confusione molto comune, soprattutto nelle settimane intorno ai cambi d’ora, quando il valore in GMT si sposta di un’ora senza che nessuno se ne accorga.
+
+## Orari della sessione di Londra: apertura e chiusura
+
+La sessione di Londra va all’incirca dalle **08:00 alle 17:00 ora locale britannica**, ogni giorno feriale. È questo il punto di riferimento che non cambia mai. Qualunque cosa dica il calendario, la giornata di trading londinese è costruita sull’orologio di Londra: apre di buon mattino e si spegne nel tardo pomeriggio.
+
+Quello che confonde molti è come questi orari locali si traducono in GMT. D’inverno il Regno Unito segue il Greenwich Mean Time, quindi le 08:00 locali sono anche le **08:00 GMT** e la chiusura delle 17:00 locali corrisponde alle **17:00 GMT**. D’estate il Regno Unito passa alla British Summer Time, che è GMT+1, per cui la stessa apertura delle 08:00 locali diventa le **07:00 GMT** e la chiusura delle 17:00 locali diventa le **16:00 GMT**.
+
+Ci sono quindi due cose da tenere a mente insieme. La finestra locale di Londra resta ferma, più o meno dalle 08:00 alle 17:00, tutto l’anno. La finestra in GMT, invece, va dalle 08:00 alle 17:00 d’inverno e dalle 07:00 alle 16:00 d’estate. Sono entrambe corrette: descrivono semplicemente la sessione da due sistemi di riferimento diversi. Se ragioni nell’ora locale di Londra, la sessione non sembra mai muoversi. Se ragioni in GMT, o nel tuo fuso con uno scarto fisso rispetto al GMT, la sessione sembra spostarsi di un’ora due volte l’anno.
+
+## Perché l’apertura di Londra è alle 07:00 o alle 08:00 GMT: l’effetto BST
+
+Il motivo per cui l’apertura di Londra oscilla tra le 07:00 e le 08:00 GMT è l’ora legale nel Regno Unito, chiamata British Summer Time, o BST.
+
+Per una parte dell’anno il Regno Unito segue il Greenwich Mean Time, e il GMT è la base rispetto alla quale tutto il mondo definisce il proprio scarto orario. Finché il Regno Unito è sul GMT, l’ora locale di Londra e il GMT coincidono, quindi l’apertura delle 08:00 locali è alle 08:00 GMT. Poi, l’ultima domenica di marzo, gli orologi britannici vanno avanti di un’ora e il paese passa alla BST, cioè GMT+1. L’orario locale non cambia, quindi il mercato apre sempre alle 08:00 a Londra, ma siccome l’orologio è andato avanti, quello stesso momento corrisponde ora alle 07:00 GMT. L’ultima domenica di ottobre gli orologi tornano indietro di un’ora, il Regno Unito torna al GMT e l’apertura torna alle 08:00 GMT.
+
+L’effetto pratico: per circa sette mesi all’anno, da fine marzo a fine ottobre, l’apertura di Londra in GMT è un’ora prima di quanto indichino la maggior parte delle tabelle di riferimento. Se consulti un elenco statico degli orari delle sessioni in GMT, per tutta l’estate sarai sfasato di un’ora, a meno che la tabella non segnali la correzione per la BST.
+
+È anche il motivo per cui l’apertura di Londra può sembrare spostarsi nel tuo fuso orario. Se il tuo paese cambia l’ora in date diverse da quelle del Regno Unito, ci saranno brevi finestre, di solito una o due settimane in primavera e in autunno, in cui la consueta differenza tra Londra e la tua città è sfalsata di un’ora. Le date ufficiali del cambio d’ora nel Regno Unito sono pubblicate dal governo su [gov.uk/when-do-the-clocks-change](https://www.gov.uk/when-do-the-clocks-change).
+
+## L’apertura di Londra nei principali fusi orari
+
+Poiché la sessione di Londra è ancorata all’ora locale britannica, l’apertura cade a un’ora diversa in ogni parte del mondo e si sposta di un’ora quando il Regno Unito entra o esce dalla BST. La tabella qui sotto riporta l’apertura di Londra in una serie di fusi principali, sia nel caso invernale, quando Londra è sul GMT, sia in quello estivo, quando Londra è sulla BST.
+
+| La tua città / fuso | Apertura di Londra (inverno UK, GMT) | Apertura di Londra (estate UK, BST) |
+| --- | --- | --- |
+| Londra (ora locale UK) | 08:00 | 08:00 |
+| New York (EST/EDT) | 03:00 | 02:00 |
+| Chicago (CST/CDT) | 02:00 | 01:00 |
+| Los Angeles (PST/PDT) | 00:00 | 23:00 (giorno prima) |
+| Francoforte / Parigi (CET/CEST) | 09:00 | 09:00 |
+| Istanbul (TRT) | 11:00 | 10:00 |
+| Dubai (GST) | 12:00 | 11:00 |
+| Mumbai (IST) | 13:30 | 12:30 |
+| Singapore (SGT) | 16:00 | 15:00 |
+| Sydney (AEST/AEDT) | 19:00 | 17:00 |
+
+Alcuni di questi valori meritano una nota. New York e gli altri fusi nordamericani seguono un proprio calendario dell’ora legale, quindi il rapporto netto di un’ora mostrato qui vale per gran parte dell’anno, ma salta durante le brevi finestre di primavera e autunno in cui Regno Unito e Stati Uniti cambiano l’ora in date diverse. Istanbul e Dubai mantengono uno scarto fisso tutto l’anno, quindi la loro colonna segue soltanto il passaggio britannico alla BST. Sydney segue il calendario dell’emisfero australe, con estate e inverno invertiti rispetto al Regno Unito, ed è per questo che le sue due colonne differiscono di due ore anziché di una.
+
+Invece di tenere traccia di tutto questo a mano, lo strumento [forexmarkethours.app](/it) converte automaticamente ogni sessione, compresa l’apertura e la chiusura di Londra, nel tuo fuso orario e tiene il passo con i cambi dell’ora legale da entrambe le parti. Puoi anche consultare il quadro completo nella nostra guida agli [orari del forex per fuso orario](/it/blog/orari-del-forex-per-fuso-orario).
+
+## Perché l’apertura di Londra muove il mercato
+
+Per volume di scambi, Londra è la più grande piazza di negoziazione valutaria al mondo. La Banca dei Regolamenti Internazionali, nella sua indagine triennale delle banche centrali (Triennial Central Bank Survey), indica costantemente il Regno Unito come il paese che gestisce la quota più grande dell’attività valutaria mondiale, ben davanti a qualsiasi altro centro finanziario. Puoi leggere l’indagine direttamente su [bis.org](https://www.bis.org/statistics/rpfx22.htm).
+
+È proprio questa concentrazione di attività a rendere così importante l’apertura di Londra. Quando la sessione inizia, un grande insieme di banche, fondi e desk aziendali entra in gioco nello stesso momento, e il volume degli ordini sale di colpo rispetto alle ore più tranquille che la precedono. Di solito ne derivano un paio di conseguenze. L’apertura spesso fissa la direzione della giornata, o almeno disegna il range attorno al quale si muoveranno le sessioni europea e americana. E man mano che arriva liquidità vera, gli spread sulle coppie principali di solito si restringono, perché più operatori sono disposti a quotare entrambi i lati del mercato.
+
+Il contrasto con le ore che precedono l’apertura è netto. La fine della sessione asiatica e la pausa prima del risveglio dell’Europa sono di solito più sottili, con spread più ampi e un andamento dei prezzi più nervoso. Quando arriva Londra, il mercato in genere appare più ordinato e continuo, anche se nella prima ora può essere anche più volatile. Liquidità profonda unita a movimenti significativi: è questa combinazione a rendere la sessione centrale nella struttura della giornata di trading.
+
+Se vuoi vedere come Londra si colloca accanto a Sydney, Tokyo, Francoforte e New York, la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) le analizza una per una e mostra come si passano il testimone nell’arco delle 24 ore.
+
+## La sovrapposizione Londra-New York
+
+La finestra più intensa dell’intera giornata di trading è la sovrapposizione tra Londra e New York. Per le diverse ore in cui entrambi i centri sono aperti contemporaneamente, all’incirca dalle **13:00 alle 17:00 GMT**, i due più grandi bacini di liquidità valutaria sono attivi insieme e il volume raggiunge il picco giornaliero.
+
+Durante questa sovrapposizione trovi in genere gli spread più stretti e i movimenti più ampi e duraturi, in particolare sulle coppie con il dollaro e sui cross di euro e sterlina. I trader europei sono ancora alla scrivania mentre quelli americani sono appena arrivati, quindi i flussi di ordini delle due regioni si sommano. La sovrapposizione tende anche a coincidere con i dati economici statunitensi del primo mattino di New York, che possono aggiungere scatti bruschi di movimento a un volume già elevato.
+
+Dato che attinge al volume di Londra, la sovrapposizione eredita gran parte di ciò che rende importante la sessione londinese, e poi lo amplifica.
+## Le migliori coppie di valute durante la sessione di Londra
+
+La sessione di Londra mette naturalmente sotto i riflettori le coppie che includono la sterlina e l’euro, perché sono le valute i cui mercati di riferimento sono aperti e più attivi in queste ore.
+
+**GBP/USD** è l’espressione più diretta della sessione. Con il mercato britannico pienamente operativo e gli operatori statunitensi che si aggiungono nel corso della giornata, la coppia tende a registrare una forte partecipazione, una buona liquidità e movimenti chiari. Reagisce subito anche ai dati economici britannici, che di solito escono al primo mattino, intorno all’apertura.
+
+**EUR/USD** è la coppia di valute più scambiata al mondo, e la sessione di Londra è una delle sue finestre più attive. Francoforte e Parigi sono aperte insieme a Londra, quindi il flusso di ordini europeo è al massimo, e la coppia offre in genere spread molto stretti e liquidità profonda per tutta la sessione.
+
+**EUR/GBP** è un cross puramente europeo che si scambia quasi interamente durante l’orario europeo, il che fa della sessione di Londra il suo habitat naturale. È utile per farsi un’idea della forza relativa di euro e sterlina senza il dollaro di mezzo, anche se spesso si muove in un range più stretto rispetto alle major sul dollaro.
+
+Oltre a queste, anche altri cross di euro e sterlina come EUR/JPY e GBP/JPY mostrano un’attività elevata durante l’orario di Londra. Il filo conduttore è semplice: la sessione favorisce le coppie i cui mercati sottostanti sono aperti, e per Londra questo significa soprattutto euro e sterlina.
+## Fare trading all’apertura di Londra: note pratiche
+
+L’ora o le due ore attorno all’apertura di Londra sono uno dei tratti più attivi della giornata, e questo comporta implicazioni pratiche che vale la pena capire.
+
+La volatilità tende ad aumentare all’inizio della sessione. La prima ora dopo le 08:00 ora britannica porta spesso alcuni dei movimenti direzionali più forti della mattinata, perché gli ordini accumulati durante la sessione asiatica e il nuovo flusso europeo arrivano sul mercato insieme. Ne possono nascere trend puliti, ma anche inversioni brusche e false partenze, per cui i primissimi minuti possono essere rumorosi prima che il quadro si chiarisca.
+
+Le notizie pesano molto all’apertura. I dati economici britannici, come inflazione, occupazione e crescita, escono comunemente nella finestra **07:00-08:00 GMT** d’inverno, o nell’equivalente mattina locale, e possono muovere bruscamente la sterlina proprio mentre la sessione prende il via. Le dichiarazioni e i dati della [Bank of England](https://www.bankofengland.co.uk) rientrano nella stessa categoria. Conoscere le pubblicazioni in calendario per la giornata aiuta a spiegare movimenti improvvisi che altrimenti sembrerebbero casuali.
+
+Niente di tutto questo è una raccomandazione a fare trading all’apertura in un modo particolare. Una volatilità più alta significa movimenti più ampi in entrambe le direzioni, e il range della prima ora può essere una fonte di rischio tanto quanto di opportunità. Lo scopo qui è solo descrivere ciò che accade di solito, non suggerire quando o come qualcuno debba aprire o chiudere una posizione. Sono il tuo piano, la tua tolleranza al rischio e la tua situazione a dover guidare queste decisioni.
+
+## Domande frequenti
+
+**A che ora è l’apertura di Londra in EST?**
+Durante l’inverno britannico, quando Londra è sul GMT, l’apertura di Londra delle 08:00 corrisponde alle 03:00 EST. Durante l’estate britannica, quando Londra è sulla BST, corrisponde alle 02:00 EST, sempre che anche gli Stati Uniti siano sull’ora legale. Nelle brevi finestre di primavera e autunno in cui Regno Unito e Stati Uniti cambiano l’ora in date diverse, il valore esatto può essere sfalsato di un’ora per una o due settimane.
+
+**L’apertura di Londra cambia con l’ora legale?**
+In termini di ora locale di Londra, no: resta intorno alle 08:00 tutto l’anno. In termini di GMT, sì: è alle 08:00 GMT d’inverno e alle 07:00 GMT d’estate a causa della British Summer Time. Quindi nel tuo fuso orario l’apertura si sposta di un’ora due volte l’anno, e magari in momenti leggermente diversi se il tuo paese cambia l’ora in altre date.
+
+**La sessione di Londra è adatta ai principianti?**
+È la parte più liquida e attiva della giornata, il che significa spread stretti ma anche movimenti più rapidi. Molti trader la trovano una sessione naturale da seguire perché vi succede moltissimo, anche se la volatilità più alta intorno all’apertura richiede prudenza. Si tratta di un’informazione generale, non di un consiglio sul fatto che sia adatta alla tua situazione.
+
+**Quando chiude la sessione di Londra?**
+Chiude intorno alle 17:00 ora locale britannica, cioè alle 17:00 GMT d’inverno e alle 16:00 GMT d’estate con la BST.
+
+**Dove posso vedere l’apertura di Londra nel mio fuso orario?**
+Lo strumento [forexmarkethours.app](/it) converte automaticamente l’apertura e la chiusura di Londra, insieme a tutte le altre sessioni, nella tua ora locale e si adegua ai cambi dell’ora legale da entrambe le parti.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce una consulenza finanziaria.*`,
+      de: `Die London-Session öffnet um 08:00 Uhr britischer Ortszeit. Im Winter entspricht das 08:00 GMT, im Sommer unter der Britischen Sommerzeit dagegen 07:00 GMT. Weil die Eröffnung an die Londoner Uhr gebunden ist, fällt sie je nach Jahreszeit in Ihrer eigenen Zeitzone auf eine andere Stunde. Dieser Ratgeber zeigt die genaue Londoner Eröffnung in den wichtigsten Zeitzonen und erklärt, warum sie sich verschiebt.
+
+Für die meisten Privattrader ist die London-Session der wichtigste Abschnitt des Handelstages. Auf sie entfällt der größte Anteil am weltweiten Umsatz, sie gibt den Ton für den europäischen Vormittag vor und geht am Nachmittag direkt in die Überschneidung mit New York über. Wer genau weiß, wann sie am eigenen Wohnort öffnet, räumt eine häufige Quelle der Verwirrung aus, vor allem in den Wochen rund um die Zeitumstellung, wenn sich der GMT-Wert unauffällig um eine Stunde verschiebt.
+
+## Handelszeiten der London-Session: Eröffnung und Schluss
+
+Die London-Session läuft an jedem Werktag von etwa **08:00 bis 17:00 Uhr britischer Ortszeit**. Das ist der Bezugspunkt, der sich nie ändert. Ganz gleich, was der Kalender sagt: Der Londoner Handelstag richtet sich nach der Londoner Uhr. Er beginnt früh am britischen Morgen und klingt am späten Nachmittag aus.
+
+Ins Stolpern kommen viele bei der Frage, wie diese Ortszeiten in GMT aussehen. Im Winter gilt im Vereinigten Königreich die Greenwich Mean Time, also ist 08:00 Uhr Ortszeit zugleich **08:00 GMT**, und der Schluss um 17:00 Uhr Ortszeit liegt bei **17:00 GMT**. Im Sommer stellt das Vereinigte Königreich auf die Britische Sommerzeit um, also GMT+1. Dieselbe Eröffnung um 08:00 Uhr Ortszeit entspricht dann **07:00 GMT**, der Schluss um 17:00 Uhr Ortszeit **16:00 GMT**.
+
+Man muss also eigentlich zwei Dinge gleichzeitig im Kopf behalten. Das Londoner Zeitfenster in Ortszeit bleibt das ganze Jahr über bei rund 08:00 bis 17:00 Uhr. Das GMT-Fenster dagegen reicht im Winter von 08:00 bis 17:00 und im Sommer von 07:00 bis 16:00. Beides stimmt, es beschreibt die Session nur aus zwei verschiedenen Bezugsrahmen. Denken Sie in Londoner Ortszeit, scheint sich die Session nie zu bewegen. Denken Sie in GMT oder in Ihrem eigenen festen Abstand dazu, scheint sie sich zweimal im Jahr um eine Stunde zu verschieben.
+
+## Warum die London-Eröffnung um 07:00 oder 08:00 GMT liegt: der BST-Effekt
+
+Dass die Londoner Eröffnung zwischen 07:00 und 08:00 GMT wechselt, liegt an der Sommerzeit im Vereinigten Königreich, der British Summer Time, kurz BST.
+
+Einen Teil des Jahres gilt im Vereinigten Königreich die Greenwich Mean Time, und GMT ist die Grundlinie, an der die ganze Welt ihren Zeitversatz ausrichtet. Solange das Land auf GMT ist, sind Londoner Ortszeit und GMT identisch, die Eröffnung um 08:00 Uhr Ortszeit liegt also bei 08:00 GMT. Am letzten Sonntag im März werden die britischen Uhren dann um eine Stunde vorgestellt, und das Land wechselt auf BST, also GMT+1. Der lokale Zeitplan bleibt gleich, der Markt öffnet in London weiterhin um 08:00 Uhr. Da die Uhr aber vorgesprungen ist, entspricht derselbe Moment nun 07:00 GMT. Am letzten Sonntag im Oktober werden die Uhren um eine Stunde zurückgestellt, das Vereinigte Königreich kehrt zu GMT zurück, und die Eröffnung liegt wieder bei 08:00 GMT.
+
+Die praktische Folge: Etwa sieben Monate im Jahr, von Ende März bis Ende Oktober, liegt die Londoner Eröffnung in GMT eine Stunde früher, als die meisten Referenztabellen vermuten lassen. Wer eine statische Liste der Sessionzeiten in GMT liest, liegt den ganzen Sommer über eine Stunde daneben, sofern die Tabelle die BST-Anpassung nicht ausweist.
+
+Deshalb kann die Londoner Eröffnung auch in Ihrer eigenen Zeitzone zu wandern scheinen. Stellt Ihr Land die Uhren an anderen Tagen um als das Vereinigte Königreich, gibt es kurze Zeitfenster, meist ein oder zwei Wochen im Frühjahr und im Herbst, in denen der gewohnte Abstand zwischen London und Ihrer Stadt um eine Stunde abweicht. Die offiziellen Umstellungstermine des Vereinigten Königreichs veröffentlicht die Regierung unter [gov.uk/when-do-the-clocks-change](https://www.gov.uk/when-do-the-clocks-change).
+
+## Die London-Eröffnung in wichtigen Zeitzonen
+
+Da die London-Session an die britische Ortszeit gebunden ist, fällt die Eröffnung in jedem Teil der Welt auf eine andere Stunde und verschiebt sich um eine Stunde, wenn das Vereinigte Königreich in die BST wechselt oder sie verlässt. Die Tabelle unten zeigt die Londoner Eröffnung in einer Reihe wichtiger Zonen, jeweils für den Winterfall, wenn London auf GMT ist, und für den Sommerfall, wenn London auf BST ist.
+
+| Ihre Stadt / Zone | London-Eröffnung (britischer Winter, GMT) | London-Eröffnung (britischer Sommer, BST) |
+| --- | --- | --- |
+| London (britische Ortszeit) | 08:00 | 08:00 |
+| New York (EST/EDT) | 03:00 | 02:00 |
+| Chicago (CST/CDT) | 02:00 | 01:00 |
+| Los Angeles (PST/PDT) | 00:00 | 23:00 (Vortag) |
+| Frankfurt / Paris (MEZ/MESZ) | 09:00 | 09:00 |
+| Istanbul (TRT) | 11:00 | 10:00 |
+| Dubai (GST) | 12:00 | 11:00 |
+| Mumbai (IST) | 13:30 | 12:30 |
+| Singapur (SGT) | 16:00 | 15:00 |
+| Sydney (AEST/AEDT) | 19:00 | 17:00 |
+
+Einige dieser Werte verdienen eine Anmerkung. New York und die übrigen nordamerikanischen Zonen folgen ihrem eigenen Sommerzeitkalender. Der saubere Ein-Stunden-Zusammenhang aus der Tabelle gilt deshalb den größten Teil des Jahres, bricht aber in den kurzen Zeitfenstern im Frühjahr und Herbst, in denen Großbritannien und die USA ihre Uhren an unterschiedlichen Tagen umstellen. Istanbul und Dubai haben das ganze Jahr über einen festen Zeitversatz, ihre Spalte folgt also nur dem britischen BST-Wechsel. Sydney richtet sich nach dem Kalender der Südhalbkugel, auf der Sommer und Winter gegenüber Großbritannien vertauscht sind. Deshalb unterscheiden sich seine beiden Spalten um zwei Stunden statt um eine.
+
+Statt all das von Hand nachzuverfolgen, können Sie das Tool von [forexmarkethours.app](/de) nutzen: Es rechnet jede Session, einschließlich Eröffnung und Schluss in London, automatisch in Ihre eigene Zeitzone um und berücksichtigt die Zeitumstellungen auf beiden Seiten. Die vollständige Übersicht finden Sie außerdem in unserem Ratgeber zu den [Forex-Handelszeiten nach Zeitzone](/de/blog/forex-handelszeiten-nach-zeitzone).
+
+## Warum die London-Eröffnung den Markt bewegt
+
+Gemessen am Umsatz ist London der größte Devisenhandelsplatz der Welt. Die Bank für Internationalen Zahlungsausgleich weist in ihrer dreijährlichen Zentralbankumfrage (Triennial Central Bank Survey) dem Vereinigten Königreich regelmäßig den mit Abstand größten Anteil am weltweiten Devisenhandel zu, weit vor jedem anderen Finanzplatz. Die Umfrage können Sie direkt auf [bis.org](https://www.bis.org/statistics/rpfx22.htm) nachlesen.
+
+Diese Ballung von Aktivität erklärt, warum die Londoner Eröffnung so viel Gewicht hat. Wenn die Session beginnt, gehen auf einen Schlag zahlreiche Banken, Fonds und Handelsabteilungen von Unternehmen online, und das Ordervolumen springt im Vergleich zu den ruhigeren Stunden davor deutlich nach oben. Daraus ergeben sich meist zwei Dinge. Die Eröffnung gibt häufig die Richtung des Tages vor oder steckt zumindest die Spanne ab, um die herum die europäische und die amerikanische Session handeln. Und weil echte Liquidität in den Markt kommt, werden die Spreads bei den Hauptwährungspaaren in der Regel enger, da mehr Teilnehmer bereit sind, beide Seiten des Marktes zu quotieren.
+
+Der Kontrast zu den Stunden vor der Eröffnung ist deutlich. Die späte Asien-Session und die Flaute, bevor Europa erwacht, sind meist dünner, mit breiteren Spreads und unruhigeren Kursbewegungen. Sobald London einsteigt, wirkt der Markt in der Regel geordneter und stetiger, auch wenn er in der ersten Stunde volatiler sein kann. Tiefe Liquidität plus spürbare Bewegung: Diese Kombination macht die Session zum Dreh- und Angelpunkt des Handelstages.
+
+Wenn Sie sehen möchten, wie sich London neben Sydney, Tokio, Frankfurt und New York einordnet, führt Sie unser Ratgeber [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert) durch jede einzelne Session und zeigt, wie sie sich rund um die Uhr gegenseitig ablösen.
+
+## Die Überschneidung von London und New York
+
+Das geschäftigste Zeitfenster des gesamten Handelstages ist die Überschneidung von London und New York. In den Stunden, in denen beide Zentren gleichzeitig geöffnet sind, etwa von **13:00 bis 17:00 GMT**, sind die beiden größten Liquiditätspools im Devisenhandel zusammen aktiv, und der Umsatz erreicht seinen täglichen Höhepunkt.
+
+Während dieser Überschneidung sind die Spreads in der Regel am engsten und die Bewegungen am größten und nachhaltigsten, besonders bei den Dollarpaaren sowie den Euro- und Pfund-Crosses. Die europäischen Trader sitzen noch an ihren Plätzen, während die amerikanischen gerade dazukommen, sodass sich der Orderfluss beider Regionen bündelt. Zudem fällt die Überschneidung häufig mit US-Konjunkturdaten am frühen New Yorker Vormittag zusammen, die das ohnehin hohe Volumen um heftige Bewegungsschübe ergänzen können.
+
+Weil sie aus dem Londoner Umsatz schöpft, erbt die Überschneidung vieles von dem, was die London-Session so wichtig macht, und verstärkt es noch.
+## Die besten Währungspaare in der London-Session
+
+In der London-Session stehen naturgemäß Paare mit Pfund und Euro im Mittelpunkt, denn das sind die Währungen, deren Heimatmärkte in diesen Stunden geöffnet und am aktivsten sind.
+
+**GBP/USD** ist der direkteste Ausdruck der Session. Wenn der britische Markt voll im Geschehen ist und im Laufe des Tages US-Teilnehmer hinzukommen, zeigt das Paar meist eine starke Beteiligung, gesunde Liquidität und klare Bewegungen. Es reagiert zudem unmittelbar auf britische Konjunkturdaten, die meist am frühen Morgen rund um die Eröffnung erscheinen.
+
+**EUR/USD** ist das meistgehandelte Währungspaar der Welt, und die London-Session gehört zu seinen aktivsten Zeitfenstern. Frankfurt und Paris sind parallel zu London geöffnet, der europäische Orderfluss ist also voll da, und das Paar bietet in der Regel während der gesamten Session sehr enge Spreads und tiefe Liquidität.
+
+**EUR/GBP** ist ein rein europäisches Kreuzpaar, das fast ausschließlich während der europäischen Handelszeiten gehandelt wird. Die London-Session ist daher seine natürliche Heimat. Es eignet sich, um eine Einschätzung zur relativen Stärke von Euro und Pfund ohne den Dollar zu treffen, bewegt sich aber oft in einer engeren Spanne als die Dollar-Majors.
+
+Darüber hinaus verzeichnen auch andere Euro- und Pfund-Crosses wie EUR/JPY und GBP/JPY während der Londoner Handelszeiten erhöhte Aktivität. Der rote Faden ist einfach: Die Session begünstigt Paare, deren zugrunde liegende Märkte geöffnet sind, und in London sind das vor allem Euro und Pfund.
+## Handel zur London-Eröffnung: praktische Hinweise
+
+Die ein bis zwei Stunden rund um die Londoner Eröffnung gehören zu den aktiveren Phasen des Tages, und das hat praktische Folgen, die man kennen sollte.
+
+Die Volatilität steigt mit Beginn der Session meist an. Die erste Stunde nach 08:00 Uhr britischer Zeit bringt oft einige der stärksten gerichteten Bewegungen des Vormittags, weil aufgestaute Orders aus der Asien-Session und frischer europäischer Orderfluss gleichzeitig auf den Markt treffen. Das kann saubere Trends hervorbringen, aber auch scharfe Umkehrungen und Fehlausbrüche. Die allerersten Minuten können daher unruhig sein, bevor sich ein klareres Bild ergibt.
+
+Nachrichten spielen zur Eröffnung eine große Rolle. Britische Konjunkturdaten wie Inflations-, Arbeitsmarkt- und Wachstumszahlen erscheinen häufig im Fenster von **07:00 bis 08:00 GMT** im Winter beziehungsweise zur entsprechenden Morgenzeit vor Ort und können das Pfund genau dann kräftig bewegen, wenn die Session in Gang kommt. Erklärungen und Daten der [Bank of England](https://www.bankofengland.co.uk) fallen in dieselbe Kategorie. Wer die planmäßigen Veröffentlichungen des Tages kennt, kann plötzliche Bewegungen einordnen, die sonst zufällig wirken würden.
+
+Nichts davon ist eine Empfehlung, die Eröffnung auf eine bestimmte Weise zu handeln. Höhere Volatilität bedeutet größere Bewegungen in beide Richtungen, und die Spanne der ersten Stunde kann ebenso eine Risikoquelle wie eine Chance sein. Es geht hier nur darum zu beschreiben, was typischerweise passiert, nicht darum, wann oder wie jemand eine Position eröffnen oder schließen sollte. Diese Entscheidungen sollten Ihr eigener Plan, Ihre Risikobereitschaft und Ihre persönlichen Umstände bestimmen.
+
+## Häufig gestellte Fragen
+
+**Wann ist die London-Eröffnung in EST?**
+Im britischen Winter, wenn London auf GMT ist, entspricht die Londoner Eröffnung um 08:00 Uhr 03:00 Uhr EST. Im britischen Sommer, wenn London auf BST ist, ist es 02:00 Uhr EST, vorausgesetzt, die USA sind ebenfalls auf Sommerzeit. In den kurzen Zeitfenstern im Frühjahr und Herbst, in denen Großbritannien und die USA die Uhren an unterschiedlichen Tagen umstellen, kann der genaue Wert ein oder zwei Wochen lang um eine Stunde abweichen.
+
+**Ändert sich die London-Eröffnung mit der Sommerzeit?**
+In Londoner Ortszeit nicht, sie bleibt das ganze Jahr über bei etwa 08:00 Uhr. In GMT schon: Wegen der Britischen Sommerzeit liegt sie im Winter bei 08:00 GMT und im Sommer bei 07:00 GMT. In Ihrer eigenen Zeitzone verschiebt sich die Eröffnung also zweimal im Jahr um eine Stunde, möglicherweise zu leicht abweichenden Zeitpunkten, wenn Ihr Land die Uhren an anderen Tagen umstellt.
+
+**Ist die London-Session für Einsteiger geeignet?**
+Sie ist der liquideste und aktivste Teil des Tages. Das bedeutet enge Spreads, aber auch schnellere Bewegungen. Viele Trader empfinden sie als naheliegende Session, weil in ihr so viel passiert, doch die höhere Volatilität rund um die Eröffnung erfordert Vorsicht. Dies ist eine allgemeine Information und keine Beratung dazu, ob sie zu Ihrer Situation passt.
+
+**Wann schließt die London-Session?**
+Sie schließt gegen 17:00 Uhr britischer Ortszeit, das ist im Winter 17:00 GMT und im Sommer unter BST 16:00 GMT.
+
+**Wo sehe ich die London-Eröffnung in meiner eigenen Zeitzone?**
+Das Tool von [forexmarkethours.app](/de) rechnet Eröffnung und Schluss in London sowie jede andere Session automatisch in Ihre Ortszeit um und berücksichtigt die Zeitumstellungen auf beiden Seiten.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Londra seansı, İngiltere yerel saatiyle 08:00’de açılır. Bu, kışın 08:00 GMT, yazın ise İngiliz Yaz Saati (BST) nedeniyle 07:00 GMT demektir. Seans Londra’nın saatine bağlı olduğu için açılış, yılın hangi döneminde olduğunuza göre kendi saat diliminizde farklı bir saate denk gelir. Bu rehber, Londra açılışının başlıca saat dilimlerindeki karşılığını tek tek gösteriyor ve neden kaydığını açıklıyor.
+
+Bireysel yatırımcıların çoğu için Londra seansı, işlem gününün en önemli bölümüdür. Küresel işlem hacminin en büyük payını taşır, Avrupa sabahının havasını belirler ve ardından doğrudan öğleden sonraki New York çakışmasına bağlanır. Seansın yaşadığınız yerde tam olarak ne zaman açıldığını bilmek, sık karşılaşılan bir kafa karışıklığını ortadan kaldırır. Bu karışıklık özellikle yaz saati geçişlerinin olduğu haftalarda, GMT karşılığı sessizce bir saat kaydığında ortaya çıkar.
+
+## Londra seansı saatleri: açılış ve kapanış
+
+Londra seansı, hafta içi her gün yaklaşık **İngiltere yerel saatiyle 08:00 ile 17:00 arasında** işler. Hiç değişmeyen referans noktası budur. Takvim ne gösterirse göstersin, Londra’nın işlem günü kendi saatine göre kurulur: İngiltere’de sabah erkenden açılır, öğleden sonranın sonlarına doğru yavaşlar.
+
+Kafaları karıştıran kısım, bu yerel saatlerin GMT’ye nasıl çevrildiğidir. Kışın Birleşik Krallık Greenwich Ortalama Saati’ni (GMT) kullanır, dolayısıyla yerel 08:00 aynı zamanda **08:00 GMT**, yerel 17:00 kapanışı da **17:00 GMT** olur. Yazın İngiltere, GMT+1 olan İngiliz Yaz Saati’ne geçer; böylece aynı yerel 08:00 açılışı **07:00 GMT**, yerel 17:00 kapanışı da **16:00 GMT** olarak görünür.
+
+Yani aslında aynı anda akılda tutulması gereken iki şey vardır. Londra’nın yerel penceresi yıl boyunca yaklaşık 08:00 ile 17:00 arasında sabit kalır. GMT penceresi ise kışın 08:00 ile 17:00, yazın 07:00 ile 16:00 arasıdır. İkisi de doğrudur; seansı yalnızca iki farklı referans çerçevesinden anlatırlar. Londra yerel saatiyle düşünürseniz seans hiç yer değiştirmiyormuş gibi görünür. GMT ile ya da kendi GMT farkınızla düşünürseniz seans yılda iki kez bir saat kayıyormuş gibi görünür.
+
+## Londra açılışı neden 07:00 ya da 08:00 GMT: BST etkisi
+
+Londra açılışının 07:00 ile 08:00 GMT arasında gidip gelmesinin nedeni, Birleşik Krallık’taki yaz saati uygulaması, yani İngiliz Yaz Saati ya da kısaca BST’dir.
+
+Yılın bir bölümünde İngiltere Greenwich Ortalama Saati’ni kullanır ve GMT, bütün dünyanın saat farkını ona göre ayarladığı temel referanstır. İngiltere GMT’deyken Londra yerel saati ile GMT birebir aynıdır, dolayısıyla yerel 08:00 açılışı 08:00 GMT’dir. Ardından mart ayının son pazar günü İngiltere’de saatler bir saat ileri alınır ve ülke GMT+1 olan BST’ye geçer. Yerel program değişmez, piyasa Londra’da yine 08:00’de açılır; ancak saat ileri alındığı için aynı an artık 07:00 GMT’ye karşılık gelir. Ekim ayının son pazar günü saatler bir saat geri alınır, İngiltere GMT’ye döner ve açılış yeniden 08:00 GMT olur.
+
+Pratikteki sonucu şudur: yılın yaklaşık yedi ayı boyunca, mart sonundan ekim sonuna kadar, Londra açılışı GMT cinsinden çoğu referans tablosunun gösterdiğinden bir saat erkendir. GMT ile verilmiş sabit bir seans saatleri listesine bakarsanız, tablo BST düzeltmesini belirtmiyorsa bütün yaz boyunca bir saat hatalı olursunuz.
+
+Londra açılışının kendi saat diliminizde kayıyormuş gibi görünmesinin nedeni de budur. Ülkeniz saatlerini İngiltere’den farklı tarihlerde değiştiriyorsa, ilkbaharda ve sonbaharda genellikle bir iki haftalık kısa dönemler olur; bu dönemlerde Londra ile şehriniz arasındaki alışılmış fark bir saat sapar. İngiltere’nin resmi geçiş tarihleri hükümet tarafından [gov.uk/when-do-the-clocks-change](https://www.gov.uk/when-do-the-clocks-change) adresinde yayımlanır.
+
+## Başlıca saat dilimlerinde Londra açılışı
+
+Londra seansı İngiltere yerel saatine bağlı olduğu için açılış dünyanın her yerinde farklı bir saate denk gelir ve İngiltere BST’ye girip çıktığında bir saat kayar. Aşağıdaki tablo, Londra açılışını bir dizi başlıca saat diliminde hem kış durumu (Londra GMT’deyken) hem de yaz durumu (Londra BST’deyken) için veriyor.
+
+| Şehriniz / saat diliminiz | Londra açılışı (İngiltere kışı, GMT) | Londra açılışı (İngiltere yazı, BST) |
+| --- | --- | --- |
+| Londra (İngiltere yerel) | 08:00 | 08:00 |
+| New York (EST/EDT) | 03:00 | 02:00 |
+| Chicago (CST/CDT) | 02:00 | 01:00 |
+| Los Angeles (PST/PDT) | 00:00 | 23:00 (önceki gün) |
+| Frankfurt / Paris (CET/CEST) | 09:00 | 09:00 |
+| İstanbul (TRT) | 11:00 | 10:00 |
+| Dubai (GST) | 12:00 | 11:00 |
+| Mumbai (IST) | 13:30 | 12:30 |
+| Singapur (SGT) | 16:00 | 15:00 |
+| Sidney (AEST/AEDT) | 19:00 | 17:00 |
+
+Bunlardan birkaçı ayrıca not edilmeyi hak ediyor. New York ve diğer Kuzey Amerika dilimleri kendi yaz saati takvimlerini uygular; bu yüzden burada görülen düzgün bir saatlik ilişki yılın büyük bölümünde geçerlidir, ancak İngiltere ile ABD’nin saatlerini farklı tarihlerde değiştirdiği ilkbahar ve sonbahardaki kısa dönemlerde bozulur. İstanbul ve Dubai yıl boyunca sabit bir saat farkında kalır, dolayısıyla bu satırlar yalnızca İngiltere’nin BST geçişini takip eder. Sidney ise Güney Yarımküre takvimine göre işler; yaz ve kış İngiltere’ye göre terstir ve bu yüzden iki sütunu arasındaki fark bir değil iki saattir.
+
+Bütün bunları elle takip etmek yerine [forexmarkethours.app](/tr) aracı, Londra açılışı ve kapanışı dahil her seansı otomatik olarak kendi saat diliminize çevirir ve her iki taraftaki yaz saati değişikliklerine de ayak uydurur. Ayrıntılı dökümü [saat dilimine göre forex piyasa saatleri](/tr/blog/saat-dilimine-gore-forex-piyasa-saatleri) rehberimizde de inceleyebilirsiniz.
+
+## Londra açılışı piyasayı neden hareketlendirir
+
+İşlem hacmi açısından Londra, dünyanın en büyük döviz işlem merkezidir. Uluslararası Ödemeler Bankası (BIS), Üç Yılda Bir Yapılan Merkez Bankası Anketi’nde Birleşik Krallık’ın küresel döviz faaliyetinin en büyük payını, diğer tüm finans merkezlerinin çok önünde üstlendiğini istikrarlı biçimde ortaya koyar. Anketi doğrudan [bis.org](https://www.bis.org/statistics/rpfx22.htm) adresinde okuyabilirsiniz.
+
+Londra açılışının bu kadar önemli olmasının nedeni, faaliyetin bu şekilde yoğunlaşmasıdır. Seans başladığında çok sayıda banka, fon ve kurumsal işlem masası aynı anda devreye girer ve emir hacmi, öncesindeki sakin saatlere kıyasla keskin biçimde artar. Bunun ardından genellikle birkaç şey gelir. Açılış çoğu zaman günün yönünü belirler ya da en azından Avrupa ve Amerika seanslarının geri kalanında fiyatın etrafında dolaşacağı aralığı çizer. Gerçek likidite piyasaya girdikçe başlıca paritelerde spread’ler de genellikle daralır, çünkü piyasanın iki tarafına da kotasyon vermeye istekli katılımcı sayısı artar.
+
+Açılıştan önceki saatlerle fark çarpıcıdır. Asya seansının son saatleri ve Avrupa uyanmadan önceki durgunluk genellikle daha sığdır; spread’ler daha geniş, fiyat hareketleri daha dalgalıdır. Londra devreye girdiğinde piyasa, ilk saatte daha oynak olabilse de genellikle daha düzenli ve kesintisiz bir görünüm kazanır. Derin likidite artı anlamlı hareket: seansı işlem gününün yapısında merkezi kılan bileşim budur.
+
+Londra’nın Sidney, Tokyo, Frankfurt ve New York ile nasıl yan yana durduğunu görmek isterseniz, [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) her birini ve gün boyunca birbirine nasıl devrettiklerini adım adım anlatıyor.
+
+## Londra-New York çakışması
+
+Bütün işlem gününün en yoğun penceresi, Londra ile New York’un çakıştığı dönemdir. Her iki merkezin aynı anda açık olduğu bu birkaç saat boyunca, yaklaşık **13:00 ile 17:00 GMT arasında**, döviz likiditesinin en büyük iki havuzu birlikte faaliyettedir ve işlem hacmi günlük zirvesine ulaşır.
+
+Bu çakışma sırasında genellikle en dar spread’leri ve en büyük, en kalıcı hareketleri görürsünüz; özellikle dolar paritelerinde ve euro ile sterlin çaprazlarında. Avrupalı yatırımcılar hâlâ masalarının başındayken Amerikalı yatırımcılar yeni gelmiştir, dolayısıyla iki bölgenin emir akışı birleşir. Çakışma ayrıca çoğu zaman New York sabahının erken saatlerinde açıklanan ABD ekonomik verileriyle aynı zamana denk gelir; bu da zaten yüksek olan hacmin üzerine ani hareket patlamaları ekleyebilir.
+
+Çakışma Londra’nın işlem hacminden beslendiği için Londra seansını önemli kılan özelliklerin çoğunu devralır, ardından onları daha da güçlendirir.
+## Londra seansında öne çıkan pariteler
+
+Londra seansı doğal olarak sterlin ve euroyu içeren paritelere ışık tutar, çünkü bu saatlerde iç piyasaları açık ve en aktif olan para birimleri bunlardır.
+
+**GBP/USD**, seansın en doğrudan yansımasıdır. İngiltere piyasası tamamen devredeyken ve gün ilerledikçe ABD’li katılımcılar da gelirken, parite genellikle güçlü katılım, sağlıklı likidite ve net hareketler görür. Genellikle sabahın erken saatlerinde, açılış civarında yayımlanan İngiltere ekonomik verilerine de anında tepki verir.
+
+**EUR/USD**, dünyada en çok işlem gören paritedir ve Londra seansı onun en aktif pencerelerinden biridir. Frankfurt ve Paris de Londra ile birlikte açık olduğu için Avrupa emir akışı en dolgun hâlindedir ve parite seans boyunca genellikle çok dar spread’ler ve derin likidite sunar.
+
+**EUR/GBP**, neredeyse tamamen Avrupa saatlerinde işlem gören saf bir Avrupa çaprazıdır; bu da Londra seansını onun doğal evi yapar. Doları denklemin dışında bırakarak euro ile sterlinin göreli gücü hakkında görüş almak için kullanışlıdır, ancak çoğu zaman dolar majörlerine göre daha dar bir aralıkta hareket eder.
+
+Bunların ötesinde EUR/JPY ve GBP/JPY gibi diğer euro ve sterlin çaprazları da Londra saatlerinde artan bir hareketlilik görür. Ortak nokta basittir: seans, dayanak piyasaları açık olan pariteleri öne çıkarır ve Londra için bu, her şeyden önce euro ve sterlin demektir.
+## Londra açılışında işlem: pratik notlar
+
+Londra açılışı civarındaki bir iki saat, günün en hareketli dilimlerinden biridir ve bunun anlaşılmaya değer pratik sonuçları vardır.
+
+Seans başlarken oynaklık genellikle artar. İngiltere saatiyle 08:00’den sonraki ilk saat, Asya seansında birikmiş emirler ile taze Avrupa akışı piyasaya aynı anda girdiği için çoğu zaman sabahın en güçlü yönlü hareketlerinden bazılarını taşır. Bu durum temiz trendler üretebileceği gibi sert dönüşler ve yanıltıcı başlangıçlar da üretebilir; bu yüzden daha net bir tablo oluşmadan önceki ilk dakikalar oldukça gürültülü olabilir.
+
+Açılışta haberler büyük bir etkendir. Enflasyon, istihdam ve büyüme rakamları gibi İngiltere ekonomik verileri genellikle kışın **07:00 ile 08:00 GMT arasındaki** pencerede ya da yerel sabahtaki karşılığında açıklanır ve seans tam başlarken sterlini sert biçimde hareket ettirebilir. [İngiltere Merkez Bankası](https://www.bankofengland.co.uk) açıklamaları ve verileri de aynı kategoriye girer. Günün planlanmış veri takvimini bilmek, aksi hâlde rastgele görünebilecek ani hareketleri açıklamaya yardımcı olur.
+
+Bunların hiçbiri açılışta belirli bir şekilde işlem yapmanız için bir öneri değildir. Daha yüksek oynaklık, her iki yönde de daha büyük hareketler anlamına gelir ve ilk saatin aralığı bir fırsat kaynağı olduğu kadar bir risk kaynağı da olabilir. Buradaki amaç yalnızca tipik olarak ne olduğunu anlatmaktır; kimin ne zaman ya da nasıl pozisyona girip çıkması gerektiğini önermek değildir. Bu kararları kendi planınız, risk toleransınız ve koşullarınız belirlemelidir.
+
+## Sık sorulan sorular
+
+**Londra açılışı EST’de saat kaçtır?**
+İngiltere kışında, Londra GMT’deyken, Londra’nın 08:00 açılışı 03:00 EST’dir. İngiltere yazında, Londra BST’deyken, ABD’nin de yaz saatinde olduğu varsayılırsa 02:00 EST’dir. İngiltere ile ABD’nin saatlerini farklı tarihlerde değiştirdiği ilkbahar ve sonbahardaki kısa dönemlerde kesin rakam bir iki hafta boyunca bir saat sapabilir.
+
+**Londra açılışı yaz saati uygulamasıyla değişir mi?**
+Londra yerel saati açısından hayır; yıl boyunca yaklaşık 08:00’de kalır. GMT açısından evet; İngiliz Yaz Saati nedeniyle kışın 08:00 GMT, yazın 07:00 GMT’dir. Dolayısıyla kendi saat diliminizde açılış yılda iki kez bir saat kayar; ülkeniz saatlerini başka tarihlerde değiştiriyorsa bu kayma biraz farklı zamanlarda da gerçekleşebilir.
+
+**Londra seansı yeni başlayanlar için uygun mu?**
+Günün en likit ve en hareketli bölümüdür; bu da dar spread’ler ama aynı zamanda daha hızlı hareketler anlamına gelir. Pek çok yatırımcı, içinde bu kadar çok şey olduğu için onu takip edilmesi doğal bir seans olarak görür; yine de açılış civarındaki yüksek oynaklık dikkat gerektirir. Bu genel bir bilgidir, sizin durumunuza uygun olup olmadığına dair bir tavsiye değildir.
+
+**Londra seansı ne zaman kapanır?**
+İngiltere yerel saatiyle 17:00 civarında kapanır; bu kışın 17:00 GMT, yazın BST döneminde 16:00 GMT’dir.
+
+**Londra açılışını kendi saat dilimimde nerede görebilirim?**
+[forexmarkethours.app](/tr) aracı, Londra açılışını ve kapanışını diğer tüm seanslarla birlikte otomatik olarak yerel saatinize çevirir ve her iki taraftaki yaz saati değişikliklerine göre ayarlama yapar.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -710,24 +1524,46 @@ L’outil [forexmarkethours.app](/) convertit l’ouverture et la clôture de Lo
       en: "forex-market-hours-by-timezone",
       es: "horario-del-mercado-forex-por-zona-horaria",
       fr: "horaires-du-forex-par-fuseau-horaire",
+      pt: "horario-do-forex-por-fuso-horario",
+      it: "orari-del-forex-per-fuso-orario",
+      de: "forex-handelszeiten-nach-zeitzone",
+      tr: "saat-dilimine-gore-forex-piyasa-saatleri",
     },
     title: {
       en: "Forex Market Hours by Timezone: GMT, EST, IST and AEST",
       es: "Horario del mercado forex por zona horaria: GMT, EST, IST y AEST",
       fr: "Horaires du forex par fuseau horaire : tableaux complets",
+      pt: "Horário do Forex por Fuso Horário: GMT, EST, IST e AEST",
+      it: "Orari del forex per fuso orario: GMT, EST, IST e AEST",
+      de: "Forex-Handelszeiten nach Zeitzone: GMT, EST, IST und AEST",
+      tr: "Saat Dilimine Göre Forex Piyasa Saatleri: GMT, EST, IST ve AEST",
     },
     description: {
       en: "Forex market hours in my timezone: convert the four sessions to GMT, EST, CET, IST, GST, SGT and AEST with clear tables and a live DST-aware tool.",
       es: "Horario del mercado forex en mi zona horaria: convierte las cuatro sesiones a GMT, EST, CET, IST, GST, SGT y AEST con tablas claras y conversor en vivo.",
       fr: "Horaires des séances forex convertis en EST, CET, IST, GST, SGT et AEST. Tableaux clairs, pièges de l’heure d’été et convertisseur en direct.",
+      pt: "Horário do forex no seu fuso: converta as quatro sessões para GMT, EST, CET, IST, GST, SGT e AEST com tabelas e uma ferramenta ao vivo com horário de verão.",
+      it: "Orari del mercato forex nel tuo fuso: converti le quattro sessioni in GMT, EST, CET, IST, GST, SGT e AEST con tabelle chiare e uno strumento live con ora legale.",
+      de: "Forex-Handelszeiten in Ihrer Zeitzone: die vier Sessions in GMT, EST, MEZ, IST, GST, SGT und AEST, mit klaren Tabellen und einem Live-Tool inklusive Sommerzeit.",
+      tr: "Kendi saat diliminizde forex piyasa saatleri: dört seansı net tablolar ve yaz saatini hesaba katan canlı araçla GMT, EST, CET, IST, GST, SGT ve AEST’ye çevirin.",
     },
     date: "2026-07-25",
-    localeDate: { fr: "2026-09-10" },
+    localeDate: {
+      fr: "2026-09-10",
+      pt: "2026-10-12",
+      tr: "2026-10-22",
+      de: "2026-11-01",
+      it: "2026-11-11",
+    },
     authorSlug: "author",
     tags: {
       en: ["Timezones", "Basics"],
       es: ["Zonas horarias", "Fundamentos"],
       fr: ["Fuseaux horaires", "Horaires"],
+      pt: ["Fusos horários", "Fundamentos"],
+      it: ["Fusi orari", "Fondamenti"],
+      de: ["Zeitzonen", "Grundlagen"],
+      tr: ["Saat Dilimleri", "Temel Bilgiler"],
     },
     cover: "/blog/forex-market-hours-by-timezone.svg",
     body: {
@@ -1118,6 +1954,522 @@ Pour une vue d’ensemble plus large, voyez le [guide des séances expliquées](
 Références faisant autorité : la [base de données des fuseaux horaires IANA](https://www.iana.org/time-zones) pour les règles canoniques de fuseaux et d’heure d’été, [timeanddate.com heure d’été](https://www.timeanddate.com/time/dst/) pour les dates de bascule, [gov.uk changement d’heure](https://www.gov.uk/when-do-the-clocks-change) pour les dates britanniques, et la [Banque des règlements internationaux](https://www.bis.org/) pour le contexte du marché des changes.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `Os horários das sessões do forex quase sempre são informados em GMT. Como referência comum, isso faz sentido: o GMT nunca muda, e qualquer trader consegue converter a partir dele. O problema é que você não opera em GMT. Você opera pelo relógio da sua parede, seja ele no horário do leste dos EUA, no horário da Europa Central, no horário padrão da Índia, no horário do Golfo ou no horário do leste da Austrália. Converter as quatro grandes sessões para o seu fuso na mão é fácil de errar por pouco, e os erros pioram duas vezes por ano, quando o horário de verão muda alguns fusos e outros não. Este guia traz tabelas de conversão claras para os fusos mais comuns, mostra exatamente onde as tabelas fixas falham e indica um conversor ao vivo que identifica o seu fuso horário para você.
+
+## As quatro sessões em GMT: a base
+
+Tudo o que vem a seguir parte da mesma base: as janelas em horário padrão (inverno do hemisfério norte) de cada grande centro, em GMT. Aprenda estas cinco linhas e todas as outras tabelas deste artigo viram uma simples soma ou subtração.
+
+| Sessão | Abertura (GMT) | Fechamento (GMT) |
+|---|---|---|
+| Sydney | 22:00 | 07:00 |
+| Tóquio | 00:00 | 09:00 |
+| Frankfurt | 07:00 | 16:00 |
+| Londres | 08:00 | 17:00 |
+| Nova York | 13:00 | 22:00 |
+
+Estas são as janelas em horário padrão. O mercado em si funciona sem parar de domingo às 22:00 GMT até sexta às 22:00 GMT e depois fecha no fim de semana. Os nomes das sessões apenas indicam quando cada centro regional está ativo. Repare que Sydney abre o dia global e sua janela atravessa a meia-noite, e que Londres e Nova York se sobrepõem aproximadamente das 13:00 às 17:00 GMT, o trecho mais movimentado e líquido de toda a semana. Para saber mais sobre o que cada sessão significa, veja nosso guia sobre as [sessões de negociação forex](/pt/blog/sessoes-de-negociacao-forex-explicadas).
+
+## Horário do forex no horário dos EUA (EST/EDT)
+
+Para traders nos Estados Unidos, o horário do leste (Eastern Time) é a referência natural. O Eastern Standard Time (EST) é GMT-5, então, para converter qualquer sessão em GMT, subtraia cinco horas.
+
+| Sessão | Abertura (EST) | Fechamento (EST) |
+|---|---|---|
+| Sydney | 17:00 | 02:00 |
+| Tóquio | 19:00 | 04:00 |
+| Frankfurt | 02:00 | 11:00 |
+| Londres | 03:00 | 12:00 |
+| Nova York | 08:00 | 17:00 |
+
+O número mais útil aqui é a abertura semanal. O forex reabre no domingo às 22:00 GMT, que é domingo às 17:00 EST, ou seja, 5 da tarde de domingo no horário do leste. É quando começa a sessão de Sydney e a semana de negociação para os traders baseados nos EUA. A sessão de Nova York propriamente dita vai das 08:00 às 17:00 no horário do leste, encaixando-se perfeitamente em um dia normal de trabalho.
+
+Se você está mais a oeste, ajuste a partir do horário do leste. O Central Time (CST) está uma hora atrás do Eastern, então a abertura de domingo é às 16:00 e Nova York vai das 07:00 às 16:00. O Pacific Time (PST) está três horas atrás do Eastern, o que coloca a abertura de domingo às 14:00 e Nova York das 05:00 às 14:00. Um lembrete: de meados de março ao início de novembro os EUA usam o Eastern Daylight Time (EDT, GMT-4), então subtraia quatro horas em vez de cinco nesse período, que cobre a maior parte do ano.
+
+## Horário do forex na Europa (CET/CEST)
+
+A Europa continental, de Frankfurt e Paris a Madri, Roma e Amsterdã, usa o horário da Europa Central. O CET padrão é GMT+1, então some uma hora a cada valor em GMT.
+
+| Sessão | Abertura (CET) | Fechamento (CET) |
+|---|---|---|
+| Sydney | 23:00 | 08:00 |
+| Tóquio | 01:00 | 10:00 |
+| Frankfurt | 08:00 | 17:00 |
+| Londres | 09:00 | 18:00 |
+| Nova York | 14:00 | 23:00 |
+
+Para um trader em Frankfurt ou Madri, a sessão local abre às 08:00 CET e a sessão de Londres uma hora depois, às 09:00. A sobreposição Londres-Nova York, de alta liquidez, fica entre 14:00 e 18:00 CET, bem no meio da tarde. A abertura semanal de domingo às 22:00 GMT cai às 23:00 CET de domingo à noite. Do fim de março ao fim de outubro, a Europa continental passa para o horário de verão da Europa Central (CEST, GMT+2); nesses meses, some duas horas em vez de uma. E aqui está o detalhe que confunde muita gente: Londres está uma hora atrás de Frankfurt, então a sessão de Londres segue o horário do Reino Unido, não o CET.
+
+## Horário do forex na Índia (IST)
+
+O horário padrão da Índia (IST) é GMT+5:30, e a Índia não adota horário de verão. Isso mantém a tabela indiana estável o ano todo, uma vantagem real, embora a diferença de meia hora faça os horários locais caírem sempre na meia hora. Some cinco horas e trinta minutos a cada valor em GMT.
+
+| Sessão | Abertura (IST) | Fechamento (IST) |
+|---|---|---|
+| Sydney | 03:30 | 12:30 |
+| Tóquio | 05:30 | 14:30 |
+| Frankfurt | 12:30 | 21:30 |
+| Londres | 13:30 | 22:30 |
+| Nova York | 18:30 | 03:30 |
+
+Para um trader indiano, a sessão de Londres abre às 13:30 IST, no começo da tarde, e Nova York às 18:30 IST, à noite. A sobreposição Londres-Nova York, a janela mais ativa do dia, vai das 18:30 às 22:30 IST, o que funciona bem para quem trabalha durante o dia e opera à noite. Como a Índia não tem horário de verão, esses horários locais nunca mudam do lado indiano. O que muda é a âncora em GMT quando o Reino Unido, a Europa ou os EUA passam para o horário de verão, então, durante o verão do hemisfério norte, as linhas de Londres e Nova York acima chegam uma hora mais cedo em IST. É exatamente o tipo de deslocamento entre horários de verão que uma tabela estática não consegue captar sozinha.
+
+## Horário do forex no Golfo (GST)
+
+O horário do Golfo (GST) abrange Dubai, Abu Dhabi, Mascate e a região dos Emirados Árabes Unidos e de Omã. O GST é GMT+4 e, assim como a Índia, o Golfo não adota horário de verão. Some quatro horas a cada valor em GMT.
+
+| Sessão | Abertura (GST) | Fechamento (GST) |
+|---|---|---|
+| Sydney | 02:00 | 11:00 |
+| Tóquio | 04:00 | 13:00 |
+| Frankfurt | 11:00 | 20:00 |
+| Londres | 12:00 | 21:00 |
+| Nova York | 17:00 | 02:00 |
+
+De Dubai, a sessão de Londres abre ao meio-dia, 12:00 GST, e Nova York às 17:00 GST, no fim da tarde. A sobreposição Londres-Nova York vai das 17:00 às 21:00 GST, uma janela noturna para os traders do Golfo. Quem opera de Istambul pode seguir a mesma lógica: a Turquia usa GMT+3 o ano todo, sem horário de verão, então subtraia uma hora de cada valor em GST para obter o horário de Istambul, o que coloca a abertura de Londres às 11:00 e Nova York às 16:00. Como nem o Golfo nem a Turquia ajustam os relógios, a única variável é, mais uma vez, o horário de verão do hemisfério norte nas âncoras de Londres, Frankfurt e Nova York.
+
+## Horário do forex na Ásia-Pacífico (SGT e AEST)
+
+A região da Ásia-Pacífico se divide em duas referências úteis. O horário padrão de Singapura (SGT) é GMT+8, sem horário de verão, e na prática traders de boa parte do Leste e do Sudeste Asiático compartilham esse horário. Some oito horas ao GMT.
+
+| Sessão | Abertura (SGT) | Fechamento (SGT) |
+|---|---|---|
+| Sydney | 06:00 | 15:00 |
+| Tóquio | 08:00 | 17:00 |
+| Frankfurt | 15:00 | 00:00 |
+| Londres | 16:00 | 01:00 |
+| Nova York | 21:00 | 06:00 |
+
+O horário do leste da Austrália é a segunda referência, e é mais complicado, porque a Austrália adota horário de verão no verão do hemisfério sul, a metade oposta do ano em relação ao norte. O Australian Eastern Standard Time (AEST) é GMT+10; durante o verão australiano, aproximadamente de outubro a abril, ele vira AEDT, em GMT+11. A tabela abaixo usa o AEST padrão, então some dez horas ao GMT.
+
+| Sessão | Abertura (AEST) | Fechamento (AEST) |
+|---|---|---|
+| Sydney | 08:00 | 17:00 |
+| Tóquio | 10:00 | 19:00 |
+| Frankfurt | 17:00 | 02:00 |
+| Londres | 18:00 | 03:00 |
+| Nova York | 23:00 | 08:00 |
+
+Para um trader em Sydney no horário padrão, a sessão local de Sydney vai das 08:00 às 17:00, um expediente normal, Londres abre às 18:00, à noite, e Nova York às 23:00, tarde da noite. Durante o horário de verão australiano, some mais uma hora à coluna AEST.
+
+## Por que as tabelas fixas de conversão erram (horário de verão)
+
+Todas as tabelas acima são um retrato do horário padrão. Por que não dá para confiar em uma tabela impressa o ano inteiro? Tudo se resume a um fato: as sessões estão ancoradas à hora local de cada centro de negociação, não ao GMT. Quando um centro adota o horário de verão, seus relógios são adiantados, então a sessão se desloca em relação ao GMT, mesmo que o GMT em si nunca mude.
+
+A complicação é que o mundo não muda no mesmo dia. O Reino Unido e a União Europeia mudam no último domingo de março e no último domingo de outubro. Os Estados Unidos mudam mais cedo na primavera, no segundo domingo de março, e mais tarde no outono, no primeiro domingo de novembro. Durante algumas semanas a cada primavera e outono, EUA e Europa ficam fora de sincronia, o que estreita ou alarga brevemente a sobreposição Londres-Nova York. A Austrália, no hemisfério sul, muda no sentido oposto e em épocas opostas do ano. Índia, Golfo, Singapura e Turquia, por sua vez, nunca mudam.
+
+Junte tudo isso e uma única tabela fixa pode estar errada para qualquer fuso no dia em que uma mudança de horário de verão relevante ocorrer de um dos lados da conversão. Um trader em Mumbai não ajusta o relógio, mas mesmo assim a sessão de Londres passa a chegar uma hora mais cedo em IST a partir do fim de março, só porque Londres adiantou os relógios. O único método confiável é calcular cada sessão a partir das regras de fuso horário atuais, e não de uma tabela decorada meses atrás. Para o caso de Londres em detalhes, veja [que horas abre a sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres).
+
+## Descubra seus horários locais exatos automaticamente
+
+Em vez de fazer malabarismo com seis diferenças de fuso e dois calendários de horário de verão de cabeça, deixe um software cuidar disso. O [conversor ao vivo da página inicial](/pt) lê o fuso horário do seu dispositivo e o estado atual do horário de verão, e depois mostra a abertura e o fechamento de cada sessão no seu horário local exato. Ele se atualiza automaticamente quando a sua região, ou qualquer um dos centros de negociação, ajusta os relógios, então os números estão sempre corretos para o dia em que você os consulta.
+
+Se você opera em várias regiões, a ferramenta é mais rápida e mais segura do que qualquer referência estática, porque elimina as duas fontes de erro que mais pegam as pessoas: somar a diferença errada e esquecer uma mudança de horário de verão do outro lado da conversão. Abra a [página inicial](/pt) uma vez, confirme seu fuso horário, e as quatro sessões aparecem no seu próprio relógio.
+
+## Perguntas frequentes
+
+**Qual é o horário do mercado forex no meu fuso horário?** Pegue a base em GMT (Sydney 22:00-07:00, Tóquio 00:00-09:00, Frankfurt 07:00-16:00, Londres 08:00-17:00, Nova York 13:00-22:00) e some ou subtraia a diferença do seu fuso em relação ao GMT. Para uma resposta exata, que considera o horário de verão, use o conversor ao vivo da página inicial; ele identifica o seu fuso horário para você.
+
+**O horário do forex muda com o horário de verão?** Na prática, sim. O GMT nunca muda, mas quando você converte para um fuso que adota horário de verão, os horários locais se deslocam em uma hora durante parte do ano. Cada região muda em uma data diferente, então as sobreposições podem se deslocar por um breve período.
+
+**Que horas o mercado forex abre na Índia?** No horário padrão da Índia (GMT+5:30, sem horário de verão), a sessão de Londres vai aproximadamente das 13:30 às 22:30 IST e Nova York aproximadamente das 18:30 às 03:30 IST durante o inverno do hemisfério norte. A partir do fim de março, as linhas de Londres e Nova York chegam uma hora mais cedo, porque esses centros passam para o horário de verão.
+
+**Que horas abre a sessão de Nova York?** Nova York funciona das 13:00 às 22:00 GMT em horário padrão, o que corresponde a 08:00 às 17:00 no horário do leste dos EUA. A semana de negociação em si reabre no domingo às 17h no horário do leste.
+
+**GMT é o mesmo que UTC nesse caso?** Para fins práticos de horário do forex, sim. UTC e GMT estão alinhados o bastante para que as tabelas de conversão aqui sejam idênticas, quer você parta do GMT, quer do UTC.
+
+Para uma visão mais ampla, veja o [guia das sessões explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) ou comece a converter na [página inicial](/pt).
+
+Referências oficiais: o [banco de dados de fusos horários da IANA](https://www.iana.org/time-zones) para as regras canônicas de fusos e de horário de verão, o [timeanddate.com sobre horário de verão](https://www.timeanddate.com/time/dst/) para as datas das mudanças, o [gov.uk sobre quando os relógios mudam](https://www.gov.uk/when-do-the-clocks-change) para as datas do Reino Unido e o [Banco de Compensações Internacionais](https://www.bis.org/) para o contexto do mercado de câmbio.
+
+*Este artigo tem caráter apenas informativo e não constitui recomendação financeira.*`,
+      it: `Gli orari delle sessioni forex vengono quasi sempre indicati in GMT. Come riferimento comune ha senso: il GMT non si sposta mai e ogni trader può partire da lì per convertire. Il problema è che tu non fai trading in GMT. Fai trading con l’orologio che hai appeso al muro, che segni l’Eastern Time, l’ora dell’Europa centrale, l’India Standard Time, il Gulf Standard Time o l’ora dell’Australia orientale. Convertire a mano le quattro sessioni principali nel tuo fuso è un’operazione in cui è facile commettere piccoli errori, e gli errori peggiorano due volte l’anno, quando l’ora legale sposta alcuni fusi ma non altri. Questa guida ti offre tabelle di conversione chiare per i fusi più comuni, ti mostra esattamente dove le tabelle fisse smettono di funzionare e ti indica un convertitore live che legge il tuo fuso orario al posto tuo.
+
+## Le quattro sessioni in GMT: la base di partenza
+
+Tutto ciò che segue parte dalla stessa base: le fasce in ora solare (inverno dell’emisfero nord) di ogni piazza principale, espresse in GMT. Impara queste cinque righe e ogni altra tabella di questo articolo diventa una semplice addizione o sottrazione.
+
+| Sessione | Apertura (GMT) | Chiusura (GMT) |
+|---|---|---|
+| Sydney | 22:00 | 07:00 |
+| Tokyo | 00:00 | 09:00 |
+| Francoforte | 07:00 | 16:00 |
+| Londra | 08:00 | 17:00 |
+| New York | 13:00 | 22:00 |
+
+Queste sono fasce in ora solare. Il mercato in sé è aperto senza interruzioni dalla domenica alle 22:00 GMT al venerdì alle 22:00 GMT, poi chiude per il fine settimana. Le etichette delle sessioni indicano solo quando ciascun centro regionale è attivo. Nota che Sydney apre la giornata globale e la sua fascia scavalca la mezzanotte, e che Londra e New York si sovrappongono all’incirca dalle 13:00 alle 17:00 GMT, il tratto più intenso e liquido di tutta la settimana. Per capire meglio cosa rappresenta ogni sessione, leggi la nostra guida alle [sessioni di trading forex](/it/blog/sessioni-di-trading-forex-spiegate).
+
+## Orari del forex in ora USA (EST/EDT)
+
+Per chi fa trading dagli Stati Uniti, il riferimento naturale è l’US Eastern Time. L’Eastern Standard Time (EST) è GMT-5, quindi per convertire qualsiasi sessione dal GMT basta togliere cinque ore.
+
+| Sessione | Apertura (EST) | Chiusura (EST) |
+|---|---|---|
+| Sydney | 17:00 | 02:00 |
+| Tokyo | 19:00 | 04:00 |
+| Francoforte | 02:00 | 11:00 |
+| Londra | 03:00 | 12:00 |
+| New York | 08:00 | 17:00 |
+
+Il numero più utile qui è l’apertura settimanale. Il forex riapre la domenica alle 22:00 GMT, cioè la domenica alle 17:00 EST: le 5 del pomeriggio, ora della costa est, di domenica. È il momento in cui inizia la sessione di Sydney e parte la settimana di trading per chi opera dagli Stati Uniti. La sessione di New York vera e propria va dalle 08:00 alle 17:00 Eastern, in perfetta corrispondenza con una normale giornata lavorativa.
+
+Se ti trovi più a ovest, parti dall’Eastern e adatta. Il Central Time (CST) è un’ora indietro rispetto all’Eastern, quindi l’apertura della domenica è alle 16:00 e New York va dalle 07:00 alle 16:00. Il Pacific Time (PST) è tre ore indietro rispetto all’Eastern, il che porta l’apertura della domenica alle 14:00 e New York dalle 05:00 alle 14:00. Un promemoria: da metà marzo a inizio novembre gli Stati Uniti usano l’Eastern Daylight Time (EDT, GMT-4), quindi in quel periodo, che copre la maggior parte dell’anno, devi togliere quattro ore invece di cinque.
+
+## Orari del forex in Europa (CET/CEST)
+
+L’Europa continentale, da Francoforte e Parigi fino a Madrid, Roma e Amsterdam, usa l’ora dell’Europa centrale. Il CET in ora solare è GMT+1, quindi aggiungi un’ora a ogni valore GMT.
+
+| Sessione | Apertura (CET) | Chiusura (CET) |
+|---|---|---|
+| Sydney | 23:00 | 08:00 |
+| Tokyo | 01:00 | 10:00 |
+| Francoforte | 08:00 | 17:00 |
+| Londra | 09:00 | 18:00 |
+| New York | 14:00 | 23:00 |
+
+Per un trader a Francoforte o a Madrid, la sessione locale apre alle 08:00 CET e quella di Londra un’ora dopo, alle 09:00. La sovrapposizione Londra-New York, quella a liquidità più alta, cade tra le 14:00 e le 18:00 CET, comodamente nel pomeriggio. L’apertura settimanale della domenica alle 22:00 GMT corrisponde alle 23:00 CET della domenica sera. Da fine marzo a fine ottobre l’Europa continentale passa all’ora legale dell’Europa centrale (CEST, GMT+2): in quei mesi aggiungi due ore invece di una. Ed ecco il dettaglio che trae in inganno molti: Londra è un’ora indietro rispetto a Francoforte, quindi la sessione di Londra segue l’ora del Regno Unito, non il CET.
+
+## Orari del forex in India (IST)
+
+L’India Standard Time è GMT+5:30 e l’India non adotta l’ora legale. Questo mantiene la tabella indiana stabile tutto l’anno, una comodità reale, anche se lo scarto di mezz’ora fa cadere gli orari locali sulla mezz’ora. Aggiungi cinque ore e trenta minuti a ogni valore GMT.
+
+| Sessione | Apertura (IST) | Chiusura (IST) |
+|---|---|---|
+| Sydney | 03:30 | 12:30 |
+| Tokyo | 05:30 | 14:30 |
+| Francoforte | 12:30 | 21:30 |
+| Londra | 13:30 | 22:30 |
+| New York | 18:30 | 03:30 |
+
+Per un trader indiano, la sessione di Londra apre alle 13:30 IST, nel primo pomeriggio, e quella di New York alle 18:30 IST, in serata. La sovrapposizione Londra-New York, la fascia più attiva della giornata, va dalle 18:30 alle 22:30 IST, il che si adatta bene a chi lavora di giorno e fa trading la sera. Dato che l’India non ha l’ora legale, questi orari locali non cambiano mai dal lato indiano. A spostarsi è invece il riferimento GMT, quando Regno Unito, Europa o Stati Uniti passano all’ora legale: durante l’estate dell’emisfero nord, le righe di Londra e New York qui sopra arrivano un’ora prima in IST. È proprio il tipo di slittamento legato all’ora legale che una tabella statica non riesce a cogliere da sola.
+
+## Orari del forex nel Golfo (GST)
+
+Il Gulf Standard Time copre Dubai, Abu Dhabi, Mascate e più in generale l’area di Emirati Arabi Uniti e Oman. Il GST è GMT+4 e, come l’India, il Golfo non adotta l’ora legale. Aggiungi quattro ore a ogni valore GMT.
+
+| Sessione | Apertura (GST) | Chiusura (GST) |
+|---|---|---|
+| Sydney | 02:00 | 11:00 |
+| Tokyo | 04:00 | 13:00 |
+| Francoforte | 11:00 | 20:00 |
+| Londra | 12:00 | 21:00 |
+| New York | 17:00 | 02:00 |
+
+Da Dubai, la sessione di Londra apre a mezzogiorno, alle 12:00 GST, e quella di New York alle 17:00 GST, nel tardo pomeriggio. La sovrapposizione Londra-New York va dalle 17:00 alle 21:00 GST, una fascia serale per chi fa trading dal Golfo. Chi opera da Istanbul può seguire lo stesso ragionamento: la Turchia usa GMT+3 tutto l’anno, senza ora legale, quindi basta togliere un’ora a ogni valore GST per ottenere l’ora di Istanbul, il che porta l’apertura di Londra alle 11:00 e quella di New York alle 16:00. Poiché né il Golfo né la Turchia cambiano orario, l’unica variabile resta ancora l’ora legale dell’emisfero nord sui riferimenti di Londra, Francoforte e New York.
+
+## Orari del forex in Asia-Pacifico (SGT e AEST)
+
+L’area Asia-Pacifico si divide in due riferimenti utili. Il Singapore Standard Time (SGT) è GMT+8 senza ora legale e, in pratica, è condiviso dai trader di gran parte dell’Asia orientale e sud-orientale. Aggiungi otto ore al GMT.
+
+| Sessione | Apertura (SGT) | Chiusura (SGT) |
+|---|---|---|
+| Sydney | 06:00 | 15:00 |
+| Tokyo | 08:00 | 17:00 |
+| Francoforte | 15:00 | 00:00 |
+| Londra | 16:00 | 01:00 |
+| New York | 21:00 | 06:00 |
+
+L’ora dell’Australia orientale è il secondo riferimento, ed è più insidiosa, perché l’Australia adotta l’ora legale durante l’estate australe, nella metà dell’anno opposta rispetto all’emisfero nord. L’Australian Eastern Standard Time (AEST) è GMT+10; durante l’estate australiana, all’incirca da ottobre ad aprile, diventa AEDT, cioè GMT+11. La tabella qui sotto usa l’AEST in ora solare, quindi aggiungi dieci ore al GMT.
+
+| Sessione | Apertura (AEST) | Chiusura (AEST) |
+|---|---|---|
+| Sydney | 08:00 | 17:00 |
+| Tokyo | 10:00 | 19:00 |
+| Francoforte | 17:00 | 02:00 |
+| Londra | 18:00 | 03:00 |
+| New York | 23:00 | 08:00 |
+
+Per un trader di Sydney in ora solare, la sessione locale di Sydney segue un normale orario dalle 08:00 alle 17:00, Londra apre alle 18:00 di sera e New York alle 23:00, a notte inoltrata. Durante l’ora legale australiana, aggiungi un’altra ora alla colonna AEST.
+
+## Perché le tabelle di conversione fisse sbagliano (ora legale)
+
+Ogni tabella qui sopra è una fotografia dell’ora solare. Perché non ci si può fidare di una tabella stampata per tutto l’anno? Tutto si riduce a un fatto: le sessioni sono ancorate all’ora locale di ogni centro di trading, non al GMT. Quando un centro adotta l’ora legale, i suoi orologi vanno avanti, quindi la sessione si sposta rispetto al GMT anche se il GMT in sé non cambia mai.
+
+La complicazione è che il mondo non cambia orario nello stesso giorno. Il Regno Unito e l’Unione Europea cambiano l’ultima domenica di marzo e l’ultima domenica di ottobre. Gli Stati Uniti cambiano prima in primavera, la seconda domenica di marzo, e più tardi in autunno, la prima domenica di novembre. Per qualche settimana ogni primavera e ogni autunno, Stati Uniti ed Europa vanno fuori sincrono, il che restringe o allarga brevemente la sovrapposizione Londra-New York. L’Australia, nell’emisfero australe, cambia nel senso opposto e in periodi dell’anno opposti. India, Golfo, Singapore e Turchia, invece, non cambiano mai.
+
+Metti insieme tutti questi elementi e una singola tabella fissa può risultare sbagliata per qualsiasi fuso nel giorno in cui un cambio d’ora rilevante scatta su uno dei due lati della conversione. Un trader a Mumbai non cambia mai l’orologio, eppure da fine marzo la sessione di Londra arriva comunque un’ora prima in IST, solo perché Londra è passata all’ora legale. L’unico metodo affidabile è calcolare ogni sessione a partire dalle regole aggiornate dei fusi orari, non da una tabella imparata a memoria mesi prima. Per il caso di Londra nel dettaglio, leggi [a che ora apre la sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra).
+
+## Ottieni automaticamente i tuoi orari locali esatti
+
+Invece di destreggiarti a mente tra sei scarti orari e due calendari dell’ora legale, lascia fare al software. Il [convertitore live in homepage](/it) legge il fuso orario del tuo dispositivo e il suo stato attuale di ora legale, poi mostra l’apertura e la chiusura di ogni sessione nella tua ora locale esatta. Si aggiorna automaticamente quando la tua regione, o uno qualsiasi dei centri di trading, cambia orario, così i numeri sono sempre corretti per il giorno in cui li stai guardando.
+
+Se fai trading su più regioni, lo strumento è più rapido e più sicuro di qualsiasi riferimento statico, perché elimina le due fonti di errore che colgono tutti di sorpresa: aggiungere lo scarto sbagliato e dimenticare un cambio d’ora dall’altro lato della conversione. Apri la [homepage](/it) una volta, conferma il tuo fuso orario e le quattro sessioni compariranno sul tuo orologio.
+
+## Domande frequenti
+
+**Quali sono gli orari del mercato forex nel mio fuso orario?** Parti dalla base GMT (Sydney 22:00-07:00, Tokyo 00:00-09:00, Francoforte 07:00-16:00, Londra 08:00-17:00, New York 13:00-22:00) e aggiungi o togli il tuo scarto rispetto al GMT. Per una risposta esatta che tenga conto dell’ora legale, usa il convertitore live in homepage: legge il tuo fuso orario al posto tuo.
+
+**Gli orari del forex cambiano con l’ora legale?** Sì, nella pratica. Il GMT non cambia mai, ma quando converti in un fuso che adotta l’ora legale, gli orari locali si spostano di un’ora per una parte dell’anno. Le diverse regioni cambiano in date diverse, quindi le sovrapposizioni possono spostarsi per brevi periodi.
+
+**A che ora è aperto il mercato forex in India?** In India Standard Time (GMT+5:30, senza ora legale), durante l’inverno dell’emisfero nord la sessione di Londra va all’incirca dalle 13:30 alle 22:30 IST e quella di New York dalle 18:30 alle 03:30 IST. Da fine marzo, le righe di Londra e New York arrivano un’ora prima, perché quei centri passano all’ora legale.
+
+**A che ora apre la sessione di New York?** New York va dalle 13:00 alle 22:00 GMT in ora solare, cioè dalle 08:00 alle 17:00 ora della costa est degli Stati Uniti. La settimana di trading invece riapre la domenica alle 17:00 Eastern.
+
+**Il GMT è uguale all’UTC in questo caso?** Ai fini pratici degli orari del forex, sì. UTC e GMT coincidono abbastanza da rendere identiche le tabelle di conversione di questa guida, che tu parta dal GMT o dall’UTC.
+
+Per una panoramica più ampia, leggi la [guida alle sessioni spiegate](/it/blog/sessioni-di-trading-forex-spiegate) oppure inizia a convertire dalla [homepage](/it).
+
+Fonti autorevoli: l’[IANA time zone database](https://www.iana.org/time-zones) per le regole ufficiali su fusi orari e ora legale, [timeanddate.com sull’ora legale](https://www.timeanddate.com/time/dst/) per le date dei cambi d’ora, [gov.uk sul cambio dell’ora](https://www.gov.uk/when-do-the-clocks-change) per le date nel Regno Unito e la [Banca dei Regolamenti Internazionali](https://www.bis.org/) per il contesto del mercato dei cambi.
+
+*Questo articolo ha esclusivamente scopo informativo e non costituisce una consulenza finanziaria.*`,
+      de: `Die Zeiten der Forex-Sessions werden fast immer in GMT angegeben. Als gemeinsamer Bezugspunkt ist das sinnvoll: GMT verschiebt sich nie, und jeder Trader kann davon ausgehend umrechnen. Der Haken: Sie handeln nicht in GMT. Sie handeln nach der Uhr an Ihrer Wand, ob diese nun Eastern Time, Mitteleuropäische Zeit, India Standard Time, Gulf Standard Time oder australische Ostküstenzeit anzeigt. Die vier großen Sessions von Hand in die eigene Zeitzone umzurechnen, geht leicht ein wenig schief, und zweimal im Jahr werden die Fehler noch größer, wenn die Sommerzeit manche Zeitzonen verschiebt und andere nicht. Dieser Leitfaden liefert Ihnen saubere Umrechnungstabellen für die gängigsten Zeitzonen, zeigt genau, wo feste Tabellen versagen, und verweist auf einen Live-Umrechner, der Ihre Zeitzone für Sie erkennt.
+
+## Alle vier Sessions in GMT: die Ausgangsbasis
+
+Alles Folgende geht von derselben Basis aus: den Zeitfenstern der großen Handelszentren in der Normalzeit (Winter auf der Nordhalbkugel), angegeben in GMT. Wenn Sie sich diese fünf Zeilen merken, wird jede weitere Tabelle in diesem Artikel zu einer einfachen Addition oder Subtraktion.
+
+| Session | Öffnung (GMT) | Schluss (GMT) |
+|---|---|---|
+| Sydney | 22:00 | 07:00 |
+| Tokio | 00:00 | 09:00 |
+| Frankfurt | 07:00 | 16:00 |
+| London | 08:00 | 17:00 |
+| New York | 13:00 | 22:00 |
+
+Das sind die Zeitfenster der Normalzeit. Der Markt selbst läuft durchgehend von Sonntag 22:00 GMT bis Freitag 22:00 GMT und ist dann über das Wochenende geschlossen. Die Session-Bezeichnungen markieren lediglich, wann das jeweilige regionale Handelszentrum aktiv ist. Beachten Sie, dass Sydney den globalen Handelstag eröffnet und sein Zeitfenster über Mitternacht hinausreicht, und dass sich London und New York etwa von 13:00 bis 17:00 GMT überschneiden, die geschäftigste und liquideste Phase der ganzen Woche. Mehr dazu, was die einzelnen Sessions ausmacht, lesen Sie in unserem Leitfaden zu den [Forex-Handelssitzungen](/de/blog/forex-handelssitzungen-erklaert).
+
+## Forex-Zeiten in US-Zeit (EST/EDT)
+
+Für Trader in den Vereinigten Staaten ist die US Eastern Time der natürliche Bezugspunkt. Die Eastern Standard Time (EST) entspricht GMT-5, um eine GMT-Session umzurechnen, ziehen Sie also fünf Stunden ab.
+
+| Session | Öffnung (EST) | Schluss (EST) |
+|---|---|---|
+| Sydney | 17:00 | 02:00 |
+| Tokio | 19:00 | 04:00 |
+| Frankfurt | 02:00 | 11:00 |
+| London | 03:00 | 12:00 |
+| New York | 08:00 | 17:00 |
+
+Die nützlichste Zahl hier ist die Wocheneröffnung. Der Devisenmarkt öffnet am Sonntag um 22:00 GMT wieder, das ist Sonntag 17:00 EST, also 5 PM Eastern am Sonntagnachmittag. Dann beginnt die Sydney-Session, und für Trader in den USA startet die Handelswoche. Die New-York-Session selbst läuft von 08:00 bis 17:00 Eastern Time und deckt sich damit genau mit einem normalen Arbeitstag.
+
+Wer weiter westlich sitzt, rechnet von Eastern Time aus. Die Central Time (CST) liegt eine Stunde hinter Eastern, die Sonntagseröffnung fällt also auf 16:00 und New York läuft von 07:00 bis 16:00. Die Pacific Time (PST) liegt drei Stunden hinter Eastern, damit liegt die Sonntagseröffnung bei 14:00 und New York bei 05:00 bis 14:00. Ein Hinweis: Von Mitte März bis Anfang November gilt in den USA die Eastern Daylight Time (EDT, GMT-4), in diesem Zeitraum, der den größten Teil des Jahres abdeckt, ziehen Sie also vier statt fünf Stunden ab.
+
+## Forex-Zeiten in Europa (MEZ/MESZ)
+
+Kontinentaleuropa, von Frankfurt und Paris bis Madrid, Rom und Amsterdam, nutzt die Mitteleuropäische Zeit (MEZ, englisch CET). Die normale MEZ entspricht GMT+1, addieren Sie also zu jedem GMT-Wert eine Stunde.
+
+| Session | Öffnung (MEZ) | Schluss (MEZ) |
+|---|---|---|
+| Sydney | 23:00 | 08:00 |
+| Tokio | 01:00 | 10:00 |
+| Frankfurt | 08:00 | 17:00 |
+| London | 09:00 | 18:00 |
+| New York | 14:00 | 23:00 |
+
+Für einen Trader in Frankfurt oder Madrid öffnet die lokale Session um 08:00 MEZ und die London-Session eine Stunde später um 09:00. Die liquiditätsstarke Überschneidung von London und New York fällt auf 14:00 bis 18:00 MEZ, bequem mitten in den Nachmittag. Die Wocheneröffnung am Sonntag um 22:00 GMT entspricht 23:00 MEZ am Sonntagabend. Von Ende März bis Ende Oktober gilt in Kontinentaleuropa die Mitteleuropäische Sommerzeit (MESZ, englisch CEST, GMT+2); in diesen Monaten addieren Sie zwei Stunden statt einer. Und hier das Detail, über das viele stolpern: London liegt eine Stunde hinter Frankfurt, die London-Session richtet sich also nach britischer Zeit, nicht nach MEZ.
+
+## Forex-Zeiten in Indien (IST)
+
+Die India Standard Time entspricht GMT+5:30, und Indien kennt keine Sommerzeit. Dadurch bleibt die indische Tabelle das ganze Jahr über stabil, ein echter Vorteil, auch wenn die Lokalzeiten wegen der halbstündigen Verschiebung auf die halbe Stunde fallen. Addieren Sie zu jedem GMT-Wert fünf Stunden und dreißig Minuten.
+
+| Session | Öffnung (IST) | Schluss (IST) |
+|---|---|---|
+| Sydney | 03:30 | 12:30 |
+| Tokio | 05:30 | 14:30 |
+| Frankfurt | 12:30 | 21:30 |
+| London | 13:30 | 22:30 |
+| New York | 18:30 | 03:30 |
+
+Für einen Trader in Indien öffnet die London-Session um 13:30 IST am frühen Nachmittag und New York um 18:30 IST am Abend. Die Überschneidung von London und New York, das aktivste Zeitfenster des Tages, reicht von 18:30 bis 22:30 IST, was gut zu Menschen passt, die tagsüber arbeiten und abends handeln. Da Indien keine Sommerzeit hat, ändern sich diese Ortszeiten auf indischer Seite nie. Was sich verschiebt, ist der GMT-Anker, wenn das Vereinigte Königreich, Europa oder die USA auf Sommerzeit umstellen: Im Sommer der Nordhalbkugel kommen die Zeilen für London und New York in IST eine Stunde früher. Genau diese Verschiebung über Sommerzeitgrenzen hinweg kann eine statische Tabelle allein nicht abbilden.
+
+## Forex-Zeiten am Golf (GST)
+
+Die Gulf Standard Time gilt für Dubai, Abu Dhabi, Maskat und die weitere Region der VAE und Omans. GST entspricht GMT+4, und wie Indien kennt auch die Golfregion keine Sommerzeit. Addieren Sie zu jedem GMT-Wert vier Stunden.
+
+| Session | Öffnung (GST) | Schluss (GST) |
+|---|---|---|
+| Sydney | 02:00 | 11:00 |
+| Tokio | 04:00 | 13:00 |
+| Frankfurt | 11:00 | 20:00 |
+| London | 12:00 | 21:00 |
+| New York | 17:00 | 02:00 |
+
+Von Dubai aus gesehen öffnet die London-Session zur Mittagszeit, um 12:00 GST, und New York um 17:00 GST am späten Nachmittag. Die Überschneidung von London und New York reicht von 17:00 bis 21:00 GST, ein Abendfenster für Trader am Golf. Trader in Istanbul können ähnlich vorgehen: Die Türkei nutzt ganzjährig GMT+3 ohne Sommerzeit, ziehen Sie also von jedem GST-Wert eine Stunde ab, um die Istanbuler Zeit zu erhalten. Damit liegt die London-Eröffnung bei 11:00 und New York bei 16:00. Da weder die Golfstaaten noch die Türkei die Uhren umstellen, bleibt auch hier die Sommerzeit der Nordhalbkugel an den Ankern London, Frankfurt und New York die einzige Variable.
+
+## Forex-Zeiten im asiatisch-pazifischen Raum (SGT und AEST)
+
+Für den asiatisch-pazifischen Raum gibt es zwei nützliche Bezugsgrößen. Die Singapore Standard Time (SGT) entspricht GMT+8 ohne Sommerzeit, und in der Praxis teilen sie Trader in weiten Teilen Ost- und Südostasiens. Addieren Sie acht Stunden zu GMT.
+
+| Session | Öffnung (SGT) | Schluss (SGT) |
+|---|---|---|
+| Sydney | 06:00 | 15:00 |
+| Tokio | 08:00 | 17:00 |
+| Frankfurt | 15:00 | 00:00 |
+| London | 16:00 | 01:00 |
+| New York | 21:00 | 06:00 |
+
+Die australische Ostküstenzeit ist die zweite Bezugsgröße, und sie ist kniffliger, denn Australien stellt im Sommer der Südhalbkugel, also in der entgegengesetzten Jahreshälfte zum Norden, auf Sommerzeit um. Die normale Australian Eastern Standard Time (AEST) entspricht GMT+10; während des australischen Sommers, etwa von Oktober bis April, wird daraus die AEDT mit GMT+11. Die folgende Tabelle verwendet die normale AEST, addieren Sie also zehn Stunden zu GMT.
+
+| Session | Öffnung (AEST) | Schluss (AEST) |
+|---|---|---|
+| Sydney | 08:00 | 17:00 |
+| Tokio | 10:00 | 19:00 |
+| Frankfurt | 17:00 | 02:00 |
+| London | 18:00 | 03:00 |
+| New York | 23:00 | 08:00 |
+
+Für einen Trader in Sydney läuft die lokale Sydney-Session in der Normalzeit ganz gewöhnlich von 08:00 bis 17:00, London öffnet um 18:00 am Abend und New York um 23:00 spät in der Nacht. Während der australischen Sommerzeit addieren Sie zur AEST-Spalte eine weitere Stunde.
+
+## Warum feste Umrechnungstabellen versagen (Sommerzeit)
+
+Jede Tabelle oben ist eine Momentaufnahme der Normalzeit. Warum kann man einer gedruckten Tabelle nicht das ganze Jahr über trauen? Das liegt an einer einzigen Tatsache: Die Sessions sind an die Ortszeit des jeweiligen Handelszentrums gebunden, nicht an GMT. Stellt ein Zentrum auf Sommerzeit um, gehen dort die Uhren vor, und die Session verschiebt sich gegenüber GMT, obwohl sich GMT selbst nie ändert.
+
+Erschwerend kommt hinzu, dass die Welt nicht am selben Tag umstellt. Das Vereinigte Königreich und die Europäische Union stellen am letzten Sonntag im März und am letzten Sonntag im Oktober um. Die Vereinigten Staaten stellen im Frühjahr früher um, am zweiten Sonntag im März, und im Herbst später, am ersten Sonntag im November. Für einige Wochen im Frühjahr und im Herbst sind die USA und Europa daher nicht im Gleichschritt, was die Überschneidung von London und New York vorübergehend verkürzt oder verlängert. Australien auf der Südhalbkugel stellt in die entgegengesetzte Richtung und zu entgegengesetzten Jahreszeiten um. Indien, die Golfstaaten, Singapur und die Türkei stellen dagegen überhaupt nicht um.
+
+Zusammengenommen bedeutet das: Eine einzige feste Tabelle kann für jede Zeitzone falsch sein, sobald auf einer der beiden Seiten der Umrechnung eine relevante Zeitumstellung stattfindet. Ein Trader in Mumbai stellt keine Uhren um, und trotzdem kommt die London-Session ab Ende März in IST eine Stunde früher, allein weil London die Uhren vorgestellt hat. Die einzig verlässliche Methode ist, jede Session anhand aktueller Zeitzonenregeln zu berechnen statt anhand einer Tabelle, die man sich vor Monaten eingeprägt hat. Den Fall London im Detail finden Sie unter [wann die London-Session öffnet](/de/blog/wann-oeffnet-die-london-session).
+
+## Ihre genauen lokalen Zeiten automatisch ermitteln
+
+Statt sechs Zeitverschiebungen und zwei Sommerzeitkalender im Kopf zu jonglieren, überlassen Sie das besser einer Software. Der [Live-Umrechner auf der Startseite](/de) liest die Zeitzone Ihres Geräts und deren aktuellen Sommerzeitstatus aus und zeigt dann Öffnung und Schluss jeder Session in Ihrer exakten Ortszeit an. Er aktualisiert sich automatisch, wenn Ihre Region oder eines der Handelszentren die Uhren umstellt, sodass die Zahlen für den Tag, an dem Sie sie ansehen, immer aktuell sind.
+
+Wenn Sie in mehreren Regionen handeln, ist das Tool schneller und sicherer als jede statische Übersicht, weil es die beiden Fehlerquellen ausschaltet, über die viele stolpern: das Addieren der falschen Zeitverschiebung und das Übersehen einer Zeitumstellung auf der anderen Seite der Umrechnung. Öffnen Sie einmal die [Startseite](/de), bestätigen Sie Ihre Zeitzone, und die vier Sessions erscheinen auf Ihrer eigenen Uhr.
+
+## Häufig gestellte Fragen
+
+**Wie sind die Forex-Handelszeiten in meiner Zeitzone?** Nehmen Sie die GMT-Basis (Sydney 22:00-07:00, Tokio 00:00-09:00, Frankfurt 07:00-16:00, London 08:00-17:00, New York 13:00-22:00) und addieren oder subtrahieren Sie Ihre Abweichung von GMT. Für eine exakte Antwort unter Berücksichtigung der Sommerzeit nutzen Sie den Live-Umrechner auf der Startseite; er erkennt Ihre Zeitzone automatisch.
+
+**Ändern sich die Forex-Handelszeiten mit der Sommerzeit?** Ja, praktisch schon. GMT ändert sich nie, aber wenn Sie in eine Zeitzone mit Sommerzeit umrechnen, verschieben sich die lokalen Uhrzeiten für einen Teil des Jahres um eine Stunde. Verschiedene Regionen stellen an unterschiedlichen Tagen um, daher können sich die Überschneidungen kurzzeitig verschieben.
+
+**Wann ist der Forex-Markt in Indien geöffnet?** In der India Standard Time (GMT+5:30, keine Sommerzeit) läuft die London-Session im Winter der Nordhalbkugel etwa von 13:30 bis 22:30 IST und New York etwa von 18:30 bis 03:30 IST. Ab Ende März kommen die Zeilen für London und New York eine Stunde früher, weil diese Zentren auf Sommerzeit umstellen.
+
+**Wann öffnet die New-York-Session?** New York läuft in der Normalzeit von 13:00 bis 22:00 GMT, das entspricht 08:00 bis 17:00 US Eastern Time. Die Handelswoche selbst beginnt am Sonntag um 5 PM Eastern.
+
+**Ist GMT hier dasselbe wie UTC?** Für die praktische Berechnung der Forex-Handelszeiten ja. UTC und GMT liegen so nah beieinander, dass die Umrechnungstabellen hier identisch sind, egal ob Sie von GMT oder UTC ausgehen.
+
+Einen breiteren Überblick bietet der [Leitfaden zu den Handelssitzungen](/de/blog/forex-handelssitzungen-erklaert), oder Sie beginnen direkt mit der Umrechnung auf der [Startseite](/de).
+
+Maßgebliche Quellen: die [IANA-Zeitzonendatenbank](https://www.iana.org/time-zones) für die offiziellen Zeitzonen- und Sommerzeitregeln, [timeanddate.com zur Sommerzeit](https://www.timeanddate.com/time/dst/) für die Umstellungstermine, [gov.uk zur Zeitumstellung](https://www.gov.uk/when-do-the-clocks-change) für die britischen Termine und die [Bank für Internationalen Zahlungsausgleich](https://www.bis.org/) für den Kontext zum Devisenmarkt.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex seans saatleri neredeyse her zaman GMT olarak verilir. Ortak bir referans olarak bu mantıklıdır: GMT hiç değişmez ve her yatırımcı ondan kendi saatine çeviri yapabilir. Sorun şu ki siz GMT ile işlem yapmazsınız. Duvarınızdaki saate göre işlem yaparsınız; bu saat ister ABD Doğu Saati, ister Orta Avrupa Saati, Hindistan Standart Saati, Körfez Standart Saati ya da Avustralya Doğu Saati olsun. Dört büyük seansı kendi saat diliminize elle çevirirken ufak hatalar yapmak kolaydır ve bu hatalar yılda iki kez, yaz saati uygulaması bazı saat dilimlerini kaydırıp diğerlerini kaydırmadığında daha da büyür. Bu rehber en yaygın saat dilimleri için temiz çeviri tabloları sunuyor, sabit tabloların tam olarak nerede bozulduğunu gösteriyor ve saat diliminizi sizin yerinize okuyan canlı bir çeviriciye yönlendiriyor.
+
+## GMT’ye göre dört seans: temel referans
+
+Aşağıdaki her şey aynı temelden başlar: her büyük merkezin standart saat (kuzey yarımkürede kış) dönemindeki aralıkları, GMT olarak. Bu beş satırı öğrendiğinizde bu yazıdaki diğer tüm tablolar basit bir toplama ya da çıkarma işlemine dönüşür.
+
+| Seans | Açılış (GMT) | Kapanış (GMT) |
+|---|---|---|
+| Sidney | 22:00 | 07:00 |
+| Tokyo | 00:00 | 09:00 |
+| Frankfurt | 07:00 | 16:00 |
+| Londra | 08:00 | 17:00 |
+| New York | 13:00 | 22:00 |
+
+Bunlar standart saat dönemindeki aralıklardır. Piyasanın kendisi pazar 22:00 GMT’den cuma 22:00 GMT’ye kadar kesintisiz işler, ardından hafta sonu kapanır. Seans adları yalnızca her bölgesel işlem merkezinin ne zaman aktif olduğunu gösterir. Küresel günü Sidney’in açtığına ve aralığının gece yarısını aştığına, Londra ile New York’un ise kabaca 13:00 ile 17:00 GMT arasında çakıştığına dikkat edin; bu, tüm haftanın en yoğun ve en likit dönemidir. Her seansın ne anlama geldiğini daha ayrıntılı öğrenmek için [forex işlem seansları](/tr/blog/forex-islem-seanslari-rehberi) rehberimize bakın.
+
+## ABD saatiyle forex saatleri (EST/EDT)
+
+ABD’deki yatırımcılar için doğal referans ABD Doğu Saati’dir. Standart Doğu Saati (EST) GMT-5’tir; yani herhangi bir GMT seans saatini çevirmek için beş saat çıkarın.
+
+| Seans | Açılış (EST) | Kapanış (EST) |
+|---|---|---|
+| Sidney | 17:00 | 02:00 |
+| Tokyo | 19:00 | 04:00 |
+| Frankfurt | 02:00 | 11:00 |
+| Londra | 03:00 | 12:00 |
+| New York | 08:00 | 17:00 |
+
+Buradaki en işe yarar rakam haftalık açılıştır. Forex pazar günü 22:00 GMT’de, yani pazar 17:00 EST’de, başka bir deyişle pazar öğleden sonra Doğu saatiyle 17:00’de yeniden açılır. Sidney seansı bu anda başlar ve ABD’deki yatırımcılar için işlem haftası açılmış olur. New York seansının kendisi Doğu saatiyle 08:00 ile 17:00 arasında işler ve normal bir iş gününe tam olarak oturur.
+
+Daha batıdaysanız Doğu Saati’nden yola çıkarak ayarlama yapın. Merkezi Saat (CST) Doğu Saati’nin bir saat gerisindedir; bu yüzden pazar açılışı 16:00’dır ve New York 07:00 ile 16:00 arasında işler. Pasifik Saati (PST) Doğu Saati’nin üç saat gerisindedir; bu da pazar açılışını 14:00’e, New York’u ise 05:00 ile 14:00 arasına yerleştirir. Bir hatırlatma: ABD mart ortasından kasım başına kadar Doğu Yaz Saati’ni (EDT, GMT-4) kullanır; yılın büyük bölümünü kapsayan bu dönemde beş yerine dört saat çıkarın.
+
+## Avrupa saatiyle forex saatleri (CET/CEST)
+
+Frankfurt ve Paris’ten Madrid, Roma ve Amsterdam’a kadar kıta Avrupası Orta Avrupa Saati’ni kullanır. Standart CET GMT+1’dir; bu yüzden her GMT rakamına bir saat ekleyin.
+
+| Seans | Açılış (CET) | Kapanış (CET) |
+|---|---|---|
+| Sidney | 23:00 | 08:00 |
+| Tokyo | 01:00 | 10:00 |
+| Frankfurt | 08:00 | 17:00 |
+| Londra | 09:00 | 18:00 |
+| New York | 14:00 | 23:00 |
+
+Frankfurt ya da Madrid’deki bir yatırımcı için yerel seans 08:00 CET’te, Londra seansı ise bir saat sonra, 09:00’da açılır. Likiditenin yüksek olduğu Londra-New York çakışması 14:00 ile 18:00 CET arasına, yani rahatça öğleden sonranın içine denk gelir. Pazar 22:00 GMT’deki haftalık açılış, pazar gecesi 23:00 CET’e karşılık gelir. Mart sonundan ekim sonuna kadar kıta Avrupası Orta Avrupa Yaz Saati’ne (CEST, GMT+2) geçer; bu aylarda bir yerine iki saat ekleyin. Ve insanların en çok takıldığı ayrıntı şu: Londra, Frankfurt’un bir saat gerisindedir; bu yüzden Londra seansı CET’e değil, Birleşik Krallık saatine göre işler.
+
+## Hindistan saatiyle forex saatleri (IST)
+
+Hindistan Standart Saati GMT+5:30’dur ve Hindistan yaz saati uygulamaz. Bu da Hindistan tablosunu yıl boyunca sabit tutar; gerçek bir kolaylıktır, ancak yarım saatlik fark nedeniyle yerel saatler buçuklara denk gelir. Her GMT rakamına beş saat otuz dakika ekleyin.
+
+| Seans | Açılış (IST) | Kapanış (IST) |
+|---|---|---|
+| Sidney | 03:30 | 12:30 |
+| Tokyo | 05:30 | 14:30 |
+| Frankfurt | 12:30 | 21:30 |
+| Londra | 13:30 | 22:30 |
+| New York | 18:30 | 03:30 |
+
+Hindistan’daki bir yatırımcı için Londra seansı öğleden sonranın başında, 13:30 IST’de, New York ise akşam 18:30 IST’de açılır. Günün en hareketli dönemi olan Londra-New York çakışması 18:30 ile 22:30 IST arasındadır; bu da gündüz çalışıp akşam işlem yapanlara uygundur. Hindistan yaz saati uygulamadığı için bu yerel saatler Hindistan tarafında hiç değişmez. Değişen, Birleşik Krallık, Avrupa ya da ABD yaz saatine geçtiğinde GMT’deki dayanak noktasıdır; bu yüzden kuzey yarımkürenin yaz aylarında yukarıdaki Londra ve New York satırları IST’de bir saat erken gelir. Bu, statik bir tablonun tek başına yakalayamayacağı türden, farklı yaz saati düzenlerinden kaynaklanan bir kaymadır.
+
+## Körfez saatiyle forex saatleri (GST)
+
+Körfez Standart Saati Dubai, Abu Dabi, Maskat ve daha geniş BAE ile Umman bölgesini kapsar. GST GMT+4’tür ve Hindistan gibi Körfez de yaz saati uygulamaz. Her GMT rakamına dört saat ekleyin.
+
+| Seans | Açılış (GST) | Kapanış (GST) |
+|---|---|---|
+| Sidney | 02:00 | 11:00 |
+| Tokyo | 04:00 | 13:00 |
+| Frankfurt | 11:00 | 20:00 |
+| Londra | 12:00 | 21:00 |
+| New York | 17:00 | 02:00 |
+
+Dubai’den bakıldığında Londra seansı öğlen, 12:00 GST’de, New York ise öğleden sonranın sonunda, 17:00 GST’de açılır. Londra-New York çakışması 17:00 ile 21:00 GST arasındadır ve Körfez’deki yatırımcılar için bir akşam dilimidir. İstanbul’daki yatırımcılar da benzer bir yaklaşım izleyebilir: Türkiye yaz saati uygulamadan yıl boyunca GMT+3 kullanır; bu yüzden İstanbul saati için her GST rakamından bir saat çıkarın. Böylece Londra açılışı 11:00’e, New York 16:00’ya denk gelir. Ne Körfez ne de Türkiye saatlerini değiştirdiği için tek değişken yine Londra, Frankfurt ve New York dayanaklarındaki kuzey yarımküre yaz saatidir.
+
+## Asya-Pasifik saatiyle forex saatleri (SGT ve AEST)
+
+Asya-Pasifik bölgesi iki kullanışlı referansa ayrılır. Singapur Standart Saati (SGT) yaz saati uygulaması olmadan GMT+8’dir ve pratikte Doğu ile Güneydoğu Asya’nın büyük bölümündeki yatırımcılar bu saati paylaşır. GMT’ye sekiz saat ekleyin.
+
+| Seans | Açılış (SGT) | Kapanış (SGT) |
+|---|---|---|
+| Sidney | 06:00 | 15:00 |
+| Tokyo | 08:00 | 17:00 |
+| Frankfurt | 15:00 | 00:00 |
+| Londra | 16:00 | 01:00 |
+| New York | 21:00 | 06:00 |
+
+Avustralya Doğu Saati ikinci referanstır ve daha karmaşıktır, çünkü Avustralya güney yarımkürenin yazında, yani kuzeyin tam tersi olan yarıyılda yaz saati uygular. Standart Avustralya Doğu Saati (AEST) GMT+10’dur; Avustralya yazında, kabaca ekimden nisana kadar, GMT+11 olan AEDT’ye dönüşür. Aşağıdaki tablo standart AEST’yi kullanır; bu yüzden GMT’ye on saat ekleyin.
+
+| Seans | Açılış (AEST) | Kapanış (AEST) |
+|---|---|---|
+| Sidney | 08:00 | 17:00 |
+| Tokyo | 10:00 | 19:00 |
+| Frankfurt | 17:00 | 02:00 |
+| Londra | 18:00 | 03:00 |
+| New York | 23:00 | 08:00 |
+
+Standart saat dönemindeki Sidneyli bir yatırımcı için yerel Sidney seansı normal bir 08:00 ile 17:00 aralığında işler, Londra akşam 18:00’de, New York ise gece geç saatte, 23:00’te açılır. Avustralya yaz saati döneminde AEST sütununa bir saat daha ekleyin.
+
+## Sabit çeviri tabloları neden yanılır (yaz saati)
+
+Yukarıdaki her tablo standart saatin bir anlık görüntüsüdür. Basılı bir tabloya neden yıl boyunca güvenilemez? Bunun tek bir nedeni var: seanslar GMT’ye değil, her işlem merkezinin yerel saatine bağlıdır. Bir merkez yaz saati uyguladığında saatleri ileri alınır; GMT’nin kendisi hiç değişmese de seans GMT’ye göre kayar.
+
+İşi karmaşıklaştıran, dünyanın aynı gün geçiş yapmamasıdır. Birleşik Krallık ve Avrupa Birliği mart ayının son pazarı ve ekim ayının son pazarı değişiklik yapar. ABD ilkbaharda daha erken, mart ayının ikinci pazarı, sonbaharda ise daha geç, kasım ayının ilk pazarı geçiş yapar. Her ilkbahar ve sonbaharda birkaç hafta boyunca ABD ile Avrupa arasındaki uyum bozulur ve bu da Londra-New York çakışmasını kısa bir süreliğine daraltır ya da genişletir. Güney yarımküredeki Avustralya ters yönde ve yılın ters zamanlarında geçiş yapar. Hindistan, Körfez, Singapur ve Türkiye ise hiç geçiş yapmaz.
+
+Bunların hepsini bir araya getirdiğinizde, çevirinin iki tarafından birinde ilgili bir yaz saati değişikliği gerçekleştiği gün tek bir sabit tablo herhangi bir saat dilimi için yanlış olabilir. Mumbai’deki bir yatırımcı saatini değiştirmez, ama yine de mart sonundan itibaren Londra seansı IST’de bir saat erken gelir; bunun tek nedeni Londra’nın saatleri ileri almasıdır. Tek güvenilir yöntem, her seansı aylar önce ezberlenmiş bir tablodan değil, canlı saat dilimi kurallarından hesaplamaktır. Londra örneğinin ayrıntıları için [Londra seansı saat kaçta açılır](/tr/blog/londra-seansi-saat-kacta-acilir) yazımıza bakın.
+
+## Tam yerel saatlerinizi otomatik olarak öğrenin
+
+Altı farklı saat farkını ve iki yaz saati takvimini kafanızda evirip çevirmek yerine bu işi yazılıma bırakın. [Ana sayfadaki canlı çevirici](/tr) cihazınızın saat dilimini ve güncel yaz saati durumunu okur, ardından her seansın açılış ve kapanışını tam yerel saatinizle gösterir. Bölgeniz ya da işlem merkezlerinden herhangi biri saatlerini değiştirdiğinde otomatik olarak güncellenir; böylece rakamlar, baktığınız gün için her zaman günceldir.
+
+Birden fazla bölgede işlem yapıyorsanız bu araç herhangi bir statik referanstan daha hızlı ve daha güvenlidir, çünkü insanları yanıltan iki hata kaynağını ortadan kaldırır: yanlış saat farkını eklemek ve çevirinin öbür tarafındaki bir yaz saati değişikliğini unutmak. [Ana sayfayı](/tr) bir kez açın, saat diliminizi onaylayın; dört seans kendi saatinizle karşınıza çıksın.
+
+## Sıkça sorulan sorular
+
+**Kendi saat dilimimde forex piyasa saatleri nedir?** GMT temel değerlerini (Sidney 22:00-07:00, Tokyo 00:00-09:00, Frankfurt 07:00-16:00, Londra 08:00-17:00, New York 13:00-22:00) alın ve GMT’ye göre farkınızı ekleyin ya da çıkarın. Yaz saatini hesaba katan kesin bir yanıt için ana sayfadaki canlı çeviriciyi kullanın; saat diliminizi sizin yerinize okur.
+
+**Forex işlem saatleri yaz saatiyle değişir mi?** Fiilen evet. GMT hiç değişmez, ancak yaz saati uygulayan bir saat dilimine çevirdiğinizde yerel saatler yılın bir bölümünde bir saat kayar. Farklı bölgeler farklı tarihlerde geçiş yaptığı için çakışmalar kısa süreliğine kayabilir.
+
+**Hindistan’da forex piyasası saat kaçta açık?** Hindistan Standart Saati’nde (GMT+5:30, yaz saati yok) kuzey yarımkürenin kış döneminde Londra seansı yaklaşık 13:30 ile 22:30 IST, New York ise yaklaşık 18:30 ile 03:30 IST arasında işler. Mart sonundan itibaren bu merkezler yaz saatine geçtiği için Londra ve New York satırları bir saat erken gelir.
+
+**New York seansı saat kaçta açılır?** New York, standart saat döneminde 13:00 ile 22:00 GMT, yani ABD Doğu saatiyle 08:00 ile 17:00 arasında işler. İşlem haftasının kendisi pazar günü Doğu saatiyle 17:00’de yeniden açılır.
+
+**Bu konuda GMT ile UTC aynı mıdır?** Forex saatleri açısından pratikte evet. UTC ile GMT birbirine o kadar yakındır ki buradaki çeviri tabloları GMT’den de UTC’den de başlasanız aynıdır.
+
+Daha geniş bir genel bakış için [forex işlem seansları rehberine](/tr/blog/forex-islem-seanslari-rehberi) göz atın ya da çevirmeye hemen [ana sayfada](/tr) başlayın.
+
+Güvenilir kaynaklar: standart saat dilimi ve yaz saati kuralları için [IANA saat dilimi veritabanı](https://www.iana.org/time-zones), geçiş tarihleri için [timeanddate.com yaz saati sayfası](https://www.timeanddate.com/time/dst/), Birleşik Krallık tarihleri için [gov.uk saatlerin ne zaman değiştiği sayfası](https://www.gov.uk/when-do-the-clocks-change) ve döviz piyasası bağlamı için [Uluslararası Ödemeler Bankası](https://www.bis.org/).
+
+*Bu yazı yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -1125,24 +2477,46 @@ Références faisant autorité : la [base de données des fuseaux horaires IANA]
       en: "is-the-forex-market-open-today",
       es: "esta-abierto-el-mercado-forex-hoy",
       fr: "le-marche-du-forex-est-il-ouvert-aujourd-hui",
+      pt: "o-mercado-forex-esta-aberto-hoje",
+      it: "il-mercato-forex-e-aperto-oggi",
+      de: "ist-der-forex-markt-heute-geoeffnet",
+      tr: "forex-piyasasi-bugun-acik-mi",
     },
     title: {
       en: "Is the Forex Market Open Today? Weekends and Holidays 2026",
       es: "¿Está abierto el mercado forex hoy? Fines de semana y festivos 2026",
       fr: "Le marché du forex est-il ouvert aujourd’hui ? Horaires",
+      pt: "O Mercado Forex Está Aberto Hoje? Fins de Semana e Feriados 2026",
+      it: "Il mercato forex è aperto oggi? Weekend e festività 2026",
+      de: "Ist der Forex-Markt heute geöffnet? Wochenenden und Feiertage 2026",
+      tr: "Forex Piyasası Bugün Açık mı? 2026 Hafta Sonları ve Tatiller",
     },
     description: {
       en: "Is the forex market open today? Forex runs 24/5, Sunday to Friday 5 PM ET, closed weekends. See the 2026 forex market holidays and low-liquidity days.",
       es: "¿Está abierto el mercado forex hoy? El forex opera 24/5, de domingo a viernes 5 PM ET, cerrado los fines de semana. Consulta los festivos forex de 2026.",
       fr: "Le forex est ouvert 24h/24, 5 jours par semaine, du dimanche 17h00 à New York au vendredi 17h00. Week-ends, jours fériés 2026 et liquidité réduite.",
+      pt: "O forex está aberto hoje? Ele funciona 24/5, de domingo a sexta às 17h de Nova York, e fecha no fim de semana. Veja os feriados de 2026 e os dias fracos.",
+      it: "Il forex è aperto oggi? Opera 24/5, da domenica a venerdì alle 17:00 ET, chiuso nel weekend. Scopri le festività forex 2026 e i giorni a bassa liquidità.",
+      de: "Ist der Forex-Markt heute geöffnet? Forex läuft 24/5, von Sonntag bis Freitag 17 Uhr New Yorker Zeit, am Wochenende nicht. Mit Feiertagen 2026 und dünnen Tagen.",
+      tr: "Forex piyasası bugün açık mı? Forex 24/5 işler: pazar 17:00’den cuma 17:00’ye (New York saati), hafta sonu kapalı. 2026 tatillerini ve sığ günleri görün.",
     },
     date: "2026-07-26",
-    localeDate: { fr: "2026-09-17" },
+    localeDate: {
+      fr: "2026-09-17",
+      pt: "2026-10-19",
+      tr: "2026-10-29",
+      de: "2026-11-05",
+      it: "2026-11-16",
+    },
     authorSlug: "author",
     tags: {
       en: ["Basics", "Holidays"],
       es: ["Fundamentos", "Festivos"],
       fr: ["Horaires", "Jours fériés"],
+      pt: ["Fundamentos", "Feriados"],
+      it: ["Fondamenti", "Festività"],
+      de: ["Grundlagen", "Feiertage"],
+      tr: ["Temel Bilgiler", "Tatiller"],
     },
     cover: "/blog/is-the-forex-market-open-today.svg",
     body: {
@@ -1431,6 +2805,386 @@ Oui. Un jour de semaine normal, le marché est ouvert 24 heures sur 24. Les seul
 Pour des références officielles sur les jours de fermeture bancaire, voyez le calendrier des jours fériés britanniques sur [gov.uk](https://www.gov.uk/bank-holidays), le calendrier de la Réserve fédérale américaine sur [federalreserve.gov](https://www.federalreserve.gov/aboutthefed/k8.htm), le contexte du marché mondial des changes auprès de la [Banque des règlements internationaux](https://www.bis.org/statistics/rpfx22.htm), et une référence générale de jours fériés comme [timeanddate.com](https://www.timeanddate.com/holidays/).
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `O mercado forex fica aberto 24 horas por dia, cinco dias por semana, de domingo às 17h no horário de Nova York até sexta-feira às 17h no horário de Nova York, e fecha nos fins de semana. Então, se você está se perguntando se o forex está aberto hoje, a resposta curta é: ele abre nos dias úteis e fica fechado da noite de sexta em Nova York até a noite de domingo.
+
+Essa regra simples vale para a maior parte do ano. Mesmo assim, há detalhes que vale a pena conhecer: o horário exato de abertura e fechamento, a reabertura de domingo e o punhado de grandes feriados que drenam a liquidez sem alarde, mesmo quando o mercado tecnicamente está funcionando. Este guia passa por cada um deles para que você sempre saiba o que esperar antes de abrir uma operação.
+
+## Quando o forex abre e fecha a cada semana
+
+A semana do forex corre sem interrupção de **domingo às 17h no horário de Nova York** até **sexta-feira às 17h no horário de Nova York**. No inverno do Hemisfério Norte, essa abertura de domingo cai às 22:00 GMT; durante o horário de verão dos EUA, ela passa para 21:00 GMT. A referência é sempre 17h em Nova York, não um horário fixo em GMT, então dizer 17h no horário de Nova York mantém você certo o ano inteiro.
+
+A abertura coincide com o início da sessão de Sydney, o primeiro grande centro a entrar em operação depois do fim de semana. A partir daí, a negociação avança para oeste ao redor do globo: Tóquio, depois Frankfurt, depois Londres, depois Nova York, cada um passando a liquidez para o seguinte sem pausa. O mercado nunca fecha durante a noite ao longo da semana, porque, quando uma região desacelera, outra já está ativa.
+
+Às 17h de sexta-feira no horário de Nova York, a sessão de Nova York fecha e, sem nenhum outro grande centro aberto, o mercado silencia para o fim de semana. Não há sino nem uma bolsa única por trás disso. O forex não tem bolsa central nenhuma; é uma rede descentralizada de bancos, corretoras e outras instituições. O ritmo semanal é simplesmente a soma dos horários em que os principais centros financeiros do mundo têm equipes trabalhando e liquidando operações.
+## Por que o forex fecha nos fins de semana
+
+O forex fecha no sábado e no domingo porque o sistema bancário que o sustenta para de liquidar operações. As transações de câmbio à vista são, no fim das contas, compensadas no mercado interbancário, e os bancos dos principais centros financeiros ficam fechados no fim de semana. Sem bancos para liquidar posições e fornecer preços, não existe um mercado funcionando para negociar.
+
+Isso é diferente do fechamento de uma bolsa de valores. Uma bolsa é um local único com horário de funcionamento divulgado. O forex não tem esse local, então o fechamento de fim de semana é, na verdade, a ausência coletiva das instituições que formam os preços. Depois que Nova York fecha na sexta e nenhum outro centro está aberto, as cotações praticamente param até Sydney reabrir no domingo.
+
+Uma consequência prática disso é o **gap de fim de semana**. Os preços congelam na noite de sexta, mas o mundo não para. Eleições, declarações de bancos centrais, eventos geopolíticos, notícias econômicas: tudo isso pode acontecer enquanto o mercado está fechado. Quando a negociação recomeça no domingo, os primeiros preços podem aparecer em um nível bem diferente do fechamento de sexta, deixando um buraco visível no gráfico.
+
+Por causa do risco de gap, alguns traders reduzem ou encerram posições antes do fim de semana, e muitos são cautelosos em manter operações alavancadas depois do fechamento de sexta. Ordens de stop-loss podem não ser executadas no preço pretendido se o mercado reabrir além delas, já que não há preços contínuos para negociar durante o fim de semana. Entender isso faz parte da gestão de risco em torno do período fechado.
+
+## A abertura de domingo, explicada
+
+A semana do forex reabre no **domingo às 17h no horário de Nova York**, quando Sydney entra em operação. Esse é o trecho mais tranquilo da semana de negociação. Só os centros da Ásia-Pacífico estão ativos, os volumes são baixos e a liquidez profunda das sessões de Londres e Nova York ainda está a muitas horas de distância.
+
+A liquidez fina na abertura de domingo tem efeitos reais. Os spreads, a diferença entre o preço de compra e o de venda, tendem a ser mais largos do que nos horários de pico, porque há menos participantes cotando. O preço também pode se mover de forma mais brusca com ordens relativamente pequenas, já que há menos profundidade para absorvê-las. Por isso, muitos traders encaram a primeira hora ou as duas primeiras horas da semana com cautela, em vez de entrar correndo assim que o mercado abre.
+
+A abertura de domingo também é o momento em que o gap de fim de semana aparece. Se uma notícia importante saiu enquanto o mercado estava fechado, os preços de abertura já a refletem. Um gap grande pode acionar stops, gerar slippage e dar um tom volátil às primeiras horas asiáticas. Os traders que acompanham a abertura muitas vezes esperam os spreads se normalizarem e Londres se aproximar antes de assumir posições maiores.
+
+Para ver exatamente quando Sydney e os outros centros entram em operação no seu fuso horário, a ferramenta ao vivo em [forexmarkethours.app](/pt) mostra o status de cada sessão em tempo real. Para entender melhor como as sessões se encaixam, leia nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas).
+
+## Feriados do mercado forex em 2026
+
+Aqui está o ponto que surpreende muitos iniciantes: **o forex não tem um calendário de feriados de bolsa**. Sem uma bolsa central, não existe uma lista oficial de dias em que o mercado fecha além dos fins de semana. Tecnicamente, ele continua aberto na maioria dos feriados.
+
+O que muda de fato nos grandes feriados é a **liquidez**. Quando os bancos de um centro importante estão fechados, os participantes que normalmente fornecem preços se afastam, então os volumes caem e os spreads se alargam mesmo com as cotações continuando. Nos maiores feriados globais, como o Natal e o Ano-Novo, vários centros fecham ao mesmo tempo e as condições podem ficar extremamente finas. Moedas específicas também podem ficar paradas no feriado do seu país de origem: o dólar americano perto do Dia da Independência dos EUA ou do Dia de Ação de Graças, o iene perto dos feriados nacionais japoneses, e assim por diante.
+
+A tabela abaixo lista feriados de 2026 amplamente observados que costumam reduzir a liquidez do câmbio. Use-a como um guia de quando as condições podem ser ruins, não como um calendário de fechamentos do mercado. Sempre confirme as datas exatas em uma fonte oficial, já que as datas observadas e os feriados bancários variam conforme o país e o ano.
+
+| Feriado | Data (2026) | Centros / moedas afetados |
+| --- | --- | --- |
+| Ano-Novo | 1º jan | Global; maioria dos centros fechada, muito fino |
+| Sexta-feira Santa | 3 abr | Reino Unido, Europa, EUA; redução ampla |
+| Segunda-feira de Páscoa | 6 abr | Reino Unido e boa parte da Europa |
+| Memorial Day (EUA) | 25 mai | EUA; pares com USD mais calmos |
+| Dia da Independência dos EUA (observado) | 3 jul | EUA; pares com USD mais calmos |
+| Labor Day (EUA) | 7 set | EUA; pares com USD mais calmos |
+| Dia de Ação de Graças (EUA) | 26 nov | EUA; pares com USD mais calmos, tarde fina |
+| Natal | 25 dez | Global; maioria dos centros fechada, muito fino |
+| Boxing Day | 26 dez | Reino Unido, Europa e outros |
+
+Fique de olho também nos **meios expedientes** perto do Natal e do Ano-Novo. Na véspera de Natal e na véspera de Ano-Novo, e às vezes nos dias logo depois, muitos bancos funcionam em horário reduzido ou com equipes mínimas. O mercado pode estar aberto no papel, mas as condições de negociação no fim de dezembro costumam estar entre as piores do ano, com spreads largos e movimentos erráticos com pouco volume.
+
+## Aberto, mas fino: dias de baixa liquidez
+
+Ajuda separar duas situações bem diferentes: o mercado **fechado** e o mercado **aberto, mas fino**. Nos fins de semana ele está fechado e você não consegue negociar. Nos grandes feriados ele geralmente está aberto, mas a liquidez pode ser tão baixa que operar não é recomendável para muitas estratégias.
+
+Numa sessão fina de feriado, várias coisas costumam acontecer ao mesmo tempo. Os spreads se alargam porque menos instituições cotam preços. A profundidade cai, então uma ordem de tamanho normal pode empurrar o preço mais longe do que o habitual. Os movimentos ficam erráticos, com picos bruscos que se revertem na mesma velocidade porque não há fluxo nos dois sentidos suficiente para estabilizar o mercado. Divulgações de dados econômicos nesses dias podem provocar reações desproporcionais à sua importância real.
+
+Para os traders, a lição prática é cautela. Um spread mais largo aumenta o custo de entrar e sair, o que pode transformar uma configuração razoável em uma operação perdedora. Condições finas também tornam mais provável que os stops sejam atingidos por ruído e não por uma direção genuína. Muitos traders experientes simplesmente reduzem o tamanho das posições ou ficam de fora nos maiores feriados, tratando esses dias como momentos de proteger o capital, e não de correr atrás de oportunidades. Saber que um dia está tecnicamente aberto diz pouco; saber que ele está fino diz como agir.
+
+## Como verificar se uma sessão está aberta agora
+
+A forma mais confiável de saber se o forex está aberto hoje, e quais sessões estão ativas, é conferir no seu próprio fuso horário em vez de converter o GMT de cabeça. A ferramenta ao vivo em [forexmarkethours.app](/pt) mostra o status atual das sessões de Sydney, Tóquio, Frankfurt, Londres e Nova York, convertido automaticamente para onde você estiver.
+
+Ela também facilita identificar as sobreposições, incluindo a movimentada **sobreposição Londres-Nova York**, por volta de 13:00-17:00 GMT, quando a liquidez é mais profunda. Se você prefere raciocinar com pontos de referência fixos, nosso guia de [horário do forex por fuso horário](/pt/blog/horario-do-forex-por-fuso-horario) lista cada sessão em vários fusos comuns.
+
+## Feriados públicos vs. feriados bancários
+
+Os termos **feriado público** e **feriado bancário** costumam ser usados como sinônimos, mas a diferença importa no forex. O que afeta o mercado é se os **bancos** de determinado centro estão fechados, já que os bancos são a camada de liquidação por trás do câmbio à vista. Um feriado público em que os bancos abrem tem pouco efeito; um feriado bancário que os fecha reduz a liquidez na moeda daquele centro.
+
+É por isso que o efeito muitas vezes é **específico de cada moeda**, e não global. Quando os bancos britânicos fecham, a libra esterlina e a liquidez de Londres são as mais atingidas. Quando os bancos americanos fecham, o dólar e a sessão de Nova York sentem mais. Quando os bancos japoneses fecham, o iene e a sessão de Tóquio desaceleram. Um feriado em um país raramente para o mercado inteiro, mas pode reduzir visivelmente a atividade nos pares afetados enquanto o resto do mundo segue negociando.
+
+A lição é verificar os feriados por centro, e não só pelo calendário. Um dia que parece normal para os seus pares locais pode cair em um feriado bancário no país de origem de uma moeda que você está negociando, e isso basta para alargar os spreads e abafar os movimentos que você esperava.
+
+## Perguntas frequentes
+
+**O forex abre no sábado?**
+Não. O mercado forex fica fechado o fim de semana inteiro, sábado e domingo, até a reabertura na noite de domingo. Com os bancos dos principais centros fechados, não há liquidação interbancária nem preços contínuos, então a negociação para de sexta às 17h no horário de Nova York até domingo.
+
+**O forex abre no Natal?**
+Tecnicamente o mercado não fecha formalmente, mas no dia de Natal os bancos dos principais centros estão fechados e a liquidez é extremamente fina. Na prática, a maioria dos traders trata o dia como sem negociação, e as condições na véspera de Natal e no Boxing Day também são ruins. Confirme os detalhes com a sua corretora.
+
+**Que horas o forex abre no domingo?**
+O forex abre no domingo às 17h no horário de Nova York, quando começa a sessão de Sydney. Em GMT, isso dá 22:00 no inverno do Hemisfério Norte e 21:00 durante o horário de verão dos EUA, porque a abertura segue o relógio de Nova York, e não um horário fixo em GMT.
+
+**O forex abre no Ano-Novo?**
+Em 1º de janeiro o mercado não fecha formalmente, mas os bancos da maioria dos principais centros estão fechados e a liquidez está entre as mais finas do ano. Somado aos meios expedientes perto da véspera de Ano-Novo, o fim de dezembro e o dia 1º de janeiro pedem cautela.
+
+**O forex está aberto hoje se hoje for dia útil?**
+Sim. Em qualquer dia útil normal o mercado fica aberto 24 horas. As únicas ressalvas em dias úteis são os grandes feriados da tabela acima, quando ele continua aberto, mas pode ficar muito parado. Use a ferramenta ao vivo para confirmar o status atual das sessões no seu fuso horário.
+
+Para referências oficiais sobre quando os bancos fecham, consulte o calendário de feriados bancários do Reino Unido em [gov.uk](https://www.gov.uk/bank-holidays), o calendário de feriados do Federal Reserve dos EUA em [federalreserve.gov](https://www.federalreserve.gov/aboutthefed/k8.htm), informações sobre o mercado global de câmbio do [Banco de Compensações Internacionais](https://www.bis.org/statistics/rpfx22.htm) e uma referência geral de feriados como o [timeanddate.com](https://www.timeanddate.com/holidays/).
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `Il mercato forex è aperto 24 ore al giorno, cinque giorni alla settimana, dalla domenica alle 17:00 ora di New York al venerdì alle 17:00 ora di New York, ed è chiuso nel fine settimana. Quindi, se ti stai chiedendo se il forex è aperto oggi, la risposta breve è che è aperto nei giorni feriali e chiuso dal venerdì sera di New York fino alla domenica sera.
+
+Questa semplice regola vale per gran parte dell’anno. Ci sono però alcuni dettagli da conoscere: l’orario esatto di apertura e chiusura, la riapertura della domenica e le poche grandi festività che prosciugano la liquidità anche quando il mercato, tecnicamente, è in funzione. Questa guida li esamina uno per uno, così saprai sempre cosa aspettarti prima di aprire un’operazione.
+
+## Quando apre e chiude il forex ogni settimana
+
+La settimana del forex scorre senza interruzioni dalla **domenica alle 17:00 ora di New York** al **venerdì alle 17:00 ora di New York**. Durante l’inverno dell’emisfero boreale l’apertura della domenica cade alle 22:00 GMT; durante l’ora legale statunitense si sposta alle 21:00 GMT. Il punto di riferimento è sempre le 17:00 a New York, non un orario fisso in GMT, quindi indicarlo come 17:00 ora di New York ti mantiene nel giusto tutto l’anno.
+
+L’apertura coincide con l’inizio della sessione di Sydney, il primo grande centro che si attiva dopo il fine settimana. Le contrattazioni si spostano poi verso ovest intorno al globo: Tokyo, poi Francoforte, poi Londra, poi New York, ognuna delle quali passa la liquidità alla successiva senza pause. Durante la settimana il mercato non chiude mai di notte, perché quando una regione rallenta, un’altra è già attiva.
+
+Alle 17:00 ora di New York del venerdì la sessione di New York chiude e, senza altri grandi centri aperti, il mercato si ferma per il fine settimana. Non c’è nessuna campanella e nessuna borsa unica dietro tutto questo. Il forex non ha affatto una borsa centrale: è una rete decentralizzata di banche, broker e altre istituzioni. Il ritmo settimanale è semplicemente la somma degli orari in cui i principali centri finanziari del mondo sono operativi e regolano le operazioni.
+## Perché il forex è chiuso nel weekend
+
+Il forex chiude il sabato e la domenica perché il sistema bancario su cui si regge smette di regolare le operazioni. Le transazioni forex a pronti vengono in ultima istanza compensate attraverso il mercato interbancario, e le banche dei principali centri finanziari sono chiuse nel fine settimana. Senza banche che regolino le posizioni e forniscano i prezzi, non esiste un mercato funzionante su cui operare.
+
+È diverso dal modo in cui chiude una borsa valori. Una borsa è un’unica sede con orari di apertura pubblicati. Il forex non ha una sede del genere, quindi la chiusura del weekend è in realtà l’assenza collettiva delle istituzioni che formano i prezzi. Una volta che New York chiude il venerdì e nessun altro centro è aperto, le quotazioni di fatto si fermano finché Sydney non riapre la domenica.
+
+Una conseguenza pratica è il **gap del weekend**. I prezzi si congelano il venerdì sera, ma il mondo non smette di muoversi. Elezioni, dichiarazioni delle banche centrali, eventi geopolitici, notizie economiche: tutto può accadere mentre il mercato è chiuso. Quando le contrattazioni riprendono la domenica, i primi prezzi possono comparire a un livello sensibilmente diverso dalla chiusura del venerdì, lasciando un gap visibile sul grafico.
+
+A causa del rischio di gap, alcuni trader riducono o chiudono le posizioni prima del weekend, e molti sono prudenti nel tenere operazioni a leva oltre la chiusura del venerdì. Gli ordini stop-loss potrebbero non essere eseguiti al prezzo previsto se il mercato riapre oltre quel livello, dato che nel fine settimana non esiste una quotazione continua su cui operare. Capirlo fa parte della gestione del rischio intorno al periodo di chiusura.
+
+## L’apertura della domenica, spiegata
+
+La settimana del forex riapre la **domenica alle 17:00 ora di New York**, quando si attiva Sydney. È il tratto più tranquillo della settimana di trading. Sono attivi solo i centri dell’area Asia-Pacifico, i volumi sono bassi e la liquidità profonda delle sessioni di Londra e New York è ancora lontana molte ore.
+
+La liquidità scarsa all’apertura della domenica ha effetti concreti. Gli spread, cioè la differenza tra prezzo di acquisto e prezzo di vendita, tendono a essere più ampi rispetto alle ore di punta perché meno operatori quotano i prezzi. Il prezzo può anche muoversi in modo più brusco con ordini relativamente piccoli, dato che c’è meno profondità per assorbirli. Per questi motivi, molti trader affrontano con cautela la prima ora o le prime due ore della settimana invece di buttarsi appena il mercato apre.
+
+L’apertura della domenica è anche il momento in cui il gap del weekend diventa visibile. Se nel periodo di chiusura sono uscite notizie importanti, i prezzi di apertura ne tengono conto subito. Un gap ampio può far scattare gli stop, generare slippage e dare un tono volatile alle prime ore asiatiche. I trader che seguono l’apertura spesso aspettano che gli spread si normalizzino e che Londra si avvicini prima di impegnarsi con posizioni più grandi.
+
+Per vedere esattamente quando Sydney e gli altri centri si attivano nel tuo fuso orario, lo strumento live su [forexmarkethours.app](/it) mostra lo stato di ogni sessione in tempo reale. Per saperne di più su come si incastrano le sessioni, leggi la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate).
+
+## Festività del mercato forex nel 2026
+
+Ecco il punto che sorprende molti principianti: **il forex non ha un calendario di festività di borsa**. Senza una borsa centrale, non esiste un elenco ufficiale dei giorni di chiusura del mercato oltre ai weekend. Tecnicamente, resta aperto nella maggior parte dei giorni festivi.
+
+Ciò che cambia davvero nelle grandi festività è la **liquidità**. Quando le banche di un centro importante sono chiuse, gli operatori che normalmente forniscono i prezzi si fanno da parte, quindi i volumi calano e gli spread si allargano anche se le quotazioni continuano. Nelle festività globali più importanti, come Natale e Capodanno, diversi centri chiudono contemporaneamente e le condizioni possono essere estremamente sottili. Anche le singole valute possono calmarsi nei giorni festivi del loro paese d’origine: il dollaro statunitense intorno all’Independence Day o al Thanksgiving, lo yen giapponese intorno alle festività nazionali giapponesi, e così via.
+
+La tabella qui sotto elenca le festività 2026 più diffuse che tendono a ridurre la liquidità sul forex. Considerala una guida ai momenti in cui le condizioni possono essere scarse, non un calendario di chiusure del mercato. Verifica sempre le date esatte su una fonte ufficiale, perché le date osservate e i giorni di chiusura delle banche variano da paese a paese e da un anno all’altro.
+
+| Festività | Data (2026) | Centri / valute interessati |
+| --- | --- | --- |
+| Capodanno | 1 gen | Globale; la maggior parte dei centri chiusa, liquidità molto scarsa |
+| Venerdì Santo | 3 apr | Regno Unito, Europa, USA; calo generalizzato |
+| Lunedì dell’Angelo (Pasquetta) | 6 apr | Regno Unito e gran parte dell’Europa |
+| US Memorial Day | 25 mag | USA; coppie in USD più tranquille |
+| US Independence Day (osservato) | 3 lug | USA; coppie in USD più tranquille |
+| US Labor Day | 7 set | USA; coppie in USD più tranquille |
+| US Thanksgiving | 26 nov | USA; coppie in USD più tranquille, pomeriggio sottile |
+| Natale | 25 dic | Globale; la maggior parte dei centri chiusa, liquidità molto scarsa |
+| Santo Stefano (Boxing Day) | 26 dic | Regno Unito, Europa e altri |
+
+Fai attenzione anche alle **mezze giornate** intorno a Natale e Capodanno. Alla Vigilia di Natale e a San Silvestro, e a volte nei giorni immediatamente successivi, molte banche lavorano con orario ridotto o con desk a ranghi minimi. Sulla carta il mercato può essere aperto, ma a fine dicembre le condizioni di trading sono spesso tra le peggiori dell’anno, con spread ampi e movimenti erratici su volumi ridotti.
+
+## Aperto ma sottile: i giorni a bassa liquidità
+
+È utile distinguere due situazioni molto diverse: il mercato **chiuso** e il mercato **aperto ma sottile**. Nel weekend è chiuso e non puoi fare trading. Nelle grandi festività di solito è aperto, ma la liquidità può essere così bassa da rendere il trading sconsigliabile per molte strategie.
+
+In una sessione festiva sottile, tendono a verificarsi diverse cose insieme. Gli spread si allargano perché meno istituzioni quotano i prezzi. La profondità cala, quindi un ordine di dimensioni normali può spingere il prezzo più lontano del solito. I movimenti diventano erratici, con picchi improvvisi che rientrano altrettanto in fretta perché non c’è abbastanza flusso nei due sensi per stabilizzare il mercato. In questi giorni, la pubblicazione di dati economici può provocare reazioni sproporzionate rispetto alla loro reale importanza.
+
+Per i trader, la lezione pratica è la prudenza. Uno spread più ampio aumenta il costo di entrata e di uscita, e questo può trasformare un setup altrimenti ragionevole in un’operazione in perdita. Le condizioni sottili rendono anche più probabile che gli stop vengano colpiti dal rumore anziché da una direzione reale. Molti trader esperti semplicemente riducono le dimensioni o restano in disparte nelle festività più importanti, considerandole giorni per proteggere il capitale più che per inseguire opportunità. Sapere che una giornata è tecnicamente aperta ti dice poco; sapere che è sottile ti dice come comportarti.
+
+## Come verificare se una sessione è aperta in questo momento
+
+Il modo più affidabile per sapere se il forex è aperto oggi, e quali sessioni sono attive, è controllare nel tuo fuso orario invece di convertire il GMT a mente. Lo strumento live su [forexmarkethours.app](/it) mostra lo stato attuale delle sessioni di Sydney, Tokyo, Francoforte, Londra e New York, convertito automaticamente nel luogo in cui ti trovi.
+
+Rende facile individuare anche le sovrapposizioni, compresa l’intensa **sovrapposizione Londra-New York** intorno alle 13:00-17:00 GMT, quando la liquidità è più profonda. Se preferisci ragionare con punti di riferimento fissi, la nostra guida agli [orari del forex per fuso orario](/it/blog/orari-del-forex-per-fuso-orario) elenca ogni sessione in una serie di fusi orari comuni.
+
+## Festività pubbliche e festività bancarie
+
+I termini **festività pubblica** e **festività bancaria** vengono usati come sinonimi, ma per il forex la distinzione conta. Ciò che incide sul mercato è se le **banche** di un determinato centro sono chiuse, dato che le banche sono il livello di regolamento alla base del forex a pronti. Una festività pubblica in cui le banche restano aperte ha un effetto minimo; una festività bancaria che le chiude riduce la liquidità nella valuta di quel centro.
+
+Ecco perché l’effetto è spesso **specifico per valuta** anziché globale. Quando chiudono le banche britanniche, sono la sterlina e la liquidità londinese a risentirne di più. Quando chiudono le banche statunitensi, sono il dollaro e la sessione di New York a farne le spese. Quando chiudono le banche giapponesi, lo yen e la sessione di Tokyo si calmano. Una festività in un paese raramente ferma l’intero mercato, ma può smorzare in modo evidente l’attività sulle coppie interessate mentre il resto del mondo continua a operare.
+
+Il consiglio pratico è controllare le festività per centro, non solo sul calendario. Una giornata che sembra normale per le coppie del tuo paese potrebbe coincidere con una festività bancaria nel paese d’origine di una valuta che stai negoziando, e questo basta ad allargare gli spread e a smorzare i movimenti che ti aspettavi.
+
+## Domande frequenti
+
+**Il forex è aperto il sabato?**
+No. Il mercato forex è chiuso per tutto il fine settimana, sabato e domenica, fino alla riapertura della domenica sera. Con le banche dei principali centri chiuse, non c’è regolamento interbancario né quotazione continua, quindi il trading si ferma dal venerdì alle 17:00 ora di New York fino alla domenica.
+
+**Il forex è aperto a Natale?**
+Tecnicamente il mercato non è chiuso in modo formale, ma il giorno di Natale le banche dei principali centri sono chiuse e la liquidità è estremamente scarsa. In pratica la maggior parte dei trader lo considera un giorno senza trading, e anche le condizioni intorno alla Vigilia e a Santo Stefano sono scarse. Verifica i dettagli con il tuo broker.
+
+**A che ora apre il forex la domenica?**
+Il forex apre la domenica alle 17:00 ora di New York, quando inizia la sessione di Sydney. In GMT corrisponde alle 22:00 durante l’inverno dell’emisfero boreale e alle 21:00 durante l’ora legale statunitense, perché l’apertura è legata all’orologio di New York e non a un orario fisso in GMT.
+
+**Il forex è aperto a Capodanno?**
+Il 1° gennaio il mercato non è chiuso in modo formale, ma le banche della maggior parte dei principali centri sono chiuse e la liquidità è tra le più scarse dell’anno. Considerando anche le mezze giornate intorno a San Silvestro, la fine di dicembre e il 1° gennaio vanno affrontati con prudenza.
+
+**Il forex è aperto oggi se oggi è un giorno feriale?**
+Sì. In un normale giorno feriale il mercato è aperto 24 ore su 24. Le uniche eccezioni nei giorni feriali sono le grandi festività della tabella qui sopra, quando resta aperto ma può essere molto tranquillo. Controlla lo strumento live per confermare lo stato attuale delle sessioni nel tuo fuso orario.
+
+Per riferimenti ufficiali sui giorni di chiusura delle banche, consulta il calendario delle bank holiday britanniche su [gov.uk](https://www.gov.uk/bank-holidays), il calendario delle festività della Federal Reserve statunitense su [federalreserve.gov](https://www.federalreserve.gov/aboutthefed/k8.htm), le informazioni di contesto sul mercato valutario mondiale della [Banca dei Regolamenti Internazionali](https://www.bis.org/statistics/rpfx22.htm) e un riferimento generale sulle festività pubbliche come [timeanddate.com](https://www.timeanddate.com/holidays/).
+
+*Questo articolo ha solo scopo informativo generale e non costituisce una consulenza finanziaria.*`,
+      de: `Der Forex-Markt ist 24 Stunden am Tag an fünf Tagen pro Woche geöffnet, von Sonntag 17:00 Uhr New Yorker Zeit bis Freitag 17:00 Uhr New Yorker Zeit, und am Wochenende geschlossen. Wenn Sie sich also fragen, ob Forex heute offen ist, lautet die kurze Antwort: an Werktagen ja, von Freitagabend in New York bis Sonntagabend nein.
+
+Diese einfache Regel deckt den größten Teil des Jahres ab. Trotzdem lohnt es sich, einige Details zu kennen: die genaue Eröffnung und den genauen Schluss, den Neustart am Sonntag und die Handvoll großer Feiertage, die die Liquidität still und leise austrocknen, obwohl der Markt formal läuft. Dieser Ratgeber geht alle Punkte durch, damit Sie immer wissen, was Sie erwartet, bevor Sie einen Trade platzieren.
+
+## Wann Forex jede Woche öffnet und schließt
+
+Die Forex-Woche läuft ohne Unterbrechung von **Sonntag 17:00 Uhr New Yorker Zeit** bis **Freitag 17:00 Uhr New Yorker Zeit**. Im Winter der Nordhalbkugel liegt die Eröffnung am Sonntag bei 22:00 GMT, während der US-Sommerzeit verschiebt sie sich auf 21:00 GMT. Der Anker ist immer 17:00 Uhr in New York, keine feste GMT-Uhrzeit. Wer die Zeit als 17:00 Uhr New Yorker Zeit angibt, liegt also das ganze Jahr richtig.
+
+Die Eröffnung fällt mit dem Beginn der Sydney-Session zusammen, dem ersten großen Finanzplatz, der nach dem Wochenende online geht. Danach wandert der Handel westwärts um den Globus: Tokio, dann Frankfurt, dann London, dann New York, und jeder Platz reicht die Liquidität ohne Pause an den nächsten weiter. Unter der Woche schließt der Markt nie über Nacht, denn wenn eine Region zur Ruhe kommt, ist eine andere bereits aktiv.
+
+Um 17:00 Uhr New Yorker Zeit am Freitag schließt die New-York-Session, und da kein anderes großes Zentrum mehr geöffnet ist, wird es am Markt für das Wochenende still. Es gibt keine Glocke und keine einzelne Börse dahinter. Forex hat überhaupt keine zentrale Börse, es ist ein dezentrales Netzwerk aus Banken, Brokern und anderen Institutionen. Der wöchentliche Rhythmus ergibt sich schlicht daraus, wann die großen Finanzplätze der Welt besetzt sind und Geschäfte abwickeln.
+## Warum Forex am Wochenende geschlossen ist
+
+Forex schließt am Samstag und Sonntag, weil das Bankensystem, auf dem der Markt beruht, keine Geschäfte mehr abwickelt. Devisenkassageschäfte werden letztlich über den Interbankenmarkt abgerechnet, und die Banken an den großen Finanzplätzen sind am Wochenende geschlossen. Ohne Banken, die Positionen abwickeln und Kurse stellen, gibt es keinen funktionierenden Markt, an dem man handeln könnte.
+
+Das unterscheidet sich davon, wie eine Aktienbörse schließt. Eine Börse ist ein einzelner Handelsplatz mit veröffentlichten Öffnungszeiten. Forex hat keinen solchen Platz, die Schließung am Wochenende ist also eigentlich die gemeinsame Abwesenheit der Institutionen, die die Kurse machen. Sobald New York am Freitag schließt und kein anderes Zentrum geöffnet ist, ruht die Kursstellung praktisch, bis Sydney am Sonntag wieder öffnet.
+
+Eine praktische Folge ist die **Wochenendlücke** (Gap). Die Kurse frieren am Freitagabend ein, doch die Welt dreht sich weiter. Wahlen, Äußerungen von Zentralbanken, geopolitische Ereignisse, Konjunkturnachrichten: All das kann passieren, während der Markt geschlossen ist. Wenn der Handel am Sonntag wieder beginnt, können die ersten Kurse auf einem spürbar anderen Niveau liegen als der Schlusskurs vom Freitag, was eine sichtbare Lücke im Chart hinterlässt.
+
+Wegen dieses Gap-Risikos verkleinern oder schließen manche Trader ihre Positionen vor dem Wochenende, und viele halten gehebelte Trades nur ungern über den Freitagsschluss hinaus. Stop-Loss-Orders werden womöglich nicht zum vorgesehenen Kurs ausgeführt, wenn der Markt jenseits davon wieder öffnet, denn über das Wochenende gibt es keine fortlaufenden Kurse, gegen die gehandelt werden könnte. Das zu verstehen, gehört zum Risikomanagement rund um die handelsfreie Zeit.
+
+## Die Eröffnung am Sonntag erklärt
+
+Die Forex-Woche beginnt wieder am **Sonntag um 17:00 Uhr New Yorker Zeit**, wenn Sydney online geht. Das ist die ruhigste Phase der Handelswoche. Nur die Finanzplätze im asiatisch-pazifischen Raum sind aktiv, die Umsätze sind gering, und die tiefe Liquidität der London- und der New-York-Session ist noch viele Stunden entfernt.
+
+Die dünne Liquidität zur Eröffnung am Sonntag hat reale Auswirkungen. Die Spreads, also der Abstand zwischen Kauf- und Verkaufskurs, sind meist breiter als zu Spitzenzeiten, weil weniger Teilnehmer Kurse stellen. Der Kurs kann sich auch bei relativ kleinen Orders stärker bewegen, da weniger Markttiefe vorhanden ist, um sie aufzufangen. Aus diesen Gründen gehen viele Trader die ersten ein, zwei Stunden der Woche mit Vorsicht an, statt sich gleich bei Eröffnung in den Markt zu stürzen.
+
+Bei der Eröffnung am Sonntag wird auch die Wochenendlücke sichtbar. Sind während der Schließung wichtige Nachrichten erschienen, spiegeln die Eröffnungskurse sie sofort wider. Eine große Lücke kann Stopps auslösen, Slippage verursachen und den frühen asiatischen Stunden einen volatilen Ton geben. Trader, die die Eröffnung beobachten, warten oft, bis sich die Spreads normalisiert haben und London näher rückt, bevor sie größere Positionen eingehen.
+
+Wann genau Sydney und die anderen Zentren in Ihrer eigenen Zeitzone online gehen, zeigt Ihnen das Live-Tool auf [forexmarkethours.app](/de), das den Status jeder Session in Echtzeit anzeigt. Mehr dazu, wie die Sessions zusammenspielen, lesen Sie in unserem Ratgeber [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert).
+
+## Forex-Feiertage im Jahr 2026
+
+Hier kommt der Punkt, der viele Neulinge überrascht: **Forex hat keinen Börsenfeiertagskalender**. Ohne zentrale Börse gibt es außer den Wochenenden keine offizielle Liste von Tagen, an denen der Markt geschlossen ist. Formal bleibt er an den meisten gesetzlichen Feiertagen geöffnet.
+
+Was sich an großen Feiertagen tatsächlich ändert, ist die **Liquidität**. Wenn die Banken an einem großen Finanzplatz geschlossen sind, ziehen sich die Teilnehmer zurück, die normalerweise die Kurse stellen. Die Umsätze sinken und die Spreads werden breiter, auch wenn weiterhin quotiert wird. An den größten weltweiten Feiertagen wie dem 1. Weihnachtsfeiertag und Neujahr schließen mehrere Zentren gleichzeitig, und die Bedingungen können extrem dünn sein. Auch einzelne Währungen können am Feiertag ihres Heimatlandes ruhig werden: der US-Dollar rund um den US-Unabhängigkeitstag oder Thanksgiving, der japanische Yen rund um japanische Nationalfeiertage und so weiter.
+
+Die Tabelle unten führt verbreitete Feiertage 2026 auf, an denen die Liquidität im Devisenhandel meist abnimmt. Verstehen Sie sie als Orientierung dafür, wann die Bedingungen schlecht sein können, nicht als Plan von Marktschließungen. Prüfen Sie die genauen Daten immer anhand einer offiziellen Quelle, denn arbeitsfreie Tage und Bankfeiertage unterscheiden sich je nach Land und Jahr.
+
+| Feiertag | Datum (2026) | Betroffene Zentren / Währungen |
+| --- | --- | --- |
+| Neujahr | 1. Jan. | Weltweit; die meisten Zentren geschlossen, sehr dünn |
+| Karfreitag | 3. Apr. | Großbritannien, Europa, USA; breite Ausdünnung |
+| Ostermontag | 6. Apr. | Großbritannien und große Teile Europas |
+| US Memorial Day | 25. Mai | USA; USD-Paare ruhiger |
+| US-Unabhängigkeitstag (Ersatzfeiertag) | 3. Juli | USA; USD-Paare ruhiger |
+| US Labor Day | 7. Sept. | USA; USD-Paare ruhiger |
+| US Thanksgiving | 26. Nov. | USA; USD-Paare ruhiger, dünner Nachmittag |
+| 1. Weihnachtsfeiertag | 25. Dez. | Weltweit; die meisten Zentren geschlossen, sehr dünn |
+| Boxing Day (2. Weihnachtsfeiertag) | 26. Dez. | Großbritannien, Europa und weitere |
+
+Achten Sie auch auf die **halben Handelstage** rund um Weihnachten und Neujahr. An Heiligabend und Silvester und manchmal an den Tagen direkt danach arbeiten viele Banken mit verkürzten Zeiten oder nur mit Notbesetzung. Auf dem Papier mag der Markt geöffnet sein, doch die Handelsbedingungen Ende Dezember gehören oft zu den schlechtesten des Jahres, mit breiten Spreads und sprunghaften Bewegungen bei geringem Volumen.
+
+## Geöffnet, aber dünn: Tage mit geringer Liquidität
+
+Es hilft, zwei sehr unterschiedliche Situationen auseinanderzuhalten: Der Markt ist **geschlossen**, oder der Markt ist **geöffnet, aber dünn**. Am Wochenende ist er geschlossen, und Sie können nicht handeln. An großen Feiertagen ist er meist geöffnet, doch die Liquidität kann so gering sein, dass Handeln für viele Strategien nicht ratsam ist.
+
+In einer dünnen Feiertagssession passieren oft mehrere Dinge gleichzeitig. Die Spreads werden breiter, weil weniger Institutionen Kurse stellen. Die Markttiefe nimmt ab, sodass eine normal große Order den Kurs weiter bewegen kann als üblich. Die Bewegungen werden sprunghaft, mit scharfen Ausschlägen, die sich ebenso schnell wieder umkehren, weil nicht genug beidseitiger Orderfluss vorhanden ist, um den Markt zu stabilisieren. Konjunkturdaten, die an solchen Tagen veröffentlicht werden, können im Verhältnis zu ihrer tatsächlichen Bedeutung übergroße Reaktionen auslösen.
+
+Für Trader lautet die praktische Lehre: Vorsicht. Ein breiterer Spread erhöht die Kosten für Ein- und Ausstieg, was aus einem an sich vernünftigen Setup einen Verlusttrade machen kann. Dünne Bedingungen erhöhen zudem die Wahrscheinlichkeit, dass Stopps durch Rauschen statt durch eine echte Richtung ausgelöst werden. Viele erfahrene Trader reduzieren an den größten Feiertagen einfach ihre Positionsgröße oder bleiben ganz an der Seitenlinie und sehen diese Tage als Gelegenheit, Kapital zu schützen, statt Chancen hinterherzujagen. Zu wissen, dass ein Tag formal geöffnet ist, sagt Ihnen wenig. Zu wissen, dass er dünn ist, sagt Ihnen, wie Sie sich verhalten sollten.
+
+## So prüfen Sie, ob eine Session gerade geöffnet ist
+
+Am zuverlässigsten finden Sie heraus, ob Forex heute geöffnet ist und welche Sessions laufen, indem Sie in Ihrer eigenen Zeitzone nachsehen, statt GMT im Kopf umzurechnen. Das Live-Tool auf [forexmarkethours.app](/de) zeigt den aktuellen Status der Sessions in Sydney, Tokio, Frankfurt, London und New York, automatisch umgerechnet auf Ihren Standort.
+
+Auch die Überschneidungen lassen sich damit leicht erkennen, darunter die geschäftige **Überschneidung von London und New York** um 13:00-17:00 GMT, wenn die Liquidität am tiefsten ist. Wenn Sie lieber mit festen Bezugspunkten arbeiten, listet unser Ratgeber zu den [Forex-Handelszeiten nach Zeitzone](/de/blog/forex-handelszeiten-nach-zeitzone) jede Session für eine Reihe gängiger Zonen auf.
+
+## Gesetzliche Feiertage und Bankfeiertage
+
+Die Begriffe **gesetzlicher Feiertag** und **Bankfeiertag** werden oft gleichbedeutend verwendet, doch für Forex ist der Unterschied wichtig. Entscheidend für den Markt ist, ob die **Banken** an einem bestimmten Finanzplatz geschlossen sind, denn Banken bilden die Abwicklungsebene unter dem Devisenkassamarkt. Ein gesetzlicher Feiertag, an dem die Banken geöffnet bleiben, hat wenig Wirkung. Ein Bankfeiertag, an dem sie schließen, dünnt die Liquidität in der Währung dieses Finanzplatzes aus.
+
+Deshalb ist der Effekt oft **währungsspezifisch** und nicht global. Schließen die britischen Banken, trifft es das britische Pfund und die Londoner Liquidität am stärksten. Schließen die US-Banken, spüren es der Dollar und die New-York-Session am meisten. Schließen die japanischen Banken, werden der Yen und die Tokio-Session ruhiger. Ein Feiertag in einem Land legt selten den ganzen Markt lahm, er kann die Aktivität in den betroffenen Paaren aber spürbar dämpfen, während der Rest der Welt weiterhandelt.
+
+Die Lehre daraus: Prüfen Sie Feiertage nach Finanzplatz, nicht nur nach Kalender. Ein Tag, der für Ihre heimischen Paare ganz normal aussieht, kann auf einen Bankfeiertag im Heimatland einer Währung fallen, die Sie handeln, und das reicht schon, um die Spreads zu verbreitern und die erwarteten Bewegungen zu dämpfen.
+
+## Häufig gestellte Fragen
+
+**Ist Forex am Samstag geöffnet?**
+Nein. Der Forex-Markt ist das ganze Wochenende über geschlossen, Samstag und Sonntag, bis zur Wiedereröffnung am Sonntagabend. Da die Banken an den großen Finanzplätzen geschlossen sind, gibt es keine Interbankenabwicklung und keine fortlaufenden Kurse. Der Handel ruht daher von Freitag 17:00 Uhr New Yorker Zeit bis Sonntag.
+
+**Ist Forex an Weihnachten geöffnet?**
+Formal ist der Markt nicht offiziell geschlossen, doch am 1. Weihnachtsfeiertag sind die Banken der großen Zentren zu und die Liquidität ist extrem dünn. In der Praxis behandeln die meisten Trader ihn als handelsfreien Tag, und auch rund um Heiligabend und den Boxing Day sind die Bedingungen schlecht. Klären Sie die Einzelheiten mit Ihrem Broker.
+
+**Wann öffnet Forex am Sonntag?**
+Forex öffnet am Sonntag um 17:00 Uhr New Yorker Zeit, wenn die Sydney-Session beginnt. In GMT ist das im Winter der Nordhalbkugel 22:00 Uhr und während der US-Sommerzeit 21:00 Uhr, weil die Eröffnung an die New Yorker Uhr gebunden ist und nicht an eine feste GMT-Zeit.
+
+**Ist Forex an Neujahr geöffnet?**
+Am 1. Januar ist der Markt nicht offiziell geschlossen, doch an den meisten großen Finanzplätzen haben die Banken zu, und die Liquidität ist so dünn wie an kaum einem anderen Tag des Jahres. Zusammen mit den halben Handelstagen rund um Silvester sollten Ende Dezember und der 1. Januar mit Vorsicht behandelt werden.
+
+**Ist Forex heute geöffnet, wenn heute ein Werktag ist?**
+Ja. An jedem normalen Werktag ist der Markt rund um die Uhr geöffnet. Die einzigen Einschränkungen unter der Woche sind die großen Feiertage aus der Tabelle oben, an denen er geöffnet bleibt, aber sehr ruhig sein kann. Prüfen Sie im Live-Tool den aktuellen Sessionstatus in Ihrer Zeitzone.
+
+Offizielle Angaben dazu, wann Banken geschlossen sind, finden Sie im britischen Bankfeiertagskalender auf [gov.uk](https://www.gov.uk/bank-holidays), im Feiertagskalender der US-Notenbank Federal Reserve auf [federalreserve.gov](https://www.federalreserve.gov/aboutthefed/k8.htm), Hintergründe zum globalen Devisenmarkt bei der [Bank für Internationalen Zahlungsausgleich](https://www.bis.org/statistics/rpfx22.htm) und eine allgemeine Übersicht über gesetzliche Feiertage etwa auf [timeanddate.com](https://www.timeanddate.com/holidays/).
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex piyasası haftada beş gün, günde 24 saat açıktır: New York saatiyle pazar 17:00’den New York saatiyle cuma 17:00’ye kadar işler ve hafta sonları kapalıdır. Yani forex bugün açık mı diye merak ediyorsanız kısa cevap şudur: hafta içi açıktır, New York’ta cuma akşamından pazar akşamına kadar kapalıdır.
+
+Bu basit kural yılın büyük bölümünü kapsar. Yine de bilinmesi gereken ayrıntılar vardır: tam açılış ve kapanış saatleri, pazar günkü yeniden açılış ve piyasa teknik olarak işlerken bile likiditeyi sessizce kurutan birkaç büyük tatil. Bu rehber her birini tek tek ele alıyor; böylece bir işlem açmadan önce neyle karşılaşacağınızı her zaman bilirsiniz.
+
+## Forex her hafta ne zaman açılır ve kapanır
+
+Forex haftası **New York saatiyle pazar 17:00**’den **New York saatiyle cuma 17:00**’ye kadar kesintisiz sürer. Kuzey Yarımküre kışında bu pazar açılışı 22:00 GMT’ye denk gelir; ABD yaz saati döneminde 21:00 GMT’ye kayar. Sabit nokta her zaman New York’taki 17:00’dir, sabit bir GMT saati değildir; bu yüzden açılışı New York saatiyle 17:00 olarak ifade etmek sizi yıl boyunca doğru tutar.
+
+Açılış, hafta sonundan sonra devreye giren ilk büyük merkez olan Sidney seansının başlangıcıyla aynı zamana denk gelir. İşlemler ardından dünya etrafında batıya doğru ilerler: önce Tokyo, sonra Frankfurt, sonra Londra, sonra New York; her biri likiditeyi ara vermeden bir sonrakine devreder. Hafta içinde piyasa gece hiç kapanmaz, çünkü bir bölge yavaşlarken bir diğeri zaten faaliyettedir.
+
+Cuma günü New York saatiyle 17:00’de New York seansı kapanır ve başka hiçbir büyük merkez açık olmadığı için piyasa hafta sonu boyunca sessizleşir. Bunun arkasında bir zil ya da tek bir borsa yoktur. Forex’in merkezi bir borsası hiç yoktur; bankalardan, aracı kurumlardan ve diğer kurumlardan oluşan merkeziyetsiz bir ağdır. Haftalık ritim, dünyanın büyük finans merkezlerinin ne zaman personel bulundurup işlemleri takas ettiğinin toplamından ibarettir.
+## Forex hafta sonları neden kapalı
+
+Forex cumartesi ve pazar günleri kapalıdır, çünkü ona dayanak olan bankacılık sistemi işlem takasını durdurur. Spot döviz işlemleri nihayetinde bankalar arası piyasa üzerinden takas edilir ve büyük finans merkezlerindeki bankalar hafta sonu kapalıdır. Pozisyonları takas edecek ve fiyat sağlayacak bankalar olmadan, işlem yapılabilecek işleyen bir piyasa da yoktur.
+
+Bu, bir hisse senedi borsasının kapanış biçiminden farklıdır. Borsa, açılış saatleri yayımlanmış tek bir işlem yeridir. Forex’in böyle bir işlem yeri yoktur; dolayısıyla hafta sonu kapanışı aslında fiyat oluşturan kurumların topluca ortadan çekilmesidir. Cuma günü New York kapandığında ve başka hiçbir merkez açık olmadığında, Sidney pazar günü yeniden açılana kadar kotasyon fiilen durur.
+
+Bunun pratik sonuçlarından biri **hafta sonu boşluğudur** (gap). Fiyatlar cuma akşamı donar ama dünya hareket etmeyi bırakmaz. Seçimler, merkez bankası açıklamaları, jeopolitik olaylar, ekonomik haberler; bunların hepsi piyasa kapalıyken yaşanabilir. Pazar günü işlemler yeniden başladığında ilk fiyatlar cuma kapanışından belirgin biçimde farklı bir seviyede oluşabilir ve grafikte gözle görülür bir boşluk bırakabilir.
+
+Boşluk riski nedeniyle bazı yatırımcılar hafta sonundan önce pozisyonlarını küçültür ya da kapatır; pek çoğu da kaldıraçlı işlemleri cuma kapanışından sonraya taşıma konusunda temkinlidir. Piyasa zarar durdur (stop-loss) emirlerinin ötesinde yeniden açılırsa bu emirler hedeflenen fiyattan gerçekleşmeyebilir, çünkü hafta sonu boyunca işlem yapılabilecek kesintisiz bir fiyatlama yoktur. Bunu anlamak, kapalı dönem etrafındaki riski yönetmenin bir parçasıdır.
+
+## Pazar açılışı, açıklamasıyla
+
+Forex haftası, Sidney devreye girdiğinde **New York saatiyle pazar 17:00**’de yeniden açılır. Bu, işlem haftasının en sakin dilimidir. Yalnızca Asya-Pasifik merkezleri faaliyettedir, hacimler düşüktür ve Londra ile New York seanslarının derin likiditesi hâlâ saatlerce uzaktadır.
+
+Pazar açılışındaki sığ likiditenin gerçek etkileri vardır. Alış ve satış fiyatı arasındaki fark olan spread’ler, kotasyon veren katılımcı sayısı daha az olduğu için zirve saatlere göre genellikle daha geniştir. Emirleri karşılayacak derinlik daha az olduğundan fiyat görece küçük emirlerle bile daha sert hareket edebilir. Bu nedenlerle pek çok yatırımcı, haftanın ilk bir iki saatine piyasa açılır açılmaz atılmak yerine temkinli yaklaşır.
+
+Hafta sonu boşluğunun görünür hâle geldiği yer de pazar açılışıdır. Piyasa kapalıyken önemli bir haber çıktıysa açılış fiyatları bunu hemen yansıtır. Büyük bir boşluk stop emirlerini tetikleyebilir, kaymaya (slippage) yol açabilir ve Asya’nın ilk saatleri için oynak bir hava oluşturabilir. Açılışı izleyen yatırımcılar, daha büyük pozisyonlara girmeden önce çoğu zaman spread’lerin normale dönmesini ve Londra’nın yaklaşmasını bekler.
+
+Sidney’in ve diğer merkezlerin kendi saat diliminizde tam olarak ne zaman devreye girdiğini görmek için [forexmarkethours.app](/tr) adresindeki canlı araç her seansın durumunu gerçek zamanlı olarak gösterir. Seansların birbirine nasıl bağlandığı hakkında daha fazlası için [forex işlem seansları rehberimizi](/tr/blog/forex-islem-seanslari-rehberi) okuyun.
+
+## 2026 forex piyasası tatilleri
+
+Pek çok yeni başlayanı şaşırtan nokta şudur: **forex’in bir borsa tatil takvimi yoktur**. Merkezi bir borsa olmadığı için hafta sonları dışında piyasanın kapalı olduğu günlerin resmi bir listesi de yoktur. Teknik olarak piyasa resmi tatillerin çoğunda açık kalır.
+
+Büyük tatillerde asıl değişen şey **likiditedir**. Büyük bir merkezdeki bankalar kapalı olduğunda, normalde fiyat sağlayan katılımcılar geri çekilir; kotasyon sürse bile hacimler düşer ve spread’ler genişler. Noel Günü ve Yılbaşı gibi en büyük küresel tatillerde birkaç merkez aynı anda kapanır ve koşullar son derece sığ olabilir. Tek tek para birimleri de kendi ülkelerinin resmi tatilinde sessizleşebilir: ABD Bağımsızlık Günü ya da Şükran Günü civarında ABD doları, Japonya’nın ulusal tatilleri civarında Japon yeni gibi.
+
+Aşağıdaki tablo, döviz likiditesini zayıflatma eğiliminde olan ve yaygın olarak kutlanan 2026 tatillerini listeliyor. Tabloyu bir piyasa kapanış takvimi olarak değil, koşulların zayıf olabileceği günlere dair bir rehber olarak kullanın. Uygulanan tarihler ve banka tatilleri ülkeye ve yıla göre değiştiği için kesin tarihleri her zaman resmi bir kaynaktan teyit edin.
+
+| Tatil | Tarih (2026) | Etkilenen merkezler / para birimleri |
+| --- | --- | --- |
+| Yılbaşı | 1 Ocak | Küresel; merkezlerin çoğu kapalı, çok sığ |
+| Kutsal Cuma | 3 Nisan | İngiltere, Avrupa, ABD; genel incelme |
+| Paskalya Pazartesisi | 6 Nisan | İngiltere ve Avrupa’nın büyük bölümü |
+| ABD Anma Günü (Memorial Day) | 25 Mayıs | ABD; USD pariteleri daha sakin |
+| ABD Bağımsızlık Günü (uygulanan) | 3 Temmuz | ABD; USD pariteleri daha sakin |
+| ABD İşçi Bayramı (Labor Day) | 7 Eylül | ABD; USD pariteleri daha sakin |
+| ABD Şükran Günü | 26 Kasım | ABD; USD pariteleri daha sakin, öğleden sonra sığ |
+| Noel Günü | 25 Aralık | Küresel; merkezlerin çoğu kapalı, çok sığ |
+| Boxing Day | 26 Aralık | İngiltere, Avrupa ve diğerleri |
+
+Noel ve yılbaşı civarındaki **yarım günlere** de dikkat edin. Noel arifesinde ve yılbaşı gecesinde, bazen de hemen sonraki günlerde, pek çok banka kısaltılmış saatlerle ya da asgari kadroyla çalışır. Piyasa kâğıt üzerinde açık olabilir, ancak aralık sonundaki işlem koşulları çoğu zaman yılın en kötüleri arasındadır: geniş spread’ler ve düşük hacimde düzensiz hareketler.
+
+## Açık ama sığ: düşük likiditeli günler
+
+Birbirinden çok farklı iki durumu ayırmak faydalıdır: piyasanın **kapalı** olması ve piyasanın **açık ama sığ** olması. Hafta sonları piyasa kapalıdır ve işlem yapamazsınız. Büyük tatillerde genellikle açıktır, ancak likidite o kadar düşük olabilir ki pek çok strateji için işlem yapmak tavsiye edilmez.
+
+Sığ bir tatil seansında genellikle birkaç şey aynı anda olur. Kotasyon veren kurum sayısı azaldığı için spread’ler genişler. Derinlik düşer, dolayısıyla normal büyüklükte bir emir fiyatı olağandan daha fazla itebilir. Piyasayı dengeleyecek yeterli çift yönlü akış olmadığından hareketler düzensizleşir; sert sıçramalar aynı hızla geri döner. Bu günlerde açıklanan ekonomik veriler, gerçek önemleriyle orantısız tepkilere yol açabilir.
+
+Yatırımcılar için pratik çıkarım temkinli olmaktır. Daha geniş bir spread, pozisyona girip çıkmanın maliyetini artırır ve aksi hâlde makul olan bir kurulumu zarara çevirebilir. Sığ koşullar ayrıca stop emirlerinin gerçek bir yön yerine gürültüyle tetiklenme olasılığını da artırır. Pek çok deneyimli yatırımcı en büyük tatillerde işlem büyüklüğünü düşürür ya da tamamen kenarda kalır; bu günleri fırsat kovalamak yerine sermayeyi korumak için kullanır. Bir günün teknik olarak açık olduğunu bilmek size pek bir şey söylemez; sığ olduğunu bilmek ise nasıl davranmanız gerektiğini söyler.
+
+## Bir seansın şu anda açık olup olmadığını nasıl kontrol edersiniz
+
+Forex’in bugün açık olup olmadığını ve hangi seansların canlı olduğunu bilmenin en güvenilir yolu, GMT’yi kafanızda çevirmek yerine kendi saat diliminizde kontrol etmektir. [forexmarkethours.app](/tr) adresindeki canlı araç Sidney, Tokyo, Frankfurt, Londra ve New York seanslarının güncel durumunu, bulunduğunuz yere otomatik olarak çevrilmiş şekilde gösterir.
+
+Araç seans çakışmalarını da kolayca fark etmenizi sağlar; buna likiditenin en derin olduğu, 13:00-17:00 GMT civarındaki yoğun **Londra-New York çakışması** da dahildir. Sabit referans noktalarıyla düşünmeyi tercih ediyorsanız [saat dilimine göre forex piyasa saatleri](/tr/blog/saat-dilimine-gore-forex-piyasa-saatleri) rehberimiz her seansı yaygın saat dilimlerinin bir dizisinde listeliyor.
+
+## Resmi tatiller ve banka tatilleri
+
+**Resmi tatil** ve **banka tatili** terimleri birbirinin yerine kullanılır, ancak forex açısından aradaki fark önemlidir. Piyasayı etkileyen, belirli bir merkezdeki **bankaların** kapalı olup olmadığıdır, çünkü bankalar spot forex’in altındaki takas katmanıdır. Bankaların açık kaldığı bir resmi tatilin etkisi azdır; bankaları kapatan bir banka tatili ise o merkezin para birimindeki likiditeyi azaltır.
+
+Etkinin çoğu zaman küresel değil **para birimine özgü** olmasının nedeni budur. İngiltere’deki bankalar kapandığında en büyük darbeyi İngiliz sterlini ve Londra merkezli likidite alır. ABD’deki bankalar kapandığında bunu en çok dolar ve New York seansı hisseder. Japonya’daki bankalar kapandığında yen ve Tokyo seansı sakinleşir. Bir ülkedeki tatil nadiren bütün piyasayı durdurur, ancak dünyanın geri kalanı işlem yapmaya devam ederken etkilenen paritelerdeki hareketliliği belirgin biçimde azaltabilir.
+
+Çıkarılacak ders, tatilleri yalnızca takvime göre değil merkeze göre kontrol etmektir. Kendi yerel pariteleriniz için sıradan görünen bir gün, işlem yaptığınız bir para biriminin ana ülkesinde banka tatiline denk gelebilir; bu da spread’leri genişletmeye ve beklediğiniz hareketleri bastırmaya yeter.
+
+## Sık sorulan sorular
+
+**Forex cumartesi açık mı?**
+Hayır. Forex piyasası pazar akşamki yeniden açılışa kadar bütün hafta sonu, cumartesi ve pazar, kapalıdır. Büyük merkezlerdeki bankalar kapalı olduğu için bankalar arası takas ve kesintisiz fiyatlama yoktur; bu yüzden işlemler New York saatiyle cuma 17:00’den pazar gününe kadar durur.
+
+**Forex Noel’de açık mı?**
+Teknik olarak piyasa resmen kapalı değildir, ancak Noel Günü büyük merkezlerin bankaları kapalıdır ve likidite son derece sığdır. Uygulamada yatırımcıların çoğu bu günü işlem yapılmayan bir gün olarak görür; Noel arifesi ve Boxing Day civarındaki koşullar da zayıftır. Ayrıntıları aracı kurumunuzla teyit edin.
+
+**Forex pazar günü saat kaçta açılır?**
+Forex, Sidney seansının başladığı New York saatiyle pazar 17:00’de açılır. Bu, Kuzey Yarımküre kışında 22:00 GMT, ABD yaz saati döneminde ise 21:00 GMT’dir; çünkü açılış sabit bir GMT saatine değil New York’un saatine bağlıdır.
+
+**Forex Yılbaşı’nda açık mı?**
+1 Ocak’ta piyasa resmen kapalı değildir, ancak büyük merkezlerin çoğundaki bankalar kapalıdır ve likidite yılın en sığ seviyeleri arasındadır. Yılbaşı gecesi civarındaki yarım günlerle birlikte düşünüldüğünde, aralık sonu ve 1 Ocak’a temkinli yaklaşmak en doğrusudur.
+
+**Bugün hafta içiyse forex açık mı?**
+Evet. Sıradan bir hafta içi günde piyasa günün her saatinde açıktır. Hafta içi için tek istisna yukarıdaki tablodaki büyük tatillerdir; bu günlerde piyasa açık kalır ama çok sakin olabilir. Kendi saat diliminizdeki güncel seans durumunu teyit etmek için canlı araca bakın.
+
+Bankaların ne zaman kapalı olduğuna dair resmi kaynaklar için [gov.uk](https://www.gov.uk/bank-holidays) adresindeki İngiltere banka tatili takvimine, [federalreserve.gov](https://www.federalreserve.gov/aboutthefed/k8.htm) adresindeki ABD Merkez Bankası (Fed) tatil takvimine, küresel döviz piyasasına ilişkin arka plan bilgisi için [Uluslararası Ödemeler Bankası](https://www.bis.org/statistics/rpfx22.htm) kaynağına ve [timeanddate.com](https://www.timeanddate.com/holidays/) gibi genel bir resmi tatil kaynağına bakabilirsiniz.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -1438,24 +3192,46 @@ Pour des références officielles sur les jours de fermeture bancaire, voyez le 
       en: "tokyo-asian-forex-session",
       es: "sesion-forex-asiatica-tokio",
       fr: "seance-forex-de-tokyo-asie",
+      pt: "sessao-forex-de-toquio-asia",
+      it: "sessione-forex-di-tokyo-asia",
+      de: "forex-session-tokio-asien",
+      tr: "tokyo-asya-forex-seansi",
     },
     title: {
       en: "The Tokyo (Asian) Session: Hours, Best Pairs and Strategy",
       es: "La sesión de Tokio (asiática): horario, mejores pares y estrategia",
       fr: "La séance forex de Tokyo : horaires asiatiques et paires",
+      pt: "A Sessão de Tóquio (Ásia): Horário, Melhores Pares e Estratégia",
+      it: "La sessione di Tokyo (asiatica): orari, migliori coppie e strategia",
+      de: "Die Tokio-Session (Asien): Handelszeiten, beste Paare und Strategie",
+      tr: "Tokyo (Asya) Seansı: Saatler, En İyi Pariteler ve Strateji",
     },
     description: {
       en: "Asian session forex explained: Tokyo session hours in your timezone, why it runs range-bound, the best pairs to trade and how the range breaks at London.",
       es: "La sesión asiática forex explicada: horario de Tokio en tu zona, por qué es lateral, los mejores pares para operar y cómo el rango se rompe en Londres.",
       fr: "La séance forex de Tokyo court de 00:00 à 09:00 GMT, sans heure d’été. Horaires dans votre fuseau, caractère en range et meilleures paires en yen.",
+      pt: "Sessão asiática do forex explicada: horário de Tóquio no seu fuso, por que o mercado fica lateral, os melhores pares e como a faixa se rompe em Londres.",
+      it: "La sessione asiatica del forex spiegata: orari di Tokyo nel tuo fuso, perché si muove in range, le coppie migliori da tradare e come il range si rompe con Londra.",
+      de: "Asien-Session im Forex erklärt: Tokio-Zeiten in Ihrer Zeitzone, warum der Markt seitwärts läuft, die besten Paare und wie die Range zur London-Eröffnung bricht.",
+      tr: "Forex’te Asya seansı: Tokyo seansının saat diliminizdeki saatleri, neden dar aralıkta seyrettiği, öne çıkan pariteler ve aralığın Londra’da nasıl kırıldığı.",
     },
     date: "2026-07-27",
-    localeDate: { fr: "2026-09-28" },
+    localeDate: {
+      fr: "2026-09-28",
+      pt: "2026-10-29",
+      tr: "2026-11-09",
+      de: "2026-11-16",
+      it: "2026-11-26",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "Strategy"],
       es: ["Sesiones", "Estrategia"],
       fr: ["Séances", "Tokyo"],
+      pt: ["Sessões", "Estratégia"],
+      it: ["Sessioni", "Strategia"],
+      de: ["Sessions", "Strategie"],
+      tr: ["Seanslar", "Strateji"],
     },
     cover: "/blog/tokyo-asian-forex-session.svg",
     body: {
@@ -1717,6 +3493,350 @@ La liquidité la plus profonde du forex se trouve à Londres et à New York, et 
 Pour un contexte faisant autorité, la Banque des règlements internationaux publie les enquêtes de référence sur le volume mondial des changes sur https://www.bis.org, la Banque du Japon explique sa politique et ses opérations de marché sur https://www.boj.or.jp/en/, et le Japan Exchange Group fournit des informations de marché et de calendrier sur https://www.jpx.co.jp/english/. Une formation plus large sur le comportement des séances est disponible auprès de sources réputées comme https://www.babypips.com.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sessão de Tóquio é o coração do dia de negociação asiático. Quando Nova York desacelera e as mesas europeias já foram embora há tempos, a liquidez se desloca para o leste, e Tóquio passa a ser a referência de como o mercado de câmbio se comporta ao longo do horário asiático. Para os traders de varejo, a sessão asiática tem uma personalidade própria: mais tranquila, mais contida e muitas vezes lateral de um jeito que as sessões de Londres e Nova York raramente são. Pegar o jeito dessa personalidade é o primeiro passo para operá-la bem, ou para concluir que ela não é para você. Este artigo mostra quando a sessão de Tóquio acontece no seu fuso horário, o que a torna diferente, quais pares de moedas costumam ser os mais ativos e como os traders costumam abordar um mercado que passa boa parte do tempo oscilando dentro de uma faixa.
+
+## Horário da sessão de Tóquio no seu fuso horário
+
+A sessão de Tóquio vai aproximadamente das **00:00 às 09:00 GMT**. No horário local japonês, isso corresponde a **09:00 a 18:00 JST**, já que o Japão fica em GMT+9. Um detalhe importa aqui mais do que em quase qualquer outro ponto do calendário do forex: o Japão não adota horário de verão. Por isso, a janela de Tóquio em GMT fica estável o ano inteiro, enquanto as sessões ligadas a cidades que mudam os relógios, como Londres e Nova York, andam uma hora duas vezes por ano. Quando você mapeia a sessão asiática ao longo das estações, Tóquio é o ponto fixo em torno do qual todo o resto gira.
+
+Como a sessão é definida em termos locais, o jeito mais fácil de saber quando ela abre para você é converter do GMT para o seu fuso. A tabela abaixo mostra o quadro no horário padrão.
+
+| Cidade / fuso | Abertura da sessão de Tóquio | Fechamento da sessão de Tóquio |
+|---|---|---|
+| GMT (UTC) | 00:00 | 09:00 |
+| JST (Tóquio, GMT+9) | 09:00 | 18:00 |
+| EST (Nova York, GMT-5) | 19:00 (dia anterior) | 04:00 |
+| CET (Frankfurt, GMT+1) | 01:00 | 10:00 |
+
+Lembre que as linhas EST e CET mudam quando essas regiões passam para o horário de verão, enquanto as linhas GMT e JST não mudam. Se você quer a abertura exata na sua localidade em qualquer data, o jeito mais limpo é deixar uma ferramenta fazer a conversão ao vivo em vez de fazer a conta na mão. Nosso guia de [horário do forex por fuso horário](/pt/blog/horario-do-forex-por-fuso-horario) explica essa conversão em detalhes, e a ferramenta da página inicial mostra todas as sessões no seu horário local automaticamente.
+
+## O que torna a sessão asiática diferente
+
+A característica que define a sessão asiática é a volatilidade mais baixa. Em comparação com Londres e Nova York, o preço tende a se mover em faixas mais estreitas, e o ritmo é mais lento. Há razões estruturais para isso. Os maiores polos de liquidez do forex estão em Londres e Nova York e, quando esses centros estão fechados, há menos participantes ativos. Liquidez mais fina não significa automaticamente caos. Na maioria das vezes, significa que o preço tem menos combustível para formar tendência, então ele se acomoda em faixas e respeita suportes e resistências com mais clareza do que quando as mesas europeias e americanas estão a todo vapor.
+
+A sessão asiática também funciona com outra mistura de informações. Indicadores econômicos do Japão, da Austrália, da Nova Zelândia e da China saem nesse horário, junto com declarações do Bank of Japan e do Reserve Bank of Australia. Esse fluxo de dados regionais pode provocar movimentos bruscos e localizados nas moedas afetadas, mas, entre um evento e outro, o mercado como um todo muitas vezes fica de lado.
+
+Esse perfil mais calmo é o motivo pelo qual muitos traders descrevem Tóquio como a sessão que define a faixa. Ela frequentemente estabelece uma máxima e uma mínima que as sessões seguintes usam como níveis de referência. É comum ver uma faixa construída com paciência ao longo do horário asiático e depois testada ou rompida quando a Europa chega. Nada disso vale para todos os dias; eventos de risco, surpresas de bancos centrais e a liquidez fina dos feriados podem virar o padrão habitual de cabeça para baixo. Mas, como expectativa de base, a sessão asiática recompensa mais a paciência do que a agressividade. Para uma comparação mais completa de como as cinco sessões diferem em perfil, veja nossa visão geral de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas).
+
+## Melhores pares de moedas para a sessão de Tóquio
+
+Os pares com atividade mais relevante durante a sessão asiática são aqueles ligados às moedas cujos mercados de origem estão abertos. Isso aponta, antes de tudo, para o iene japonês.
+
+**USD/JPY** é a peça central natural. É um dos pares mais líquidos do mundo e, no horário de Tóquio, se beneficia do fluxo de ordens doméstico, do hedge de exportadores e importadores e das reações aos dados japoneses e à comunicação do Bank of Japan. Ele tende a ser relativamente ordenado, o que agrada a traders que querem um instrumento de iene líquido sem as oscilações mais amplas dos cruzamentos de iene.
+
+**EUR/JPY** e **GBP/JPY** são os cruzamentos de iene mais agitados. Ambos podem se mover mais que o USD/JPY, e o GBP/JPY em particular tem fama de faixas mais amplas e picos mais rápidos, o que vale para os dois lados: mais oportunidade, mais risco. No horário exclusivamente asiático, esses cruzamentos costumam ser mais calmos do que ficam quando a Europa abre e os lados do euro e da libra acordam.
+
+Além do iene, os pares de **dólar australiano** e **dólar neozelandês** merecem atenção. Sydney está aberta durante o início do bloco asiático, os dados da Austrália e da Nova Zelândia saem nesse horário, e a China, principal parceira comercial das duas economias, divulga números que repercutem direto no AUD e no NZD. **AUD/USD**, **NZD/USD** e o cruzamento **AUD/JPY** são todos amplamente acompanhados. O AUD/JPY é especialmente típico da sessão porque combina duas moedas cujos mercados de origem estão ativos, o que faz dele uma expressão limpa do sentimento do horário asiático. Os pares cujas moedas estão totalmente ligadas a mercados fechados, como certos cruzamentos europeus, geralmente têm condições mais finas e menos compensadoras até Londres chegar.
+
+## A sobreposição Sydney-Tóquio
+
+A sessão asiática não é bem um evento de uma cidade só. Sydney abre primeiro, por volta das **22:00 GMT**, e sua janela vai até cerca de **07:00 GMT**, sobrepondo-se à parte inicial da sessão de Tóquio. Juntas, Sydney e Tóquio formam o que os traders costumam chamar de bloco de liquidez asiático: o trecho do dia em que os mercados do Pacífico e do Leste Asiático estão contribuindo com fluxo.
+
+Essa sobreposição importa por alguns motivos. É quando o fluxo de ordens da Austrália e da Nova Zelândia encontra a liquidez mais profunda da abertura de Tóquio, então a primeira ou as duas primeiras horas depois que Tóquio entra em operação tendem a ser a parte mais ativa do dia asiático. Os cruzamentos que ligam as duas regiões, sobretudo o **AUD/JPY**, são os beneficiários mais claros, já que as duas pontas do par estão sendo negociadas em seu horário local ao mesmo tempo. Lembre que Sydney adota horário de verão e, como fica no Hemisfério Sul, sua mudança de relógio acontece ao contrário das estações do norte, então a parte de Sydney no bloco se move em relação ao GMT em épocas do ano diferentes das de Londres ou Nova York.
+
+## A passagem de Tóquio para Londres
+
+A característica estrutural mais importante da sessão asiática é o que acontece no seu fim. Quando Tóquio se aproxima do fechamento, o dia europeu está começando. Frankfurt abre por volta das **07:00 GMT** e Londres vem em seguida, às **08:00 GMT**, então, durante mais ou menos as duas últimas horas de Tóquio, há uma breve passagem de bastão enquanto a liquidez migra da Ásia para a Europa.
+
+É nessa passagem que o papel de definidora de faixa da sessão asiática se torna útil na prática. A máxima e a mínima que Tóquio estabelece durante a noite frequentemente funcionam como os níveis que Londres vai testar. Uma sequência muito comum: uma faixa asiática tranquila e contida, depois um avanço decidido através de uma das bordas quando o volume europeu chega com força. A abertura de Londres é um dos momentos mais enérgicos do dia de negociação, e as faixas construídas com paciência no horário asiático são exatamente as estruturas que essa energia tende a romper.
+
+Para o trader, isso tem dois lados. Se você opera a própria sessão asiática, lembre que a sua faixa tranquila tem prazo de validade: a calmaria pode acabar de repente quando a Europa chega, e posições confortáveis em um ambiente de baixa volatilidade podem ser pegas de surpresa pela transição. Se você opera a abertura de Londres, a faixa asiática entrega um mapa pronto de níveis para observar. De qualquer forma, as duas sessões são mais bem entendidas como uma sequência conectada, e não como blocos isolados. Nosso guia sobre [que horas abre a sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres) trata com mais profundidade do lado europeu dessa passagem.
+
+## Operando faixas na sessão asiática
+
+Como a sessão asiática passa tanto tempo dentro de faixas, a abordagem que os traders mais associam a ela é a operação em faixa (range trading). Isto descreve um estilo comum, não é uma recomendação para usá-lo; todo método envolve risco, e o que vem a seguir é informação geral, não aconselhamento.
+
+A ideia central é simples. Em um mercado andando de lado, alguns traders marcam os limites da faixa, a máxima e a mínima da sessão ou níveis próximos de suporte e resistência, e observam como o preço se comporta ao se aproximar dessas bordas. Em um mercado realmente lateral, o preço muitas vezes reverte perto dos limites em vez de atravessá-los direto. Os traders que trabalham nesse estilo prestam muita atenção aos níveis estabelecidos nas primeiras horas asiáticas e a se o preço os está respeitando ou ignorando.
+
+Algumas coisas fazem esse estilo combinar com a sessão. Volatilidade mais baixa significa que as faixas tendem a se manter por mais tempo antes de romper. O respeito mais claro a suportes e resistências dá mais significado aos limites. E a relativa calma deixa tempo para observar em vez de reagir às pressas.
+
+A ressalva essencial é a abertura de Londres. Uma faixa que se manteve a noite inteira é uma forte candidata a romper justamente quando o volume europeu chega, então os mesmos limites que contiveram o preço por horas podem falhar de repente no trecho final da sessão asiática. Os traders que se concentram em faixas no horário asiático geralmente tratam a aproximação da abertura europeia como o ponto em que as premissas da operação em faixa enfraquecem, e muitos se afastam bem antes dessa transição. Controle de risco, dimensionamento de posição e atenção aos dados programados importam aqui tanto quanto em qualquer sessão.
+## Erros comuns
+
+Alguns erros evitáveis aparecem repetidamente entre traders que estão começando na sessão asiática. Um deles é esperar volatilidade no estilo de Londres. Traders que aprenderam nas sessões europeia ou americana às vezes trazem a expectativa de movimentos grandes e rápidos e se frustram quando Tóquio não entrega. A calmaria é uma característica da sessão, não um defeito, e tentar forçar operações de tendência em um mercado lateral é um jeito comum de acumular perdas.
+
+Outro é ignorar os dados e os feriados japoneses. Decisões do Bank of Japan, indicadores econômicos japoneses e números regionais da Austrália, da Nova Zelândia e da China podem injetar volatilidade repentina em uma sessão de resto tranquila. Os feriados japoneses, por sua vez, podem drenar ainda mais a liquidez e deixar as faixas ainda mais finas e menos confiáveis. Um trader que não confere o calendário regional pode ser pego de surpresa nos dois sentidos.
+
+Um terceiro é operar demais. Um mercado tranquilo oferece menos oportunidades de qualidade, e a tentação de fabricar atividade, fazendo operações marginais só para estar fazendo alguma coisa, é forte quando o preço mal se mexe. Em um ambiente de baixa volatilidade, paciência e seletividade costumam importar mais do que frequência.
+
+## Perguntas frequentes
+
+**Qual é o horário da sessão asiática no forex?**
+A sessão asiática, ancorada em Tóquio, vai aproximadamente das 00:00 às 09:00 GMT, ou das 09:00 às 18:00 no horário local de Tóquio. Sydney abre antes, por volta das 22:00 GMT, e se sobrepõe à primeira parte de Tóquio. Converta esses horários em GMT para o seu fuso para ver o horário exato onde você está.
+
+**A sessão de Tóquio é boa para iniciantes?**
+Muitos iniciantes acham a volatilidade mais baixa da sessão asiática mais fácil de acompanhar do que o ritmo mais rápido de Londres ou Nova York, porque há mais tempo para pensar e o preço tende a respeitar os níveis com mais clareza. Mesmo assim, mais tranquilo não significa mais seguro; a liquidez fina e os movimentos repentinos provocados por dados ainda trazem risco real. Esta é uma informação geral, não um aconselhamento.
+
+**Quais são os melhores pares para a sessão asiática?**
+Os pares mais ativos são os instrumentos de iene, USD/JPY, EUR/JPY e GBP/JPY, além dos pares de dólar australiano e neozelandês, como AUD/USD, NZD/USD e AUD/JPY, que se beneficiam de Sydney estar aberta e dos dados da Austrália, da Nova Zelândia e da China.
+
+**A sessão de Tóquio segue horário de verão?**
+Não. O Japão não adota horário de verão, então a sessão de Tóquio fica das 00:00 às 09:00 GMT o ano inteiro. As sessões de cidades que mudam os relógios, como Londres e Nova York, se deslocam em relação ao GMT duas vezes por ano, mas Tóquio não.
+
+**Por que a sessão asiática é tão tranquila?**
+A liquidez mais profunda do forex está em Londres e Nova York, e as duas estão fechadas no horário asiático. Com menos grandes participantes ativos, o preço tem menos impulso para formar tendência e tende a se acomodar em faixas até o volume europeu aparecer.
+
+Para um embasamento confiável, o Banco de Compensações Internacionais publica as pesquisas de referência sobre o volume global de câmbio em https://www.bis.org, o Bank of Japan explica sua política e suas operações de mercado em https://www.boj.or.jp/en/, e o Japan Exchange Group oferece informações de mercado e de calendário em https://www.jpx.co.jp/english/. Conteúdo educativo mais amplo sobre o comportamento das sessões está disponível em fontes respeitadas como https://www.babypips.com.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `La sessione di Tokyo è il cuore pulsante della giornata di trading asiatica. Quando New York rallenta e i desk europei sono a casa da un pezzo, la liquidità si sposta a est e Tokyo diventa il punto di riferimento per il comportamento del mercato valutario durante le ore asiatiche. Per i trader retail, la sessione asiatica ha una personalità ben precisa: più tranquilla, più contenuta e spesso laterale, dentro un range, in un modo che raramente si vede nelle sessioni di Londra e New York. Imparare a riconoscere questa personalità è il primo passo per operarci bene, o per capire che non fa per te. Questo articolo ti spiega quando si svolge la sessione di Tokyo nel tuo fuso orario, cosa la rende diversa, quali coppie di valute tendono a essere più attive e come i trader affrontano di solito un mercato che passa gran parte del tempo a muoversi dentro un range.
+
+## Orari della sessione di Tokyo nel tuo fuso orario
+
+La sessione di Tokyo va all’incirca dalle **00:00 alle 09:00 GMT**. Nell’ora locale giapponese corrisponde alle **09:00-18:00 JST**, dato che il Giappone è a GMT+9. Qui c’è un dettaglio che conta più che quasi ovunque nel calendario del forex: il Giappone non adotta l’ora legale. La finestra di Tokyo in GMT resta quindi stabile tutto l’anno, mentre le sessioni ancorate a città che cambiano l’ora, come Londra e New York, si spostano di un’ora due volte l’anno. Quando mappi la sessione asiatica nel corso delle stagioni, Tokyo è il punto fisso attorno a cui ruota tutto il resto.
+
+Poiché la sessione è definita in ora locale, il modo più semplice per sapere quando apre per te è convertire dal GMT al tuo fuso. La tabella qui sotto mostra la situazione in ora solare.
+
+| Città / fuso | Apertura sessione di Tokyo | Chiusura sessione di Tokyo |
+|---|---|---|
+| GMT (UTC) | 00:00 | 09:00 |
+| JST (Tokyo, GMT+9) | 09:00 | 18:00 |
+| EST (New York, GMT-5) | 19:00 (giorno prima) | 04:00 |
+| CET (Francoforte, GMT+1) | 01:00 | 10:00 |
+
+Ricorda che le righe EST e CET si spostano quando quelle regioni passano all’ora legale, mentre le righe GMT e JST no. Se vuoi l’orario esatto di apertura nel tuo luogo in una data qualsiasi, la soluzione più pulita è lasciare che uno strumento lo converta in tempo reale invece di fare i conti a mano. La nostra guida agli [orari del forex per fuso orario](/it/blog/orari-del-forex-per-fuso-orario) spiega questa conversione nel dettaglio, e lo strumento in homepage mostra automaticamente ogni sessione nella tua ora locale.
+
+## Cosa rende diversa la sessione asiatica
+
+La caratteristica distintiva della sessione asiatica è una volatilità più bassa. Rispetto a Londra e New York, il prezzo tende a muoversi in range più stretti e il ritmo è più lento. Ci sono ragioni strutturali. I maggiori bacini di liquidità del forex si trovano a Londra e New York, e quando quei centri sono chiusi gli operatori attivi sono meno. Una liquidità più scarsa non significa automaticamente caos. Più spesso significa che il prezzo ha meno carburante per sviluppare un trend, quindi si assesta in range e rispetta supporti e resistenze in modo più pulito rispetto a quando i desk europei e americani sono a pieno regime.
+
+La sessione asiatica si basa anche su un diverso mix di informazioni. In queste ore escono i dati economici di Giappone, Australia, Nuova Zelanda e Cina, insieme ai commenti della Bank of Japan e della Reserve Bank of Australia. Questo flusso di dati regionali può produrre movimenti bruschi e localizzati sulle valute interessate, ma tra un evento e l’altro il mercato nel suo complesso spesso si muove senza direzione.
+
+Questo profilo più calmo è il motivo per cui molti trader descrivono Tokyo come la sessione che definisce il range. Spesso stabilisce un massimo e un minimo che le sessioni successive usano come livelli di riferimento. Vedrai spesso un range costruito con pazienza durante le ore asiatiche, poi testato o rotto all’arrivo dell’Europa. Niente di tutto questo vale ogni singolo giorno: eventi di rischio, sorprese delle banche centrali e la scarsa liquidità dei giorni festivi possono sconvolgere lo schema abituale. Ma come aspettativa di base, la sessione asiatica premia la pazienza più dell’aggressività. Per un confronto più completo sulle differenze di carattere tra le cinque sessioni, consulta la nostra panoramica [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate).
+
+## Le migliori coppie di valute per la sessione di Tokyo
+
+Le coppie con l’attività più significativa durante la sessione asiatica sono quelle legate alle valute i cui mercati di riferimento sono aperti. Il che porta anzitutto allo yen giapponese.
+
+**USD/JPY** è il fulcro naturale. È una delle coppie più liquide al mondo e durante l’orario di Tokyo beneficia del flusso di ordini interno, delle coperture di esportatori e importatori e delle reazioni ai dati giapponesi e alla comunicazione della Bank of Japan. Tende a essere relativamente ordinata, il che si adatta ai trader che cercano uno strumento liquido sullo yen senza le oscillazioni più ampie dei cross sullo yen.
+
+**EUR/JPY** e **GBP/JPY** sono i cross sullo yen più movimentati. Entrambi possono muoversi più di USD/JPY, e GBP/JPY in particolare ha la fama di avere range più ampi e picchi più rapidi, il che vale nei due sensi: più opportunità, più rischio. Durante le ore puramente asiatiche questi cross sono spesso più calmi di quanto diventino quando apre l’Europa e si svegliano euro e sterlina.
+
+Oltre allo yen, meritano attenzione le coppie con il **dollaro australiano** e il **dollaro neozelandese**. Sydney è aperta durante la prima parte del blocco asiatico, i dati australiani e neozelandesi escono in queste ore e la Cina, principale partner commerciale di entrambe le economie, pubblica dati che si riflettono direttamente su AUD e NZD. **AUD/USD**, **NZD/USD** e il cross **AUD/JPY** sono tutti molto seguiti. AUD/JPY è particolarmente tipico della sessione perché combina due valute i cui mercati di riferimento sono entrambi attivi, il che lo rende un’espressione pulita del sentiment delle ore asiatiche. Le coppie le cui valute sono interamente legate a mercati chiusi, come alcuni cross europei, presentano in genere condizioni più sottili e meno interessanti finché non arriva Londra.
+
+## La sovrapposizione Sydney-Tokyo
+
+La sessione asiatica non riguarda in realtà una sola città. Sydney apre per prima, intorno alle **22:00 GMT**, e la sua finestra arriva fino alle **07:00 GMT** circa, sovrapponendosi alla prima parte della sessione di Tokyo. Insieme, Sydney e Tokyo formano quello che i trader chiamano spesso il blocco di liquidità asiatico: la fascia della giornata in cui i mercati del Pacifico e dell’Asia orientale contribuiscono entrambi al flusso.
+
+Questa sovrapposizione conta per diversi motivi. È il momento in cui il flusso di ordini australiano e neozelandese incontra la liquidità più profonda dell’apertura di Tokyo, per cui la prima ora o le prime due ore dopo l’attivazione di Tokyo tendono a essere la parte più attiva della giornata asiatica. I cross che collegano le due regioni, soprattutto **AUD/JPY**, sono quelli che ne beneficiano di più, dato che entrambe le valute della coppia sono negoziate contemporaneamente nel proprio orario locale. Tieni presente che Sydney adotta l’ora legale e, trovandosi nell’emisfero australe, il suo cambio d’ora è opposto alle stagioni boreali, quindi la parte del blocco relativa a Sydney si sposta rispetto al GMT in periodi dell’anno diversi da quelli di Londra o New York.
+
+## Il passaggio di consegne da Tokyo a Londra
+
+L’aspetto strutturale più importante della sessione asiatica è ciò che accade alla sua fine. Mentre Tokyo si avvicina alla chiusura, la giornata europea sta cominciando. Francoforte apre intorno alle **07:00 GMT** e Londra segue alle **08:00 GMT**, quindi più o meno nelle ultime due ore di Tokyo c’è un breve passaggio di consegne in cui la liquidità migra dall’Asia all’Europa.
+
+È in questo passaggio che il carattere della sessione asiatica, che definisce il range, diventa utile nella pratica. Il massimo e il minimo stabiliti da Tokyo durante la notte fungono spesso da livelli che Londra mette alla prova. Una sequenza molto comune: un range asiatico tranquillo e contenuto, poi una spinta decisa oltre uno dei suoi estremi quando arrivano i volumi europei. L’apertura di Londra è uno dei momenti più energici della giornata di trading, e i range costruiti con pazienza durante le ore asiatiche sono proprio le strutture che quell’energia tende a rompere.
+
+Per un trader, questo vale nei due sensi. Se operi nella sessione asiatica vera e propria, tieni presente che il tuo range tranquillo ha una scadenza: la calma può finire all’improvviso quando arriva l’Europa, e posizioni a loro agio in un contesto di bassa volatilità possono essere colte di sorpresa dalla transizione. Se operi sull’apertura di Londra, il range asiatico ti offre una mappa già pronta dei livelli da osservare. In entrambi i casi, le due sessioni si capiscono meglio come una sequenza collegata, non come blocchi isolati. La nostra guida su [a che ora apre la sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra) approfondisce il lato europeo di questo passaggio di consegne.
+
+## Il range trading nella sessione asiatica
+
+Poiché la sessione asiatica passa tanto tempo dentro un range, l’approccio che i trader associano più spesso a questa fase è il range trading. Qui si descrive uno stile diffuso, non si raccomanda di usarlo: ogni metodo comporta rischi, e ciò che segue è un’informazione generale, non un consiglio.
+
+L’idea di fondo è semplice. In un mercato che si muove lateralmente, alcuni trader segnano i confini del range, il massimo e il minimo della sessione oppure supporti e resistenze vicini, e osservano come si comporta il prezzo quando si avvicina a quegli estremi. In un mercato davvero laterale, il prezzo spesso inverte vicino ai confini invece di superarli di slancio. I trader che adottano questo stile prestano molta attenzione ai livelli stabiliti nelle prime ore asiatiche e al fatto che il prezzo li rispetti o li ignori.
+
+Alcuni fattori rendono questo stile adatto alla sessione. Una volatilità più bassa significa che i range tendono a reggere più a lungo prima di rompersi. Un rispetto più pulito di supporti e resistenze dà maggiore significato ai confini. E la relativa calma lascia il tempo di osservare invece di reagire in fretta.
+
+L’avvertenza fondamentale è l’apertura di Londra. Un range che ha retto per tutta la notte è un candidato ideale alla rottura proprio quando arrivano i volumi europei, quindi gli stessi confini che hanno contenuto il prezzo per ore possono cedere all’improvviso nell’ultima fase della sessione asiatica. I trader che si concentrano sui range durante le ore asiatiche considerano in genere l’avvicinarsi dell’apertura europea come il momento in cui le ipotesi alla base del range trading si indeboliscono, e molti si fanno da parte ben prima di quella transizione. Gestione del rischio, dimensionamento delle posizioni e attenzione ai dati in calendario contano qui quanto in qualsiasi altra sessione.
+## Errori comuni
+
+Tra i trader alle prime armi con la sessione asiatica si ripetono di continuo alcuni errori evitabili. Uno è aspettarsi una volatilità in stile Londra. I trader che si sono fatti le ossa sulle sessioni europea o americana a volte si portano dietro l’aspettativa di movimenti ampi e rapidi e si innervosiscono quando Tokyo non li offre. La calma è una caratteristica della sessione, non un malfunzionamento, e cercare di forzare operazioni da trend in un mercato laterale è un modo comune per accumulare perdite.
+
+Un altro è ignorare i dati e le festività giapponesi. Le decisioni della Bank of Japan, i dati economici giapponesi e quelli regionali di Australia, Nuova Zelanda e Cina possono tutti iniettare una volatilità improvvisa in una sessione altrimenti calma. Le festività nazionali giapponesi, dal canto loro, possono prosciugare ulteriormente la liquidità e rendere i range ancora più sottili e meno affidabili. Un trader che non controlla il calendario regionale può essere preso alla sprovvista in entrambe le direzioni.
+
+Un terzo è l’overtrading. Un mercato tranquillo offre meno opportunità di qualità, e la tentazione di creare attività dal nulla, aprendo operazioni marginali solo per fare qualcosa, è forte quando il prezzo si muove appena. In un contesto di bassa volatilità, pazienza e selettività contano di solito più della frequenza.
+
+## Domande frequenti
+
+**A che ora è la sessione asiatica nel forex?**
+La sessione asiatica, ancorata a Tokyo, va all’incirca dalle 00:00 alle 09:00 GMT, cioè dalle 09:00 alle 18:00 ora locale di Tokyo. Sydney apre prima, intorno alle 22:00 GMT, e si sovrappone alla prima parte di Tokyo. Converti questi orari GMT nel tuo fuso per conoscere gli orari esatti dove ti trovi.
+
+**La sessione di Tokyo è adatta ai principianti?**
+Molti principianti trovano la volatilità più bassa della sessione asiatica più facile da osservare rispetto al ritmo più rapido di Londra o New York, perché c’è più tempo per riflettere e il prezzo tende a rispettare i livelli in modo più pulito. Detto questo, più tranquilla non significa più sicura: la liquidità scarsa e i movimenti improvvisi legati ai dati comportano comunque rischi reali. Si tratta di un’informazione generale, non di un consiglio.
+
+**Quali sono le coppie migliori per la sessione asiatica?**
+Le coppie più attive sono gli strumenti sullo yen, USD/JPY, EUR/JPY e GBP/JPY, insieme alle coppie con il dollaro australiano e neozelandese come AUD/USD, NZD/USD e AUD/JPY, che beneficiano dell’apertura di Sydney e dei dati di Australia, Nuova Zelanda e Cina.
+
+**La sessione di Tokyo segue l’ora legale?**
+No. Il Giappone non adotta l’ora legale, quindi la sessione di Tokyo resta dalle 00:00 alle 09:00 GMT tutto l’anno. Le sessioni delle città che cambiano l’ora, come Londra e New York, si spostano rispetto al GMT due volte l’anno, Tokyo invece no.
+
+**Perché la sessione asiatica è così tranquilla?**
+La liquidità più profonda del forex si trova a Londra e New York, ed entrambe sono chiuse durante le ore asiatiche. Con meno grandi operatori attivi, il prezzo ha meno slancio per sviluppare un trend e tende ad assestarsi in un range finché non arrivano i volumi europei.
+
+Per un contesto autorevole, la Banca dei Regolamenti Internazionali pubblica le indagini di riferimento sul volume mondiale degli scambi valutari su https://www.bis.org, la Bank of Japan illustra la sua politica e le operazioni di mercato su https://www.boj.or.jp/en/, e il Japan Exchange Group fornisce informazioni sui mercati e sul calendario su https://www.jpx.co.jp/english/. Una formazione più ampia per trader sul comportamento delle sessioni è disponibile presso fonti affidabili come https://www.babypips.com.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce una consulenza finanziaria.*`,
+      de: `Die Tokio-Session ist das Herzstück des asiatischen Handelstages. Wenn New York zur Ruhe kommt und die europäischen Handelsräume längst Feierabend gemacht haben, wandert die Liquidität nach Osten, und Tokio wird zum Bezugspunkt dafür, wie sich der Devisenmarkt während der asiatischen Handelszeit verhält. Für Privattrader hat die Asien-Session eine eigene Persönlichkeit: ruhiger, kontrollierter und oft in einer Range gefangen, wie man es in der London- und der New-York-Session selten erlebt. Ein Gespür für diese Persönlichkeit zu entwickeln, ist der erste Schritt, um sie gut zu handeln oder um zu entscheiden, dass sie nichts für Sie ist. Dieser Artikel zeigt, wann die Tokio-Session in Ihrer eigenen Zeitzone läuft, was sie besonders macht, welche Währungspaare meist am aktivsten sind und wie Trader üblicherweise an einen Markt herangehen, der einen Großteil seiner Zeit innerhalb einer Range pendelt.
+
+## Handelszeiten der Tokio-Session in Ihrer Zeitzone
+
+Die Tokio-Session läuft etwa von **00:00 bis 09:00 GMT**. In japanischer Ortszeit entspricht das **09:00 bis 18:00 Uhr JST**, da Japan bei GMT+9 liegt. Ein Detail ist hier wichtiger als fast überall sonst im Forex-Kalender: Japan kennt keine Sommerzeit. Das GMT-Fenster von Tokio bleibt daher das ganze Jahr über stabil, während sich Sessions, die an Städte mit Zeitumstellung gebunden sind, etwa London und New York, zweimal im Jahr um eine Stunde verschieben. Wenn Sie die Asien-Session über die Jahreszeiten hinweg abbilden, ist Tokio der feste Pfosten, um den sich alles andere dreht.
+
+Da die Session in Ortszeit definiert ist, erfahren Sie am einfachsten, wann sie für Sie öffnet, indem Sie von GMT in Ihre eigene Zone umrechnen. Die Tabelle unten zeigt das Bild in der Normalzeit.
+
+| Stadt / Zone | Eröffnung Tokio-Session | Schluss Tokio-Session |
+|---|---|---|
+| GMT (UTC) | 00:00 | 09:00 |
+| JST (Tokio, GMT+9) | 09:00 | 18:00 |
+| EST (New York, GMT-5) | 19:00 (Vortag) | 04:00 |
+| MEZ (Frankfurt, GMT+1) | 01:00 | 10:00 |
+
+Denken Sie daran, dass sich die Zeilen für EST und MEZ verschieben, wenn diese Regionen auf Sommerzeit umstellen, die Zeilen für GMT und JST dagegen nicht. Wenn Sie die genaue Eröffnung an Ihrem Standort für ein bestimmtes Datum wissen möchten, lassen Sie sie am saubersten von einem Tool live umrechnen, statt selbst zu rechnen. Unser Ratgeber zu den [Forex-Handelszeiten nach Zeitzone](/de/blog/forex-handelszeiten-nach-zeitzone) erklärt diese Umrechnung im Detail, und das Tool auf der Startseite zeigt jede Session automatisch in Ihrer Ortszeit an.
+
+## Was die Asien-Session anders macht
+
+Das prägende Merkmal der Asien-Session ist die geringere Volatilität. Im Vergleich zu London und New York bewegt sich der Kurs meist in engeren Spannen, und das Tempo ist langsamer. Dafür gibt es strukturelle Gründe. Die größten Liquiditätspools im Devisenhandel liegen in London und New York, und wenn diese Zentren geschlossen sind, sind weniger Teilnehmer aktiv. Dünnere Liquidität bedeutet nicht automatisch Chaos. Häufiger bedeutet sie, dass dem Kurs der Treibstoff für einen Trend fehlt, sodass er sich in Ranges einpendelt und Unterstützungen und Widerstände sauberer respektiert als in den Stunden, in denen die europäischen und amerikanischen Handelsräume auf Hochtouren laufen.
+
+Die Asien-Session speist sich zudem aus einem anderen Informationsmix. Konjunkturdaten aus Japan, Australien, Neuseeland und China erscheinen in diesen Stunden, ebenso Kommentare der Bank of Japan und der Reserve Bank of Australia. Dieser regionale Datenfluss kann in den betroffenen Währungen scharfe, lokal begrenzte Bewegungen auslösen, doch zwischen diesen Ereignissen dümpelt der breitere Markt oft vor sich hin.
+
+Wegen dieses ruhigeren Profils beschreiben viele Trader Tokio als Session, die die Range vorgibt. Sie bildet häufig ein Hoch und ein Tief aus, das spätere Sessions als Referenzniveau nutzen. Oft sieht man, wie sich eine Range während der asiatischen Stunden geduldig aufbaut und dann getestet oder durchbrochen wird, sobald Europa einsteigt. Nichts davon gilt an jedem einzelnen Tag: Risikoereignisse, Überraschungen von Zentralbanken und dünne Liquidität an Feiertagen können das übliche Muster über den Haufen werfen. Als Grunderwartung gilt aber, dass die Asien-Session Geduld eher belohnt als Aggressivität. Einen ausführlicheren Vergleich, wie sich die fünf Sessions in ihrem Charakter unterscheiden, bietet unser Überblick [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert).
+
+## Die besten Währungspaare für die Tokio-Session
+
+Die Paare mit der nennenswertesten Aktivität in der Asien-Session sind jene, die an Währungen mit geöffneten Heimatmärkten gebunden sind. Das führt zuerst zum japanischen Yen.
+
+**USD/JPY** ist das natürliche Herzstück. Es gehört zu den liquidesten Paaren der Welt und profitiert während der Tokioter Handelszeit vom heimischen Orderfluss, von Absicherungsgeschäften der Exporteure und Importeure sowie von Reaktionen auf japanische Daten und die Kommunikation der Bank of Japan. Es verläuft meist relativ geordnet, was Tradern entgegenkommt, die ein liquides Yen-Instrument ohne die größeren Ausschläge der Yen-Crosses suchen.
+
+**EUR/JPY** und **GBP/JPY** sind die lebhafteren Yen-Crosses. Beide können sich stärker bewegen als USD/JPY, und vor allem GBP/JPY hat den Ruf breiterer Spannen und schnellerer Ausschläge, was in beide Richtungen wirkt: mehr Chancen, mehr Risiko. In der reinen asiatischen Handelszeit sind diese Crosses oft ruhiger als später, wenn Europa öffnet und die Euro- und Pfundseite erwachen.
+
+Neben dem Yen verdienen die Paare mit dem **Australischen Dollar** und dem **Neuseeland-Dollar** Aufmerksamkeit. Sydney ist während des frühen asiatischen Blocks geöffnet, australische und neuseeländische Daten erscheinen in diesen Stunden, und China, der wichtigste Handelspartner beider Volkswirtschaften, veröffentlicht Zahlen, die direkt auf AUD und NZD durchschlagen. **AUD/USD**, **NZD/USD** und das Kreuzpaar **AUD/JPY** werden allesamt viel beachtet. AUD/JPY ist besonders typisch für die Session, weil es zwei Währungen verbindet, deren Heimatmärkte beide aktiv sind, und damit die Stimmung der asiatischen Handelszeit unverfälscht widerspiegelt. Paare, deren Währungen ganz an geschlossene Märkte gebunden sind, etwa bestimmte europäische Crosses, bieten bis zum Eintreffen Londons in der Regel dünnere und weniger lohnende Bedingungen.
+
+## Die Überschneidung von Sydney und Tokio
+
+Die Asien-Session ist eigentlich keine Veranstaltung einer einzelnen Stadt. Sydney öffnet zuerst, gegen **22:00 GMT**, und sein Zeitfenster reicht bis etwa **07:00 GMT**, sodass es sich mit dem frühen Teil der Tokio-Session überschneidet. Gemeinsam bilden Sydney und Tokio das, was Trader oft den asiatischen Liquiditätsblock nennen: den Abschnitt des Tages, in dem die Märkte im Pazifikraum und in Ostasien gleichermaßen Orderfluss beisteuern.
+
+Diese Überschneidung ist aus mehreren Gründen wichtig. In ihr trifft der australische und neuseeländische Orderfluss auf die tiefere Liquidität der Tokioter Eröffnung, weshalb die ersten ein, zwei Stunden nach dem Start in Tokio meist der aktivste Teil des asiatischen Tages sind. Kreuzpaare, die beide Regionen verbinden, allen voran **AUD/JPY**, profitieren am deutlichsten, da beide Seiten des Paares gleichzeitig zu ihren heimischen Handelszeiten gehandelt werden. Beachten Sie, dass Sydney die Sommerzeit kennt und seine Zeitumstellung wegen der Lage auf der Südhalbkugel entgegengesetzt zu den nördlichen Jahreszeiten verläuft. Der Sydney-Anteil des Blocks verschiebt sich gegenüber GMT also zu anderen Jahreszeiten als London oder New York.
+
+## Die Übergabe von Tokio an London
+
+Das wichtigste strukturelle Merkmal der Asien-Session ist das, was an ihrem Ende geschieht. Während Tokio auf seinen Schluss zusteuert, beginnt der europäische Tag. Frankfurt öffnet gegen **07:00 GMT**, London folgt um **08:00 GMT**, und so gibt es in etwa den letzten beiden Stunden von Tokio eine kurze Übergabe, in der die Liquidität von Asien nach Europa wandert.
+
+Bei dieser Übergabe wird der Range-bildende Charakter der Asien-Session praktisch nutzbar. Das Hoch und das Tief, das Tokio über Nacht ausbildet, dienen häufig als die Niveaus, die London testet. Ein sehr verbreiteter Ablauf: eine ruhige, kontrollierte asiatische Range, dann ein entschlossener Vorstoß über einen ihrer Ränder, sobald das europäische Volumen hereinströmt. Die London-Eröffnung gehört zu den energiegeladeneren Momenten des Handelstages, und die in der asiatischen Handelszeit geduldig aufgebauten Ranges sind genau die Strukturen, die diese Energie meist durchbricht.
+
+Für Trader wirkt das in zwei Richtungen. Wenn Sie die Asien-Session selbst handeln, denken Sie daran, dass Ihre ruhige Range ein Verfallsdatum hat: Die Ruhe kann abrupt enden, wenn Europa einsteigt, und Positionen, die sich in einem Umfeld geringer Volatilität wohlfühlen, können vom Übergang kalt erwischt werden. Wenn Sie die London-Eröffnung handeln, liefert Ihnen die asiatische Range eine fertige Karte der zu beobachtenden Niveaus. So oder so lassen sich die beiden Sessions am besten als zusammenhängende Abfolge verstehen, nicht als isolierte Blöcke. Unser Ratgeber dazu, [wann die London-Session öffnet](/de/blog/wann-oeffnet-die-london-session), behandelt die europäische Seite dieser Übergabe ausführlicher.
+
+## Range-Trading in der Asien-Session
+
+Weil die Asien-Session so viel Zeit innerhalb von Ranges verbringt, ist der Ansatz, den Trader am häufigsten mit ihr verbinden, das Range-Trading. Das beschreibt einen verbreiteten Stil und ist keine Empfehlung, ihn anzuwenden. Jede Methode birgt Risiken, und das Folgende ist eine allgemeine Information, keine Beratung.
+
+Die Grundidee ist einfach. In einem seitwärts pendelnden Markt markieren manche Trader die Grenzen der Range, also das Hoch und das Tief der Session oder nahe gelegene Unterstützungen und Widerstände, und beobachten, wie sich der Kurs verhält, wenn er sich diesen Rändern nähert. In einem echten Seitwärtsmarkt dreht der Kurs oft in der Nähe der Grenzen, statt direkt durch sie hindurchzulaufen. Trader, die diesen Stil verfolgen, achten genau auf die Niveaus, die sich in den frühen asiatischen Stunden herausbilden, und darauf, ob der Kurs sie respektiert oder ignoriert.
+
+Einige Faktoren lassen diesen Stil zur Session passen. Geringere Volatilität bedeutet, dass Ranges meist länger halten, bevor sie brechen. Werden Unterstützungen und Widerstände sauberer respektiert, haben die Grenzen mehr Aussagekraft. Und die relative Ruhe lässt Zeit zum Beobachten, statt hastig reagieren zu müssen.
+
+Der entscheidende Vorbehalt ist die London-Eröffnung. Eine Range, die die ganze Nacht gehalten hat, ist ein Paradekandidat für einen Ausbruch genau dann, wenn das europäische Volumen eintrifft. Dieselben Grenzen, die den Kurs stundenlang eingegrenzt haben, können also im letzten Abschnitt der Asien-Session plötzlich versagen. Trader, die sich während der asiatischen Handelszeit auf Ranges konzentrieren, betrachten das Näherrücken der europäischen Eröffnung in der Regel als den Punkt, an dem die Annahmen hinter dem Range-Trading schwächer werden, und viele ziehen sich lange vor diesem Übergang zurück. Risikokontrolle, Positionsgröße und der Blick auf planmäßige Daten sind hier ebenso wichtig wie in jeder anderen Session.
+## Häufige Fehler
+
+Eine Handvoll vermeidbarer Fehler taucht bei Tradern, die neu in der Asien-Session sind, immer wieder auf. Einer davon ist, Volatilität wie in London zu erwarten. Trader, die ihr Handwerk in der europäischen oder amerikanischen Session gelernt haben, übertragen manchmal ihre Erwartung großer, schneller Bewegungen und sind frustriert, wenn Tokio nicht liefert. Die Ruhe ist ein Merkmal der Session, keine Fehlfunktion, und der Versuch, Trendtrades in einen Seitwärtsmarkt zu zwingen, ist ein verbreiteter Weg, Verluste anzuhäufen.
+
+Ein weiterer Fehler ist, japanische Daten und Feiertage zu ignorieren. Entscheidungen der Bank of Japan, japanische Konjunkturdaten und regionale Zahlen aus Australien, Neuseeland und China können einer ansonsten ruhigen Session plötzlich Volatilität verleihen. Japanische Feiertage wiederum können die Liquidität weiter austrocknen und die Ranges noch dünner und weniger verlässlich machen. Wer den regionalen Kalender nicht prüft, kann in beide Richtungen überrumpelt werden.
+
+Ein dritter Fehler ist Overtrading. Ein ruhiger Markt bietet weniger hochwertige Gelegenheiten, und die Versuchung, Aktivität zu erzwingen, also grenzwertige Trades einzugehen, nur um etwas zu tun, ist groß, wenn sich der Kurs kaum bewegt. In einem Umfeld geringer Volatilität zählen Geduld und Selektivität meist mehr als Häufigkeit.
+
+## Häufig gestellte Fragen
+
+**Wann ist die Asien-Session im Forex?**
+Die Asien-Session, verankert in Tokio, läuft etwa von 00:00 bis 09:00 GMT, also von 09:00 bis 18:00 Uhr Tokioter Ortszeit. Sydney öffnet früher, gegen 22:00 GMT, und überschneidet sich mit dem ersten Teil von Tokio. Rechnen Sie diese GMT-Zeiten in Ihre eigene Zone um, um die genauen Stunden an Ihrem Standort zu sehen.
+
+**Ist die Tokio-Session für Einsteiger geeignet?**
+Viele Einsteiger finden die geringere Volatilität der Asien-Session leichter zu beobachten als das schnellere Tempo von London oder New York, weil mehr Zeit zum Nachdenken bleibt und der Kurs Niveaus meist sauberer respektiert. Ruhiger heißt aber nicht sicherer: Dünne Liquidität und plötzliche datengetriebene Bewegungen bergen weiterhin echte Risiken. Dies ist eine allgemeine Information und keine Beratung.
+
+**Welche Paare eignen sich für die Asien-Session am besten?**
+Am aktivsten sind die Yen-Instrumente USD/JPY, EUR/JPY und GBP/JPY sowie die Paare mit dem Australischen und dem Neuseeland-Dollar wie AUD/USD, NZD/USD und AUD/JPY, die davon profitieren, dass Sydney geöffnet ist, und von australischen, neuseeländischen und chinesischen Daten.
+
+**Gilt in der Tokio-Session die Sommerzeit?**
+Nein. Japan kennt keine Sommerzeit, die Tokio-Session bleibt daher das ganze Jahr über bei 00:00 bis 09:00 GMT. Sessions in Städten mit Zeitumstellung, etwa London und New York, verschieben sich zweimal im Jahr gegenüber GMT, Tokio dagegen nicht.
+
+**Warum ist die Asien-Session so ruhig?**
+Die tiefste Liquidität im Devisenhandel liegt in London und New York, und beide sind während der asiatischen Handelszeit geschlossen. Da weniger große Teilnehmer aktiv sind, fehlt dem Kurs der Schwung für einen Trend, und er pendelt sich meist in Ranges ein, bis das europäische Volumen eintrifft.
+
+Fundierte Hintergrundinformationen bietet die Bank für Internationalen Zahlungsausgleich mit ihren maßgeblichen Erhebungen zum weltweiten Devisenumsatz unter https://www.bis.org, die Bank of Japan erläutert ihre Geldpolitik und Marktoperationen unter https://www.boj.or.jp/en/, und die Japan Exchange Group stellt Markt- und Kalenderinformationen unter https://www.jpx.co.jp/english/ bereit. Weiterführende Trader-Bildung zum Verhalten der Sessions bieten seriöse Quellen wie https://www.babypips.com.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Tokyo seansı, Asya işlem gününün kalbidir. New York yavaşladığında ve Avrupa masaları çoktan kapandığında likidite doğuya kayar ve Tokyo, döviz piyasasının Asya saatleri boyunca nasıl davrandığının referans noktası hâline gelir. Bireysel yatırımcılar için Asya seansının kendine özgü bir kişiliği vardır: daha sakin, daha dengeli ve çoğu zaman Londra ile New York seanslarında nadiren görülen bir biçimde dar bir aralıkta seyreden. Bu kişiliği tanımak, bu seansta iyi işlem yapmanın ya da onun size göre olmadığına karar vermenin ilk adımıdır. Bu makale, Tokyo seansının kendi saat diliminizde ne zaman işlediğini, onu neyin farklı kıldığını, hangi paritelerin en hareketli olma eğiliminde olduğunu ve yatırımcıların zamanının büyük bölümünü bir aralık içinde dolaşarak geçiren bir piyasaya genellikle nasıl yaklaştığını ele alıyor.
+
+## Saat diliminize göre Tokyo seansı saatleri
+
+Tokyo seansı yaklaşık olarak **00:00 ile 09:00 GMT arasında** işler. Japonya GMT+9’da olduğu için bu, Japonya yerel saatiyle **09:00 ile 18:00 JST arasına** karşılık gelir. Burada forex takviminin neredeyse hiçbir yerinde olmadığı kadar önemli bir ayrıntı var: Japonya yaz saati uygulamaz. Dolayısıyla Tokyo’nun GMT penceresi yıl boyunca sabit kalırken, Londra ve New York gibi saatlerini değiştiren şehirlere bağlı seanslar yılda iki kez bir saat kayar. Asya seansını mevsimler boyunca haritalarken Tokyo, diğer her şeyin etrafında döndüğü sabit direktir.
+
+Seans yerel saate göre tanımlandığı için sizin için ne zaman açıldığını bilmenin en kolay yolu, GMT’den kendi saat diliminize çevirmektir. Aşağıdaki tablo standart saat durumunu gösteriyor.
+
+| Şehir / saat dilimi | Tokyo seansı açılışı | Tokyo seansı kapanışı |
+|---|---|---|
+| GMT (UTC) | 00:00 | 09:00 |
+| JST (Tokyo, GMT+9) | 09:00 | 18:00 |
+| EST (New York, GMT-5) | 19:00 (önceki gün) | 04:00 |
+| CET (Frankfurt, GMT+1) | 01:00 | 10:00 |
+
+EST ve CET satırlarının, bu bölgeler yaz saatine geçtiğinde kaydığını, GMT ve JST satırlarının ise kaymadığını unutmayın. Belirli bir tarihte bulunduğunuz yerdeki tam açılış saatini istiyorsanız en temiz yol, hesabı elle yapmak yerine bir aracın bunu canlı olarak çevirmesine izin vermektir. [Saat dilimine göre forex piyasa saatleri](/tr/blog/saat-dilimine-gore-forex-piyasa-saatleri) rehberimiz bu dönüşümü ayrıntılı olarak anlatıyor; ana sayfadaki araç da her seansı otomatik olarak yerel saatinizde gösteriyor.
+
+## Asya seansını farklı kılan nedir
+
+Asya seansının belirleyici özelliği daha düşük oynaklıktır. Londra ve New York’un yanında fiyat daha dar aralıklarda hareket etme eğilimindedir ve tempo daha yavaştır. Bunun yapısal nedenleri vardır. En büyük forex likidite havuzları Londra ve New York’tadır ve bu merkezler kapalıyken daha az katılımcı faaliyettedir. Daha sığ likidite otomatik olarak kaos anlamına gelmez. Daha çok, fiyatın trend oluşturacak yakıtının daha az olduğu anlamına gelir; böylece fiyat aralıklara yerleşir ve destek ile direnç seviyelerine, Avrupa ve Amerika masalarının tam gaz çalıştığı zamanlara göre daha net biçimde saygı gösterir.
+
+Asya seansı ayrıca farklı bir bilgi karışımıyla işler. Japonya, Avustralya, Yeni Zelanda ve Çin’den gelen ekonomik veriler, Japonya Merkez Bankası (BoJ) ve Avustralya Merkez Bankası (RBA) açıklamalarıyla birlikte bu saatlerde gelir. Bu bölgesel veri akışı ilgili para birimlerinde sert ve yerel hareketler üretebilir, ancak bu olaylar arasında genel piyasa çoğu zaman yönsüz dolaşır.
+
+Pek çok yatırımcının Tokyo’yu bir aralık belirleyici olarak tanımlamasının nedeni bu daha sakin profildir. Seans sık sık, sonraki seansların referans seviyesi olarak kullandığı bir zirve ve bir dip oluşturur. Asya saatleri boyunca sabırla inşa edilen bir aralığın Avrupa geldiğinde test edildiğini ya da kırıldığını sıkça görürsünüz. Bunların hiçbiri her gün geçerli değildir; risk olayları, merkez bankası sürprizleri ve tatillerdeki sığ likidite olağan düzeni altüst edebilir. Ancak temel bir beklenti olarak Asya seansı, agresiflikten çok sabrı ödüllendirir. Beş seansın karakter olarak nasıl ayrıştığına dair daha kapsamlı bir karşılaştırma için [forex işlem seansları rehberimize](/tr/blog/forex-islem-seanslari-rehberi) göz atın.
+
+## Tokyo seansında öne çıkan pariteler
+
+Asya seansında en anlamlı hareketliliği gösteren pariteler, iç piyasaları açık olan para birimlerine bağlı olanlardır. Bu da her şeyden önce Japon yenine işaret eder.
+
+**USD/JPY** doğal merkez parçadır. Dünyanın en likit paritelerinden biridir ve Tokyo saatlerinde yurt içi emir akışından, ihracatçı ve ithalatçıların korunma (hedge) işlemlerinden, Japonya verilerine ve Japonya Merkez Bankası iletişimine verilen tepkilerden beslenir. Görece düzenli olma eğilimindedir; bu da yen çaprazlarının daha geniş dalgalanmaları olmadan likit bir yen enstrümanı isteyen yatırımcılara uyar.
+
+**EUR/JPY** ve **GBP/JPY** daha hareketli yen çaprazlarıdır. Her ikisi de USD/JPY’den daha fazla hareket edebilir; özellikle GBP/JPY daha geniş aralıklar ve daha hızlı sıçramalarla tanınır ve bu iki yönlü bir kılıçtır: daha fazla fırsat, daha fazla risk. Saf Asya saatlerinde bu çaprazlar, Avrupa açılıp euro ve sterlin tarafları uyandığında olduklarından çoğu zaman daha sakindir.
+
+Yenin ötesinde **Avustralya doları** ve **Yeni Zelanda doları** pariteleri de ilgiyi hak ediyor. Sidney, Asya bloğunun ilk bölümü boyunca açıktır; Avustralya ve Yeni Zelanda verileri bu saatlerde açıklanır ve her iki ekonominin de en büyük ticaret ortağı olan Çin, doğrudan AUD ve NZD’ye yansıyan rakamlar yayımlar. **AUD/USD**, **NZD/USD** ve **AUD/JPY** çaprazı geniş çapta izlenir. AUD/JPY, iç piyasaları aynı anda açık olan iki para birimini bir araya getirdiği için seansa özellikle özgüdür ve bu da onu Asya saatlerindeki piyasa duyarlılığının temiz bir ifadesi yapar. Bazı Avrupa çaprazları gibi, para birimleri tamamen kapalı piyasalara bağlı olan pariteler ise Londra gelene kadar genellikle daha sığ ve daha az verimli koşullar görür.
+
+## Sidney-Tokyo çakışması
+
+Asya seansı aslında tek bir şehrin olayı değildir. Önce Sidney, yaklaşık **22:00 GMT**’de açılır ve penceresi yaklaşık **07:00 GMT**’ye kadar sürerek Tokyo seansının ilk bölümüyle çakışır. Sidney ve Tokyo birlikte, yatırımcıların sıklıkla Asya likidite bloğu dediği yapıyı oluşturur: günün hem Pasifik hem de Doğu Asya piyasalarının akışa katkıda bulunduğu dilimi.
+
+Bu çakışmanın önemi birkaç nedene dayanır. Avustralya ve Yeni Zelanda emir akışının Tokyo açılışının daha derin likiditesiyle buluştuğu andır; bu yüzden Tokyo devreye girdikten sonraki ilk bir iki saat, genellikle Asya gününün en hareketli bölümüdür. İki bölge arasında köprü kuran çapraz pariteler, her şeyden önce **AUD/JPY**, bundan en net şekilde yararlananlardır, çünkü paritenin her iki bacağı da aynı anda kendi iç piyasa saatlerinde işlem görür. Sidney’in yaz saati uyguladığını ve Güney Yarımküre’de bulunduğu için saat değişikliğinin kuzeydeki mevsimlerin tersine işlediğini unutmayın; dolayısıyla bloğun Sidney kısmı, GMT’ye göre Londra ya da New York’tan farklı zamanlarda kayar.
+
+## Tokyo’dan Londra’ya devir teslim
+
+Asya seansının en önemli yapısal özelliği, sonunda yaşananlardır. Tokyo kapanışına yaklaşırken Avrupa günü başlamaktadır. Frankfurt yaklaşık **07:00 GMT**’de açılır, Londra da **08:00 GMT**’de onu izler; böylece Tokyo’nun son yaklaşık iki saatinde, likidite Asya’dan Avrupa’ya taşınırken kısa bir devir teslim yaşanır.
+
+Asya seansının aralık belirleyici karakteri, pratikte işe yarar hâle geldiği yer bu devir tesliminde ortaya çıkar. Tokyo’nun gece boyunca oluşturduğu zirve ve dip, sık sık Londra’nın test ettiği seviyeler olarak işlev görür. Çok yaygın bir sıralama şudur: sakin ve dengeli bir Asya aralığı, ardından Avrupa hacmi piyasaya akarken aralığın bir kenarından kararlı bir kırılım. Londra açılışı işlem gününün en enerjik anlarından biridir ve Asya saatlerinde sabırla inşa edilen aralıklar, bu enerjinin kırma eğiliminde olduğu yapıların ta kendisidir.
+
+Bir yatırımcı için bunun iki yönü vardır. Asya seansının kendisinde işlem yapıyorsanız sakin aralığınızın bir son kullanma tarihi olduğunu unutmayın: Avrupa geldiğinde sükûnet aniden sona erebilir ve düşük oynaklık ortamında rahat görünen pozisyonlar bu geçişte hazırlıksız yakalanabilir. Londra açılışında işlem yapıyorsanız Asya aralığı size izlenecek seviyelerin hazır bir haritasını sunar. Her iki durumda da iki seans, birbirinden kopuk bloklar olarak değil, birbirine bağlı bir sıralama olarak en iyi şekilde anlaşılır. [Londra seansının saat kaçta açıldığını](/tr/blog/londra-seansi-saat-kacta-acilir) anlatan rehberimiz, bu devir teslimin Avrupa tarafını daha ayrıntılı ele alıyor.
+
+## Asya seansında aralık işlemi
+
+Asya seansı zamanının büyük bölümünü aralıklar içinde geçirdiği için yatırımcıların onunla en sık ilişkilendirdiği yaklaşım aralık işlemidir (range trading). Bu, yaygın bir tarzın tanımıdır, kullanılması yönünde bir öneri değildir; her yöntem risk taşır ve aşağıdakiler tavsiye değil, genel bilgidir.
+
+Temel fikir basittir. Yatay seyreden bir piyasada bazı yatırımcılar aralığın sınırlarını, yani seansın zirvesini ve dibini ya da yakındaki destek ve direnç seviyelerini işaretler ve fiyat bu kenarlara yaklaşırken nasıl davrandığını izler. Gerçekten dar aralıkta seyreden bir piyasada fiyat, sınırları doğrudan aşmak yerine çoğu zaman onların yakınında geri döner. Bu tarzla çalışan yatırımcılar, Asya’nın ilk saatlerinde oluşan seviyelere ve fiyatın bu seviyelere saygı gösterip göstermediğine yakından dikkat eder.
+
+Bu tarzın seansa uymasını sağlayan birkaç şey vardır. Daha düşük oynaklık, aralıkların kırılmadan önce daha uzun süre dayanma eğiliminde olduğu anlamına gelir. Destek ve dirence daha net saygı gösterilmesi, sınırlara daha fazla anlam kazandırır. Görece sakinlik de aceleyle tepki vermek yerine gözlem yapmak için zaman bırakır.
+
+Temel uyarı Londra açılışıdır. Bütün gece dayanmış bir aralık, tam da Avrupa hacmi geldiğinde kırılmaya en yatkın adaydır; bu yüzden fiyatı saatlerce tutan aynı sınırlar, Asya seansının son diliminde aniden çökebilir. Asya saatlerinde aralıklara odaklanan yatırımcılar, genellikle Avrupa açılışının yaklaşmasını aralık işleminin dayandığı varsayımların zayıfladığı nokta olarak görür ve pek çoğu bu geçişten çok önce geri çekilir. Risk kontrolü, pozisyon büyüklüğü ve planlanmış verilerin farkında olmak, burada da diğer her seansta olduğu kadar önemlidir.
+## Sık yapılan hatalar
+
+Asya seansında yeni olan yatırımcılar arasında önlenebilir birkaç hata tekrar tekrar görülür. Bunlardan biri Londra tarzı bir oynaklık beklemektir. İşlem yapmayı Avrupa ya da Amerika seanslarında öğrenen yatırımcılar bazen büyük ve hızlı hareket beklentilerini buraya taşır ve Tokyo bunu sunmayınca hayal kırıklığına uğrar. Sakinlik seansın bir özelliğidir, bir arıza değildir; dar aralıkta seyreden bir piyasaya trend tarzı işlemleri zorla uygulamaya çalışmak, zarar biriktirmenin yaygın bir yoludur.
+
+Bir diğeri Japonya verilerini ve tatillerini göz ardı etmektir. Japonya Merkez Bankası kararları, Japonya ekonomik verileri ve Avustralya, Yeni Zelanda ve Çin’den gelen bölgesel veriler, aksi hâlde sakin olan bir seansa ani oynaklık katabilir. Japonya’daki resmi tatiller ise likiditeyi daha da azaltabilir ve aralıkları daha da sığ ve daha az güvenilir hâle getirebilir. Bölgesel takvimi kontrol etmeyen bir yatırımcı, her iki yönden de hazırlıksız yakalanabilir.
+
+Üçüncüsü aşırı işlem yapmaktır. Sakin bir piyasa daha az sayıda yüksek kaliteli fırsat sunar ve fiyat neredeyse hiç kıpırdamazken sırf bir şey yapmış olmak için sınırda işlemler açarak hareket yaratma isteği güçlüdür. Düşük oynaklıklı bir ortamda sabır ve seçicilik, işlem sıklığından genellikle daha önemlidir.
+
+## Sık sorulan sorular
+
+**Forex’te Asya seansı saat kaçta?**
+Tokyo’ya dayanan Asya seansı yaklaşık 00:00 ile 09:00 GMT arasında, yani Tokyo yerel saatiyle 09:00 ile 18:00 arasında işler. Sidney daha erken, yaklaşık 22:00 GMT’de açılır ve Tokyo’nun ilk bölümüyle çakışır. Bulunduğunuz yerdeki tam saatleri görmek için bu GMT saatlerini kendi saat diliminize çevirin.
+
+**Tokyo seansı yeni başlayanlar için uygun mu?**
+Pek çok yeni başlayan, Asya seansının daha düşük oynaklığını Londra ya da New York’un daha hızlı temposuna göre gözlemlemeyi daha kolay bulur, çünkü düşünmek için daha fazla zaman vardır ve fiyat seviyelere daha net saygı gösterme eğilimindedir. Yine de daha sakin, daha güvenli demek değildir; sığ likidite ve verilerle tetiklenen ani hareketler hâlâ gerçek bir risk taşır. Bu genel bir bilgidir, tavsiye değildir.
+
+**Asya seansında hangi pariteler öne çıkar?**
+En hareketli pariteler yen enstrümanları, yani USD/JPY, EUR/JPY ve GBP/JPY ile Sidney’in açık olmasından ve Avustralya, Yeni Zelanda ve Çin verilerinden yararlanan AUD/USD, NZD/USD ve AUD/JPY gibi Avustralya ve Yeni Zelanda doları pariteleridir.
+
+**Tokyo seansı yaz saati uygular mı?**
+Hayır. Japonya yaz saati kullanmaz, bu yüzden Tokyo seansı yıl boyunca 00:00 ile 09:00 GMT arasında kalır. Londra ve New York gibi saatlerini değiştiren şehirlerdeki seanslar GMT’ye göre yılda iki kez kayar, ancak Tokyo kaymaz.
+
+**Asya seansı neden bu kadar sakin?**
+En derin forex likiditesi Londra ve New York’tadır ve her ikisi de Asya saatlerinde kapalıdır. Faaliyetteki büyük katılımcı sayısı az olduğundan fiyatın trend oluşturacak ivmesi daha zayıftır ve Avrupa hacmi gelene kadar aralıklara yerleşme eğilimindedir.
+
+Güvenilir arka plan bilgisi için Uluslararası Ödemeler Bankası (BIS), küresel döviz işlem hacmine ilişkin kesin anketleri https://www.bis.org adresinde yayımlar; Japonya Merkez Bankası politikasını ve piyasa operasyonlarını https://www.boj.or.jp/en/ adresinde açıklar; Japan Exchange Group ise piyasa ve takvim bilgilerini https://www.jpx.co.jp/english/ adresinde sunar. Seans davranışına ilişkin daha geniş yatırımcı eğitimi, https://www.babypips.com gibi saygın kaynaklarda mevcuttur.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -1724,24 +3844,46 @@ Pour un contexte faisant autorité, la Banque des règlements internationaux pub
       en: "new-york-forex-session",
       es: "sesion-forex-de-nueva-york",
       fr: "seance-forex-de-new-york",
+      pt: "sessao-forex-de-nova-york",
+      it: "sessione-forex-di-new-york",
+      de: "forex-session-new-york",
+      tr: "new-york-forex-seansi",
     },
     title: {
       en: "The New York Forex Session: Hours, Best Pairs and Volatility",
       es: "La sesión forex de Nueva York: horario, mejores pares y volatilidad",
       fr: "La séance forex de New York : horaires et volatilité",
+      pt: "A Sessão Forex de Nova York: Horário, Melhores Pares e Volatilidade",
+      it: "La sessione forex di New York: orari, migliori coppie e volatilità",
+      de: "Die New-York-Session im Forex: Handelszeiten, beste Paare und Volatilität",
+      tr: "New York Forex Seansı: Saatler, En İyi Pariteler ve Oynaklık",
     },
     description: {
       en: "The New York forex session runs 13:00-22:00 GMT, dollar-driven and highly volatile. See the hours in your timezone, the best pairs and the London overlap.",
       es: "La sesión forex de Nueva York va de 13:00 a 22:00 GMT, impulsada por el dólar y muy volátil. Ve el horario en tu zona, los mejores pares y el solapamiento.",
       fr: "La séance forex de New York va de 13:00 à 22:00 GMT, portée par le dollar et très volatile. Horaires dans votre fuseau, meilleures paires et chevauchement.",
+      pt: "A sessão forex de Nova York vai das 13:00 às 22:00 GMT, movida pelo dólar e muito volátil. Veja o horário no seu fuso, os melhores pares e a sobreposição.",
+      it: "La sessione forex di New York va dalle 13:00 alle 22:00 GMT, guidata dal dollaro e molto volatile. Orari nel tuo fuso, coppie migliori e sovrapposizione con Londra.",
+      de: "Die New-York-Session läuft von 13:00-22:00 GMT, dollargetrieben und sehr volatil. Mit Zeiten in Ihrer Zeitzone, den besten Paaren und der London-Überschneidung.",
+      tr: "New York forex seansı 13:00-22:00 GMT arasında işler, dolar odaklı ve oldukça oynaktır. Saat diliminizdeki saatleri, pariteleri ve Londra çakışmasını görün.",
     },
     date: "2026-07-28",
-    localeDate: { fr: "2026-09-21" },
+    localeDate: {
+      fr: "2026-09-21",
+      pt: "2026-10-22",
+      tr: "2026-11-02",
+      de: "2026-11-09",
+      it: "2026-11-19",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "New York"],
       es: ["Sesiones", "Nueva York"],
       fr: ["Séances", "New York"],
+      pt: ["Sessões", "Nova York"],
+      it: ["Sessioni", "New York"],
+      de: ["Sessions", "New York"],
+      tr: ["Seanslar", "New York"],
     },
     cover: "/blog/new-york-forex-session.svg",
     body: {
@@ -1988,6 +4130,330 @@ Les majeures en dollar, EUR/USD, GBP/USD, USD/JPY et USD/CAD, sont les plus acti
 Elle ferme à 17:00 heure locale de New York, soit 22:00 GMT en hiver et 21:00 GMT pendant l’heure d’été américaine. Cette clôture marque aussi la fin de la semaine de trading chaque vendredi.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sessão forex de Nova York vai das **13:00 às 22:00 GMT** no horário padrão e é o segundo maior polo de liquidez do mercado de câmbio do mundo, atrás apenas de Londres. Ela é movida sobretudo pelo dólar americano, que está de um dos lados da grande maioria das operações globais, então os dados econômicos dos EUA e a política do Federal Reserve repercutem em todos os pares. Este guia mostra exatamente quando a sessão de Nova York abre no seu fuso horário, por que ela é tão volátil, quais pares são os mais ativos e como ela se sobrepõe a Londres para formar as horas mais movimentadas do dia.
+
+Para traders fora das Américas, Nova York é a sessão que encerra o dia global de negociação. Ela começa enquanto Londres ainda está funcionando, concentra as divulgações mais pesadas de dados dos EUA e depois vai perdendo fôlego até a próxima passagem de bastão do ritmo semanal. Entender o seu formato ajuda você a se planejar tanto para as oportunidades quanto para os riscos que ela traz.
+
+## Horário da sessão de Nova York no seu fuso horário
+
+No horário padrão, a sessão de Nova York vai das **13:00 às 22:00 GMT**, o que corresponde a **08:00 a 17:00 no horário local de Nova York**. A referência é o próprio relógio de Nova York, não o GMT, então, quando os Estados Unidos estão no horário de verão, a janela em GMT se adianta uma hora, para algo em torno de 12:00 a 21:00 GMT. Vale guardar isso: qualquer tabela fixa que mostre a sessão apenas em GMT vai estar uma hora errada durante boa parte do ano.
+
+A tabela abaixo mostra a abertura e o fechamento de Nova York em vários fusos comuns, no inverno do Hemisfério Norte, quando Nova York está no Eastern Standard Time e alinhada com os valores em GMT acima.
+
+| Sua cidade / fuso | Abertura de NY (inverno, GMT) | Fechamento de NY (inverno, GMT) |
+| --- | --- | --- |
+| Nova York (ET) | 08:00 | 17:00 |
+| Londres (Reino Unido) | 13:00 | 22:00 |
+| Frankfurt / Paris (CET) | 14:00 | 23:00 |
+| Istambul (TRT) | 16:00 | 01:00 (dia seguinte) |
+| Dubai (GST) | 17:00 | 02:00 (dia seguinte) |
+| Mumbai (IST) | 18:30 | 03:30 (dia seguinte) |
+| Singapura (SGT) | 21:00 | 06:00 (dia seguinte) |
+| Sydney (AEST) | 23:00 | 08:00 (dia seguinte) |
+
+Como Nova York e a maioria dessas cidades mudam os relógios em momentos diferentes do ano, as relações limpas acima valem na maior parte do calendário, mas ficam uma hora fora nas curtas janelas de primavera e outono em que as mudanças caem em datas diferentes. Em vez de acompanhar isso na mão, a [ferramenta de horário do mercado forex ao vivo](/pt) converte a sessão de Nova York para o seu fuso horário automaticamente e acompanha o horário de verão dos dois lados.
+
+## Por que a sessão de Nova York é tão volátil
+
+A fama de volatilidade de Nova York se resume a uma moeda: o dólar americano. O dólar é a moeda mais negociada do planeta, presente na grande maioria de todas as transações de câmbio, então qualquer coisa que o mexa mexe o mercado inteiro. E os eventos que mais o movimentam, as divulgações programadas de dados dos EUA e as decisões do banco central, caem quase todos no horário de Nova York.
+
+As divulgações de peso são conhecidas de quem acompanha o calendário. O **payroll** (relatório de emprego não agrícola), o relatório mensal de empregos dos EUA, normalmente sai às 08:30 no horário de Nova York e pode mexer forte com os pares de dólar em segundos. Dados de inflação, como o Índice de Preços ao Consumidor (CPI), chegam no mesmo horário do início da manhã. E as decisões de juros e as entrevistas coletivas do **Federal Reserve**, publicadas no calendário do próprio Fed, costumam gerar os maiores movimentos isolados do mês. Você encontra o calendário do Fed diretamente em https://www.federalreserve.gov.
+
+Dois fatores amplificam esses movimentos. Primeiro, as divulgações se concentram na manhã de Nova York, justamente quando a sessão está mais líquida porque Londres ainda está aberta. Segundo, o papel central do dólar faz com que um único número dos EUA reprecifique ao mesmo tempo os pares de euro, libra, iene e das moedas de commodities. O resultado é que a volatilidade mais intensa e rápida da semana de negociação tende a se concentrar em uma faixa estreita de horas de Nova York e depois diminuir à medida que a tarde avança e as mesas europeias fecham.
+
+## A sobreposição Londres-Nova York
+
+A janela mais movimentada de todo o dia no forex é a sobreposição entre Londres e Nova York, que vai aproximadamente das **13:00 às 17:00 GMT**. Durante essas quatro horas, os dois maiores centros financeiros do mundo estão abertos ao mesmo tempo, a liquidez está no auge, os spreads dos principais pares costumam estar no mínimo e os movimentos de preço são os mais sustentados.
+
+A sobreposição pesa tanto porque empilha o fluxo de ordens de duas regiões nas mesmas horas do relógio. Os traders europeus ainda estão em suas mesas quando os americanos chegam, e as maiores divulgações de dados dos EUA costumam cair na manhã de Nova York, bem dentro dessa janela. Essa combinação de liquidez profunda e notícias programadas é o motivo pelo qual tantos traders tratam a sobreposição como o centro do seu dia, principalmente nos pares de dólar e de euro.
+
+Quando Londres fecha, por volta das 17:00 GMT, a sessão de Nova York muda de cara. A liquidez começa a escoar, a tarde fica mais fina e a reta final até o fechamento das 22:00 GMT costuma ser o trecho mais tranquilo do dia inteiro. Tratamos essa janela em profundidade no nosso guia da [sobreposição Londres-Nova York](/pt/blog/sobreposicao-londres-nova-york).
+
+## Melhores pares de moedas durante a sessão de Nova York
+
+Como a sessão é movida pelo dólar, os pares mais ativos são os principais pares de dólar, aqueles em que a participação americana e os dados dos EUA têm o efeito mais direto.
+
+**EUR/USD** é o par mais negociado do mundo, e Nova York é uma de suas janelas mais ativas, sobretudo durante a sobreposição com Londres, quando os dois mercados de origem estão em ação. Os spreads costumam estar no mínimo aqui, e a liquidez, no máximo.
+
+**GBP/USD** segue animado durante a manhã de Nova York enquanto Londres ainda está aberta e depois se acalma quando as mesas britânicas fecham. Ele reage com força aos dados dos EUA, já que qualquer movimento do dólar aparece diretamente no par.
+
+**USD/JPY** é um clássico de Nova York. O iene é sensível às expectativas de juros dos EUA, então os comentários do Fed e os rendimentos dos títulos americanos muitas vezes empurram esse par durante o horário americano, mesmo com Tóquio fechada há horas.
+
+**USD/CAD** merece menção porque os dados do Canadá e dos EUA frequentemente saem nas mesmas manhãs, e o dólar canadense acompanha o preço do petróleo, que por sua vez é cotado em dólar. É um dos pares mais tipicamente norte-americanos.
+
+Todos esses pares têm o dólar de um dos lados, e esse é justamente o ponto. Quando o USD está no par, Nova York é a sessão em que a liquidez do mercado de origem e o fluxo de notícias desse par chegam ao pico.
+
+## Operando a sessão de Nova York: observações práticas
+
+A sessão de Nova York recompensa a atenção ao calendário mais do que quase qualquer outra. Como os maiores movimentos se concentram em torno das divulgações programadas, saber o que vai sair, e quando, explica a maior parte das oscilações bruscas do dia.
+
+A volatilidade se concentra no começo. A manhã, da abertura de Nova York até o fim da sobreposição com Londres, tem a liquidez mais profunda e os dados mais pesados, então é onde acontece a maior parte dos movimentos relevantes da sessão. A tarde, depois que Londres fecha, é mais fina e muitas vezes mais arrastada, com spreads mais largos e preços mais erráticos em volume menor.
+
+O risco das notícias funciona nos dois sentidos. Uma surpresa no payroll ou na inflação pode render um movimento limpo e rápido, ou pode virar um chicote, disparando para um lado e revertendo em minutos enquanto os traders destrincham os detalhes. Volatilidade maior significa simplesmente oscilações maiores, e uma oscilação tem a mesma chance de ir contra você quanto a seu favor. Encare tudo isso como um retrato de como a sessão costuma se comportar, não como uma orientação sobre quando ou como operar. O que você faz com isso depende do seu próprio plano, da sua tolerância ao risco e das suas circunstâncias.
+
+Para ver como Nova York se encaixa ao lado de Sydney, Tóquio e Londres, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) apresenta cada uma delas e como passam o bastão ao longo das 24 horas.
+
+## Perguntas frequentes
+
+**Que horas abre a sessão forex de Nova York?**
+Ela abre às 08:00 no horário local de Nova York, o que corresponde a 13:00 GMT no inverno do Hemisfério Norte e a 12:00 GMT durante o horário de verão dos EUA. A referência é o relógio de Nova York, então o valor em GMT muda uma hora duas vezes por ano.
+
+**Por que a sessão de Nova York é tão volátil?**
+Porque ela é movida pelo dólar americano, a moeda mais negociada, e quase todas as principais divulgações de dados dos EUA e decisões do Federal Reserve caem no horário de Nova York. Esses eventos mexem com o dólar, e o dólar mexe com o mercado inteiro.
+
+**Quando acontece a sobreposição Londres-Nova York?**
+Aproximadamente das 13:00 às 17:00 GMT no horário padrão. É a janela mais movimentada do dia de negociação, com a liquidez mais profunda e os spreads mais estreitos, porque os dois grandes centros estão abertos ao mesmo tempo.
+
+**Quais são os melhores pares na sessão de Nova York?**
+Os principais pares de dólar, EUR/USD, GBP/USD, USD/JPY e USD/CAD, são os mais ativos, já que a sessão gira em torno do dólar americano e do fluxo de notícias dos EUA.
+
+**Quando fecha a sessão de Nova York?**
+Ela fecha às 17:00 no horário local de Nova York, o que corresponde a 22:00 GMT no inverno e a 21:00 GMT durante o horário de verão dos EUA. Esse fechamento também marca o fim da semana de negociação toda sexta-feira.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `La sessione forex di New York va dalle **13:00 alle 22:00 GMT** in ora solare ed è il secondo bacino di liquidità valutaria al mondo dopo Londra. È trainata soprattutto dal dollaro statunitense, che compare su un lato della grande maggioranza delle operazioni mondiali, per cui i dati economici americani e la politica della Federal Reserve si propagano su ogni coppia. Questa guida ti spiega esattamente quando apre la sessione di New York nel tuo fuso orario, perché è così volatile, quali coppie sono più attive e come si sovrappone a Londra dando vita alle ore più intense della giornata.
+
+Per i trader al di fuori delle Americhe, New York è la sessione che chiude la giornata di trading globale. Entra in gioco mentre Londra è ancora aperta, porta con sé i dati statunitensi più pesanti e poi si assottiglia nella fase tranquilla che precede il passaggio di consegne successivo nel ritmo settimanale. Capire come è fatta ti aiuta a organizzarti sia rispetto alle opportunità sia rispetto ai rischi che comporta.
+
+## Orari della sessione di New York nel tuo fuso orario
+
+In ora solare la sessione di New York va dalle **13:00 alle 22:00 GMT**, cioè dalle **08:00 alle 17:00 ora locale di New York**. Il riferimento è l’orologio di New York, non il GMT, quindi quando gli Stati Uniti sono sull’ora legale la finestra in GMT si sposta un’ora prima, all’incirca dalle 12:00 alle 21:00 GMT. È un punto da tenere bene a mente: qualsiasi tabella statica che indichi la sessione solo in GMT sarà sfasata di un’ora per gran parte dell’anno.
+
+La tabella qui sotto mostra l’apertura e la chiusura di New York in una serie di fusi orari comuni, per l’inverno dell’emisfero boreale, quando New York è sull’Eastern Standard Time e allineata ai valori in GMT indicati sopra.
+
+| La tua città / fuso | Apertura NY (inverno, GMT) | Chiusura NY (inverno, GMT) |
+| --- | --- | --- |
+| New York (ET) | 08:00 | 17:00 |
+| Londra (UK) | 13:00 | 22:00 |
+| Francoforte / Parigi (CET) | 14:00 | 23:00 |
+| Istanbul (TRT) | 16:00 | 01:00 (giorno dopo) |
+| Dubai (GST) | 17:00 | 02:00 (giorno dopo) |
+| Mumbai (IST) | 18:30 | 03:30 (giorno dopo) |
+| Singapore (SGT) | 21:00 | 06:00 (giorno dopo) |
+| Sydney (AEST) | 23:00 | 08:00 (giorno dopo) |
+
+Poiché New York e la maggior parte di queste città cambiano l’ora in momenti diversi dell’anno, i rapporti netti indicati sopra valgono per gran parte del calendario ma slittano di un’ora durante le brevi finestre di primavera e autunno in cui i cambi d’ora cadono in date diverse. Invece di tenerne traccia a mano, lo [strumento live degli orari del forex](/it) converte automaticamente la sessione di New York nel tuo fuso orario e tiene il passo con l’ora legale da entrambe le parti.
+
+## Perché la sessione di New York è così volatile
+
+La reputazione di volatilità di New York si riduce a una sola valuta: il dollaro statunitense. Il dollaro è la valuta più scambiata al mondo, presente nella grande maggioranza di tutte le transazioni valutarie, quindi tutto ciò che lo muove muove l’intero mercato. E gli eventi che lo muovono di più, cioè i dati statunitensi in calendario e le decisioni della banca centrale, cadono quasi tutti durante l’orario di New York.
+
+I dati più pesanti sono ben noti a chiunque segua il calendario. I **non-farm payrolls**, il rapporto mensile sull’occupazione negli Stati Uniti, escono di solito alle 08:30 ora di New York e possono muovere bruscamente le coppie in dollari nel giro di pochi secondi. I dati sull’inflazione, come l’indice dei prezzi al consumo (CPI), arrivano nella stessa fascia del primo mattino. E le decisioni sui tassi della **Federal Reserve** e le relative conferenze stampa, pubblicate secondo il calendario della Fed, producono regolarmente i movimenti singoli più ampi del mese. Trovi il calendario della Fed direttamente su https://www.federalreserve.gov.
+
+Due fattori amplificano questi movimenti. Primo, i dati si concentrano nella mattinata di New York, proprio quando la sessione è al massimo della liquidità perché Londra è ancora aperta. Secondo, il ruolo centrale del dollaro fa sì che un singolo dato statunitense riprezzi in un colpo solo le coppie con euro, sterlina, yen e valute legate alle materie prime. Il risultato è che la volatilità più brusca e rapida della settimana di trading tende a concentrarsi in una stretta fascia di ore newyorkesi, per poi attenuarsi con l’avanzare del pomeriggio e la chiusura dei desk europei.
+
+## La sovrapposizione Londra-New York
+
+La finestra più intensa dell’intera giornata forex è la sovrapposizione tra Londra e New York, che va all’incirca dalle **13:00 alle 17:00 GMT**. Per quelle quattro ore i due più grandi centri finanziari del mondo sono aperti contemporaneamente, la liquidità è al massimo, gli spread sulle major sono di solito al minimo e i movimenti di prezzo sono i più duraturi.
+
+La sovrapposizione conta così tanto perché concentra i flussi di ordini di due regioni nelle stesse ore. I trader europei sono ancora alla scrivania mentre arrivano quelli americani, e i dati statunitensi più importanti tendono a cadere nella mattinata di New York, proprio dentro la finestra. Questa combinazione di liquidità profonda e notizie in calendario è il motivo per cui tanti trader considerano la sovrapposizione il cuore della propria giornata, soprattutto sulle coppie con dollaro ed euro.
+
+Quando Londra chiude, intorno alle 17:00 GMT, il carattere della sessione di New York cambia. La liquidità comincia a defluire, il pomeriggio si assottiglia e il tratto che porta alla chiusura delle 22:00 GMT è di solito il più tranquillo dell’intera giornata. Approfondiamo questa finestra nella nostra guida alla [sovrapposizione Londra-New York](/it/blog/sovrapposizione-londra-new-york).
+
+## Le migliori coppie di valute durante la sessione di New York
+
+Dato che la sessione è trainata dal dollaro, le coppie più attive sono le major in dollari, quelle su cui la partecipazione statunitense e i dati americani hanno l’effetto più diretto.
+
+**EUR/USD** è la coppia più scambiata al mondo, e New York è una delle sue finestre più attive, in particolare durante la sovrapposizione con Londra, quando entrambi i mercati di riferimento sono operativi. Qui gli spread sono di solito al minimo e la liquidità al massimo.
+
+**GBP/USD** resta vivace durante la mattinata di New York finché Londra è aperta, poi si calma quando chiudono i desk britannici. Reagisce con forza ai dati statunitensi, dato che qualsiasi movimento del dollaro si riflette direttamente sulla coppia.
+
+**USD/JPY** è un classico della sessione di New York. Lo yen è sensibile alle aspettative sui tassi d’interesse statunitensi, quindi i commenti della Fed e i rendimenti americani spesso spingono questa coppia durante l’orario americano, anche se Tokyo è chiusa da tempo.
+
+**USD/CAD** merita una menzione perché i dati canadesi e statunitensi escono spesso nelle stesse mattine, e il dollaro canadese segue il prezzo del petrolio, che a sua volta è quotato in dollari. È una delle coppie più tipicamente nordamericane.
+
+Ognuna di queste coppie ha il dollaro su un lato, ed è proprio questo il punto. Quando c’è di mezzo l’USD, New York è la sessione in cui la liquidità del mercato di riferimento e il flusso di notizie di quella coppia raggiungono il picco.
+
+## Fare trading nella sessione di New York: note pratiche
+
+La sessione di New York premia l’attenzione al calendario più di quasi tutte le altre. Poiché i movimenti più ampi si concentrano intorno ai dati in calendario, sapere cosa è previsto, e quando, spiega la maggior parte delle oscillazioni brusche della giornata.
+
+La volatilità è concentrata nella prima parte. La mattina, dall’apertura di New York fino alla sovrapposizione con Londra, offre la liquidità più profonda e i dati più pesanti, quindi è lì che avviene la maggior parte dei movimenti significativi della sessione. Il pomeriggio, dopo la chiusura di Londra, è più sottile e spesso più incerto, con spread più ampi e un andamento dei prezzi più nervoso su volumi più bassi.
+
+Il rischio legato alle notizie funziona nei due sensi. Una sorpresa sui payrolls o sull’inflazione può regalarti un movimento pulito e rapido, oppure provocare un whipsaw, con un balzo in una direzione seguito da un’inversione nel giro di pochi minuti mentre i trader analizzano i dettagli. Una volatilità più alta significa semplicemente oscillazioni più ampie, e un’oscillazione può andarti contro tanto quanto a favore. Considera tutto questo come un quadro di come tende a comportarsi la sessione, non come un’indicazione su quando o come fare trading. Cosa farne dipende dal tuo piano, dalla tua tolleranza al rischio e dalla tua situazione.
+
+Per vedere come New York si inserisce accanto a Sydney, Tokyo e Londra, la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) le analizza una per una e mostra come si passano il testimone nell’arco delle 24 ore.
+
+## Domande frequenti
+
+**A che ora apre la sessione forex di New York?**
+Apre alle 08:00 ora locale di New York, cioè alle 13:00 GMT durante l’inverno dell’emisfero boreale e alle 12:00 GMT durante l’ora legale statunitense. Il riferimento è l’orologio di New York, quindi il valore in GMT si sposta di un’ora due volte l’anno.
+
+**Perché la sessione di New York è così volatile?**
+Perché è trainata dal dollaro statunitense, la valuta più scambiata, e quasi tutti i principali dati americani e le decisioni della Federal Reserve cadono durante l’orario di New York. Questi eventi muovono il dollaro, e il dollaro muove l’intero mercato.
+
+**Quando c’è la sovrapposizione Londra-New York?**
+All’incirca dalle 13:00 alle 17:00 GMT in ora solare. È la finestra più intensa della giornata di trading, con la liquidità più profonda e gli spread più stretti, perché entrambi i grandi centri sono aperti contemporaneamente.
+
+**Quali sono le coppie migliori nella sessione di New York?**
+Le major in dollari, EUR/USD, GBP/USD, USD/JPY e USD/CAD, sono le più attive, dato che la sessione ruota intorno al dollaro statunitense e al flusso di notizie americane.
+
+**Quando chiude la sessione di New York?**
+Chiude alle 17:00 ora locale di New York, cioè alle 22:00 GMT d’inverno e alle 21:00 GMT durante l’ora legale statunitense. Ogni venerdì questa chiusura segna anche la fine della settimana di trading.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce una consulenza finanziaria.*`,
+      de: `Die New-York-Session im Forex läuft in der Normalzeit von **13:00 bis 22:00 GMT** und ist nach London der zweitgrößte Liquiditätspool im Devisenhandel weltweit. Angetrieben wird sie vor allem vom US-Dollar, der auf einer Seite der großen Mehrheit aller weltweiten Geschäfte steht. Amerikanische Konjunkturdaten und die Geldpolitik der Federal Reserve wirken sich deshalb auf jedes Paar aus. Dieser Ratgeber zeigt genau, wann die New-York-Session in Ihrer eigenen Zeitzone öffnet, warum sie so volatil ist, welche Paare am aktivsten sind und wie sie sich mit London überschneidet, sodass die geschäftigsten Stunden des Tages entstehen.
+
+Für Trader außerhalb Amerikas ist New York die Session, die den globalen Handelstag abschließt. Sie beginnt, während London noch läuft, bringt die gewichtigsten US-Datenveröffentlichungen und dünnt dann in der ruhigen Phase bis zur nächsten Übergabe im Wochenrhythmus aus. Wer ihren Verlauf kennt, kann sowohl die Chancen als auch die Risiken besser einplanen.
+
+## Handelszeiten der New-York-Session in Ihrer Zeitzone
+
+In der Normalzeit läuft die New-York-Session von **13:00 bis 22:00 GMT**, also von **08:00 bis 17:00 Uhr New Yorker Ortszeit**. Der Anker ist die New Yorker Uhr, nicht GMT. Wenn in den USA Sommerzeit gilt, verschiebt sich das GMT-Fenster daher um eine Stunde nach vorn, auf etwa 12:00 bis 21:00 GMT. Diesen Punkt sollten Sie sich merken: Jede statische Tabelle, die die Session ausschließlich in GMT angibt, liegt den größten Teil des Jahres eine Stunde daneben.
+
+Die Tabelle unten zeigt Eröffnung und Schluss in New York für eine Reihe gängiger Zonen, und zwar für den Winter der Nordhalbkugel, wenn New York auf Eastern Standard Time ist und mit den GMT-Werten oben übereinstimmt.
+
+| Ihre Stadt / Zone | NY-Eröffnung (Winter, GMT) | NY-Schluss (Winter, GMT) |
+| --- | --- | --- |
+| New York (ET) | 08:00 | 17:00 |
+| London (Großbritannien) | 13:00 | 22:00 |
+| Frankfurt / Paris (MEZ) | 14:00 | 23:00 |
+| Istanbul (TRT) | 16:00 | 01:00 (Folgetag) |
+| Dubai (GST) | 17:00 | 02:00 (Folgetag) |
+| Mumbai (IST) | 18:30 | 03:30 (Folgetag) |
+| Singapur (SGT) | 21:00 | 06:00 (Folgetag) |
+| Sydney (AEST) | 23:00 | 08:00 (Folgetag) |
+
+Weil New York und die meisten dieser Städte ihre Uhren zu unterschiedlichen Zeitpunkten im Jahr umstellen, gelten die sauberen Zusammenhänge oben für den größten Teil des Kalenders, verrutschen aber in den kurzen Zeitfenstern im Frühjahr und Herbst, in denen die Umstellungen auf verschiedene Tage fallen, um eine Stunde. Statt das von Hand nachzuverfolgen, können Sie das [Live-Tool für die Forex-Handelszeiten](/de) nutzen: Es rechnet die New-York-Session automatisch in Ihre eigene Zeitzone um und berücksichtigt die Sommerzeit auf beiden Seiten.
+
+## Warum die New-York-Session so volatil ist
+
+Der Ruf von New York als volatile Session hat mit einer einzigen Währung zu tun: dem US-Dollar. Der Dollar ist die meistgehandelte Währung der Welt und an der großen Mehrheit aller Devisengeschäfte beteiligt. Was ihn bewegt, bewegt also den ganzen Markt. Und die Ereignisse, die ihn am stärksten bewegen, nämlich die planmäßigen US-Datenveröffentlichungen und die Entscheidungen der Notenbank, fallen fast alle in die New Yorker Handelszeit.
+
+Die Schwergewichte unter den Veröffentlichungen kennt jeder, der den Kalender verfolgt. Die **Non-Farm Payrolls**, der monatliche US-Arbeitsmarktbericht, erscheinen in der Regel um 08:30 Uhr New Yorker Zeit und können Dollarpaare binnen Sekunden kräftig bewegen. Inflationsdaten wie der Verbraucherpreisindex kommen im selben frühen Zeitfenster am Morgen. Und die Zinsentscheidungen und Pressekonferenzen der **Federal Reserve**, die nach dem eigenen Zeitplan der Fed veröffentlicht werden, sorgen regelmäßig für die größten Einzelbewegungen des Monats. Den Kalender der Fed finden Sie direkt unter https://www.federalreserve.gov.
+
+Zwei Faktoren verstärken diese Bewegungen. Erstens ballen sich die Veröffentlichungen am New Yorker Vormittag, genau dann, wenn die Session am liquidesten ist, weil London noch geöffnet hat. Zweitens führt die zentrale Rolle des Dollars dazu, dass eine einzige US-Zahl Euro-, Pfund-, Yen- und Rohstoffwährungspaare auf einen Schlag neu bewertet. Das Ergebnis: Die schärfste und schnellste Volatilität der Handelswoche konzentriert sich meist auf ein schmales Band New Yorker Stunden und lässt dann nach, wenn der Nachmittag voranschreitet und die europäischen Handelsräume schließen.
+
+## Die Überschneidung von London und New York
+
+Das mit Abstand geschäftigste Zeitfenster des gesamten Forex-Tages ist die Überschneidung von London und New York, die etwa von **13:00 bis 17:00 GMT** reicht. In diesen vier Stunden sind die beiden größten Finanzplätze der Welt gleichzeitig geöffnet, die Liquidität ist am tiefsten, die Spreads bei den Hauptwährungspaaren sind meist am engsten, und die Kursbewegungen sind am nachhaltigsten.
+
+Die Überschneidung ist so wichtig, weil sie den Orderfluss zweier Regionen in dieselben Uhrzeiten packt. Die europäischen Trader sitzen noch an ihren Plätzen, wenn die amerikanischen dazukommen, und die größten US-Datenveröffentlichungen fallen meist auf den New Yorker Vormittag, also mitten in dieses Fenster. Diese Kombination aus tiefer Liquidität und planmäßigen Nachrichten ist der Grund, warum so viele Trader die Überschneidung als Kern ihres Tages betrachten, besonders bei Dollar- und Europaaren.
+
+Sobald London gegen 17:00 GMT schließt, ändert sich der Charakter der New-York-Session. Die Liquidität beginnt abzufließen, der Nachmittag dünnt aus, und die Strecke bis zum Schluss um 22:00 GMT ist meist die ruhigste Phase des ganzen Tages. Ausführlich behandeln wir dieses Zeitfenster in unserem Ratgeber zur [Überschneidung von London und New York](/de/blog/ueberschneidung-london-new-york).
+
+## Die besten Währungspaare in der New-York-Session
+
+Da die Session vom Dollar getrieben ist, sind die aktivsten Paare die Dollar-Majors, also jene, auf die die US-Beteiligung und die US-Daten den direktesten Einfluss haben.
+
+**EUR/USD** ist das meistgehandelte Paar der Welt, und New York gehört zu seinen aktivsten Zeitfenstern, vor allem während der Überschneidung mit London, wenn beide Heimatmärkte im Geschehen sind. Die Spreads sind hier meist am engsten und die Liquidität am tiefsten.
+
+**GBP/USD** bleibt am New Yorker Vormittag lebhaft, solange London noch geöffnet ist, und beruhigt sich dann, wenn die britischen Handelsräume schließen. Das Paar reagiert stark auf US-Daten, da sich jede Dollarbewegung direkt darin niederschlägt.
+
+**USD/JPY** ist ein klassischer Kandidat für Bewegung in New York. Der Yen reagiert empfindlich auf die Zinserwartungen in den USA, sodass Kommentare der Fed und US-Renditen dieses Paar während der amerikanischen Handelszeit oft antreiben, obwohl Tokio längst geschlossen ist.
+
+**USD/CAD** verdient Erwähnung, weil kanadische und US-amerikanische Daten häufig am selben Vormittag erscheinen und der kanadische Dollar dem Ölpreis folgt, der seinerseits in Dollar notiert. Es ist eines der ausgeprägt nordamerikanischen Paare.
+
+Jedes dieser Paare hat den Dollar auf einer Seite, und genau darum geht es. Wenn der USD beteiligt ist, ist New York die Session, in der die Liquidität am Heimatmarkt und der Nachrichtenfluss des Paares ihren Höhepunkt erreichen.
+
+## Handel in der New-York-Session: praktische Hinweise
+
+Die New-York-Session belohnt den Blick in den Kalender mehr als fast jede andere. Weil sich die größten Bewegungen um planmäßige Veröffentlichungen ballen, erklärt das Wissen darüber, was wann ansteht, die meisten heftigen Ausschläge des Tages.
+
+Die Volatilität ist auf den Anfang konzentriert. Der Vormittag, von der New Yorker Eröffnung bis zum Ende der Überschneidung mit London, bringt die tiefste Liquidität und die gewichtigsten Daten, und dort findet der Großteil der relevanten Bewegungen der Session statt. Der Nachmittag nach dem Londoner Schluss ist dünner und oft eher richtungslos, mit breiteren Spreads und unruhigeren Kursbewegungen bei geringerem Volumen.
+
+Nachrichtenrisiko wirkt in beide Richtungen. Eine Überraschung bei den Payrolls oder der Inflation kann Ihnen eine saubere, schnelle Bewegung bescheren, oder der Kurs schlägt erst in die eine Richtung aus und dreht binnen Minuten wieder, während die Trader die Details zerpflücken. Größere Volatilität bedeutet schlicht größere Ausschläge, und ein Ausschlag kann genauso gut gegen Sie laufen wie für Sie. Verstehen Sie all das als Bild davon, wie sich die Session typischerweise verhält, nicht als Hinweis darauf, wann oder wie Sie handeln sollten. Was Sie daraus machen, hängt von Ihrem eigenen Plan, Ihrer Risikobereitschaft und Ihren persönlichen Umständen ab.
+
+Wie sich New York neben Sydney, Tokio und London einordnet, zeigt unser Ratgeber [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert), der jede Session durchgeht und erklärt, wie sie sich rund um die Uhr gegenseitig ablösen.
+
+## Häufig gestellte Fragen
+
+**Wann öffnet die New-York-Session im Forex?**
+Sie öffnet um 08:00 Uhr New Yorker Ortszeit, das ist im Winter der Nordhalbkugel 13:00 GMT und während der US-Sommerzeit 12:00 GMT. Der Anker ist die New Yorker Uhr, deshalb verschiebt sich der GMT-Wert zweimal im Jahr um eine Stunde.
+
+**Warum ist die New-York-Session so volatil?**
+Weil sie vom US-Dollar getrieben wird, der meistgehandelten Währung, und fast alle wichtigen US-Datenveröffentlichungen und Entscheidungen der Federal Reserve in die New Yorker Handelszeit fallen. Diese Ereignisse bewegen den Dollar, und der Dollar bewegt den ganzen Markt.
+
+**Wann ist die Überschneidung von London und New York?**
+In der Normalzeit etwa von 13:00 bis 17:00 GMT. Es ist das geschäftigste Zeitfenster des Handelstages mit der tiefsten Liquidität und den engsten Spreads, weil beide großen Zentren gleichzeitig geöffnet sind.
+
+**Welche Paare eignen sich in der New-York-Session am besten?**
+Die Dollar-Majors EUR/USD, GBP/USD, USD/JPY und USD/CAD sind am aktivsten, da die Session um den US-Dollar und den US-Nachrichtenfluss kreist.
+
+**Wann schließt die New-York-Session?**
+Sie schließt um 17:00 Uhr New Yorker Ortszeit, das ist im Winter 22:00 GMT und während der US-Sommerzeit 21:00 GMT. Dieser Schluss markiert zugleich jeden Freitag das Ende der Handelswoche.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `New York forex seansı standart saatte **13:00 ile 22:00 GMT arasında** işler ve Londra’dan sonra dünyanın en büyük ikinci döviz işlem likiditesi havuzudur. Seansı her şeyden önce ABD doları yönlendirir; dolar küresel işlemlerin büyük çoğunluğunun bir tarafında yer aldığı için ABD ekonomik verileri ve Fed politikası her pariteye yayılır. Bu rehber, New York seansının kendi saat diliminizde tam olarak ne zaman açıldığını, neden bu kadar oynak olduğunu, hangi paritelerin en hareketli olduğunu ve günün en yoğun saatlerini oluşturmak için Londra ile nasıl çakıştığını ele alıyor.
+
+Amerika kıtası dışındaki yatırımcılar için New York, küresel işlem gününü kapatan seanstır. Londra hâlâ açıkken devreye girer, ABD’nin en ağır veri açıklamalarını taşır ve ardından haftalık ritmin bir sonraki devir teslimine doğru sakin bir döneme incelir. Seansın yapısını anlamak, hem getirdiği fırsata hem de riske göre plan yapmanıza yardımcı olur.
+
+## Saat diliminize göre New York seansı saatleri
+
+Standart saatte New York seansı **13:00 ile 22:00 GMT arasında**, yani **New York yerel saatiyle 08:00 ile 17:00 arasında** işler. Sabit nokta GMT değil, New York’un kendi saatidir; dolayısıyla ABD yaz saatine geçtiğinde GMT penceresi bir saat öne kayarak yaklaşık 12:00 ile 21:00 GMT arasına gelir. Bu, akılda tutulmaya değer bir noktadır: seansı yalnızca GMT ile veren her sabit tablo, yılın büyük bölümünde bir saat hatalı olacaktır.
+
+Aşağıdaki tablo, New York’un Doğu Standart Saati’nde (EST) olduğu ve yukarıdaki GMT rakamlarıyla uyumlu olduğu Kuzey Yarımküre kışı için New York açılışını ve kapanışını bir dizi yaygın saat diliminde gösteriyor.
+
+| Şehriniz / saat diliminiz | NY açılışı (kış, GMT) | NY kapanışı (kış, GMT) |
+| --- | --- | --- |
+| New York (ET) | 08:00 | 17:00 |
+| Londra (İngiltere) | 13:00 | 22:00 |
+| Frankfurt / Paris (CET) | 14:00 | 23:00 |
+| İstanbul (TRT) | 16:00 | 01:00 (ertesi gün) |
+| Dubai (GST) | 17:00 | 02:00 (ertesi gün) |
+| Mumbai (IST) | 18:30 | 03:30 (ertesi gün) |
+| Singapur (SGT) | 21:00 | 06:00 (ertesi gün) |
+| Sidney (AEST) | 23:00 | 08:00 (ertesi gün) |
+
+Hem New York hem de bu şehirlerin çoğu saatlerini yılın farklı zamanlarında değiştirdiği için yukarıdaki düzgün ilişkiler takvimin büyük bölümünde geçerlidir, ancak geçişlerin farklı tarihlere denk geldiği ilkbahar ve sonbahardaki kısa dönemlerde bir saat kayar. Bunu elle takip etmek yerine [canlı forex piyasa saatleri aracı](/tr) New York seansını otomatik olarak kendi saat diliminize çevirir ve her iki taraftaki yaz saati değişikliklerine ayak uydurur.
+
+## New York seansı neden bu kadar oynak
+
+New York’un oynaklık konusundaki ünü tek bir para birimine dayanır: ABD doları. Dolar dünyada en çok işlem gören para birimidir ve tüm döviz işlemlerinin büyük çoğunluğunda yer alır; dolayısıyla doları hareket ettiren her şey bütün piyasayı hareket ettirir. Doları en çok hareket ettiren olaylar, yani planlanmış ABD veri açıklamaları ve merkez bankası kararları, neredeyse tamamen New York saatlerine denk gelir.
+
+Ağır siklet veriler, takvimi izleyen herkesin bildiği verilerdir. Aylık ABD istihdam raporu olan **tarım dışı istihdam** (non-farm payrolls) genellikle New York saatiyle 08:30’da açıklanır ve dolar paritelerini saniyeler içinde sert biçimde hareket ettirebilir. Tüketici Fiyat Endeksi gibi enflasyon verileri de aynı sabah erken saatlerindeki dilimde gelir. **Federal Reserve** (Fed) faiz kararları ve basın toplantıları da Fed’in kendi takvimine göre yayımlanır ve düzenli olarak ayın en büyük tekil hareketlerini üretir. Fed’in takvimini doğrudan https://www.federalreserve.gov adresinde bulabilirsiniz.
+
+Bu hareketleri iki şey büyütür. Birincisi, veriler New York sabahında, yani Londra hâlâ açık olduğu için seansın en likit olduğu anda yoğunlaşır. İkincisi, doların merkezi rolü sayesinde tek bir ABD verisi euro, sterlin, yen ve emtia para birimi paritelerini aynı anda yeniden fiyatlar. Sonuç olarak işlem haftasının en sert ve en hızlı oynaklığı, New York saatlerinin dar bir diliminde toplanma eğilimindedir; ardından öğleden sonra ilerleyip Avrupa masaları kapandıkça söner.
+
+## Londra-New York çakışması
+
+Bütün forex gününün en yoğun penceresi, yaklaşık **13:00 ile 17:00 GMT arasında** süren Londra ile New York çakışmasıdır. Bu dört saat boyunca dünyanın en büyük iki finans merkezi aynı anda açıktır, likidite en derin seviyesindedir, majör paritelerdeki spread’ler genellikle en dar hâlindedir ve fiyat hareketleri en kalıcı hâlini alır.
+
+Çakışmanın bu kadar önemli olmasının nedeni, iki bölgenin emir akışını aynı saatlere yığmasıdır. Amerikalı yatırımcılar gelirken Avrupalı yatırımcılar hâlâ masalarının başındadır ve en büyük ABD veri açıklamaları genellikle New York sabahına, yani tam bu pencerenin içine düşer. Derin likidite ile planlanmış haberlerin bu birleşimi, pek çok yatırımcının özellikle dolar ve euro pariteleri için çakışmayı günlerinin merkezine koymasının nedenidir.
+
+Londra 17:00 GMT civarında kapandığında New York seansının karakteri değişir. Likidite azalmaya başlar, öğleden sonra incelir ve 22:00 GMT kapanışına giden süreç genellikle bütün günün en sakin dilimidir. Bu pencereyi [Londra-New York çakışması](/tr/blog/londra-new-york-cakismasi) rehberimizde ayrıntılı olarak ele alıyoruz.
+
+## New York seansında öne çıkan pariteler
+
+Seans dolar odaklı olduğu için en hareketli pariteler, ABD katılımının ve ABD verilerinin en doğrudan etkiye sahip olduğu dolar majörleridir.
+
+**EUR/USD** dünyada en çok işlem gören paritedir ve New York, özellikle her iki iç piyasanın da devrede olduğu Londra çakışması sırasında, onun en aktif pencerelerinden biridir. Spread’ler burada genellikle en dar, likidite en derin hâlindedir.
+
+**GBP/USD**, Londra hâlâ açıkken New York sabahı boyunca canlılığını korur, ardından İngiltere masaları kapandıkça sakinleşir. Herhangi bir dolar hareketi pariteye doğrudan yansıdığı için ABD verilerine güçlü tepki verir.
+
+**USD/JPY** klasik bir New York paritesidir. Yen, ABD faiz beklentilerine duyarlıdır; bu yüzden Tokyo çoktan kapanmış olsa bile Fed açıklamaları ve ABD tahvil getirileri bu pariteyi çoğu zaman Amerikan saatlerinde hareket ettirir.
+
+**USD/CAD** de anılmayı hak ediyor, çünkü Kanada ve ABD verileri sık sık aynı sabahlara denk gelir ve Kanada doları, kendisi de dolar cinsinden fiyatlanan petrol fiyatlarını takip eder. En belirgin biçimde Kuzey Amerikalı paritelerden biridir.
+
+Bu paritelerin her birinin bir tarafında dolar vardır ve aslında bütün mesele de budur. USD işin içindeyse, o paritenin iç piyasa likiditesinin ve haber akışının zirveye ulaştığı seans New York’tur.
+
+## New York seansında işlem: pratik notlar
+
+New York seansı, takvime hâkim olmayı neredeyse diğer tüm seanslardan daha fazla ödüllendirir. En büyük hareketler planlanmış açıklamalar etrafında toplandığı için neyin ne zaman açıklanacağını bilmek, günün sert dalgalanmalarının çoğunu açıklar.
+
+Oynaklık günün başında yoğunlaşır. New York açılışından Londra çakışmasının sonuna kadar süren sabah saatleri en derin likiditeyi ve en ağır veri akışını taşır; dolayısıyla seansın anlamlı hareketlerinin çoğu burada gerçekleşir. Londra kapandıktan sonraki öğleden sonra ise daha sığ ve çoğu zaman daha yönsüzdür; düşük hacimle birlikte daha geniş spread’ler ve daha dalgalı fiyat hareketleri görülür.
+
+Haber riski iki yönlüdür. Beklenmedik bir istihdam ya da enflasyon verisi size temiz ve hızlı bir hareket sunabilir; ya da yatırımcılar ayrıntıları didiklerken fiyat bir yöne sıçrayıp birkaç dakika içinde geri dönerek sizi iki yönden de vurabilir. Daha yüksek oynaklık yalnızca daha büyük dalgalanmalar demektir ve bir dalgalanmanın sizin aleyhinize gitme olasılığı lehinize gitme olasılığı kadardır. Bütün bunları seansın genellikle nasıl davrandığına dair bir tablo olarak görün, ne zaman ya da nasıl işlem yapacağınıza dair bir yönlendirme olarak değil. Bununla ne yapacağınız kendi planınıza, risk toleransınıza ve koşullarınıza bağlıdır.
+
+New York’un Sidney, Tokyo ve Londra ile nasıl yan yana durduğunu görmek için [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) her birini ve gün boyunca birbirine nasıl devrettiklerini adım adım anlatıyor.
+
+## Sık sorulan sorular
+
+**New York forex seansı saat kaçta açılır?**
+New York yerel saatiyle 08:00’de açılır; bu Kuzey Yarımküre kışında 13:00 GMT, ABD yaz saati döneminde ise 12:00 GMT’dir. Sabit nokta New York’un saati olduğu için GMT karşılığı yılda iki kez bir saat kayar.
+
+**New York seansı neden bu kadar oynak?**
+Çünkü seansı dünyada en çok işlem gören para birimi olan ABD doları yönlendirir ve büyük ABD veri açıklamalarının ve Fed kararlarının neredeyse tamamı New York saatlerine denk gelir. Bu olaylar doları, dolar da bütün piyasayı hareket ettirir.
+
+**Londra-New York çakışması ne zaman?**
+Standart saatte yaklaşık 13:00 ile 17:00 GMT arasında. Her iki büyük merkez aynı anda açık olduğu için en derin likiditenin ve en dar spread’lerin görüldüğü, işlem gününün en yoğun penceresidir.
+
+**New York seansında hangi pariteler öne çıkar?**
+Seans ABD doları ve ABD haber akışı etrafında döndüğü için en hareketli pariteler dolar majörleri, yani EUR/USD, GBP/USD, USD/JPY ve USD/CAD’dir.
+
+**New York seansı ne zaman kapanır?**
+New York yerel saatiyle 17:00’de kapanır; bu kışın 22:00 GMT, ABD yaz saati döneminde ise 21:00 GMT’dir. Bu kapanış aynı zamanda her cuma işlem haftasının sonunu da işaret eder.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -1995,24 +4461,46 @@ Elle ferme à 17:00 heure locale de New York, soit 22:00 GMT en hiver et 21:00 G
       en: "london-new-york-overlap",
       es: "solapamiento-londres-nueva-york",
       fr: "chevauchement-londres-new-york",
+      pt: "sobreposicao-londres-nova-york",
+      it: "sovrapposizione-londra-new-york",
+      de: "ueberschneidung-london-new-york",
+      tr: "londra-new-york-cakismasi",
     },
     title: {
       en: "The London-New York Overlap: The Busiest Hours in Forex",
       es: "El solapamiento Londres-Nueva York: las horas más movidas del forex",
       fr: "Chevauchement Londres-New York : horaires et paires clés",
+      pt: "A Sobreposição Londres-Nova York: As Horas Mais Movimentadas do Forex",
+      it: "La sovrapposizione Londra-New York: le ore più intense del forex",
+      de: "Die Überschneidung London-New York: Die aktivsten Stunden im Forex",
+      tr: "Londra-New York Çakışması: Forex’in En Yoğun Saatleri",
     },
     description: {
       en: "The London-New York overlap runs 13:00-17:00 GMT, when both centres trade at once. See it in your timezone, why liquidity peaks and how spreads tighten.",
       es: "El solapamiento Londres-Nueva York va de 13:00 a 17:00 GMT, con ambos centros a la vez. Ve el horario en tu zona, por qué la liquidez y los spreads mejoran.",
       fr: "Le chevauchement Londres-New York va de 13:00 à 17:00 GMT, les heures les plus liquides du forex. Horaires dans votre fuseau, spreads et paires actives.",
+      pt: "A sobreposição Londres-Nova York vai das 13:00 às 17:00 GMT, com os dois centros abertos. Veja no seu fuso, por que a liquidez atinge o pico e os spreads caem.",
+      it: "La sovrapposizione Londra-New York va dalle 13:00 alle 17:00 GMT, con entrambe le piazze aperte. Vedila nel tuo fuso, scopri perché la liquidità è al top.",
+      de: "Die Überschneidung London-New York läuft von 13:00-17:00 GMT, wenn beide Zentren handeln. So sehen Sie sie in Ihrer Zeitzone, plus Liquidität und Spreads.",
+      tr: "Londra-New York çakışması, iki merkezin aynı anda işlem gördüğü 13:00-17:00 GMT arasıdır. Kendi saatinizde görün, likidite ve spreadlerin nedenini öğrenin.",
     },
     date: "2026-07-29",
-    localeDate: { fr: "2026-09-10" },
+    localeDate: {
+      fr: "2026-09-10",
+      pt: "2026-10-12",
+      tr: "2026-10-22",
+      de: "2026-11-01",
+      it: "2026-11-11",
+    },
     authorSlug: "author",
     tags: {
       en: ["Overlap", "Strategy"],
       es: ["Solapamiento", "Estrategia"],
       fr: ["Chevauchements", "Séances"],
+      pt: ["Sobreposição", "Estratégia"],
+      it: ["Sovrapposizione", "Strategia"],
+      de: ["Überschneidung", "Strategie"],
+      tr: ["Seans Çakışması", "Strateji"],
     },
     cover: "/blog/london-new-york-overlap.svg",
     body: {
@@ -2259,6 +4747,330 @@ Les majeures en dollar et les grands croisements en euro et en livre, en particu
 C’est la partie la plus liquide de la journée, donc des spreads serrés, mais aussi la plus dictée par l’actualité, donc des mouvements rapides. Ce mélange peut être plus difficile à gérer, pas plus facile. Il s’agit d’une information générale et non d’un conseil sur ce qui convient à votre situation.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sobreposição Londres-Nova York vai das **13:00 às 17:00 GMT** em horário padrão, as quatro horas em que os dois maiores centros de forex do mundo estão abertos ao mesmo tempo. É a janela mais movimentada de todo o dia de negociação: a liquidez está no ponto mais profundo, os spreads dos principais pares costumam estar no nível mais estreito e os movimentos de preço são os mais consistentes. Este guia explica exatamente quando a sobreposição acontece no seu fuso horário, por que ela concentra tanta atividade e o que isso significa na prática.
+
+Se você só tem algumas horas por dia para acompanhar o mercado, estas são as horas que a maioria dos traders indica. O fluxo de ordens de duas regiões se soma, as divulgações mais pesadas de dados dos EUA caem bem dentro da janela, e a liquidez profunda que Londres traz encontra a volatilidade que Nova York traz. Entender essa sobreposição é quase entender o formato do dia inteiro no forex.
+
+## Quando acontece a sobreposição Londres-Nova York
+
+Em horário padrão, a sobreposição vai das **13:00 às 17:00 GMT**. É o trecho depois que Nova York abre, às 13:00 GMT, e antes que Londres feche, às 17:00 GMT, a única parte do dia em que os dois centros estão ativos juntos. Como as duas cidades ajustam os relógios para o horário de verão, a janela exata em GMT pode mudar em uma hora em parte do ano, mas a sobreposição de quatro horas em si se mantém, porque Londres e Nova York mudam os relógios mais ou menos nas mesmas estações.
+
+Veja como a sobreposição fica em vários fusos comuns, considerando o inverno do hemisfério norte, quando os dois centros estão em horário padrão.
+
+| Sua cidade / fuso | Início da sobreposição | Fim da sobreposição |
+| --- | --- | --- |
+| Londres (Reino Unido) | 13:00 | 17:00 |
+| Nova York (ET) | 08:00 | 12:00 |
+| Frankfurt / Paris (CET) | 14:00 | 18:00 |
+| Istambul (TRT) | 16:00 | 20:00 |
+| Dubai (GST) | 17:00 | 21:00 |
+| Mumbai (IST) | 18:30 | 22:30 |
+| Singapura (SGT) | 21:00 | 01:00 (dia seguinte) |
+| Sydney (AEST) | 23:00 | 03:00 (dia seguinte) |
+
+Em vez de converter esses horários na mão e ficar na dúvida sobre as mudanças de horário de verão, a [ferramenta de horário do mercado forex ao vivo](/pt) mostra a sobreposição no seu fuso horário em tempo real e se ajusta automaticamente quando os relógios mudam. Para um panorama mais amplo de cada sessão em diferentes fusos, veja nosso guia de [horário do forex por fuso horário](/pt/blog/horario-do-forex-por-fuso-horario).
+
+## Por que a liquidez atinge o pico durante a sobreposição
+
+A sobreposição concentra atividade por um motivo estrutural simples: ela empilha o dia útil de duas regiões nas mesmas horas do relógio. Londres é o maior centro de câmbio do mundo e Nova York é o segundo maior, então, quando os dois estão abertos ao mesmo tempo, os dois maiores reservatórios de liquidez do planeta estão ativos juntos.
+
+O tamanho do domínio de Londres é medido, não é lenda. O **BIS Triennial Central Bank Survey**, pesquisa trienal conduzida pelo Banco de Compensações Internacionais (BIS), mostra de forma consistente o Reino Unido com a maior fatia individual do volume global de câmbio, e os Estados Unidos em segundo lugar. Você pode consultar a pesquisa diretamente em https://www.bis.org/statistics/rpfx22.htm. Quando esses dois centros se sobrepõem, uma fração muito grande de toda a negociação diária de moedas acontece na mesma janela de quatro horas.
+
+Além da escala, há um efeito de horário. As principais divulgações econômicas dos EUA, o relatório de emprego (non-farm payrolls), os dados de inflação e as declarações do Federal Reserve, costumam sair na manhã de Nova York, que cai dentro da sobreposição. Assim, a janela combina a liquidez mais profunda do dia com os momentos mais propensos a mexer com o mercado. É por isso que o volume atinge o pico aqui e por isso que a sobreposição, e não a abertura de qualquer sessão isolada, é o verdadeiro centro de gravidade do dia de negociação.
+
+## O que spreads mais estreitos e liquidez mais profunda significam
+
+Liquidez profunda não é uma abstração; ela tem efeitos concretos que você vê na tela durante a sobreposição.
+
+O mais visível são os **spreads mais estreitos**. O spread é a diferença entre o preço pelo qual você consegue comprar e o preço pelo qual consegue vender, e ele diminui quando há mais participantes dispostos a cotar os dois lados do mercado. Durante a sobreposição, com bancos, fundos e mesas corporativas de duas regiões em atividade, os principais pares costumam negociar com os spreads mais estreitos do dia. Isso reduz o custo de entrar e sair de uma posição.
+
+O segundo efeito é a **profundidade**. Profundidade é quanto se consegue negociar sem mexer muito no preço. Quando o mercado é profundo, uma ordem de tamanho normal é absorvida sem atrito; quando está raso, a mesma ordem pode empurrar o preço mais do que o esperado. A sobreposição é a parte mais profunda do dia, então a execução tende a ser mais limpa e o slippage menor do que nas horas mais calmas.
+
+O terceiro é o **movimento sustentado**. Com o fluxo de duas regiões somado, as tendências que se formam durante a sobreposição muitas vezes têm participação suficiente por trás para seguir adiante, em vez de perder força com volume fraco. É uma tendência geral, não uma garantia, e a liquidez mais profunda pode coincidir com volatilidade brusca provocada por notícias, mas é a combinação de spreads estreitos e profundidade real que faz essa janela se destacar.
+
+## Quais pares mais se movimentam na sobreposição
+
+A sobreposição favorece os pares cujos mercados de origem ficam em Londres e Nova York, o que na prática significa os pares principais com dólar e os grandes cruzamentos com euro e libra.
+
+O **EUR/USD** é a peça central natural. É o par mais negociado do mundo e, durante a sobreposição, tanto o mercado de origem europeu do euro quanto o americano do dólar estão a todo vapor, então ele costuma apresentar os spreads mais estreitos e a liquidez mais profunda de qualquer par.
+
+O **GBP/USD** também é muito ativo, combinando a liquidez do Reino Unido, que ainda está em funcionamento, com o fluxo dos EUA, que acabou de chegar. Ele reage com força aos dados americanos divulgados dentro da janela.
+
+O **USD/JPY** se movimenta com os juros dos títulos americanos e as expectativas sobre o Fed, dois temas em foco durante a manhã de Nova York, então é um par que costuma se mexer na sobreposição mesmo com Tóquio fechada. Pares com dólar como **USD/CAD** e **USD/CHF** também têm aqui suas horas mais ativas.
+
+No fim, a configuração é sempre a mesma: o dólar de um lado e uma grande moeda europeia do outro, justamente os pares cujos dois mercados de origem estão negociando durante essas quatro horas. Se você quer conhecer as sessões que alimentam a sobreposição, falamos delas nos nossos guias sobre a [abertura da sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres) e a [sessão de Nova York](/pt/blog/sessao-forex-de-nova-york).
+
+## Como a sobreposição funciona na prática
+
+A sobreposição é onde a oportunidade e o risco estão no ponto mais alto, e vale encarar os dois com clareza.
+
+Do lado da oportunidade, os spreads estreitos e a liquidez profunda significam custos de transação menores e execução mais limpa do que em qualquer outro horário do dia. Os movimentos tendem a ser mais sustentados, o que alguns traders acham mais fácil de trabalhar do que as horas mais irregulares de baixa liquidez. Para quem só consegue acompanhar o mercado por um período limitado, a sobreposição concentra o máximo de atividade no menor número de horas.
+
+O outro lado é o risco. Esta também é a janela em que as notícias agendadas dos EUA têm mais chance de sair, e notícias movem o mercado rápido em qualquer direção. Liquidez mais profunda não protege você de um movimento brusco; uma posição pode virar contra você tão rápido quanto anda a seu favor. Então encare a sobreposição pelo que ela é, as horas mais movimentadas e líquidas do dia, e deixe que seu próprio plano, sua tolerância ao risco e suas circunstâncias decidam se esse movimento todo é um lugar onde você quer estar.
+
+Para ver como a sobreposição se encaixa no ciclo completo de 24 horas, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) percorre cada sessão e mostra como elas passam o bastão ao redor do mundo.
+
+## Perguntas frequentes
+
+**Que horas é a sobreposição Londres-Nova York?**
+Em horário padrão, ela vai das 13:00 às 17:00 GMT, as quatro horas depois que Nova York abre e antes que Londres feche. No horário local de Nova York, isso corresponde a 08:00 às 12:00. A janela pode mudar em uma hora em termos de GMT durante parte do ano, porque as duas cidades adotam horário de verão.
+
+**Por que a sobreposição é o horário mais movimentado para operar?**
+Porque os dois maiores centros de câmbio do mundo, Londres e Nova York, estão abertos ao mesmo tempo, então os dois maiores reservatórios de liquidez se somam. As maiores divulgações de dados dos EUA também saem dentro da janela, acrescentando volatilidade a um volume que já está no pico.
+
+**Os spreads ficam mais estreitos durante a sobreposição?**
+Sim, normalmente. Com participantes de duas regiões cotando ao mesmo tempo, os principais pares costumam negociar com os spreads mais estreitos do dia, o que reduz o custo de entrar e sair.
+
+**Quais pares são mais ativos na sobreposição?**
+Os pares principais com dólar e os grandes cruzamentos com euro e libra, especialmente EUR/USD, GBP/USD e USD/JPY, já que são os pares cujos mercados de origem estão abertos durante a janela.
+
+**A sobreposição é boa para iniciantes?**
+É a parte mais líquida do dia, o que significa spreads estreitos, mas também a mais movida por notícias, o que significa movimentos rápidos. Essa combinação pode ser mais difícil de administrar, não mais fácil. Esta é uma informação geral, não uma recomendação sobre se ela se encaixa na sua situação.
+
+*Este artigo tem caráter apenas informativo e não constitui recomendação financeira.*`,
+      it: `La sovrapposizione Londra-New York va dalle **13:00 alle 17:00 GMT** in ora solare: sono le quattro ore in cui i due maggiori centri forex del mondo sono aperti contemporaneamente. È la fascia più intensa dell’intera giornata di trading: la liquidità è al massimo, gli spread sulle coppie principali sono di solito ai minimi e i movimenti di prezzo sono i più sostenuti. Questa guida spiega esattamente quando cade la sovrapposizione nel tuo fuso orario, perché concentra così tanta attività e cosa significa nella pratica.
+
+Se hai solo un paio d’ore al giorno da dedicare al mercato, queste sono le ore che la maggior parte dei trader indica. Gli ordini di due regioni si sommano, i dati americani più pesanti escono proprio dentro questa fascia, e la liquidità profonda portata da Londra incontra la volatilità portata da New York. Capire questa sovrapposizione significa quasi capire la forma dell’intera giornata forex.
+
+## Quando avviene la sovrapposizione Londra-New York
+
+In ora solare la sovrapposizione va dalle **13:00 alle 17:00 GMT**. È il tratto che segue l’apertura di New York alle 13:00 GMT e precede la chiusura di Londra alle 17:00 GMT, l’unica parte della giornata in cui entrambe le piazze sono attive insieme. Poiché entrambe le città spostano gli orologi per l’ora legale, la fascia GMT esatta può spostarsi di un’ora in alcuni periodi dell’anno, ma la sovrapposizione di quattro ore resta intatta, perché Londra e New York cambiano orario all’incirca nelle stesse stagioni.
+
+Ecco come si traduce la sovrapposizione in una serie di fusi comuni, nel caso dell’inverno dell’emisfero nord, quando entrambe le piazze sono in ora solare.
+
+| La tua città / fuso | Inizio sovrapposizione | Fine sovrapposizione |
+| --- | --- | --- |
+| Londra (Regno Unito) | 13:00 | 17:00 |
+| New York (ET) | 08:00 | 12:00 |
+| Francoforte / Parigi (CET) | 14:00 | 18:00 |
+| Istanbul (TRT) | 16:00 | 20:00 |
+| Dubai (GST) | 17:00 | 21:00 |
+| Mumbai (IST) | 18:30 | 22:30 |
+| Singapore (SGT) | 21:00 | 01:00 (giorno dopo) |
+| Sydney (AEST) | 23:00 | 03:00 (giorno dopo) |
+
+Invece di convertire questi orari a mano e dubitare dei cambi dell’ora legale, lo [strumento live sugli orari del mercato forex](/it) mostra la sovrapposizione nel tuo fuso orario in tempo reale e si adatta automaticamente quando cambia l’ora. Per un quadro più ampio di tutte le sessioni nei vari fusi, leggi la nostra guida agli [orari del forex per fuso orario](/it/blog/orari-del-forex-per-fuso-orario).
+
+## Perché la liquidità tocca il massimo durante la sovrapposizione
+
+La sovrapposizione concentra l’attività per una semplice ragione strutturale: impila le giornate lavorative di due regioni nelle stesse ore. Londra è il più grande centro di negoziazione valutaria al mondo e New York il secondo, quindi quando sono aperte insieme sono attivi in contemporanea i due bacini di liquidità più profondi del pianeta.
+
+Il peso di Londra è un dato misurato, non una leggenda. La **BIS Triennial Central Bank Survey**, condotta dalla Banca dei Regolamenti Internazionali, mostra regolarmente che il Regno Unito gestisce da solo la quota più ampia del turnover FX globale, con gli Stati Uniti al secondo posto. Puoi consultare l’indagine direttamente su https://www.bis.org/statistics/rpfx22.htm. Quando questi due centri si sovrappongono, una parte molto ampia di tutti gli scambi valutari giornalieri avviene nella stessa fascia di quattro ore.
+
+Oltre alla dimensione c’è un effetto legato ai tempi. I principali dati macroeconomici americani, i non-farm payrolls, i dati sull’inflazione e le dichiarazioni della Federal Reserve, tendono a uscire nella mattinata di New York, che cade proprio dentro la sovrapposizione. La fascia unisce quindi la liquidità strutturale più profonda della giornata ai momenti con più probabilità di muovere il mercato. Ecco perché i volumi raggiungono qui il loro picco e perché il vero baricentro della giornata di trading è la sovrapposizione, non l’apertura di una singola sessione.
+
+## Cosa significano spread più stretti e liquidità più profonda
+
+La liquidità profonda non è un’astrazione: ha effetti concreti che durante la sovrapposizione puoi vedere sullo schermo.
+
+Il più evidente sono gli **spread più stretti**. Lo spread è la differenza tra il prezzo a cui puoi comprare e quello a cui puoi vendere, e si restringe quando più operatori sono disposti a quotare entrambi i lati del mercato. Durante la sovrapposizione, con banche, fondi e desk aziendali di due regioni tutti attivi, le coppie principali vengono scambiate di solito con gli spread più bassi della giornata. Questo riduce il costo per aprire e chiudere una posizione.
+
+Il secondo effetto è la **profondità**. La profondità indica quanto si può scambiare senza muovere troppo il prezzo. Quando il mercato è profondo, un ordine di dimensioni normali viene assorbito senza scossoni; quando è sottile, lo stesso ordine può spingere il prezzo più in là del previsto. La sovrapposizione è la parte più profonda della giornata, quindi l’esecuzione tende a essere più pulita e lo slippage più contenuto rispetto alle ore più tranquille.
+
+Il terzo è il **movimento sostenuto**. Con i flussi di due regioni che si sommano, i trend che si formano durante la sovrapposizione spesso hanno alle spalle abbastanza partecipazione da proseguire, invece di spegnersi per mancanza di volumi. È una tendenza generale e non una garanzia, e una liquidità più profonda può coincidere con una volatilità brusca legata alle notizie, ma è la combinazione di spread stretti e profondità reale a rendere speciale questa fascia.
+
+## Quali coppie si muovono di più nella sovrapposizione
+
+La sovrapposizione favorisce le coppie i cui mercati di riferimento sono a Londra e a New York, il che in pratica significa le major in dollari e i grandi cross dell’euro e della sterlina.
+
+**EUR/USD** è il protagonista naturale. È la coppia più scambiata al mondo e durante la sovrapposizione sono pienamente attivi sia il mercato europeo dell’euro sia quello americano del dollaro, quindi di solito mostra gli spread più stretti e la liquidità più profonda di qualsiasi altra coppia.
+
+Anche **GBP/USD** è molto attiva, perché unisce la liquidità britannica ancora in corso al flusso americano appena arrivato. Reagisce in modo brusco ai dati USA che escono in questa fascia.
+
+**USD/JPY** si muove sui rendimenti americani e sulle aspettative sulla Fed, entrambi al centro dell’attenzione durante la mattinata di New York, quindi è una delle coppie che si muovono di più nella sovrapposizione anche con Tokyo chiusa. Anche coppie in dollari come **USD/CAD** e **USD/CHF** vivono qui le loro ore più attive.
+
+Lo schema è sempre lo stesso: il dollaro da un lato, una grande valuta europea dall’altro, cioè proprio le coppie i cui due mercati di riferimento sono entrambi aperti in queste quattro ore. Se vuoi conoscere le sessioni che alimentano la sovrapposizione, le trattiamo nelle nostre guide all’[apertura della sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra) e alla [sessione di New York](/it/blog/sessione-forex-di-new-york).
+
+## Com’è la sovrapposizione nella pratica
+
+La sovrapposizione è il momento in cui opportunità e rischio sono entrambi al massimo, e conviene guardarli tutti e due con lucidità.
+
+Sul fronte delle opportunità, spread stretti e liquidità profonda significano costi di transazione più bassi ed esecuzioni più pulite che in qualsiasi altro momento della giornata. I movimenti tendono a essere più sostenuti, cosa che alcuni trader trovano più gestibile rispetto alle ore a bassa liquidità, più nervose. Per chi può seguire il mercato solo per un tempo limitato, la sovrapposizione concentra il massimo dell’attività nel minor numero di ore.
+
+L’altra faccia della medaglia è il rischio. Questa è anche la fascia in cui è più probabile che escano le notizie americane in calendario, e le notizie muovono il mercato in fretta, in entrambe le direzioni. Una liquidità più profonda non ti protegge da un movimento brusco: una posizione può girarti contro con la stessa rapidità con cui può andare a tuo favore. Prendi quindi la sovrapposizione per quello che è, le ore più intense e liquide della giornata, e lascia che siano il tuo piano, la tua tolleranza al rischio e la tua situazione a decidere se vuoi stare in mezzo a tutto questo movimento.
+
+Per vedere come si inserisce la sovrapposizione nell’intero ciclo di 24 ore, la nostra guida alle [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) ripercorre ogni sessione e il modo in cui si passano il testimone intorno al mondo.
+
+## Domande frequenti
+
+**A che ora c’è la sovrapposizione Londra-New York?**
+In ora solare va dalle 13:00 alle 17:00 GMT, le quattro ore che seguono l’apertura di New York e precedono la chiusura di Londra. Nell’ora locale di New York corrisponde alle 08:00-12:00. In termini GMT la fascia può spostarsi di un’ora in alcuni periodi dell’anno, perché entrambe le città adottano l’ora legale.
+
+**Perché la sovrapposizione è il momento più intenso per fare trading?**
+Perché i due maggiori centri FX del mondo, Londra e New York, sono aperti contemporaneamente, e così si sommano i due bacini di liquidità più profondi. Inoltre i dati americani più importanti escono proprio in questa fascia, aggiungendo volatilità a volumi già al massimo.
+
+**Gli spread sono più stretti durante la sovrapposizione?**
+Sì, di norma. Con operatori di due regioni che quotano tutti insieme, le coppie principali vengono scambiate di solito con gli spread più bassi della giornata, il che riduce il costo per entrare e uscire.
+
+**Quali coppie sono più attive nella sovrapposizione?**
+Le major in dollari e i grandi cross dell’euro e della sterlina, in particolare EUR/USD, GBP/USD e USD/JPY, perché sono le coppie i cui mercati di riferimento sono aperti in questa fascia.
+
+**La sovrapposizione è adatta ai principianti?**
+È la parte più liquida della giornata, il che significa spread stretti, ma anche quella più guidata dalle notizie, il che significa movimenti rapidi. Questo mix può essere più difficile da gestire, non più facile. Si tratta di informazioni generali, non di un consiglio su cosa sia adatto alla tua situazione.
+
+*Questo articolo ha esclusivamente scopo informativo e non costituisce una consulenza finanziaria.*`,
+      de: `Die Überschneidung von London und New York reicht in der Normalzeit von **13:00 bis 17:00 GMT**: die vier Stunden, in denen die beiden größten Devisenhandelsplätze der Welt gleichzeitig geöffnet sind. Es ist das geschäftigste Zeitfenster des gesamten Handelstages: Die Liquidität ist am tiefsten, die Spreads der Hauptwährungspaare sind meist am engsten, und die Kursbewegungen sind am nachhaltigsten. Dieser Leitfaden erklärt, wann genau die Überschneidung in Ihrer eigenen Zeitzone liegt, warum sich dort so viel Aktivität bündelt und was das in der Praxis bedeutet.
+
+Wenn Sie täglich nur ein paar Stunden Zeit haben, den Markt zu verfolgen, nennen die meisten Trader genau diese Stunden. Die Orderströme zweier Regionen kommen zusammen, die wichtigsten US-Konjunkturdaten werden mitten in diesem Fenster veröffentlicht, und die tiefe Liquidität, die London mitbringt, trifft auf die Volatilität, die New York mitbringt. Wer diese Überschneidung versteht, versteht schon fast den Ablauf des gesamten Forex-Tages.
+
+## Wann die Überschneidung von London und New York stattfindet
+
+In der Normalzeit reicht die Überschneidung von **13:00 bis 17:00 GMT**. Das ist die Spanne nach der Eröffnung in New York um 13:00 GMT und vor dem Handelsschluss in London um 17:00 GMT, der einzige Teil des Tages, in dem beide Zentren gemeinsam aktiv sind. Da beide Städte ihre Uhren auf Sommerzeit umstellen, kann sich das genaue GMT-Fenster für Teile des Jahres um eine Stunde verschieben. Die vierstündige Überschneidung selbst bleibt jedoch erhalten, weil London und New York ihre Uhren ungefähr in denselben Jahreszeiten umstellen.
+
+So verteilt sich die Überschneidung auf eine Reihe gängiger Zeitzonen, ausgehend vom Winter auf der Nordhalbkugel, wenn beide Zentren Normalzeit haben.
+
+| Ihre Stadt / Zeitzone | Beginn der Überschneidung | Ende der Überschneidung |
+| --- | --- | --- |
+| London (UK) | 13:00 | 17:00 |
+| New York (ET) | 08:00 | 12:00 |
+| Frankfurt / Paris (MEZ) | 14:00 | 18:00 |
+| Istanbul (TRT) | 16:00 | 20:00 |
+| Dubai (GST) | 17:00 | 21:00 |
+| Mumbai (IST) | 18:30 | 22:30 |
+| Singapur (SGT) | 21:00 | 01:00 (Folgetag) |
+| Sydney (AEST) | 23:00 | 03:00 (Folgetag) |
+
+Statt diese Zeiten von Hand umzurechnen und an den Sommerzeitumstellungen zu zweifeln, nutzen Sie besser das [Live-Tool für die Forex-Handelszeiten](/de): Es zeigt die Überschneidung in Echtzeit in Ihrer eigenen Zeitzone an und passt sich automatisch an, wenn die Uhren umgestellt werden. Eine ausführlichere Aufschlüsselung aller Sessions über die Zeitzonen hinweg finden Sie in unserem Leitfaden zu den [Forex-Handelszeiten nach Zeitzone](/de/blog/forex-handelszeiten-nach-zeitzone).
+
+## Warum die Liquidität während der Überschneidung ihren Höhepunkt erreicht
+
+Die Überschneidung bündelt die Aktivität aus einem einfachen strukturellen Grund: Sie legt die Geschäftstage zweier Regionen in dieselben Uhrzeiten. London ist der größte Devisenhandelsplatz der Welt und New York der zweitgrößte. Sind beide gleichzeitig geöffnet, sind also die zwei tiefsten Liquiditätspools der Welt zusammen aktiv.
+
+Das Ausmaß der Dominanz Londons ist gemessen, keine Legende. Der **BIS Triennial Central Bank Survey** der Bank für Internationalen Zahlungsausgleich zeigt immer wieder, dass das Vereinigte Königreich den mit Abstand größten Anteil am weltweiten Devisenumsatz abwickelt, mit den Vereinigten Staaten auf Platz zwei. Die Erhebung können Sie direkt unter https://www.bis.org/statistics/rpfx22.htm nachlesen. Überschneiden sich diese beiden Zentren, findet ein sehr großer Teil des gesamten täglichen Devisenhandels im selben vierstündigen Zeitfenster statt.
+
+Zur reinen Größe kommt ein zeitlicher Effekt hinzu. Die wichtigsten US-Konjunkturdaten, die Arbeitsmarktdaten (Non-Farm Payrolls), Inflationszahlen und Äußerungen der Federal Reserve, werden meist am New Yorker Vormittag veröffentlicht, und der fällt in die Überschneidung. Das Fenster verbindet also die tiefste Liquidität des Tages mit den Momenten, die den Markt am ehesten bewegen. Deshalb erreicht das Volumen hier seinen Höhepunkt, und deshalb ist die Überschneidung, nicht die Eröffnung einer einzelnen Session, das eigentliche Gravitationszentrum des Handelstages.
+
+## Was engere Spreads und tiefere Liquidität bedeuten
+
+Tiefe Liquidität ist keine Abstraktion; sie hat konkrete Auswirkungen, die Sie während der Überschneidung auf dem Bildschirm sehen können.
+
+Am sichtbarsten sind **engere Spreads**. Der Spread ist die Differenz zwischen dem Kurs, zu dem Sie kaufen, und dem Kurs, zu dem Sie verkaufen können, und er wird kleiner, wenn mehr Marktteilnehmer bereit sind, beide Seiten des Marktes zu quotieren. Während der Überschneidung, wenn Banken, Fonds und Unternehmens-Desks aus zwei Regionen aktiv sind, handeln die Hauptwährungspaare typischerweise zu den engsten Spreads des Tages. Das senkt die Kosten für den Ein- und Ausstieg aus einer Position.
+
+Der zweite Effekt ist die **Markttiefe**. Sie beschreibt, wie viel gehandelt werden kann, ohne den Kurs stark zu bewegen. Ist der Markt tief, wird eine Order normaler Größe reibungslos aufgenommen; ist er dünn, kann dieselbe Order den Kurs weiter verschieben als erwartet. Die Überschneidung ist der tiefste Teil des Tages, daher ist die Ausführung meist sauberer und der Slippage geringer als in ruhigeren Stunden.
+
+Der dritte ist die **nachhaltige Bewegung**. Weil sich die Orderströme zweier Regionen verbinden, haben Trends, die während der Überschneidung entstehen, oft genug Beteiligung hinter sich, um sich fortzusetzen, statt bei dünnem Volumen zu verpuffen. Das ist eine allgemeine Tendenz und keine Garantie, und tiefere Liquidität kann mit heftiger, nachrichtengetriebener Volatilität zusammenfallen. Doch die Kombination aus engen Spreads und echter Markttiefe ist es, die dieses Fenster hervorhebt.
+
+## Welche Paare sich in der Überschneidung am stärksten bewegen
+
+Die Überschneidung begünstigt die Paare, deren Heimatmärkte in London und New York liegen, in der Praxis also die Dollar-Majors und die großen Euro- und Pfund-Paare.
+
+**EUR/USD** ist das natürliche Herzstück. Es ist das meistgehandelte Währungspaar der Welt, und während der Überschneidung sind sowohl der europäische Heimatmarkt des Euro als auch der amerikanische des Dollar voll aktiv. Daher zeigt es typischerweise die engsten Spreads und die tiefste Liquidität aller Paare.
+
+**GBP/USD** ist ebenfalls sehr aktiv: Hier trifft die noch laufende britische Liquidität auf den gerade hinzukommenden US-Orderfluss. Das Paar reagiert heftig auf US-Daten, die in dieses Fenster fallen.
+
+**USD/JPY** bewegt sich mit den US-Renditen und den Erwartungen an die Fed, die beide am New Yorker Vormittag im Fokus stehen. Deshalb gehört es zu den typischen Bewegern der Überschneidung, obwohl Tokio dann geschlossen ist. Auch Dollar-Paare wie **USD/CAD** und **USD/CHF** erleben hier ihre aktivsten Stunden.
+
+Am Ende ist es jedes Mal dieselbe Konstellation: der Dollar auf der einen Seite, eine wichtige europäische Währung auf der anderen, also genau die Paare, deren beide Heimatmärkte während dieser vier Stunden handeln. Wenn Sie die Sessions sehen möchten, die in die Überschneidung münden, finden Sie sie in unseren Leitfäden zur [Eröffnung der London-Session](/de/blog/wann-oeffnet-die-london-session) und zur [New-York-Session](/de/blog/forex-session-new-york).
+
+## Wie die Überschneidung in der Praxis aussieht
+
+In der Überschneidung sind Chancen und Risiken gleichermaßen am größten, und beides sollte man nüchtern betrachten.
+
+Auf der Chancenseite bedeuten enge Spreads und tiefe Liquidität geringere Transaktionskosten und eine sauberere Ausführung als zu jeder anderen Tageszeit. Die Bewegungen sind meist nachhaltiger, was manche Trader als leichter handhabbar empfinden als die unruhigeren Stunden mit dünner Liquidität. Wer den Markt nur in einem begrenzten Zeitfenster beobachten kann, findet in der Überschneidung die meiste Aktivität in den wenigsten Stunden.
+
+Die Kehrseite ist das Risiko. In diesem Fenster schlagen auch geplante US-Nachrichten am wahrscheinlichsten ein, und Nachrichten bewegen den Markt schnell, in beide Richtungen. Tiefere Liquidität schützt Sie nicht vor einer heftigen Bewegung; eine Position kann sich genauso schnell gegen Sie wenden, wie sie zu Ihren Gunsten läuft. Nehmen Sie die Überschneidung also als das, was sie ist, die geschäftigsten und liquidesten Stunden des Tages, und lassen Sie Ihren eigenen Plan, Ihre Risikotoleranz und Ihre Umstände entscheiden, ob Sie sich in diesem Trubel bewegen möchten.
+
+Wie sich die Überschneidung in den gesamten 24-Stunden-Zyklus einfügt, zeigt unser Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert), der jede Session und ihre Übergaben rund um den Globus durchgeht.
+
+## Häufig gestellte Fragen
+
+**Wann ist die Überschneidung von London und New York?**
+In der Normalzeit reicht sie von 13:00 bis 17:00 GMT, die vier Stunden nach der Eröffnung in New York und vor dem Handelsschluss in London. In New Yorker Ortszeit sind das 08:00 bis 12:00. Weil beide Städte die Sommerzeit nutzen, kann sich das Fenster in GMT für Teile des Jahres um eine Stunde verschieben.
+
+**Warum ist die Überschneidung die geschäftigste Handelszeit?**
+Weil die beiden größten Devisenhandelsplätze der Welt, London und New York, gleichzeitig geöffnet sind und sich so die zwei tiefsten Liquiditätspools verbinden. Zudem fallen die wichtigsten US-Datenveröffentlichungen in dieses Fenster und bringen zusätzlich zum ohnehin höchsten Volumen weitere Volatilität.
+
+**Sind die Spreads während der Überschneidung enger?**
+Ja, in der Regel. Wenn Teilnehmer aus zwei Regionen quotieren, handeln die Hauptwährungspaare meist zu den engsten Spreads des Tages, was die Kosten für Ein- und Ausstieg senkt.
+
+**Welche Paare sind in der Überschneidung am aktivsten?**
+Die Dollar-Majors und die großen Euro- und Pfund-Paare, vor allem EUR/USD, GBP/USD und USD/JPY, da ihre Heimatmärkte während dieses Fensters geöffnet sind.
+
+**Ist die Überschneidung für Einsteiger geeignet?**
+Sie ist der liquideste Teil des Tages, was enge Spreads bedeutet, aber auch der nachrichtenlastigste, was schnelle Bewegungen bedeutet. Diese Mischung kann schwieriger zu handhaben sein, nicht leichter. Dies ist eine allgemeine Information und keine Beratung darüber, ob sie zu Ihrer Situation passt.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Londra-New York çakışması standart saat döneminde **13:00 ile 17:00 GMT** arasındadır; dünyanın en büyük iki forex merkezinin aynı anda açık olduğu dört saattir. Tüm işlem gününün en yoğun dilimidir: likidite en derin seviyesindedir, majör paritelerdeki spreadler genellikle en dar halindedir ve fiyat hareketleri en istikrarlı biçimde sürer. Bu rehber, çakışmanın kendi saat diliminizde tam olarak ne zamana denk geldiğini, neden bu kadar çok hareketi bir araya topladığını ve bunun pratikte ne anlama geldiğini açıklıyor.
+
+Piyasayı takip etmek için günde yalnızca birkaç saatiniz varsa, yatırımcıların çoğunun işaret ettiği saatler bunlardır. İki bölgenin emir akışı birleşir, en ağır ABD verileri tam bu dilimin içinde açıklanır ve Londra’nın getirdiği derin likidite New York’un getirdiği volatiliteyle buluşur. Bu çakışmayı anlamak, neredeyse tüm forex gününün şeklini anlamak demektir.
+
+## Londra-New York çakışması ne zaman yaşanır
+
+Standart saat döneminde çakışma **13:00 ile 17:00 GMT** arasındadır. Bu, New York’un 13:00 GMT’de açılmasından sonraki ve Londra’nın 17:00 GMT’de kapanmasından önceki zaman dilimidir; günün iki merkezin birlikte aktif olduğu tek bölümüdür. Her iki şehir de yaz saati için saatlerini değiştirdiğinden tam GMT aralığı yılın bazı dönemlerinde bir saat kayabilir, ancak Londra ve New York saatlerini kabaca aynı mevsimlerde değiştirdiği için dört saatlik çakışmanın kendisi korunur.
+
+Aşağıda, iki merkezin de standart saatte olduğu kuzey yarımküre kış dönemi esas alınarak çakışmanın yaygın saat dilimlerine nasıl yansıdığını görebilirsiniz.
+
+| Şehriniz / saat diliminiz | Çakışma başlangıcı | Çakışma bitişi |
+| --- | --- | --- |
+| Londra (Birleşik Krallık) | 13:00 | 17:00 |
+| New York (ET) | 08:00 | 12:00 |
+| Frankfurt / Paris (CET) | 14:00 | 18:00 |
+| İstanbul (TRT) | 16:00 | 20:00 |
+| Dubai (GST) | 17:00 | 21:00 |
+| Mumbai (IST) | 18:30 | 22:30 |
+| Singapur (SGT) | 21:00 | 01:00 (ertesi gün) |
+| Sidney (AEST) | 23:00 | 03:00 (ertesi gün) |
+
+Bunları elle çevirip yaz saati kaymalarını tahmin etmeye çalışmak yerine, [canlı forex piyasa saatleri aracımız](/tr) çakışmayı kendi saat diliminizde gerçek zamanlı olarak gösterir ve saatler değiştikçe otomatik olarak ayarlanır. Tüm seansların saat dilimlerine göre daha geniş bir dökümü için [saat dilimine göre forex piyasa saatleri](/tr/blog/saat-dilimine-gore-forex-piyasa-saatleri) rehberimize bakın.
+
+## Çakışma sırasında likidite neden zirve yapar
+
+Çakışmanın hareketi bir araya toplamasının basit, yapısal bir nedeni vardır: iki bölgenin iş gününü aynı saatlere üst üste bindirir. Londra dünyanın en büyük döviz merkezi, New York ise ikinci en büyüğüdür; ikisi aynı anda açık olduğunda dünyadaki en derin iki likidite havuzu birlikte çalışır.
+
+Londra’nın hakimiyetinin boyutu efsane değil, ölçülmüş bir gerçektir. Uluslararası Ödemeler Bankası’nın yürüttüğü **BIS Üç Yıllık Merkez Bankası Anketi**, küresel döviz işlem hacminin en büyük payının sürekli olarak Birleşik Krallık’ta, ikinci büyük payının ise ABD’de gerçekleştiğini gösterir. Anketi doğrudan https://www.bis.org/statistics/rpfx22.htm adresinden okuyabilirsiniz. Bu iki merkez çakıştığında, günlük döviz işlemlerinin çok büyük bir kısmı aynı dört saatlik dilimde gerçekleşir.
+
+Ölçeğin üstüne bir de zamanlama etkisi eklenir. Tarım dışı istihdam, enflasyon verileri ve Federal Rezerv açıklamaları gibi önemli ABD ekonomik verileri genellikle çakışmanın içine denk gelen New York sabahında açıklanır. Böylece bu dilim, günün en derin hazır likiditesini piyasayı hareket ettirme olasılığı en yüksek anlarla birleştirir. Hacmin burada zirve yapmasının ve işlem gününün gerçek ağırlık merkezinin herhangi bir seansın açılışı değil de bu çakışma olmasının nedeni budur.
+
+## Daha dar spreadler ve daha derin likidite ne anlama gelir
+
+Derin likidite soyut bir kavram değildir; çakışma sırasında ekranda görebileceğiniz somut etkileri vardır.
+
+En görünür olanı **daha dar spreadlerdir**. Spread, alabileceğiniz fiyat ile satabileceğiniz fiyat arasındaki farktır ve piyasanın iki tarafına da fiyat vermeye hazır katılımcı sayısı arttıkça daralır. Çakışma sırasında iki bölgenin bankaları, fonları ve kurumsal masaları aynı anda aktif olduğu için majör pariteler genellikle günün en dar spreadleriyle işlem görür. Bu da bir pozisyona girmenin ve çıkmanın maliyetini düşürür.
+
+İkinci etki **derinliktir**. Derinlik, fiyatı fazla oynatmadan ne kadar işlem yapılabileceğini ifade eder. Piyasa derin olduğunda normal büyüklükteki bir emir sorunsuzca karşılanır; sığ olduğunda ise aynı emir fiyatı beklenenden daha fazla itebilir. Çakışma günün en derin bölümüdür; bu yüzden emirler daha sakin saatlere göre genellikle daha temiz gerçekleşir ve kayma (slippage) daha azdır.
+
+Üçüncüsü **istikrarlı harekettir**. İki bölgenin akışı birleştiğinde, çakışma sırasında oluşan trendlerin arkasında çoğu zaman, düşük hacimde sönüp gitmek yerine devam edecek kadar katılım bulunur. Bu bir garanti değil, genel bir eğilimdir ve derin likidite haber kaynaklı sert volatiliteyle aynı zamana denk gelebilir; ancak bu dilimi öne çıkaran, dar spreadlerle gerçek derinliğin bir arada olmasıdır.
+
+## Çakışmada en çok hangi pariteler hareket eder
+
+Çakışma, ana piyasaları Londra ve New York’ta bulunan pariteleri öne çıkarır; pratikte bu, dolar majörleri ile büyük euro ve sterlin çaprazları demektir.
+
+**EUR/USD** doğal olarak merkezdedir. Dünyanın en çok işlem gören paritesidir ve çakışma sırasında hem euronun Avrupa’daki ana piyasası hem de doların Amerika’daki ana piyasası tam olarak devrededir; bu yüzden genellikle tüm pariteler arasında en dar spreadleri ve en derin likiditeyi gösterir.
+
+**GBP/USD** de oldukça hareketlidir; hâlâ süren Birleşik Krallık likiditesini yeni gelen ABD akışıyla birleştirir. Bu dilimde açıklanan ABD verilerine sert tepki verir.
+
+**USD/JPY**, New York sabahında gündemde olan ABD tahvil getirileri ve Fed beklentileriyle hareket eder; bu yüzden Tokyo kapalı olsa bile çakışmada sıkça hareketlenen paritelerdendir. **USD/CAD** ve **USD/CHF** gibi dolar pariteleri de en hareketli saatlerini burada yaşar.
+
+Her seferinde aynı düzen ortaya çıkar: bir tarafta dolar, diğer tarafta büyük bir Avrupa para birimi; yani iki ana piyasası da bu dört saat boyunca işlem gören pariteler. Çakışmayı besleyen seansları görmek isterseniz bunları [Londra seansı açılışı](/tr/blog/londra-seansi-saat-kacta-acilir) ve [New York seansı](/tr/blog/new-york-forex-seansi) rehberlerimizde ele alıyoruz.
+
+## Çakışma pratikte nasıl görünür
+
+Çakışma, hem fırsatın hem de riskin en yüksek olduğu dilimdir ve ikisine de gerçekçi bakmakta fayda var.
+
+Fırsat tarafında dar spreadler ve derin likidite, günün diğer tüm saatlerine göre daha düşük işlem maliyeti ve daha temiz emir gerçekleşmesi anlamına gelir. Hareketler daha istikrarlı olma eğilimindedir; bazı yatırımcılar bunu, likiditenin düşük olduğu daha dalgalı saatlere göre daha kolay yönetilebilir bulur. Piyasayı yalnızca sınırlı bir süre izleyebilen herkes için çakışma, en fazla hareketi en az saate sığdırır.
+
+Madalyonun öbür yüzü ise risktir. Bu, planlanmış ABD haberlerinin gelme olasılığının en yüksek olduğu dilimdir ve haberler her iki yönde de hızlı hareket ettirir. Derin likidite sizi sert bir hareketten korumaz; bir pozisyon lehinize ilerlediği hızla aleyhinize de dönebilir. Bu yüzden çakışmayı olduğu gibi kabul edin, yani günün en yoğun ve en likit saatleri olarak görün; bu yoğunluğun içinde olmak isteyip istemediğinize ise kendi planınız, risk toleransınız ve koşullarınız karar versin.
+
+Çakışmanın 24 saatlik döngünün tamamı içinde nereye oturduğunu görmek için [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) her seansı ve seansların dünya çevresinde birbirine nasıl devrettiğini adım adım anlatıyor.
+
+## Sıkça sorulan sorular
+
+**Londra-New York çakışması saat kaçta?**
+Standart saat döneminde 13:00 ile 17:00 GMT arasındadır; New York’un açılmasından sonraki ve Londra’nın kapanmasından önceki dört saattir. New York yerel saatiyle bu, 08:00 ile 12:00 arasına denk gelir. Her iki şehir de yaz saati uyguladığı için bu dilim GMT cinsinden yılın bazı dönemlerinde bir saat kayabilir.
+
+**Çakışma neden işlem yapmak için en yoğun zamandır?**
+Çünkü dünyanın en büyük iki döviz merkezi olan Londra ve New York aynı anda açıktır ve en derin iki likidite havuzu birleşir. En önemli ABD verileri de bu dilimin içinde açıklanır ve zaten zirvedeki hacmin üstüne volatilite ekler.
+
+**Çakışma sırasında spreadler daha mı dar olur?**
+Evet, genellikle. İki bölgenin katılımcıları aynı anda fiyat verdiği için majör pariteler çoğunlukla günün en dar spreadleriyle işlem görür; bu da pozisyona girip çıkmanın maliyetini düşürür.
+
+**Çakışmada en hareketli pariteler hangileri?**
+Dolar majörleri ile büyük euro ve sterlin çaprazları, özellikle EUR/USD, GBP/USD ve USD/JPY; çünkü bunlar ana piyasaları bu dilimde açık olan paritelerdir.
+
+**Çakışma yeni başlayanlar için uygun mu?**
+Günün en likit bölümüdür, bu da dar spreadler demektir; ama aynı zamanda haberlere en açık bölümüdür, bu da hızlı hareketler demektir. Bu karışımı yönetmek daha kolay değil, daha zor olabilir. Bu genel bir bilgidir; sizin durumunuza uyup uymadığına dair bir tavsiye değildir.
+
+*Bu yazı yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -2266,24 +5078,46 @@ C’est la partie la plus liquide de la journée, donc des spreads serrés, mais
       en: "sydney-forex-session",
       es: "sesion-forex-de-sidney",
       fr: "seance-forex-de-sydney",
+      pt: "sessao-forex-de-sydney",
+      it: "sessione-forex-di-sydney",
+      de: "forex-session-sydney",
+      tr: "sidney-forex-seansi",
     },
     title: {
       en: "The Sydney Forex Session: Hours, Best Pairs and Character",
       es: "La sesión forex de Sídney: horario, mejores pares y carácter",
       fr: "La séance forex de Sydney : horaires et paires AUD/NZD",
+      pt: "A Sessão Forex de Sydney: Horário, Melhores Pares e Perfil",
+      it: "La sessione forex di Sydney: orari, migliori coppie e caratteristiche",
+      de: "Die Sydney-Session im Forex: Handelszeiten, beste Paare und Charakter",
+      tr: "Sidney Forex Seansı: Saatler, En İyi Pariteler ve Karakteri",
     },
     description: {
       en: "The Sydney forex session opens the trading week at 22:00 GMT. See its hours in your timezone, why liquidity is light, and the best AUD and NZD pairs.",
       es: "La sesión forex de Sídney abre la semana de trading a las 22:00 GMT. Ve su horario en tu zona, por qué la liquidez es baja y los mejores pares AUD y NZD.",
       fr: "La séance forex de Sydney ouvre la semaine, de 22:00 à 07:00 GMT. Horaires dans votre fuseau, pourquoi elle est calme et les paires AUD et NZD à suivre.",
+      pt: "A sessão forex de Sydney abre a semana de negociação às 22:00 GMT. Veja o horário no seu fuso, por que a liquidez é baixa e os melhores pares com AUD e NZD.",
+      it: "La sessione forex di Sydney apre la settimana di trading alle 22:00 GMT. Scopri gli orari nel tuo fuso, perché la liquidità è scarsa e le migliori coppie AUD e NZD.",
+      de: "Die Sydney-Session eröffnet die Forex-Woche um 22:00 GMT. Mit Zeiten in Ihrer Zeitzone, Gründen für die dünne Liquidität und den besten AUD- und NZD-Paaren.",
+      tr: "Sidney forex seansı işlem haftasını 22:00 GMT’de açar. Saat diliminizdeki saatlerini, likiditenin neden düşük olduğunu ve öne çıkan AUD ve NZD paritelerini görün.",
     },
     date: "2026-07-30",
-    localeDate: { fr: "2026-09-24" },
+    localeDate: {
+      fr: "2026-09-24",
+      pt: "2026-10-26",
+      tr: "2026-11-05",
+      de: "2026-11-12",
+      it: "2026-11-23",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "Sydney"],
       es: ["Sesiones", "Sídney"],
       fr: ["Séances", "Sydney"],
+      pt: ["Sessões", "Sydney"],
+      it: ["Sessioni", "Sydney"],
+      de: ["Sessions", "Sydney"],
+      tr: ["Seanslar", "Sidney"],
     },
     cover: "/blog/sydney-forex-session.svg",
     body: {
@@ -2530,6 +5364,330 @@ Oui. Quelques heures après l’ouverture de Sydney, Tokyo entre en scène, et l
 Elle ferme à 17:00 heure locale de Sydney, soit 07:00 GMT dans le cas AEST (heure standard) et 06:00 GMT dans le cas AEDT (heure d’été).
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sessão forex de Sydney abre a semana de negociação. Ela entra em operação na noite de domingo, no horário GMT, e vai das **22:00 às 07:00 GMT** no horário padrão, o que faz de Sydney o primeiro grande centro a reabrir depois do fim de semana. É a mais tranquila das quatro grandes sessões, com liquidez menor do que em qualquer outro momento do dia e um foco natural no dólar australiano (AUD) e no dólar neozelandês (NZD). Este guia mostra quando a sessão de Sydney acontece no seu fuso horário, por que ela é o começo calmo do revezamento global e quais pares mais merecem atenção.
+
+Para os traders, Sydney define o tom inicial. É onde o ritmo semanal começa, onde os primeiros preços da semana se formam e onde qualquer notícia do fim de semana aparece primeiro no gráfico. Ela raramente produz os movimentos dramáticos de Londres ou Nova York, mas é justamente esse perfil calmo e contido que torna útil entendê-la.
+
+## Horário da sessão de Sydney no seu fuso horário
+
+No horário padrão, a sessão de Sydney vai das **22:00 às 07:00 GMT**, o que corresponde a **08:00 a 17:00 no horário local de Sydney**, já que o leste da Austrália fica em GMT+10 no horário padrão. Há um detalhe importante aqui: a Austrália está no Hemisfério Sul, então seu calendário de horário de verão funciona ao contrário do da Europa e da América do Norte. Os relógios australianos são adiantados, para GMT+11, por volta de outubro, exatamente quando os relógios do norte são atrasados, e voltam por volta de abril, quando os do norte são adiantados. Isso significa que a janela em GMT da sessão de Sydney muda em épocas do ano diferentes das janelas de Londres ou Nova York.
+
+A tabela abaixo mostra a abertura de Sydney em vários fusos comuns, considerando o caso em que Sydney está no horário padrão (AEST, GMT+10).
+
+| Sua cidade / fuso | Abertura de Sydney (caso AEST) | Fechamento de Sydney (caso AEST) |
+| --- | --- | --- |
+| Sydney (AEST) | 08:00 | 17:00 |
+| Londres (Reino Unido, GMT) | 22:00 | 07:00 (dia seguinte) |
+| Nova York (ET) | 17:00 | 02:00 (dia seguinte) |
+| Frankfurt / Paris (CET) | 23:00 | 08:00 (dia seguinte) |
+| Istambul (TRT) | 01:00 (dia seguinte) | 10:00 (dia seguinte) |
+| Dubai (GST) | 02:00 (dia seguinte) | 11:00 (dia seguinte) |
+| Mumbai (IST) | 03:30 (dia seguinte) | 12:30 (dia seguinte) |
+| Singapura (SGT) | 06:00 | 15:00 |
+
+Como os hemisférios norte e sul mudam os relógios em sentidos opostos, a diferença entre Sydney e cidades como Londres ou Nova York varia duas horas ao longo do ano, e não uma. Essa é uma fonte comum de confusão, e é exatamente o tipo de coisa que a [ferramenta de horário do mercado forex ao vivo](/pt) resolve para você, mostrando Sydney e todas as outras sessões no seu fuso horário e se ajustando automaticamente ao horário de verão dos dois lados da linha do Equador.
+
+## Por que a sessão de Sydney é a abertura tranquila
+
+Sydney é o começo calmo do revezamento global, e não uma explosão de atividade. A liquidez no horário exclusivo de Sydney costuma ser menor do que em qualquer outro momento do dia de negociação, por um motivo simples: as economias da Austrália e da Nova Zelândia, embora grandes e importantes, têm mercados de câmbio menores que os da Europa ou dos Estados Unidos. Há menos participantes ativos, então as faixas de preço tendem a ser mais estreitas e os movimentos, mais comedidos.
+
+Também é preciso ver o que mais está aberto. Quando Sydney entra em operação na noite de domingo, no horário GMT, nenhum outro grande centro está negociando ainda. Só quando Tóquio se junta, algumas horas depois, a sessão asiática ganha profundidade de verdade. Por isso, as primeiras horas de Sydney são as mais finas da semana, o que explica em parte por que muitos traders tratam a abertura de domingo com cautela: os spreads são mais largos e o preço pode se mover de forma mais brusca com ordens relativamente pequenas quando há menos profundidade para absorvê-las.
+
+Nada disso torna Sydney irrelevante. Ela abre a semana, absorve primeiro qualquer notícia do fim de semana e prepara as faixas em torno das quais Tóquio e depois Londres vão operar. Ela é simplesmente mais tranquila por natureza, e saber disso ajuda você a ler corretamente as primeiras horas, sem esperar delas movimentos no estilo de Londres. Para entender como Sydney passa o bastão para o resto do dia, veja nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas).
+
+## Melhores pares de moedas durante a sessão de Sydney
+
+A sessão de Sydney gira naturalmente em torno das moedas cujos mercados de origem estão abertos: o dólar australiano e o dólar neozelandês, além do iene japonês quando Tóquio começa a se sobrepor.
+
+**AUD/USD** é o par principal. O dólar australiano está muito ligado ao preço das commodities e aos dados do Reserve Bank of Australia, e tem sua negociação local mais ativa nesse horário. Os indicadores econômicos australianos normalmente saem na manhã local, em plena sessão de Sydney, e podem movimentar o par em um cenário de resto tranquilo.
+
+**NZD/USD** se comporta de forma parecida, movido pelos dados da Nova Zelândia e pelas decisões do Reserve Bank of New Zealand. Ele costuma ser ainda mais fino que o AUD/USD, então os movimentos podem ser mais bruscos em relação ao volume por trás deles.
+
+**AUD/JPY** e **NZD/JPY** ficam mais ativos à medida que a sessão de Sydney se sobrepõe à abertura de Tóquio. Esses cruzamentos entre moedas de commodities e o iene são populares no horário asiático e podem reagir tanto a notícias da Oceania quanto do Japão.
+
+**AUD/NZD** é um cruzamento puramente regional, negociado quase inteiramente no horário da Ásia-Pacífico, útil para avaliar a força relativa das duas moedas da Oceania sem o dólar americano no meio.
+
+Em resumo, Sydney favorece as moedas da Oceania, porque esses são os mercados acordados nesse horário. Quanto aos dados que realmente as movimentam, o Reserve Bank of Australia publica suas decisões de política monetária e seu calendário em https://www.rba.gov.au.
+
+## A sobreposição Sydney-Tóquio
+
+Sydney não negocia sozinha por muito tempo. Algumas horas depois da abertura, Tóquio entra em operação, e as duas sessões se sobrepõem durante a manhã asiática. Essa **sobreposição Sydney-Tóquio** é a segunda sobreposição do dia de negociação, menor e bem menos ativa que a janela Londres-Nova York, mas relevante por si só.
+
+Durante essa sobreposição, a liquidez nos pares de iene e de dólar australiano melhora visivelmente em comparação com o horário exclusivo de Sydney. Tóquio traz o primeiro polo realmente grande de liquidez asiática, então pares como AUD/JPY e USD/JPY ficam mais ativos, e as notícias regionais, da Austrália, da Nova Zelândia, do Japão e muitas vezes da China, podem gerar movimentos de verdade. Ainda é mais calmo que as sessões europeia e americana, mas é a parte mais animada do dia na Ásia-Pacífico.
+
+Para conhecer melhor a sessão para a qual Sydney passa o bastão, veja nosso guia da [sessão forex de Tóquio e da Ásia](/pt/blog/sessao-forex-de-toquio-asia), que trata com mais detalhes do perfil lateral do horário asiático.
+
+## Operando Sydney na prática
+
+A sessão de Sydney pede um certo tipo de atenção, mais do que uma estratégia específica, e alguns pontos práticos merecem ser lembrados.
+
+A liquidez fina é a característica que define a sessão. Spreads mais largos aumentam o custo de operar, e a menor profundidade faz com que o preço possa saltar com notícias ou com ordens relativamente pequenas. A abertura de domingo, em particular, pode mostrar um gap de fim de semana, quando os primeiros preços da semana aparecem em um nível diferente do fechamento de sexta porque saiu alguma notícia importante enquanto o mercado estava fechado. Muitos traders esperam os spreads se normalizarem antes de assumir posições maiores.
+
+Por outro lado, as faixas mais calmas e contidas da sessão da Ásia-Pacífico podem ser um ambiente mais estável do que o ritmo acelerado do horário europeu e americano. Isso é uma questão de temperamento e de fuso horário, acima de tudo: um trader em Sydney, Singapura ou Tóquio acompanha o seu mercado local em um horário civilizado, enquanto para alguém em Londres ou Nova York essas são horas da madrugada.
+
+Encare isso como um esboço da sessão, não como um manual. Liquidez fina significa mercados mais tranquilos na maior parte do tempo e, de vez em quando, um salto mais brusco com notícias; se isso combina com você depende dos seus pares, da sua rotina e do seu jeito de trabalhar. E se você só quer saber se Sydney está aberta onde você está agora, a [ferramenta ao vivo](/pt) mostra o status dela em tempo real.
+
+## Perguntas frequentes
+
+**Que horas abre a sessão forex de Sydney?**
+Ela abre às 08:00 no horário local de Sydney, o que corresponde a 22:00 GMT quando Sydney está no horário padrão (AEST) e a 21:00 GMT quando está no horário de verão (AEDT). Como a Austrália fica no Hemisfério Sul, essa mudança acontece na época do ano oposta à do Reino Unido e dos EUA.
+
+**Por que a sessão de Sydney é tão tranquila?**
+Os mercados de câmbio da Austrália e da Nova Zelândia são menores que os da Europa ou dos Estados Unidos, e, quando Sydney abre, nenhum outro grande centro está negociando ainda. Essa combinação faz dela a parte do dia de negociação com menor liquidez e faixas mais estreitas.
+
+**Quais são os melhores pares na sessão de Sydney?**
+As moedas da Oceania: AUD/USD, NZD/USD e os cruzamentos de commodities com o iene AUD/JPY e NZD/JPY, além do cruzamento regional AUD/NZD. Esses são os mercados que estão acordados no horário de Sydney.
+
+**A sessão de Sydney se sobrepõe à de Tóquio?**
+Sim. Algumas horas depois da abertura de Sydney, Tóquio entra em operação, e as duas se sobrepõem durante a manhã asiática. A liquidez nos pares de iene e de dólar australiano melhora durante essa sobreposição Sydney-Tóquio.
+
+**Quando fecha a sessão de Sydney?**
+Ela fecha às 17:00 no horário local de Sydney, o que corresponde a 07:00 GMT no caso AEST (horário padrão) e a 06:00 GMT no caso AEDT (horário de verão).
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `La sessione forex di Sydney apre la settimana di trading. Si attiva la domenica sera (ora GMT) e va dalle **22:00 alle 07:00 GMT** in ora solare, il che rende Sydney il primo grande centro a riaprire dopo il fine settimana. È la più tranquilla delle quattro sessioni principali, con una liquidità più scarsa di qualsiasi altra fase della giornata e un’attenzione naturale per il dollaro australiano (AUD) e il dollaro neozelandese (NZD). Questa guida ti spiega quando si svolge la sessione di Sydney nel tuo fuso orario, perché è l’avvio tranquillo della staffetta globale e quali coppie vale di più la pena seguire.
+
+Per i trader, Sydney dà il tono iniziale. È qui che comincia il ritmo settimanale, che si formano i primi prezzi della settimana e che le eventuali notizie del weekend compaiono per la prima volta sul grafico. Raramente produce i movimenti spettacolari di Londra o New York, ma è proprio il suo carattere tranquillo e contenuto a renderla utile da capire.
+
+## Orari della sessione di Sydney nel tuo fuso orario
+
+In ora solare la sessione di Sydney va dalle **22:00 alle 07:00 GMT**, cioè dalle **08:00 alle 17:00 ora locale di Sydney**, dato che l’Australia orientale è a GMT+10 in ora solare. C’è però un particolare importante: l’Australia si trova nell’emisfero australe, quindi il suo calendario dell’ora legale è opposto a quello dell’Europa e del Nord America. Gli orologi australiani vanno avanti, a GMT+11, intorno a ottobre, proprio quando quelli dell’emisfero boreale tornano indietro, e tornano indietro intorno ad aprile, quando quelli boreali vanno avanti. Ciò significa che la finestra in GMT della sessione di Sydney si sposta in periodi dell’anno diversi rispetto a quelle di Londra o New York.
+
+La tabella qui sotto mostra l’apertura di Sydney in una serie di fusi orari comuni, nel caso in cui Sydney sia in ora solare (AEST, GMT+10).
+
+| La tua città / fuso | Apertura di Sydney (caso AEST) | Chiusura di Sydney (caso AEST) |
+| --- | --- | --- |
+| Sydney (AEST) | 08:00 | 17:00 |
+| Londra (UK, GMT) | 22:00 | 07:00 (giorno dopo) |
+| New York (ET) | 17:00 | 02:00 (giorno dopo) |
+| Francoforte / Parigi (CET) | 23:00 | 08:00 (giorno dopo) |
+| Istanbul (TRT) | 01:00 (giorno dopo) | 10:00 (giorno dopo) |
+| Dubai (GST) | 02:00 (giorno dopo) | 11:00 (giorno dopo) |
+| Mumbai (IST) | 03:30 (giorno dopo) | 12:30 (giorno dopo) |
+| Singapore (SGT) | 06:00 | 15:00 |
+
+Poiché l’emisfero boreale e quello australe cambiano l’ora in direzioni opposte, la differenza tra Sydney e città come Londra o New York varia di due ore nel corso dell’anno anziché di una. È una fonte di confusione molto comune, ed è esattamente il genere di cosa che lo [strumento live degli orari del forex](/it) gestisce per te, mostrando Sydney e ogni altra sessione nel tuo fuso orario e adeguandosi automaticamente all’ora legale su entrambi i lati dell’equatore.
+
+## Perché la sessione di Sydney è un’apertura tranquilla
+
+Sydney è l’avvio tranquillo della staffetta globale più che un’esplosione di attività. La liquidità nelle ore in cui è aperta soltanto Sydney è di solito più scarsa che in qualsiasi altro momento della giornata di trading, per un motivo semplice: le economie australiana e neozelandese, pur essendo grandi e importanti, hanno mercati valutari più piccoli di quelli europei o statunitensi. Gli operatori attivi sono meno, quindi i range tendono a essere più stretti e i movimenti di prezzo più misurati.
+
+C’è poi la questione di cos’altro è aperto. Quando Sydney si attiva la domenica sera (ora GMT), nessun altro grande centro sta ancora operando. Solo quando Tokyo si unisce un paio d’ore dopo la sessione asiatica acquista una profondità reale. Le primissime ore di Sydney sono quindi le più sottili della settimana, ed è anche per questo che molti trader affrontano con cautela l’apertura della domenica: gli spread sono più ampi e il prezzo può muoversi in modo più brusco con ordini relativamente piccoli, quando c’è meno profondità per assorbirli.
+
+Niente di tutto questo rende Sydney poco importante. Apre la settimana, assorbe per prima le notizie del weekend e prepara i range attorno ai quali opereranno Tokyo e poi Londra. È semplicemente più tranquilla per natura, e saperlo ti aiuta a leggere correttamente le prime ore invece di aspettarti movimenti in stile Londra. Per capire come Sydney passa il testimone al resto della giornata, consulta la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate).
+
+## Le migliori coppie di valute durante la sessione di Sydney
+
+La sessione di Sydney ruota naturalmente intorno alle valute i cui mercati di riferimento sono aperti: il dollaro australiano e il dollaro neozelandese, insieme allo yen giapponese quando Tokyo comincia a sovrapporsi.
+
+**AUD/USD** è la coppia di punta. Il dollaro australiano è strettamente legato ai prezzi delle materie prime e ai dati della Reserve Bank of Australia, e registra la sua attività locale più intensa in queste ore. I dati economici australiani escono di solito nella mattinata locale, proprio durante la sessione di Sydney, e possono muovere la coppia in un contesto altrimenti calmo.
+
+**NZD/USD** si comporta in modo simile, guidata dai dati neozelandesi e dalle decisioni della Reserve Bank of New Zealand. Spesso è ancora più sottile di AUD/USD, quindi i movimenti possono essere più bruschi rispetto ai volumi che li sostengono.
+
+**AUD/JPY** e **NZD/JPY** diventano più attive quando la sessione di Sydney si sovrappone all’apertura di Tokyo. Questi cross tra valute legate alle materie prime e yen sono molto seguiti durante l’orario asiatico e possono reagire sia alle notizie dell’Australasia sia a quelle giapponesi.
+
+**AUD/NZD** è un cross puramente regionale che si scambia quasi interamente durante l’orario dell’area Asia-Pacifico, utile per farsi un’idea della forza relativa delle due valute agli antipodi senza il dollaro statunitense di mezzo.
+
+In breve, Sydney favorisce le valute dell’Australasia, perché sono i mercati svegli in quel momento. Per i dati che le muovono davvero, la Reserve Bank of Australia pubblica le sue decisioni di politica monetaria e il relativo calendario su https://www.rba.gov.au.
+
+## La sovrapposizione Sydney-Tokyo
+
+Sydney non opera da sola a lungo. Un paio d’ore dopo la sua apertura si attiva Tokyo, e le due sessioni si sovrappongono durante la mattinata asiatica. Questa **sovrapposizione Sydney-Tokyo** è la seconda sovrapposizione della giornata di trading, più piccola e molto meno attiva della finestra Londra-New York, ma significativa a modo suo.
+
+Durante questa sovrapposizione, la liquidità sulle coppie con yen e dollaro australiano migliora in modo evidente rispetto alle ore in cui è aperta solo Sydney. Tokyo porta il primo bacino di liquidità asiatica davvero ampio, quindi coppie come AUD/JPY e USD/JPY si scambiano più attivamente, e le notizie regionali, da Australia, Nuova Zelanda, Giappone e spesso Cina, possono produrre movimenti reali. Resta comunque più calma delle sessioni europea e americana, ma è la parte più vivace della giornata nell’area Asia-Pacifico.
+
+Per un approfondimento sulla sessione a cui Sydney passa il testimone, consulta la nostra guida alla [sessione forex di Tokyo e dell’Asia](/it/blog/sessione-forex-di-tokyo-asia), che tratta più nel dettaglio il carattere laterale, dentro un range, dell’orario asiatico.
+
+## Fare trading su Sydney in pratica
+
+La sessione di Sydney si presta a un certo tipo di attenzione più che a una strategia specifica, e vale la pena tenere a mente alcuni aspetti pratici.
+
+La liquidità scarsa è la caratteristica distintiva. Spread più ampi aumentano il costo del trading, e una minore profondità significa che il prezzo può fare un balzo sulle notizie o su ordini relativamente piccoli. L’apertura della domenica in particolare può mostrare un gap del weekend, con i primi prezzi della settimana a un livello diverso dalla chiusura del venerdì se a mercato chiuso sono uscite notizie importanti. Molti trader aspettano che gli spread si normalizzino prima di impegnarsi con posizioni più grandi.
+
+Il rovescio della medaglia è che i range più calmi e contenuti della sessione Asia-Pacifico possono offrire un ambiente più stabile rispetto alle frenetiche ore europee e americane. È una questione di temperamento e di fuso orario più che di altro: un trader a Sydney, Singapore o Tokyo segue il proprio mercato locale a un orario ragionevole, mentre per chi si trova a Londra o New York queste sono ore notturne.
+
+Consideralo un ritratto della sessione, non un manuale operativo. Liquidità scarsa significa mercati più tranquilli per la maggior parte del tempo e, di tanto in tanto, un balzo più brusco sulle notizie; che faccia per te dipende dalle tue coppie, dai tuoi orari e dal tuo modo di lavorare. E se vuoi semplicemente sapere se Sydney è aperta in questo momento dove ti trovi, lo [strumento live](/it) ne mostra lo stato in tempo reale.
+
+## Domande frequenti
+
+**A che ora apre la sessione forex di Sydney?**
+Apre alle 08:00 ora locale di Sydney, cioè alle 22:00 GMT quando Sydney è in ora solare (AEST) e alle 21:00 GMT quando è in ora legale (AEDT). Poiché l’Australia si trova nell’emisfero australe, questo passaggio avviene nel periodo dell’anno opposto rispetto a Regno Unito e Stati Uniti.
+
+**Perché la sessione di Sydney è così tranquilla?**
+I mercati valutari australiano e neozelandese sono più piccoli di quelli europei o americani, e quando Sydney apre nessun altro grande centro sta ancora operando. Questa combinazione ne fa la fase della giornata di trading con la liquidità più scarsa e i range più stretti.
+
+**Quali sono le coppie migliori nella sessione di Sydney?**
+Le valute dell’Australasia: AUD/USD, NZD/USD e i cross tra valute legate alle materie prime e yen AUD/JPY e NZD/JPY, oltre al cross regionale AUD/NZD. Sono questi i mercati svegli durante l’orario di Sydney.
+
+**La sessione di Sydney si sovrappone a quella di Tokyo?**
+Sì. Un paio d’ore dopo l’apertura di Sydney si attiva Tokyo, e le due sessioni si sovrappongono durante la mattinata asiatica. In questa sovrapposizione Sydney-Tokyo la liquidità sulle coppie con yen e dollaro australiano migliora.
+
+**Quando chiude la sessione di Sydney?**
+Chiude alle 17:00 ora locale di Sydney, cioè alle 07:00 GMT nel caso AEST (ora solare) e alle 06:00 GMT nel caso AEDT (ora legale).
+
+*Questo articolo ha solo scopo informativo generale e non costituisce una consulenza finanziaria.*`,
+      de: `Die Sydney-Session eröffnet die Forex-Woche. Sie geht am Sonntagabend GMT online und läuft in der Normalzeit von **22:00 bis 07:00 GMT**. Damit ist Sydney das erste große Zentrum, das nach dem Wochenende wieder öffnet. Sie ist die ruhigste der vier großen Sessions, mit geringerer Liquidität als in jedem anderen Abschnitt des Tages und einem natürlichen Schwerpunkt auf dem Australischen Dollar (AUD) und dem Neuseeland-Dollar (NZD). Dieser Ratgeber zeigt, wann die Sydney-Session in Ihrer eigenen Zeitzone läuft, warum sie der ruhige Auftakt des globalen Staffellaufs ist und welche Paare den Blick am meisten lohnen.
+
+Für Trader setzt Sydney den frühen Ton. Hier beginnt der Wochenrhythmus, hier entstehen die ersten Kurse der Woche, und hier zeigen sich Nachrichten vom Wochenende zuerst im Chart. Die dramatischen Bewegungen von London oder New York bringt die Session selten hervor, doch gerade ihr ruhiger, kontrollierter Charakter macht es lohnend, sie zu verstehen.
+
+## Handelszeiten der Sydney-Session in Ihrer Zeitzone
+
+In der Normalzeit läuft die Sydney-Session von **22:00 bis 07:00 GMT**, also von **08:00 bis 17:00 Uhr Ortszeit in Sydney**, da Ostaustralien in der Normalzeit bei GMT+10 liegt. Dabei gibt es eine wichtige Besonderheit: Australien liegt auf der Südhalbkugel, sein Sommerzeitkalender verläuft also entgegengesetzt zu dem in Europa und Nordamerika. Die australischen Uhren werden um Oktober herum auf GMT+11 vorgestellt, genau dann, wenn die Uhren im Norden zurückgestellt werden, und um April herum wieder zurückgestellt, wenn die nördlichen Uhren vorrücken. Das GMT-Fenster der Sydney-Session verschiebt sich daher zu anderen Jahreszeiten als die Fenster von London oder New York.
+
+Die Tabelle unten zeigt die Eröffnung in Sydney für eine Reihe gängiger Zonen, ausgehend von dem Fall, dass in Sydney Normalzeit gilt (AEST, GMT+10).
+
+| Ihre Stadt / Zone | Sydney-Eröffnung (AEST-Fall) | Sydney-Schluss (AEST-Fall) |
+| --- | --- | --- |
+| Sydney (AEST) | 08:00 | 17:00 |
+| London (Großbritannien, GMT) | 22:00 | 07:00 (Folgetag) |
+| New York (ET) | 17:00 | 02:00 (Folgetag) |
+| Frankfurt / Paris (MEZ) | 23:00 | 08:00 (Folgetag) |
+| Istanbul (TRT) | 01:00 (Folgetag) | 10:00 (Folgetag) |
+| Dubai (GST) | 02:00 (Folgetag) | 11:00 (Folgetag) |
+| Mumbai (IST) | 03:30 (Folgetag) | 12:30 (Folgetag) |
+| Singapur (SGT) | 06:00 | 15:00 |
+
+Da Nord- und Südhalbkugel ihre Uhren in entgegengesetzte Richtungen umstellen, ändert sich der Abstand zwischen Sydney und Städten wie London oder New York im Laufe des Jahres um zwei Stunden statt um eine. Das sorgt häufig für Verwirrung, und genau das übernimmt das [Live-Tool für die Forex-Handelszeiten](/de) für Sie: Es zeigt Sydney und jede andere Session in Ihrer eigenen Zeitzone an und passt sich automatisch an die Sommerzeit auf beiden Seiten des Äquators an.
+
+## Warum die Sydney-Session der ruhige Auftakt ist
+
+Sydney ist der ruhige Start des globalen Staffellaufs und kein Aktivitätsschub. Die Liquidität ist in den reinen Sydney-Stunden meist geringer als zu jedem anderen Zeitpunkt des Handelstages, und der Grund dafür ist einfach: Die Volkswirtschaften Australiens und Neuseelands sind zwar groß und wichtig, haben aber kleinere Devisenmärkte als Europa oder die USA. Es sind weniger Teilnehmer aktiv, die Spannen sind daher meist enger und die Kursbewegungen gemäßigter.
+
+Hinzu kommt die Frage, was sonst noch geöffnet ist. Wenn Sydney am Sonntagabend GMT online geht, handelt noch kein anderes großes Zentrum. Erst wenn Tokio ein paar Stunden später hinzukommt, gewinnt die Asien-Session echte Tiefe. Die frühesten Sydney-Stunden sind also die dünnsten der Woche, und das ist ein Grund, warum viele Trader die Eröffnung am Sonntag mit Vorsicht angehen: Die Spreads sind breiter, und der Kurs kann sich bei relativ kleinen Orders stärker bewegen, wenn weniger Markttiefe vorhanden ist, um sie aufzufangen.
+
+Unwichtig ist Sydney deshalb nicht. Die Session eröffnet die Woche, verarbeitet als erste die Nachrichten vom Wochenende und legt die Spannen fest, um die herum zuerst Tokio und dann London handeln. Sie ist von Natur aus einfach ruhiger, und wer das weiß, liest die frühen Stunden richtig, statt von ihnen Bewegungen wie in London zu erwarten. Wie Sydney an den Rest des Tages übergibt, zeigt unser Ratgeber [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert).
+
+## Die besten Währungspaare in der Sydney-Session
+
+Die Sydney-Session dreht sich naturgemäß um die Währungen, deren Heimatmärkte geöffnet sind: den Australischen Dollar und den Neuseeland-Dollar, dazu den japanischen Yen, sobald sich Tokio überschneidet.
+
+**AUD/USD** ist das Leitpaar. Der Australische Dollar ist eng an die Rohstoffpreise und an die Signale der Reserve Bank of Australia gekoppelt und erlebt in diesen Stunden seinen aktivsten lokalen Handel. Australische Konjunkturdaten erscheinen in der Regel am lokalen Vormittag, also mitten in der Sydney-Session, und können das Paar vor einem ansonsten ruhigen Hintergrund bewegen.
+
+**NZD/USD** verhält sich ähnlich und wird von neuseeländischen Daten und den Entscheidungen der Reserve Bank of New Zealand getrieben. Das Paar ist oft noch dünner als AUD/USD, sodass die Bewegungen im Verhältnis zum Volumen dahinter heftiger ausfallen können.
+
+**AUD/JPY** und **NZD/JPY** werden aktiver, wenn sich die Sydney-Session mit der Eröffnung in Tokio überschneidet. Diese Rohstoff-Yen-Crosses sind während der asiatischen Handelszeit beliebt und können sowohl auf australasiatische als auch auf japanische Nachrichten reagieren.
+
+**AUD/NZD** ist ein rein regionales Kreuzpaar, das fast ausschließlich während der Handelszeiten im asiatisch-pazifischen Raum gehandelt wird. Es eignet sich, um eine Einschätzung zur relativen Stärke der beiden Währungen von den Antipoden ohne den US-Dollar zu treffen.
+
+Kurz gesagt: Sydney begünstigt die australasiatischen Währungen, weil das die Märkte sind, die zu dieser Zeit wach sind. Zu den Daten, die sie tatsächlich bewegen: Die Reserve Bank of Australia veröffentlicht ihre geldpolitischen Entscheidungen und ihren Terminplan unter https://www.rba.gov.au.
+
+## Die Überschneidung von Sydney und Tokio
+
+Allein handelt Sydney nicht lange. Ein paar Stunden nach der Eröffnung geht Tokio online, und die beiden Sessions überschneiden sich über den asiatischen Vormittag hinweg. Diese **Überschneidung von Sydney und Tokio** ist die zweite, kleinere Überschneidung des Handelstages, weit weniger aktiv als das Fenster von London und New York, aber durchaus von eigener Bedeutung.
+
+Während dieser Überschneidung verbessert sich die Liquidität in Yen- und AUD-Paaren gegenüber den reinen Sydney-Stunden spürbar. Tokio bringt den ersten wirklich großen asiatischen Liquiditätspool mit, sodass Paare wie AUD/JPY und USD/JPY aktiver gehandelt werden und regionale Nachrichten aus Australien, Neuseeland, Japan und oft auch China echte Bewegungen auslösen können. Ruhiger als die europäische und die amerikanische Session ist es dennoch, doch es ist der lebhafteste Teil des Tages im asiatisch-pazifischen Raum.
+
+Einen genaueren Blick auf die Session, an die Sydney übergibt, bietet unser Ratgeber zur [Forex-Session in Tokio und Asien](/de/blog/forex-session-tokio-asien), der den seitwärts gerichteten Charakter der asiatischen Handelszeit ausführlicher behandelt.
+
+## Sydney in der Praxis handeln
+
+Die Sydney-Session verlangt eher eine bestimmte Art von Aufmerksamkeit als eine bestimmte Strategie, und einige praktische Punkte sollten Sie im Hinterkopf behalten.
+
+Dünne Liquidität ist das prägende Merkmal. Breitere Spreads erhöhen die Handelskosten, und geringere Markttiefe bedeutet, dass der Kurs bei Nachrichten oder relativ kleinen Orders springen kann. Besonders die Eröffnung am Sonntag kann eine Wochenendlücke zeigen: Die ersten Kurse der Woche liegen dann auf einem anderen Niveau als der Schlusskurs vom Freitag, wenn während der Schließung wichtige Nachrichten erschienen sind. Viele Trader warten, bis sich die Spreads normalisiert haben, bevor sie größere Positionen eingehen.
+
+Die Kehrseite: Die ruhigeren, kontrollierteren Spannen der asiatisch-pazifischen Session können ein stabileres Umfeld bieten als die schnellen europäischen und amerikanischen Handelsstunden. Das ist vor allem eine Frage des Temperaments und der Zeitzone. Ein Trader in Sydney, Singapur oder Tokio verfolgt seinen lokalen Markt zu einer angenehmen Uhrzeit, während es für jemanden in London oder New York Nachtstunden sind.
+
+Verstehen Sie das als Skizze der Session, nicht als Handlungsanleitung. Dünne Liquidität bedeutet meist ruhigere Märkte und hin und wieder einen schärferen Sprung bei Nachrichten. Ob das zu Ihnen passt, hängt von Ihren Paaren, Ihrem Zeitplan und Ihrer Arbeitsweise ab. Und wenn Sie einfach nur wissen möchten, ob Sydney bei Ihnen gerade geöffnet ist, zeigt das [Live-Tool](/de) den Status in Echtzeit.
+
+## Häufig gestellte Fragen
+
+**Wann öffnet die Sydney-Session im Forex?**
+Sie öffnet um 08:00 Uhr Ortszeit in Sydney, das ist 22:00 GMT, wenn in Sydney Normalzeit gilt (AEST), und 21:00 GMT während der Sommerzeit (AEDT). Weil Australien auf der Südhalbkugel liegt, erfolgt diese Umstellung zur entgegengesetzten Jahreszeit wie in Großbritannien und den USA.
+
+**Warum ist die Sydney-Session so ruhig?**
+Die Devisenmärkte Australiens und Neuseelands sind kleiner als die in Europa oder Amerika, und wenn Sydney öffnet, handelt noch kein anderes großes Zentrum. Diese Kombination macht sie zum Abschnitt des Handelstages mit der geringsten Liquidität und den engsten Spannen.
+
+**Welche Paare eignen sich in der Sydney-Session am besten?**
+Die australasiatischen Währungen: AUD/USD, NZD/USD und die Rohstoff-Yen-Crosses AUD/JPY und NZD/JPY sowie das regionale Kreuzpaar AUD/NZD. Das sind die Märkte, die während der Sydney-Stunden wach sind.
+
+**Überschneidet sich die Sydney-Session mit Tokio?**
+Ja. Ein paar Stunden nach der Eröffnung in Sydney geht Tokio online, und beide überschneiden sich über den asiatischen Vormittag hinweg. Während dieser Überschneidung von Sydney und Tokio verbessert sich die Liquidität in Yen- und AUD-Paaren.
+
+**Wann schließt die Sydney-Session?**
+Sie schließt um 17:00 Uhr Ortszeit in Sydney, das ist 07:00 GMT im AEST-Fall (Normalzeit) und 06:00 GMT im AEDT-Fall (Sommerzeit).
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Sidney forex seansı işlem haftasını açar. Pazar akşamı GMT’de devreye girer ve standart saatte **22:00 ile 07:00 GMT arasında** işler; bu da Sidney’i hafta sonundan sonra yeniden açılan ilk büyük merkez yapar. Dört büyük seansın en sakinidir: likiditesi günün diğer tüm bölümlerinden daha düşüktür ve doğal olarak Avustralya doları (AUD) ile Yeni Zelanda doları (NZD) üzerine yoğunlaşır. Bu rehber, Sidney seansının kendi saat diliminizde ne zaman işlediğini, neden küresel bayrak yarışının sakin başlangıcı olduğunu ve hangi paritelerin en çok izlenmeye değer olduğunu ele alıyor.
+
+Yatırımcılar için Sidney, günün ilk havasını belirler. Haftalık ritim burada başlar, haftanın ilk fiyatları burada oluşur ve hafta sonu haberleri grafikte ilk kez burada görünür. Londra ya da New York’un çarpıcı hareketlerini nadiren üretir, ancak onu anlamayı faydalı kılan da tam olarak bu sakin ve dengeli karakteridir.
+
+## Saat diliminize göre Sidney seansı saatleri
+
+Standart saatte Sidney seansı **22:00 ile 07:00 GMT arasında**, yani **Sidney yerel saatiyle 08:00 ile 17:00 arasında** işler; çünkü doğu Avustralya standart saatte GMT+10’dadır. Burada önemli bir ayrıntı var: Avustralya Güney Yarımküre’dedir, dolayısıyla yaz saati takvimi Avrupa ve Kuzey Amerika’nınkinin tersine işler. Avustralya’da saatler, kuzeyde saatlerin geri alındığı ekim ayı civarında GMT+11’e ileri alınır ve kuzeyde saatlerin ileri alındığı nisan ayı civarında geri alınır. Bu da Sidney seansının GMT penceresinin, Londra ya da New York pencerelerinden farklı zamanlarda kaydığı anlamına gelir.
+
+Aşağıdaki tablo, Sidney’in standart saatte (AEST, GMT+10) olduğu durumu esas alarak Sidney açılışını bir dizi yaygın saat diliminde gösteriyor.
+
+| Şehriniz / saat diliminiz | Sidney açılışı (AEST durumu) | Sidney kapanışı (AEST durumu) |
+| --- | --- | --- |
+| Sidney (AEST) | 08:00 | 17:00 |
+| Londra (İngiltere, GMT) | 22:00 | 07:00 (ertesi gün) |
+| New York (ET) | 17:00 | 02:00 (ertesi gün) |
+| Frankfurt / Paris (CET) | 23:00 | 08:00 (ertesi gün) |
+| İstanbul (TRT) | 01:00 (ertesi gün) | 10:00 (ertesi gün) |
+| Dubai (GST) | 02:00 (ertesi gün) | 11:00 (ertesi gün) |
+| Mumbai (IST) | 03:30 (ertesi gün) | 12:30 (ertesi gün) |
+| Singapur (SGT) | 06:00 | 15:00 |
+
+Kuzey ve Güney yarımküreler saatlerini ters yönlerde değiştirdiği için Sidney ile Londra ya da New York gibi şehirler arasındaki fark yıl içinde bir değil iki saat değişir. Bu sık karşılaşılan bir kafa karışıklığı kaynağıdır ve [canlı forex piyasa saatleri aracı](/tr) tam da bu tür bir işi sizin yerinize üstlenir: Sidney’i ve diğer tüm seansları kendi saat diliminizde gösterir ve ekvatorun her iki yanındaki yaz saati değişikliklerine göre otomatik olarak ayarlama yapar.
+
+## Sidney seansı neden sakin bir açılıştır
+
+Sidney, bir hareketlilik patlamasından çok küresel bayrak yarışının sakin başlangıcıdır. Saf Sidney saatlerindeki likidite, işlem gününün diğer tüm anlarından genellikle daha düşüktür ve bunun basit bir nedeni vardır: Avustralya ve Yeni Zelanda ekonomileri büyük ve önemli olsa da Avrupa ya da ABD’ye kıyasla daha küçük döviz piyasalarına sahiptir. Daha az katılımcı faaliyettedir; bu yüzden aralıklar daha dar, fiyat hareketleri daha ölçülü olma eğilimindedir.
+
+Bir de başka nelerin açık olduğu meselesi vardır. Sidney pazar akşamı GMT’de devreye girdiğinde henüz başka hiçbir büyük merkez işlem yapmıyordur. Asya seansı ancak birkaç saat sonra Tokyo katıldığında gerçek bir derinlik kazanır. Dolayısıyla Sidney’in ilk saatleri haftanın en sığ saatleridir ve pek çok yatırımcının pazar açılışına temkinli yaklaşmasının bir nedeni de budur: emirleri karşılayacak derinlik az olduğunda spread’ler daha geniştir ve fiyat görece küçük emirlerle bile daha sert hareket edebilir.
+
+Bunların hiçbiri Sidney’i önemsiz kılmaz. Haftayı açar, hafta sonu haberlerini ilk o karşılar ve Tokyo’nun, ardından Londra’nın etrafında işlem yapacağı aralıkları oluşturur. Yalnızca doğası gereği daha sakindir; bunu bilmek, ilk saatlerden Londra tarzı hareketler beklemek yerine onları doğru okumanıza yardımcı olur. Sidney’in günün geri kalanına nasıl devrettiğini görmek için [forex işlem seansları rehberimize](/tr/blog/forex-islem-seanslari-rehberi) göz atın.
+
+## Sidney seansında öne çıkan pariteler
+
+Sidney seansı doğal olarak iç piyasaları açık olan para birimleri üzerine yoğunlaşır: Avustralya doları ve Yeni Zelanda doları, Tokyo ile çakışma başladığında da Japon yeni.
+
+**AUD/USD** başrol paritesidir. Avustralya doları emtia fiyatlarına ve Avustralya Merkez Bankası (RBA) verilerine sıkı sıkıya bağlıdır ve en hareketli yerel işlemlerini bu saatlerde görür. Avustralya ekonomik verileri genellikle yerel sabah saatlerinde, yani tam Sidney seansının içinde açıklanır ve aksi hâlde sakin olan bir ortamda pariteyi hareket ettirebilir.
+
+**NZD/USD** de benzer şekilde davranır; Yeni Zelanda verileri ve Yeni Zelanda Merkez Bankası (RBNZ) kararları tarafından yönlendirilir. Çoğu zaman AUD/USD’den bile daha sığdır, bu yüzden hareketler arkalarındaki hacme oranla daha sert olabilir.
+
+**AUD/JPY** ve **NZD/JPY**, Sidney seansı Tokyo açılışıyla çakıştıkça daha hareketli hâle gelir. Bu emtia-yen çaprazları Asya saatlerinde popülerdir ve hem Avustralasya hem de Japonya haberlerine tepki verebilir.
+
+**AUD/NZD**, neredeyse tamamen Asya-Pasifik saatlerinde işlem gören saf bölgesel bir çaprazdır; ABD dolarını denklemin dışında bırakarak iki antipod para biriminin göreli gücü hakkında görüş almak için kullanışlıdır.
+
+Kısacası Sidney, Avustralasya para birimlerini öne çıkarır, çünkü o saatte uyanık olan piyasalar bunlardır. Onları gerçekten hareket ettiren veriler için Avustralya Merkez Bankası, politika kararlarını ve takvimini https://www.rba.gov.au adresinde yayımlar.
+
+## Sidney-Tokyo çakışması
+
+Sidney uzun süre tek başına işlem yapmaz. Açılışından birkaç saat sonra Tokyo devreye girer ve iki seans Asya sabahı boyunca çakışır. Bu **Sidney-Tokyo çakışması**, işlem gününün ikinci ve daha küçük çakışmasıdır; Londra-New York penceresinden çok daha sakindir ama kendi başına anlamlıdır.
+
+Bu çakışma sırasında yen ve Avustralya doları paritelerindeki likidite, saf Sidney saatlerine kıyasla belirgin biçimde artar. Tokyo, gerçek anlamda büyük ilk Asya likidite havuzunu getirir; bu yüzden AUD/JPY ve USD/JPY gibi pariteler daha aktif işlem görür ve Avustralya, Yeni Zelanda, Japonya ve çoğu zaman Çin’den gelen bölgesel haberler gerçek hareketler üretebilir. Yine de Avrupa ve Amerika seanslarından daha sakindir, ancak Asya-Pasifik gününün en canlı bölümüdür.
+
+Sidney’in devrettiği seansa daha yakından bakmak için Asya saatlerinin dar aralıkta seyreden karakterini daha ayrıntılı ele alan [Tokyo ve Asya forex seansı](/tr/blog/tokyo-asya-forex-seansi) rehberimize göz atın.
+
+## Uygulamada Sidney seansında işlem
+
+Sidney seansı belirli bir stratejiden çok belirli türde bir dikkat ister ve akılda tutulmaya değer birkaç pratik nokta vardır.
+
+Belirleyici özellik sığ likiditedir. Daha geniş spread’ler işlem maliyetini artırır, daha düşük derinlik ise fiyatın haberlerle ya da görece küçük emirlerle sıçrayabileceği anlamına gelir. Özellikle pazar açılışında hafta sonu boşluğu (gap) görülebilir: piyasa kapalıyken önemli bir haber çıktıysa haftanın ilk fiyatları cuma kapanışından farklı bir seviyede oluşur. Pek çok yatırımcı, daha büyük pozisyonlara girmeden önce spread’lerin normale dönmesini bekler.
+
+Madalyonun öbür yüzü ise Asya-Pasifik seansının daha sakin ve daha dengeli aralıklarının, hızlı hareket eden Avrupa ve Amerika saatlerinden daha istikrarlı bir ortam sunabilmesidir. Bu, her şey kadar mizaç ve saat dilimi meselesidir: Sidney’de, Singapur’da ya da Tokyo’da bulunan bir yatırımcı kendi yerel piyasasını makul bir saatte takip ederken, Londra’da ya da New York’ta bulunan biri için bu saatler gece saatleridir.
+
+Bunu bir oyun planı olarak değil, seansın bir taslağı olarak düşünün. Sığ likidite çoğu zaman daha sakin piyasalar, zaman zaman da haberlerle daha sert sıçramalar demektir; size uyup uymadığı paritelerinize, programınıza ve çalışma biçiminize bağlıdır. Sidney’in bulunduğunuz yerde şu anda açık olup olmadığını bilmek istiyorsanız [canlı araç](/tr) durumunu gerçek zamanlı olarak gösterir.
+
+## Sık sorulan sorular
+
+**Sidney forex seansı saat kaçta açılır?**
+Sidney yerel saatiyle 08:00’de açılır; bu, Sidney standart saatteyken (AEST) 22:00 GMT, yaz saatindeyken (AEDT) 21:00 GMT’dir. Avustralya Güney Yarımküre’de olduğu için bu geçiş, İngiltere ve ABD’nin tam tersi bir dönemde gerçekleşir.
+
+**Sidney seansı neden bu kadar sakin?**
+Avustralya ve Yeni Zelanda döviz piyasaları Avrupa’nın ya da Amerika’nınkinden küçüktür ve Sidney ilk açıldığında henüz başka hiçbir büyük merkez işlem yapmıyordur. Bu birleşim onu işlem gününün en düşük likiditeli ve en dar aralıklı bölümü yapar.
+
+**Sidney seansında hangi pariteler öne çıkar?**
+Avustralasya para birimleri: AUD/USD, NZD/USD, emtia-yen çaprazları AUD/JPY ve NZD/JPY ile bölgesel AUD/NZD çaprazı. Sidney saatlerinde uyanık olan piyasalar bunlardır.
+
+**Sidney seansı Tokyo ile çakışır mı?**
+Evet. Sidney açıldıktan birkaç saat sonra Tokyo devreye girer ve ikisi Asya sabahı boyunca çakışır. Bu Sidney-Tokyo çakışması sırasında yen ve Avustralya doları paritelerinde likidite artar.
+
+**Sidney seansı ne zaman kapanır?**
+Sidney yerel saatiyle 17:00’de kapanır; bu, AEST (standart saat) durumunda 07:00 GMT, AEDT (yaz saati) durumunda 06:00 GMT’dir.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -2537,24 +5695,46 @@ Elle ferme à 17:00 heure locale de Sydney, soit 07:00 GMT dans le cas AEST (heu
       en: "best-time-to-trade-forex",
       es: "mejor-hora-para-operar-en-forex",
       fr: "meilleur-moment-pour-trader-le-forex",
+      pt: "melhor-horario-para-operar-forex",
+      it: "miglior-orario-per-fare-trading-forex",
+      de: "beste-zeit-fuer-forex-trading",
+      tr: "forex-islem-yapmak-icin-en-iyi-saat",
     },
     title: {
       en: "The Best Time to Trade Forex: Sessions, Overlaps and Days",
       es: "La mejor hora para operar en forex: sesiones, solapamientos y días",
       fr: "Meilleur moment pour trader le forex : heures et jours",
+      pt: "O Melhor Horário para Operar Forex: Sessões, Sobreposições e Dias",
+      it: "Il miglior orario per fare trading forex: sessioni, sovrapposizioni e giorni",
+      de: "Die beste Zeit für Forex-Trading: Sessions, Überschneidungen und Tage",
+      tr: "Forex İşlem Yapmak İçin En İyi Saat: Seanslar, Çakışmalar ve Günler",
     },
     description: {
       en: "The best time to trade forex is the London-New York overlap, 13:00-17:00 GMT, when liquidity peaks. See the busiest sessions, days and how to find yours.",
       es: "La mejor hora para operar en forex es el solapamiento Londres-Nueva York, 13:00-17:00 GMT, con la liquidez más alta. Ve las sesiones y días más movidos.",
       fr: "Le meilleur moment pour trader le forex est le chevauchement Londres-New York, 13:00-17:00 GMT. Séances, jours les plus actifs et comment choisir le vôtre.",
+      pt: "O melhor horário para operar forex é a sobreposição Londres-Nova York, 13:00-17:00 GMT, com pico de liquidez. Veja as sessões e os dias mais ativos e ache o seu.",
+      it: "Il miglior orario per il forex è la sovrapposizione Londra-New York, 13:00-17:00 GMT, quando la liquidità è al top. Scopri sessioni, giorni e la tua fascia.",
+      de: "Die beste Zeit für Forex-Trading ist die Überschneidung London-New York, 13:00-17:00 GMT, wenn die Liquidität am höchsten ist. Die aktivsten Sessions und Tage.",
+      tr: "Forex için en iyi saat, likiditenin zirve yaptığı 13:00-17:00 GMT Londra-New York çakışmasıdır. En yoğun seansları, günleri ve size uyan dilimi görün.",
     },
     date: "2026-07-31",
-    localeDate: { fr: "2026-09-10" },
+    localeDate: {
+      fr: "2026-09-10",
+      pt: "2026-10-12",
+      tr: "2026-10-22",
+      de: "2026-11-01",
+      it: "2026-11-11",
+    },
     authorSlug: "author",
     tags: {
       en: ["Strategy", "Basics"],
       es: ["Estrategia", "Fundamentos"],
       fr: ["Stratégie", "Horaires"],
+      pt: ["Estratégia", "Fundamentos"],
+      it: ["Strategia", "Fondamenti"],
+      de: ["Strategie", "Grundlagen"],
+      tr: ["Strateji", "Temel Bilgiler"],
     },
     cover: "/blog/best-time-to-trade-forex.svg",
     body: {
@@ -2786,6 +5966,310 @@ Beaucoup de traders sont prudents pendant les heures les plus minces : la fin d�
 Utilisez un outil en direct qui convertit les séances à votre heure locale et s’ajuste à l’heure d’été, plutôt que de convertir le GMT à la main. L’outil forexmarkethours.app affiche l’état actuel de chaque séance où que vous soyez.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `O horário mais ativo para operar forex é a **sobreposição Londres-Nova York**, aproximadamente das **13:00 às 17:00 GMT** em horário padrão, quando os dois maiores centros financeiros do mundo estão abertos ao mesmo tempo e a liquidez está no ponto mais profundo. Dito isso, o “melhor” horário não é o mesmo para todo mundo: ele depende dos pares que você acompanha, do seu fuso horário e de você preferir muita atividade ou condições mais calmas. Este guia percorre as sessões mais movimentadas, as mais tranquilas, os melhores dias da semana e como encontrar a janela que realmente combina com você.
+
+Não existe uma hora mágica que funcione para todos os traders. O que os dados de mercado mostram com clareza é quando o volume e a volatilidade estão mais altos, e esse é um ponto de partida sensato. A partir daí, o horário certo para você é uma questão de casar esses padrões com a sua estratégia e a sua rotina.
+
+## A janela mais movimentada: a sobreposição Londres-Nova York
+
+Se há uma resposta para quando o mercado está mais ativo, é a sobreposição Londres-Nova York. Durante as quatro horas que vão aproximadamente das **13:00 às 17:00 GMT**, Londres e Nova York, os dois maiores centros de câmbio do mundo, estão abertos ao mesmo tempo. O fluxo de ordens dos dois se soma, a liquidez atinge o pico do dia, os spreads dos principais pares costumam estar no nível mais estreito e os movimentos de preço tendem a ser os mais consistentes.
+
+O domínio desses dois centros é medido, não é impressão. O **BIS Triennial Central Bank Survey**, do Banco de Compensações Internacionais (BIS), mostra de forma consistente o Reino Unido e os Estados Unidos com as duas maiores fatias do volume global de câmbio. Você pode consultá-lo em https://www.bis.org/statistics/rpfx22.htm. Quando os dois estão abertos juntos, uma fração muito grande da negociação do dia acontece nessa única janela, e é por isso que tantos traders organizam o dia em torno dela. Falamos dela em detalhes no nosso guia sobre a [sobreposição Londres-Nova York](/pt/blog/sobreposicao-londres-nova-york).
+
+## Como cada sessão se compara em atividade
+
+A atividade não se distribui de forma uniforme ao longo do dia de negociação. Cada sessão tem um nível de liquidez e um perfil próprios, e conhecer esse padrão ajuda você a escolher o seu momento.
+
+| Sessão | Horário (GMT, padrão) | Nível de atividade |
+| --- | --- | --- |
+| Sydney | 22:00 - 07:00 | Baixo; abre a semana, amplitudes estreitas |
+| Tóquio | 00:00 - 09:00 | Moderado; muitas vezes lateral, foco no iene |
+| Londres | 08:00 - 17:00 | Maior volume entre as sessões isoladas |
+| Nova York | 13:00 - 22:00 | Alto no início, perde força após o fechamento de Londres |
+| Sobreposição Londres-NY | 13:00 - 17:00 | Pico de todo o dia |
+
+A **sessão de Londres** sozinha concentra o maior volume de qualquer sessão isolada, então a abertura de Londres, por volta das 08:00 GMT, já é por si só um momento de muita atividade. A **manhã de Nova York** também é agitada, principalmente na parte em que se sobrepõe a Londres. A **sessão de Tóquio** é mais moderada e tende a negociar dentro de faixas, enquanto **Sydney** é a mais tranquila, abrindo a semana com liquidez fraca. O ponto mais baixo claro é o fim da tarde de Nova York, depois que Londres fecha, aproximadamente das 17:00 às 22:00 GMT, quando o volume vai secando rumo à calmaria do dia.
+
+Para conhecer melhor cada sessão, veja nossos guias sobre a [abertura da sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres), a [sessão de Nova York](/pt/blog/sessao-forex-de-nova-york), a [sessão de Tóquio](/pt/blog/sessao-forex-de-toquio-asia) e a [sessão de Sydney](/pt/blog/sessao-forex-de-sydney).
+
+## Os melhores dias da semana para operar
+
+Assim como a atividade varia ao longo do dia, ela varia ao longo da semana. O padrão geral é que o **meio da semana é o período mais ativo**, e as pontas são mais calmas.
+
+A **segunda-feira** começa devagar. O mercado reabre no domingo à noite com a liquidez fraca da Ásia-Pacífico, e muitas vezes só na sessão de Londres o volume ganha corpo de verdade. O início da segunda-feira pode ficar sem direção clara enquanto a semana se ajusta.
+
+**Terça, quarta e quinta-feira** costumam ser os dias mais movimentados e líquidos. É quando se concentram as principais divulgações econômicas agendadas, quando o fluxo institucional está no auge e quando as tendências tendem a ser mais limpas. Se você procura o coração da semana de negociação, ele está aqui.
+
+A **sexta-feira** é ativa na primeira metade, principalmente em torno de dados americanos divulgados pela manhã, mas tende a perder força à tarde, à medida que os traders encerram posições antes do fim de semana. O mercado fecha às 17h no horário de Nova York, e a liquidez vai minguando até esse fechamento. Alguns traders evitam o fim da tarde de sexta por causa dessa queda de liquidez e do risco de gap que vem com manter posições durante o fim de semana.
+
+Para saber mais sobre a abertura e o fechamento semanais, e quais dias trazem risco de liquidez por causa de feriados, veja nosso guia sobre se [o mercado forex está aberto hoje](/pt/blog/o-mercado-forex-esta-aberto-hoje).
+
+## Quando a volatilidade é maior, e por que mais nem sempre é melhor
+
+Muita atividade normalmente significa muita volatilidade, e vale deixar claro que isso não é automaticamente uma coisa boa. Volatilidade é movimento, e movimento é oportunidade e risco na mesma medida.
+
+A volatilidade atinge o pico em torno das aberturas das sessões e durante a sobreposição Londres-Nova York, e dispara com mais força em torno de notícias agendadas: o relatório de emprego dos EUA (non-farm payrolls), os dados de inflação e as decisões dos bancos centrais, como o [Federal Reserve](https://www.federalreserve.gov) e o [Banco da Inglaterra](https://www.bankofengland.co.uk). Esses momentos produzem os movimentos maiores e mais rápidos da semana, e é exatamente por isso que alguns traders vão atrás deles e outros os evitam de propósito.
+
+O ponto a guardar é que mais movimento não é o mesmo que operar melhor. Um mercado volátil gera falsos rompimentos e reversões bruscas com a mesma facilidade com que gera tendências limpas, e uma oscilação ampla pode acionar um stop tão rápido quanto pode levar uma operação ao lucro. As sessões mais calmas negociam em faixas menores, que muita gente acha mais fáceis de administrar. Nenhuma é melhor em abstrato; elas apenas combinam com temperamentos diferentes. Tudo isso descreve quando o mercado se movimenta, e para por aí. O que você faz com esses momentos é decisão sua.
+
+## Como encontrar o melhor horário para você
+
+O “melhor” horário para operar é, no fim das contas, pessoal, e se resume a três coisas: seus pares, seu fuso horário e seu estilo.
+
+**Seus pares.** Cada moeda é mais ativa quando seu mercado de origem está aberto. Os pares com euro e libra rendem mais durante a sessão de Londres; os pares com dólar atingem o pico na manhã de Nova York; os pares com iene ficam mais animados no horário de Tóquio; e os dólares australiano e neozelandês são mais ativos na janela Sydney-Tóquio. Operar um par quando seus mercados estão acordados geralmente significa spreads mais estreitos e mais liquidez.
+
+**Seu fuso horário.** Você precisa operar em horários em que consegue de fato estar presente. A sobreposição Londres-Nova York é a janela mais ativa, mas, se ela cai no meio da sua madrugada, forçar-se a operar nela não faz sentido. Muitos traders se saem melhor acompanhando uma sessão que coincide com as horas em que estão acordados, mesmo que seja mais calma.
+
+**Seu estilo.** Se você quer movimento rápido e está preparado para administrá-lo, as sobreposições e as aberturas das sessões são onde a ação acontece. Se prefere condições mais calmas e contidas, a sessão asiática ou as horas mais tranquilas podem combinar mais com você.
+
+O jeito prático de juntar as três coisas é ver as sessões no seu horário local em vez de converter o GMT de cabeça. A [ferramenta de horário do mercado forex ao vivo](/pt) mostra o status de cada sessão no seu fuso horário em tempo real e se ajusta automaticamente ao horário de verão, para você ver de relance qual janela está aberta quando você está disponível.
+
+## Perguntas frequentes
+
+**Qual é o melhor horário do dia para operar forex?**
+A janela mais ativa é a sobreposição Londres-Nova York, aproximadamente das 13:00 às 17:00 GMT, quando os dois grandes centros estão abertos e a liquidez atinge o pico. Se esse é o “melhor” horário para você também depende dos seus pares, do seu fuso horário e da sua estratégia.
+
+**Qual é o melhor dia da semana para operar forex?**
+Terça, quarta e quinta-feira costumam ser os dias mais ativos e líquidos, com as principais divulgações de dados e o fluxo institucional mais forte. A segunda-feira começa devagar e a sexta-feira perde força à tarde, antes do fechamento do fim de semana.
+
+**Volatilidade maior é melhor para operar?**
+Não necessariamente. Volatilidade maior significa movimentos maiores nas duas direções, o que é tanto risco quanto oportunidade. As sessões mais calmas oferecem faixas menores e mais contidas. O nível certo depende da sua abordagem, não de uma regra única.
+
+**Quando devo evitar operar forex?**
+Muitos traders têm cautela nas horas de menor liquidez, no fim da tarde de Nova York depois que Londres fecha, na abertura de domingo e nos grandes feriados, quando spreads mais largos e liquidez baixa podem tornar as condições ruins. Esta é uma informação geral, não uma recomendação.
+
+**Como sei qual sessão está aberta no meu fuso horário?**
+Use uma ferramenta ao vivo que converta as sessões para o seu horário local e se ajuste ao horário de verão, em vez de converter o GMT na mão. A ferramenta do forexmarkethours.app mostra o status atual de cada sessão, onde quer que você esteja.
+
+*Este artigo tem caráter apenas informativo e não constitui recomendação financeira.*`,
+      it: `Il momento più attivo per fare trading sul forex è la **sovrapposizione Londra-New York**, all’incirca dalle **13:00 alle 17:00 GMT** in ora solare, quando i due maggiori centri finanziari del mondo sono aperti insieme e la liquidità è al massimo. Detto questo, il momento “migliore” non è lo stesso per tutti: dipende dalle coppie che segui, dal tuo fuso orario e dal fatto che tu cerchi molta attività o condizioni più tranquille. Questa guida passa in rassegna le sessioni più intense, quelle più calme, i giorni migliori della settimana e come trovare la fascia che fa davvero per te.
+
+Non esiste un’ora magica che funzioni per ogni trader. Quello che i dati di mercato mostrano con chiarezza è quando volumi e volatilità sono più alti, ed è un punto di partenza sensato. Da lì in poi, il momento giusto per te è una questione di far combaciare questi schemi con la tua strategia e i tuoi orari.
+
+## La fascia più intensa: la sovrapposizione Londra-New York
+
+Se c’è una risposta alla domanda su quando il mercato è più attivo, è la sovrapposizione Londra-New York. Per le quattro ore che vanno all’incirca dalle **13:00 alle 17:00 GMT**, Londra e New York, i due maggiori centri FX del mondo, sono aperte contemporaneamente. I loro flussi di ordini si sommano, la liquidità raggiunge il picco giornaliero, gli spread sulle coppie principali sono di solito ai minimi e i movimenti di prezzo tendono a essere i più sostenuti.
+
+Il peso di questi due centri è misurato, non aneddotico. La **BIS Triennial Central Bank Survey**, della Banca dei Regolamenti Internazionali, mostra regolarmente che Regno Unito e Stati Uniti gestiscono le due quote più ampie del turnover FX globale. Puoi consultarla su https://www.bis.org/statistics/rpfx22.htm. Quando sono aperti insieme, una parte molto ampia degli scambi della giornata avviene in quest’unica fascia, ed è per questo che tanti trader organizzano la giornata intorno a essa. La trattiamo nel dettaglio nella nostra guida alla [sovrapposizione Londra-New York](/it/blog/sovrapposizione-londra-new-york).
+
+## Come si confrontano le sessioni per livello di attività
+
+L’attività non è distribuita in modo uniforme nella giornata di trading. Ogni sessione ha un livello di liquidità e un carattere ben distinti, e conoscere lo schema ti aiuta a scegliere il tuo momento.
+
+| Sessione | Orari (GMT, ora solare) | Livello di attività |
+| --- | --- | --- |
+| Sydney | 22:00 - 07:00 | Basso; apre la settimana, range stretti |
+| Tokyo | 00:00 - 09:00 | Moderato; spesso laterale, focus sullo yen |
+| Londra | 08:00 - 17:00 | Volume più alto tra le singole sessioni |
+| New York | 13:00 - 22:00 | Alto all’inizio, cala dopo la chiusura di Londra |
+| Sovrapposizione Londra-NY | 13:00 - 17:00 | Picco dell’intera giornata |
+
+La **sessione di Londra** da sola registra il turnover più alto di qualsiasi singola sessione, quindi l’apertura di Londra intorno alle 08:00 GMT è di per sé un momento di grande attività. Anche la **mattinata di New York** è vivace, soprattutto nella parte in cui si sovrappone a Londra. La **sessione di Tokyo** è più moderata e tende a muoversi in laterale, mentre **Sydney** è la più tranquilla e apre la settimana con poca liquidità. Il punto più basso in assoluto è il tardo pomeriggio di New York dopo la chiusura di Londra, all’incirca dalle 17:00 alle 22:00 GMT, quando i volumi calano verso la pausa quotidiana.
+
+Per approfondire le singole sessioni, leggi le nostre guide all’[apertura della sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra), alla [sessione di New York](/it/blog/sessione-forex-di-new-york), alla [sessione di Tokyo](/it/blog/sessione-forex-di-tokyo-asia) e alla [sessione di Sydney](/it/blog/sessione-forex-di-sydney).
+
+## I giorni migliori della settimana per fare trading
+
+Così come l’attività cambia nel corso della giornata, cambia anche nel corso della settimana. Lo schema generale è che la **metà della settimana è la più attiva**, mentre l’inizio e la fine sono più tranquilli.
+
+Il **lunedì** parte lentamente. Il mercato riapre la domenica sera con la scarsa liquidità dell’area Asia-Pacifico, e spesso bisogna aspettare la sessione di Londra perché i volumi crescano davvero. Il lunedì mattina può mancare di una direzione chiara, mentre la settimana prende il via.
+
+**Martedì, mercoledì e giovedì** sono di solito i giorni più intensi e liquidi. È qui che si concentrano i principali dati economici in calendario, che i flussi istituzionali sono al completo e che i trend tendono a essere più puliti. Se cerchi il cuore della settimana di trading, è qui.
+
+Il **venerdì** è attivo nella prima metà, soprattutto in presenza di dati americani in mattinata, ma tende a perdere vigore nel pomeriggio, quando i trader chiudono le posizioni in vista del weekend. Il mercato chiude alle 17:00 ora di New York e la liquidità si esaurisce verso quella chiusura. Alcuni trader evitano il tardo venerdì proprio per questo calo e per il rischio di gap legato al mantenere posizioni aperte durante il fine settimana.
+
+Per saperne di più sull’apertura e la chiusura settimanali, e su quali giorni comportano un rischio di liquidità per le festività, leggi la nostra guida su [il mercato forex è aperto oggi?](/it/blog/il-mercato-forex-e-aperto-oggi).
+
+## Quando la volatilità è più alta, e perché di più non è sempre meglio
+
+Molta attività di solito significa molta volatilità, ed è importante chiarire che non è automaticamente un bene. La volatilità è movimento, e il movimento è opportunità e rischio in egual misura.
+
+La volatilità raggiunge il picco intorno alle aperture delle sessioni e durante la sovrapposizione Londra-New York, e schizza verso l’alto soprattutto in corrispondenza delle notizie in calendario: il rapporto sui non-farm payrolls americani, i dati sull’inflazione e le decisioni delle banche centrali come la [Federal Reserve](https://www.federalreserve.gov) e la [Bank of England](https://www.bankofengland.co.uk). Sono i momenti che producono i movimenti più ampi e rapidi della settimana, ed è proprio per questo che alcuni trader li cercano e altri li evitano di proposito.
+
+Il punto da tenere a mente è che più movimento non equivale a un trading migliore. Un mercato volatile genera falsi segnali e inversioni brusche con la stessa facilità con cui genera trend puliti, e un’oscillazione ampia può far scattare uno stop con la stessa velocità con cui porta un’operazione in profitto. Le sessioni più tranquille si muovono in range più piccoli, che molte persone trovano più facili da gestire. Nessuna delle due è migliore in assoluto: semplicemente si adattano a temperamenti diversi. Tutto questo descrive quando il mercato si muove, e si ferma lì. Cosa fare in quei momenti lo decidi tu.
+
+## Trovare il momento migliore per te
+
+Il momento “migliore” per fare trading è in fondo una questione personale, e si riduce a tre elementi: le tue coppie, il tuo fuso orario e il tuo stile.
+
+**Le tue coppie.** Ogni valuta è più attiva quando il suo mercato di riferimento è aperto. Le coppie con euro e sterlina danno il meglio durante la sessione di Londra; le coppie in dollari raggiungono il picco nella mattinata di New York; le coppie con lo yen sono più vivaci nelle ore di Tokyo; e i dollari australiano e neozelandese sono più attivi nella fascia Sydney-Tokyo. Fare trading su una coppia quando i suoi mercati sono svegli di solito significa spread più stretti e liquidità migliore.
+
+**Il tuo fuso orario.** Devi fare trading in orari in cui puoi esserci davvero. La sovrapposizione Londra-New York è la fascia più attiva, ma se cade nel cuore della tua notte, costringerti a seguirla non ha senso. Molti trader ottengono risultati migliori seguendo una sessione in linea con le proprie ore di veglia, anche se più tranquilla.
+
+**Il tuo stile.** Se cerchi movimenti rapidi e sei attrezzato per gestirli, l’azione si trova nelle sovrapposizioni e alle aperture delle sessioni. Se preferisci condizioni più calme e contenute, la sessione asiatica o le ore più tranquille potrebbero fare più al caso tuo.
+
+Il modo pratico per far combaciare tutti e tre gli elementi è vedere le sessioni nella tua ora locale invece di convertire il GMT a mente. Lo [strumento live sugli orari del mercato forex](/it) mostra lo stato di ogni sessione nel tuo fuso orario in tempo reale e si adatta automaticamente all’ora legale, così vedi a colpo d’occhio quale fascia è aperta quando ci sei tu.
+
+## Domande frequenti
+
+**Qual è il miglior momento della giornata per fare trading forex?**
+La fascia più attiva è la sovrapposizione Londra-New York, all’incirca dalle 13:00 alle 17:00 GMT, quando entrambe le piazze principali sono aperte e la liquidità tocca il massimo. Che sia il momento “migliore” per te dipende anche dalle tue coppie, dal tuo fuso orario e dalla tua strategia.
+
+**Qual è il giorno migliore della settimana per fare trading forex?**
+Martedì, mercoledì e giovedì sono di solito i giorni più attivi e liquidi, con i principali dati economici e i flussi istituzionali al completo. Il lunedì parte lentamente e il venerdì si svuota nel pomeriggio, in vista della chiusura del weekend.
+
+**Una volatilità più alta è meglio per il trading?**
+Non necessariamente. Una volatilità più alta significa movimenti più ampi in entrambe le direzioni, il che è tanto un rischio quanto un’opportunità. Le sessioni più tranquille offrono range più piccoli e contenuti. Il livello giusto dipende dal tuo approccio, non da un’unica regola.
+
+**Quando dovrei evitare di fare trading forex?**
+Molti trader sono prudenti nelle ore più sottili, il tardo pomeriggio di New York dopo la chiusura di Londra, l’apertura della domenica e le principali festività, quando spread più larghi e bassa liquidità possono rendere le condizioni sfavorevoli. Si tratta di informazioni generali, non di un consiglio.
+
+**Come faccio a sapere quale sessione è aperta nel mio fuso orario?**
+Usa uno strumento live che converta le sessioni nella tua ora locale e tenga conto dell’ora legale, invece di convertire il GMT a mano. Lo strumento di forexmarkethours.app mostra lo stato attuale di ogni sessione ovunque tu sia.
+
+*Questo articolo ha esclusivamente scopo informativo e non costituisce una consulenza finanziaria.*`,
+      de: `Die aktivste Zeit für den Devisenhandel ist die **Überschneidung von London und New York**, in der Normalzeit etwa von **13:00 bis 17:00 GMT**, wenn die beiden größten Finanzzentren der Welt gleichzeitig geöffnet sind und die Liquidität am tiefsten ist. Allerdings ist die „beste“ Zeit nicht für alle dieselbe: Sie hängt von den Paaren ab, die Sie verfolgen, von Ihrer eigenen Zeitzone und davon, ob Sie hohe Aktivität oder ruhigere Bedingungen suchen. Dieser Leitfaden geht die geschäftigsten und die ruhigsten Sessions durch, die besten Wochentage und zeigt, wie Sie das Zeitfenster finden, das wirklich zu Ihnen passt.
+
+Eine magische Stunde, die für jeden Trader funktioniert, gibt es nicht. Was die Marktdaten aber klar zeigen, ist, wann Volumen und Volatilität am höchsten sind, und das ist ein sinnvoller Ausgangspunkt. Von dort aus geht es darum, diese Muster mit Ihrer Strategie und Ihrem Zeitplan in Einklang zu bringen.
+
+## Das geschäftigste Zeitfenster: die Überschneidung von London und New York
+
+Wenn es eine Antwort auf die Frage gibt, wann der Markt am aktivsten ist, dann ist es die Überschneidung von London und New York. In den vier Stunden von etwa **13:00 bis 17:00 GMT** sind London und New York, die beiden größten Devisenhandelsplätze der Welt, gleichzeitig geöffnet. Ihre Orderströme verbinden sich, die Liquidität erreicht ihren Tageshöchststand, die Spreads der Hauptwährungspaare sind meist am engsten, und die Kursbewegungen sind tendenziell am nachhaltigsten.
+
+Die Dominanz dieser beiden Zentren ist gemessen, nicht nur Anekdote. Der **BIS Triennial Central Bank Survey** der Bank für Internationalen Zahlungsausgleich zeigt immer wieder, dass das Vereinigte Königreich und die Vereinigten Staaten die beiden größten Anteile am weltweiten Devisenumsatz abwickeln. Sie können die Erhebung unter https://www.bis.org/statistics/rpfx22.htm nachlesen. Sind beide gleichzeitig geöffnet, findet ein sehr großer Teil des täglichen Handels in diesem einen Zeitfenster statt, und genau deshalb richten so viele Trader ihren Tag danach aus. Ausführlich behandeln wir das Thema in unserem Leitfaden zur [Überschneidung von London und New York](/de/blog/ueberschneidung-london-new-york).
+
+## Wie die Sessions bei der Aktivität abschneiden
+
+Die Aktivität ist nicht gleichmäßig über den Handelstag verteilt. Jede Session hat ein eigenes Liquiditätsniveau und einen eigenen Charakter, und wer das Muster kennt, kann seinen Moment besser wählen.
+
+| Session | Zeiten (GMT, Normalzeit) | Aktivitätsniveau |
+| --- | --- | --- |
+| Sydney | 22:00 - 07:00 | Gering; eröffnet die Woche, enge Spannen |
+| Tokio | 00:00 - 09:00 | Mäßig; oft seitwärts, Fokus auf den Yen |
+| London | 08:00 - 17:00 | Höchstes Volumen einer einzelnen Session |
+| New York | 13:00 - 22:00 | Anfangs hoch, dünnt nach Londons Schluss aus |
+| Überschneidung London-NY | 13:00 - 17:00 | Höhepunkt des ganzen Tages |
+
+Die **London-Session** allein hat den größten Umsatz aller einzelnen Sessions, daher ist die London-Eröffnung gegen 08:00 GMT schon für sich genommen ein Moment hoher Aktivität. Auch der **New Yorker Vormittag** ist lebhaft, vor allem dort, wo er sich mit London überschneidet. Die **Tokio-Session** verläuft gemäßigter und tendiert zum Seitwärtshandel, während **Sydney** am ruhigsten ist und die Woche mit geringer Liquidität eröffnet. Der klare Tiefpunkt ist der späte New Yorker Nachmittag nach dem Handelsschluss in London, etwa von 17:00 bis 22:00 GMT, wenn das Volumen in die tägliche Flaute abfließt.
+
+Einen genaueren Blick auf die einzelnen Sessions bieten unsere Leitfäden zur [Eröffnung der London-Session](/de/blog/wann-oeffnet-die-london-session), zur [New-York-Session](/de/blog/forex-session-new-york), zur [Tokio-Session](/de/blog/forex-session-tokio-asien) und zur [Sydney-Session](/de/blog/forex-session-sydney).
+
+## Die besten Wochentage für den Handel
+
+So wie die Aktivität über den Tag schwankt, schwankt sie auch über die Woche. Das grobe Muster: **Die Wochenmitte ist am aktivsten**, die Ränder sind ruhiger.
+
+Der **Montag** beginnt langsam. Der Markt öffnet am Sonntagabend bei geringer Liquidität im asiatisch-pazifischen Raum, und oft dauert es bis zur London-Session, bis sich das Volumen richtig aufbaut. Dem frühen Montag fehlt häufig eine klare Richtung, während die Woche erst ihren Tritt findet.
+
+**Dienstag, Mittwoch und Donnerstag** sind typischerweise die geschäftigsten und liquidesten Tage. Dann häufen sich die wichtigen planmäßigen Wirtschaftsdaten, die institutionellen Orderströme sind am stärksten, und Trends verlaufen meist am saubersten. Wenn Sie das Herzstück der Handelswoche suchen, finden Sie es hier.
+
+Der **Freitag** ist in der ersten Tageshälfte aktiv, besonders rund um US-Daten am Vormittag, dünnt aber am Nachmittag tendenziell aus, wenn Trader vor dem Wochenende Positionen schließen. Der Markt schließt um 17:00 Uhr New Yorker Zeit, und die Liquidität verebbt bis zu diesem Schluss. Manche Trader meiden den späten Freitag wegen dieser Ausdünnung und des Gap-Risikos, das mit dem Halten von Positionen über das Wochenende einhergeht.
+
+Mehr zur Wocheneröffnung und zum Wochenschluss sowie dazu, an welchen Tagen Feiertage die Liquidität beeinträchtigen können, lesen Sie in unserem Leitfaden dazu, ob der [Forex-Markt heute geöffnet ist](/de/blog/ist-der-forex-markt-heute-geoeffnet).
+
+## Wann die Volatilität am höchsten ist und warum mehr nicht immer besser ist
+
+Hohe Aktivität bedeutet in der Regel hohe Volatilität, und man sollte sich klarmachen, dass das nicht automatisch gut ist. Volatilität ist Bewegung, und Bewegung bedeutet zu gleichen Teilen Chance und Risiko.
+
+Die Volatilität erreicht ihre Spitzen rund um die Session-Eröffnungen und während der Überschneidung von London und New York, und am heftigsten schlägt sie bei geplanten Nachrichten aus: beim US-Arbeitsmarktbericht (Non-Farm Payrolls), bei Inflationsdaten und bei Zinsentscheidungen der [Federal Reserve](https://www.federalreserve.gov) und der [Bank of England](https://www.bankofengland.co.uk). Diese Momente erzeugen die größten und schnellsten Bewegungen der Woche, und genau deshalb suchen manche Trader sie gezielt, während andere sie bewusst meiden.
+
+Festhalten sollte man vor allem eines: Mehr Bewegung ist nicht gleichbedeutend mit besserem Trading. Ein volatiler Markt produziert Fehlstarts und abrupte Umkehrungen ebenso bereitwillig wie saubere Trends, und ein weiter Ausschlag kann einen Stop genauso schnell auslösen, wie er einen Trade ins Plus treibt. Ruhigere Sessions bewegen sich in kleineren Spannen, mit denen viele Menschen leichter umgehen können. Keines von beidem ist an sich besser; sie passen einfach zu unterschiedlichen Temperamenten. All das beschreibt nur, wann sich der Markt bewegt, und nicht mehr. Was Sie aus diesen Momenten machen, entscheiden Sie selbst.
+
+## Die beste Zeit für Sie finden
+
+Die „beste“ Zeit zum Handeln ist letztlich individuell und hängt von drei Dingen ab: Ihren Paaren, Ihrer Zeitzone und Ihrem Stil.
+
+**Ihre Paare.** Jede Währung ist am aktivsten, wenn ihr Heimatmarkt geöffnet ist. Euro- und Pfund-Paare handeln am besten während der London-Session; Dollar-Paare erreichen ihren Höhepunkt am New Yorker Vormittag; Yen-Paare sind in den Tokioter Stunden am lebhaftesten; und der Australische sowie der Neuseeland-Dollar sind im Zeitfenster Sydney-Tokio am aktivsten. Ein Paar zu handeln, während seine Märkte wach sind, bedeutet in der Regel engere Spreads und bessere Liquidität.
+
+**Ihre Zeitzone.** Sie müssen zu Zeiten handeln, zu denen Sie tatsächlich anwesend sein können. Die Überschneidung von London und New York ist das aktivste Zeitfenster, doch wenn sie mitten in Ihre Nacht fällt, ist es nicht sinnvoll, sich dazu zu zwingen. Viele Trader fahren besser damit, einer Session zu folgen, die zu ihren eigenen Wachzeiten passt, auch wenn sie ruhiger ist.
+
+**Ihr Stil.** Wenn Sie schnelle Bewegungen suchen und darauf eingestellt sind, sie zu managen, spielt die Musik in den Überschneidungen und bei den Session-Eröffnungen. Wenn Sie ruhigere, überschaubarere Bedingungen bevorzugen, passen die asiatische Session oder die ruhigeren Stunden womöglich besser zu Ihnen.
+
+Am praktischsten bringen Sie alle drei Punkte zusammen, indem Sie die Sessions in Ihrer eigenen Ortszeit sehen, statt GMT im Kopf umzurechnen. Das [Live-Tool für die Forex-Handelszeiten](/de) zeigt den Status jeder Session in Echtzeit in Ihrer Zeitzone an und berücksichtigt die Sommerzeit automatisch, sodass Sie auf einen Blick sehen, welches Zeitfenster gerade geöffnet ist, wenn Sie es sind.
+
+## Häufig gestellte Fragen
+
+**Was ist die beste Tageszeit für Forex-Trading?**
+Das aktivste Zeitfenster ist die Überschneidung von London und New York, etwa von 13:00 bis 17:00 GMT, wenn beide großen Zentren geöffnet sind und die Liquidität ihren Höhepunkt erreicht. Ob es auch für Sie die „beste“ Zeit ist, hängt zusätzlich von Ihren Paaren, Ihrer Zeitzone und Ihrer Strategie ab.
+
+**Was ist der beste Wochentag für Forex-Trading?**
+Dienstag, Mittwoch und Donnerstag sind typischerweise die aktivsten und liquidesten Tage, mit den wichtigen Datenveröffentlichungen und den stärksten institutionellen Orderströmen. Der Montag beginnt langsam, und der Freitag dünnt am Nachmittag vor dem Wochenschluss aus.
+
+**Ist höhere Volatilität besser für das Trading?**
+Nicht unbedingt. Höhere Volatilität bedeutet größere Bewegungen in beide Richtungen, also ebenso viel Risiko wie Chance. Ruhigere Sessions bieten kleinere, überschaubarere Spannen. Das richtige Maß hängt von Ihrem Ansatz ab, nicht von einer einzigen Regel.
+
+**Wann sollte ich nicht mit Forex handeln?**
+Viele Trader sind in den dünnsten Stunden vorsichtig: am späten New Yorker Nachmittag nach dem Handelsschluss in London, bei der Sonntagseröffnung und an wichtigen Feiertagen, wenn breitere Spreads und geringe Liquidität für schlechte Bedingungen sorgen können. Dies ist eine allgemeine Information und keine Beratung.
+
+**Woher weiß ich, welche Session in meiner Zeitzone geöffnet ist?**
+Nutzen Sie ein Live-Tool, das die Sessions in Ihre Ortszeit umrechnet und die Sommerzeit berücksichtigt, statt GMT von Hand umzurechnen. Das Tool von forexmarkethours.app zeigt den aktuellen Status jeder Session an, wo auch immer Sie sind.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex’te işlem yapmak için en hareketli zaman, standart saat döneminde kabaca **13:00 ile 17:00 GMT** arasındaki **Londra-New York çakışmasıdır**; bu saatlerde dünyanın en büyük iki finans merkezi aynı anda açıktır ve likidite en derin seviyesindedir. Bununla birlikte “en iyi” zaman herkes için aynı değildir: takip ettiğiniz paritelere, kendi saat diliminize ve yüksek hareketlilik mi yoksa daha sakin koşullar mı istediğinize bağlıdır. Bu rehber en yoğun seansları, en sakin olanları, haftanın en iyi günlerini ve size gerçekten uyan dilimi nasıl bulacağınızı adım adım anlatıyor.
+
+Her yatırımcıya uyan tek bir sihirli saat yoktur. Piyasa verilerinin açıkça gösterdiği şey, hacmin ve volatilitenin en yüksek olduğu zamanlardır ve bu mantıklı bir başlangıç noktasıdır. Oradan sonra sizin için doğru zaman, bu örüntüleri stratejinize ve programınıza uydurma meselesidir.
+
+## En yoğun dilim: Londra-New York çakışması
+
+Piyasanın en hareketli olduğu zamana tek bir yanıt varsa, o da Londra-New York çakışmasıdır. Yaklaşık **13:00 ile 17:00 GMT** arasındaki dört saat boyunca dünyanın en büyük iki döviz merkezi olan Londra ve New York aynı anda açıktır. Emir akışları birleşir, likidite günlük zirvesine ulaşır, majör paritelerdeki spreadler genellikle en dar halindedir ve fiyat hareketleri en istikrarlı biçimde sürme eğilimindedir.
+
+Bu iki merkezin hakimiyeti kulaktan dolma değil, ölçülmüş bir gerçektir. Uluslararası Ödemeler Bankası’nın **BIS Üç Yıllık Merkez Bankası Anketi**, küresel döviz işlem hacminin en büyük iki payının sürekli olarak Birleşik Krallık ve ABD’de gerçekleştiğini gösterir. Anketi https://www.bis.org/statistics/rpfx22.htm adresinden okuyabilirsiniz. İkisi birlikte açık olduğunda günün işlemlerinin çok büyük bir kısmı bu tek dilimde gerçekleşir; pek çok yatırımcının gününü bu saatlere göre planlamasının nedeni budur. Konuyu [Londra-New York çakışması](/tr/blog/londra-new-york-cakismasi) rehberimizde ayrıntılı olarak ele alıyoruz.
+
+## Seanslar hareketlilik açısından nasıl karşılaştırılır
+
+Hareketlilik işlem gününe eşit dağılmaz. Her seansın kendine özgü bir likidite düzeyi ve karakteri vardır; bu örüntüyü bilmek doğru anı seçmenize yardımcı olur.
+
+| Seans | Saatler (GMT, standart) | Hareketlilik düzeyi |
+| --- | --- | --- |
+| Sidney | 22:00 - 07:00 | Düşük; haftayı açar, dar aralıklar |
+| Tokyo | 00:00 - 09:00 | Orta; çoğu zaman yatay, yen odaklı |
+| Londra | 08:00 - 17:00 | Tek bir seans olarak en yüksek hacim |
+| New York | 13:00 - 22:00 | Başta yüksek, Londra kapanınca durulur |
+| Londra-NY çakışması | 13:00 - 17:00 | Tüm günün zirvesi |
+
+**Londra seansı** tek başına tüm seanslar arasında en büyük işlem hacmini taşır; bu yüzden 08:00 GMT civarındaki Londra açılışı kendi başına yüksek hareketliliğin yaşandığı bir andır. **New York sabahı** da, özellikle Londra ile çakıştığı bölümde, canlıdır. **Tokyo seansı** daha ılımlıdır ve yatay seyretme eğilimindedir; **Sidney** ise en sakinidir ve haftayı düşük likiditeyle açar. Belirgin dip noktası, Londra kapandıktan sonraki New York öğleden sonrasıdır: yaklaşık 17:00 ile 22:00 GMT arasında hacim günün durgun dönemine doğru çekilir.
+
+Seanslara tek tek daha yakından bakmak için [Londra seansı açılışı](/tr/blog/londra-seansi-saat-kacta-acilir), [New York seansı](/tr/blog/new-york-forex-seansi), [Tokyo seansı](/tr/blog/tokyo-asya-forex-seansi) ve [Sidney seansı](/tr/blog/sidney-forex-seansi) rehberlerimize göz atın.
+
+## Haftanın işlem yapmak için en iyi günleri
+
+Hareketlilik gün içinde değiştiği gibi hafta içinde de değişir. Genel örüntü, **haftanın ortasının en hareketli**, başının ve sonunun ise daha sakin olmasıdır.
+
+**Pazartesi** yavaş başlar. Piyasa pazar akşamı Asya-Pasifik’in düşük likiditesiyle yeniden açılır ve hacmin gerçekten oluşması çoğu zaman Londra seansını bulur. Hafta yönünü ararken pazartesinin ilk saatlerinde belirgin bir yön olmayabilir.
+
+**Salı, çarşamba ve perşembe** genellikle en yoğun ve en likit günlerdir. Önemli planlı ekonomik veriler bu günlerde yoğunlaşır, kurumsal akış en dolgun halindedir ve trendler en net biçimde oluşma eğilimindedir. İşlem haftasının kalbini arıyorsanız, burasıdır.
+
+**Cuma** ilk yarısında, özellikle sabah açıklanan ABD verileri civarında hareketlidir, ancak öğleden sonra yatırımcılar hafta sonu öncesinde pozisyon kapattıkça durulma eğilimindedir. Piyasa New York saatiyle 17:00’de kapanır ve likidite bu kapanışa doğru azalır. Bazı yatırımcılar bu sığlaşma ve pozisyonu hafta sonu boyunca taşımanın getirdiği boşluk (gap) riski nedeniyle cuma günü geç saatlerdeki seanstan uzak durur.
+
+Haftalık açılış ve kapanış hakkında daha fazla bilgi ve hangi günlerin tatil kaynaklı likidite riski taşıdığını öğrenmek için [forex piyasası bugün açık mı](/tr/blog/forex-piyasasi-bugun-acik-mi) rehberimize bakın.
+
+## Volatilite ne zaman en yüksektir ve neden fazlası her zaman iyi değildir
+
+Yüksek hareketlilik genellikle yüksek volatilite demektir ve bunun kendiliğinden iyi bir şey olmadığını açıkça belirtmek gerekir. Volatilite harekettir; hareket de eşit ölçüde hem fırsat hem risktir.
+
+Volatilite seans açılışları civarında ve Londra-New York çakışması sırasında zirve yapar; en sert sıçramaları ise planlı haberler civarında görülür: ABD tarım dışı istihdam raporu, enflasyon verileri ve [Federal Rezerv](https://www.federalreserve.gov) ile [İngiltere Merkez Bankası](https://www.bankofengland.co.uk) faiz kararları. Bu anlar haftanın en büyük ve en hızlı hareketlerini yaratır; bazı yatırımcıların bu anları özellikle araması, bazılarının ise bilerek kaçınması tam da bu yüzdendir.
+
+Akılda tutulması gereken nokta şu: daha fazla hareket, daha iyi işlem demek değildir. Volatil bir piyasa net trendler kadar kolay biçimde yanıltıcı başlangıçlar ve sert dönüşler de üretir; geniş bir salınım, bir işlemi kâra taşıdığı hızla bir stop emrini de tetikleyebilir. Daha sakin seanslar daha dar aralıklarda işlem görür ve pek çok kişi bunları daha kolay yönetilebilir bulur. Soyut olarak hiçbiri diğerinden iyi değildir; yalnızca farklı mizaçlara uyarlar. Bunların hepsi piyasanın ne zaman hareket ettiğini anlatır, o kadar. Bu anlardan ne çıkaracağınız size kalmış.
+
+## Sizin için en iyi zamanı bulmak
+
+İşlem yapmak için “en iyi” zaman nihayetinde kişiseldir ve üç şeye bağlıdır: pariteleriniz, saat diliminiz ve tarzınız.
+
+**Pariteleriniz.** Her para birimi, ana piyasası açıkken en hareketlidir. Euro ve sterlin pariteleri en iyi Londra seansında işlem görür; dolar pariteleri New York sabahında zirve yapar; yen pariteleri Tokyo saatlerinde en canlı halindedir; Avustralya ve Yeni Zelanda doları ise Sidney-Tokyo diliminde en hareketlidir. Bir pariteyi piyasaları uyanıkken işlem yapmak genellikle daha dar spreadler ve daha iyi likidite demektir.
+
+**Saat diliminiz.** Gerçekten başında olabileceğiniz saatlerde işlem yapmanız gerekir. Londra-New York çakışması en hareketli dilimdir, ancak sizin gecenizin ortasına denk geliyorsa kendinizi bu saatlerde işlem yapmaya zorlamak mantıklı değildir. Pek çok yatırımcı, daha sakin olsa bile kendi uyanık olduğu saatlerle örtüşen bir seansı takip ettiğinde daha iyi sonuç alır.
+
+**Tarzınız.** Hızlı hareket istiyor ve bunu yönetecek donanıma sahipseniz, hareket çakışmalarda ve seans açılışlarında yaşanır. Daha sakin ve daha sınırlı koşulları tercih ediyorsanız Asya seansı ya da daha sakin saatler size daha uygun olabilir.
+
+Üçünü birden uyumlu hale getirmenin pratik yolu, GMT’yi kafanızda çevirmek yerine seansları kendi yerel saatinizle görmektir. [Canlı forex piyasa saatleri aracımız](/tr) her seansın durumunu kendi saat diliminizde gerçek zamanlı olarak gösterir ve yaz saatine göre otomatik olarak ayarlanır; böylece siz müsaitken hangi dilimin açık olduğunu bir bakışta görebilirsiniz.
+
+## Sıkça sorulan sorular
+
+**Forex işlem yapmak için günün en iyi saati nedir?**
+En hareketli dilim, iki büyük merkezin de açık olduğu ve likiditenin zirve yaptığı, kabaca 13:00 ile 17:00 GMT arasındaki Londra-New York çakışmasıdır. Bunun sizin için “en iyi” zaman olup olmadığı ise paritelerinize, saat diliminize ve stratejinize de bağlıdır.
+
+**Forex işlem yapmak için haftanın en iyi günü hangisidir?**
+Salı, çarşamba ve perşembe, önemli veri açıklamaları ve en dolgun kurumsal akışla birlikte genellikle en hareketli ve en likit günlerdir. Pazartesi yavaş başlar, cuma ise hafta sonu kapanışı öncesinde öğleden sonra durulur.
+
+**Daha yüksek volatilite işlem için daha mı iyidir?**
+Mutlaka değil. Daha yüksek volatilite her iki yönde de daha büyük hareketler demektir; bu da fırsat kadar risktir. Daha sakin seanslar daha küçük ve daha sınırlı aralıklar sunar. Doğru seviye tek bir kurala değil, sizin yaklaşımınıza bağlıdır.
+
+**Forex’te ne zaman işlem yapmaktan kaçınmalıyım?**
+Pek çok yatırımcı en sığ saatlerde temkinli davranır: Londra kapandıktan sonraki New York öğleden sonrası, pazar açılışı ve önemli tatiller; bu dönemlerde daha geniş spreadler ve düşük likidite koşulları zorlaştırabilir. Bu genel bir bilgidir, tavsiye değildir.
+
+**Saat dilimimde hangi seansın açık olduğunu nasıl bilebilirim?**
+GMT’yi elle çevirmek yerine seansları yerel saatinize çeviren ve yaz saatine göre ayarlanan canlı bir araç kullanın. forexmarkethours.app aracı, nerede olursanız olun her seansın güncel durumunu gösterir.
+
+*Bu yazı yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -2793,24 +6277,46 @@ Utilisez un outil en direct qui convertit les séances à votre heure locale et 
       en: "daylight-saving-time-forex",
       es: "horario-de-verano-y-el-mercado-forex",
       fr: "heure-d-ete-et-forex",
+      pt: "horario-de-verao-e-forex",
+      it: "ora-legale-e-forex",
+      de: "sommerzeit-und-forex",
+      tr: "yaz-saati-uygulamasi-ve-forex",
     },
     title: {
       en: "How Daylight Saving Time Shifts Forex Market Hours",
       es: "Cómo el horario de verano cambia el horario del mercado forex",
       fr: "Heure d’été et forex : pourquoi les horaires se décalent",
+      pt: "Como o horário de verão muda os horários do mercado forex",
+      it: "Come l’ora legale sposta gli orari del mercato forex",
+      de: "Wie die Sommerzeit die Forex-Handelszeiten verschiebt",
+      tr: "Yaz Saati Uygulaması Forex Piyasa Saatlerini Nasıl Kaydırır",
     },
     description: {
       en: "Daylight saving time shifts forex session hours by an hour twice a year. See why the London and New York opens move in GMT and how to stay on the right time.",
       es: "El horario de verano cambia las horas de las sesiones forex una hora dos veces al año. Ve por qué se mueven las aperturas y cómo estar siempre en la hora correcta.",
       fr: "L’heure d’été décale les horaires des séances forex d’une heure deux fois par an. Pourquoi Londres et New York bougent en GMT et comment rester exact.",
+      pt: "O horário de verão desloca as sessões forex em uma hora duas vezes por ano. Veja por que as aberturas de Londres e Nova York mudam em GMT e como acertar o horário.",
+      it: "L’ora legale sposta gli orari delle sessioni forex di un’ora due volte l’anno. Scopri perché le aperture di Londra e New York cambiano in GMT e come regolarti.",
+      de: "Die Sommerzeit verschiebt die Forex-Sessions zweimal im Jahr um eine Stunde. Warum sich London und New York in GMT bewegen und wie Sie richtig planen.",
+      tr: "Yaz saati, forex seanslarını yılda iki kez bir saat kaydırır. Londra ve New York açılışlarının GMT’de neden kaydığını ve doğru saatte nasıl kalacağınızı görün.",
     },
     date: "2026-08-01",
-    localeDate: { fr: "2026-10-01" },
+    localeDate: {
+      fr: "2026-10-01",
+      pt: "2026-11-02",
+      tr: "2026-11-12",
+      de: "2026-11-19",
+      it: "2026-11-30",
+    },
     authorSlug: "author",
     tags: {
       en: ["Timezones", "Basics"],
       es: ["Zonas horarias", "Fundamentos"],
       fr: ["Fuseaux horaires", "Bases"],
+      pt: ["Fusos horários", "Fundamentos"],
+      it: ["Fusi orari", "Fondamenti"],
+      de: ["Zeitzonen", "Grundlagen"],
+      tr: ["Saat Dilimleri", "Temel Bilgiler"],
     },
     cover: "/blog/daylight-saving-time-forex.svg",
     body: {
@@ -3015,6 +6521,274 @@ Tokyo. Le Japon n’applique pas l’heure d’été : la fenêtre GMT de la sé
 Utilisez un outil en direct qui applique les règles d’heure d’été en vigueur et convertit à votre heure locale, plutôt qu’un tableau GMT statique. L’outil forexmarkethours.app le fait automatiquement pour les quatre séances.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `O horário de verão desloca os horários das sessões forex em uma hora duas vezes por ano, e é por isso que uma sessão que “sempre” abre em um horário GMT fixo pode, de repente, parecer ter mudado de lugar. As sessões em si não mudam: cada uma continua presa ao horário local da sua própria cidade. O que muda é a diferença dessa cidade em relação ao GMT quando os relógios são adiantados ou atrasados. Este guia explica exatamente por que as aberturas de Londres e Nova York se movem em GMT, quando as mudanças acontecem e como manter os horários das sessões corretos o ano inteiro.
+
+Se você já encontrou uma tabela impressa de horários do forex com uma hora de diferença, o horário de verão é quase sempre o motivo. Entender o mecanismo resolve uma das confusões mais comuns sobre quando o mercado está realmente aberto.
+
+## Por que as sessões seguem o horário local, e não o GMT
+
+A ideia central é que cada sessão forex acompanha o dia útil do seu próprio centro financeiro, e o dia útil segue o horário local. A sessão de Londres abre quando os bancos e operadores de Londres começam a trabalhar, por volta das 08:00 no horário de Londres. A sessão de Nova York abre por volta das 08:00 no horário de Nova York. Tóquio abre por volta das 09:00 no horário do Japão. Nenhum desses horários é definido em GMT; todos são definidos pelo relógio local de cada cidade.
+
+O GMT é apenas a referência comum que o mercado inteiro usa para alinhar esses horários locais. Quando dizemos que a sessão de Londres vai das 08:00 às 17:00 GMT, isso só vale enquanto o relógio de Londres coincide com o GMT, o que acontece durante o inverno do hemisfério norte. No momento em que o horário local de Londres se afasta do GMT, porque os relógios mudaram, o valor em GMT da mesma sessão local também se move.
+
+É por isso que as sessões parecem se deslocar mesmo sem nenhuma mudança real no dia de negociação. Londres continua abrindo às 08:00 no horário de Londres em todos os dias úteis do ano. O que muda, quando os relógios são ajustados, é a conversão para GMT e, portanto, para o seu fuso horário. Para o panorama completo das sessões, veja nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas).
+
+## Como as aberturas de Londres e Nova York se movem em GMT
+
+Comece por Londres. Durante parte do ano, o Reino Unido segue o Greenwich Mean Time, então o horário local de Londres e o GMT são idênticos, e a abertura local das 08:00 corresponde a **08:00 GMT**. No último domingo de março, os relógios britânicos adiantam uma hora para o British Summer Time (BST), que é GMT+1. O mercado continua abrindo às 08:00 no horário de Londres, mas, como o relógio pulou para a frente, esse mesmo momento passa a ser **07:00 GMT**. No último domingo de outubro, os relógios voltam, o Reino Unido retorna ao GMT e a abertura volta para 08:00 GMT.
+
+Nova York funciona da mesma forma, em uma direção que não depende do hemisfério. No inverno, Nova York segue o Eastern Standard Time, e a abertura das 08:00 em Nova York corresponde a **13:00 GMT**. Quando os Estados Unidos passam para o horário de verão, no segundo domingo de março, Nova York vai para GMT-4, e a mesma abertura local das 08:00 passa a ser **12:00 GMT**. Ela volta para 13:00 GMT no primeiro domingo de novembro.
+
+A tabela abaixo resume como as duas grandes aberturas aparecem em GMT ao longo do ano.
+
+| Abertura da sessão | Horário local | Inverno (GMT) | Verão / horário de verão (GMT) |
+| --- | --- | --- | --- |
+| Abertura de Londres | 08:00 Reino Unido | 08:00 GMT | 07:00 GMT (BST) |
+| Fechamento de Londres | 17:00 Reino Unido | 17:00 GMT | 16:00 GMT (BST) |
+| Abertura de Nova York | 08:00 ET | 13:00 GMT | 12:00 GMT (EDT) |
+| Fechamento de Nova York | 17:00 ET | 22:00 GMT | 21:00 GMT (EDT) |
+
+Para uma visão mais completa da abertura de Londres em especial, incluindo como ela cai em vários fusos horários, veja nosso guia sobre [que horas abre a sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres).
+
+## Quando as mudanças acontecem, e por que elas não coincidem
+
+A complicação é que cada região muda os relógios em datas diferentes, então, por curtos períodos a cada ano, a diferença habitual entre duas cidades fica uma hora fora do normal.
+
+Os principais calendários do hemisfério norte são:
+
+- **Reino Unido e União Europeia:** os relógios adiantam no último domingo de março e atrasam no último domingo de outubro.
+- **Estados Unidos e Canadá:** os relógios adiantam no segundo domingo de março e atrasam no primeiro domingo de novembro.
+- **Austrália (hemisfério sul):** os relógios mudam no sentido oposto, adiantando por volta do primeiro domingo de outubro e atrasando por volta do primeiro domingo de abril.
+
+Como os Estados Unidos adiantam os relógios cerca de duas semanas antes do Reino Unido, existe um curto período em março em que Nova York já mudou e Londres ainda não. Nessa janela, a diferença habitual entre Londres e Nova York fica uma hora diferente do normal, e uma tabela montada para a parte estável do ano fica errada por alguns dias. O mesmo acontece em alguns dias ao redor das mudanças de outono. O calendário invertido da Austrália faz com que a diferença entre Sydney e os centros do norte varie duas horas ao longo do ano, e não apenas uma.
+
+Alguns lugares não adotam horário de verão. O Japão mantém a mesma diferença o ano todo, e é por isso que a janela GMT da sessão de Tóquio é estável enquanto Londres e Nova York se movem ao redor dela. A Turquia e os países do Golfo também mantêm uma diferença fixa. O banco de dados de fusos horários da IANA, o registro oficial dessas regras, é mantido em https://www.iana.org/time-zones, e uma referência clara das datas de mudança está disponível em https://www.timeanddate.com/time/dst/. As datas oficiais do Reino Unido são publicadas em https://www.gov.uk/when-do-the-clocks-change.
+
+## Por que uma ferramenta ao vivo é melhor que uma tabela impressa
+
+A consequência prática de tudo isso é simples: qualquer lista estática de horários do forex em GMT está correta só em parte do ano. Imprima uma tabela em janeiro e ela ficará uma hora errada durante todo o verão para Londres e Nova York; ela não consegue lidar com as lacunas de duas semanas ao redor das mudanças; e, com certeza, não consegue converter para o seu fuso horário se o seu país muda os relógios em outra data.
+
+Uma ferramenta ao vivo contorna todos esses problemas. Ela lê a data atual, aplica as regras corretas de horário de verão para cada cidade e para o lugar onde você está, e mostra cada sessão no horário certo automaticamente. Nada de conta de cabeça e nenhum risco de usar as diferenças da temporada passada. A [ferramenta de horários do mercado forex ao vivo](/pt) faz exatamente isso: converte as quatro sessões para o seu horário local em tempo real e ajusta o horário de verão de todos os lados, para que os horários que você vê estejam sempre atualizados. Para tabelas de referência fixas entre fusos, nosso guia de [horários do forex por fuso horário](/pt/blog/horario-do-forex-por-fuso-horario) reúne os casos mais comuns.
+
+## Perguntas frequentes
+
+**O horário de verão muda os horários do mercado forex?**
+Em termos locais, não: cada sessão continua abrindo no mesmo horário local da sua cidade o ano inteiro. Em termos de GMT, sim: quando os relógios de uma cidade mudam, a diferença dela em relação ao GMT muda, e a janela GMT da sessão se desloca uma hora. Isso também move os horários no seu próprio fuso.
+
+**Por que a abertura de Londres é às 07:00 GMT no verão e às 08:00 GMT no inverno?**
+Porque no inverno o Reino Unido segue o GMT, então 08:00 local equivale a 08:00 GMT, mas no verão passa para o British Summer Time (GMT+1), e a mesma abertura local das 08:00 aparece como 07:00 GMT.
+
+**Todos os países mudam os relógios no mesmo dia?**
+Não. Estados Unidos e Canadá mudam cerca de duas semanas antes do Reino Unido e da União Europeia na primavera, a Austrália muda no sentido oposto no hemisfério sul, e lugares como o Japão e os países do Golfo não mudam. É por isso que a diferença entre cidades pode ficar uma hora fora do normal por alguns dias.
+
+**Qual sessão forex não muda com o horário de verão?**
+Tóquio. O Japão não adota horário de verão, então a janela GMT da sessão de Tóquio fica estável o ano todo enquanto Londres e Nova York se deslocam ao redor dela.
+
+**Como posso ver sempre os horários corretos das sessões?**
+Use uma ferramenta ao vivo que aplique as regras atuais de horário de verão e converta para o seu horário local, em vez de uma tabela GMT estática. A ferramenta forexmarkethours.app faz isso automaticamente para as quatro sessões.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `L’ora legale sposta gli orari delle sessioni forex di un’ora due volte l’anno, ed è per questo che una sessione che apre «sempre» a un orario GMT fisso può improvvisamente sembrare spostata. Le sessioni in sé non cambiano: ognuna resta ancorata all’ora locale della propria città. A cambiare è lo scarto di quella città rispetto al GMT quando gli orologi vanno avanti o indietro. Questa guida spiega esattamente perché le aperture di Londra e New York si spostano in GMT, quando avvengono i cambi d’ora e come mantenere corretti gli orari delle sessioni tutto l’anno.
+
+Se ti è mai capitato di trovare una tabella stampata degli orari forex sfasata di un’ora, la causa è quasi sempre l’ora legale. Capire il meccanismo chiarisce una delle fonti di confusione più comuni su quando il mercato è davvero aperto.
+
+## Perché le sessioni sono ancorate all’ora locale, non al GMT
+
+Il concetto chiave è che ogni sessione forex segue la giornata lavorativa della propria piazza finanziaria, e le giornate lavorative si basano sull’ora locale. La sessione di Londra apre quando banche e trader londinesi iniziano a lavorare, verso le 08:00 ora di Londra. La sessione di New York apre verso le 08:00 ora di New York. Tokyo apre verso le 09:00 ora del Giappone. Nessuno di questi orari è definito in GMT: sono definiti dall’orologio locale di ciascuna città.
+
+Il GMT è solo il riferimento comune che l’intero mercato usa per allineare questi orari locali. Quando diciamo che la sessione di Londra va dalle 08:00 alle 17:00 GMT, questo è vero solo finché l’orologio di Londra coincide con il GMT, cioè durante l’inverno dell’emisfero nord. Nel momento in cui l’ora locale di Londra si discosta dal GMT, perché gli orologi sono cambiati, si sposta anche il valore GMT della stessa sessione locale.
+
+Ecco perché le sessioni sembrano slittare anche se nella giornata di trading non è cambiato nulla. Londra apre sempre alle 08:00 ora di Londra, ogni giorno feriale dell’anno. A spostarsi, quando cambia l’ora, è la conversione in GMT, e quindi nel tuo fuso orario. Per il quadro completo delle sessioni, consulta la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate).
+
+## Come si spostano in GMT le aperture di Londra e New York
+
+Partiamo da Londra. Per una parte dell’anno il Regno Unito segue il Greenwich Mean Time, quindi l’ora locale di Londra e il GMT coincidono e l’apertura delle 08:00 locali corrisponde alle **08:00 GMT**. L’ultima domenica di marzo gli orologi britannici vanno avanti di un’ora e passano al British Summer Time (BST), cioè GMT+1. Il mercato apre sempre alle 08:00 ora di Londra, ma poiché l’orologio è andato avanti, quello stesso momento corrisponde ora alle **07:00 GMT**. L’ultima domenica di ottobre gli orologi tornano indietro, il Regno Unito torna al GMT e l’apertura torna alle 08:00 GMT.
+
+New York funziona allo stesso modo, ma dall’altro lato del GMT. In inverno New York segue l’Eastern Standard Time e l’apertura delle 08:00 di New York corrisponde alle **13:00 GMT**. Quando gli Stati Uniti passano all’ora legale, la seconda domenica di marzo, New York si porta a GMT-4, quindi la stessa apertura delle 08:00 locali diventa le **12:00 GMT**. Torna alle 13:00 GMT la prima domenica di novembre.
+
+La tabella qui sotto riassume come si leggono in GMT le due grandi aperture nel corso dell’anno.
+
+| Apertura della sessione | Ora locale | Inverno (GMT) | Estate / ora legale (GMT) |
+| --- | --- | --- | --- |
+| Apertura di Londra | 08:00 Regno Unito | 08:00 GMT | 07:00 GMT (BST) |
+| Chiusura di Londra | 17:00 Regno Unito | 17:00 GMT | 16:00 GMT (BST) |
+| Apertura di New York | 08:00 ET | 13:00 GMT | 12:00 GMT (EDT) |
+| Chiusura di New York | 17:00 ET | 22:00 GMT | 21:00 GMT (EDT) |
+
+Per un quadro più completo dell’apertura di Londra in particolare, compreso il modo in cui cade in molti fusi orari, consulta la nostra guida su [a che ora apre la sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra).
+
+## Quando avvengono i cambi d’ora, e perché non coincidono
+
+La complicazione è che regioni diverse cambiano l’ora in date diverse, quindi per brevi periodi ogni anno lo scarto abituale tra due città risulta sfasato di un’ora.
+
+I principali calendari dell’emisfero nord sono:
+
+- **Regno Unito e Unione Europea:** orologi avanti l’ultima domenica di marzo, indietro l’ultima domenica di ottobre.
+- **Stati Uniti e Canada:** orologi avanti la seconda domenica di marzo, indietro la prima domenica di novembre.
+- **Australia (emisfero sud):** orologi nel senso opposto, avanti intorno alla prima domenica di ottobre, indietro intorno alla prima domenica di aprile.
+
+Poiché gli Stati Uniti portano avanti l’ora circa due settimane prima del Regno Unito, a marzo c’è un breve periodo in cui New York ha già cambiato ora e Londra no. In quella finestra il consueto scarto tra Londra e New York differisce di un’ora dal normale, quindi una tabella costruita per la parte stabile dell’anno è temporaneamente sbagliata. Lo stesso accade per qualche giorno intorno ai cambi d’ora autunnali. Il calendario opposto dell’Australia fa sì che lo scarto tra Sydney e le piazze del nord oscilli di due ore nel corso dell’anno anziché di una.
+
+Alcuni paesi non adottano affatto l’ora legale. Il Giappone mantiene lo stesso scarto tutto l’anno, ed è per questo che la finestra GMT della sessione di Tokyo resta stabile mentre Londra e New York si spostano intorno a essa. Anche la Turchia e gli stati del Golfo restano su uno scarto fisso. Il database dei fusi orari IANA, il registro di riferimento per queste regole, è gestito su https://www.iana.org/time-zones, e un riferimento chiaro per le date dei cambi d’ora è disponibile su https://www.timeanddate.com/time/dst/. Le date ufficiali del Regno Unito sono pubblicate su https://www.gov.uk/when-do-the-clocks-change.
+
+## Perché uno strumento in tempo reale batte una tabella stampata
+
+La conseguenza pratica di tutto questo è semplice: qualsiasi elenco statico degli orari forex in GMT è corretto solo per una parte dell’anno. Stampa una tabella a gennaio e per tutta l’estate sarà sfasata di un’ora per Londra e New York; non può tenere conto delle due settimane di scarto intorno ai cambi d’ora; e di certo non può convertire gli orari nel tuo fuso se il tuo paese cambia l’ora in un’altra data ancora.
+
+Uno strumento in tempo reale aggira tutti questi problemi. Legge la data corrente, applica le regole corrette sull’ora legale per ogni città e per il luogo in cui ti trovi, e mostra automaticamente ogni sessione all’orario giusto. Niente calcoli a mente e nessun rischio di usare gli scarti della stagione precedente. Lo [strumento in tempo reale degli orari del mercato forex](/it) fa esattamente questo: converte le quattro sessioni nella tua ora locale in tempo reale e si adegua all’ora legale su tutti i fronti, così gli orari che vedi sono sempre aggiornati. Per tabelle di riferimento fisse tra i vari fusi, la nostra guida [orari del forex per fuso orario](/it/blog/orari-del-forex-per-fuso-orario) riporta i casi più comuni.
+
+## Domande frequenti
+
+**L’ora legale cambia gli orari del mercato forex?**
+In termini locali, no: ogni sessione apre sempre alla stessa ora locale nella propria città, tutto l’anno. In termini GMT, sì: quando gli orologi di una città cambiano, cambia il suo scarto rispetto al GMT, e la finestra GMT della sessione si sposta di un’ora. Questo sposta anche gli orari nel tuo fuso.
+
+**Perché l’apertura di Londra è alle 07:00 GMT in estate e alle 08:00 GMT in inverno?**
+Perché in inverno il Regno Unito segue il GMT, quindi le 08:00 locali sono le 08:00 GMT, mentre in estate passa al British Summer Time (GMT+1), e la stessa apertura delle 08:00 locali corrisponde alle 07:00 GMT.
+
+**Tutti i paesi cambiano l’ora nello stesso giorno?**
+No. In primavera Stati Uniti e Canada cambiano circa due settimane prima di Regno Unito e UE, l’Australia cambia in senso opposto nell’emisfero sud, e paesi come il Giappone e gli stati del Golfo non cambiano affatto. Ecco perché lo scarto tra le città può risultare sfasato di un’ora per brevi periodi.
+
+**Quale sessione forex non si sposta con l’ora legale?**
+Tokyo. Il Giappone non adotta l’ora legale, quindi la finestra GMT della sessione di Tokyo resta stabile tutto l’anno mentre Londra e New York si spostano intorno a essa.
+
+**Come posso vedere sempre gli orari corretti delle sessioni?**
+Usa uno strumento in tempo reale che applica le regole vigenti sull’ora legale e converte nella tua ora locale, invece di una tabella GMT statica. Lo strumento di forexmarkethours.app lo fa automaticamente per tutte e quattro le sessioni.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce consulenza finanziaria.*`,
+      de: `Die Sommerzeit verschiebt die Zeiten der Forex-Sessions zweimal im Jahr um eine Stunde. Deshalb scheint sich eine Session, die „immer“ zu einer festen GMT-Zeit öffnet, plötzlich zu verschieben. Die Sessions selbst ändern sich dabei nicht: Jede bleibt an die Ortszeit ihrer eigenen Stadt gebunden. Was sich ändert, ist der Abstand dieser Stadt zu GMT, sobald dort die Uhren vor- oder zurückgestellt werden. Dieser Leitfaden erklärt genau, warum sich die Öffnung in London und New York in GMT verschiebt, wann die Umstellungen stattfinden und wie Sie Ihre Session-Zeiten das ganze Jahr über korrekt halten.
+
+Falls Ihnen eine gedruckte Tabelle mit Forex-Handelszeiten schon einmal um eine Stunde falsch vorkam, liegt das fast immer an der Sommerzeit. Wer den Mechanismus versteht, räumt eine der häufigsten Verwirrungen darüber aus, wann der Markt tatsächlich geöffnet ist.
+
+## Warum Sessions an die Ortszeit gebunden sind, nicht an GMT
+
+Der entscheidende Gedanke: Jede Forex-Session folgt dem Geschäftstag ihres eigenen Finanzplatzes, und Geschäftstage laufen nach Ortszeit. Die London-Session öffnet, wenn Londoner Banken und Händler ihre Arbeit aufnehmen, also gegen 08:00 Uhr Londoner Zeit. Die New-York-Session öffnet gegen 08:00 Uhr New Yorker Zeit. Tokio öffnet gegen 09:00 Uhr japanischer Zeit. Keine dieser Zeiten ist in GMT festgelegt; maßgeblich ist jeweils die Ortszeit der Stadt.
+
+GMT ist lediglich der gemeinsame Bezugspunkt, mit dem der gesamte Markt diese Ortszeiten nebeneinanderlegt. Wenn wir sagen, dass die London-Session von 08:00 bis 17:00 GMT läuft, stimmt das nur, solange die Londoner Uhr zufällig mit GMT übereinstimmt, also im Winter der Nordhalbkugel. Sobald die Londoner Ortszeit von GMT abweicht, weil die Uhren umgestellt wurden, verschiebt sich auch der GMT-Wert für dieselbe lokale Session.
+
+Deshalb scheinen sich die Sessions zu bewegen, obwohl sich am Handelstag selbst nichts geändert hat. London öffnet an jedem Werktag des Jahres weiterhin um 08:00 Uhr Londoner Zeit. Was sich bei der Zeitumstellung verschiebt, ist die Übersetzung in GMT und damit in Ihre Zeitzone. Die vollständige Übersicht über alle Sessions finden Sie in unserem Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert).
+
+## Wie sich die Öffnung in London und New York in GMT verschiebt
+
+Nehmen wir zuerst London. Einen Teil des Jahres gilt im Vereinigten Königreich die Greenwich Mean Time, Londoner Ortszeit und GMT sind also identisch, und die Öffnung um 08:00 Uhr Ortszeit entspricht **08:00 GMT**. Am letzten Sonntag im März werden die britischen Uhren um eine Stunde auf die British Summer Time (BST) vorgestellt, also GMT+1. Der Markt öffnet weiterhin um 08:00 Uhr Londoner Zeit, doch weil die Uhr eine Stunde nach vorn gesprungen ist, entspricht derselbe Moment nun **07:00 GMT**. Am letzten Sonntag im Oktober werden die Uhren zurückgestellt, das Vereinigte Königreich kehrt zu GMT zurück, und die Öffnung liegt wieder bei 08:00 GMT.
+
+In New York funktioniert es nach demselben Prinzip, nur nach einem eigenen Kalender. Im Winter gilt in New York die Eastern Standard Time, und die Öffnung um 08:00 Uhr New Yorker Zeit entspricht **13:00 GMT**. Wenn die USA am zweiten Sonntag im März auf Sommerzeit umstellen, rückt New York auf GMT-4, und dieselbe Öffnung um 08:00 Uhr Ortszeit wird zu **12:00 GMT**. Am ersten Sonntag im November kehrt sie zu 13:00 GMT zurück.
+
+Die folgende Tabelle fasst zusammen, wie die beiden großen Öffnungen im Jahresverlauf in GMT aussehen.
+
+| Session-Öffnung | Ortszeit | Winter (GMT) | Sommer / Sommerzeit (GMT) |
+| --- | --- | --- | --- |
+| Öffnung London | 08:00 UK | 08:00 GMT | 07:00 GMT (BST) |
+| Schluss London | 17:00 UK | 17:00 GMT | 16:00 GMT (BST) |
+| Öffnung New York | 08:00 ET | 13:00 GMT | 12:00 GMT (EDT) |
+| Schluss New York | 17:00 ET | 22:00 GMT | 21:00 GMT (EDT) |
+
+Ein ausführlicheres Bild speziell zur Londoner Öffnung, einschließlich der Zeiten in vielen Zeitzonen, bietet unser Leitfaden [Wann öffnet die London-Session?](/de/blog/wann-oeffnet-die-london-session).
+
+## Wann die Umstellungen stattfinden und warum sie nicht zusammenfallen
+
+Die Schwierigkeit liegt darin, dass verschiedene Regionen ihre Uhren an unterschiedlichen Tagen umstellen. Dadurch weicht der übliche Zeitabstand zwischen zwei Städten jedes Jahr für kurze Phasen um eine Stunde ab.
+
+Die wichtigsten Regelungen auf der Nordhalbkugel:
+
+- **Vereinigtes Königreich und Europäische Union:** Uhren vor am letzten Sonntag im März, zurück am letzten Sonntag im Oktober.
+- **USA und Kanada:** Uhren vor am zweiten Sonntag im März, zurück am ersten Sonntag im November.
+- **Australien (Südhalbkugel):** Umstellung in umgekehrter Richtung, vor um den ersten Sonntag im Oktober, zurück um den ersten Sonntag im April.
+
+Weil die USA etwa zwei Wochen vor dem Vereinigten Königreich auf Sommerzeit umstellen, gibt es im März eine kurze Phase, in der New York bereits umgestellt hat, London aber noch nicht. In diesem Zeitfenster weicht der übliche Abstand zwischen London und New York um eine Stunde vom Normalwert ab, sodass eine Tabelle für den stabilen Teil des Jahres vorübergehend falsch ist. Dasselbe passiert für einige Tage rund um die Umstellungen im Herbst. Durch den gegenläufigen Kalender Australiens schwankt der Abstand zwischen Sydney und den nördlichen Finanzplätzen im Jahresverlauf sogar um zwei Stunden statt um eine.
+
+Manche Länder kennen überhaupt keine Sommerzeit. Japan behält das ganze Jahr denselben Abstand zu GMT, weshalb das GMT-Fenster der Tokio-Session stabil bleibt, während sich London und New York darum herum verschieben. Auch die Türkei und die Golfstaaten bleiben bei einem festen Abstand. Die IANA-Zeitzonendatenbank, das maßgebliche Verzeichnis dieser Regeln, wird unter https://www.iana.org/time-zones gepflegt, und eine übersichtliche Referenz für die Umstellungstermine finden Sie unter https://www.timeanddate.com/time/dst/. Die offiziellen britischen Termine veröffentlicht die Regierung unter https://www.gov.uk/when-do-the-clocks-change.
+
+## Warum ein Live-Tool besser ist als eine gedruckte Tabelle
+
+Die praktische Konsequenz ist einfach: Jede statische Liste mit Forex-Handelszeiten in GMT stimmt nur für einen Teil des Jahres. Drucken Sie eine Tabelle im Januar, liegt sie für London und New York den ganzen Sommer über um eine Stunde daneben. Die zweiwöchigen Lücken rund um die Umstellungen kann sie nicht abbilden, und erst recht kann sie nicht in Ihre eigene Zeitzone umrechnen, wenn Ihr Land die Uhren an wieder einem anderen Datum umstellt.
+
+Ein Live-Tool umgeht all diese Probleme. Es liest das aktuelle Datum aus, wendet für jede Stadt und für Ihren Standort die richtigen Sommerzeitregeln an und zeigt jede Session automatisch zur richtigen Zeit an. Kein Kopfrechnen und kein Risiko, mit den Zeitabständen der letzten Saison zu arbeiten. Genau das leistet das [Live-Tool für Forex-Handelszeiten](/de): Es rechnet alle vier Sessions in Echtzeit in Ihre Ortszeit um und berücksichtigt die Sommerzeit auf allen Seiten, sodass die angezeigten Zeiten immer aktuell sind. Feste Referenztabellen für verschiedene Zeitzonen finden Sie in unserem Leitfaden [Forex-Handelszeiten nach Zeitzone](/de/blog/forex-handelszeiten-nach-zeitzone), der die gängigen Fälle aufschlüsselt.
+
+## Häufig gestellte Fragen
+
+**Verändert die Sommerzeit die Forex-Handelszeiten?**
+In Ortszeit gerechnet nicht: Jede Session öffnet das ganze Jahr über zur selben Ortszeit in ihrer eigenen Stadt. In GMT gerechnet schon: Wenn in einer Stadt die Uhren umgestellt werden, ändert sich ihr Abstand zu GMT, und das GMT-Fenster der Session verschiebt sich um eine Stunde. Damit verschieben sich auch die Zeiten in Ihrer eigenen Zeitzone.
+
+**Warum öffnet London im Sommer um 07:00 GMT und im Winter um 08:00 GMT?**
+Weil im Vereinigten Königreich im Winter GMT gilt, sodass 08:00 Uhr Ortszeit 08:00 GMT entspricht. Im Sommer gilt dagegen die British Summer Time (GMT+1), und dieselbe Öffnung um 08:00 Uhr Ortszeit entspricht 07:00 GMT.
+
+**Stellen alle Länder ihre Uhren am selben Tag um?**
+Nein. Die USA und Kanada stellen im Frühjahr etwa zwei Wochen vor dem Vereinigten Königreich und der EU um, Australien stellt auf der Südhalbkugel in die umgekehrte Richtung um, und Länder wie Japan oder die Golfstaaten stellen gar nicht um. Deshalb kann der Abstand zwischen den Städten kurzzeitig um eine Stunde abweichen.
+
+**Welche Forex-Session verschiebt sich nicht mit der Sommerzeit?**
+Tokio. Japan kennt keine Sommerzeit, daher bleibt das GMT-Fenster der Tokio-Session das ganze Jahr stabil, während sich London und New York darum herum verschieben.
+
+**Wie sehe ich immer die richtigen Session-Zeiten?**
+Nutzen Sie statt einer statischen GMT-Tabelle ein Live-Tool, das die aktuellen Sommerzeitregeln anwendet und in Ihre Ortszeit umrechnet. Das Tool von forexmarkethours.app erledigt das automatisch für alle vier Sessions.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Yaz saati uygulaması, forex seans saatlerini yılda iki kez bir saat kaydırır; “her zaman” sabit bir GMT saatinde açılan bir seansın birdenbire yer değiştirmiş gibi görünmesinin nedeni budur. Seansların kendisi değişmez: her biri kendi şehrinin yerel saatine bağlı kalır. Değişen, saatler ileri ya da geri alındığında o şehrin GMT’ye göre farkıdır. Bu rehber, Londra ve New York açılışlarının GMT’de neden kaydığını, geçişlerin tam olarak ne zaman yapıldığını ve seans saatlerinizi yıl boyunca nasıl doğru tutacağınızı açıklıyor.
+
+Basılı bir forex saatleri tablosunun bir saat kaydığını fark ettiyseniz, nedeni neredeyse her zaman yaz saatidir. Bu mekanizmayı anlamak, piyasanın gerçekte ne zaman açık olduğuna dair en yaygın kafa karışıklıklarından birini ortadan kaldırır.
+
+## Seanslar neden GMT’ye değil yerel saate bağlıdır
+
+Temel fikir şu: her forex seansı kendi finans merkezindeki iş gününü takip eder ve iş günü yerel saate göre işler. Londra seansı, Londra’daki bankalar ve işlem masaları mesaiye başladığında, yani Londra saatiyle yaklaşık 08:00’de açılır. New York seansı New York saatiyle yaklaşık 08:00’de açılır. Tokyo ise Japonya saatiyle yaklaşık 09:00’da açılır. Bunların hiçbiri GMT ile tanımlanmaz; her biri ilgili şehrin yerel saatiyle tanımlanır.
+
+GMT, tüm piyasanın bu yerel saatleri aynı çizgiye oturtmak için kullandığı ortak referanstan ibarettir. Londra seansının 08:00 ile 17:00 GMT arasında işlediğini söylediğimizde, bu yalnızca Londra’nın saati GMT ile örtüştüğü dönemde, yani kuzey yarımkürenin kış aylarında doğrudur. Saatler değiştiği için Londra’nın yerel saati GMT’den ayrıldığı anda, aynı yerel seansın GMT karşılığı da kayar.
+
+Bu yüzden işlem gününde aslında hiçbir şey değişmediği halde seanslar kayıyormuş gibi görünür. Londra, yılın her iş gününde yine Londra saatiyle 08:00’de açılır. Saatler değiştiğinde kayan şey, bunun GMT’ye ve dolayısıyla sizin saat diliminize çevrilmiş halidir. Seansların ayrıntılı dökümü için [forex işlem seansları rehberimize](/tr/blog/forex-islem-seanslari-rehberi) göz atın.
+
+## Londra ve New York açılışları GMT’de nasıl kayar
+
+Önce Londra’yı ele alalım. Yılın bir bölümünde Birleşik Krallık Greenwich Ortalama Saati’ni kullanır; bu dönemde Londra yerel saati ile GMT aynıdır ve yerel 08:00 açılışı **08:00 GMT**’dir. Mart ayının son pazar günü Birleşik Krallık’ta saatler bir saat ileri alınarak GMT+1’e denk gelen İngiliz Yaz Saati’ne (BST) geçilir. Piyasa yine Londra saatiyle 08:00’de açılır, ancak saat ileri alındığı için aynı an artık **07:00 GMT**’dir. Ekim ayının son pazar günü saatler geri alınır, Birleşik Krallık GMT’ye döner ve açılış yeniden 08:00 GMT olur.
+
+New York da yarımküreden bağımsız olarak aynı mantıkla işler. Kışın New York Doğu Standart Saati’ndedir ve New York’un 08:00 açılışı **13:00 GMT**’ye denk gelir. ABD mart ayının ikinci pazar günü yaz saatine geçtiğinde New York GMT-4’e geçer, böylece aynı yerel 08:00 açılışı **12:00 GMT** olur. Kasım ayının ilk pazar günü yeniden 13:00 GMT’ye döner.
+
+Aşağıdaki tablo, iki büyük açılışın yıl boyunca GMT’de nasıl göründüğünü özetliyor.
+
+| Seans | Yerel saat | Kış (GMT) | Yaz / DST (GMT) |
+| --- | --- | --- | --- |
+| Londra açılışı | 08:00 İngiltere | 08:00 GMT | 07:00 GMT (BST) |
+| Londra kapanışı | 17:00 İngiltere | 17:00 GMT | 16:00 GMT (BST) |
+| New York açılışı | 08:00 ET | 13:00 GMT | 12:00 GMT (EDT) |
+| New York kapanışı | 17:00 ET | 22:00 GMT | 21:00 GMT (EDT) |
+
+Özellikle Londra açılışının pek çok saat dilimine nasıl denk geldiği dahil daha kapsamlı bir tablo için [Londra seansının saat kaçta açıldığına](/tr/blog/londra-seansi-saat-kacta-acilir) dair rehberimize bakın.
+
+## Geçişler ne zaman yapılır ve neden aynı güne denk gelmez
+
+İşi karmaşıklaştıran, farklı bölgelerin saatlerini farklı tarihlerde değiştirmesidir; bu yüzden her yıl kısa süreler boyunca iki şehir arasındaki olağan fark bir saat sapar.
+
+Kuzey yarımküredeki başlıca takvimler şunlardır:
+
+- **Birleşik Krallık ve Avrupa Birliği:** saatler mart ayının son pazar günü ileri, ekim ayının son pazar günü geri alınır.
+- **ABD ve Kanada:** saatler mart ayının ikinci pazar günü ileri, kasım ayının ilk pazar günü geri alınır.
+- **Avustralya (güney yarımküre):** saatler ters yönde değişir; ekim ayının ilk pazar günü civarında ileri, nisan ayının ilk pazar günü civarında geri alınır.
+
+ABD saatlerini Birleşik Krallık’tan yaklaşık iki hafta önce ileri aldığı için, martta New York’un geçiş yaptığı ama Londra’nın henüz yapmadığı kısa bir dönem vardır. Bu aralıkta Londra ile New York arasındaki olağan fark normalden bir saat farklıdır; yani yılın oturmuş dönemine göre hazırlanmış bir tablo kısa süreliğine yanlış olur. Aynı durum sonbahardaki geçişler etrafında da birkaç gün yaşanır. Avustralya’nın ters takvimi nedeniyle Sidney ile kuzeydeki merkezler arasındaki fark yıl içinde bir değil iki saat oynar.
+
+Bazı yerler yaz saati uygulamasını hiç kullanmaz. Japonya yıl boyunca aynı farkı korur; Londra ve New York onun etrafında kayarken Tokyo seansının GMT aralığının sabit kalmasının nedeni budur. Türkiye ve Körfez ülkeleri de sabit bir farkta kalır. Bu kuralların resmi kaydı olan IANA saat dilimi veritabanı https://www.iana.org/time-zones adresinde tutulur; geçiş tarihleri için anlaşılır bir kaynak https://www.timeanddate.com/time/dst/ adresinde bulunur. Birleşik Krallık’ın resmi tarihleri ise https://www.gov.uk/when-do-the-clocks-change adresinde yayımlanır.
+
+## Canlı bir araç neden basılı tablodan iyidir
+
+Bütün bunların pratik sonucu basittir: GMT cinsinden hazırlanmış her statik forex saatleri listesi yılın yalnızca bir bölümünde doğrudur. Ocakta bir tablo basarsanız, Londra ve New York için yaz boyunca bir saat kayık kalır; geçişler etrafındaki iki haftalık aralıkları hesaba katamaz; ülkeniz saatlerini bambaşka bir tarihte değiştiriyorsa sizin saat diliminize çevrilmesi zaten mümkün değildir.
+
+Canlı bir araç bu sorunların hepsini aşar. Güncel tarihi okur, her şehir ve bulunduğunuz yer için doğru yaz saati kurallarını uygular ve her seansı otomatik olarak doğru saatte gösterir. Kafadan hesap yapmanız gerekmez, geçen sezonun saat farklarını kullanma riski de yoktur. [Canlı forex piyasa saatleri aracı](/tr) tam olarak bunu yapar: dört seansın tamamını gerçek zamanlı olarak yerel saatinize çevirir ve her taraftaki yaz saati değişikliklerini hesaba katar; böylece gördüğünüz saatler her zaman günceldir. Farklı saat dilimleri için sabit referans tablolar isterseniz [saat dilimine göre forex piyasa saatleri](/tr/blog/saat-dilimine-gore-forex-piyasa-saatleri) rehberimiz yaygın durumları tek tek sıralıyor.
+
+## Sıkça sorulan sorular
+
+**Yaz saati uygulaması forex piyasa saatlerini değiştirir mi?**
+Yerel saat açısından hayır: her seans yıl boyunca kendi şehrinde aynı yerel saatte açılır. GMT açısından ise evet: bir şehrin saatleri değiştiğinde GMT’ye göre farkı da değişir, dolayısıyla seansın GMT aralığı bir saat kayar. Bu da sizin saat diliminizdeki saatleri değiştirir.
+
+**Londra açılışı neden yazın 07:00 GMT, kışın 08:00 GMT?**
+Çünkü Birleşik Krallık kışın GMT’yi kullanır, yani yerel 08:00, 08:00 GMT’dir; yazın ise İngiliz Yaz Saati’ne (GMT+1) geçer ve aynı yerel 08:00 açılışı 07:00 GMT olarak görünür.
+
+**Tüm ülkeler saatlerini aynı gün mü değiştirir?**
+Hayır. ABD ve Kanada ilkbaharda Birleşik Krallık ve AB’den yaklaşık iki hafta önce geçiş yapar, güney yarımküredeki Avustralya ters yönde değiştirir, Japonya ve Körfez ülkeleri gibi yerler ise hiç değiştirmez. Şehirler arasındaki farkın kısa süreliğine bir saat sapmasının nedeni budur.
+
+**Hangi forex seansı yaz saatiyle kaymaz?**
+Tokyo. Japonya yaz saati uygulamadığı için Tokyo seansının GMT aralığı yıl boyunca sabit kalır; Londra ve New York ise onun etrafında kayar.
+
+**Seans saatlerini her zaman doğru nasıl görebilirim?**
+Statik bir GMT tablosu yerine, güncel yaz saati kurallarını uygulayan ve yerel saatinize çeviren canlı bir araç kullanın. forexmarkethours.app aracı bunu dört seansın tamamı için otomatik olarak yapar.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve finansal tavsiye niteliği taşımaz.*`,
     },
   },
   {
@@ -3022,24 +6796,46 @@ Utilisez un outil en direct qui applique les règles d’heure d’été en vigu
       en: "frankfurt-european-forex-session",
       es: "sesion-forex-europea-de-frankfurt",
       fr: "seance-forex-de-francfort-europe",
+      pt: "sessao-forex-de-frankfurt-europa",
+      it: "sessione-forex-di-francoforte-europa",
+      de: "forex-session-frankfurt-europa",
+      tr: "frankfurt-avrupa-forex-seansi",
     },
     title: {
       en: "The Frankfurt & European Forex Session: Hours and Pairs",
       es: "La sesión forex europea de Fráncfort: horario y pares",
       fr: "La séance forex de Francfort : ouverture européenne",
+      pt: "A sessão forex de Frankfurt e da Europa: horários e pares",
+      it: "La sessione forex di Francoforte ed europea: orari e coppie",
+      de: "Die Frankfurter und europäische Forex-Session: Zeiten und Paare",
+      tr: "Frankfurt ve Avrupa Forex Seansı: Saatler ve Pariteler",
     },
     description: {
       en: "The European forex session opens in Frankfurt around 07:00 GMT, an hour before London. See its hours in your timezone, the best euro pairs and why it matters.",
       es: "La sesión forex europea abre en Fráncfort hacia las 07:00 GMT, una hora antes que Londres. Ve su horario en tu zona, los mejores pares en euros y por qué importa.",
       fr: "La séance européenne ouvre à Francfort vers 07:00 GMT, une heure avant Londres. Horaires dans votre fuseau, rôle de la BCE et meilleures paires en euro.",
+      pt: "A sessão forex europeia abre em Frankfurt por volta das 07:00 GMT, uma hora antes de Londres. Veja o horário no seu fuso, os melhores pares do euro e seu papel.",
+      it: "La sessione forex europea apre a Francoforte verso le 07:00 GMT, un’ora prima di Londra. Ecco gli orari nel tuo fuso, le migliori coppie in euro e perché conta.",
+      de: "Die europäische Forex-Session öffnet in Frankfurt gegen 07:00 GMT, eine Stunde vor London. Zeiten in Ihrer Zeitzone, die besten Euro-Paare und ihre Bedeutung.",
+      tr: "Avrupa forex seansı Frankfurt’ta, Londra’dan bir saat önce, 07:00 GMT civarında açılır. Saat diliminizdeki saatlerini, en iyi euro paritelerini ve önemini görün.",
     },
     date: "2026-08-02",
-    localeDate: { fr: "2026-10-08" },
+    localeDate: {
+      fr: "2026-10-08",
+      pt: "2026-11-09",
+      tr: "2026-11-19",
+      de: "2026-11-26",
+      it: "2026-12-07",
+    },
     authorSlug: "author",
     tags: {
       en: ["Sessions", "Europe"],
       es: ["Sesiones", "Europa"],
       fr: ["Séances", "Francfort"],
+      pt: ["Sessões", "Europa"],
+      it: ["Sessioni", "Europa"],
+      de: ["Sessions", "Europa"],
+      tr: ["Seanslar", "Avrupa"],
     },
     cover: "/blog/frankfurt-european-forex-session.svg",
     body: {
@@ -3244,6 +7040,274 @@ Francfort est dans le fuseau d’Europe centrale, une heure devant le Royaume-Un
 Francfort s’achève vers 16:00 GMT en hiver (17:00 en heure locale), une heure avant la clôture londonienne de 17:00 GMT. En été, les deux se décalent d’une heure plus tôt en GMT.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A sessão forex europeia abre em **Frankfurt por volta das 07:00 GMT** no horário padrão, cerca de uma hora antes de Londres. É a sessão que acorda a Europa continental, dá vida ao euro e prepara discretamente o terreno para a parte mais movimentada do dia de negociação. A maioria dos traders junta tudo com Londres e chama o bloco inteiro de sessão de Londres, mas Frankfurt chega primeiro, e essa primeira hora tem personalidade própria. Este guia mostra quando a sessão europeia acontece no seu fuso horário, por que Frankfurt abre antes de Londres e quais pares ganham vida quando as mesas do continente começam a trabalhar.
+
+Se você já reparou que o euro começa a se mexer antes de a turma de Londres chegar, Frankfurt costuma ser o motivo. A Alemanha é a maior economia da zona do euro, e o seu centro financeiro é onde boa parte das moedas europeias recebe as primeiras cotações da manhã.
+
+## Horários da sessão europeia no seu fuso horário
+
+Frankfurt segue o horário da Europa Central, então, no horário padrão, a sua janela vai aproximadamente das **07:00 às 16:00 GMT**, o que corresponde a **08:00 às 17:00 no horário local de Frankfurt** (Central European Time, GMT+1). A Europa continental adianta os relógios para o horário de verão da Europa Central nos meses mais quentes, exatamente quando o Reino Unido passa para o British Summer Time, então Frankfurt e Londres mantêm a diferença de uma hora o ano inteiro, mesmo com as duas se deslocando em relação ao GMT.
+
+Veja como a abertura de Frankfurt cai em vários fusos comuns, considerando o inverno, quando a Europa está no horário padrão.
+
+| Sua cidade / fuso | Abertura de Frankfurt (inverno) | Fechamento de Frankfurt (inverno) |
+| --- | --- | --- |
+| Frankfurt (CET) | 08:00 | 17:00 |
+| Londres (Reino Unido, GMT) | 07:00 | 16:00 |
+| Nova York (ET) | 02:00 | 11:00 |
+| Istambul (TRT) | 10:00 | 19:00 |
+| Dubai (GST) | 11:00 | 20:00 |
+| Mumbai (IST) | 12:30 | 21:30 |
+| Singapura (SGT) | 15:00 | 00:00 (dia seguinte) |
+| Sydney (AEST) | 18:00 | 03:00 (dia seguinte) |
+
+Como a Europa, o Reino Unido e os Estados Unidos mudam os relógios cada um na sua data, esses valores ficam uma hora fora por uma ou duas semanas na primavera e no outono. A [ferramenta de horários do mercado forex ao vivo](/pt) resolve isso por completo, mostrando a sessão europeia no seu próprio fuso horário e acompanhando automaticamente cada mudança de horário de verão.
+
+## Por que Frankfurt abre antes de Londres
+
+O motivo de a sessão europeia começar em Frankfurt, e não em Londres, é simplesmente geografia e expediente. Frankfurt fica no fuso da Europa Central, uma hora à frente do Reino Unido, então os bancos e operadores alemães estão nas suas mesas uma hora antes dos colegas de Londres. Quando eles começam a cotar o euro e as outras moedas europeias, a sessão já está, na prática, em andamento.
+
+Frankfurt também concentra um peso financeiro considerável. A cidade abriga o Banco Central Europeu, cujas decisões de juros e comunicados de política monetária movem o euro em todos os pares em que ele aparece; o calendário do BCE está em https://www.ecb.europa.eu. É também a sede do Deutsche Bundesbank, o banco central alemão, e do grupo da bolsa Deutsche Börse. Por isso, a primeira hora europeia não é só um aquecimento. Ela carrega fluxo de ordens real, e qualquer dado da zona do euro que saia logo cedo, como a inflação alemã ou pesquisas de confiança, pode definir o tom antes de Londres chegar por completo.
+
+Dito isso, Londres ainda supera Frankfurt com folga em volume negociado. O Banco de Compensações Internacionais (BIS), na sua Pesquisa Trienal de Bancos Centrais, coloca o Reino Unido no topo do volume global de câmbio com ampla margem, com a Alemanha bem mais abaixo na lista; a pesquisa está em https://www.bis.org/statistics/rpfx22.htm. É exatamente por isso que a sessão europeia combinada costuma levar o nome de Londres. Frankfurt abre; Londres faz dela o peso-pesado que ela é. Para o lado londrino da história, veja nosso guia sobre [que horas abre a sessão de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres).
+
+## Os melhores pares na sessão europeia
+
+Sem surpresa, a sessão europeia coloca em evidência o euro e os seus vizinhos, já que são esses os mercados que acabaram de entrar no ar.
+
+No topo da lista está o **EUR/USD**, o par mais negociado do mundo. A partir da abertura de Frankfurt, o fluxo de ordens europeu cresce de forma constante e, quando Londres entra, o par já é negociado com liquidez profunda e spreads apertados. Boa parte da sua amplitude diária se forma nessas horas.
+
+Depois vem o **EUR/GBP**, um cruzamento puramente europeu que vive quase inteiramente dentro desse horário. Com o euro e a libra na sua sessão de origem, é a forma mais limpa de comparar uma moeda com a outra, embora ele costume se manter em uma faixa mais estreita que os pares do dólar.
+
+O franco suíço entra no jogo por meio do **EUR/CHF** e do **USD/CHF**, já que Zurique segue o mesmo relógio de Frankfurt. E os cruzamentos do euro contra o iene e as coroas sueca e norueguesa, **EUR/JPY**, **EUR/SEK** e **EUR/NOK**, também ganham bastante movimento. Se um par tem o euro de um dos lados, é bem provável que as suas horas mais animadas e com melhores preços comecem justamente aqui, na manhã europeia.
+
+## De Frankfurt para Londres: a passagem de bastão
+
+A forma mais útil de pensar em Frankfurt é como a linha de frente de uma onda maior. Ela abre a sessão europeia e, em uma hora, Londres chega e o volume sobe com força. A partir daí, o ritmo continua crescendo até a tarde, quando Nova York abre e os dois gigantes se sobrepõem.
+
+Essa progressão, primeiro Frankfurt, depois Londres, depois a sobreposição Londres-Nova York, é a espinha dorsal do dia de negociação para os pares europeus e do dólar. A primeira hora de Frankfurt muitas vezes estabelece uma direção ou faixa inicial; Londres a aprofunda; e a sobreposição tende a ser onde acontecem os movimentos decisivos do dia. Os traders que acompanham o euro de perto observam a abertura de Frankfurt em parte por ela mesma e em parte como uma primeira leitura de para onde Londres pode levar o mercado.
+
+Para ver como isso se encaixa no quadro completo de 24 horas, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) percorre os quatro centros, e o texto sobre a [sobreposição Londres-Nova York](/pt/blog/sobreposicao-londres-nova-york) mostra onde o dia atinge o pico.
+
+## Perguntas frequentes
+
+**Que horas abre a sessão forex de Frankfurt?**
+Por volta das 07:00 GMT no horário padrão, o que corresponde a 08:00 no horário local de Frankfurt (Central European Time). No verão, quando a Europa está no horário de verão da Europa Central, essa mesma abertura local aparece como 06:00 GMT. Ela abre cerca de uma hora antes de Londres.
+
+**A sessão europeia é a mesma coisa que a sessão de Londres?**
+Não exatamente. A sessão europeia abre em Frankfurt cerca de uma hora antes de Londres, mas, como Londres movimenta muito mais volume, o bloco combinado costuma ser chamado apenas de sessão de Londres. Frankfurt é quem abre; Londres é o peso-pesado.
+
+**Quais pares são os melhores na sessão europeia?**
+Os pares do euro, acima de tudo: EUR/USD, EUR/GBP, EUR/CHF e cruzamentos do euro como o EUR/JPY. São os mercados cujas mesas de origem estão abertas e mais ativas durante o horário europeu.
+
+**Por que Frankfurt abre antes de Londres?**
+Frankfurt fica no fuso da Europa Central, uma hora à frente do Reino Unido, então os bancos e operadores alemães começam o dia uma hora mais cedo. Quando eles começam a cotar o euro, a sessão europeia já está, na prática, em andamento.
+
+**Quando fecha a sessão europeia?**
+Frankfurt encerra por volta das 16:00 GMT no inverno (17:00 no horário local), uma hora antes do fechamento de Londres às 17:00 GMT. No verão, as duas se deslocam uma hora mais cedo em termos de GMT.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `La sessione forex europea apre a **Francoforte intorno alle 07:00 GMT** in ora solare, circa un’ora prima di Londra. È la sessione che sveglia l’Europa continentale, dà vita all’euro e prepara silenziosamente il terreno per la parte più intensa della giornata di trading. La maggior parte dei trader la accorpa a Londra e chiama il tutto sessione di Londra, ma Francoforte arriva prima, e quell’ora di anticipo ha un carattere tutto suo. Questa guida spiega quando si svolge la sessione europea nel tuo fuso orario, perché Francoforte apre prima di Londra e quali coppie si animano quando le sale operative continentali entrano in attività.
+
+Se ti è mai capitato di vedere l’euro iniziare a muoversi prima che arrivino gli operatori di Londra, il motivo di solito è Francoforte. La Germania è la maggiore economia dell’Eurozona, e la sua piazza finanziaria è il luogo in cui gran parte del trading sulle valute europee viene prezzato di prima mattina.
+
+## Orari della sessione europea nel tuo fuso orario
+
+Francoforte segue l’ora dell’Europa centrale, quindi in ora solare la sua finestra va all’incirca dalle **07:00 alle 16:00 GMT**, cioè **dalle 08:00 alle 17:00 ora locale di Francoforte** (Central European Time, GMT+1). L’Europa continentale sposta gli orologi in avanti all’ora legale dell’Europa centrale nei mesi più caldi, esattamente quando il Regno Unito passa al British Summer Time, quindi Francoforte e Londra mantengono la loro ora di distanza tutto l’anno, anche se entrambe si spostano rispetto al GMT.
+
+Ecco come cade l’apertura di Francoforte in una serie di fusi comuni, nel caso invernale in cui l’Europa è in ora solare.
+
+| La tua città / fuso | Apertura di Francoforte (inverno) | Chiusura di Francoforte (inverno) |
+| --- | --- | --- |
+| Francoforte (CET) | 08:00 | 17:00 |
+| Londra (Regno Unito, GMT) | 07:00 | 16:00 |
+| New York (ET) | 02:00 | 11:00 |
+| Istanbul (TRT) | 10:00 | 19:00 |
+| Dubai (GST) | 11:00 | 20:00 |
+| Mumbai (IST) | 12:30 | 21:30 |
+| Singapore (SGT) | 15:00 | 00:00 (giorno dopo) |
+| Sydney (AEST) | 18:00 | 03:00 (giorno dopo) |
+
+Poiché Europa, Regno Unito e Stati Uniti cambiano l’ora ciascuno in date proprie, questi valori slittano di un’ora per una o due settimane in primavera e in autunno. Lo [strumento in tempo reale degli orari del mercato forex](/it) elimina del tutto il problema, mostrando la sessione europea nel tuo fuso orario e seguendo automaticamente ogni cambio dell’ora legale.
+
+## Perché Francoforte apre prima di Londra
+
+Il motivo per cui la sessione europea inizia a Francoforte e non a Londra è semplicemente una questione di geografia e di giornata lavorativa. Francoforte si trova nel fuso dell’Europa centrale, un’ora avanti rispetto al Regno Unito, quindi banche e trader tedeschi sono alla scrivania un’ora prima dei colleghi londinesi. Quando iniziano a prezzare l’euro e le altre valute europee, la sessione è di fatto avviata.
+
+Francoforte ha anche un peso finanziario notevole. Ospita la Banca Centrale Europea, le cui decisioni sui tassi e dichiarazioni di politica monetaria muovono l’euro su ogni coppia in cui compare; il calendario della BCE è su https://www.ecb.europa.eu. È anche la sede della Deutsche Bundesbank e del gruppo Deutsche Börse. Quindi la prima ora europea non è solo un riscaldamento. Porta con sé flussi di ordini reali, e qualsiasi dato dell’area euro che esce di prima mattina, come l’inflazione tedesca o le indagini sul sentiment, può dare il tono prima che Londra sia pienamente operativa.
+
+Detto questo, Londra supera di gran lunga Francoforte per puro volume di scambi. La Banca dei Regolamenti Internazionali, nella sua Triennial Central Bank Survey, colloca il Regno Unito in cima al turnover FX mondiale con ampio margine, con la Germania molto più in basso nella classifica; l’indagine è disponibile su https://www.bis.org/statistics/rpfx22.htm. È esattamente per questo che la sessione europea combinata prende di solito il nome di Londra. Francoforte la apre; Londra la rende il colosso che è. Per il versante londinese della storia, leggi la nostra guida su [a che ora apre la sessione di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra).
+
+## Le migliori coppie nella sessione europea
+
+Non sorprende che la sessione europea metta in luce l’euro e le valute vicine, dato che sono i mercati appena entrati in attività.
+
+In cima alla lista c’è **EUR/USD**, la coppia più scambiata in assoluto. Dall’apertura di Francoforte in poi, i flussi di ordini europei crescono costantemente, e quando arriva Londra la coppia viene scambiata con liquidità profonda e spread stretti. Una buona parte del suo range giornaliero prende forma in queste ore.
+
+Poi c’è **EUR/GBP**, un cross puramente europeo che vive quasi interamente in queste ore. Con euro e sterlina entrambi nella loro sessione di casa, è il modo più pulito di misurare l’una contro l’altra, anche se di solito si muove in un range più stretto rispetto alle coppie con il dollaro.
+
+Il franco svizzero entra in gioco con **EUR/CHF** e **USD/CHF**, perché Zurigo segue lo stesso orologio di Francoforte. E anche i cross dell’euro contro lo yen e le corone svedese e norvegese, **EUR/JPY**, **EUR/SEK**, **EUR/NOK**, si animano sensibilmente. Se una coppia ha l’euro da un lato, con buona probabilità le sue ore più vivaci e meglio prezzate iniziano proprio qui, nella mattinata europea.
+
+## Da Francoforte a Londra: il passaggio di consegne
+
+Il modo più utile di pensare a Francoforte è come al fronte di un’onda più grande. Apre la sessione europea, ed entro un’ora arriva Londra e il volume sale nettamente. Da lì lo slancio continua a crescere verso il pomeriggio, quando apre New York e i due giganti si sovrappongono.
+
+Questa progressione, prima Francoforte, poi Londra, poi la sovrapposizione Londra-New York, è la spina dorsale della giornata di trading per le coppie europee e in dollari. La prima ora di Francoforte spesso stabilisce una direzione o un range iniziale; Londra lo approfondisce; e la sovrapposizione tende a essere il momento dei movimenti decisivi della giornata. I trader che seguono da vicino l’euro osservano l’apertura di Francoforte in parte per sé stessa e in parte come prima indicazione di dove Londra potrebbe portare il mercato.
+
+Per vedere come tutto questo si inserisce nel quadro completo delle 24 ore, la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) passa in rassegna tutte e quattro le piazze, e l’articolo sulla [sovrapposizione Londra-New York](/it/blog/sovrapposizione-londra-new-york) spiega dove la giornata raggiunge il picco.
+
+## Domande frequenti
+
+**A che ora apre la sessione forex di Francoforte?**
+Intorno alle 07:00 GMT in ora solare, cioè le 08:00 ora locale di Francoforte (Central European Time). In estate, quando l’Europa è sull’ora legale dell’Europa centrale, la stessa apertura locale corrisponde alle 06:00 GMT. Apre circa un’ora prima di Londra.
+
+**La sessione europea è la stessa cosa della sessione di Londra?**
+Non proprio. La sessione europea apre a Francoforte circa un’ora prima di Londra, ma poiché Londra gestisce un volume molto maggiore, il blocco combinato viene di solito chiamato semplicemente sessione di Londra. Francoforte apre le danze; Londra è il colosso.
+
+**Quali sono le migliori coppie nella sessione europea?**
+Soprattutto le coppie in euro: EUR/USD, EUR/GBP, EUR/CHF e cross dell’euro come EUR/JPY. Sono i mercati le cui sale operative di casa sono aperte e più attive durante le ore europee.
+
+**Perché Francoforte apre prima di Londra?**
+Francoforte si trova nel fuso dell’Europa centrale, un’ora avanti rispetto al Regno Unito, quindi banche e trader tedeschi iniziano la giornata un’ora prima. Quando cominciano a prezzare l’euro, la sessione europea è di fatto attiva.
+
+**Quando chiude la sessione europea?**
+Francoforte chiude intorno alle 16:00 GMT in inverno (17:00 ora locale), un’ora prima della chiusura di Londra alle 17:00 GMT. In estate entrambe si spostano un’ora prima in termini GMT.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce consulenza finanziaria.*`,
+      de: `Die europäische Forex-Session öffnet in der Normalzeit **in Frankfurt gegen 07:00 GMT**, also etwa eine Stunde vor London. Sie weckt Kontinentaleuropa auf, bringt Leben in den Euro und bereitet ganz unauffällig den geschäftigsten Teil des Handelstages vor. Die meisten Trader schlagen sie London zu und sprechen von der London-Session, doch Frankfurt ist zuerst da, und diese frühe Stunde hat ihren ganz eigenen Charakter. Dieser Leitfaden zeigt, wann die europäische Session in Ihrer eigenen Zeitzone läuft, warum Frankfurt vor London öffnet und welche Paare in Bewegung kommen, sobald die kontinentaleuropäischen Handelsräume besetzt sind.
+
+Falls Ihnen schon einmal aufgefallen ist, dass sich der Euro bewegt, bevor die Londoner Händler da sind, liegt das meist an Frankfurt. Deutschland ist die größte Volkswirtschaft der Eurozone, und an seinem Finanzplatz wird morgens ein großer Teil des europäischen Devisenhandels als Erstes gepreist.
+
+## Die Zeiten der europäischen Session in Ihrer Zeitzone
+
+Frankfurt handelt nach mitteleuropäischer Zeit. In der Normalzeit reicht das Fenster daher von etwa **07:00 bis 16:00 GMT**, das entspricht **08:00 bis 17:00 Uhr Frankfurter Ortszeit** (Mitteleuropäische Zeit, GMT+1). Kontinentaleuropa stellt die Uhren in den wärmeren Monaten auf die Mitteleuropäische Sommerzeit um, und zwar genau dann, wenn das Vereinigte Königreich zur British Summer Time wechselt. So behalten Frankfurt und London das ganze Jahr ihren Abstand von einer Stunde, auch wenn sich beide gegenüber GMT verschieben.
+
+So fällt die Frankfurter Öffnung in einer Reihe gängiger Zeitzonen aus, ausgehend vom Winter, wenn in Europa Normalzeit gilt.
+
+| Ihre Stadt / Zeitzone | Öffnung Frankfurt (Winter) | Schluss Frankfurt (Winter) |
+| --- | --- | --- |
+| Frankfurt (MEZ) | 08:00 | 17:00 |
+| London (UK, GMT) | 07:00 | 16:00 |
+| New York (ET) | 02:00 | 11:00 |
+| Istanbul (TRT) | 10:00 | 19:00 |
+| Dubai (GST) | 11:00 | 20:00 |
+| Mumbai (IST) | 12:30 | 21:30 |
+| Singapur (SGT) | 15:00 | 00:00 (Folgetag) |
+| Sydney (AEST) | 18:00 | 03:00 (Folgetag) |
+
+Weil Europa, das Vereinigte Königreich und die USA ihre Uhren jeweils an eigenen Terminen umstellen, verschieben sich diese Werte im Frühjahr und Herbst für ein bis zwei Wochen um eine Stunde. Das [Live-Tool für Forex-Handelszeiten](/de) umgeht dieses Problem vollständig: Es zeigt die europäische Session in Ihrer eigenen Zeitzone und folgt jeder Zeitumstellung automatisch.
+
+## Warum Frankfurt vor London öffnet
+
+Dass die europäische Session in Frankfurt und nicht in London beginnt, liegt schlicht an der Geografie und am Arbeitstag. Frankfurt liegt in der mitteleuropäischen Zeitzone, eine Stunde vor dem Vereinigten Königreich, sodass deutsche Banken und Händler eine Stunde früher am Schreibtisch sitzen als ihre Londoner Kollegen. Sobald sie beginnen, den Euro und andere europäische Währungen zu preisen, ist die Session praktisch eröffnet.
+
+Frankfurt hat zudem echtes finanzielles Gewicht. Hier sitzt die Europäische Zentralbank, deren Zinsentscheide und geldpolitische Erklärungen den Euro in jedem Paar bewegen, an dem er beteiligt ist; den Kalender der EZB finden Sie unter https://www.ecb.europa.eu. Außerdem haben hier die Deutsche Bundesbank und die Börsengruppe Deutsche Börse ihren Sitz. Die frühe europäische Stunde ist also nicht bloß ein Vorprogramm. Sie trägt echte Orderflüsse, und Daten aus dem Euroraum, die früh am Morgen erscheinen, etwa die deutsche Inflation oder Stimmungsumfragen, können den Ton angeben, bevor London vollständig da ist.
+
+Trotzdem stellt London Frankfurt beim reinen Umsatz klar in den Schatten. Die Bank für Internationalen Zahlungsausgleich sieht das Vereinigte Königreich in ihrer dreijährlichen Zentralbankumfrage (Triennial Central Bank Survey) mit großem Abstand an der Spitze des weltweiten Devisenumsatzes, während Deutschland deutlich weiter unten auf der Liste steht; die Umfrage finden Sie unter https://www.bis.org/statistics/rpfx22.htm. Genau deshalb wird die gemeinsame europäische Session meist nach London benannt. Frankfurt eröffnet sie, London macht sie zu dem Schwergewicht, das sie ist. Die Londoner Seite der Geschichte beleuchtet unser Leitfaden [Wann öffnet die London-Session?](/de/blog/wann-oeffnet-die-london-session).
+
+## Die besten Paare in der europäischen Session
+
+Wenig überraschend rückt die europäische Session den Euro und seine Nachbarn ins Rampenlicht, denn genau diese Märkte sind gerade online gegangen.
+
+Ganz oben steht **EUR/USD**, das meistgehandelte Paar überhaupt. Ab der Frankfurter Öffnung bauen sich die europäischen Orderflüsse stetig auf, und wenn London hinzukommt, handelt das Paar mit tiefer Liquidität und engen Spreads. Ein großer Teil seiner Tagesspanne entsteht in diesen Stunden.
+
+Dann gibt es **EUR/GBP**, ein rein europäisches Cross, das fast ausschließlich in diesen Stunden lebt. Da sich sowohl der Euro als auch das Pfund in ihrer Heimat-Session befinden, lässt sich hier am saubersten die eine Währung gegen die andere abwägen, auch wenn das Paar meist in einer engeren Spanne bleibt als die Dollar-Paare.
+
+Der Schweizer Franken kommt über **EUR/CHF** und **USD/CHF** ins Spiel, denn Zürich tickt nach derselben Uhr wie Frankfurt. Und auch Euro-Crosses gegen den Yen sowie die schwedische und die norwegische Krone, also **EUR/JPY**, **EUR/SEK** und **EUR/NOK**, werden spürbar lebhafter. Steht der Euro auf einer Seite eines Paares, beginnen dessen lebhafteste Stunden mit den besten Kursen sehr wahrscheinlich genau hier, am europäischen Vormittag.
+
+## Von Frankfurt nach London: die Übergabe
+
+Am sinnvollsten betrachtet man Frankfurt als Vorderkante einer größeren Welle. Frankfurt eröffnet die europäische Session, innerhalb einer Stunde kommt London hinzu, und der Umsatz steigt deutlich. Von da an baut sich die Dynamik weiter auf bis zum Nachmittag, wenn New York öffnet und sich die beiden Giganten überschneiden.
+
+Diese Abfolge, zuerst Frankfurt, dann London, dann die Überschneidung von London und New York, bildet das Rückgrat des Handelstages für europäische Paare und Dollar-Paare. Die frühe Frankfurter Stunde legt oft eine erste Richtung oder Spanne fest; London vertieft sie; und in der Überschneidung fallen meist die entscheidenden Bewegungen des Tages. Trader, die den Euro eng verfolgen, beobachten die Frankfurter Öffnung teils um ihrer selbst willen und teils als frühen Hinweis darauf, wohin London die Kurse treiben könnte.
+
+Wie sich das in das Gesamtbild rund um die Uhr einfügt, zeigt unser Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert), der alle vier Finanzplätze durchgeht, und der Beitrag zur [Überschneidung London-New York](/de/blog/ueberschneidung-london-new-york) erklärt, wo der Tag seinen Höhepunkt erreicht.
+
+## Häufig gestellte Fragen
+
+**Wann öffnet die Frankfurter Forex-Session?**
+In der Normalzeit gegen 07:00 GMT, das entspricht 08:00 Uhr Ortszeit in Frankfurt (Mitteleuropäische Zeit). Im Sommer, wenn in Europa die Mitteleuropäische Sommerzeit gilt, entspricht dieselbe Öffnung zur Ortszeit 06:00 GMT. Sie öffnet etwa eine Stunde vor London.
+
+**Ist die europäische Session dasselbe wie die London-Session?**
+Nicht ganz. Die europäische Session öffnet in Frankfurt etwa eine Stunde vor London, doch weil London einen weitaus größeren Umsatz abwickelt, wird der gesamte Block meist einfach London-Session genannt. Frankfurt ist der Eröffner, London das Schwergewicht.
+
+**Welche Paare eignen sich in der europäischen Session am besten?**
+Vor allem Euro-Paare: EUR/USD, EUR/GBP, EUR/CHF und Euro-Crosses wie EUR/JPY. Das sind die Märkte, deren Handelsräume in den europäischen Stunden geöffnet und am aktivsten sind.
+
+**Warum öffnet Frankfurt vor London?**
+Frankfurt liegt in der mitteleuropäischen Zeitzone, eine Stunde vor dem Vereinigten Königreich, daher beginnen deutsche Banken und Händler ihren Tag eine Stunde früher. Sobald sie den Euro zu preisen beginnen, ist die europäische Session praktisch eröffnet.
+
+**Wann schließt die europäische Session?**
+Frankfurt fährt im Winter gegen 16:00 GMT herunter (17:00 Uhr Ortszeit), eine Stunde vor dem Londoner Schluss um 17:00 GMT. Im Sommer verschieben sich beide in GMT gerechnet um eine Stunde nach vorn.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Avrupa forex seansı, standart saatte **Frankfurt’ta yaklaşık 07:00 GMT’de**, yani Londra’dan kabaca bir saat önce açılır. Kıta Avrupası’nı uyandıran, euroyu canlandıran ve işlem gününün en yoğun bölümüne sessizce zemin hazırlayan seanstır. Çoğu yatırımcı onu Londra’yla bir tutar ve hepsine birden Londra seansı der, ama Frankfurt oraya ilk varır ve o erken saatin kendine özgü bir karakteri vardır. Bu rehber, Avrupa seansının sizin saat diliminizde ne zaman işlediğini, Frankfurt’un neden Londra’dan önce açıldığını ve kıta Avrupası’ndaki işlem masaları dolduğunda hangi paritelerin canlandığını ele alıyor.
+
+Londra kalabalığı gelmeden euronun hareketlenmeye başladığını fark ettiyseniz, nedeni genellikle Frankfurt’tur. Almanya euro bölgesinin en büyük ekonomisidir ve finans merkezi, Avrupa döviz işlemlerinin büyük bölümünün sabahın ilk saatlerinde fiyatlandığı yerdir.
+
+## Saat diliminize göre Avrupa seansı saatleri
+
+Frankfurt Orta Avrupa saatine göre işler; bu yüzden standart saatte işlem aralığı yaklaşık **07:00 ile 16:00 GMT** arasıdır, bu da **Frankfurt yerel saatiyle 08:00 ile 17:00** arasına karşılık gelir (Orta Avrupa Saati, GMT+1). Kıta Avrupası sıcak aylarda saatlerini ileri alarak Orta Avrupa Yaz Saati’ne geçer ve bunu tam da Birleşik Krallık’ın İngiliz Yaz Saati’ne geçtiği tarihte yapar; bu nedenle Frankfurt ile Londra, ikisi de GMT’ye göre kaysa bile aralarındaki bir saatlik farkı yıl boyunca korur.
+
+Aşağıda, Avrupa’nın standart saatte olduğu kış dönemini esas alarak Frankfurt açılışının yaygın saat dilimlerine nasıl denk geldiğini görebilirsiniz.
+
+| Şehriniz / saat diliminiz | Frankfurt açılışı (kış) | Frankfurt kapanışı (kış) |
+| --- | --- | --- |
+| Frankfurt (CET) | 08:00 | 17:00 |
+| Londra (İngiltere, GMT) | 07:00 | 16:00 |
+| New York (ET) | 02:00 | 11:00 |
+| İstanbul (TRT) | 10:00 | 19:00 |
+| Dubai (GST) | 11:00 | 20:00 |
+| Mumbai (IST) | 12:30 | 21:30 |
+| Singapur (SGT) | 15:00 | 00:00 (ertesi gün) |
+| Sidney (AEST) | 18:00 | 03:00 (ertesi gün) |
+
+Avrupa, Birleşik Krallık ve ABD saatlerini kendi tarihlerinde değiştirdiği için bu rakamlar ilkbahar ve sonbaharda bir iki hafta boyunca bir saat kayar. [Canlı forex piyasa saatleri aracı](/tr) bu sorunu tamamen ortadan kaldırır: Avrupa seansını kendi saat diliminizde gösterir ve her yaz saati değişikliğini otomatik olarak takip eder.
+
+## Frankfurt neden Londra’dan önce açılır
+
+Avrupa seansının Londra yerine Frankfurt’ta başlamasının nedeni basitçe coğrafya ve iş günüdür. Frankfurt, Birleşik Krallık’tan bir saat ileride olan Orta Avrupa saat dilimindedir; dolayısıyla Alman bankaları ve işlem masaları Londralı meslektaşlarından bir saat önce mesaiye başlar. Euroyu ve diğer Avrupa para birimlerini fiyatlamaya başladıklarında seans fiilen başlamış olur.
+
+Frankfurt aynı zamanda ciddi bir finansal ağırlığa ev sahipliği yapar. Faiz kararları ve politika açıklamaları euroyu dahil olduğu her paritede hareket ettiren Avrupa Merkez Bankası buradadır; ECB’nin takvimine https://www.ecb.europa.eu adresinden ulaşabilirsiniz. Şehir ayrıca Almanya Merkez Bankası Deutsche Bundesbank’ın ve Deutsche Börse borsa grubunun da merkezidir. Yani Avrupa’nın erken saati sadece bir ısınma turu değildir. Gerçek bir emir akışı taşır ve sabahın ilk saatlerinde gelen euro bölgesi verileri, örneğin Alman enflasyonu ya da güven anketleri, Londra tam olarak devreye girmeden piyasanın tonunu belirleyebilir.
+
+Bununla birlikte Londra, işlem hacmi bakımından Frankfurt’u açık ara geride bırakır. Uluslararası Ödemeler Bankası (BIS), Üç Yıllık Merkez Bankası Anketi’nde Birleşik Krallık’ı küresel döviz hacminde büyük bir farkla ilk sıraya yerleştirir, Almanya ise listenin çok daha aşağısındadır; anket https://www.bis.org/statistics/rpfx22.htm adresinde yer alıyor. Birleşik Avrupa seansına genellikle Londra’nın adının verilmesinin nedeni de tam olarak budur. Seansı Frankfurt açar; onu bugünkü ağır topa dönüştüren ise Londra’dır. Hikâyenin Londra tarafı için [Londra seansının saat kaçta açıldığına](/tr/blog/londra-seansi-saat-kacta-acilir) dair rehberimize göz atın.
+
+## Avrupa seansındaki en iyi pariteler
+
+Avrupa seansının euroyu ve komşularını öne çıkarması şaşırtıcı değil, çünkü yeni devreye giren piyasalar tam da bunlardır.
+
+Listenin başında, dünyanın en çok işlem gören paritesi **EUR/USD** var. Frankfurt açılışından itibaren Avrupa emir akışı istikrarlı biçimde artar ve Londra katıldığında parite derin likidite ve dar spread’lerle işlem görür. Günlük aralığının büyük bir kısmı bu saatlerde şekillenir.
+
+Ardından, neredeyse tamamen bu saatlerde yaşayan saf bir Avrupa çapraz paritesi olan **EUR/GBP** gelir. Hem euro hem sterlin kendi seansındayken, ikisini birbirine karşı tartmanın en temiz yoludur; ancak genellikle dolar paritelerinden daha dar bir aralıkta kalır.
+
+İsviçre frangı da Zürih Frankfurt’la aynı saati kullandığı için **EUR/CHF** ve **USD/CHF** üzerinden oyuna dahil olur. Euronun yen ile İsveç ve Norveç kronlarına karşı çaprazları, yani **EUR/JPY**, **EUR/SEK** ve **EUR/NOK** de belirgin biçimde hareketlenir. Bir paritenin bir tarafında euro varsa, büyük ihtimalle en canlı ve en iyi fiyatlanan saatleri tam burada, Avrupa sabahında başlar.
+
+## Frankfurt’tan Londra’ya: devir teslim
+
+Frankfurt’u düşünmenin en yararlı yolu, onu daha büyük bir dalganın ön cephesi olarak görmektir. Avrupa seansını açar ve bir saat içinde Londra gelir, hacim belirgin şekilde artar. Oradan itibaren ivme, New York’un açıldığı ve iki devin çakıştığı öğleden sonraya doğru büyümeye devam eder.
+
+Bu ilerleyiş (önce Frankfurt, sonra Londra, ardından Londra-New York çakışması), Avrupa ve dolar pariteleri için işlem gününün omurgasıdır. Erken Frankfurt saati çoğu zaman ilk yönü ya da aralığı belirler; Londra bunu derinleştirir; çakışma ise genellikle günün belirleyici hareketlerinin yaşandığı yerdir. Euroyu yakından izleyen yatırımcılar Frankfurt açılışını kısmen kendi başına önemli olduğu için, kısmen de Londra’nın işleri nereye götürebileceğine dair erken bir ipucu olarak takip eder.
+
+Bunun 24 saatlik tablonun bütününe nasıl oturduğunu görmek için [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) dört merkezin tamamını tek tek ele alıyor; [Londra-New York çakışması](/tr/blog/londra-new-york-cakismasi) yazısı ise günün zirve yaptığı saatleri inceliyor.
+
+## Sıkça sorulan sorular
+
+**Frankfurt forex seansı saat kaçta açılır?**
+Standart saatte yaklaşık 07:00 GMT’de; bu, Frankfurt’ta yerel saatle (Orta Avrupa Saati) 08:00’e denk gelir. Yazın, Avrupa Orta Avrupa Yaz Saati’ni kullanırken aynı yerel açılış 06:00 GMT olarak görünür. Londra’dan yaklaşık bir saat önce açılır.
+
+**Avrupa seansı ile Londra seansı aynı şey mi?**
+Tam olarak değil. Avrupa seansı Londra’dan yaklaşık bir saat önce Frankfurt’ta açılır, ancak Londra çok daha fazla hacim işlediği için birleşik blok genellikle yalnızca Londra seansı olarak anılır. Açılışı Frankfurt yapar; asıl ağırlık ise Londra’dadır.
+
+**Avrupa seansında en iyi pariteler hangileri?**
+Her şeyden önce euro pariteleri: EUR/USD, EUR/GBP, EUR/CHF ve EUR/JPY gibi euro çaprazları. Bunlar, Avrupa saatlerinde kendi merkez masaları açık ve en hareketli olan piyasalardır.
+
+**Frankfurt neden Londra’dan önce açılır?**
+Frankfurt, Birleşik Krallık’tan bir saat ileride olan Orta Avrupa saat dilimindedir; bu yüzden Alman bankaları ve işlem masaları güne bir saat erken başlar. Euroyu fiyatlamaya başladıklarında Avrupa seansı fiilen başlamış olur.
+
+**Avrupa seansı ne zaman kapanır?**
+Frankfurt kışın 16:00 GMT civarında (yerel saatle 17:00) yavaşlayıp kapanır; bu, Londra’nın 17:00 GMT’deki kapanışından bir saat öncedir. Yazın ikisi de GMT cinsinden bir saat erkene kayar.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve finansal tavsiye niteliği taşımaz.*`,
     },
   },
   {
@@ -3251,24 +7315,46 @@ Francfort s’achève vers 16:00 GMT en hiver (17:00 en heure locale), une heure
       en: "most-traded-currency-pairs",
       es: "pares-de-divisas-mas-negociados",
       fr: "paires-de-devises-les-plus-tradees",
+      pt: "pares-de-moedas-mais-negociados",
+      it: "coppie-di-valute-piu-scambiate",
+      de: "meistgehandelte-waehrungspaare",
+      tr: "en-cok-islem-goren-pariteler",
     },
     title: {
       en: "The Most Traded Currency Pairs and When to Trade Them",
       es: "Los pares de divisas más negociados y cuándo operarlos",
       fr: "Les paires de devises les plus tradées et leurs horaires",
+      pt: "Os pares de moedas mais negociados e quando operar cada um",
+      it: "Le coppie di valute più scambiate e quando fare trading",
+      de: "Die meistgehandelten Währungspaare und wann man sie handelt",
+      tr: "En Çok İşlem Gören Döviz Pariteleri ve En Uygun Saatleri",
     },
     description: {
       en: "The most traded currency pairs are EUR/USD, USD/JPY and GBP/USD. See the top forex pairs by turnover and the session hours when each one is most active.",
       es: "Los pares de divisas más negociados son EUR/USD, USD/JPY y GBP/USD. Ve los principales pares por volumen y las horas de sesión en que cada uno es más activo.",
       fr: "EUR/USD, USD/JPY et GBP/USD sont les paires les plus tradées du forex. Classement par volume et la séance où chacune est la plus liquide.",
+      pt: "Os pares de moedas mais negociados são EUR/USD, USD/JPY e GBP/USD. Veja os principais pares do forex por volume e as sessões em que cada um fica mais ativo.",
+      it: "Le coppie di valute più scambiate sono EUR/USD, USD/JPY e GBP/USD. Scopri le principali coppie forex per volume e le sessioni in cui ognuna è più attiva.",
+      de: "Die meistgehandelten Währungspaare sind EUR/USD, USD/JPY und GBP/USD. Die Top-Paare nach Umsatz und die Session-Zeiten, in denen sie am aktivsten sind.",
+      tr: "En çok işlem gören döviz pariteleri EUR/USD, USD/JPY ve GBP/USD’dir. Hacme göre en büyük forex paritelerini ve her birinin en hareketli olduğu seansları görün.",
     },
     date: "2026-08-03",
-    localeDate: { fr: "2026-10-12" },
+    localeDate: {
+      fr: "2026-10-12",
+      pt: "2026-11-12",
+      tr: "2026-11-23",
+      de: "2026-11-30",
+      it: "2026-12-10",
+    },
     authorSlug: "author",
     tags: {
       en: ["Pairs", "Basics"],
       es: ["Pares", "Fundamentos"],
       fr: ["Paires", "Bases"],
+      pt: ["Pares", "Fundamentos"],
+      it: ["Coppie di valute", "Fondamenti"],
+      de: ["Währungspaare", "Grundlagen"],
+      tr: ["Pariteler", "Temel Bilgiler"],
     },
     cover: "/blog/most-traded-currency-pairs.svg",
     body: {
@@ -3464,6 +7550,262 @@ Une majeure associe le dollar américain à une autre devise de premier plan. Un
 Le marché fonctionne 24 heures sur 24 en semaine, vous pouvez donc trader une paire à tout moment, mais chaque paire connaît des heures où elle est bien plus liquide. Trader une paire pendant sa séance d’origine signifie généralement des spreads plus serrés et une exécution plus fluide.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `Os pares de moedas mais negociados no forex são o **EUR/USD**, o **USD/JPY** e o **GBP/USD**, seguidos pelos outros majors do dólar, como USD/CHF, AUD/USD e USD/CAD. Juntos, os majors respondem pela esmagadora maior parte do volume diário, e o dólar americano está de um dos lados de quase tudo. Mas saber quais pares são mais negociados é só metade da história. Cada um tem certos horários em que fica mais líquido, e casar um par com a sua sessão de origem é uma das ideias mais simples do forex. Este guia passa pelos principais pares por volume e, tão importante quanto, mostra quando cada um costuma se mexer.
+
+Nada disso tem a ver com dizer o que comprar ou vender. A questão é quais pares têm os mercados mais profundos e em que horas do dia, para que os horários em que você opera combinem de fato com os pares que você acompanha.
+
+## O que torna um par “major”
+
+Um par de moedas **major** é aquele que combina o dólar americano com outra moeda muito negociada: o euro, o iene, a libra, o franco suíço, o dólar canadense e os dólares australiano e neozelandês. São os pares com mais participantes, a liquidez mais profunda e, em geral, os spreads mais apertados, e é por isso que a grande maioria das operações de varejo e institucionais se concentra neles.
+
+O motivo de o dólar estar em toda parte é o seu papel como moeda de reserva e de liquidação do mundo. O Banco de Compensações Internacionais (BIS), na sua Pesquisa Trienal de Bancos Centrais, mostra o dólar americano de um dos lados de quase nove em cada dez operações. O euro vem em um distante segundo lugar, e o iene em terceiro. Você pode consultar a pesquisa em https://www.bis.org/statistics/rpfx22.htm. Os pares que não envolvem o dólar, como EUR/GBP ou EUR/JPY, são chamados de **cruzamentos** (crosses), e, embora alguns sejam muito negociados, eles ainda ficam abaixo dos majors do dólar em volume.
+
+## Os pares mais negociados por volume
+
+A ordem aproximada abaixo segue os números de volume do BIS. Os percentuais exatos mudam um pouco de uma pesquisa para outra, mas o topo da lista é notavelmente estável ano após ano.
+
+| Par | Apelido | Sessão mais ativa |
+| --- | --- | --- |
+| EUR/USD | “Fiber” | Londres, sobreposição Londres-NY |
+| USD/JPY | “Ninja” / “o iene” | Tóquio e Nova York |
+| GBP/USD | “Cable” | Londres, sobreposição Londres-NY |
+| USD/CHF | “Swissy” | Londres / horário europeu |
+| AUD/USD | “Aussie” | Horário Sydney-Tóquio |
+| USD/CAD | “Loonie” | Horário de Nova York |
+| NZD/USD | “Kiwi” | Horário Sydney-Tóquio |
+
+O **EUR/USD** é o par mais negociado do planeta, e com folga. Ele reúne as duas maiores economias do mundo, é negociado com spreads apertadíssimos e fica mais ativo no horário europeu e durante a sobreposição. O **USD/JPY** vem em seguida, sensível tanto aos juros americanos quanto aos fluxos japoneses. O **GBP/USD**, apelidado há muito tempo de “cable” por causa do cabo telegráfico transatlântico, é famoso por ser mais volátil que o EUR/USD e é igualmente ligado à sessão de Londres.
+
+## Como casar cada par com a sessão certa
+
+Esta é a ideia que liga o volume ao relógio: uma moeda costuma ficar mais ativa quando o seu mercado de origem está aberto. Opere um par durante a sobreposição das suas duas sessões de origem e você normalmente vai encontrar liquidez mais profunda e spreads mais apertados do que em qualquer outro momento.
+
+O euro e a libra ganham vida na **sessão de Londres** e no horário europeu que a antecede. O EUR/USD e o GBP/USD são muito negociados a partir das aberturas de Frankfurt e de Londres e chegam ao pico de atividade durante a **sobreposição Londres-Nova York**, no início da tarde GMT. Se esses são os seus pares, a manhã europeia e essa sobreposição são as janelas naturais. Nosso guia da [sobreposição Londres-Nova York](/pt/blog/sobreposicao-londres-nova-york) explica o porquê.
+
+Pares guiados pelo dólar, como o USD/CAD, pendem para a **sessão de Nova York**, quando os dados dos Estados Unidos e do Canadá saem juntos; o guia da [sessão de Nova York](/pt/blog/sessao-forex-de-nova-york) trata disso em detalhe. O USD/JPY transita entre dois mundos: fica ativo na **sessão de Tóquio** com os fluxos japoneses e de novo em Nova York com os juros americanos. Já os dólares australiano e neozelandês têm a sua negociação mais animada na janela **Sydney-Tóquio**, na manhã asiática, que o guia da [sessão de Tóquio](/pt/blog/sessao-forex-de-toquio-asia) explora.
+
+## Majors, minors e cruzamentos
+
+Ajuda manter três categorias bem separadas. Os **majors** combinam o dólar com uma moeda de primeira linha e dominam o volume. Os **cruzamentos** combinam dois majors sem o dólar, como EUR/GBP, EUR/JPY e GBP/JPY, e vários deles continuam muito líquidos, sobretudo dentro do seu horário de origem, europeu ou asiático. Os **minors** e os **exóticos** combinam um major com uma moeda menor ou de mercado emergente, e costumam ter liquidez mais rala e spreads mais largos.
+
+Para a maioria das pessoas que estão começando, os majors são o foco sensato justamente por serem tão negociados. Spreads apertados reduzem o custo de cada operação, e a liquidez profunda faz com que as ordens sejam executadas sem problemas. Os cruzamentos entram em cena quando você quer expressar uma visão entre duas moedas que não são o dólar, por exemplo o euro contra a libra, mas eles recompensam quem presta atenção a quando os seus mercados de origem estão realmente acordados.
+
+## Liquidez, spreads e timing
+
+Dois pares podem parecer parecidos no gráfico e se comportar de forma muito diferente dependendo da hora. Um major negociado na sua sessão de origem oferece spreads apertados e profundidade constante. O mesmo par negociado nas horas mortas, como o fim da tarde de Nova York ou o trecho tranquilo antes da abertura de Frankfurt, pode mostrar spreads mais largos e movimentos mais truncados, com volume menor.
+
+É por isso que o timing importa tanto quanto a escolha do par. Escolher um major muito negociado é um bom começo, mas operá-lo quando o seu mercado está dormindo joga fora boa parte da vantagem. As condições mais eficientes vêm da combinação das duas coisas: um par profundo e líquido, negociado durante a sessão em que as suas mesas de origem estão mais movimentadas. Para alinhar isso sem fazer conta de fuso horário de cabeça, a [ferramenta de horários do mercado forex ao vivo](/pt) mostra quais sessões estão abertas agora no seu horário local, e nosso guia do [melhor horário para operar forex](/pt/blog/melhor-horario-para-operar-forex) mapeia as janelas mais movimentadas em mais detalhe.
+
+## Perguntas frequentes
+
+**Qual é o par de moedas mais negociado?**
+O EUR/USD, com ampla margem. Ele reúne as duas maiores economias do mundo, tem a liquidez mais profunda e os spreads mais apertados de todos os pares e fica mais ativo no horário europeu e durante a sobreposição Londres-Nova York.
+
+**Quais são os sete principais pares de moedas?**
+Os majors costumam ser listados como EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD e NZD/USD. Cada um combina o dólar americano com outra moeda muito negociada.
+
+**Qual é o melhor horário para operar EUR/USD e GBP/USD?**
+Durante a sessão de Londres e, principalmente, durante a sobreposição Londres-Nova York, aproximadamente das 13:00 às 17:00 GMT no horário padrão, quando a participação europeia e a americana se somam e os spreads costumam ser os mais apertados.
+
+**Qual é a diferença entre um major e um cruzamento?**
+Um major combina o dólar americano com outra moeda de primeira linha. Um cruzamento combina duas moedas principais sem o dólar, como EUR/GBP ou EUR/JPY. Os majors concentram o maior volume; alguns cruzamentos continuam muito líquidos dentro do seu horário de origem.
+
+**Os pares de moedas são negociados o dia todo?**
+O mercado funciona 24 horas nos dias úteis, então você pode operar um par a qualquer hora, mas cada par tem horários em que fica muito mais líquido. Operar um par durante a sua sessão de origem costuma significar spreads mais apertados e execução mais suave.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `Le coppie di valute più scambiate nel forex sono **EUR/USD**, **USD/JPY** e **GBP/USD**, seguite dalle altre major in dollari come USD/CHF, AUD/USD e USD/CAD. Insieme, le major rappresentano la stragrande maggioranza del volume giornaliero, e il dollaro USA compare da un lato in quasi tutte le operazioni. Ma sapere quali coppie vengono scambiate di più è solo metà del quadro. Ognuna ha certe ore in cui è più liquida, e abbinare una coppia alla sua sessione di casa è una delle idee più semplici del forex. Questa guida passa in rassegna le principali coppie per volume e, cosa altrettanto importante, quando ciascuna tende a muoversi.
+
+Niente di tutto questo serve a dirti cosa comprare o vendere. Si tratta di capire quali coppie hanno i mercati più profondi e in quali momenti della giornata, così le ore in cui fai trading corrispondono davvero alle coppie che segui.
+
+## Cosa rende una coppia una «major»
+
+Una coppia di valute **major** abbina il dollaro USA a un’altra valuta molto scambiata: l’euro, lo yen, la sterlina, il franco svizzero, il dollaro canadese e i dollari australiano e neozelandese. Sono le coppie con più partecipanti, la liquidità più profonda e in genere gli spread più stretti, ed è per questo che la grande maggioranza del trading retail e istituzionale si concentra su di esse.
+
+Il motivo per cui il dollaro è ovunque sta nel suo ruolo di valuta di riserva e di regolamento mondiale. La Banca dei Regolamenti Internazionali, nella sua Triennial Central Bank Survey, rileva il dollaro USA da un lato in quasi nove operazioni su dieci. L’euro è un lontano secondo, lo yen terzo. Puoi consultare l’indagine su https://www.bis.org/statistics/rpfx22.htm. Le coppie che non includono il dollaro, come EUR/GBP o EUR/JPY, sono chiamate **cross**, e anche se alcune sono molto scambiate, restano comunque sotto le major in dollari per volume.
+
+## Le coppie più scambiate per volume
+
+La classifica indicativa qui sotto segue i dati sul turnover della BRI. Le percentuali esatte cambiano un po’ da un’indagine all’altra, ma la parte alta della lista è notevolmente stabile anno dopo anno.
+
+| Coppia | Soprannome | Sessione più attiva |
+| --- | --- | --- |
+| EUR/USD | «Fiber» | Londra, sovrapposizione Londra-NY |
+| USD/JPY | «Ninja» / «lo yen» | Tokyo e New York |
+| GBP/USD | «Cable» | Londra, sovrapposizione Londra-NY |
+| USD/CHF | «Swissy» | Londra / ore europee |
+| AUD/USD | «Aussie» | Ore Sydney-Tokyo |
+| USD/CAD | «Loonie» | Ore di New York |
+| NZD/USD | «Kiwi» | Ore Sydney-Tokyo |
+
+**EUR/USD** è in assoluto la coppia più scambiata al mondo, e con distacco. Unisce le due maggiori economie del mondo, viene scambiata con spread strettissimi ed è più attiva durante le ore europee e della sovrapposizione. Segue **USD/JPY**, sensibile sia ai tassi d’interesse USA sia ai flussi giapponesi. **GBP/USD**, da tempo soprannominata «cable» in riferimento al cavo telegrafico transatlantico, è notoriamente più volatile di EUR/USD e altrettanto legata alla sessione di Londra.
+
+## Abbinare le coppie alla sessione giusta
+
+Ecco l’idea che collega il volume all’orologio: una valuta è di solito più attiva quando il suo mercato di casa è aperto. Se fai trading su una coppia durante la sovrapposizione delle sue due sessioni di casa, in genere trovi liquidità più profonda e spread più stretti che in qualsiasi altro momento.
+
+L’euro e la sterlina si animano nella **sessione di Londra** e nelle ore europee che la precedono. EUR/USD e GBP/USD vengono scambiate intensamente dalle aperture di Francoforte e Londra in poi, e raggiungono il picco di attività durante la **sovrapposizione Londra-New York**, nel primo pomeriggio GMT. Se queste sono le tue coppie, la mattinata europea e quella sovrapposizione sono le finestre naturali. La nostra guida sulla [sovrapposizione Londra-New York](/it/blog/sovrapposizione-londra-new-york) spiega il perché.
+
+Le coppie guidate dal dollaro come USD/CAD si orientano verso la **sessione di New York**, quando i dati USA e canadesi escono insieme; la guida sulla [sessione di New York](/it/blog/sessione-forex-di-new-york) lo approfondisce. USD/JPY sta a cavallo tra due mondi: è attiva nella **sessione di Tokyo** sui flussi giapponesi e di nuovo a New York sui rendimenti USA. E i dollari australiano e neozelandese danno il meglio durante la finestra **Sydney-Tokyo**, nella mattinata asiatica, come spiega la guida sulla [sessione di Tokyo](/it/blog/sessione-forex-di-tokyo-asia).
+
+## Major, minor e cross
+
+Conviene tenere distinte tre categorie. Le **major** abbinano il dollaro a una valuta principale e dominano il volume. I **cross** abbinano due valute principali senza il dollaro, EUR/GBP, EUR/JPY, GBP/JPY, e diversi di essi restano molto liquidi, soprattutto nelle loro ore europee o asiatiche di casa. Le **minor** e le **esotiche** abbinano una valuta principale a una valuta più piccola o di un mercato emergente, e tendono ad avere liquidità più sottile e spread più ampi.
+
+Per la maggior parte di chi inizia, le major sono la scelta più sensata proprio perché sono così scambiate. Spread stretti abbassano il costo di ogni operazione, e una liquidità profonda significa che gli ordini vengono eseguiti in modo pulito. I cross diventano interessanti quando vuoi esprimere una visione tra due valute diverse dal dollaro, per esempio l’euro contro la sterlina, ma premiano chi presta attenzione a quando i loro mercati di casa sono davvero svegli.
+
+## Liquidità, spread e timing
+
+Due coppie possono sembrare simili su un grafico e comportarsi in modo molto diverso a seconda dell’ora. Una major scambiata nella sua sessione di casa offre spread stretti e profondità costante. La stessa coppia scambiata nelle ore morte, per esempio nel tardo pomeriggio di New York o nella fase tranquilla prima dell’apertura di Francoforte, può mostrare spread più ampi e movimenti più nervosi su volumi più sottili.
+
+Ecco perché il timing conta quanto la scelta della coppia. Scegliere una major molto scambiata è un buon inizio, ma fare trading quando il suo mercato dorme fa perdere gran parte del vantaggio. Le condizioni più efficienti nascono dal mettere insieme le due cose: una coppia profonda e liquida, scambiata durante la sessione in cui le sue sale operative di casa sono più attive. Per allinearle senza fare calcoli di fuso orario a mente, lo [strumento in tempo reale degli orari del mercato forex](/it) mostra quali sessioni sono aperte in questo momento nella tua ora locale, e la nostra guida sul [miglior orario per fare trading forex](/it/blog/miglior-orario-per-fare-trading-forex) descrive più in dettaglio le finestre più attive.
+
+## Domande frequenti
+
+**Qual è la coppia di valute più scambiata?**
+EUR/USD, con ampio margine. Unisce le due maggiori economie del mondo, offre la liquidità più profonda e gli spread più stretti di qualsiasi coppia, ed è più attiva durante le ore europee e della sovrapposizione Londra-New York.
+
+**Quali sono le sette coppie di valute major?**
+Le major sono di solito EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD e NZD/USD. Ognuna abbina il dollaro USA a un’altra valuta molto scambiata.
+
+**Qual è il momento migliore per fare trading su EUR/USD e GBP/USD?**
+Durante la sessione di Londra e soprattutto nella sovrapposizione Londra-New York, all’incirca dalle 13:00 alle 17:00 GMT in ora solare, quando la partecipazione europea e quella statunitense si sommano e gli spread sono di solito più stretti.
+
+**Qual è la differenza tra una major e un cross?**
+Una major abbina il dollaro USA a un’altra valuta principale. Un cross abbina due valute principali senza il dollaro, come EUR/GBP o EUR/JPY. Le major concentrano il volume maggiore; alcuni cross restano comunque molto liquidi nelle loro ore di casa.
+
+**Le coppie di valute si scambiano tutto il giorno?**
+Il mercato è aperto 24 ore nei giorni feriali, quindi puoi fare trading su una coppia in qualsiasi momento, ma ogni coppia ha ore in cui è molto più liquida. Fare trading su una coppia durante la sua sessione di casa significa di solito spread più stretti ed esecuzione più fluida.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce consulenza finanziaria.*`,
+      de: `Die meistgehandelten Währungspaare im Forex-Handel sind **EUR/USD**, **USD/JPY** und **GBP/USD**, gefolgt von den übrigen Dollar-Majors wie USD/CHF, AUD/USD und USD/CAD. Zusammen entfällt auf die Majors der weit überwiegende Teil des täglichen Umsatzes, und der US-Dollar steht bei fast allen Geschäften auf einer Seite. Doch zu wissen, welche Paare am meisten gehandelt werden, ist nur die halbe Wahrheit. Jedes Paar hat bestimmte Stunden, in denen es am liquidesten ist, und ein Paar mit seiner Heimat-Session abzustimmen, gehört zu den einfachsten Ideen im Forex-Handel. Dieser Leitfaden stellt die wichtigsten Paare nach Volumen vor und zeigt, genauso wichtig, wann sie sich typischerweise bewegen.
+
+Dabei geht es nicht darum, Ihnen zu sagen, was Sie kaufen oder verkaufen sollen. Es geht darum, welche Paare die tiefsten Märkte haben und zu welchen Tageszeiten, damit die Stunden, in denen Sie handeln, tatsächlich zu den Paaren passen, die Sie beobachten.
+
+## Was ein Paar zum „Major“ macht
+
+Ein **Major** ist ein Währungspaar, das den US-Dollar mit einer anderen stark gehandelten Währung kombiniert: dem Euro, dem Yen, dem Pfund, dem Schweizer Franken, dem kanadischen Dollar sowie dem australischen und dem neuseeländischen Dollar. Diese Paare haben die meisten Marktteilnehmer, die tiefste Liquidität und in der Regel die engsten Spreads, weshalb sich der Großteil des privaten und institutionellen Handels auf sie konzentriert.
+
+Dass der Dollar überall auftaucht, liegt an seiner Rolle als weltweite Reserve- und Abwicklungswährung. Die Bank für Internationalen Zahlungsausgleich stellt in ihrer dreijährlichen Zentralbankumfrage (Triennial Central Bank Survey) fest, dass der US-Dollar bei fast neun von zehn aller Geschäfte auf einer Seite steht. Der Euro folgt mit weitem Abstand auf Platz zwei, der Yen auf Platz drei. Die Umfrage können Sie unter https://www.bis.org/statistics/rpfx22.htm nachlesen. Paare ohne Dollar, etwa EUR/GBP oder EUR/JPY, nennt man **Crosses**. Einige davon werden sehr aktiv gehandelt, liegen beim Volumen aber dennoch hinter den Dollar-Majors.
+
+## Die meistgehandelten Paare nach Umsatz
+
+Die grobe Rangfolge unten folgt den Umsatzzahlen der BIZ. Die genauen Prozentsätze ändern sich von Umfrage zu Umfrage leicht, doch die Spitze der Liste bleibt Jahr für Jahr bemerkenswert stabil.
+
+| Paar | Spitzname | Aktivste Session |
+| --- | --- | --- |
+| EUR/USD | „Fiber“ | London, Überschneidung London-NY |
+| USD/JPY | „Ninja“ / „der Yen“ | Tokio und New York |
+| GBP/USD | „Cable“ | London, Überschneidung London-NY |
+| USD/CHF | „Swissy“ | London / europäische Stunden |
+| AUD/USD | „Aussie“ | Stunden Sydney-Tokio |
+| USD/CAD | „Loonie“ | New Yorker Stunden |
+| NZD/USD | „Kiwi“ | Stunden Sydney-Tokio |
+
+**EUR/USD** ist mit großem Abstand das meistgehandelte Paar der Welt. Es verbindet die beiden größten Volkswirtschaften der Welt, wird mit hauchdünnen Spreads gehandelt und ist in den europäischen Stunden und während der Überschneidung am aktivsten. Danach folgt **USD/JPY**, das sowohl auf US-Zinsen als auch auf japanische Kapitalflüsse reagiert. **GBP/USD**, nach dem transatlantischen Telegrafenkabel seit Langem „Cable“ genannt, ist bekanntermaßen volatiler als EUR/USD und ebenso eng an die London-Session gebunden.
+
+## Paare der richtigen Session zuordnen
+
+Der Gedanke, der Umsatz und Uhrzeit verbindet: Eine Währung ist in der Regel dann am aktivsten, wenn ihr Heimatmarkt geöffnet ist. Handeln Sie ein Paar während der Überschneidung seiner beiden Heimat-Sessions, finden Sie typischerweise tiefere Liquidität und engere Spreads als zu jeder anderen Zeit.
+
+Euro und Pfund werden in der **London-Session** und in den europäischen Stunden davor lebendig. EUR/USD und GBP/USD werden ab der Öffnung in Frankfurt und London rege gehandelt und erreichen ihren Höhepunkt während der **Überschneidung von London und New York** am frühen Nachmittag GMT. Wenn das Ihre Paare sind, bieten sich der europäische Vormittag und diese Überschneidung als natürliche Zeitfenster an. Unser Leitfaden zur [Überschneidung London-New York](/de/blog/ueberschneidung-london-new-york) geht den Gründen genauer nach.
+
+Dollar-getriebene Paare wie USD/CAD tendieren zur **New-York-Session**, wenn US-amerikanische und kanadische Daten gleichzeitig erscheinen; der Leitfaden zur [New-York-Session](/de/blog/forex-session-new-york) behandelt das ausführlich. USD/JPY bewegt sich zwischen zwei Welten: aktiv in der **Tokio-Session** aufgrund japanischer Kapitalflüsse und erneut in New York aufgrund der US-Renditen. Und der australische und der neuseeländische Dollar werden am lebhaftesten im Zeitfenster **Sydney-Tokio** am asiatischen Vormittag gehandelt, dem sich der Leitfaden zur [Tokio-Session](/de/blog/forex-session-tokio-asien) widmet.
+
+## Majors, Minors und Crosses
+
+Es hilft, drei Kategorien sauber auseinanderzuhalten. **Majors** kombinieren den Dollar mit einer der wichtigsten Währungen und dominieren den Umsatz. **Crosses** kombinieren zwei Hauptwährungen ohne den Dollar, etwa EUR/GBP, EUR/JPY oder GBP/JPY, und mehrere davon sind trotzdem sehr liquide, vor allem in ihren europäischen oder asiatischen Heimatstunden. **Minors** und **Exoten** kombinieren eine Hauptwährung mit einer kleineren oder einer Schwellenländerwährung und weisen meist dünnere Liquidität und breitere Spreads auf.
+
+Für die meisten Einsteiger sind die Majors der sinnvolle Schwerpunkt, gerade weil sie so intensiv gehandelt werden. Enge Spreads senken die Kosten jedes Trades, und tiefe Liquidität sorgt für eine saubere Ausführung der Orders. Die Crosses werden interessant, sobald Sie eine Einschätzung zwischen zwei Nicht-Dollar-Währungen umsetzen möchten, etwa Euro gegen Pfund. Dort lohnt es sich aber besonders, darauf zu achten, wann ihre Heimatmärkte tatsächlich wach sind.
+
+## Liquidität, Spreads und Timing
+
+Zwei Paare können im Chart ähnlich aussehen und sich je nach Uhrzeit doch ganz unterschiedlich verhalten. Ein Major, der in seiner Heimat-Session gehandelt wird, bietet enge Spreads und stabile Markttiefe. Dasselbe Paar in den toten Stunden, etwa am späten New Yorker Nachmittag oder in der ruhigen Phase vor der Frankfurter Öffnung, kann breitere Spreads und unruhigere Bewegungen bei dünnerem Volumen zeigen.
+
+Deshalb ist das Timing genauso wichtig wie die Wahl des Paares. Ein stark gehandeltes Major-Paar zu wählen, ist ein guter Anfang, doch wer es handelt, während sein Markt schläft, verschenkt einen Großteil des Vorteils. Die effizientesten Bedingungen entstehen, wenn beides zusammenkommt: ein tiefes, liquides Paar, gehandelt in der Session, in der seine Heimat-Handelsräume am geschäftigsten sind. Damit Sie das abstimmen können, ohne im Kopf Zeitzonen umzurechnen, zeigt das [Live-Tool für Forex-Handelszeiten](/de), welche Sessions gerade in Ihrer Ortszeit geöffnet sind, und unser Leitfaden zur [besten Zeit für Forex-Trading](/de/blog/beste-zeit-fuer-forex-trading) stellt die geschäftigsten Zeitfenster ausführlicher dar.
+
+## Häufig gestellte Fragen
+
+**Welches Währungspaar wird am meisten gehandelt?**
+EUR/USD, mit großem Abstand. Es verbindet die beiden größten Volkswirtschaften der Welt, bietet die tiefste Liquidität und die engsten Spreads aller Paare und ist in den europäischen Stunden sowie während der Überschneidung von London und New York am aktivsten.
+
+**Welches sind die sieben Major-Währungspaare?**
+Als Majors gelten üblicherweise EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD und NZD/USD. Jedes davon kombiniert den US-Dollar mit einer anderen stark gehandelten Währung.
+
+**Wann ist die beste Zeit, EUR/USD und GBP/USD zu handeln?**
+Während der London-Session und vor allem während der Überschneidung von London und New York, in der Normalzeit etwa von 13:00 bis 17:00 GMT. Dann kommen europäische und US-amerikanische Marktteilnehmer zusammen, und die Spreads sind meist am engsten.
+
+**Was ist der Unterschied zwischen einem Major und einem Cross?**
+Ein Major kombiniert den US-Dollar mit einer anderen wichtigen Währung. Ein Cross kombiniert zwei Hauptwährungen ohne den Dollar, etwa EUR/GBP oder EUR/JPY. Die Majors haben den größten Umsatz; einige Crosses sind in ihren Heimatstunden dennoch sehr liquide.
+
+**Werden Währungspaare den ganzen Tag gehandelt?**
+Der Markt läuft an Werktagen 24 Stunden, Sie können ein Paar also jederzeit handeln, doch jedes Paar hat Stunden, in denen es deutlich liquider ist. Wer ein Paar in seiner Heimat-Session handelt, profitiert in der Regel von engeren Spreads und einer reibungsloseren Ausführung.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex’te en çok işlem gören döviz pariteleri **EUR/USD**, **USD/JPY** ve **GBP/USD**’dir; bunları USD/CHF, AUD/USD ve USD/CAD gibi diğer majör dolar pariteleri izler. Majör pariteler günlük işlem hacminin ezici bir bölümünü oluşturur ve ABD doları bunun neredeyse tamamında işlemin bir tarafındadır. Ancak hangi paritelerin en çok işlem gördüğünü bilmek resmin yalnızca yarısıdır. Her paritenin en likit olduğu belirli saatler vardır ve bir pariteyi kendi ana seansıyla eşleştirmek forex’in en basit fikirlerinden biridir. Bu rehber, hacme göre en büyük pariteleri ve en az bunun kadar önemli olarak her birinin genellikle ne zaman hareketlendiğini ele alıyor.
+
+Bunların hiçbiri size ne alıp satmanız gerektiğini söylemek için değil. Amaç, hangi paritelerin en derin piyasalara sahip olduğunu ve bunun günün hangi saatlerinde geçerli olduğunu göstermek; böylece işlem yaptığınız saatler izlediğiniz paritelerle gerçekten örtüşür.
+
+## Bir pariteyi “majör” yapan nedir
+
+**Majör** döviz paritesi, ABD dolarını yoğun işlem gören başka bir para birimiyle eşleştiren paritedir: euro, yen, sterlin, İsviçre frangı, Kanada doları, Avustralya ve Yeni Zelanda doları. En fazla katılımcıya, en derin likiditeye ve genellikle en dar spread’lere sahip pariteler bunlardır; bireysel ve kurumsal işlemlerin büyük çoğunluğunun bunlarda yoğunlaşmasının nedeni de budur.
+
+Doların her yerde olmasının nedeni, dünyanın rezerv ve takas para birimi olma rolüdür. Uluslararası Ödemeler Bankası (BIS), Üç Yıllık Merkez Bankası Anketi’nde ABD dolarının tüm işlemlerin yaklaşık onda dokuzunda bir tarafta yer aldığını ölçüyor. Euro açık ara ikinci, yen üçüncü sıradadır. Ankete https://www.bis.org/statistics/rpfx22.htm adresinden ulaşabilirsiniz. EUR/GBP ya da EUR/JPY gibi doları içermeyen paritelere **çapraz pariteler** denir; bunların bazıları çok aktif işlem görse de hacim bakımından yine dolar majörlerinin altında kalır.
+
+## Hacme göre en çok işlem gören pariteler
+
+Aşağıdaki kabaca sıralama BIS hacim verilerini izliyor. Kesin yüzdeler bir anketten diğerine biraz değişse de listenin üst kısmı yıldan yıla dikkat çekici ölçüde istikrarlıdır.
+
+| Parite | Lakabı | En hareketli seans |
+| --- | --- | --- |
+| EUR/USD | “Fiber” | Londra, Londra-NY çakışması |
+| USD/JPY | “Ninja” / “yen” | Tokyo ve New York |
+| GBP/USD | “Cable” | Londra, Londra-NY çakışması |
+| USD/CHF | “Swissy” | Londra / Avrupa saatleri |
+| AUD/USD | “Aussie” | Sidney-Tokyo saatleri |
+| USD/CAD | “Loonie” | New York saatleri |
+| NZD/USD | “Kiwi” | Sidney-Tokyo saatleri |
+
+**EUR/USD** dünyanın açık ara en çok işlem gören paritesidir; yakınında bile başka bir parite yoktur. Dünyanın en büyük iki ekonomisini bir araya getirir, son derece dar spread’lerle işlem görür ve en çok Avrupa ve çakışma saatlerinde hareketlidir. Onu, hem ABD faizlerine hem de Japon akışlarına duyarlı olan **USD/JPY** izler. Transatlantik telgraf kablosundan ötürü uzun zamandır “cable” lakabıyla anılan **GBP/USD** ise EUR/USD’den bilindiği üzere daha oynaktır ve Londra seansına en az onun kadar bağlıdır.
+
+## Pariteleri doğru seansla eşleştirmek
+
+İşlem hacmini saate bağlayan fikir şudur: bir para birimi genellikle kendi ana piyasası açıkken en hareketlidir. Bir pariteyle, iki ana seansının çakıştığı saatlerde işlem yaparsanız, genellikle diğer tüm saatlerden daha derin likidite ve daha dar spread’ler bulursunuz.
+
+Euro ve sterlin, **Londra seansında** ve ondan önceki Avrupa saatlerinde canlanır. EUR/USD ve GBP/USD, Frankfurt ve Londra açılışlarından itibaren yoğun işlem görür ve GMT’ye göre öğleden sonranın erken saatlerindeki **Londra-New York çakışmasında** zirveye ulaşır. Pariteleriniz bunlarsa, Avrupa sabahı ve bu çakışma doğal işlem pencerelerinizdir. Nedenini [Londra-New York çakışması](/tr/blog/londra-new-york-cakismasi) rehberimiz ayrıntılı olarak inceliyor.
+
+USD/CAD gibi dolar odaklı pariteler, ABD ve Kanada verilerinin birlikte geldiği **New York seansına** yönelir; [New York seansı](/tr/blog/new-york-forex-seansi) rehberi bunu ayrıntılı biçimde ele alıyor. USD/JPY iki dünya arasında yer alır: Japon akışlarıyla **Tokyo seansında**, ABD tahvil getirileriyle de New York’ta yeniden hareketlenir. Avustralya ve Yeni Zelanda doları ise en canlı işlemlerini Asya sabahındaki **Sidney-Tokyo** aralığında görür; bunu da [Tokyo seansı](/tr/blog/tokyo-asya-forex-seansi) rehberi inceliyor.
+
+## Majörler, minörler ve çaprazlar
+
+Üç kategoriyi net biçimde ayırmak işe yarar. **Majörler** doları önde gelen bir para birimiyle eşleştirir ve hacme hâkimdir. **Çaprazlar** iki majör para birimini dolar olmadan eşleştirir (EUR/GBP, EUR/JPY, GBP/JPY) ve bunların bazıları, özellikle kendi ana Avrupa ya da Asya saatlerinde, hâlâ çok likittir. **Minörler** ve **egzotikler** ise bir majör para birimini daha küçük ya da gelişmekte olan bir piyasa para birimiyle eşleştirir ve genellikle daha sığ likiditeye ve daha geniş spread’lere sahiptir.
+
+Yeni başlayanların çoğu için majörler, tam da bu kadar yoğun işlem gördükleri için mantıklı bir odak noktasıdır. Dar spread’ler her işlemin maliyetini düşürür, derin likidite de emirlerin sorunsuz gerçekleşmesini sağlar. Çaprazlar, örneğin euroyu sterline karşı değerlendirmek gibi dolar dışı iki para birimi arasında bir görüş ifade etmek istediğinizde devreye girer; ancak ana piyasalarının ne zaman gerçekten uyanık olduğuna dikkat edenleri ödüllendirirler.
+
+## Likidite, spread ve zamanlama
+
+İki parite grafikte birbirine benzer görünüp saate bağlı olarak çok farklı davranabilir. Ana seansında işlem gören bir majör, dar spread’ler ve istikrarlı bir derinlik sunar. Aynı parite ölü saatlerde, örneğin New York’un geç öğleden sonrasında ya da Frankfurt açılmadan önceki sessiz dilimde işlem gördüğünde, daha düşük hacimle daha geniş spread’ler ve daha dalgalı hareketler gösterebilir.
+
+Zamanlamanın parite seçimi kadar önemli olmasının nedeni budur. Yoğun işlem gören bir majör seçmek iyi bir başlangıçtır, ama piyasası uykudayken bu pariteyle işlem yapmak avantajın büyük kısmını boşa harcar. En verimli koşullar ikisini bir araya getirmekten doğar: ana masalarının en yoğun olduğu seansta işlem yapılan derin ve likit bir parite. Bunu kafanızda saat dilimi hesabı yapmadan eşleştirmek için [canlı forex piyasa saatleri aracı](/tr) şu anda hangi seansların açık olduğunu kendi yerel saatinizde gösterir; [forex işlem yapmak için en iyi saat](/tr/blog/forex-islem-yapmak-icin-en-iyi-saat) rehberimiz de en yoğun zaman dilimlerini daha ayrıntılı haritalandırır.
+
+## Sıkça sorulan sorular
+
+**En çok işlem gören döviz paritesi hangisidir?**
+Açık ara EUR/USD. Dünyanın en büyük iki ekonomisini eşleştirir, tüm pariteler arasında en derin likiditeye ve en dar spread’lere sahiptir ve en çok Avrupa ile Londra-New York çakışması saatlerinde hareketlidir.
+
+**Yedi majör döviz paritesi hangileridir?**
+Majörler genellikle EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD ve NZD/USD olarak sayılır. Her biri ABD dolarını yoğun işlem gören başka bir para birimiyle eşleştirir.
+
+**EUR/USD ve GBP/USD için en iyi işlem saati ne zaman?**
+Londra seansında ve özellikle Londra-New York çakışmasında, yani standart saatte kabaca 13:00 ile 17:00 GMT arasında; bu saatlerde Avrupa ve ABD katılımı birleşir ve spread’ler genellikle en dar seviyededir.
+
+**Majör ile çapraz parite arasındaki fark nedir?**
+Majör, ABD dolarını önde gelen başka bir para birimiyle eşleştirir. Çapraz ise EUR/GBP ya da EUR/JPY gibi iki majör para birimini dolar olmadan eşleştirir. En yüksek hacim majörlerdedir; bazı çaprazlar ise kendi ana saatlerinde hâlâ çok likittir.
+
+**Döviz pariteleri gün boyu işlem görür mü?**
+Piyasa hafta içi 24 saat açıktır, yani bir pariteyle istediğiniz saatte işlem yapabilirsiniz; ancak her paritenin çok daha likit olduğu saatler vardır. Bir pariteyle ana seansında işlem yapmak genellikle daha dar spread’ler ve daha sorunsuz emir gerçekleşmesi anlamına gelir.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve finansal tavsiye niteliği taşımaz.*`,
     },
   },
   {
@@ -3471,24 +7813,46 @@ Le marché fonctionne 24 heures sur 24 en semaine, vous pouvez donc trader une p
       en: "what-time-does-the-forex-market-open",
       es: "a-que-hora-abre-el-mercado-forex",
       fr: "a-quelle-heure-ouvre-le-marche-du-forex",
+      pt: "que-horas-abre-o-mercado-forex",
+      it: "a-che-ora-apre-il-mercato-forex",
+      de: "wann-oeffnet-der-forex-markt",
+      tr: "forex-piyasasi-saat-kacta-acilir",
     },
     title: {
       en: "What Time Does the Forex Market Open in Your Timezone?",
       es: "¿A qué hora abre el mercado forex en tu zona horaria?",
       fr: "À quelle heure ouvre le marché du forex ? Horaires GMT",
+      pt: "Que Horas Abre o Mercado Forex no Seu Fuso Horário?",
+      it: "A che ora apre il mercato forex nel tuo fuso orario?",
+      de: "Wann öffnet der Forex-Markt in Ihrer Zeitzone?",
+      tr: "Forex Piyasası Sizin Saat Diliminizde Saat Kaçta Açılır?",
     },
     description: {
       en: "The forex market opens Sunday at 5 PM New York time, 22:00 GMT in winter. See the weekly open in your timezone, why it's anchored to New York and the Sydney start.",
       es: "El mercado forex abre el domingo a las 5 PM hora de Nueva York, 22:00 GMT en invierno. Ve la apertura semanal en tu zona y por qué se ancla a Nueva York.",
       fr: "Le marché du forex ouvre le dimanche à 17h00 heure de New York (22:00 GMT). Voyez l’ouverture hebdomadaire dans votre fuseau horaire et pourquoi elle se décale.",
+      pt: "O forex abre no domingo às 17h de Nova York, 22:00 GMT no inverno. Veja a abertura semanal no seu fuso, por que ela segue Nova York e o início em Sydney.",
+      it: "Il forex apre la domenica alle 17:00 ora di New York, le 22:00 GMT in inverno. Vedi l’apertura nel tuo fuso, perché dipende da New York e l’avvio di Sydney.",
+      de: "Der Forex-Markt öffnet sonntags um 17:00 Uhr New Yorker Zeit, im Winter 22:00 GMT. Die Wocheneröffnung in Ihrer Zeitzone, der Bezug zu New York und Sydney.",
+      tr: "Forex piyasası pazar günü New York saatiyle 17:00’de, kışın 22:00 GMT’de açılır. Haftalık açılışı kendi saatinizde görün, New York bağlantısını öğrenin.",
     },
     date: "2026-08-04",
-    localeDate: { fr: "2026-09-10" },
+    localeDate: {
+      fr: "2026-09-10",
+      pt: "2026-10-12",
+      tr: "2026-10-22",
+      de: "2026-11-01",
+      it: "2026-11-11",
+    },
     authorSlug: "author",
     tags: {
       en: ["Basics", "Sessions"],
       es: ["Fundamentos", "Sesiones"],
       fr: ["Horaires", "Bases"],
+      pt: ["Fundamentos", "Sessões"],
+      it: ["Fondamenti", "Sessioni"],
+      de: ["Grundlagen", "Sessions"],
+      tr: ["Temel Bilgiler", "Seanslar"],
     },
     cover: "/blog/what-time-does-the-forex-market-open.svg",
     body: {
@@ -3684,6 +8048,262 @@ C’est la partie la plus mince de la semaine, avec des spreads plus larges et d
 À 17h00 heure de New York le vendredi, soit 22:00 GMT en hiver et 21:00 GMT pendant l’heure d’été américaine. Il reste ensuite fermé jusqu’à la réouverture du dimanche.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `O mercado forex abre a semana no **domingo às 17h no horário de Nova York**, o que equivale às 22:00 GMT no inverno do hemisfério norte e às 21:00 GMT enquanto os Estados Unidos estão no horário de verão. É nesse momento que a sessão de Sydney entra em operação e a negociação recomeça depois do fim de semana. Como a abertura está presa ao relógio de Nova York, e não a um horário fixo em GMT, a hora exata em que ela cai no seu fuso depende da estação do ano. Este guia mostra a abertura semanal nos principais fusos e explica por que ela funciona assim.
+
+Vale ser preciso nesse ponto, porque muita confusão vem de informar a abertura como um único horário em GMT. O mercado não abre às “22:00 GMT” em nenhum sentido permanente; ele abre às 17h em Nova York, e 22:00 GMT é só o que isso representa durante parte do ano.
+
+## Quando a semana do forex abre e fecha
+
+A semana de negociação funciona sem parar de **domingo às 17h no horário de Nova York** até **sexta às 17h no horário de Nova York**. Durante esses cinco dias o mercado nunca fecha à noite; ele simplesmente passa de um centro financeiro para o seguinte conforme o dia de trabalho viaja pelo planeta. Então, às 17h de sexta no horário de Nova York, o último grande centro fecha e o mercado fica parado até domingo.
+
+Ancorar tanto a abertura quanto o fechamento às 17h de Nova York é a forma limpa de dizer isso, porque continua correta o ano todo. Em GMT, a abertura é às 22:00 no inverno e às 21:00 durante o horário de verão americano, e o fechamento de sexta segue a mesma lógica. Se for para lembrar de uma coisa só, lembre de 17h em Nova York e deixe uma ferramenta cuidar da conversão para o seu relógio.
+
+## A abertura de domingo no seu fuso horário
+
+A tabela abaixo mostra a abertura de domingo em vários fusos comuns, considerando o inverno do hemisfério norte, quando Nova York está em horário padrão e a abertura é às 22:00 GMT.
+
+| Sua cidade / fuso | Abertura de domingo (inverno) |
+| --- | --- |
+| Nova York (ET) | 17:00 (5 da tarde) de domingo |
+| Londres (Reino Unido, GMT) | 22:00 de domingo |
+| Frankfurt / Paris (CET) | 23:00 de domingo |
+| Istambul (TRT) | 01:00 de segunda |
+| Dubai (GST) | 02:00 de segunda |
+| Mumbai (IST) | 03:30 de segunda |
+| Singapura (SGT) | 06:00 de segunda |
+| Tóquio (JST) | 07:00 de segunda |
+| Sydney (AEST) | 08:00 de segunda |
+
+Repare que, em boa parte da Ásia e do Pacífico, a abertura de “domingo” na verdade cai na segunda de manhã no horário local. Isso é normal: a abertura é um único instante, e o dia do calendário em que ela cai depende apenas de onde você está. Durante o horário de verão americano, cada um desses horários fica uma hora mais cedo. Para pular as contas e as mudanças de estação, a [ferramenta de horário do mercado forex ao vivo](/pt) mostra a abertura exata no seu fuso horário e acompanha o horário de verão automaticamente.
+
+## Por que a abertura segue o relógio de Nova York
+
+Pode parecer estranho que um mercado que abre em Sydney tenha seu horário definido pelo relógio de Nova York. A razão é a convenção: a semana de negociação do forex é definida universalmente pelo fechamento de Nova York às 17h, então a reabertura 48 horas depois é naturalmente descrita da mesma forma. Nova York é o último grande centro a negociar antes do fim de semana e o ponto de referência em torno do qual o mercado inteiro se organiza.
+
+Quando o relógio passa das 17h em Nova York no domingo, já é segunda de manhã cedo em Sydney e Wellington, e essas mesas da Ásia-Pacífico são as primeiras a voltar. Assim, a semana abre no Pacífico, mas é cronometrada a partir de Nova York, e é por isso que o horário em GMT muda conforme o calendário de horário de verão dos EUA, e não o da Austrália. Para ver como o revezamento inteiro se desenrola a partir daí, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) acompanha o dia de Sydney até Nova York.
+
+## Por que a abertura de domingo é calma
+
+As primeiras horas da semana são o trecho de negociação mais ralo que você normalmente vai ver. Só os centros da Ásia-Pacífico estão ativos, os grandes reservatórios de liquidez de Londres e Nova York ainda estão a muitas horas de distância, e relativamente poucos participantes estão cotando preços. Duas coisas decorrem disso.
+
+Primeiro, os spreads tendem a ser mais largos do que nos horários de pico, porque há menos instituições fazendo mercado. Segundo, o preço pode se mover com mais força com ordens modestas, já que há menos profundidade para absorvê-las. A abertura de domingo também é onde aparece qualquer **gap de fim de semana**: se uma notícia importante saiu enquanto o mercado estava fechado, os primeiros preços podem surgir em um nível diferente do fechamento de sexta, deixando um salto visível no gráfico. Muitos traders esperam essa fase inicial de pouca liquidez passar e os spreads se acomodarem antes de fazer muita coisa. Nosso guia da [sessão de Sydney](/pt/blog/sessao-forex-de-sydney) analisa mais de perto como essas horas de abertura se comportam.
+
+## Horário de abertura versus “está aberto agora?”
+
+Existe uma diferença entre saber o horário de abertura programado e saber se o mercado está de fato negociando neste momento. O calendário é fixo, de domingo às 17h em Nova York até sexta às 17h em Nova York, mas em qualquer dia você também pode querer considerar os feriados, quando o mercado continua tecnicamente aberto, mas a liquidez de uma determinada moeda diminui porque os bancos daquele país estão fechados.
+
+São, portanto, duas perguntas lado a lado. “Que horas o forex abre?” tem a resposta estável acima. “O forex está aberto hoje?” depende do dia da semana e do calendário de feriados, tema do nosso guia sobre se [o mercado forex está aberto hoje](/pt/blog/o-mercado-forex-esta-aberto-hoje). Para a resposta ao vivo no seu fuso horário, a [ferramenta do forexmarkethours.app](/pt) mostra o status atual de cada sessão de relance.
+
+## Perguntas frequentes
+
+**Que horas o mercado forex abre no domingo?**
+Às 17h no horário de Nova York, o que equivale às 22:00 GMT no inverno do hemisfério norte e às 21:00 GMT durante o horário de verão americano. É quando a sessão de Sydney abre e a semana de negociação começa.
+
+**Que horas o mercado forex abre em GMT?**
+Às 22:00 GMT no inverno e às 21:00 GMT no verão, porque a abertura está ancorada às 17h de Nova York, e não a um horário fixo em GMT. O horário em GMT muda em uma hora quando os EUA ajustam os relógios.
+
+**Por que o horário de abertura do forex segue Nova York?**
+Por convenção, a semana de negociação é definida pelo fechamento de Nova York às 17h de sexta, então a reabertura de domingo é cronometrada da mesma forma. Nova York é o último grande centro a negociar a cada semana e o ponto de referência comum do mercado.
+
+**A abertura de domingo do forex é um bom momento para operar?**
+É a parte mais rala da semana, com spreads mais largos e possíveis gaps de fim de semana, então muitos traders a tratam com cautela e esperam a liquidez aumentar. Esta é uma informação geral, não uma recomendação para a sua situação.
+
+**Que horas o mercado forex fecha?**
+Às 17h no horário de Nova York na sexta, o que equivale às 22:00 GMT no inverno e às 21:00 GMT durante o horário de verão americano. Depois disso, ele fica fechado até a reabertura de domingo.
+
+*Este artigo tem caráter apenas informativo e não constitui recomendação financeira.*`,
+      it: `Il mercato forex apre la settimana la **domenica alle 17:00 ora di New York**, cioè alle 22:00 GMT durante l’inverno dell’emisfero nord e alle 21:00 GMT quando negli Stati Uniti è in vigore l’ora legale. È il momento in cui entra in scena la sessione di Sydney e gli scambi ripartono dopo il weekend. Poiché l’apertura è legata all’orologio di New York e non a un orario GMT fisso, l’ora esatta in cui cade nel tuo fuso orario dipende dalla stagione. Questa guida mostra l’apertura settimanale nei principali fusi e spiega perché funziona in questo modo.
+
+Vale la pena essere precisi, perché molta confusione nasce dall’indicare l’apertura come un unico orario GMT. Il mercato non apre “alle 22:00 GMT” in modo permanente: apre alle 17:00 di New York, e le 22:00 GMT sono semplicemente l’orario corrispondente per una parte dell’anno.
+
+## Quando apre e chiude la settimana del forex
+
+La settimana di trading va senza interruzioni dalla **domenica alle 17:00 ora di New York** al **venerdì alle 17:00 ora di New York**. Per questi cinque giorni il mercato non chiude mai di notte: passa semplicemente da una piazza finanziaria all’altra man mano che la giornata lavorativa fa il giro del globo. Poi, alle 17:00 ora di New York del venerdì, chiude l’ultimo grande centro e il mercato si ferma fino alla domenica.
+
+Ancorare sia l’apertura sia la chiusura alle 17:00 di New York è il modo più pulito di dirlo, perché resta corretto tutto l’anno. In termini GMT l’apertura è alle 22:00 in inverno e alle 21:00 durante l’ora legale americana, e la chiusura del venerdì segue lo stesso schema. Se vuoi ricordare una cosa sola, ricorda le 17:00 di New York e lascia a uno strumento la conversione nel tuo orario.
+
+## L’apertura della domenica nel tuo fuso orario
+
+La tabella qui sotto mostra l’apertura della domenica in una serie di fusi comuni, nel caso dell’inverno dell’emisfero nord, quando New York è in ora solare e l’apertura è alle 22:00 GMT.
+
+| La tua città / fuso | Apertura della domenica (inverno) |
+| --- | --- |
+| New York (ET) | 17:00 (5 del pomeriggio) domenica |
+| Londra (Regno Unito, GMT) | 22:00 domenica |
+| Francoforte / Parigi (CET) | 23:00 domenica |
+| Istanbul (TRT) | 01:00 lunedì |
+| Dubai (GST) | 02:00 lunedì |
+| Mumbai (IST) | 03:30 lunedì |
+| Singapore (SGT) | 06:00 lunedì |
+| Tokyo (JST) | 07:00 lunedì |
+| Sydney (AEST) | 08:00 lunedì |
+
+Nota che per gran parte dell’Asia e del Pacifico l’apertura “della domenica” cade in realtà il lunedì mattina, ora locale. È normale: l’apertura è un singolo istante e il giorno del calendario in cui cade dipende solo da dove ti trovi. Durante l’ora legale americana ognuno di questi orari si sposta un’ora prima. Per evitare i calcoli e i cambi stagionali, lo [strumento live sugli orari del mercato forex](/it) mostra l’apertura esatta nel tuo fuso orario e tiene conto automaticamente dell’ora legale.
+
+## Perché l’apertura è ancorata a New York
+
+Può sembrare strano che un mercato che apre a Sydney segua l’orologio di New York. Il motivo è una convenzione: la settimana di trading del forex è definita universalmente dalla chiusura di New York alle 17:00, quindi la riapertura 48 ore dopo viene descritta nello stesso modo. New York è l’ultimo grande centro a negoziare prima del weekend ed è il punto di riferimento su cui si allinea l’intero mercato.
+
+Quando a New York scattano le 17:00 della domenica, a Sydney e Wellington è già lunedì mattina presto, e quei desk dell’area Asia-Pacifico sono i primi a tornare operativi. La settimana quindi si apre nel Pacifico ma viene misurata da New York, ed è per questo che l’orario GMT si sposta seguendo il calendario dell’ora legale americana e non quello australiano. Per vedere come si sviluppa da lì l’intera staffetta, la nostra guida alle [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) segue la giornata da Sydney fino a New York.
+
+## Perché l’apertura della domenica è tranquilla
+
+Le prime ore della settimana sono il tratto di trading più sottile che normalmente incontrerai. Sono attivi solo i centri dell’area Asia-Pacifico, i grandi bacini di liquidità di Londra e New York sono ancora lontani molte ore e sono relativamente pochi gli operatori che quotano prezzi. Ne derivano due conseguenze.
+
+La prima è che gli spread tendono a essere più larghi che nelle ore di punta, perché sono meno le istituzioni che fanno mercato. La seconda è che il prezzo può muoversi in modo più brusco anche con ordini modesti, perché c’è meno profondità ad assorbirli. È all’apertura della domenica che compare anche l’eventuale **gap del weekend**: se durante la chiusura del mercato è uscita una notizia importante, i primi prezzi possono comparire a un livello diverso dalla chiusura del venerdì, lasciando un salto visibile sul grafico. Molti trader aspettano che la scarsa liquidità iniziale passi e che gli spread si stabilizzino prima di fare granché. La nostra guida alla [sessione di Sydney](/it/blog/sessione-forex-di-sydney) approfondisce come si comportano queste prime ore.
+
+## Orario di apertura e “è aperto adesso?”
+
+C’è una differenza tra conoscere l’apertura in calendario e sapere se il mercato sta effettivamente negoziando in questo momento. Il calendario è fisso, dalla domenica alle 17:00 di New York al venerdì alle 17:00 di New York, ma in un determinato giorno potresti dover tenere conto anche delle festività, quando il mercato resta tecnicamente aperto ma la liquidità di una certa valuta si assottiglia perché le banche di quel Paese sono chiuse.
+
+Le domande da porsi sono quindi due. “A che ora apre il forex?” ha la risposta stabile vista sopra. “Il forex è aperto oggi?” dipende dal giorno della settimana e dal calendario delle festività, che trattiamo nella nostra guida su [il mercato forex è aperto oggi?](/it/blog/il-mercato-forex-e-aperto-oggi). Per la risposta in tempo reale nel tuo fuso orario, lo [strumento di forexmarkethours.app](/it) mostra a colpo d’occhio lo stato attuale di ogni sessione.
+
+## Domande frequenti
+
+**A che ora apre il mercato forex la domenica?**
+Alle 17:00 ora di New York, cioè alle 22:00 GMT durante l’inverno dell’emisfero nord e alle 21:00 GMT durante l’ora legale americana. È il momento in cui apre la sessione di Sydney e inizia la settimana di trading.
+
+**A che ora apre il mercato forex in GMT?**
+Alle 22:00 GMT in inverno e alle 21:00 GMT in estate, perché l’apertura è ancorata alle 17:00 di New York e non a un orario GMT fisso. L’orario GMT si sposta di un’ora quando gli Stati Uniti cambiano l’ora.
+
+**Perché l’orario di apertura del forex si basa su New York?**
+Per convenzione la settimana di trading è definita dalla chiusura di New York alle 17:00 del venerdì, quindi la riapertura della domenica viene misurata nello stesso modo. New York è l’ultimo grande centro a negoziare ogni settimana ed è il punto di riferimento comune del mercato.
+
+**L’apertura del forex della domenica è un buon momento per fare trading?**
+È la parte più sottile della settimana, con spread più larghi e possibili gap del weekend, quindi molti trader la affrontano con cautela e aspettano che la liquidità cresca. Si tratta di informazioni generali, non di un consiglio sulla tua situazione.
+
+**A che ora chiude il mercato forex?**
+Alle 17:00 ora di New York del venerdì, cioè alle 22:00 GMT in inverno e alle 21:00 GMT durante l’ora legale americana. Poi resta chiuso fino alla riapertura della domenica.
+
+*Questo articolo ha esclusivamente scopo informativo e non costituisce una consulenza finanziaria.*`,
+      de: `Der Devisenmarkt öffnet die Woche am **Sonntag um 17:00 Uhr New Yorker Zeit (5 PM)**, das ist im Winter der Nordhalbkugel 22:00 GMT und 21:00 GMT, solange in den Vereinigten Staaten Sommerzeit gilt. In diesem Moment geht die Sydney-Session online, und der Handel beginnt nach dem Wochenende von Neuem. Da die Eröffnung an die New Yorker Uhr gebunden ist und nicht an eine feste GMT-Zeit, hängt die genaue Stunde in Ihrer eigenen Zeitzone von der Jahreszeit ab. Dieser Leitfaden zeigt die Wocheneröffnung in den wichtigsten Zeitzonen und erklärt, warum sie so funktioniert.
+
+Hier lohnt sich Genauigkeit, denn viel Verwirrung entsteht dadurch, dass die Eröffnung als eine einzige GMT-Uhrzeit angegeben wird. Der Markt öffnet nicht dauerhaft um „22:00 GMT“; er öffnet um 17:00 Uhr in New York, und 22:00 GMT ist nur der Wert, der sich daraus für einen Teil des Jahres ergibt.
+
+## Wann die Forex-Woche beginnt und endet
+
+Die Handelswoche läuft durchgehend von **Sonntag 17:00 Uhr New Yorker Zeit** bis **Freitag 17:00 Uhr New Yorker Zeit**. An diesen fünf Tagen schließt der Markt nie über Nacht; er wird einfach von einem Finanzzentrum an das nächste übergeben, während der Arbeitstag um die Welt wandert. Am Freitag um 17:00 Uhr New Yorker Zeit schließt dann das letzte große Zentrum, und der Markt ruht bis Sonntag.
+
+Sowohl die Eröffnung als auch den Schluss an 17:00 Uhr New Yorker Zeit festzumachen, ist die saubere Formulierung, weil sie das ganze Jahr über stimmt. In GMT ausgedrückt liegt die Eröffnung im Winter bei 22:00 und während der US-Sommerzeit bei 21:00, und der Freitagsschluss verhält sich spiegelbildlich. Wenn Sie sich nur eines merken, dann 17:00 Uhr New York, und überlassen Sie die Umrechnung in Ihre eigene Uhrzeit einem Tool.
+
+## Die Sonntagseröffnung in Ihrer Zeitzone
+
+Die folgende Tabelle zeigt die Sonntagseröffnung in einer Reihe gängiger Zeitzonen, ausgehend vom Winter auf der Nordhalbkugel, wenn in New York Normalzeit gilt und die Eröffnung auf 22:00 GMT fällt.
+
+| Ihre Stadt / Zeitzone | Sonntagseröffnung (Winter) |
+| --- | --- |
+| New York (ET) | 17:00 (5 PM) Sonntag |
+| London (UK, GMT) | 22:00 Sonntag |
+| Frankfurt / Paris (MEZ) | 23:00 Sonntag |
+| Istanbul (TRT) | 01:00 Montag |
+| Dubai (GST) | 02:00 Montag |
+| Mumbai (IST) | 03:30 Montag |
+| Singapur (SGT) | 06:00 Montag |
+| Tokio (JST) | 07:00 Montag |
+| Sydney (AEST) | 08:00 Montag |
+
+Beachten Sie, dass die „Sonntagseröffnung“ in weiten Teilen Asiens und des Pazifikraums nach Ortszeit eigentlich auf den Montagmorgen fällt. Das ist normal: Die Eröffnung ist ein einziger Zeitpunkt, und auf welchen Kalendertag er fällt, hängt nur davon ab, wo Sie sich befinden. Während der US-Sommerzeit verschiebt sich jeder dieser Werte um eine Stunde nach vorn. Wenn Sie sich das Rechnen und die saisonalen Verschiebungen sparen möchten, zeigt Ihnen das [Live-Tool für die Forex-Handelszeiten](/de) die genaue Eröffnung in Ihrer eigenen Zeitzone und berücksichtigt die Sommerzeit automatisch.
+
+## Warum die Eröffnung an New York gebunden ist
+
+Es mag seltsam wirken, dass ein Markt, der in Sydney öffnet, nach der New Yorker Uhr getaktet wird. Der Grund ist eine Konvention: Die Forex-Handelswoche wird allgemein durch den New Yorker Schluss um 17:00 Uhr definiert, daher wird die Wiedereröffnung 48 Stunden später naturgemäß genauso beschrieben. New York ist das letzte große Zentrum, das vor dem Wochenende handelt, und der Bezugspunkt, an dem sich der gesamte Markt orientiert.
+
+Wenn die Uhr in New York am Sonntag 17:00 Uhr überschreitet, ist es in Sydney und Wellington früher Montagmorgen, und diese asiatisch-pazifischen Handelsdesks kehren als erste zurück. Die Woche beginnt also im Pazifik, wird aber von New York aus getaktet. Deshalb verschiebt sich der GMT-Wert mit dem US-Sommerzeitkalender und nicht mit dem australischen. Wie sich der weitere Staffellauf von dort entfaltet, beschreibt unser Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert), der den Tag von Sydney bis New York verfolgt.
+
+## Warum die Sonntagseröffnung ruhig ist
+
+Die ersten Stunden der Woche sind normalerweise die dünnste Handelsphase überhaupt. Nur die asiatisch-pazifischen Zentren sind aktiv, die großen Liquiditätspools von London und New York sind noch viele Stunden entfernt, und relativ wenige Teilnehmer stellen Kurse. Daraus folgen zwei Dinge.
+
+Erstens sind die Spreads meist breiter als zu Spitzenzeiten, weil weniger Institute als Market Maker auftreten. Zweitens kann sich der Kurs schon bei moderaten Orders heftiger bewegen, da weniger Markttiefe vorhanden ist, um sie aufzunehmen. Bei der Sonntagseröffnung zeigt sich zudem jedes **Wochenend-Gap**: Wenn während der Marktschließung wichtige Nachrichten eingetroffen sind, können die ersten Kurse auf einem anderen Niveau als beim Freitagsschluss liegen und eine sichtbare Lücke im Chart hinterlassen. Viele Trader warten ab, bis die anfängliche Dünne vorüber ist und sich die Spreads normalisiert haben, bevor sie größere Schritte unternehmen. Unser Leitfaden zur [Sydney-Session](/de/blog/forex-session-sydney) betrachtet genauer, wie sich diese ersten Stunden verhalten.
+
+## Eröffnungszeit oder „Ist er gerade geöffnet?“
+
+Es ist ein Unterschied, ob man die planmäßige Eröffnung kennt oder weiß, ob der Markt in diesem Moment tatsächlich handelt. Der Zeitplan steht fest, Sonntag 17:00 Uhr New York bis Freitag 17:00 Uhr New York, doch an einem bestimmten Tag sollten Sie womöglich auch Feiertage berücksichtigen: Dann bleibt der Markt technisch geöffnet, die Liquidität in einer bestimmten Währung dünnt aber aus, weil die Banken des betreffenden Landes geschlossen sind.
+
+Es gibt also zwei Fragen nebeneinander. „Wann öffnet der Forex-Markt?“ hat die feste Antwort von oben. „Ist der Forex-Markt heute geöffnet?“ hängt vom Wochentag und vom Feiertagskalender ab, und das behandeln wir in unserem Leitfaden dazu, ob der [Forex-Markt heute geöffnet ist](/de/blog/ist-der-forex-markt-heute-geoeffnet). Die Live-Antwort für Ihre eigene Zeitzone liefert das [Tool von forexmarkethours.app](/de), das den aktuellen Status jeder Session auf einen Blick zeigt.
+
+## Häufig gestellte Fragen
+
+**Wann öffnet der Forex-Markt am Sonntag?**
+Um 17:00 Uhr New Yorker Zeit, das ist im Winter der Nordhalbkugel 22:00 GMT und während der US-Sommerzeit 21:00 GMT. Dann öffnet die Sydney-Session, und die Handelswoche beginnt.
+
+**Wann öffnet der Forex-Markt in GMT?**
+Im Winter um 22:00 GMT und im Sommer um 21:00 GMT, weil die Eröffnung an 17:00 Uhr in New York gebunden ist und nicht an eine feste GMT-Zeit. Der GMT-Wert verschiebt sich um eine Stunde, wenn die USA ihre Uhren umstellen.
+
+**Warum richtet sich die Forex-Eröffnung nach New York?**
+Per Konvention wird die Handelswoche durch den New Yorker Schluss am Freitag um 17:00 Uhr definiert, daher wird die Wiedereröffnung am Sonntag auf dieselbe Weise getaktet. New York ist jede Woche das letzte große Zentrum, das handelt, und der gemeinsame Bezugspunkt des Marktes.
+
+**Ist die Sonntagseröffnung eine gute Zeit zum Handeln?**
+Sie ist die dünnste Phase der Woche, mit breiteren Spreads und möglichen Wochenend-Gaps, daher behandeln viele Trader sie mit Vorsicht und warten, bis sich Liquidität aufbaut. Dies ist eine allgemeine Information und keine Beratung zu Ihrer Situation.
+
+**Wann schließt der Forex-Markt?**
+Am Freitag um 17:00 Uhr New Yorker Zeit, das ist im Winter 22:00 GMT und während der US-Sommerzeit 21:00 GMT. Danach bleibt er bis zur Wiedereröffnung am Sonntag geschlossen.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex piyasası haftaya **pazar günü New York saatiyle 17:00’de** açılır; bu, kuzey yarımkürenin kış döneminde 22:00 GMT’ye, ABD yaz saatindeyken ise 21:00 GMT’ye denk gelir. Bu, Sidney seansının devreye girdiği ve işlemlerin hafta sonunun ardından yeniden başladığı andır. Açılış sabit bir GMT saatine değil New York’un saatine bağlı olduğu için, kendi saat diliminizde tam olarak hangi saate denk geldiği mevsime göre değişir. Bu rehber haftalık açılışı başlıca saat dilimlerinde gösteriyor ve neden bu şekilde işlediğini açıklıyor.
+
+Bu konuda kesin olmakta fayda var, çünkü kafa karışıklığının büyük kısmı açılışın tek bir GMT saati olarak verilmesinden kaynaklanır. Piyasa kalıcı bir anlamda “22:00 GMT”de açılmaz; New York’ta 17:00’de açılır ve 22:00 GMT, bunun yılın bir bölümündeki karşılığından ibarettir.
+
+## Forex haftası ne zaman açılır ve kapanır
+
+İşlem haftası **pazar New York saatiyle 17:00**’den **cuma New York saatiyle 17:00**’ye kadar kesintisiz sürer. Bu beş gün boyunca piyasa gece kapanmaz; iş günü dünya çevresinde ilerledikçe bir finans merkezinden diğerine devredilir. Ardından cuma günü New York saatiyle 17:00’de son büyük merkez de kapanır ve piyasa pazara kadar sessizliğe bürünür.
+
+Hem açılışı hem kapanışı New York’ta saat 17:00’ye bağlamak, bunu ifade etmenin en net yoludur, çünkü yıl boyunca doğru kalır. GMT cinsinden açılış kışın 22:00, ABD yaz saati döneminde ise 21:00’dir; cuma kapanışı da bunu birebir yansıtır. Tek bir şeyi aklınızda tutacaksanız, New York saatiyle 17:00’yi hatırlayın ve kendi saatinize çevirme işini bir araca bırakın.
+
+## Kendi saat diliminizde pazar açılışı
+
+Aşağıdaki tablo, New York’un standart saatte olduğu ve açılışın 22:00 GMT olduğu kuzey yarımküre kış dönemini esas alarak pazar açılışını yaygın saat dilimlerinde gösterir.
+
+| Şehriniz / saat diliminiz | Pazar açılışı (kış) |
+| --- | --- |
+| New York (ET) | Pazar 17:00 (öğleden sonra 5) |
+| Londra (Birleşik Krallık, GMT) | Pazar 22:00 |
+| Frankfurt / Paris (CET) | Pazar 23:00 |
+| İstanbul (TRT) | Pazartesi 01:00 |
+| Dubai (GST) | Pazartesi 02:00 |
+| Mumbai (IST) | Pazartesi 03:30 |
+| Singapur (SGT) | Pazartesi 06:00 |
+| Tokyo (JST) | Pazartesi 07:00 |
+| Sidney (AEST) | Pazartesi 08:00 |
+
+Asya ve Pasifik’in büyük bölümünde “pazar” açılışının aslında yerel saatle pazartesi sabahına denk geldiğine dikkat edin. Bu normaldir: açılış tek bir andır ve hangi takvim gününe düştüğü yalnızca nerede olduğunuza bağlıdır. ABD yaz saati döneminde bu rakamların her biri bir saat erkene kayar. Hesap yapmakla ve mevsimsel kaymalarla uğraşmamak için [canlı forex piyasa saatleri aracımız](/tr) tam açılış saatini kendi saat diliminizde gösterir ve yaz saatini otomatik olarak takip eder.
+
+## Açılış neden New York’a bağlı
+
+Sidney’de açılan bir piyasanın New York saatine göre zamanlanması tuhaf görünebilir. Bunun nedeni teamüldür: forex işlem haftası her yerde New York’un 17:00’deki kapanışıyla tanımlanır; bu yüzden 48 saat sonraki yeniden açılış da doğal olarak aynı şekilde ifade edilir. New York, hafta sonundan önce işlem gören son büyük merkezdir ve tüm piyasanın etrafında şekillendiği referans noktasıdır.
+
+New York’ta pazar günü saat 17:00’yi geçtiğinde Sidney ve Wellington’da pazartesi sabahının erken saatleridir ve ilk geri dönenler bu Asya-Pasifik masalarıdır. Yani hafta Pasifik’te açılır ama New York’a göre zamanlanır; GMT rakamının Avustralya’nın değil de ABD’nin yaz saati takvimine göre kaymasının nedeni budur. Bayrak yarışının oradan itibaren nasıl ilerlediğini görmek için [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) günü Sidney’den New York’a kadar takip ediyor.
+
+## Pazar açılışı neden sakindir
+
+Haftanın ilk saatleri, normalde göreceğiniz en sığ işlem dönemidir. Yalnızca Asya-Pasifik merkezleri aktiftir, Londra ve New York’un büyük likidite havuzları hâlâ saatlerce uzaktadır ve fiyat veren katılımcı sayısı görece azdır. Bundan iki sonuç çıkar.
+
+Birincisi, piyasa yapıcılığı yapan kurum sayısı daha az olduğu için spreadler yoğun saatlere göre daha geniş olma eğilimindedir. İkincisi, emirleri karşılayacak derinlik daha az olduğundan fiyat mütevazı emirlerle bile daha sert hareket edebilir. Olası bir **hafta sonu boşluğu (gap)** da pazar açılışında ortaya çıkar: piyasa kapalıyken önemli bir haber geldiyse ilk fiyatlar cuma kapanışından farklı bir seviyede oluşabilir ve grafikte gözle görülür bir sıçrama bırakır. Pek çok yatırımcı, fazla bir şey yapmadan önce ilk saatlerdeki sığlığın geçmesini ve spreadlerin oturmasını bekler. [Sidney seansı](/tr/blog/sidney-forex-seansi) rehberimiz bu açılış saatlerinin nasıl seyrettiğine daha yakından bakıyor.
+
+## Açılış saati ile “şu anda açık mı” arasındaki fark
+
+Planlanan açılış saatini bilmekle piyasanın şu anda gerçekten işlem görüp görmediğini bilmek arasında fark vardır. Program sabittir, pazar New York saatiyle 17:00’den cuma New York saatiyle 17:00’ye kadar; ancak herhangi bir günde tatilleri de hesaba katmak isteyebilirsiniz. Tatillerde piyasa teknik olarak açık kalır, ama o ülkenin bankaları kapalı olduğu için ilgili para birimindeki likidite azalır.
+
+Yani iki soru yan yana durur. “Forex saat kaçta açılır?” sorusunun yukarıdaki sabit bir yanıtı vardır. “Forex bugün açık mı?” sorusu ise haftanın gününe ve tatil takvimine bağlıdır; bunu [forex piyasası bugün açık mı](/tr/blog/forex-piyasasi-bugun-acik-mi) rehberimizde ele alıyoruz. Kendi saat diliminizde canlı yanıt için [forexmarkethours.app aracı](/tr) tüm seansların güncel durumunu bir bakışta gösterir.
+
+## Sıkça sorulan sorular
+
+**Forex piyasası pazar günü saat kaçta açılır?**
+New York saatiyle 17:00’de; bu, kuzey yarımkürenin kış döneminde 22:00 GMT’ye, ABD yaz saati döneminde ise 21:00 GMT’ye denk gelir. Sidney seansı bu anda açılır ve işlem haftası başlar.
+
+**Forex piyasası GMT’ye göre saat kaçta açılır?**
+Kışın 22:00 GMT’de, yazın 21:00 GMT’de; çünkü açılış sabit bir GMT saatine değil, New York’ta saat 17:00’ye bağlıdır. ABD saatlerini değiştirdiğinde GMT rakamı bir saat kayar.
+
+**Forex açılış saati neden New York’a göre belirlenir?**
+Teamül gereği işlem haftası cuma günü New York’un 17:00’deki kapanışıyla tanımlanır; bu yüzden pazar günkü yeniden açılış da aynı şekilde zamanlanır. New York her hafta işlem gören son büyük merkezdir ve piyasanın ortak referans noktasıdır.
+
+**Pazar forex açılışı işlem yapmak için iyi bir zaman mı?**
+Daha geniş spreadler ve olası hafta sonu boşluklarıyla haftanın en sığ bölümüdür; bu yüzden pek çok yatırımcı bu saatlere temkinli yaklaşır ve likiditenin oluşmasını bekler. Bu genel bir bilgidir; sizin durumunuza dair bir tavsiye değildir.
+
+**Forex piyasası saat kaçta kapanır?**
+Cuma günü New York saatiyle 17:00’de; bu, kışın 22:00 GMT’ye, ABD yaz saati döneminde ise 21:00 GMT’ye denk gelir. Ardından pazar günkü yeniden açılışa kadar kapalı kalır.
+
+*Bu yazı yalnızca genel bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.*`,
     },
   },
   {
@@ -3691,24 +8311,46 @@ C’est la partie la plus mince de la semaine, avec des spreads plus larges et d
       en: "forex-economic-calendar-and-news-times",
       es: "calendario-economico-y-horas-de-noticias-forex",
       fr: "calendrier-economique-forex-et-horaires-des-annonces",
+      pt: "calendario-economico-forex-e-horarios-das-noticias",
+      it: "calendario-economico-forex-e-orari-delle-notizie",
+      de: "forex-wirtschaftskalender-und-nachrichtenzeiten",
+      tr: "forex-ekonomik-takvim-ve-haber-saatleri",
     },
     title: {
       en: "Forex News Times: When the Economic Calendar Hits Sessions",
       es: "Horas de noticias forex: cuándo el calendario económico llega",
       fr: "Calendrier économique forex : horaires des annonces",
+      pt: "Horários das notícias no forex: quando o calendário econômico atinge as sessões",
+      it: "Orari delle notizie forex: quando il calendario economico incontra le sessioni",
+      de: "Forex-Nachrichtenzeiten: Wann der Wirtschaftskalender die Sessions trifft",
+      tr: "Forex Haber Saatleri: Ekonomik Takvim Hangi Seanslara Denk Gelir",
     },
     description: {
       en: "Most big forex news lands in the London and New York sessions. See when NFP, CPI and rate decisions are released and how the economic calendar lines up with hours.",
       es: "La mayor parte de las grandes noticias forex caen en las sesiones de Londres y Nueva York. Ve cuándo se publican NFP, IPC y decisiones de tipos y cómo encajan.",
       fr: "Les annonces qui font bouger le forex tombent surtout pendant Londres et New York. Horaires des NFP, de l’inflation et des banques centrales en GMT.",
+      pt: "As grandes notícias do forex saem nas sessões de Londres e Nova York. Veja quando saem payroll, CPI e decisões de juros e como o calendário se alinha às sessões.",
+      it: "Le grandi notizie forex cadono quasi tutte nelle sessioni di Londra e New York. Vedi quando escono NFP, CPI e decisioni sui tassi e come leggere il calendario.",
+      de: "Große Forex-News fallen meist in die Sessions von London und New York. Wann NFP, CPI und Zinsentscheide erscheinen und wie der Kalender zu den Zeiten passt.",
+      tr: "Önemli forex haberlerinin çoğu Londra ve New York seanslarında gelir. NFP, TÜFE ve faiz kararlarının saatlerini ve takvimin seanslarla nasıl örtüştüğünü görün.",
     },
     date: "2026-08-05",
-    localeDate: { fr: "2026-10-05" },
+    localeDate: {
+      fr: "2026-10-05",
+      pt: "2026-11-05",
+      tr: "2026-11-16",
+      de: "2026-11-23",
+      it: "2026-12-03",
+    },
     authorSlug: "author",
     tags: {
       en: ["News", "Strategy"],
       es: ["Noticias", "Estrategia"],
       fr: ["Actualité", "Horaires"],
+      pt: ["Notícias", "Estratégia"],
+      it: ["Notizie", "Strategia"],
+      de: ["Nachrichten", "Strategie"],
+      tr: ["Haberler", "Strateji"],
     },
     cover: "/blog/forex-economic-calendar-and-news-times.svg",
     body: {
@@ -3904,6 +8546,262 @@ Consultez un calendrier économique, qui liste chaque publication avec sa date, 
 Rarement, et le marché est de toute façon fermé du vendredi 17h00 heure de New York au dimanche 17h00. Les développements occasionnels du week-end apparaissent sous forme de gap de prix à l’ouverture du dimanche plutôt que comme des échanges en direct.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `A maior parte das notícias econômicas que movem o forex sai durante as **sessões de Londres e Nova York**, e as divulgações mais pesadas de todas, o payroll americano, os dados de inflação e as decisões de juros dos bancos centrais, se concentram na manhã de Nova York, enquanto Londres ainda está aberta. Não é por acaso: as notícias são agendadas para quando o mercado relevante está acordado e a liquidez é mais profunda. Quando você entende em que momento o calendário econômico dispara e como ele se encaixa nas sessões de negociação, muitos dos movimentos bruscos do dia deixam de parecer aleatórios. Este guia relaciona os principais horários de divulgação às sessões em que eles caem.
+
+O objetivo aqui é o timing, não dicas. Saber que um grande dado está previsto para determinada hora explica por que a volatilidade dispara nesse momento e por que os minutos ao redor dele se comportam de forma diferente do resto da sessão. O que você faz com isso é outra história.
+
+## Por que as notícias seguem o horário das sessões
+
+Os dados econômicos são divulgados em calendários oficiais, e esses calendários são montados em torno do expediente de cada país. O relatório de emprego dos Estados Unidos sai na manhã americana. Os números de inflação do Reino Unido saem na manhã britânica. Os dados da zona do euro chegam no horário da Europa continental. Assim, as notícias seguem naturalmente o mesmo revezamento das sessões, porque ambas estão presas ao horário comercial local.
+
+Isso importa porque uma divulgação bate mais forte quando o seu mercado de origem está líquido e ativo. Um dado americano que chega na liquidez profunda da manhã de Nova York move o dólar de forma intensa e limpa. O mesmo dado divulgado em um mercado ralo e sonolento ainda moveria o preço, mas de forma mais errática. Agendar os dados para o pico do horário local é parte do motivo pelo qual as maiores divulgações e as sessões mais movimentadas se encaixam tão bem. Para as sessões em si, nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) traz o quadro completo de horários.
+
+## As divulgações de peso e quando elas saem
+
+Um punhado de divulgações move o mercado mais do que todas as outras somadas. A tabela abaixo lista essas divulgações com o horário habitual, convertido para GMT no caso do horário padrão (inverno). Lembre que elas estão presas ao horário local, então se deslocam uma hora quando o país em questão muda os relógios.
+
+| Divulgação | País | Horário habitual (GMT, inverno) | Sessão |
+| --- | --- | --- | --- |
+| Payroll (non-farm payrolls) | EUA | 13:30 | Nova York (Londres ainda aberta) |
+| Inflação CPI | EUA | 13:30 | Nova York (Londres ainda aberta) |
+| Decisão de juros do Fed | EUA | 19:00 | Tarde de Nova York |
+| Decisão do Banco da Inglaterra | Reino Unido | 12:00 | Londres |
+| Decisão de juros do BCE | Zona do euro | 12:45 | Europeia / Londres |
+| CPI / emprego do Reino Unido | Reino Unido | 07:00 | Abertura de Londres |
+| Divulgações do PIB | Vários | Manhã local | Sessão de origem |
+
+O **payroll** (non-farm payrolls), o relatório mensal de emprego dos Estados Unidos, é o exemplo clássico: divulgado às 8h30 no horário de Nova York, ele cai bem na sobreposição Londres-Nova York e pode mover os pares do dólar em segundos. O **CPI** americano, o índice de inflação, divide esse mesmo horário. As **decisões dos bancos centrais**, do [Federal Reserve](https://www.federalreserve.gov), do [Banco da Inglaterra](https://www.bankofengland.co.uk) e do [Banco Central Europeu](https://www.ecb.europa.eu), também são eventos agendados, publicados em calendários que você pode consultar com antecedência, e costumam produzir os maiores movimentos do mês.
+
+## Por que as notícias pesam mais na sobreposição
+
+Olhe a tabela de novo e um padrão salta aos olhos: as divulgações americanas mais pesadas, às 13:30 GMT, caem em cheio dentro da **sobreposição Londres-Nova York**. É a janela, aproximadamente das 13:00 às 17:00 GMT, em que os dois grandes centros operam ao mesmo tempo e a liquidez atinge o pico. Soltar uma grande surpresa nos dados justamente na parte mais profunda e movimentada do dia é o que produz a volatilidade mais intensa da semana.
+
+Há um efeito acumulado aqui. A sobreposição já é, por si só, a janela mais ativa, e o calendário ainda coloca nela os seus maiores eventos. Assim, as mesmas horas entregam tanto os spreads mais apertados quanto os maiores movimentos provocados por notícias. Nosso guia da [sobreposição Londres-Nova York](/pt/blog/sobreposicao-londres-nova-york) explica por que essa janela importa, e o guia da [sessão de Nova York](/pt/blog/sessao-forex-de-nova-york) trata especificamente das divulgações americanas.
+
+A manhã britânica tem a sua própria versão, em escala menor. Os dados de inflação e emprego do Reino Unido costumam sair por volta das 07:00 GMT, bem na [abertura de Londres](/pt/blog/que-horas-abre-a-sessao-de-londres), o que ajuda a explicar por que a libra pode se mover com força justamente quando a sessão está começando.
+
+## Como ler o calendário em relação às sessões
+
+Um calendário econômico lista as próximas divulgações com data, horário e, normalmente, um grau de importância. A habilidade prática é lê-lo no seu próprio fuso horário e em relação ao relógio das sessões, para saber não só o que vem por aí, mas também se vai cair em um mercado líquido e ativo ou em um mercado tranquilo.
+
+Uma divulgação de alta importância durante a sobreposição é o cenário com maior chance de produzir um movimento grande e rápido. A mesma divulgação durante uma sessão de pouca liquidez ainda pode causar um salto, mas muitas vezes mais desordenado. E um dia sem grandes divulgações agendadas tende a ser negociado com mais calma, guiado pelo fluxo e pela análise técnica, e não por surpresas nas manchetes. Nada disso diz como se posicionar; apenas ajuda a prever que tipo de sessão esperar. Muitos traders conferem o calendário logo cedo justamente para não serem pegos de surpresa por um dado agendado.
+
+Para alinhar o calendário com o status das sessões ao vivo, a [ferramenta forexmarkethours.app](/pt) mostra quais sessões estão abertas agora no seu fuso horário, e o guia do [melhor horário para operar forex](/pt/blog/melhor-horario-para-operar-forex) mapeia os horários mais movimentados que as notícias costumam atingir.
+
+## Uma observação sobre feriados
+
+O outro lado das notícias agendadas é a calmaria agendada. Nos grandes feriados bancários, o mercado continua tecnicamente aberto, mas o fluxo de dados do país em questão seca e a liquidez diminui, então o calendário fica leve e os movimentos podem ficar erráticos com volume baixo. Vale saber quais feriados afetam quais moedas; nosso guia sobre se o [mercado forex está aberto hoje](/pt/blog/o-mercado-forex-esta-aberto-hoje) lista os dias em que as condições costumam ser ruins. Para os calendários oficiais de feriados, o Reino Unido publica os feriados bancários em [gov.uk](https://www.gov.uk/bank-holidays).
+
+## Perguntas frequentes
+
+**Que horas sai o payroll (non-farm payrolls)?**
+Às 8h30 no horário de Nova York, o que corresponde a 13:30 GMT no inverno do hemisfério norte e a 12:30 GMT durante o horário de verão americano. Ele cai dentro da sobreposição Londres-Nova York, a janela mais movimentada do dia.
+
+**Quando acontecem as maiores notícias do forex?**
+A maioria se concentra na manhã de Nova York, enquanto Londres ainda está aberta, aproximadamente das 13:00 às 17:00 GMT. É quando saem o payroll americano, a inflação e as decisões do Fed, junto com a liquidez mais profunda do dia.
+
+**Por que o mercado se move tanto com as notícias?**
+Uma divulgação agendada joga informação nova de uma só vez em um mercado profundo e ativo, e os participantes reprecificam na hora. Como as maiores divulgações caem no pico de liquidez, a reação é rápida e muitas vezes grande.
+
+**Como sei quando uma notícia vai sair?**
+Consulte um calendário econômico, que lista cada divulgação com data, horário e importância. Leia os horários no seu próprio fuso e em relação ao relógio das sessões, para saber se a divulgação vai atingir um mercado movimentado ou tranquilo.
+
+**Saem notícias de forex nos fins de semana?**
+Raramente, e de qualquer forma o mercado fica fechado das 17h de sexta-feira às 17h de domingo, no horário de Nova York. Eventuais acontecimentos do fim de semana aparecem como um gap de preço na abertura de domingo, e não como negociação ao vivo.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `Gran parte delle notizie economiche capaci di muovere il forex arriva durante le **sessioni di Londra e New York**, e le pubblicazioni più importanti in assoluto, i dati sull’occupazione USA, i rapporti sull’inflazione e le decisioni sui tassi delle banche centrali, si concentrano nella mattinata di New York, quando Londra è ancora aperta. Non è un caso: le notizie vengono programmate quando il mercato interessato è sveglio e la liquidità è più profonda. Se capisci quando scatta il calendario economico e come si allinea con le sessioni di trading, molti dei movimenti improvvisi della giornata smettono di sembrare casuali. Questa guida collega i principali orari di pubblicazione alle sessioni in cui cadono.
+
+L’obiettivo qui è il timing, non i consigli. Sapere che un dato importante è atteso a una certa ora spiega perché la volatilità schizza proprio allora, e perché i minuti intorno a quel momento si comportano diversamente dal resto della sessione. Cosa farne è tutta un’altra questione.
+
+## Perché le notizie seguono le sessioni
+
+I dati economici vengono pubblicati secondo calendari ufficiali, costruiti intorno alla giornata lavorativa di ciascun paese. Il rapporto sull’occupazione statunitense esce nella mattinata americana. I dati sull’inflazione britannica escono nella mattinata britannica. I dati dell’Eurozona arrivano negli orari dell’Europa continentale. Le notizie seguono quindi in modo naturale la stessa staffetta delle sessioni, perché entrambe sono ancorate agli orari lavorativi locali.
+
+Questo conta perché una pubblicazione colpisce più forte quando il suo mercato di riferimento è liquido e attivo. Un dato USA che arriva nella liquidità profonda della mattinata di New York muove il dollaro in modo deciso e pulito. Lo stesso dato pubblicato in un mercato sottile e sonnolento muoverebbe comunque il prezzo, ma in modo più irregolare. Programmare i dati nelle ore di punta locali è uno dei motivi per cui le pubblicazioni più importanti e le sessioni più attive coincidono così bene. Per le sessioni in sé, la nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) riporta il calendario completo.
+
+## Le pubblicazioni più pesanti e quando arrivano
+
+Una manciata di pubblicazioni muove il mercato più di tutte le altre messe insieme. La tabella qui sotto le elenca con il loro orario abituale, convertito in GMT per il caso dell’ora solare (inverno). Ricorda che sono ancorate all’ora locale, quindi si spostano di un’ora quando il paese interessato cambia l’ora.
+
+| Pubblicazione | Paese | Orario abituale (GMT, inverno) | Sessione |
+| --- | --- | --- | --- |
+| Non-farm payrolls | USA | 13:30 | New York (Londra ancora aperta) |
+| Inflazione CPI | USA | 13:30 | New York (Londra ancora aperta) |
+| Decisione sui tassi della Fed | USA | 19:00 | Pomeriggio di New York |
+| Decisione della Bank of England | Regno Unito | 12:00 | Londra |
+| Decisione sui tassi della BCE | Eurozona | 12:45 | Europea / Londra |
+| CPI / occupazione Regno Unito | Regno Unito | 07:00 | Apertura di Londra |
+| Dati sul PIL | Vari | Mattina locale | Sessione di casa |
+
+I **non-farm payrolls**, il rapporto mensile sull’occupazione USA, sono l’esempio classico: pubblicati alle 8:30 del mattino ora di New York, cadono proprio nella sovrapposizione Londra-New York e possono muovere le coppie in dollari nel giro di pochi secondi. L’inflazione **CPI** statunitense condivide la stessa fascia oraria. Anche le **decisioni delle banche centrali** della [Federal Reserve](https://www.federalreserve.gov), della [Bank of England](https://www.bankofengland.co.uk) e della [Banca Centrale Europea](https://www.ecb.europa.eu) sono eventi programmati, pubblicati su calendari che puoi consultare in anticipo, e producono regolarmente i movimenti più ampi del mese.
+
+## Perché è nella sovrapposizione che le notizie colpiscono più forte
+
+Guarda di nuovo la tabella e salta all’occhio uno schema: i dati USA più pesanti delle 13:30 GMT cadono in pieno nella **sovrapposizione Londra-New York**. È la finestra, all’incirca dalle 13:00 alle 17:00 GMT, in cui entrambe le grandi piazze operano insieme e la liquidità tocca il massimo. Una sorpresa importante nei dati che arriva nella parte più profonda e affollata della giornata è ciò che produce la volatilità più forte della settimana.
+
+C’è un effetto che si somma. La sovrapposizione è già di per sé la finestra più attiva, e il calendario ci concentra pure gli eventi più importanti. Così le stesse ore offrono sia gli spread più stretti sia i movimenti più ampi guidati dalle notizie. La nostra guida sulla [sovrapposizione Londra-New York](/it/blog/sovrapposizione-londra-new-york) spiega perché quella finestra conta, e la guida sulla [sessione di New York](/it/blog/sessione-forex-di-new-york) approfondisce in particolare i dati USA.
+
+La mattinata britannica ne ha una versione in piccolo. I dati su inflazione e occupazione del Regno Unito escono spesso intorno alle 07:00 GMT, proprio all’[apertura di Londra](/it/blog/a-che-ora-apre-la-sessione-di-londra), e questo è uno dei motivi per cui la sterlina può muoversi bruscamente proprio mentre la sessione prende il via.
+
+## Leggere il calendario rispetto alle sessioni
+
+Un calendario economico elenca le prossime pubblicazioni con data, orario e di solito un livello di importanza. La competenza pratica sta nel leggerlo nel tuo fuso orario e confrontarlo con l’orologio delle sessioni, così sai non solo cosa sta arrivando ma anche se cadrà in un mercato liquido e attivo o in uno tranquillo.
+
+Una pubblicazione ad alta importanza durante la sovrapposizione è lo scenario più probabile per un movimento ampio e rapido. La stessa pubblicazione durante una sessione sottile può comunque provocare un balzo, ma spesso più disordinato. E una giornata senza dati importanti in calendario tende a scorrere più tranquilla, guidata dai flussi e dall’analisi tecnica più che dalle sorprese dei titoli. Niente di tutto questo ti dice come posizionarti; serve solo a inquadrare che tipo di sessione aspettarsi. Molti trader controllano il calendario come prima cosa proprio per non farsi cogliere alla sprovvista da un dato programmato.
+
+Per allineare il calendario con lo stato delle sessioni in tempo reale, lo [strumento di forexmarkethours.app](/it) mostra quali sessioni sono aperte in questo momento nel tuo fuso orario, e la guida sul [miglior orario per fare trading forex](/it/blog/miglior-orario-per-fare-trading-forex) mappa le ore più attive in cui tendono a cadere le notizie.
+
+## Una nota sulle festività
+
+L’altra faccia delle notizie programmate è la calma programmata. Nei principali giorni festivi bancari il mercato resta tecnicamente aperto, ma il flusso di dati del paese interessato si esaurisce e la liquidità si assottiglia, quindi il calendario si alleggerisce e i movimenti possono diventare irregolari su volumi bassi. Vale la pena sapere quali festività riguardano quali valute; la nostra guida per capire se [il mercato forex è aperto oggi](/it/blog/il-mercato-forex-e-aperto-oggi) elenca i giorni in cui le condizioni tendono a essere scarse. Per i calendari ufficiali delle festività, il Regno Unito pubblica i bank holiday su [gov.uk](https://www.gov.uk/bank-holidays).
+
+## Domande frequenti
+
+**A che ora vengono pubblicati i non-farm payrolls?**
+Alle 8:30 del mattino ora di New York, cioè alle 13:30 GMT durante l’inverno dell’emisfero nord e alle 12:30 GMT durante l’ora legale statunitense. Cadono all’interno della sovrapposizione Londra-New York, la finestra più attiva della giornata.
+
+**Quando escono le notizie forex più importanti?**
+La maggior parte si concentra nella mattinata di New York mentre Londra è ancora aperta, all’incirca dalle 13:00 alle 17:00 GMT. È allora che arrivano i dati sull’occupazione e sull’inflazione USA e le decisioni della Fed, insieme alla liquidità più profonda della giornata.
+
+**Perché il mercato si muove così tanto sulle notizie?**
+Una pubblicazione programmata immette in un colpo solo nuove informazioni in un mercato profondo e attivo, e i partecipanti riprezzano all’istante. Poiché le pubblicazioni più importanti arrivano nei momenti di massima liquidità, la reazione è rapida e spesso ampia.
+
+**Come faccio a sapere quando è attesa una notizia?**
+Consulta un calendario economico, che elenca ogni pubblicazione con data, orario e importanza. Leggi gli orari nel tuo fuso orario e confrontali con l’orologio delle sessioni, così sai se una pubblicazione colpirà un mercato affollato o uno tranquillo.
+
+**Le notizie forex escono nel fine settimana?**
+Raramente, e in ogni caso il mercato è chiuso dalle 17:00 di venerdì alle 17:00 di domenica, ora di New York. Gli sviluppi occasionali del fine settimana si vedono come un gap di prezzo all’apertura della domenica, non come trading in tempo reale.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce consulenza finanziaria.*`,
+      de: `Die meisten marktbewegenden Wirtschaftsnachrichten im Forex-Handel fallen in die **Sessions von London und New York**, und die allergrößten Veröffentlichungen, also US-Arbeitsmarktdaten, Inflationsberichte und Zinsentscheide der Notenbanken, ballen sich am New Yorker Vormittag, während London noch geöffnet ist. Das ist kein Zufall: Nachrichten werden dann angesetzt, wenn der betreffende Markt wach und die Liquidität am größten ist. Wer versteht, wann der Wirtschaftskalender zuschlägt und wie er mit den Handelssitzungen zusammenfällt, für den wirken viele plötzliche Kursbewegungen des Tages nicht mehr zufällig. Dieser Leitfaden ordnet die wichtigsten Veröffentlichungszeiten den Sessions zu, in die sie fallen.
+
+Es geht hier um das Timing, nicht um Tipps. Wer weiß, dass zu einer bestimmten Uhrzeit eine wichtige Zahl ansteht, versteht, warum die Volatilität genau dann sprunghaft steigt und warum sich die Minuten davor und danach anders verhalten als der Rest der Session. Was Sie mit diesem Wissen anfangen, ist eine ganz andere Frage.
+
+## Warum Nachrichten an die Sessions angepasst sind
+
+Wirtschaftsdaten werden nach offiziellen Terminplänen veröffentlicht, und diese Pläne richten sich nach dem Arbeitstag des jeweiligen Landes. Ein US-Arbeitsmarktbericht erscheint am amerikanischen Vormittag. Britische Inflationszahlen erscheinen am britischen Vormittag. Daten aus der Eurozone kommen zu kontinentaleuropäischen Geschäftszeiten. Die Nachrichten folgen also ganz natürlich demselben Staffellauf wie die Sessions selbst, denn beide sind an die örtlichen Geschäftszeiten gebunden.
+
+Das ist wichtig, weil eine Veröffentlichung dann am stärksten wirkt, wenn ihr Heimatmarkt liquide und aktiv ist. Eine US-Zahl, die in die tiefe Liquidität des New Yorker Vormittags fällt, bewegt den Dollar kräftig und sauber. Dieselbe Zahl in einem dünnen, verschlafenen Markt würde den Kurs ebenfalls bewegen, aber deutlich unruhiger. Dass Daten zu den lokalen Spitzenzeiten veröffentlicht werden, ist ein Grund dafür, warum die größten Veröffentlichungen und die geschäftigsten Sessions so genau übereinanderliegen. Den vollständigen Zeitplan der Sessions finden Sie in unserem Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert).
+
+## Die Schwergewichte unter den Veröffentlichungen und wann sie erscheinen
+
+Eine Handvoll Veröffentlichungen bewegt den Markt stärker als alle anderen zusammen. Die folgende Tabelle listet sie mit ihrem üblichen Veröffentlichungszeitpunkt auf, umgerechnet in GMT für den Fall der Normalzeit (Winter). Denken Sie daran, dass diese Termine an die Ortszeit gebunden sind und sich daher um eine Stunde verschieben, wenn das betreffende Land die Uhren umstellt.
+
+| Veröffentlichung | Land | Übliche Zeit (GMT, Winter) | Session |
+| --- | --- | --- | --- |
+| Non-Farm Payrolls | USA | 13:30 | New York (London noch geöffnet) |
+| Verbraucherpreise (CPI) | USA | 13:30 | New York (London noch geöffnet) |
+| Zinsentscheid der Fed | USA | 19:00 | New Yorker Nachmittag |
+| Zinsentscheid der Bank of England | UK | 12:00 | London |
+| Zinsentscheid der EZB | Eurozone | 12:45 | Europa / London |
+| Verbraucherpreise / Arbeitsmarkt UK | UK | 07:00 | Öffnung London |
+| BIP-Veröffentlichungen | Verschiedene | Lokaler Vormittag | Heimat-Session |
+
+Die **Non-Farm Payrolls**, der monatliche US-Arbeitsmarktbericht, sind das klassische Beispiel: Sie erscheinen um 8:30 Uhr New Yorker Zeit, fallen damit mitten in die Überschneidung von London und New York und können Dollar-Paare binnen Sekunden bewegen. Die US-**Verbraucherpreise (CPI)** teilen sich diesen Termin. Auch die **Zinsentscheide der Notenbanken**, also der [Federal Reserve](https://www.federalreserve.gov), der [Bank of England](https://www.bankofengland.co.uk) und der [Europäischen Zentralbank](https://www.ecb.europa.eu), sind feste Termine, die in vorab einsehbaren Kalendern veröffentlicht werden, und sie lösen regelmäßig die größten Bewegungen des Monats aus.
+
+## Warum Nachrichten in der Überschneidung am stärksten wirken
+
+Werfen Sie noch einmal einen Blick auf die Tabelle, dann fällt ein Muster ins Auge: Die gewichtigsten US-Veröffentlichungen um 13:30 GMT liegen genau in der **Überschneidung von London und New York**. Das ist das Zeitfenster von etwa 13:00 bis 17:00 GMT, in dem beide großen Finanzplätze gleichzeitig handeln und die Liquidität ihren Höhepunkt erreicht. Eine große Datenüberraschung im tiefsten, geschäftigsten Teil des Tages sorgt für die heftigste Volatilität der Woche.
+
+Hier verstärken sich zwei Effekte. Die Überschneidung ist schon für sich genommen das aktivste Zeitfenster, und dann legt der Kalender auch noch seine wichtigsten Ereignisse hinein. Dieselben Stunden liefern also sowohl die engsten Spreads als auch die größten nachrichtengetriebenen Bewegungen. Unser Leitfaden zur [Überschneidung London-New York](/de/blog/ueberschneidung-london-new-york) erklärt, warum dieses Fenster so wichtig ist, und der Leitfaden zur [New-York-Session](/de/blog/forex-session-new-york) beleuchtet speziell die US-Veröffentlichungen.
+
+Der britische Vormittag hat seine eigene, kleinere Version davon. Britische Inflations- und Arbeitsmarktdaten erscheinen oft gegen 07:00 GMT, also genau zur [Öffnung in London](/de/blog/wann-oeffnet-die-london-session). Das ist ein Grund dafür, warum sich das Pfund gerade dann kräftig bewegen kann, wenn die Session in Fahrt kommt.
+
+## Den Kalender im Zusammenspiel mit den Sessions lesen
+
+Ein Wirtschaftskalender führt anstehende Veröffentlichungen mit Datum, Uhrzeit und meist einer Einstufung ihrer Bedeutung auf. Die eigentliche Kunst besteht darin, ihn in Ihrer eigenen Zeitzone und vor dem Hintergrund der Session-Uhr zu lesen. So wissen Sie nicht nur, was ansteht, sondern auch, ob es auf einen liquiden, aktiven Markt trifft oder auf einen ruhigen.
+
+Eine hoch eingestufte Veröffentlichung während der Überschneidung ist die Konstellation, die am ehesten eine große, schnelle Bewegung auslöst. Dieselbe Veröffentlichung in einer dünnen Session kann ebenfalls einen Sprung verursachen, oft aber einen unsaubereren. Und ein Tag ohne wichtige Termine verläuft meist ruhiger, getrieben von Orderflüssen und Charttechnik statt von Überraschungen in den Schlagzeilen. Nichts davon sagt Ihnen, wie Sie sich positionieren sollen; es gibt nur einen Rahmen dafür, welche Art von Session Sie erwarten können. Viele Trader prüfen den Kalender gleich als Erstes, gerade damit sie von einer angesetzten Zahl nicht überrascht werden.
+
+Um den Kalender mit dem Live-Status der Sessions abzugleichen, zeigt Ihnen das [Tool von forexmarkethours.app](/de), welche Sessions gerade in Ihrer Zeitzone geöffnet sind, und der Leitfaden zur [besten Zeit für Forex-Trading](/de/blog/beste-zeit-fuer-forex-trading) zeigt die geschäftigsten Stunden, in die die Nachrichten typischerweise fallen.
+
+## Ein Hinweis zu Feiertagen
+
+Die Kehrseite angesetzter Nachrichten ist angesetzte Ruhe. An wichtigen Bankfeiertagen bleibt der Markt technisch geöffnet, doch der Datenfluss des betreffenden Landes versiegt und die Liquidität dünnt aus. Der Kalender ist dann leer, und bei geringem Volumen können die Bewegungen sprunghaft werden. Es lohnt sich zu wissen, welche Feiertage welche Währungen betreffen; unser Leitfaden zur Frage, ob der [Forex-Markt heute geöffnet ist](/de/blog/ist-der-forex-markt-heute-geoeffnet), listet die Tage auf, an denen die Bedingungen meist schlecht sind. Offizielle Feiertagspläne veröffentlicht das Vereinigte Königreich unter [gov.uk](https://www.gov.uk/bank-holidays).
+
+## Häufig gestellte Fragen
+
+**Wann werden die Non-Farm Payrolls veröffentlicht?**
+Um 8:30 Uhr New Yorker Zeit, also um 13:30 GMT im Winter der Nordhalbkugel und um 12:30 GMT während der US-Sommerzeit. Sie fallen in die Überschneidung von London und New York, das geschäftigste Zeitfenster des Tages.
+
+**Wann finden die wichtigsten Forex-Nachrichten statt?**
+Die meisten ballen sich am New Yorker Vormittag, während London noch geöffnet ist, also etwa von 13:00 bis 17:00 GMT. Dann erscheinen die US-Arbeitsmarktdaten, die Inflationszahlen und die Fed-Entscheide, zeitgleich mit der höchsten Liquidität des Tages.
+
+**Warum bewegt sich der Markt bei Nachrichten so stark?**
+Eine angesetzte Veröffentlichung bringt neue Informationen auf einen Schlag in einen tiefen, aktiven Markt, und die Marktteilnehmer bewerten sofort neu. Weil die größten Veröffentlichungen in die Zeit der höchsten Liquidität fallen, ist die Reaktion schnell und oft heftig.
+
+**Woher weiß ich, wann Nachrichten anstehen?**
+Schauen Sie in einen Wirtschaftskalender, der jede Veröffentlichung mit Datum, Uhrzeit und Bedeutung auflistet. Lesen Sie die Zeiten in Ihrer eigenen Zeitzone und vor dem Hintergrund der Session-Uhr, damit Sie wissen, ob eine Veröffentlichung auf einen geschäftigen oder einen ruhigen Markt trifft.
+
+**Gibt es Forex-Nachrichten auch am Wochenende?**
+Selten, und der Markt ist ohnehin von Freitag 17:00 Uhr bis Sonntag 17:00 Uhr New Yorker Zeit geschlossen. Gelegentliche Entwicklungen am Wochenende zeigen sich als Kurslücke bei der Öffnung am Sonntag und nicht im laufenden Handel.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex’te piyasayı hareket ettiren ekonomik haberlerin çoğu **Londra ve New York seansları** sırasında gelir; en büyük açıklamalar, yani ABD istihdam verileri, enflasyon raporları ve merkez bankası faiz kararları da Londra henüz açıkken New York sabahında yoğunlaşır. Bu bir tesadüf değildir: haberler, ilgili piyasanın uyanık ve likiditenin en derin olduğu saatlere göre planlanır. Ekonomik takvimin ne zaman devreye girdiğini ve işlem seanslarıyla nasıl örtüştüğünü anladığınızda, gün içindeki ani hareketlerin pek çoğu rastgele görünmekten çıkar. Bu rehber, başlıca veri açıklama saatlerini denk geldikleri seanslarla eşleştiriyor.
+
+Buradaki amaç zamanlama, tavsiye değil. Önemli bir verinin belirli bir saatte açıklanacağını bilmek, volatilitenin neden tam o saatte sıçradığını ve çevresindeki dakikaların seansın geri kalanından neden farklı davrandığını açıklar. Bu bilgiyle ne yapacağınız ise tamamen ayrı bir sorudur.
+
+## Haberler neden seanslara göre zamanlanır
+
+Ekonomik veriler resmi takvimlere göre açıklanır ve bu takvimler her ülkenin kendi iş gününe göre kurulur. ABD istihdam raporu Amerikan sabahında yayımlanır. İngiltere enflasyon rakamları İngiliz sabahında gelir. Euro Bölgesi verileri kıta Avrupası saatlerinde açıklanır. Dolayısıyla haberler doğal olarak seanslarla aynı bayrak yarışını izler, çünkü ikisi de yerel mesai saatlerine bağlıdır.
+
+Bu önemlidir, çünkü bir veri en sert etkisini kendi piyasası likit ve hareketliyken gösterir. New York sabahının derin likiditesine düşen bir ABD verisi doları keskin ve net biçimde hareket ettirir. Aynı veri sığ ve uykulu bir piyasada açıklansa fiyat yine hareket eder, ama daha düzensiz biçimde. Verilerin yerel yoğun saatlere göre planlanması, en büyük açıklamalarla en hareketli seansların bu kadar düzgün örtüşmesinin nedenlerinden biridir. Seansların kendisi için [forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) tam programı ortaya koyuyor.
+
+## En önemli veriler ve açıklanma saatleri
+
+Bir avuç veri, piyasayı geri kalan her şeyin toplamından daha fazla hareket ettirir. Aşağıdaki tablo bunları, standart saat (kış) dönemi için GMT’ye çevrilmiş olağan açıklanma saatleriyle listeliyor. Bu saatlerin yerel saate bağlı olduğunu unutmayın; ilgili ülke saatlerini değiştirdiğinde bir saat kayarlar.
+
+| Veri | Ülke | Olağan saat (GMT, kış) | Seans |
+| --- | --- | --- | --- |
+| Tarım dışı istihdam (NFP) | ABD | 13:30 | New York (Londra hâlâ açık) |
+| TÜFE enflasyonu | ABD | 13:30 | New York (Londra hâlâ açık) |
+| Fed faiz kararı | ABD | 19:00 | New York öğleden sonra |
+| İngiltere Merkez Bankası kararı | İngiltere | 12:00 | Londra |
+| ECB faiz kararı | Euro Bölgesi | 12:45 | Avrupa / Londra |
+| İngiltere TÜFE / istihdam | İngiltere | 07:00 | Londra açılışı |
+| GSYH verileri | Çeşitli | Yerel sabah | Kendi seansı |
+
+Aylık ABD istihdam raporu olan **tarım dışı istihdam** (NFP) klasik örnektir: New York saatiyle 08:30’da açıklanır, Londra-New York çakışmasının tam ortasına düşer ve dolar paritelerini saniyeler içinde hareket ettirebilir. ABD **TÜFE** enflasyonu da aynı saati paylaşır. [Federal Reserve](https://www.federalreserve.gov), [İngiltere Merkez Bankası](https://www.bankofengland.co.uk) ve [Avrupa Merkez Bankası](https://www.ecb.europa.eu) tarafından alınan **merkez bankası kararları** da önceden kontrol edebileceğiniz takvimlerde yayımlanan planlı olaylardır ve ayın en büyük hareketlerini sıklıkla bunlar üretir.
+
+## Haberler neden en sert etkisini çakışma saatlerinde gösterir
+
+Tabloya bir kez daha bakınca bir örüntü hemen göze çarpar: 13:30 GMT’deki en ağır ABD verileri tam olarak **Londra-New York çakışmasının** içine düşer. Bu, kabaca 13:00 ile 17:00 GMT arasındaki, iki büyük merkezin aynı anda işlem yaptığı ve likiditenin zirveye ulaştığı zaman dilimidir. Büyük bir veri sürprizini günün en derin ve en yoğun bölümüne bırakmak, haftanın en keskin volatilitesini doğuran şeydir.
+
+Burada katlanarak artan bir etki var. Çakışma zaten kendi başına en hareketli zaman dilimidir; üstüne takvim en büyük olaylarını da bu aralığa yükler. Böylece aynı saatler hem en dar spread’leri hem de habere dayalı en büyük hareketleri getirir. [Londra-New York çakışması](/tr/blog/londra-new-york-cakismasi) rehberimiz bu zaman diliminin neden önemli olduğunu ele alıyor; [New York seansı](/tr/blog/new-york-forex-seansi) rehberi ise özellikle ABD verilerine odaklanıyor.
+
+İngiliz sabahının da bunun daha küçük bir versiyonu var. İngiltere enflasyon ve istihdam verileri çoğunlukla 07:00 GMT civarında, yani tam [Londra açılışında](/tr/blog/londra-seansi-saat-kacta-acilir) açıklanır; sterlinin seans tam başlarken sert hareket edebilmesinin bir nedeni de budur.
+
+## Takvimi seanslarla birlikte okumak
+
+Ekonomik takvim, yaklaşan verileri tarih, saat ve genellikle bir önem derecesiyle listeler. Pratikteki beceri, takvimi kendi saat diliminizde ve seans saatiyle karşılaştırarak okumaktır; böylece yalnızca neyin geleceğini değil, bunun likit ve hareketli bir piyasaya mı yoksa sakin bir piyasaya mı denk geleceğini de bilirsiniz.
+
+Çakışma saatlerinde açıklanan yüksek önemli bir veri, büyük ve hızlı bir hareket üretme olasılığı en yüksek senaryodur. Aynı veri sığ bir seansta da sıçramaya yol açabilir, ama çoğu zaman daha dağınık bir sıçramaya. Önemli bir verinin planlanmadığı günlerde ise piyasa genellikle daha sakin seyreder; manşet sürprizlerinden çok emir akışı ve teknik faktörler belirleyici olur. Bunların hiçbiri nasıl pozisyon almanız gerektiğini söylemez; yalnızca nasıl bir seans bekleyeceğinizin çerçevesini çizer. Pek çok yatırımcı, planlı bir veriye hazırlıksız yakalanmamak için güne tam da bu yüzden takvime bakarak başlar.
+
+Takvimi canlı seans durumuyla eşleştirmek için [forexmarkethours.app aracı](/tr) şu anda saat diliminizde hangi seansların açık olduğunu gösterir; [forex işlem yapmak için en iyi saat](/tr/blog/forex-islem-yapmak-icin-en-iyi-saat) rehberi de haberlerin genellikle denk geldiği en yoğun saatleri haritalandırır.
+
+## Tatiller hakkında bir not
+
+Planlı haberlerin öbür yüzü planlı sessizliktir. Büyük resmi tatillerde piyasa teknik olarak açık kalır, ancak ilgili ülkenin veri akışı kesilir ve likidite azalır; takvim hafifler ve düşük hacimde hareketler düzensizleşebilir. Hangi tatillerin hangi para birimlerini etkilediğini bilmekte fayda var; [forex piyasasının bugün açık olup olmadığına](/tr/blog/forex-piyasasi-bugun-acik-mi) dair rehberimiz koşulların genellikle zayıf olduğu günleri listeliyor. Resmi tatil takvimleri için Birleşik Krallık, resmi tatillerini [gov.uk](https://www.gov.uk/bank-holidays) adresinde yayımlar.
+
+## Sıkça sorulan sorular
+
+**Tarım dışı istihdam (NFP) verisi saat kaçta açıklanır?**
+New York saatiyle 08:30’da; bu, kuzey yarımkürede kış aylarında 13:30 GMT’ye, ABD’de yaz saati uygulandığı dönemde ise 12:30 GMT’ye denk gelir. Günün en yoğun zaman dilimi olan Londra-New York çakışmasının içine düşer.
+
+**En büyük forex haberleri ne zaman gelir?**
+Çoğu, Londra henüz açıkken New York sabahında, kabaca 13:00 ile 17:00 GMT arasında yoğunlaşır. ABD istihdam verileri, enflasyon ve Fed kararları, günün en derin likiditesiyle birlikte bu saatlerde açıklanır.
+
+**Piyasa haberlerle neden bu kadar hareket eder?**
+Planlı bir veri, derin ve hareketli bir piyasaya bir anda yeni bilgi bırakır ve katılımcılar fiyatı anında yeniden belirler. En büyük veriler likiditenin zirvede olduğu saatlerde geldiği için tepki hızlı ve çoğu zaman büyük olur.
+
+**Haberlerin ne zaman geleceğini nasıl bilebilirim?**
+Her veriyi tarih, saat ve önem derecesiyle listeleyen bir ekonomik takvime bakın. Saatleri kendi saat diliminizde ve seans saatiyle karşılaştırarak okuyun; böylece verinin yoğun bir piyasaya mı yoksa sakin bir piyasaya mı denk geleceğini bilirsiniz.
+
+**Forex haberleri hafta sonu açıklanır mı?**
+Nadiren; üstelik piyasa zaten cuma New York saatiyle 17:00’den pazar 17:00’ye kadar kapalıdır. Hafta sonu yaşanan ara sıra gelişmeler canlı işlem olarak değil, pazar açılışında bir fiyat boşluğu (gap) olarak yansır.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve finansal tavsiye niteliği taşımaz.*`,
     },
   },
   {
@@ -3911,24 +8809,46 @@ Rarement, et le marché est de toute façon fermé du vendredi 17h00 heure de Ne
       en: "why-forex-is-open-24-hours",
       es: "por-que-el-mercado-forex-abre-24-horas",
       fr: "pourquoi-le-forex-est-ouvert-24h-24",
+      pt: "por-que-o-forex-funciona-24-horas",
+      it: "perche-il-forex-e-aperto-24-ore",
+      de: "warum-forex-24-stunden-geoeffnet-ist",
+      tr: "forex-neden-24-saat-acik",
     },
     title: {
       en: "Why the Forex Market Is Open 24 Hours a Day",
       es: "Por qué el mercado forex está abierto 24 horas al día",
       fr: "Pourquoi le forex est ouvert 24h/24 : le relais mondial",
+      pt: "Por que o mercado forex funciona 24 horas por dia",
+      it: "Perché il mercato forex è aperto 24 ore su 24",
+      de: "Warum der Forex-Markt 24 Stunden am Tag geöffnet ist",
+      tr: "Forex Piyasası Neden Günde 24 Saat Açık",
     },
     description: {
       en: "Forex is open 24 hours a day, five days a week, because it has no central exchange. See how the sessions relay round the clock and why it still closes on weekends.",
       es: "El forex está abierto 24 horas al día, cinco días a la semana, porque no tiene bolsa central. Ve cómo las sesiones se relevan y por qué cierra los fines de semana.",
       fr: "Le forex est ouvert 24h/24 parce qu’il n’a aucune bourse centrale. Comment les séances se passent le relais et pourquoi il ferme quand même le week-end.",
+      pt: "O forex funciona 24 horas por dia, cinco dias por semana, porque não tem uma bolsa central. Veja como as sessões se revezam e por que ele fecha nos fins de semana.",
+      it: "Il forex è aperto 24 ore su 24, cinque giorni a settimana, perché non ha una borsa centrale. Scopri come le sessioni si alternano e perché chiude nel weekend.",
+      de: "Forex ist werktags 24 Stunden geöffnet, weil es keine zentrale Börse gibt. Wie die Sessions rund um die Uhr übergeben und warum am Wochenende Schluss ist.",
+      tr: "Forex, merkezi bir borsası olmadığı için haftada beş gün, günde 24 saat açıktır. Seansların nasıl bayrak devrettiğini ve hafta sonu neden kapandığını görün.",
     },
     date: "2026-08-06",
-    localeDate: { fr: "2026-10-15" },
+    localeDate: {
+      fr: "2026-10-15",
+      pt: "2026-11-16",
+      tr: "2026-11-26",
+      de: "2026-12-03",
+      it: "2026-12-14",
+    },
     authorSlug: "author",
     tags: {
       en: ["Basics", "Sessions"],
       es: ["Fundamentos", "Sesiones"],
       fr: ["Bases", "Horaires"],
+      pt: ["Fundamentos", "Sessões"],
+      it: ["Fondamenti", "Sessioni"],
+      de: ["Grundlagen", "Sessions"],
+      tr: ["Temel Bilgiler", "Seanslar"],
     },
     cover: "/blog/why-forex-is-open-24-hours.svg",
     body: {
@@ -4097,6 +9017,226 @@ Non. La liquidité culmine pendant le chevauchement Londres-New York et s’amin
 À mesure que l’Europe et l’Amérique ferment, les places d’Asie-Pacifique, Sydney et Tokyo, prennent le relais, puis l’Europe rouvre avant les Amériques. C’est le relais de ces séances régionales qui maintient le marché en marche pendant la nuit d’un endroit donné.
 
 *Cet article est fourni à titre d’information générale uniquement et ne constitue pas un conseil financier.*`,
+      pt: `O mercado forex funciona 24 horas por dia, cinco dias por semana, porque **não tem uma bolsa central**. Em vez de um único prédio com horário fixo de funcionamento, a negociação de moedas acontece no mercado de balcão, por meio de uma rede mundial de bancos e instituições, e essa rede está sempre acordada em algum lugar. Quando um centro financeiro encerra o expediente, outro está começando o dia, e assim a negociação dá a volta ao mundo sem pausa, da abertura de domingo ao fechamento de sexta-feira. Este guia explica como essa estrutura de 24 horas funciona na prática e por que, mesmo funcionando o dia inteiro, o mercado ainda fecha todo fim de semana.
+
+Essa é uma das primeiras coisas que diferenciam o forex das ações. Uma ação é negociada em uma bolsa, com um sinal na abertura e outro no fechamento do pregão. Uma moeda não tem essa casa, e é essa única diferença que torna possível a negociação 24 horas.
+
+## Sem bolsa central, sem sinal de fechamento
+
+Uma bolsa de valores é um local único. Ela abre de manhã, fecha à tarde, e tudo é negociado nesse intervalo, nesse único lugar e nesse único relógio. O forex não tem nada parecido. Não existe um mercado central nem um horário oficial de abertura ou fechamento para o mercado como um todo. As operações são fechadas diretamente entre os participantes, bancos, corretoras, fundos e empresas, no que se chama de mercado de balcão (over-the-counter).
+
+Como não há um local único, também não há um único horário. O mercado está simplesmente “aberto” onde quer que os bancos estejam cotando e liquidando operações de câmbio ativamente, e, em algum lugar do mundo, em qualquer dia útil, eles estão. Essa estrutura descentralizada é o motivo pelo qual o forex pode funcionar sem parar. O Banco de Compensações Internacionais (BIS), que faz levantamentos sobre esse mercado, o descreve como o maior e mais líquido mercado financeiro do mundo, espalhado por vários centros financeiros em vez de concentrado em um só; as suas pesquisas estão em https://www.bis.org/statistics/rpfx22.htm.
+
+## Como as sessões se revezam ao longo do dia
+
+O dia de 24 horas é mais fácil de entender como um revezamento de sessões regionais, cada uma ligada ao expediente de um grande centro financeiro. Quando uma passa o bastão, a próxima assume.
+
+| Sessão | Horário (GMT, horário padrão) |
+| --- | --- |
+| Sydney | 22:00 - 07:00 |
+| Tóquio | 00:00 - 09:00 |
+| Londres (Frankfurt a partir das 07:00) | 08:00 - 17:00 |
+| Nova York | 13:00 - 22:00 |
+
+A semana começa quando **Sydney** entra em operação, no domingo à noite em GMT. Algumas horas depois, **Tóquio** se junta e aprofunda a sessão asiática. Quando a Ásia vai desacelerando, **Frankfurt e Londres** abrem e a Europa assume, respondendo pela maior parte do volume do dia. Em seguida, **Nova York** chega no início da tarde GMT, se sobrepõe a Londres por algumas horas e, por fim, fecha o ciclo às 22:00 GMT, bem quando a próxima sessão de Sydney está pronta para começar. As passagens de bastão são contínuas porque as sessões se sobrepõem nas pontas, e a liquidez é passada adiante em vez de ser desligada. Nosso guia de [sessões de negociação forex explicadas](/pt/blog/sessoes-de-negociacao-forex-explicadas) detalha cada sessão.
+
+## Por que ele ainda fecha nos fins de semana
+
+Se o mercado nunca precisa de um único centro acordado, por que ele fecha no sábado e no domingo? A resposta é que o sistema bancário por trás dele tira o fim de semana de folga. As operações de câmbio à vista são, em última instância, liquidadas pelo sistema interbancário, e os bancos de todos os grandes centros fecham no fim de semana. Sem bancos liquidando operações ou formando preços, não há mercado funcionando para negociar, mesmo que seja dia em algum lugar.
+
+Por isso, o mercado fecha às **17h de sexta-feira no horário de Nova York**, quando o último grande centro encerra, e reabre às **17h de domingo no horário de Nova York**, quando Sydney volta. É um fechamento de verdade, e não apenas um período tranquilo: não dá para operar no fim de semana. Isso também cria o **gap de fim de semana**, quando os preços podem reabrir no domingo em um nível diferente do fechamento de sexta-feira, caso alguma notícia tenha saído enquanto o mercado estava fechado. Para todos os detalhes sobre a abertura semanal, veja nosso guia sobre [que horas abre o mercado forex](/pt/blog/que-horas-abre-o-mercado-forex) e, para feriados e fechamentos, nosso guia sobre se o [mercado forex está aberto hoje](/pt/blog/o-mercado-forex-esta-aberto-hoje).
+
+## Aberto 24 horas não significa 24 horas iguais
+
+Funcionar o dia inteiro não é o mesmo que ter o mesmo movimento o tempo todo. A liquidez sobe e desce de forma acentuada ao longo das 24 horas, e a diferença entre os horários de pico e os horários tranquilos é enorme.
+
+O ponto alto é a **sobreposição Londres-Nova York**, no início da tarde GMT, quando os dois maiores centros operam juntos e o volume é mais profundo. O ponto baixo é o fim da tarde de Nova York, depois que Londres fecha, quando só resta um mercado americano cada vez mais ralo antes de Sydney reiniciar o ciclo. Entre esses extremos, cada sessão tem o seu próprio ritmo, da abertura calma de Sydney à manhã europeia carregada. Então, embora você possa tecnicamente operar às 3h da manhã no seu horário local, as condições nesse momento podem não ter nada a ver com as do meio do dia. Quais horários combinam com você depende dos seus pares e da sua agenda, algo que nosso guia do [melhor horário para operar forex](/pt/blog/melhor-horario-para-operar-forex) destrincha.
+
+A forma prática de usar um mercado de 24 horas é saber qual parte dele está ativa quando você está. A [ferramenta forexmarkethours.app](/pt) mostra o status atual de cada sessão no seu próprio fuso horário, para você ver de relance se está diante de uma janela de pico ou de um período tranquilo.
+
+## Perguntas frequentes
+
+**Por que o mercado forex funciona 24 horas?**
+Porque ele não tem uma bolsa central. As operações de câmbio acontecem no mercado de balcão, por meio de uma rede global de bancos, e, quando um centro financeiro fecha, outro abre, então a negociação continua sem parar nos dias úteis, sem que nenhum local único precise ficar acordado.
+
+**O forex funciona mesmo 24 horas por dia?**
+Sim, nos dias úteis. O mercado funciona continuamente das 17h de domingo às 17h de sexta-feira, no horário de Nova York. Ele fecha nos fins de semana porque os bancos que liquidam as operações estão fechados.
+
+**Por que o forex fecha nos fins de semana se ele nunca dorme?**
+Porque o sistema interbancário que liquida as operações de câmbio fecha no fim de semana. Sem bancos cotando e liquidando, não há mercado funcionando, mesmo que seja dia em algum lugar do mundo.
+
+**Todas as 24 horas são igualmente boas para operar?**
+Não. A liquidez atinge o pico durante a sobreposição Londres-Nova York e diminui no fim do horário de Nova York. O mercado funciona sem parar, mas as condições variam muito entre as partes movimentadas e as partes tranquilas do dia.
+
+**Quais mercados mantêm o forex aberto durante a noite?**
+Quando a Europa e a América fecham, os centros da Ásia-Pacífico, Sydney e Tóquio, assumem, e depois a Europa reabre antes das Américas. É o revezamento dessas sessões regionais que mantém o mercado funcionando durante a noite em qualquer lugar.
+
+*Este artigo tem caráter apenas informativo e não constitui aconselhamento financeiro.*`,
+      it: `Il mercato forex è aperto 24 ore su 24, cinque giorni a settimana, perché **non ha una borsa centrale**. Invece di un unico edificio con orari di apertura fissi, il trading di valute avviene over-the-counter attraverso una rete mondiale di banche e istituzioni, e quella rete è sempre sveglia da qualche parte. Quando una piazza finanziaria chiude per la sera, un’altra sta appena iniziando la giornata, così gli scambi fanno il giro del globo senza pause, dall’apertura della domenica alla chiusura del venerdì. Questa guida spiega come funziona davvero questa struttura continua e perché, pur restando aperto 24 ore, il mercato chiude comunque ogni fine settimana.
+
+È una delle prime cose che distinguono il forex dalle azioni. Un’azione viene scambiata su una borsa, con una campanella all’inizio e alla fine della giornata. Una valuta non ha una sede del genere, ed è proprio questa differenza a rendere possibile il trading 24 ore su 24.
+
+## Nessuna borsa centrale, nessuna campanella di chiusura
+
+Una borsa valori è un’unica sede. Apre al mattino, chiude nel pomeriggio, e tutto viene scambiato nel mezzo in quel solo luogo, su quel solo orologio. Il forex non ha niente di simile. Non esiste un mercato centrale né un orario ufficiale di apertura o chiusura per il mercato nel suo complesso. Gli scambi vengono concordati direttamente tra i partecipanti, banche, broker, fondi e aziende, in quello che si chiama mercato over-the-counter.
+
+Poiché non c’è un’unica sede, non c’è nemmeno un unico orario. Il mercato è semplicemente «aperto» ovunque le banche stiano quotando e regolando attivamente operazioni in valuta, e da qualche parte nel mondo, in qualsiasi giorno feriale, lo stanno facendo. Questa struttura decentralizzata è la vera ragione per cui il forex può funzionare senza interruzioni. La Banca dei Regolamenti Internazionali, che studia questo mercato, lo descrive come il mercato finanziario più grande e liquido del mondo, distribuito tra diverse piazze finanziarie anziché concentrato in una sola; le sue ricerche sono su https://www.bis.org/statistics/rpfx22.htm.
+
+## Come le sessioni si passano il testimone
+
+La giornata di 24 ore si capisce meglio come una staffetta di sessioni regionali, ognuna legata agli orari lavorativi di una grande piazza finanziaria. Quando una passa il testimone, la successiva lo raccoglie.
+
+| Sessione | Orari (GMT, ora solare) |
+| --- | --- |
+| Sydney | 22:00 - 07:00 |
+| Tokyo | 00:00 - 09:00 |
+| Londra (Francoforte dalle 07:00) | 08:00 - 17:00 |
+| New York | 13:00 - 22:00 |
+
+La settimana inizia quando **Sydney** entra in attività la domenica sera GMT. Un paio d’ore dopo si aggiunge **Tokyo**, che rende più profonda la sessione asiatica. Mentre l’Asia rallenta, aprono **Francoforte e Londra** e l’Europa prende il comando, gestendo la quota maggiore del volume giornaliero. Poi arriva **New York** nel primo pomeriggio GMT, si sovrappone a Londra per qualche ora e alla fine chiude il cerchio alle 22:00 GMT, proprio quando la successiva sessione di Sydney è pronta a partire. I passaggi di consegne sono fluidi perché le sessioni si sovrappongono ai margini, così la liquidità viene trasmessa anziché spenta. La nostra guida [sessioni di trading forex spiegate](/it/blog/sessioni-di-trading-forex-spiegate) esamina ogni sessione nel dettaglio.
+
+## Perché chiude comunque nel fine settimana
+
+Se il mercato non ha mai bisogno che una singola piazza sia sveglia, perché chiude il sabato e la domenica? La risposta è che il sistema bancario sottostante si prende il fine settimana libero. Le operazioni spot in valuta vengono in ultima analisi regolate attraverso il sistema interbancario, e le banche di tutte le grandi piazze chiudono nel fine settimana. Senza banche che regolano le operazioni o formano i prezzi, non c’è un mercato funzionante in cui operare, anche se da qualche parte è giorno.
+
+Il mercato quindi chiude alle **17:00 ora di New York del venerdì**, quando chiude l’ultima grande piazza, e riapre alle **17:00 ora di New York della domenica**, quando torna Sydney. È una chiusura vera, non solo una fase tranquilla: nel fine settimana non puoi fare trading. Questo crea anche il **gap del weekend**, quando i prezzi possono riaprire la domenica a un livello diverso dalla chiusura del venerdì se sono uscite notizie mentre il mercato era chiuso. Per tutti i dettagli sull’apertura settimanale, leggi la nostra guida su [a che ora apre il mercato forex](/it/blog/a-che-ora-apre-il-mercato-forex), e per festività e chiusure, la nostra guida per capire se [il mercato forex è aperto oggi](/it/blog/il-mercato-forex-e-aperto-oggi).
+
+## Aperto 24 ore non significa 24 ore tutte uguali
+
+Funzionare senza sosta non equivale a essere ugualmente attivi. La liquidità sale e scende in modo marcato nell’arco delle 24 ore, e la differenza tra le ore di punta e quelle tranquille è enorme.
+
+Il punto più alto è la **sovrapposizione Londra-New York** nel primo pomeriggio GMT, quando le due piazze più grandi operano insieme e il volume è più profondo. Il punto più basso è il tardo pomeriggio di New York dopo la chiusura di Londra, quando resta solo un mercato americano sempre più sottile prima che Sydney faccia ripartire il ciclo. Tra questi estremi, ogni sessione ha il suo ritmo, dalla calma apertura di Sydney alla mattinata europea ricca di scambi. Quindi, anche se tecnicamente puoi fare trading alle 3 di notte nella tua ora locale, le condizioni in quel momento possono essere tutt’altra cosa rispetto a mezzogiorno. Quali ore facciano per te dipende dalle tue coppie e dalla tua agenda, un tema che la nostra guida sul [miglior orario per fare trading forex](/it/blog/miglior-orario-per-fare-trading-forex) approfondisce.
+
+Il modo pratico di sfruttare un mercato aperto 24 ore è sapere quale parte è attiva quando lo sei tu. Lo [strumento di forexmarkethours.app](/it) mostra lo stato attuale di ogni sessione nel tuo fuso orario, così vedi a colpo d’occhio se sei in una finestra di punta o in una tranquilla.
+
+## Domande frequenti
+
+**Perché il mercato forex è aperto 24 ore su 24?**
+Perché non ha una borsa centrale. Gli scambi di valute avvengono over-the-counter attraverso una rete globale di banche, e quando una piazza finanziaria chiude un’altra apre, così il trading prosegue senza sosta nei giorni feriali senza che una singola sede debba restare sveglia.
+
+**Il forex è davvero aperto 24 ore al giorno?**
+Sì, nei giorni feriali. Il mercato funziona senza interruzioni dalle 17:00 di domenica alle 17:00 di venerdì, ora di New York. Nel fine settimana è chiuso perché le banche che regolano le operazioni sono chiuse.
+
+**Perché il forex chiude nel fine settimana se non dorme mai?**
+Perché il sistema interbancario che regola le operazioni in valuta chiude nel fine settimana. Senza banche che quotano e regolano, non c’è un mercato funzionante, anche se da qualche parte nel mondo è giorno.
+
+**Tutte le 24 ore sono ugualmente buone per fare trading?**
+No. La liquidità raggiunge il picco durante la sovrapposizione Londra-New York e si assottiglia nelle ultime ore di New York. Il mercato funziona senza sosta, ma le condizioni variano molto tra le parti attive e quelle tranquille della giornata.
+
+**Quali mercati tengono aperto il forex durante la notte?**
+Quando Europa e America chiudono, subentrano le piazze dell’Asia-Pacifico, Sydney e Tokyo, e più tardi riapre l’Europa prima delle Americhe. È la staffetta di queste sessioni regionali a mantenere il mercato attivo durante la notte in qualsiasi luogo.
+
+*Questo articolo ha solo scopo informativo generale e non costituisce consulenza finanziaria.*`,
+      de: `Der Forex-Markt ist 24 Stunden am Tag und fünf Tage pro Woche geöffnet, weil es **keine zentrale Börse** gibt. Statt in einem einzigen Gebäude mit festen Öffnungszeiten findet der Devisenhandel außerbörslich über ein weltweites Netz aus Banken und Institutionen statt, und irgendwo ist dieses Netz immer wach. Wenn ein Finanzplatz abends schließt, beginnt anderswo gerade der Tag, sodass der Handel von der Öffnung am Sonntag bis zum Schluss am Freitag ohne Pause um den Globus wandert. Dieser Leitfaden erklärt, wie diese Struktur rund um die Uhr tatsächlich funktioniert und warum der Markt trotz 24-Stunden-Betrieb jedes Wochenende schließt.
+
+Das ist einer der ersten Punkte, die Forex vom Aktienhandel unterscheiden. Eine Aktie wird an einer Börse gehandelt, an der zu Beginn und am Ende des Tages die Glocke läutet. Eine Währung hat kein solches Zuhause, und genau dieser eine Unterschied macht den Handel rund um die Uhr möglich.
+
+## Keine zentrale Börse, keine Schlussglocke
+
+Eine Aktienbörse ist ein einziger Handelsplatz. Sie öffnet am Morgen, schließt am Nachmittag, und dazwischen läuft der gesamte Handel an diesem einen Ort nach dieser einen Uhr. Im Forex-Handel gibt es nichts Vergleichbares. Es gibt keinen zentralen Marktplatz und keine offiziellen Öffnungs- oder Schlusszeiten für den Markt als Ganzes. Geschäfte werden direkt zwischen den Teilnehmern vereinbart, also zwischen Banken, Brokern, Fonds und Unternehmen, in einem sogenannten außerbörslichen Markt (OTC).
+
+Weil es keinen einzelnen Handelsplatz gibt, gibt es auch keine einheitlichen Öffnungszeiten. Der Markt ist einfach überall dort „geöffnet“, wo Banken aktiv Devisenkurse stellen und Geschäfte abwickeln, und irgendwo auf der Welt tun sie das an jedem Werktag. Diese dezentrale Struktur ist der eigentliche Grund, warum Forex ununterbrochen laufen kann. Die Bank für Internationalen Zahlungsausgleich, die diesen Markt regelmäßig erhebt, beschreibt ihn als den größten und liquidesten Finanzmarkt der Welt, verteilt auf viele Finanzplätze statt an einem Ort angesiedelt; ihre Erhebung finden Sie unter https://www.bis.org/statistics/rpfx22.htm.
+
+## Wie die Sessions einander rund um die Uhr ablösen
+
+Den 24-Stunden-Tag versteht man am besten als Staffellauf regionaler Sessions, die jeweils an die Geschäftszeiten eines großen Finanzplatzes gebunden sind. Wenn eine Session übergibt, übernimmt die nächste.
+
+| Session | Zeiten (GMT, Normalzeit) |
+| --- | --- |
+| Sydney | 22:00 - 07:00 |
+| Tokio | 00:00 - 09:00 |
+| London (Frankfurt ab 07:00) | 08:00 - 17:00 |
+| New York | 13:00 - 22:00 |
+
+Die Woche beginnt, wenn **Sydney** am Sonntagabend GMT online geht. Ein paar Stunden später kommt **Tokio** hinzu und vertieft die asiatische Session. Während Asien ausklingt, öffnen **Frankfurt und London**, und Europa übernimmt mit dem größten Anteil am Tagesvolumen. Am frühen Nachmittag GMT kommt dann **New York** hinzu, überschneidet sich einige Stunden mit London und schließt den Kreis schließlich um 22:00 GMT, genau dann, wenn die nächste Sydney-Session bereitsteht. Die Übergaben verlaufen nahtlos, weil sich die Sessions an den Rändern überschneiden: Die Liquidität wird weitergereicht statt abgeschaltet. Unser Leitfaden [Forex-Handelssitzungen erklärt](/de/blog/forex-handelssitzungen-erklaert) geht jede Session im Detail durch.
+
+## Warum der Markt am Wochenende trotzdem schließt
+
+Wenn der Markt nie darauf angewiesen ist, dass ein bestimmter Finanzplatz wach ist, warum schließt er dann überhaupt am Samstag und Sonntag? Die Antwort: Das darunterliegende Bankensystem macht am Wochenende Pause. Devisenkassageschäfte werden letztlich über das Interbankensystem abgewickelt, und die Banken an allen großen Finanzplätzen schließen über das Wochenende. Ohne Banken, die Geschäfte abwickeln und Kurse stellen, gibt es keinen funktionierenden Markt, auch wenn es irgendwo auf der Welt gerade Tag ist.
+
+Der Markt schließt daher am **Freitag um 17:00 Uhr New Yorker Zeit**, wenn der letzte große Finanzplatz schließt, und öffnet wieder am **Sonntag um 17:00 Uhr New Yorker Zeit**, wenn Sydney zurückkehrt. Das ist eine echte Schließung und nicht bloß eine ruhige Phase: Am Wochenende können Sie nicht handeln. Daraus entsteht auch die **Wochenendlücke** (Gap): Die Kurse können am Sonntag auf einem anderen Niveau öffnen als beim Schluss am Freitag, wenn während der Schließung Nachrichten bekannt wurden. Alle Details zur wöchentlichen Öffnung finden Sie in unserem Leitfaden [Wann öffnet der Forex-Markt?](/de/blog/wann-oeffnet-der-forex-markt), und zu Feiertagen und Schließungen in unserem Leitfaden zur Frage, ob der [Forex-Markt heute geöffnet ist](/de/blog/ist-der-forex-markt-heute-geoeffnet).
+
+## 24 Stunden geöffnet heißt nicht 24 gleichwertige Stunden
+
+Rund um die Uhr zu laufen ist nicht dasselbe, wie gleichmäßig betriebsam zu sein. Die Liquidität steigt und fällt im Laufe der 24 Stunden erheblich, und der Unterschied zwischen den Spitzen- und den ruhigen Stunden ist enorm.
+
+Den Höhepunkt bildet die **Überschneidung von London und New York** am frühen Nachmittag GMT, wenn die beiden größten Finanzplätze gemeinsam handeln und das Volumen am tiefsten ist. Den Tiefpunkt bildet der späte New Yorker Nachmittag nach dem Londoner Schluss, wenn nur noch ein ausdünnender amerikanischer Markt übrig ist, bevor Sydney den Kreislauf neu startet. Zwischen diesen Extremen hat jede Session ihr eigenes Tempo, von der ruhigen Öffnung in Sydney bis zum lebhaften europäischen Vormittag. Sie können also technisch gesehen um 3 Uhr morgens Ihrer Ortszeit handeln, doch die Bedingungen sind dann womöglich ganz andere als zur Mittagszeit. Welche Stunden zu Ihnen passen, hängt von Ihren Paaren und Ihrem Tagesablauf ab; das erläutert unser Leitfaden zur [besten Zeit für Forex-Trading](/de/blog/beste-zeit-fuer-forex-trading).
+
+Einen 24-Stunden-Markt nutzen Sie in der Praxis am besten, indem Sie wissen, welcher Teil davon gerade aktiv ist, wenn Sie es sind. Das [Tool von forexmarkethours.app](/de) zeigt den aktuellen Status jeder Session in Ihrer eigenen Zeitzone, sodass Sie auf einen Blick erkennen, ob Sie gerade ein Spitzenfenster oder eine ruhige Phase vor sich haben.
+
+## Häufig gestellte Fragen
+
+**Warum ist der Forex-Markt 24 Stunden geöffnet?**
+Weil es keine zentrale Börse gibt. Devisengeschäfte laufen außerbörslich über ein weltweites Netz aus Banken, und wenn ein Finanzplatz schließt, öffnet ein anderer. So geht der Handel an Werktagen rund um die Uhr weiter, ohne dass ein einzelner Handelsplatz wach bleiben muss.
+
+**Ist Forex wirklich 24 Stunden am Tag geöffnet?**
+Ja, an Werktagen. Der Markt läuft ununterbrochen von Sonntag 17:00 Uhr New Yorker Zeit bis Freitag 17:00 Uhr New Yorker Zeit. Am Wochenende ist er geschlossen, weil die Banken, die die Geschäfte abwickeln, nicht arbeiten.
+
+**Warum schließt Forex am Wochenende, wenn der Markt doch nie schläft?**
+Weil das Interbankensystem, über das Devisengeschäfte abgewickelt werden, am Wochenende schließt. Ohne Banken, die Kurse stellen und Geschäfte abwickeln, gibt es keinen funktionierenden Markt, auch wenn es irgendwo auf der Welt gerade Tag ist.
+
+**Eignen sich alle 24 Stunden gleich gut zum Handeln?**
+Nein. Die Liquidität erreicht ihren Höhepunkt während der Überschneidung von London und New York und dünnt in den späten New Yorker Stunden aus. Der Markt läuft ununterbrochen, doch die Bedingungen unterscheiden sich stark zwischen den geschäftigen und den ruhigen Phasen des Tages.
+
+**Welche Märkte halten Forex über Nacht geöffnet?**
+Wenn Europa und Amerika schließen, übernehmen die Finanzplätze im asiatisch-pazifischen Raum, Sydney und Tokio, und später öffnet Europa wieder vor Amerika. Diese Staffel regionaler Sessions sorgt dafür, dass der Markt weiterläuft, während an einem bestimmten Ort gerade Nacht ist.
+
+*Dieser Artikel dient ausschließlich der allgemeinen Information und stellt keine Finanzberatung dar.*`,
+      tr: `Forex piyasası haftada beş gün, günde 24 saat açıktır, çünkü **merkezi bir borsası yoktur**. Sabit açılış saatleri olan tek bir bina yerine döviz işlemleri, bankalar ve kurumlardan oluşan dünya çapında bir ağ üzerinden tezgâh üstü olarak gerçekleşir ve bu ağ dünyanın bir yerinde her zaman uyanıktır. Bir finans merkezi akşam kapanırken bir diğeri güne yeni başlar; böylece işlemler pazar açılışından cuma kapanışına kadar hiç durmadan dünyayı dolaşır. Bu rehber, bu kesintisiz yapının gerçekte nasıl işlediğini ve 24 saat çalışmasına rağmen piyasanın neden her hafta sonu kapandığını açıklıyor.
+
+Bu, forex’i hisse senetlerinden ayıran ilk özelliklerden biridir. Bir hisse senedi, günün başında ve sonunda zil çalan bir borsada işlem görür. Bir para biriminin böyle bir evi yoktur ve 24 saat işlemi mümkün kılan da bu tek farktır.
+
+## Merkezi borsa yok, kapanış zili yok
+
+Borsa tek bir mekândır. Sabah açılır, öğleden sonra kapanır ve aradaki tüm işlemler o tek yerde, o tek saate göre yapılır. Forex’te bunun benzeri yoktur. Merkezi bir pazar yeri ve piyasanın bütünü için resmi bir açılış ya da kapanış saati bulunmaz. İşlemler katılımcılar (bankalar, aracı kurumlar, fonlar ve şirketler) arasında doğrudan, tezgâh üstü piyasa denen yapıda kararlaştırılır.
+
+Tek bir mekân olmadığı için tek bir saat çizelgesi de yoktur. Piyasa, bankaların aktif olarak döviz fiyatı verdiği ve işlemleri takas ettiği her yerde basitçe “açıktır” ve hafta içi herhangi bir gün dünyanın bir yerinde bunu yapan bankalar vardır. Forex’in kesintisiz işleyebilmesinin tek nedeni bu merkeziyetsiz yapıdır. Bu piyasayı düzenli olarak inceleyen Uluslararası Ödemeler Bankası (BIS), onu tek bir yerde toplanmak yerine finans merkezlerine yayılmış, dünyanın en büyük ve en likit finansal piyasası olarak tanımlar; araştırmasına https://www.bis.org/statistics/rpfx22.htm adresinden ulaşabilirsiniz.
+
+## Seanslar 24 saat boyunca nasıl bayrak devreder
+
+24 saatlik gün en iyi, her biri büyük bir finans merkezinin mesai saatlerine bağlı bölgesel seanslardan oluşan bir bayrak yarışı olarak anlaşılır. Biri bayrağı devrederken bir sonraki devralır.
+
+| Seans | Saatler (GMT, standart saat) |
+| --- | --- |
+| Sidney | 22:00 - 07:00 |
+| Tokyo | 00:00 - 09:00 |
+| Londra (07:00’den itibaren Frankfurt) | 08:00 - 17:00 |
+| New York | 13:00 - 22:00 |
+
+Hafta, GMT’ye göre pazar akşamı **Sidney** devreye girdiğinde başlar. Birkaç saat sonra **Tokyo** katılır ve Asya seansını derinleştirir. Asya yavaşlarken **Frankfurt ve Londra** açılır ve günün hacminin en büyük payını taşıyan Avrupa devralır. Ardından **New York** GMT’ye göre öğleden sonranın erken saatlerinde gelir, birkaç saat boyunca Londra ile çakışır ve sonunda 22:00 GMT’de, bir sonraki Sidney seansı başlamaya hazırken döngüyü kapatır. Seanslar uçlarda çakıştığı için devir teslimler kesintisizdir; likidite kapatılmaz, bir sonrakine aktarılır. [Forex işlem seansları rehberimiz](/tr/blog/forex-islem-seanslari-rehberi) her seansı ayrıntılı olarak anlatıyor.
+
+## Peki neden hafta sonu kapanır
+
+Piyasanın tek bir merkezin uyanık olmasına hiç ihtiyacı yoksa, cumartesi ve pazar neden kapanıyor? Yanıt, altta yatan bankacılık sisteminin hafta sonu tatil yapmasıdır. Spot döviz işlemleri nihayetinde bankalar arası sistem üzerinden takas edilir ve her büyük merkezdeki bankalar hafta sonu kapalıdır. İşlemleri takas eden ve fiyat veren banka olmayınca, dünyanın bir yerinde gündüz olsa bile işlem yapılabilecek işleyen bir piyasa da olmaz.
+
+Bu yüzden piyasa, son büyük merkez kapandığında **cuma New York saatiyle 17:00’de** kapanır ve Sidney geri döndüğünde **pazar New York saatiyle 17:00’de** yeniden açılır. Bu sadece sakin bir dönem değil, gerçek bir kapanıştır: hafta sonu işlem yapamazsınız. Ayrıca **hafta sonu boşluğu** (gap) da buradan doğar: piyasa kapalıyken haber çıkarsa fiyatlar pazar günü cuma kapanışından farklı bir seviyede açılabilir. Haftalık açılışın tüm ayrıntıları için [forex piyasasının saat kaçta açıldığına](/tr/blog/forex-piyasasi-saat-kacta-acilir) dair rehberimize, tatiller ve kapanışlar için de [forex piyasasının bugün açık olup olmadığına](/tr/blog/forex-piyasasi-bugun-acik-mi) dair rehberimize göz atın.
+
+## 24 saat açık olmak, 24 saatin eşit olduğu anlamına gelmez
+
+Günün her saatinde açık olmak, her saat aynı yoğunlukta olmak demek değildir. Likidite 24 saat boyunca çarpıcı biçimde artıp azalır ve zirve saatlerle sakin saatler arasındaki fark çok büyüktür.
+
+Zirve, iki büyük merkezin birlikte işlem yaptığı ve hacmin en derin olduğu, GMT’ye göre öğleden sonranın erken saatlerindeki **Londra-New York çakışmasıdır**. En düşük nokta ise Londra kapandıktan sonraki geç New York öğleden sonrasıdır; Sidney döngüyü yeniden başlatana kadar geriye yalnızca incelen bir Amerikan piyasası kalır. Bu iki uç arasında her seansın kendi temposu vardır: sakin Sidney açılışından yoğun Avrupa sabahına kadar. Yani yerel saatinizle sabahın 3’ünde teknik olarak işlem yapabilirsiniz, ama o saatteki koşullar öğle saatlerindekine hiç benzemeyebilir. Hangi saatlerin size uygun olduğu paritelerinize ve programınıza bağlıdır; [forex işlem yapmak için en iyi saat](/tr/blog/forex-islem-yapmak-icin-en-iyi-saat) rehberimiz bunu ayrıntılı biçimde ele alıyor.
+
+24 saatlik bir piyasadan pratikte yararlanmanın yolu, sizin aktif olduğunuz saatlerde piyasanın hangi bölümünün canlı olduğunu bilmektir. [forexmarkethours.app aracı](/tr) her seansın güncel durumunu kendi saat diliminizde gösterir; böylece bir zirve dilimine mi yoksa sakin bir dilime mi baktığınızı bir bakışta görebilirsiniz.
+
+## Sıkça sorulan sorular
+
+**Forex piyasası neden 24 saat açık?**
+Çünkü merkezi bir borsası yoktur. Döviz işlemleri küresel bir banka ağı üzerinden tezgâh üstü olarak gerçekleşir ve bir finans merkezi kapanırken bir diğeri açılır; böylece tek bir mekânın uyanık kalmasına gerek kalmadan işlemler hafta içi kesintisiz sürer.
+
+**Forex gerçekten günde 24 saat açık mı?**
+Evet, hafta içi. Piyasa pazar New York saatiyle 17:00’den cuma New York saatiyle 17:00’ye kadar kesintisiz işler. İşlemleri takas eden bankalar kapalı olduğu için hafta sonu kapalıdır.
+
+**Hiç uyumuyorsa forex neden hafta sonu kapanır?**
+Çünkü döviz işlemlerini takas eden bankalar arası sistem hafta sonu kapanır. Fiyat veren ve takas yapan bankalar olmadan, dünyanın bir yerinde gündüz olsa bile işleyen bir piyasa olmaz.
+
+**24 saatin hepsi işlem için aynı derecede iyi mi?**
+Hayır. Likidite Londra-New York çakışmasında zirve yapar, geç New York saatlerinde ise incelir. Piyasa kesintisiz işler, ancak koşullar günün yoğun ve sakin bölümleri arasında büyük farklılık gösterir.
+
+**Forex’i gece boyunca hangi piyasalar açık tutar?**
+Avrupa ve Amerika kapanırken Asya-Pasifik merkezleri, yani Sidney ve Tokyo devralır; daha sonra Amerika’dan önce Avrupa yeniden açılır. Herhangi bir konumda gece boyunca piyasayı işler halde tutan, bu bölgesel seansların bayrak yarışıdır.
+
+*Bu makale yalnızca genel bilgilendirme amaçlıdır ve finansal tavsiye niteliği taşımaz.*`,
     },
   },
 ];

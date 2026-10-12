@@ -40,6 +40,26 @@ const HOME_META: Record<Locale, { title: string; description: string }> = {
     description:
       "Découvrez quelles séances forex sont ouvertes maintenant : Sydney, Tokyo, Londres et New York, dans votre fuseau horaire. Horloge gratuite, sans inscription.",
   },
+  pt: {
+    title: "Horário do Mercado Forex: Relógio de Sessões ao Vivo",
+    description:
+      "Veja quais sessões do forex estão abertas agora, Sydney, Tóquio, Londres e Nova York, no seu fuso horário. Relógio grátis, sobreposições e horário de verão.",
+  },
+  it: {
+    title: "Orari del Mercato Forex: Orologio delle Sessioni Live",
+    description:
+      "Quali sessioni forex sono aperte ora? Sydney, Tokyo, Londra e New York nel tuo fuso orario. Orologio gratis, sovrapposizioni e ora legale. Senza registrazione.",
+  },
+  de: {
+    title: "Forex Handelszeiten: Live-Sessionuhr in Ihrer Zeitzone",
+    description:
+      "Sehen Sie, welche Forex-Sessions gerade geöffnet sind: Sydney, Tokio, London und New York, live in Ihrer Zeitzone. Kostenlose Sessionuhr, ohne Anmeldung.",
+  },
+  tr: {
+    title: "Forex Piyasa Saatleri: Saat Diliminizde Canlı Seans Saati",
+    description:
+      "Sidney, Tokyo, Londra ve New York: hangi forex seansları şu an açık, saat diliminizde canlı görün. Ücretsiz seans saati, çakışmalar, yaz saati. Kayıt yok.",
+  },
 };
 
 export function generateStaticParams() {

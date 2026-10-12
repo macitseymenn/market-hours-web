@@ -145,6 +145,170 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
       </p>
     </>
   ),
+  pt: analyticsEnabled ? (
+    <>
+      <h2>Análises de uso neste site</h2>
+      <p>
+        Esta página de política está hospedada no nosso site, que usa análises que
+        respeitam a privacidade para entender o uso de forma agregada, quais
+        páginas são mais populares e, de modo aproximado, de onde vêm os
+        visitantes. O app {LOTWISE.shortName} em si não contém nenhum SDK de
+        análise. Nunca usamos rastreadores de publicidade e nunca vendemos nem
+        compartilhamos seus dados.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          As análises que usamos no site podem definir cookies. Elas são
+          carregadas{" "}
+          <strong>somente depois que você aceita</strong> o banner de
+          consentimento; se você recusar, nenhum cookie de análise é definido. O
+          Google Analytics, quando usado, é configurado para anonimizar endereços
+          IP. Você pode mudar sua escolha a qualquer momento limpando os dados
+          deste site no seu navegador.
+        </p>
+      ) : (
+        <p>
+          As análises do nosso site não usam cookies nem qualquer identificador
+          persistente e não rastreiam você entre sites, então nenhum banner de
+          consentimento é necessário.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Não coletamos nenhum dado pessoal</h2>
+      <p>
+        O {LOTWISE.shortName} não usa ferramentas de análise, rastreadores de
+        publicidade nem SDKs de terceiros. Não coletamos nomes, endereços de
+        e-mail, endereços IP, identificadores de dispositivo nem qualquer dado de
+        conta, de corretora ou de trading. Não há cadastro nem conta de usuário,
+        então não temos nada seu para vender ou compartilhar.
+      </p>
+    </>
+  ),
+  it: analyticsEnabled ? (
+    <>
+      <h2>Statistiche di utilizzo su questo sito web</h2>
+      <p>
+        Questa informativa è ospitata sul nostro sito web, che usa strumenti di
+        analisi rispettosi della privacy per capire l’utilizzo in forma aggregata,
+        quali pagine sono più visitate e, in modo approssimativo, da dove arrivano i
+        visitatori. L’app {LOTWISE.shortName} non contiene alcun SDK di analisi.
+        Non usiamo mai tracker pubblicitari e non vendiamo né condividiamo mai i
+        tuoi dati.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Gli strumenti di analisi che usiamo sul sito web possono impostare dei
+          cookie. Vengono caricati{" "}
+          <strong>solo dopo che hai accettato</strong> il banner di consenso; se
+          rifiuti, non viene impostato alcun cookie di analisi. Google Analytics,
+          dove utilizzato, è configurato per anonimizzare gli indirizzi IP. Puoi
+          modificare la tua scelta in qualsiasi momento cancellando i dati di
+          questo sito nel tuo browser.
+        </p>
+      ) : (
+        <p>
+          Gli strumenti di analisi del nostro sito web non usano cookie né
+          identificatori persistenti e non ti tracciano da un sito all’altro,
+          quindi non è necessario alcun banner di consenso.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Non raccogliamo dati personali</h2>
+      <p>
+        {LOTWISE.shortName} non usa strumenti di analisi, tracker pubblicitari né
+        SDK di terze parti. Non raccogliamo nomi, indirizzi email, indirizzi IP,
+        identificatori del dispositivo né alcun dato relativo ad account, broker o
+        trading. Non c’è alcuna registrazione né account utente, quindi non
+        abbiamo nulla di tuo da vendere o condividere.
+      </p>
+    </>
+  ),
+  de: analyticsEnabled ? (
+    <>
+      <h2>Analyse auf dieser Website</h2>
+      <p>
+        Diese Datenschutzseite wird auf unserer Website gehostet, die eine
+        datenschutzfreundliche Analyse nutzt, um die Nutzung in zusammengefasster
+        Form zu verstehen, also welche Seiten beliebt sind und ungefähr, woher
+        die Besucher kommen. Die App {LOTWISE.shortName} selbst enthält kein
+        Analyse-SDK. Wir setzen niemals Werbetracker ein und verkaufen oder
+        teilen Ihre Daten niemals.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Die Analyse, die wir auf der Website nutzen, kann Cookies setzen. Sie
+          wird{" "}
+          <strong>erst geladen, nachdem Sie</strong> im Einwilligungsbanner
+          zugestimmt haben; wenn Sie ablehnen, werden keine Analyse-Cookies
+          gesetzt. Google Analytics ist, sofern verwendet, so konfiguriert, dass
+          IP-Adressen anonymisiert werden. Sie können Ihre Entscheidung jederzeit
+          ändern, indem Sie die Daten dieser Website in Ihrem Browser löschen.
+        </p>
+      ) : (
+        <p>
+          Die Analyse unserer Website kommt ohne Cookies aus, verwendet keine
+          dauerhafte Kennung und verfolgt Sie nicht über verschiedene Websites
+          hinweg. Ein Einwilligungsbanner ist daher nicht erforderlich.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Wir erfassen keine personenbezogenen Daten</h2>
+      <p>
+        {LOTWISE.shortName} verwendet keine Analyse, keine Werbetracker und keine
+        SDKs von Drittanbietern. Wir erfassen weder Namen noch E-Mail-Adressen,
+        IP-Adressen, Gerätekennungen oder Konto-, Broker- oder Handelsdaten. Es
+        gibt keine Registrierung und kein Benutzerkonto, wir haben also nichts
+        von Ihnen, das wir verkaufen oder weitergeben könnten.
+      </p>
+    </>
+  ),
+  tr: analyticsEnabled ? (
+    <>
+      <h2>Bu web sitesindeki analiz</h2>
+      <p>
+        Bu politika sayfası, genel kullanımı, yani hangi sayfaların popüler
+        olduğunu ve ziyaretçilerin kabaca nereden geldiğini toplu olarak anlamak
+        için gizliliğe saygılı analiz araçları kullanan web sitemizde
+        barındırılmaktadır. {LOTWISE.shortName} uygulamasının kendisi hiçbir analiz
+        SDK’sı içermez. Hiçbir zaman reklam izleyicisi çalıştırmayız ve
+        verilerinizi asla satmayız veya paylaşmayız.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Web sitesinde kullandığımız analiz araçları çerez yerleştirebilir. Bu
+          araçlar yalnızca onay bannerını{" "}
+          <strong>kabul etmenizin ardından</strong> yüklenir; reddederseniz hiçbir
+          analiz çerezi yerleştirilmez. Google Analytics, kullanıldığı durumlarda IP
+          adreslerini anonimleştirecek şekilde yapılandırılmıştır. Tercihinizi,
+          tarayıcınızda bu sitenin verilerini temizleyerek dilediğiniz zaman
+          değiştirebilirsiniz.
+        </p>
+      ) : (
+        <p>
+          Web sitemizdeki analiz aracı çerez kullanmaz, kalıcı bir tanımlayıcı
+          kullanmaz ve sizi siteler arasında izlemez; bu nedenle bir onay bannerı
+          gerekmez.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Hiçbir kişisel veri toplamıyoruz</h2>
+      <p>
+        {LOTWISE.shortName} hiçbir analiz aracı, reklam izleyicisi veya üçüncü taraf
+        SDK’sı çalıştırmaz. Ad, e-posta adresi, IP adresi, cihaz tanımlayıcısı ya da
+        herhangi bir hesap, aracı kurum veya işlem verisi toplamayız. Kayıt ve
+        kullanıcı hesabı yoktur; dolayısıyla satacak veya paylaşacak hiçbir
+        verinize sahip değiliz.
+      </p>
+    </>
+  ),
 };
 
 const COPY = {
@@ -447,6 +611,408 @@ const COPY = {
           Les questions relatives à cette politique peuvent être envoyées à{" "}
           <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
           {LOTWISE.name} est publié par {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  pt: {
+    metaTitle: `${LOTWISE.name}: Política de Privacidade`,
+    metaDescription: analyticsEnabled
+      ? `Como o ${LOTWISE.name} trata os dados: todos os cálculos rodam no seu dispositivo, o app não usa nenhum SDK de análise, não exibe anúncios e nunca vende seus dados.`
+      : `Como o ${LOTWISE.name} trata os dados. Todos os cálculos rodam no seu dispositivo; não coletamos nenhum dado pessoal ou de trading.`,
+    breadcrumb: "Política de Privacidade do Lotwise",
+    h1: "Política de Privacidade",
+    lead: analyticsEnabled ? (
+      <>
+        Em resumo: o {LOTWISE.name} roda inteiramente no seu dispositivo, não
+        exibe anúncios e nunca vende seus dados.
+      </>
+    ) : (
+      <>
+        Em resumo: o {LOTWISE.name} roda inteiramente no seu dispositivo, não
+        coleta nenhum dado pessoal e não rastreia você.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Última atualização: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>O app roda no seu dispositivo</h2>
+        <p>
+          O {LOTWISE.name} é uma calculadora que funciona prioritariamente offline:
+          tamanho de posição, tamanho de lote, valor do pip, risco e margem são
+          todos calculados localmente no seu próprio celular ou tablet. Não
+          operamos nenhum servidor que receba o saldo da sua conta, o seu
+          percentual de risco, o seu stop loss, o seu par de moedas ou qualquer
+          outra informação que você digite no app.
+        </p>
+
+        {dataSection}
+
+        <h2>Dados armazenados apenas no seu dispositivo</h2>
+        <p>
+          Os únicos dados que o {LOTWISE.shortName} armazena ficam no espaço de
+          armazenamento do próprio app no seu dispositivo e nunca são enviados para
+          nós:
+        </p>
+        <ul>
+          <li>a moeda da sua conta, o saldo e as configurações de risco padrão;</li>
+          <li>seus instrumentos preferidos, unidades e configurações de aparência; e</li>
+          <li>
+            os cálculos salvos ou o histórico que você decidir manter, para que
+            continuem disponíveis entre uma sessão e outra.
+          </li>
+        </ul>
+        <p>
+          Excluir o app apaga essas informações por completo. Elas nunca saem do
+          seu dispositivo.
+        </p>
+
+        <h2>Notificações e permissões</h2>
+        <p>
+          O {LOTWISE.shortName} não pede acesso a localização, contatos, fotos,
+          microfone ou câmera. Se uma versão futura oferecer notificações
+          opcionais, elas usarão a permissão nativa do seu dispositivo, só serão
+          ativadas se você optar por elas explicitamente e serão geradas
+          localmente; nenhum dado de notificação é transmitido para lugar nenhum.
+        </p>
+
+        <h2>Compras</h2>
+        <p>
+          Se o app oferecer uma versão paga ou compras dentro do app, a transação é
+          processada inteiramente pela Apple ou pelo Google. Nunca vemos nem
+          armazenamos seus dados de pagamento; recebemos apenas o status anônimo do
+          recibo fornecido pela plataforma, para que o app possa liberar o que você
+          comprou.
+        </p>
+
+        <h2>Crianças</h2>
+        <p>
+          O {LOTWISE.shortName} é um utilitário para o público em geral, não
+          direcionado a crianças, e como não coleta nenhum dado, não coleta
+          intencionalmente nada de menores de 13 anos.
+        </p>
+
+        <h2>Links de terceiros</h2>
+        <p>
+          Este site contém links para a App Store da Apple e para o Google Play,
+          para baixar o app, e para fontes externas que citamos. Esses sites de
+          terceiros têm suas próprias políticas de privacidade, que recomendamos
+          que você leia; não somos responsáveis pelo conteúdo nem pelas práticas
+          deles.
+        </p>
+
+        <h2>Alterações nesta política</h2>
+        <p>
+          Se esta política mudar, atualizaremos esta página e a data de “última
+          atualização” acima.
+        </p>
+
+        <h2>Contato</h2>
+        <p>
+          Dúvidas sobre esta política podem ser enviadas para{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          O {LOTWISE.name} é publicado pela {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: `${LOTWISE.name}: informativa sulla privacy`,
+    metaDescription: analyticsEnabled
+      ? `Come ${LOTWISE.name} tratta i dati: ogni calcolo avviene sul tuo dispositivo, l’app non usa SDK di analisi, non mostra pubblicità e non vende mai i tuoi dati.`
+      : `Come ${LOTWISE.name} tratta i dati. Ogni calcolo avviene sul tuo dispositivo; non raccogliamo dati personali né di trading.`,
+    breadcrumb: "Informativa sulla privacy di Lotwise",
+    h1: "Informativa sulla privacy",
+    lead: analyticsEnabled ? (
+      <>
+        In breve: {LOTWISE.name} funziona interamente sul tuo dispositivo, non
+        mostra pubblicità e non vende mai i tuoi dati.
+      </>
+    ) : (
+      <>
+        In breve: {LOTWISE.name} funziona interamente sul tuo dispositivo, non
+        raccoglie dati personali e non ti traccia.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Ultimo aggiornamento: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>L’app funziona sul tuo dispositivo</h2>
+        <p>
+          {LOTWISE.name} è una calcolatrice pensata per funzionare offline:
+          dimensione della posizione, dimensione del lotto, valore del pip, rischio
+          e margine vengono calcolati localmente sul tuo telefono o tablet. Non
+          gestiamo alcun backend che riceva il saldo del tuo conto, la percentuale
+          di rischio, lo stop loss, la coppia di valute o qualsiasi altro dato che
+          inserisci nell’app.
+        </p>
+
+        {dataSection}
+
+        <h2>Dati memorizzati solo sul tuo dispositivo</h2>
+        <p>
+          Gli unici dati che {LOTWISE.shortName} memorizza sono conservati
+          nell’archivio interno dell’app sul tuo dispositivo e non ci vengono mai
+          inviati:
+        </p>
+        <ul>
+          <li>la valuta del conto, il saldo e le impostazioni di rischio predefinite;</li>
+          <li>gli strumenti preferiti, le unità e le impostazioni di aspetto; e</li>
+          <li>
+            gli eventuali calcoli salvati o la cronologia che scegli di conservare,
+            così restano disponibili tra una sessione e l’altra.
+          </li>
+        </ul>
+        <p>
+          Eliminando l’app, queste informazioni vengono cancellate del tutto. Non
+          lasciano mai il tuo dispositivo.
+        </p>
+
+        <h2>Notifiche e autorizzazioni</h2>
+        <p>
+          {LOTWISE.shortName} non chiede l’accesso a posizione, contatti, foto,
+          microfono o fotocamera. Se una versione futura offrirà notifiche
+          facoltative, useranno l’autorizzazione nativa del tuo dispositivo, si
+          attiveranno solo se dai esplicitamente il tuo consenso e verranno generate
+          in locale: nessun dato delle notifiche viene trasmesso altrove.
+        </p>
+
+        <h2>Acquisti</h2>
+        <p>
+          Se l’app offre una versione a pagamento o acquisti in-app, la transazione
+          è gestita interamente da Apple o Google. Non vediamo né memorizziamo mai i
+          tuoi dati di pagamento; riceviamo solo lo stato anonimo della ricevuta
+          fornito dalla piattaforma, così l’app può sbloccare ciò che hai acquistato.
+        </p>
+
+        <h2>Minori</h2>
+        <p>
+          {LOTWISE.shortName} è un’utility per il pubblico generale, non rivolta ai
+          minori, e poiché non raccoglie alcun dato non raccoglie consapevolmente
+          nulla da persone di età inferiore ai 13 anni.
+        </p>
+
+        <h2>Link di terze parti</h2>
+        <p>
+          Questo sito contiene link all’Apple App Store e a Google Play per scaricare
+          l’app, e a fonti esterne che citiamo. Questi siti di terze parti hanno le
+          proprie informative sulla privacy, che ti invitiamo a leggere; non siamo
+          responsabili dei loro contenuti né delle loro pratiche.
+        </p>
+
+        <h2>Modifiche a questa informativa</h2>
+        <p>
+          Se questa informativa cambia, aggiorneremo questa pagina e la data di
+          «ultimo aggiornamento» indicata sopra.
+        </p>
+
+        <h2>Contatti</h2>
+        <p>
+          Puoi inviare domande su questa informativa all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          {LOTWISE.name} è pubblicato da {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: `${LOTWISE.name}: Datenschutzerklärung`,
+    metaDescription: analyticsEnabled
+      ? `Wie ${LOTWISE.name} mit Daten umgeht: Jede Berechnung läuft auf Ihrem Gerät, die App nutzt kein Analyse-SDK, zeigt keine Werbung und verkauft nie Ihre Daten.`
+      : `Wie ${LOTWISE.name} mit Daten umgeht. Jede Berechnung läuft auf Ihrem Gerät; wir erfassen keine personenbezogenen Daten und keine Handelsdaten.`,
+    breadcrumb: "Lotwise Datenschutzerklärung",
+    h1: "Datenschutzerklärung",
+    lead: analyticsEnabled ? (
+      <>
+        Kurz gesagt: {LOTWISE.name} läuft vollständig auf Ihrem Gerät, zeigt
+        keine Werbung und verkauft niemals Ihre Daten.
+      </>
+    ) : (
+      <>
+        Kurz gesagt: {LOTWISE.name} läuft vollständig auf Ihrem Gerät, erfasst
+        keine personenbezogenen Daten und verfolgt Sie nicht.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Zuletzt aktualisiert: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>Die App läuft auf Ihrem Gerät</h2>
+        <p>
+          {LOTWISE.name} ist ein Offline-first-Rechner: Positionsgröße,
+          Lotgröße, Pip-Wert, Risiko und Margin werden alle lokal auf Ihrem
+          eigenen Smartphone oder Tablet berechnet. Wir betreiben kein Backend,
+          das Ihren Kontostand, Ihren Risikoprozentsatz, Ihren Stop-Loss, Ihr
+          Währungspaar oder andere Eingaben in der App empfängt.
+        </p>
+
+        {dataSection}
+
+        <h2>Daten werden nur auf Ihrem Gerät gespeichert</h2>
+        <p>
+          Die einzigen Daten, die {LOTWISE.shortName} speichert, liegen im
+          eigenen Speicher der App auf Ihrem Gerät und werden nie an uns
+          gesendet:
+        </p>
+        <ul>
+          <li>Ihre Kontowährung, Ihr Kontostand und Ihre Standard-Risikoeinstellungen;</li>
+          <li>Ihre bevorzugten Instrumente, Einheiten und Darstellungseinstellungen; und</li>
+          <li>
+            alle gespeicherten Berechnungen oder Verläufe, die Sie behalten
+            möchten, damit sie zwischen den Sitzungen erhalten bleiben.
+          </li>
+        </ul>
+        <p>
+          Wenn Sie die App löschen, werden diese Informationen vollständig
+          entfernt. Sie verlassen Ihr Gerät nie.
+        </p>
+
+        <h2>Benachrichtigungen und Berechtigungen</h2>
+        <p>
+          {LOTWISE.shortName} fordert keinen Zugriff auf Standort, Kontakte,
+          Fotos, Mikrofon oder Kamera an. Falls eine künftige Version optionale
+          Benachrichtigungen anbietet, nutzen diese die native Berechtigung Ihres
+          Geräts, werden nur aktiv, wenn Sie ausdrücklich zustimmen, und werden
+          lokal erzeugt; es werden keinerlei Benachrichtigungsdaten übertragen.
+        </p>
+
+        <h2>Käufe</h2>
+        <p>
+          Falls die App eine kostenpflichtige Version oder In-App-Käufe anbietet,
+          wird die Transaktion vollständig von Apple oder Google abgewickelt. Wir
+          sehen oder speichern Ihre Zahlungsdaten nie; wir erhalten lediglich den
+          anonymen Kaufbeleg-Status, den die Plattform bereitstellt, damit die App
+          freischalten kann, was Sie gekauft haben.
+        </p>
+
+        <h2>Kinder</h2>
+        <p>
+          {LOTWISE.shortName} ist ein Tool für ein allgemeines Publikum, das sich
+          nicht an Kinder richtet. Da es keine Daten erfasst, erhebt es
+          wissentlich auch keine Daten von Personen unter 13 Jahren.
+        </p>
+
+        <h2>Links zu Dritten</h2>
+        <p>
+          Diese Website verlinkt auf den Apple App Store und Google Play, um die
+          App herunterzuladen, sowie auf externe Quellen, die wir zitieren. Diese
+          Websites Dritter haben eigene Datenschutzerklärungen, die Sie sich
+          ansehen sollten; für deren Inhalte oder Praktiken sind wir nicht
+          verantwortlich.
+        </p>
+
+        <h2>Änderungen dieser Erklärung</h2>
+        <p>
+          Wenn sich diese Erklärung ändert, aktualisieren wir diese Seite und das
+          Datum „Zuletzt aktualisiert“ oben.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Fragen zu dieser Erklärung können Sie an{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          senden.{" "}
+          {LOTWISE.name} wird von {PUBLISHER.displayName} herausgegeben.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: `${LOTWISE.name} Gizlilik Politikası`,
+    metaDescription: analyticsEnabled
+      ? `${LOTWISE.name} verileri nasıl işler: tüm hesaplamalar cihazınızda yapılır, uygulama hiçbir analiz SDK’sı kullanmaz, reklam göstermez ve verilerinizi asla satmaz.`
+      : `${LOTWISE.name} verileri nasıl işler: tüm hesaplamalar cihazınızda yapılır; hiçbir kişisel veri veya işlem verisi toplamayız.`,
+    breadcrumb: "Lotwise Gizlilik Politikası",
+    h1: "Gizlilik Politikası",
+    lead: analyticsEnabled ? (
+      <>
+        Kısaca: {LOTWISE.name} tamamen cihazınızda çalışır, reklam göstermez ve
+        verilerinizi asla satmaz.
+      </>
+    ) : (
+      <>
+        Kısaca: {LOTWISE.name} tamamen cihazınızda çalışır, hiçbir kişisel veri
+        toplamaz ve sizi izlemez.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Son güncelleme: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>Uygulama cihazınızda çalışır</h2>
+        <p>
+          {LOTWISE.name}, çevrimdışı öncelikli bir hesap makinesidir: pozisyon
+          büyüklüğü, lot büyüklüğü, pip değeri, risk ve teminat (marjin) tamamen
+          kendi telefonunuzda veya tabletinizde yerel olarak hesaplanır. Hesap
+          bakiyenizi, risk yüzdenizi, zarar durdur (stop loss) seviyenizi, işlem
+          yaptığınız pariteyi veya uygulamaya girdiğiniz diğer herhangi bir veriyi alan bir
+          sunucu altyapısı işletmiyoruz.
+        </p>
+
+        {dataSection}
+
+        <h2>Yalnızca cihazınızda saklanan veriler</h2>
+        <p>
+          {LOTWISE.shortName} uygulamasının sakladığı tek veri, cihazınızda
+          uygulamanın kendi depolama alanında tutulur ve bize asla gönderilmez:
+        </p>
+        <ul>
+          <li>hesap para biriminiz, bakiyeniz ve varsayılan risk ayarlarınız;</li>
+          <li>tercih ettiğiniz enstrümanlar, birimler ve görünüm ayarlarınız ve</li>
+          <li>
+            oturumlar arasında korunması için saklamayı seçtiğiniz kayıtlı
+            hesaplamalar veya geçmiş.
+          </li>
+        </ul>
+        <p>
+          Uygulamayı silmek bu bilgileri tamamen kaldırır. Bu bilgiler cihazınızdan
+          hiçbir zaman dışarı çıkmaz.
+        </p>
+
+        <h2>Bildirimler ve izinler</h2>
+        <p>
+          {LOTWISE.shortName} konum, kişiler, fotoğraflar, mikrofon veya kamera
+          erişimi istemez. İlerideki bir sürüm isteğe bağlı bildirimler sunarsa, bu
+          bildirimler cihazınızın yerleşik iznini kullanır, yalnızca açıkça izin
+          verdiğinizde devreye girer ve yerel olarak oluşturulur; hiçbir bildirim
+          verisi herhangi bir yere iletilmez.
+        </p>
+
+        <h2>Satın alımlar</h2>
+        <p>
+          Uygulama ücretli bir sürüm veya uygulama içi satın alma sunarsa, işlem
+          tamamen Apple veya Google tarafından yürütülür. Ödeme bilgilerinizi hiçbir
+          zaman görmeyiz veya saklamayız; yalnızca uygulamanın satın aldığınız
+          özelliğin kilidini açabilmesi için platformun sağladığı anonim makbuz
+          durumunu alırız.
+        </p>
+
+        <h2>Çocuklar</h2>
+        <p>
+          {LOTWISE.shortName}, çocuklara yönelik olmayan, genel kitleye hitap eden
+          bir araçtır ve hiçbir veri toplamadığı için 13 yaşından küçük hiç kimseden
+          bilerek herhangi bir veri toplamaz.
+        </p>
+
+        <h2>Üçüncü taraf bağlantıları</h2>
+        <p>
+          Bu site, uygulamayı indirmeniz için Apple App Store’a ve Google Play’e,
+          ayrıca atıf yaptığımız dış kaynaklara bağlantı verir. Bu üçüncü taraf
+          sitelerin kendi gizlilik politikaları vardır ve bunları incelemenizi
+          öneririz; söz konusu sitelerin içeriğinden veya uygulamalarından sorumlu
+          değiliz.
+        </p>
+
+        <h2>Bu politikada yapılacak değişiklikler</h2>
+        <p>
+          Bu politika değişirse bu sayfayı ve yukarıdaki “son güncelleme” tarihini
+          güncelleriz.
+        </p>
+
+        <h2>İletişim</h2>
+        <p>
+          Bu politikayla ilgili sorularınızı{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresine gönderebilirsiniz. {LOTWISE.name},{" "}
+          {PUBLISHER.displayName} tarafından yayımlanmaktadır.
         </p>
       </>
     ),

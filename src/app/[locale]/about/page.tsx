@@ -277,6 +277,358 @@ const COPY = {
       </>
     ),
   },
+  pt: {
+    metaTitle: `Sobre o ${PRODUCT.name}`,
+    metaDescription:
+      "Quem desenvolve o Forex Market Hours, por que criamos um relógio de sessões gratuito e ao vivo, e como mantemos os horários precisos. Pela Hunters Group Software.",
+    ogDescription:
+      "Quem desenvolve o Forex Market Hours, por que criamos um relógio de sessões gratuito e ao vivo, e como mantemos os horários precisos.",
+    breadcrumb: "Sobre",
+    h1: `Sobre o ${PRODUCT.name}`,
+    lead: (
+      <>
+        O {PRODUCT.name} é um relógio de sessões do forex gratuito e ao vivo,
+        criado pela {PUBLISHER.displayName}, uma empresa de software que faz
+        ferramentas pequenas e focadas, em vez de produtos financeiros amplos.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Quem somos</h2>
+        <p>
+          A {PUBLISHER.displayName} ({PUBLISHER.legalName}) é uma empresa de
+          software. Desenvolvemos e mantemos o {PRODUCT.name}, a ferramenta web em{" "}
+          {SITE_URL} e os apps complementares para iOS e Android, como um único
+          produto focado: um utilitário de horários de mercado para quem opera ou
+          acompanha o mercado de câmbio. Não somos um banco, uma corretora nem uma
+          empresa de investimentos.
+        </p>
+
+        <h2>Por que criamos esta ferramenta</h2>
+        <p>
+          O trading no forex funciona 24 horas por dia, cinco dias por semana,
+          dividido em sessões regionais em Sydney, Tóquio, Frankfurt, Londres e
+          Nova York. Descobrir qual dessas sessões está aberta agora, no seu
+          próprio fuso horário, normalmente exigia converter o GMT na mão e
+          conferir tudo de novo sempre que um país mudava os relógios por causa do
+          horário de verão. Criamos o {PRODUCT.name} para que essa conversão
+          aconteça automaticamente, o tempo todo, de graça.
+        </p>
+        <p>
+          É um problema que vivemos na pele: como uma pequena equipe de software
+          que também acompanha os mercados, estávamos cansados de fazer contas de
+          GMT de cabeça e de ficar na dúvida se Londres já tinha mudado para o
+          horário de verão. A ferramenta nasceu como o utilitário que queríamos
+          para nós mesmos, e ainda a usamos em todos os dias de negociação, que é o
+          jeito mais rápido de percebermos quando algo parece errado.
+        </p>
+
+        <h2>O que o Forex Market Hours é, e o que não é</h2>
+        <p>
+          O {PRODUCT.name} é um utilitário de horários de mercado. Ele mostra quando
+          as principais sessões do forex abrem, fecham e se sobrepõem, convertidas
+          para o seu fuso horário local. Ele <strong>não</strong> é uma corretora,
+          um consultor financeiro nem um serviço de sinais, e não oferece serviços
+          de negociação, depósito ou saque. Nada neste site é aconselhamento
+          financeiro personalizado; veja nosso{" "}
+          <Link href="/disclaimer">aviso sobre riscos e trading</Link> para todos
+          os detalhes.
+        </p>
+
+        <h2>Como mantemos a precisão</h2>
+        <p>
+          Cada horário de sessão é calculado a partir das regras de fuso horário
+          de cada centro financeiro, e não de uma tabela fixa, então as mudanças
+          do horário de verão são aplicadas automaticamente. Explicamos exatamente
+          como isso funciona, e as fontes em que nos baseamos, na nossa{" "}
+          <Link href="/methodology">página de metodologia</Link>. A forma como
+          pesquisamos, revisamos e corrigimos nosso conteúdo escrito está descrita
+          na nossa <Link href="/editorial-policy">política editorial</Link>.
+        </p>
+
+        <h2>A ferramenta web e o app gratuitos</h2>
+        <p>
+          A ferramenta web em {SITE_URL} roda inteiramente no seu navegador, sem
+          cadastro e sem anúncios. Ela vem acompanhada de um app gratuito para iOS
+          e Android que acrescenta widgets para a Tela de Início, um calendário
+          econômico e alertas de sessão, para quem quer o mesmo relógio ao vivo sem
+          precisar deixar uma aba do navegador aberta.
+        </p>
+
+        <h2>Fale com a gente</h2>
+        <p>
+          Dúvidas, correções ou propostas de parceria são bem-vindas em{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>
+          , ou acesse nossa <Link href="/contact">página de contato</Link>.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: `Chi siamo: ${PRODUCT.name}`,
+    metaDescription:
+      "Chi sviluppa Forex Market Hours, perché abbiamo creato un orologio delle sessioni gratuito e in tempo reale e come manteniamo esatti gli orari. Di Hunters Group Software.",
+    ogDescription:
+      "Chi sviluppa Forex Market Hours, perché abbiamo creato un orologio delle sessioni gratuito e in tempo reale e come manteniamo esatti gli orari.",
+    breadcrumb: "Chi siamo",
+    h1: `Chi siamo: ${PRODUCT.name}`,
+    lead: (
+      <>
+        {PRODUCT.name} è un orologio delle sessioni forex gratuito e in tempo
+        reale, sviluppato da {PUBLISHER.displayName}, una software house che crea
+        strumenti piccoli e mirati anziché ampi prodotti finanziari.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Chi siamo</h2>
+        <p>
+          {PUBLISHER.displayName} ({PUBLISHER.legalName}) è una software house.
+          Sviluppiamo e manteniamo {PRODUCT.name}, lo strumento web su{" "}
+          {SITE_URL} e le app per iOS e Android che lo accompagnano, come un unico
+          prodotto mirato: un’utility per gli orari di mercato pensata per chi fa
+          trading o segue il mercato dei cambi. Non siamo una banca, un broker né
+          una società di investimento.
+        </p>
+
+        <h2>Perché l’abbiamo creato</h2>
+        <p>
+          Il trading sul forex è attivo 24 ore su 24, cinque giorni alla settimana,
+          suddiviso nelle sessioni regionali di Sydney, Tokyo, Francoforte, Londra e
+          New York. Capire quale di queste sessioni è aperta in questo momento, nel
+          tuo fuso orario, di solito significava convertire il GMT a mano e
+          ricontrollare tutto ogni volta che un Paese spostava le lancette per
+          l’ora legale. Abbiamo creato {PRODUCT.name} perché quella conversione
+          avvenga in automatico, sempre e gratis.
+        </p>
+        <p>
+          È un problema che abbiamo vissuto in prima persona: come piccolo team di
+          sviluppo che segue a sua volta i mercati, eravamo stanchi di fare calcoli
+          sul GMT a mente e di chiederci se Londra fosse già passata all’ora
+          legale. Lo strumento è nato come l’utility che volevamo per noi stessi, e
+          lo usiamo ancora ogni giorno di trading: è il modo più rapido per
+          accorgerci se qualcosa non torna.
+        </p>
+
+        <h2>Cosa è Forex Market Hours, e cosa non è</h2>
+        <p>
+          {PRODUCT.name} è un’utility per gli orari di mercato. Mostra quando le
+          principali sessioni forex aprono, chiudono e si sovrappongono, convertite
+          nel tuo fuso orario locale. <strong>Non</strong> è un broker, un
+          consulente finanziario né un servizio di segnali, e non offre servizi di
+          trading, deposito o prelievo. Niente su questo sito costituisce una
+          consulenza finanziaria personalizzata: consulta le nostre{" "}
+          <Link href="/disclaimer">avvertenze su rischi e trading</Link> per tutti
+          i dettagli.
+        </p>
+
+        <h2>Come garantiamo la precisione</h2>
+        <p>
+          Ogni orario di sessione viene calcolato in base alle regole del fuso
+          orario di ciascun centro finanziario, e non da una tabella fissa, quindi i
+          cambi dell’ora legale vengono applicati automaticamente. Spieghiamo nel
+          dettaglio come funziona, e su quali fonti ci basiamo, nella nostra{" "}
+          <Link href="/methodology">pagina sulla metodologia</Link>. Il modo in cui
+          ricerchiamo, revisioniamo e correggiamo i nostri contenuti scritti è
+          descritto nella nostra{" "}
+          <Link href="/editorial-policy">politica editoriale</Link>.
+        </p>
+
+        <h2>Lo strumento web gratuito e l’app</h2>
+        <p>
+          Lo strumento web su {SITE_URL} funziona interamente nel tuo browser, senza
+          registrazione e senza pubblicità. È affiancato da un’app gratuita per iOS
+          e Android che aggiunge widget per la schermata Home, un calendario
+          economico e avvisi di sessione, per chi vuole lo stesso orologio in tempo
+          reale senza tenere aperta una scheda del browser.
+        </p>
+
+        <h2>Contattaci</h2>
+        <p>
+          Domande, correzioni o proposte di collaborazione sono benvenute
+          all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>
+          , oppure visita la nostra <Link href="/contact">pagina dei contatti</Link>.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: `Über ${PRODUCT.name}`,
+    metaDescription:
+      "Wer Forex Market Hours entwickelt, warum wir eine kostenlose Live-Sessionuhr gebaut haben und wie wir die Zeiten genau halten. Von Hunters Group Software.",
+    ogDescription:
+      "Wer Forex Market Hours entwickelt, warum wir eine kostenlose Live-Sessionuhr gebaut haben und wie wir die Session-Zeiten genau halten.",
+    breadcrumb: "Über uns",
+    h1: `Über ${PRODUCT.name}`,
+    lead: (
+      <>
+        {PRODUCT.name} ist eine kostenlose Live-Uhr für die Forex-Sessions,
+        entwickelt von {PUBLISHER.displayName}, einem Softwareunternehmen, das
+        kleine, fokussierte Tools statt breit angelegter Finanzprodukte baut.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Wer wir sind</h2>
+        <p>
+          {PUBLISHER.displayName} ({PUBLISHER.legalName}) ist ein
+          Softwareunternehmen. Wir entwickeln und pflegen {PRODUCT.name}, das
+          Web-Tool unter {SITE_URL} und die begleitenden Apps für iOS und Android,
+          als ein einziges, fokussiertes Produkt: ein Tool für Handelszeiten für
+          Menschen, die am Devisenmarkt handeln oder ihn verfolgen. Wir sind keine
+          Bank, kein Broker und keine Investmentgesellschaft.
+        </p>
+
+        <h2>Warum wir es gebaut haben</h2>
+        <p>
+          Der Forex-Handel läuft 24 Stunden am Tag an fünf Tagen pro Woche,
+          aufgeteilt auf regionale Handelssitzungen in Sydney, Tokio, Frankfurt,
+          London und New York. Herauszufinden, welche dieser Sessions gerade in
+          Ihrer eigenen Zeitzone geöffnet ist, hieß meist, GMT von Hand
+          umzurechnen und alles erneut zu prüfen, sobald ein Land seine Uhren auf
+          Sommerzeit umstellte. Wir haben {PRODUCT.name} gebaut, damit diese
+          Umrechnung automatisch passiert, jederzeit und kostenlos.
+        </p>
+        <p>
+          Auf dieses Problem sind wir selbst gestoßen: Als kleines Softwareteam,
+          das die Märkte auch selbst verfolgt, hatten wir es satt, GMT im Kopf
+          umzurechnen und zu rätseln, ob London schon auf Sommerzeit umgestellt
+          hatte. Das Tool begann als das Hilfsmittel, das wir für uns selbst
+          wollten, und wir nutzen es bis heute an jedem Handelstag. So bemerken
+          wir am schnellsten, wenn etwas nicht stimmt.
+        </p>
+
+        <h2>Was Forex Market Hours ist und was nicht</h2>
+        <p>
+          {PRODUCT.name} ist ein Tool für Handelszeiten. Es zeigt, wann die großen
+          Forex-Sessions öffnen, schließen und sich überschneiden, umgerechnet in
+          Ihre lokale Zeitzone. Es ist <strong>kein</strong> Broker, kein
+          Finanzberater und kein Signaldienst, und es bietet keine Handels-,
+          Einzahlungs- oder Auszahlungsdienste an. Nichts auf dieser Website ist
+          eine persönliche Finanzberatung. Alle Einzelheiten finden Sie in unserem{" "}
+          <Link href="/disclaimer">Risiko- und Handelshinweis</Link>.
+        </p>
+
+        <h2>Wie wir für Genauigkeit sorgen</h2>
+        <p>
+          Jede Session-Zeit wird aus den eigenen Zeitzonenregeln des jeweiligen
+          Finanzplatzes berechnet statt aus einer festen Tabelle, sodass
+          Umstellungen auf die Sommerzeit automatisch berücksichtigt werden. Wie
+          das genau funktioniert und auf welche Quellen wir uns stützen,
+          erklären wir auf unserer{" "}
+          <Link href="/methodology">Methodik-Seite</Link>. Wie wir unsere
+          schriftlichen Inhalte recherchieren, prüfen und korrigieren, legen wir
+          in unseren <Link href="/editorial-policy">redaktionellen Richtlinien</Link>{" "}
+          dar.
+        </p>
+
+        <h2>Das kostenlose Web-Tool und die App</h2>
+        <p>
+          Das Web-Tool unter {SITE_URL} läuft vollständig in Ihrem Browser, ohne
+          Anmeldung und ohne Werbung. Dazu gibt es eine kostenlose App für iOS und
+          Android mit Widgets für den Homebildschirm, einem Wirtschaftskalender
+          und Session-Alarmen, für alle, die dieselbe Live-Uhr ohne geöffneten
+          Browser-Tab nutzen möchten.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Fragen, Korrekturen oder Partnerschaftsanfragen sind willkommen unter{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>
+          , oder besuchen Sie unsere <Link href="/contact">Kontaktseite</Link>.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: `${PRODUCT.name} Hakkında`,
+    metaDescription:
+      "Forex Market Hours’u kim geliştiriyor, ücretsiz canlı seans saatini neden yaptık ve seans saatlerini nasıl doğru tutuyoruz. Hunters Group Software tarafından.",
+    ogDescription:
+      "Forex Market Hours’u kim geliştiriyor, ücretsiz canlı seans saatini neden yaptık ve seans saatlerini nasıl doğru tutuyoruz.",
+    breadcrumb: "Hakkımızda",
+    h1: `${PRODUCT.name} Hakkında`,
+    lead: (
+      <>
+        {PRODUCT.name}, kapsamlı finansal ürünler yerine küçük ve odaklı araçlar
+        geliştiren bir yazılım şirketi olan {PUBLISHER.displayName} tarafından
+        hazırlanmış ücretsiz, canlı bir forex seans saatidir.
+      </>
+    ),
+    body: (
+      <>
+        <h2>Biz kimiz</h2>
+        <p>
+          {PUBLISHER.displayName} ({PUBLISHER.legalName}) bir yazılım şirketidir.{" "}
+          {PRODUCT.name} ürününü, yani {SITE_URL} adresindeki web aracını ve ona
+          eşlik eden iOS ve Android uygulamalarını tek ve odaklı bir ürün olarak
+          geliştiriyor ve sürdürüyoruz: döviz piyasasında işlem yapan ya da bu
+          piyasayı takip eden kişiler için bir piyasa saatleri aracı. Banka, aracı
+          kurum veya yatırım şirketi değiliz.
+        </p>
+
+        <h2>Bunu neden geliştirdik</h2>
+        <p>
+          Forex işlemleri haftada beş gün, günde 24 saat sürer ve Sidney, Tokyo,
+          Frankfurt, Londra ve New York’taki bölgesel seanslara bölünür. Bu
+          seanslardan hangisinin şu anda, kendi saat diliminizde açık olduğunu
+          bulmak, genellikle GMT’yi elle çevirmek ve bir ülke yaz saati için
+          saatlerini her değiştirdiğinde hesabı yeniden kontrol etmek demekti.{" "}
+          {PRODUCT.name} aracını, bu dönüşüm her zaman, otomatik olarak ve
+          ücretsiz yapılsın diye geliştirdik.
+        </p>
+        <p>
+          Bu sorunu bizzat yaşadık: piyasaları kendisi de takip eden küçük bir
+          yazılım ekibi olarak, kafamızda GMT hesabı yapmaktan ve Londra’nın yaz
+          saatine geçip geçmediğinden emin olamamaktan yorulmuştuk. Araç, kendi
+          kullanımımız için istediğimiz bir yardımcı olarak doğdu ve hâlâ her işlem
+          gününde onu kullanıyoruz; bir şeyin yanlış göründüğünü fark etmenin en
+          hızlı yolu da bu.
+        </p>
+
+        <h2>Forex Market Hours nedir, ne değildir</h2>
+        <p>
+          {PRODUCT.name} bir piyasa saatleri aracıdır. Başlıca forex seanslarının
+          ne zaman açıldığını, kapandığını ve çakıştığını yerel saat diliminize
+          çevrilmiş olarak gösterir. Bir aracı kurum, finansal danışman veya sinyal
+          hizmeti <strong>değildir</strong>; alım satım, para yatırma veya para
+          çekme hizmeti sunmaz. Bu sitedeki hiçbir içerik kişiye özel finansal
+          tavsiye niteliği taşımaz; ayrıntılar için{" "}
+          <Link href="/disclaimer">risk ve işlem sorumluluk reddi</Link> metnimize
+          bakın.
+        </p>
+
+        <h2>Doğruluğu nasıl sağlıyoruz</h2>
+        <p>
+          Her seans saati sabit bir tablodan değil, her finans merkezinin kendi saat
+          dilimi kurallarından hesaplanır; böylece yaz saati geçişleri otomatik
+          olarak uygulanır. Bunun tam olarak nasıl işlediğini ve dayandığımız
+          kaynakları <Link href="/methodology">metodoloji sayfamızda</Link>{" "}
+          açıklıyoruz. Yazılı içeriğimizi nasıl araştırdığımız, incelediğimiz ve
+          düzelttiğimiz ise <Link href="/editorial-policy">yayın ilkelerimizde</Link>{" "}
+          anlatılıyor.
+        </p>
+
+        <h2>Ücretsiz web aracı ve uygulama</h2>
+        <p>
+          {SITE_URL} adresindeki web aracı tamamen tarayıcınızda çalışır; kayıt ve
+          reklam yoktur. Aynı canlı saati bir tarayıcı sekmesi açık tutmadan
+          kullanmak isteyenler için Ana Ekran widget’ları, ekonomik takvim ve seans
+          uyarıları ekleyen ücretsiz bir iOS ve Android uygulamasıyla birlikte
+          sunulur.
+        </p>
+
+        <h2>Bize ulaşın</h2>
+        <p>
+          Sorularınızı, düzeltme önerilerinizi veya iş birliği taleplerinizi{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresine iletebilir ya da <Link href="/contact">iletişim sayfamıza</Link>{" "}
+          göz atabilirsiniz.
+        </p>
+      </>
+    ),
+  },
 } as const;
 
 export async function generateMetadata({

@@ -133,6 +133,157 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
       </p>
     </>
   ),
+  pt: analyticsEnabled ? (
+    <>
+      <h2>Análises de uso</h2>
+      <p>
+        Usamos análises que respeitam a privacidade para entender o uso de forma
+        agregada, quais páginas são mais populares e, de modo aproximado, de onde
+        vêm os visitantes, para podermos melhorar a ferramenta. Nunca usamos
+        rastreadores de publicidade e nunca vendemos nem compartilhamos seus dados.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          As análises que usamos podem definir cookies. Elas são carregadas{" "}
+          <strong>somente depois que você aceita</strong> o banner de
+          consentimento; se você recusar, nenhum cookie de análise é definido. O
+          Google Analytics, quando usado, é configurado para anonimizar endereços
+          IP. Você pode mudar sua escolha a qualquer momento limpando os dados
+          deste site no seu navegador.
+        </p>
+      ) : (
+        <p>
+          Nossas análises não usam cookies nem qualquer identificador persistente e
+          não rastreiam você entre sites, então nenhum banner de consentimento é
+          necessário.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Não coletamos nenhum dado pessoal</h2>
+      <p>
+        Não usamos ferramentas de análise nem rastreadores de publicidade, e não
+        definimos cookies de rastreamento neste site. Não coletamos nomes,
+        endereços de e-mail, endereços IP ou qualquer outro dado pessoal ou de
+        trading por meio da ferramenta web, e não temos nada seu para vender ou
+        compartilhar.
+      </p>
+    </>
+  ),
+  it: analyticsEnabled ? (
+    <>
+      <h2>Statistiche di utilizzo</h2>
+      <p>
+        Usiamo strumenti di analisi rispettosi della privacy per capire l’utilizzo
+        in forma aggregata, quali pagine sono più visitate e, in modo
+        approssimativo, da dove arrivano i visitatori, così da poter migliorare lo
+        strumento. Non usiamo mai tracker pubblicitari e non vendiamo né
+        condividiamo mai i tuoi dati.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Gli strumenti di analisi che usiamo possono impostare dei cookie. Vengono
+          caricati <strong>solo dopo che hai accettato</strong> il banner di
+          consenso; se rifiuti, non viene impostato alcun cookie di analisi. Google
+          Analytics, dove utilizzato, è configurato per anonimizzare gli indirizzi
+          IP. Puoi modificare la tua scelta in qualsiasi momento cancellando i dati
+          di questo sito nel tuo browser.
+        </p>
+      ) : (
+        <p>
+          I nostri strumenti di analisi non usano cookie né identificatori
+          persistenti e non ti tracciano da un sito all’altro, quindi non è
+          necessario alcun banner di consenso.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Non raccogliamo dati personali</h2>
+      <p>
+        Su questo sito non usiamo strumenti di analisi né tracker pubblicitari e non
+        impostiamo cookie di tracciamento. Tramite lo strumento web non raccogliamo
+        nomi, indirizzi email, indirizzi IP né altri dati personali o di trading, e
+        non abbiamo nulla di tuo da vendere o condividere.
+      </p>
+    </>
+  ),
+  de: analyticsEnabled ? (
+    <>
+      <h2>Analyse</h2>
+      <p>
+        Wir nutzen eine datenschutzfreundliche Analyse, um die Nutzung in
+        zusammengefasster Form zu verstehen, also welche Seiten beliebt sind und
+        ungefähr, woher die Besucher kommen, damit wir das Tool verbessern können.
+        Wir setzen niemals Werbetracker ein und verkaufen oder teilen Ihre Daten
+        niemals.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Die von uns genutzte Analyse kann Cookies setzen. Sie wird{" "}
+          <strong>erst geladen, nachdem Sie</strong> im Einwilligungsbanner
+          zugestimmt haben; wenn Sie ablehnen, werden keine Analyse-Cookies
+          gesetzt. Google Analytics ist, sofern verwendet, so konfiguriert, dass
+          IP-Adressen anonymisiert werden. Sie können Ihre Entscheidung jederzeit
+          ändern, indem Sie die Daten dieser Website in Ihrem Browser löschen.
+        </p>
+      ) : (
+        <p>
+          Unsere Analyse kommt ohne Cookies aus, verwendet keine dauerhafte
+          Kennung und verfolgt Sie nicht über verschiedene Websites hinweg. Ein
+          Einwilligungsbanner ist daher nicht erforderlich.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Wir erfassen keine personenbezogenen Daten</h2>
+      <p>
+        Wir betreiben auf dieser Website keine Analyse, keine Werbetracker und
+        setzen keine Tracking-Cookies. Über das Web-Tool erfassen wir weder
+        Namen noch E-Mail-Adressen, IP-Adressen oder andere personenbezogene oder
+        handelsbezogene Daten, und wir haben nichts von Ihnen, das wir verkaufen
+        oder weitergeben könnten.
+      </p>
+    </>
+  ),
+  tr: analyticsEnabled ? (
+    <>
+      <h2>Analiz</h2>
+      <p>
+        Aracı geliştirebilmek için genel kullanımı, yani hangi sayfaların popüler
+        olduğunu ve ziyaretçilerin kabaca nereden geldiğini toplu olarak anlamak
+        amacıyla gizliliğe saygılı analiz araçları kullanıyoruz. Hiçbir zaman reklam
+        izleyicisi çalıştırmayız ve verilerinizi asla satmayız veya paylaşmayız.
+      </p>
+      {hasCookieAnalytics ? (
+        <p>
+          Kullandığımız analiz araçları çerez yerleştirebilir. Bu araçlar yalnızca
+          onay bannerını <strong>kabul etmenizin ardından</strong> yüklenir;
+          reddederseniz hiçbir analiz çerezi yerleştirilmez. Google Analytics,
+          kullanıldığı durumlarda IP adreslerini anonimleştirecek şekilde
+          yapılandırılmıştır. Tercihinizi, tarayıcınızda bu sitenin verilerini
+          temizleyerek dilediğiniz zaman değiştirebilirsiniz.
+        </p>
+      ) : (
+        <p>
+          Analiz aracımız çerez kullanmaz, kalıcı bir tanımlayıcı kullanmaz ve sizi
+          siteler arasında izlemez; bu nedenle bir onay bannerı gerekmez.
+        </p>
+      )}
+    </>
+  ) : (
+    <>
+      <h2>Hiçbir kişisel veri toplamıyoruz</h2>
+      <p>
+        Bu sitede hiçbir analiz aracı veya reklam izleyicisi çalıştırmıyoruz ve
+        izleme çerezi yerleştirmiyoruz. Web aracı üzerinden ad, e-posta adresi, IP
+        adresi veya başka herhangi bir kişisel ya da işlem verisi toplamıyoruz;
+        dolayısıyla satacak veya paylaşacak hiçbir verinize sahip değiliz.
+      </p>
+    </>
+  ),
 };
 
 const COPY = {
@@ -392,6 +543,360 @@ const COPY = {
           Les questions relatives à cette politique peuvent être envoyées à{" "}
           <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
           {PRODUCT.name} est publié par {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  pt: {
+    metaTitle: "Política de Privacidade",
+    metaDescription: analyticsEnabled
+      ? "Como o Forex Market Hours trata os dados: a ferramenta web roda no seu navegador, usa análises que respeitam a privacidade, não exibe anúncios e nunca vende seus dados."
+      : "Como o Forex Market Hours trata os dados. A ferramenta web roda no seu navegador; não coletamos nenhum dado pessoal de trading.",
+    breadcrumb: "Política de Privacidade",
+    h1: "Política de Privacidade",
+    lead: analyticsEnabled ? (
+      <>
+        Em resumo: o {PRODUCT.name} roda no seu navegador, usa análises que
+        respeitam a privacidade, não exibe anúncios e nunca vende seus dados.
+      </>
+    ) : (
+      <>
+        Em resumo: o {PRODUCT.name} roda no seu navegador, não coleta nenhum dado
+        pessoal e não rastreia você.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Última atualização: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>A ferramenta web roda no seu navegador</h2>
+        <p>
+          O {PRODUCT.name}, em {SITE_URL}, é uma ferramenta do lado do cliente: o
+          relógio de sessões ao vivo, a conversão de fuso horário e os cálculos
+          rodam todos no seu próprio dispositivo. Não operamos nenhum servidor que
+          registre quais sessões você consulta, qual fuso horário você usa ou como
+          você usa o site.
+        </p>
+
+        {dataSection}
+
+        <h2>Armazenamento local: apenas tema e alarmes</h2>
+        <p>
+          Os únicos dados que o site armazena ficam no{" "}
+          <code>localStorage</code> do seu próprio navegador e nunca são enviados
+          para nós:
+        </p>
+        <ul>
+          <li>sua preferência de tema claro ou escuro; e</li>
+          <li>
+            os alarmes de sessão que você decidir configurar, para que continuem
+            salvos entre uma visita e outra.
+          </li>
+        </ul>
+        <p>
+          Limpar os dados do site no seu navegador apaga essas informações por
+          completo. Elas nunca saem do seu dispositivo.
+        </p>
+
+        <h2>Notificações e áudio</h2>
+        <p>
+          Se você ativar um alarme de sessão, o site usa a permissão nativa de
+          notificações do seu navegador e a API Web Audio para avisar você
+          localmente. Esses recursos só são ativados se você optar por eles
+          explicitamente, e nenhum dado de alarme é transmitido para lugar nenhum.
+        </p>
+
+        <h2>O app para celular</h2>
+        <p>
+          O app {PRODUCT.name} para iOS e Android, conforme suas páginas na App
+          Store e no Google Play, não coleta nenhum dado dos seus usuários.
+        </p>
+
+        <h2>Links de terceiros</h2>
+        <p>
+          Este site contém links para a App Store da Apple e para o Google Play,
+          para baixar o app, e para fontes externas que citamos nos nossos artigos.
+          Esses sites de terceiros têm suas próprias políticas de privacidade, que
+          recomendamos que você leia; não somos responsáveis pelo conteúdo nem pelas
+          práticas deles.
+        </p>
+
+        <h2>Alterações nesta política</h2>
+        <p>
+          Se esta política mudar, atualizaremos esta página e a data de “última
+          atualização” acima.
+        </p>
+
+        <h2>Contato</h2>
+        <p>
+          Dúvidas sobre esta política podem ser enviadas para{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          O {PRODUCT.name} é publicado pela {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  it: {
+    metaTitle: "Informativa sulla privacy",
+    metaDescription: analyticsEnabled
+      ? "Come Forex Market Hours tratta i dati: lo strumento web funziona nel tuo browser, usa analisi rispettose della privacy, non mostra pubblicità e non vende mai i tuoi dati."
+      : "Come Forex Market Hours tratta i dati. Lo strumento web funziona nel tuo browser; non raccogliamo dati personali di trading.",
+    breadcrumb: "Informativa sulla privacy",
+    h1: "Informativa sulla privacy",
+    lead: analyticsEnabled ? (
+      <>
+        In breve: {PRODUCT.name} funziona nel tuo browser, usa strumenti di analisi
+        rispettosi della privacy, non mostra pubblicità e non vende mai i tuoi
+        dati.
+      </>
+    ) : (
+      <>
+        In breve: {PRODUCT.name} funziona nel tuo browser, non raccoglie dati
+        personali e non ti traccia.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Ultimo aggiornamento: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>Lo strumento web funziona nel tuo browser</h2>
+        <p>
+          {PRODUCT.name} su {SITE_URL} è uno strumento lato client: l’orologio delle
+          sessioni in tempo reale, la conversione dei fusi orari e i calcoli
+          avvengono tutti sul tuo dispositivo. Non gestiamo alcun backend che
+          registri quali sessioni visualizzi, quale fuso orario usi o come utilizzi
+          il sito.
+        </p>
+
+        {dataSection}
+
+        <h2>Archiviazione locale: solo tema e sveglie</h2>
+        <p>
+          Gli unici dati che il sito memorizza sono conservati nel{" "}
+          <code>localStorage</code> del tuo browser e non ci vengono mai inviati:
+        </p>
+        <ul>
+          <li>la tua preferenza per il tema chiaro o scuro; e</li>
+          <li>
+            le eventuali sveglie di sessione che scegli di impostare, così restano
+            salvate tra una visita e l’altra.
+          </li>
+        </ul>
+        <p>
+          Cancellando i dati del sito nel tuo browser, queste informazioni vengono
+          eliminate del tutto. Non lasciano mai il tuo dispositivo.
+        </p>
+
+        <h2>Notifiche e audio</h2>
+        <p>
+          Se attivi una sveglia di sessione, il sito usa l’autorizzazione nativa per
+          le notifiche del tuo browser e la Web Audio API per avvisarti in locale.
+          Si attivano solo se dai esplicitamente il tuo consenso, e nessun dato
+          delle sveglie viene trasmesso altrove.
+        </p>
+
+        <h2>L’app mobile</h2>
+        <p>
+          L’app {PRODUCT.name} per iOS e Android, come indicato nelle relative
+          schede su App Store e Google Play, non raccoglie alcun dato dai suoi
+          utenti.
+        </p>
+
+        <h2>Link di terze parti</h2>
+        <p>
+          Questo sito contiene link all’Apple App Store e a Google Play per scaricare
+          l’app, e a fonti esterne che citiamo nei nostri articoli. Questi siti di
+          terze parti hanno le proprie informative sulla privacy, che ti invitiamo a
+          leggere; non siamo responsabili dei loro contenuti né delle loro pratiche.
+        </p>
+
+        <h2>Modifiche a questa informativa</h2>
+        <p>
+          Se questa informativa cambia, aggiorneremo questa pagina e la data di
+          «ultimo aggiornamento» indicata sopra.
+        </p>
+
+        <h2>Contatti</h2>
+        <p>
+          Puoi inviare domande su questa informativa all’indirizzo{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>.{" "}
+          {PRODUCT.name} è pubblicato da {PUBLISHER.displayName}.
+        </p>
+      </>
+    ),
+  },
+  de: {
+    metaTitle: "Datenschutzerklärung",
+    metaDescription: analyticsEnabled
+      ? "Wie Forex Market Hours mit Daten umgeht: Das Web-Tool läuft in Ihrem Browser, nutzt datenschutzfreundliche Analysen, zeigt keine Werbung und verkauft nie Ihre Daten."
+      : "Wie Forex Market Hours mit Daten umgeht. Das Web-Tool läuft in Ihrem Browser; wir erfassen keine personenbezogenen Handelsdaten.",
+    breadcrumb: "Datenschutzerklärung",
+    h1: "Datenschutzerklärung",
+    lead: analyticsEnabled ? (
+      <>
+        Kurz gesagt: {PRODUCT.name} läuft in Ihrem Browser, nutzt
+        datenschutzfreundliche Analysen, zeigt keine Werbung und verkauft
+        niemals Ihre Daten.
+      </>
+    ) : (
+      <>
+        Kurz gesagt: {PRODUCT.name} läuft in Ihrem Browser, erfasst keine
+        personenbezogenen Daten und verfolgt Sie nicht.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Zuletzt aktualisiert: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>Das Web-Tool läuft in Ihrem Browser</h2>
+        <p>
+          {PRODUCT.name} unter {SITE_URL} ist ein clientseitiges Tool: Die
+          Live-Sessionuhr, die Umrechnung der Zeitzonen und alle Berechnungen
+          laufen auf Ihrem eigenen Gerät. Wir betreiben kein Backend, das
+          protokolliert, welche Sessions Sie ansehen, welche Zeitzone Sie
+          verwenden oder wie Sie die Website nutzen.
+        </p>
+
+        {dataSection}
+
+        <h2>Lokaler Speicher: nur Design und Alarme</h2>
+        <p>
+          Die einzigen Daten, die die Website speichert, liegen im{" "}
+          <code>localStorage</code> Ihres eigenen Browsers und werden nie an uns
+          gesendet:
+        </p>
+        <ul>
+          <li>Ihre Einstellung für helles oder dunkles Design; und</li>
+          <li>
+            alle Session-Alarme, die Sie stellen, damit sie zwischen Ihren
+            Besuchen erhalten bleiben.
+          </li>
+        </ul>
+        <p>
+          Wenn Sie die Websitedaten in Ihrem Browser löschen, werden diese
+          Informationen vollständig entfernt. Sie verlassen Ihr Gerät nie.
+        </p>
+
+        <h2>Benachrichtigungen und Audio</h2>
+        <p>
+          Wenn Sie einen Session-Alarm aktivieren, nutzt die Website die native
+          Benachrichtigungsberechtigung und die Web Audio API Ihres Browsers, um
+          Sie lokal zu benachrichtigen. Diese werden nur aktiv, wenn Sie
+          ausdrücklich zustimmen, und es werden keinerlei Alarmdaten übertragen.
+        </p>
+
+        <h2>Die mobile App</h2>
+        <p>
+          Die App {PRODUCT.name} für iOS und Android erfasst laut ihren Einträgen
+          im App Store und bei Google Play keine Daten ihrer Nutzer.
+        </p>
+
+        <h2>Links zu Dritten</h2>
+        <p>
+          Diese Website verlinkt auf den Apple App Store und Google Play, um die
+          App herunterzuladen, sowie auf externe Quellen, die wir in unseren
+          Artikeln zitieren. Diese Websites Dritter haben eigene
+          Datenschutzerklärungen, die Sie sich ansehen sollten; für deren Inhalte
+          oder Praktiken sind wir nicht verantwortlich.
+        </p>
+
+        <h2>Änderungen dieser Erklärung</h2>
+        <p>
+          Wenn sich diese Erklärung ändert, aktualisieren wir diese Seite und das
+          Datum „Zuletzt aktualisiert“ oben.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Fragen zu dieser Erklärung können Sie an{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          senden.{" "}
+          {PRODUCT.name} wird von {PUBLISHER.displayName} herausgegeben.
+        </p>
+      </>
+    ),
+  },
+  tr: {
+    metaTitle: "Gizlilik Politikası",
+    metaDescription: analyticsEnabled
+      ? "Forex Market Hours verileri nasıl işler: web aracı tarayıcınızda çalışır, gizlilik dostu analiz kullanır, reklam göstermez ve verilerinizi asla satmaz."
+      : "Forex Market Hours verileri nasıl işler: web aracı tarayıcınızda çalışır; kişisel işlem verisi toplamayız.",
+    breadcrumb: "Gizlilik Politikası",
+    h1: "Gizlilik Politikası",
+    lead: analyticsEnabled ? (
+      <>
+        Kısaca: {PRODUCT.name} tarayıcınızda çalışır, gizlilik dostu analiz
+        kullanır, reklam göstermez ve verilerinizi asla satmaz.
+      </>
+    ) : (
+      <>
+        Kısaca: {PRODUCT.name} tarayıcınızda çalışır, hiçbir kişisel veri toplamaz
+        ve sizi izlemez.
+      </>
+    ),
+    lastUpdated: (date: string) => <>Son güncelleme: {date}.</>,
+    body: (dataSection: ReactNode) => (
+      <>
+        <h2>Web aracı tarayıcınızda çalışır</h2>
+        <p>
+          {SITE_URL} adresindeki {PRODUCT.name}, istemci tarafında çalışan bir
+          araçtır: canlı seans saati, saat dilimi dönüşümü ve hesaplamaların tamamı
+          kendi cihazınızda çalışır. Hangi seansları görüntülediğinizi, hangi saat
+          dilimini kullandığınızı veya siteyi nasıl kullandığınızı kaydeden herhangi
+          bir sunucu altyapısı işletmiyoruz.
+        </p>
+
+        {dataSection}
+
+        <h2>Yerel depolama: yalnızca tema ve alarmlar</h2>
+        <p>
+          Sitenin sakladığı tek veri, kendi tarayıcınızın{" "}
+          <code>localStorage</code> alanında tutulur ve bize asla gönderilmez:
+        </p>
+        <ul>
+          <li>açık/karanlık tema tercihiniz ve</li>
+          <li>
+            ziyaretleriniz arasında korunması için kurmayı seçtiğiniz seans
+            alarmları.
+          </li>
+        </ul>
+        <p>
+          Tarayıcınızdaki site verilerini temizlemek bu bilgileri tamamen siler. Bu
+          bilgiler cihazınızdan hiçbir zaman dışarı çıkmaz.
+        </p>
+
+        <h2>Bildirimler ve ses</h2>
+        <p>
+          Bir seans alarmını etkinleştirirseniz site, sizi yerel olarak uyarmak için
+          tarayıcınızın yerleşik Bildirimler iznini ve Web Audio API’sini kullanır.
+          Bunlar yalnızca açıkça izin verdiğinizde devreye girer ve hiçbir alarm
+          verisi herhangi bir yere iletilmez.
+        </p>
+
+        <h2>Mobil uygulama</h2>
+        <p>
+          {PRODUCT.name} iOS ve Android uygulaması, App Store ve Google Play
+          sayfalarında belirtildiği üzere kullanıcılarından hiçbir veri toplamaz.
+        </p>
+
+        <h2>Üçüncü taraf bağlantıları</h2>
+        <p>
+          Bu site, uygulamayı indirmeniz için Apple App Store’a ve Google Play’e,
+          ayrıca makalelerimizde atıf yaptığımız dış kaynaklara bağlantı verir. Bu
+          üçüncü taraf sitelerin kendi gizlilik politikaları vardır ve bunları
+          incelemenizi öneririz; söz konusu sitelerin içeriğinden veya
+          uygulamalarından sorumlu değiliz.
+        </p>
+
+        <h2>Bu politikada yapılacak değişiklikler</h2>
+        <p>
+          Bu politika değişirse bu sayfayı ve yukarıdaki “son güncelleme” tarihini
+          güncelleriz.
+        </p>
+
+        <h2>İletişim</h2>
+        <p>
+          Bu politikayla ilgili sorularınızı{" "}
+          <a href="mailto:info@forexmarkethours.app">info@forexmarkethours.app</a>{" "}
+          adresine gönderebilirsiniz. {PRODUCT.name},{" "}
+          {PUBLISHER.displayName} tarafından yayımlanmaktadır.
         </p>
       </>
     ),
