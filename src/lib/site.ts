@@ -99,7 +99,7 @@ export const LEGAL_NAV = [
   { key: "methodology", href: "/methodology", updated: "2026-07-22" },
   { key: "editorialPolicy", href: "/editorial-policy", updated: "2026-07-22" },
   { key: "disclaimer", href: "/disclaimer", updated: "2026-07-22" },
-  { key: "privacy", href: "/privacy", updated: "2026-07-22" },
+  { key: "privacy", href: "/privacy", updated: "2026-10-15" },
   { key: "terms", href: "/terms", updated: "2026-07-22" },
   { key: "contact", href: "/contact", updated: "2026-07-22" },
 ] as const;

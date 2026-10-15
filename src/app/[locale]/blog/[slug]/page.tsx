@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getAllPosts, getPost, readingMinutes, type BlogLocale } from "@/content/blog";
+import {
+  findPostBySlug,
+  getAllPosts,
+  getPost,
+  getRelatedPosts,
+  readingMinutes,
+  type BlogLocale,
+} from "@/content/blog";
 import { getAuthor, isPlaceholderAuthor, EDITORIAL_TEAM } from "@/content/authors";
 import { formatDate } from "@/lib/format";
 import { PUBLISHER, SITE_URL } from "@/lib/site";
@@ -79,7 +86,18 @@ export default async function PostPage({
   const t = await getTranslations("blog");
 
   const post = getPost(slug, l);
-  if (!post) notFound();
+  if (!post) {
+    // Another language's slug under this prefix (`/en/blog/<Spanish slug>`) is
+    // the same article: send it to this locale's version when that is live.
+    const own = findPostBySlug(slug)?.slug[l];
+    if (own && own !== slug && getPost(own, l)) {
+      permanentRedirect(
+        getPathname({ locale: l, href: { pathname: "/blog/[slug]", params: { slug: own } } }),
+      );
+    }
+    notFound();
+  }
+  const related = getRelatedPosts(post, l);
 
   // Slugs of posts that are actually live right now (current locale). Used to
   // neutralise in-body cross-links to posts still behind the scheduled-publish
@@ -216,6 +234,9 @@ export default async function PostPage({
           remarkPlugins={[remarkGfm]}
           components={{
             a: ({ href, children }) => {
+              // Bodies link the homepage as "/", which goes through language
+              // detection instead of staying in this post's language.
+              if (href === "/") href = `/${l}`;
               const external = href?.startsWith("http");
               // A cross-link to a post that hasn't reached its publish date yet
               // would 404 (getPost -> notFound). Render those as plain text so
@@ -248,6 +269,27 @@ export default async function PostPage({
         <p className="mt-10 text-sm text-muted">
           {t("lastUpdated", { date: formatDate(post.updated, l) })}
         </p>
+      )}
+
+      {related.length > 0 && (
+        <nav aria-labelledby="related-posts" className="mt-12">
+          <h2 id="related-posts" className="text-xl font-semibold text-ivory">
+            {t("relatedPosts")}
+          </h2>
+          <ul className="mt-4 divide-y divide-surface-2 border-y border-surface-2">
+            {related.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={{ pathname: "/blog/[slug]", params: { slug: p.slug } }}
+                  className="block py-4 hover:text-emerald"
+                >
+                  <span className="font-medium text-ivory">{p.title}</span>
+                  <span className="mt-1 block text-sm text-fog">{p.description}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       )}
 
       {namedAuthor ? (

@@ -378,6 +378,7 @@
     "backToBlog": "← Blog",
     "lastUpdated": "Son güncelleme: {date}.",
     "writtenBy": "Yazan",
+    "relatedPosts": "İlgili rehberler",
     "breadcrumbHome": "Ana sayfa",
     "breadcrumbBlog": "Blog",
     "authorAbout": "Hakkında",
@@ -399,5 +400,27 @@
     "learnMore": "Gizlilik politikamızı okuyun",
     "accept": "Kabul et",
     "decline": "Reddet"
+  },
+  "contactForm": {
+    "title": "Bize mesaj gönderin",
+    "requiredNote": "Tüm alanlar zorunludur.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "topic": "Konu",
+    "topicPlaceholder": "Bir konu seçin",
+    "topics": {
+      "advertising": "Reklam",
+      "information": "Bilgi talebi",
+      "request": "Özellik isteği",
+      "correction": "Düzeltme",
+      "partnership": "İş birliği veya basın",
+      "other": "Diğer"
+    },
+    "message": "Mesaj",
+    "submit": "Mesajı gönder",
+    "sending": "Gönderiliyor…",
+    "success": "Teşekkürler, mesajınız gönderildi. Yazdığınız e-posta adresine dönüş yapacağız.",
+    "error": "Mesajınız gönderilemedi. Lütfen tekrar deneyin ya da <mail>{email}</mail> adresine e-posta gönderin.",
+    "privacyNote": "Bilgilerinizi yalnızca mesajınıza yanıt vermek için kullanırız. Ayrıntılar için <link>gizlilik politikamıza</link> bakın."
   }
 }

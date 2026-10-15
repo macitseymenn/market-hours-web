@@ -378,6 +378,7 @@
     "backToBlog": "← Blog",
     "lastUpdated": "Zuletzt aktualisiert am {date}.",
     "writtenBy": "Verfasst von",
+    "relatedPosts": "Verwandte Ratgeber",
     "breadcrumbHome": "Startseite",
     "breadcrumbBlog": "Blog",
     "authorAbout": "Über",
@@ -399,5 +400,27 @@
     "learnMore": "Unsere Datenschutzerklärung lesen",
     "accept": "Akzeptieren",
     "decline": "Ablehnen"
+  },
+  "contactForm": {
+    "title": "Schreiben Sie uns",
+    "requiredNote": "Alle Felder sind Pflichtfelder.",
+    "name": "Name",
+    "email": "E-Mail",
+    "topic": "Betreff",
+    "topicPlaceholder": "Betreff auswählen",
+    "topics": {
+      "advertising": "Werbung",
+      "information": "Allgemeine Informationen",
+      "request": "Funktionswunsch",
+      "correction": "Korrektur",
+      "partnership": "Partnerschaft oder Presse",
+      "other": "Sonstiges"
+    },
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "success": "Danke, Ihre Nachricht wurde gesendet. Wir antworten an die angegebene E-Mail-Adresse.",
+    "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an <mail>{email}</mail>.",
+    "privacyNote": "Wir verwenden Ihre Angaben nur, um auf Ihre Nachricht zu antworten. Siehe unsere <link>Datenschutzerklärung</link>."
   }
 }

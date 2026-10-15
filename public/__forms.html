@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms definition. Netlify only detects forms in static HTML at
+      deploy time, and the Next.js runtime renders pages on the server, so the
+      real form (src/components/ContactForm.tsx) posts its fields here with
+      fetch. Keep these field names in sync with that component.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="subject" />
+      <input name="language" />
+      <input name="name" />
+      <input type="email" name="email" />
+      <select name="topic">
+        <option value="advertising"></option>
+        <option value="information"></option>
+        <option value="request"></option>
+        <option value="correction"></option>
+        <option value="partnership"></option>
+        <option value="other"></option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

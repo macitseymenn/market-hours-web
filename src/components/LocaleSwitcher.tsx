@@ -63,7 +63,12 @@ export function LocaleSwitcher() {
       }
     }
     if (!path) {
-      path = window.location.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, `/${target}`);
+      // No alternate means this page has no `target` version (a post not
+      // translated yet). Swapping only the locale segment would keep this
+      // language's slug and 404, so land on that locale's blog or home.
+      path = /^\/[a-z]{2}\/blog\/./.test(window.location.pathname)
+        ? `/${target}/blog`
+        : `/${target}`;
     }
     window.location.assign(path);
   };

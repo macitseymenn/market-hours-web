@@ -378,6 +378,7 @@
     "backToBlog": "← Blog",
     "lastUpdated": "Dernière mise à jour le {date}.",
     "writtenBy": "Rédigé par",
+    "relatedPosts": "Guides associés",
     "breadcrumbHome": "Accueil",
     "breadcrumbBlog": "Blog",
     "authorAbout": "À propos",
@@ -399,5 +400,27 @@
     "learnMore": "Lire notre politique de confidentialité",
     "accept": "Accepter",
     "decline": "Refuser"
+  },
+  "contactForm": {
+    "title": "Envoyez-nous un message",
+    "requiredNote": "Tous les champs sont obligatoires.",
+    "name": "Nom",
+    "email": "E-mail",
+    "topic": "Objet",
+    "topicPlaceholder": "Choisissez un objet",
+    "topics": {
+      "advertising": "Publicité",
+      "information": "Informations générales",
+      "request": "Demande de fonctionnalité",
+      "correction": "Correction",
+      "partnership": "Partenariat ou presse",
+      "other": "Autre"
+    },
+    "message": "Message",
+    "submit": "Envoyer le message",
+    "sending": "Envoi…",
+    "success": "Merci, votre message a bien été envoyé. Nous vous répondrons à l’adresse e-mail indiquée.",
+    "error": "Votre message n’a pas pu être envoyé. Réessayez ou écrivez-nous à <mail>{email}</mail>.",
+    "privacyNote": "Nous utilisons vos informations uniquement pour répondre à votre message. Consultez notre <link>politique de confidentialité</link>."
   }
 }

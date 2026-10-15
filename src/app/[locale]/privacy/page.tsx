@@ -15,7 +15,7 @@ import { analyticsEnabled, hasCookieAnalytics } from "@/lib/analytics";
 // deploy. See @/i18n/locales.
 export const revalidate = 86400;
 
-const LAST_UPDATED = "2026-07-22";
+const LAST_UPDATED = "2026-10-15";
 
 // Honest, env-driven data-handling section. With no analytics configured the
 // site is genuinely tracking-free; when analytics is enabled the wording below
@@ -47,7 +47,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>We collect no personal data</h2>
+      <h2>No tracking</h2>
       <p>
         We run no analytics, no advertising trackers, and set no tracking cookies
         on this site. We do not collect names, email addresses, IP addresses, or
@@ -84,7 +84,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>No recopilamos datos personales</h2>
+      <h2>Sin seguimiento</h2>
       <p>
         No usamos analíticas, ni rastreadores publicitarios, ni instalamos cookies
         de seguimiento en este sitio. No recopilamos nombres, direcciones de correo
@@ -123,7 +123,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>Nous ne collectons aucune donnée personnelle</h2>
+      <h2>Aucun suivi</h2>
       <p>
         Nous n’utilisons aucune analyse d’audience, aucun traqueur publicitaire et
         ne déposons aucun cookie de suivi sur ce site. Nous ne collectons ni noms,
@@ -161,7 +161,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>Não coletamos nenhum dado pessoal</h2>
+      <h2>Sem rastreamento</h2>
       <p>
         Não usamos ferramentas de análise nem rastreadores de publicidade, e não
         definimos cookies de rastreamento neste site. Não coletamos nomes,
@@ -200,7 +200,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>Non raccogliamo dati personali</h2>
+      <h2>Nessun tracciamento</h2>
       <p>
         Su questo sito non usiamo strumenti di analisi né tracker pubblicitari e non
         impostiamo cookie di tracciamento. Tramite lo strumento web non raccogliamo
@@ -238,7 +238,7 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>Wir erfassen keine personenbezogenen Daten</h2>
+      <h2>Kein Tracking</h2>
       <p>
         Wir betreiben auf dieser Website keine Analyse, keine Werbetracker und
         setzen keine Tracking-Cookies. Über das Web-Tool erfassen wir weder
@@ -275,12 +275,106 @@ const DATA_SECTION: Record<Locale, ReactNode> = {
     </>
   ) : (
     <>
-      <h2>Hiçbir kişisel veri toplamıyoruz</h2>
+      <h2>İzleme yok</h2>
       <p>
         Bu sitede hiçbir analiz aracı veya reklam izleyicisi çalıştırmıyoruz ve
         izleme çerezi yerleştirmiyoruz. Web aracı üzerinden ad, e-posta adresi, IP
         adresi veya başka herhangi bir kişisel ya da işlem verisi toplamıyoruz;
         dolayısıyla satacak veya paylaşacak hiçbir verinize sahip değiliz.
+      </p>
+    </>
+  ),
+};
+
+// What the contact form collects. Submissions go through Netlify Forms (the
+// site host) and on to our inbox; see src/components/ContactForm.tsx.
+const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
+  en: (
+    <>
+      <h2>Contact form</h2>
+      <p>
+        If you write to us through the contact form, we receive the name, email
+        address, subject and message you enter. The form is processed by our
+        hosting provider, Netlify, and delivered to our inbox. We use these
+        details only to reply to you and keep them no longer than needed for that
+        conversation. Ask us at any time to delete them.
+      </p>
+    </>
+  ),
+  es: (
+    <>
+      <h2>Formulario de contacto</h2>
+      <p>
+        Si nos escribes a través del formulario de contacto, recibimos el nombre,
+        el correo electrónico, el asunto y el mensaje que introduces. El formulario
+        lo procesa nuestro proveedor de alojamiento, Netlify, y llega a nuestra
+        bandeja de entrada. Usamos estos datos solo para responderte y no los
+        conservamos más tiempo del necesario para esa conversación. Puedes pedirnos
+        en cualquier momento que los eliminemos.
+      </p>
+    </>
+  ),
+  fr: (
+    <>
+      <h2>Formulaire de contact</h2>
+      <p>
+        Si vous nous écrivez via le formulaire de contact, nous recevons le nom,
+        l’adresse e-mail, l’objet et le message que vous saisissez. Le formulaire
+        est traité par notre hébergeur, Netlify, puis transmis à notre boîte de
+        réception. Nous utilisons ces informations uniquement pour vous répondre et
+        ne les conservons pas au-delà de cet échange. Vous pouvez nous demander à
+        tout moment de les supprimer.
+      </p>
+    </>
+  ),
+  pt: (
+    <>
+      <h2>Formulário de contato</h2>
+      <p>
+        Se você nos escrever pelo formulário de contato, recebemos o nome, o
+        e-mail, o assunto e a mensagem que você informar. O formulário é processado
+        pelo nosso provedor de hospedagem, a Netlify, e entregue à nossa caixa de
+        entrada. Usamos esses dados apenas para responder a você e não os
+        guardamos por mais tempo do que essa conversa exige. Você pode pedir a
+        exclusão a qualquer momento.
+      </p>
+    </>
+  ),
+  it: (
+    <>
+      <h2>Modulo di contatto</h2>
+      <p>
+        Se ci scrivi tramite il modulo di contatto, riceviamo il nome, l’indirizzo
+        email, l’oggetto e il messaggio che inserisci. Il modulo è gestito dal
+        nostro provider di hosting, Netlify, e recapitato alla nostra casella di
+        posta. Usiamo questi dati solo per risponderti e non li conserviamo oltre
+        il tempo necessario per quella conversazione. Puoi chiederci in qualsiasi
+        momento di cancellarli.
+      </p>
+    </>
+  ),
+  de: (
+    <>
+      <h2>Kontaktformular</h2>
+      <p>
+        Wenn Sie uns über das Kontaktformular schreiben, erhalten wir den Namen,
+        die E-Mail-Adresse, den Betreff und die Nachricht, die Sie eingeben. Das
+        Formular wird von unserem Hosting-Anbieter Netlify verarbeitet und an unser
+        Postfach zugestellt. Wir verwenden diese Angaben nur, um Ihnen zu antworten,
+        und bewahren sie nicht länger auf, als diese Korrespondenz es erfordert.
+        Sie können jederzeit die Löschung verlangen.
+      </p>
+    </>
+  ),
+  tr: (
+    <>
+      <h2>İletişim formu</h2>
+      <p>
+        İletişim formu üzerinden bize yazarsanız, girdiğiniz adı, e-posta adresini,
+        konuyu ve mesajı alırız. Form, barındırma sağlayıcımız Netlify tarafından
+        işlenir ve e-posta kutumuza iletilir. Bu bilgileri yalnızca size yanıt
+        vermek için kullanır, o yazışmanın gerektirdiğinden daha uzun süre
+        saklamayız. İstediğiniz zaman silinmelerini talep edebilirsiniz.
       </p>
     </>
   ),
@@ -302,7 +396,8 @@ const COPY = {
     ) : (
       <>
         Short version: {PRODUCT.name} runs in your browser, collects no personal
-        data, and does not track you.
+        data, and does not track you. We only see what you choose to send
+        us through the contact form.
       </>
     ),
     lastUpdated: (date: string) => <>Last updated: {date}.</>,
@@ -386,7 +481,8 @@ const COPY = {
     ) : (
       <>
         Versión breve: {PRODUCT.name} funciona en tu navegador, no recopila datos
-        personales y no te rastrea.
+        personales y no te rastrea. Solo vemos lo que decidas enviarnos a
+        través del formulario de contacto.
       </>
     ),
     lastUpdated: (date: string) => <>Última actualización: {date}.</>,
@@ -474,7 +570,8 @@ const COPY = {
     ) : (
       <>
         En bref : {PRODUCT.name} s’exécute dans votre navigateur, ne collecte aucune
-        donnée personnelle et ne vous suit pas.
+        donnée personnelle et ne vous suit pas. Nous ne voyons que ce que vous
+        choisissez de nous envoyer via le formulaire de contact.
       </>
     ),
     lastUpdated: (date: string) => <>Dernière mise à jour : {date}.</>,
@@ -562,7 +659,8 @@ const COPY = {
     ) : (
       <>
         Em resumo: o {PRODUCT.name} roda no seu navegador, não coleta nenhum dado
-        pessoal e não rastreia você.
+        pessoal e não rastreia você. Só vemos o que você decidir nos enviar
+        pelo formulário de contato.
       </>
     ),
     lastUpdated: (date: string) => <>Última atualização: {date}.</>,
@@ -651,7 +749,8 @@ const COPY = {
     ) : (
       <>
         In breve: {PRODUCT.name} funziona nel tuo browser, non raccoglie dati
-        personali e non ti traccia.
+        personali e non ti traccia. Vediamo solo ciò che scegli di inviarci
+        tramite il modulo di contatto.
       </>
     ),
     lastUpdated: (date: string) => <>Ultimo aggiornamento: {date}.</>,
@@ -739,7 +838,8 @@ const COPY = {
     ) : (
       <>
         Kurz gesagt: {PRODUCT.name} läuft in Ihrem Browser, erfasst keine
-        personenbezogenen Daten und verfolgt Sie nicht.
+        personenbezogenen Daten und verfolgt Sie nicht. Wir sehen nur, was Sie
+        uns über das Kontaktformular senden.
       </>
     ),
     lastUpdated: (date: string) => <>Zuletzt aktualisiert: {date}.</>,
@@ -828,7 +928,8 @@ const COPY = {
     ) : (
       <>
         Kısaca: {PRODUCT.name} tarayıcınızda çalışır, hiçbir kişisel veri toplamaz
-        ve sizi izlemez.
+        ve sizi izlemez. Yalnızca iletişim formu üzerinden bize göndermeyi
+        seçtiğiniz bilgileri görürüz.
       </>
     ),
     lastUpdated: (date: string) => <>Son güncelleme: {date}.</>,
@@ -967,7 +1068,12 @@ export default async function PrivacyPage({
 
       <div className="article-prose mt-8">
         <p>{c.lastUpdated(formatDate(LAST_UPDATED, l))}</p>
-        {c.body(DATA_SECTION[l])}
+        {c.body(
+          <>
+            {DATA_SECTION[l]}
+            {CONTACT_FORM_SECTION[l]}
+          </>,
+        )}
       </div>
     </article>
   );

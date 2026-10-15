@@ -9344,6 +9344,34 @@ export function getPost(slug: string, locale: BlogLocale): ResolvedPost | undefi
   return resolve(post, locale) ?? undefined;
 }
 
+/**
+ * The post a slug belongs to in ANY locale. Used to recover a slug requested
+ * under the wrong language prefix (`/en/blog/<Spanish slug>`), which is the
+ * same article and should redirect to its version in the requested locale.
+ */
+export function findPostBySlug(slug: string): Post | undefined {
+  return POSTS.find((p) => Object.values(p.slug).includes(slug));
+}
+
+/**
+ * Up to `limit` other live posts in `locale` to link from the end of a post,
+ * those sharing the most tags first, then newest. Gives every post a crawl
+ * path to its siblings instead of relying on the blog index alone.
+ */
+export function getRelatedPosts(
+  post: ResolvedPost,
+  locale: BlogLocale,
+  limit = 3,
+): ResolvedPost[] {
+  const shared = (p: ResolvedPost) => p.tags.filter((t) => post.tags.includes(t)).length;
+  return getAllPosts(locale)
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => ({ p, score: shared(p) }))
+    .sort((a, b) => b.score - a.score || (a.p.date < b.p.date ? 1 : -1))
+    .slice(0, limit)
+    .map(({ p }) => p);
+}
+
 export function getPostsByAuthor(authorSlug: string, locale: BlogLocale): ResolvedPost[] {
   return getAllPosts(locale).filter((p) => p.authorSlug === authorSlug);
 }

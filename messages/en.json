@@ -378,6 +378,7 @@
     "backToBlog": "← Blog",
     "lastUpdated": "Last updated {date}.",
     "writtenBy": "Written by",
+    "relatedPosts": "Related guides",
     "breadcrumbHome": "Home",
     "breadcrumbBlog": "Blog",
     "authorAbout": "About",
@@ -399,5 +400,27 @@
     "learnMore": "Read our privacy policy",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "contactForm": {
+    "title": "Send us a message",
+    "requiredNote": "All fields are required.",
+    "name": "Name",
+    "email": "Email",
+    "topic": "Subject",
+    "topicPlaceholder": "Choose a subject",
+    "topics": {
+      "advertising": "Advertising",
+      "information": "General information",
+      "request": "Feature request",
+      "correction": "Correction",
+      "partnership": "Partnership or press",
+      "other": "Other"
+    },
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thanks, your message has been sent. We will reply to the email address you entered.",
+    "error": "Your message could not be sent. Please try again, or email us at <mail>{email}</mail>.",
+    "privacyNote": "We use your details only to reply to your message. See our <link>privacy policy</link>."
   }
 }

@@ -5,6 +5,7 @@ import { PRODUCT, PUBLISHER, SITE_URL } from "@/lib/site";
 import { Link, getPathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { sharedAlternates } from "@/i18n/alternates";
+import { ContactForm } from "@/components/ContactForm";
 
 // ISR: re-render daily. The page's own copy is static, but the shared chrome
 // (header language switcher, footer) lists the locales that are currently live,
@@ -431,6 +432,8 @@ export default async function ContactPage({
         <h1 className="text-4xl font-semibold text-ivory sm:text-5xl">{c.h1}</h1>
         <p className="mt-4 text-lg text-fog">{c.lead}</p>
       </header>
+
+      <ContactForm />
 
       <div className="article-prose mt-8">{c.body}</div>
     </article>
