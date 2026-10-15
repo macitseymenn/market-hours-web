@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -16,7 +16,43 @@ const TOPICS = [
   "other",
 ] as const;
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "sent" | "error" | "unverified";
+
+/** Cloudflare Turnstile. The site key is public; the secret lives in src/app/api/contact. */
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+const TOKEN_FIELD = "cf-turnstile-response";
+
+type TurnstileApi = {
+  render(el: HTMLElement, options: Record<string, unknown>): string;
+  reset(id: string): void;
+  remove(id: string): void;
+};
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
+let turnstileScript: Promise<void> | null = null;
+
+/** Injects the Turnstile script once per page, on the first form mount. */
+function loadTurnstile(): Promise<void> {
+  if (window.turnstile) return Promise.resolve();
+  turnstileScript ??= new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = TURNSTILE_SRC;
+    s.async = true;
+    s.onload = () => resolve();
+    s.onerror = () => {
+      turnstileScript = null;
+      reject(new Error("Turnstile failed to load"));
+    };
+    document.head.appendChild(s);
+  });
+  return turnstileScript;
+}
 
 const field =
   "mt-1.5 w-full rounded-lg border border-surface-2 bg-charcoal px-3 py-2 text-ivory outline-none focus-visible:border-emerald";
@@ -32,14 +68,47 @@ function Req() {
 }
 
 /**
- * Contact form, delivered by Netlify Forms. Submissions show up in the Netlify
- * dashboard and are emailed to info@ through the site's form notification
- * settings. No API key or server code is involved.
+ * Contact form, delivered by Netlify Forms. The form posts to /api/contact,
+ * which checks the Turnstile token and then forwards the fields to Netlify.
+ * Submissions show up in the Netlify dashboard and are emailed to info@
+ * through the site's form notification settings.
  */
 export function ContactForm() {
   const t = useTranslations("contactForm");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
+  const widgetEl = useRef<HTMLDivElement>(null);
+  const widgetId = useRef<string | null>(null);
+  const sent = status === "sent";
+
+  useEffect(() => {
+    const el = widgetEl.current;
+    if (sent || !el || !TURNSTILE_SITE_KEY) return;
+    let cancelled = false;
+    loadTurnstile()
+      .then(() => {
+        if (cancelled || !window.turnstile) return;
+        widgetId.current = window.turnstile.render(el, {
+          sitekey: TURNSTILE_SITE_KEY,
+          language: locale === "pt" ? "pt-br" : locale,
+          theme: document.documentElement.classList.contains("dark") ? "dark" : "light",
+          // "flexible" needs 300px; very narrow phones get the compact box.
+          size: el.offsetWidth < 300 ? "compact" : "flexible",
+        });
+      })
+      // Blocked or offline: the server rejects the post and the error offers email.
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+      if (widgetId.current) window.turnstile?.remove(widgetId.current);
+      widgetId.current = null;
+    };
+  }, [locale, sent]);
+
+  /** Tokens are single use, so every failed attempt needs a fresh one. */
+  function resetWidget() {
+    if (widgetId.current) window.turnstile?.reset(widgetId.current);
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,21 +116,31 @@ export function ContactForm() {
     const data = new FormData(form);
     // Netlify uses a field named `subject` as the notification email's subject.
     data.set("subject", `Forex Market Hours contact: ${data.get("topic")} (${locale})`);
+    // Turnstile writes its token into a hidden input inside the widget.
+    if (TURNSTILE_SITE_KEY && !data.get(TOKEN_FIELD)) {
+      setStatus("unverified");
+      return;
+    }
 
     setStatus("sending");
     try {
-      // Posted to the static file that declares the form, see public/__forms.html.
-      const res = await fetch("/__forms.html", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(
           [...data.entries()].map(([k, v]) => [k, String(v)]),
         ).toString(),
       });
+      if (res.status === 403) {
+        resetWidget();
+        setStatus("unverified");
+        return;
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       form.reset();
       setStatus("sent");
     } catch {
+      resetWidget();
       setStatus("error");
     }
   }
@@ -139,6 +218,8 @@ export function ContactForm() {
           <textarea name="message" required rows={6} maxLength={5000} className={field} />
         </label>
 
+        {TURNSTILE_SITE_KEY && <div ref={widgetEl} className="min-h-[65px] sm:col-span-2" />}
+
         <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
           <button
             type="submit"
@@ -157,6 +238,12 @@ export function ContactForm() {
             })}
           </p>
         </div>
+
+        {status === "unverified" && (
+          <p role="alert" className="text-sm text-red-400 sm:col-span-2">
+            {t("verify")}
+          </p>
+        )}
 
         {status === "error" && (
           <p role="alert" className="text-sm text-red-400 sm:col-span-2">

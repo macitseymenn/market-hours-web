@@ -9,8 +9,9 @@
     <!--
       Netlify Forms definition. Netlify only detects forms in static HTML at
       deploy time, and the Next.js runtime renders pages on the server, so the
-      real form (src/components/ContactForm.tsx) posts its fields here with
-      fetch. Keep these field names in sync with that component.
+      real form (src/components/ContactForm.tsx) posts to /api/contact, which
+      checks the Turnstile token and then posts the fields here. Keep these
+      field names in sync with that component and src/app/api/contact/route.ts.
     -->
     <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="contact" />

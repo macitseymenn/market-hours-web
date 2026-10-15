@@ -421,6 +421,7 @@
     "sending": "Gönderiliyor…",
     "success": "Teşekkürler, mesajınız gönderildi. Yazdığınız e-posta adresine dönüş yapacağız.",
     "error": "Mesajınız gönderilemedi. Lütfen tekrar deneyin ya da <mail>{email}</mail> adresine e-posta gönderin.",
+    "verify": "Lütfen güvenlik doğrulamasını tamamlayın ve mesajınızı yeniden gönderin.",
     "privacyNote": "Bilgilerinizi yalnızca mesajınıza yanıt vermek için kullanırız. Ayrıntılar için <link>gizlilik politikamıza</link> bakın."
   }
 }

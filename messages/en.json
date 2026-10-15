@@ -421,6 +421,7 @@
     "sending": "Sending…",
     "success": "Thanks, your message has been sent. We will reply to the email address you entered.",
     "error": "Your message could not be sent. Please try again, or email us at <mail>{email}</mail>.",
+    "verify": "Please complete the security check, then send your message again.",
     "privacyNote": "We use your details only to reply to your message. See our <link>privacy policy</link>."
   }
 }

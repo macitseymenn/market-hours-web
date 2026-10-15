@@ -421,6 +421,7 @@
     "sending": "Invio in corso…",
     "success": "Grazie, il tuo messaggio è stato inviato. Ti risponderemo all’indirizzo email indicato.",
     "error": "Non è stato possibile inviare il messaggio. Riprova oppure scrivici a <mail>{email}</mail>.",
+    "verify": "Completa la verifica di sicurezza, poi invia di nuovo il messaggio.",
     "privacyNote": "Usiamo i tuoi dati solo per rispondere al tuo messaggio. Consulta la nostra <link>informativa sulla privacy</link>."
   }
 }

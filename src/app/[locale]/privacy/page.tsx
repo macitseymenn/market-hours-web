@@ -297,7 +297,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         address, subject and message you enter. The form is processed by our
         hosting provider, Netlify, and delivered to our inbox. We use these
         details only to reply to you and keep them no longer than needed for that
-        conversation. Ask us at any time to delete them.
+        conversation. Ask us at any time to delete them. To keep out spam, the form uses
+        Cloudflare Turnstile, which checks your browser and connection (including
+        your IP address) to tell people from bots. It sets no tracking cookies and
+        sees none of the text you type.
       </p>
     </>
   ),
@@ -310,7 +313,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         lo procesa nuestro proveedor de alojamiento, Netlify, y llega a nuestra
         bandeja de entrada. Usamos estos datos solo para responderte y no los
         conservamos más tiempo del necesario para esa conversación. Puedes pedirnos
-        en cualquier momento que los eliminemos.
+        en cualquier momento que los eliminemos. Para evitar el spam, el formulario
+        usa Cloudflare Turnstile, que analiza tu navegador y tu conexión (incluida
+        tu dirección IP) para distinguir personas de bots. No instala cookies de
+        seguimiento ni ve el texto que escribes.
       </p>
     </>
   ),
@@ -323,7 +329,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         est traité par notre hébergeur, Netlify, puis transmis à notre boîte de
         réception. Nous utilisons ces informations uniquement pour vous répondre et
         ne les conservons pas au-delà de cet échange. Vous pouvez nous demander à
-        tout moment de les supprimer.
+        tout moment de les supprimer. Pour bloquer le spam, le formulaire utilise
+        Cloudflare Turnstile, qui examine votre navigateur et votre connexion (y
+        compris votre adresse IP) afin de distinguer les personnes des robots. Il
+        ne dépose aucun cookie de suivi et ne voit pas le texte que vous saisissez.
       </p>
     </>
   ),
@@ -336,7 +345,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         pelo nosso provedor de hospedagem, a Netlify, e entregue à nossa caixa de
         entrada. Usamos esses dados apenas para responder a você e não os
         guardamos por mais tempo do que essa conversa exige. Você pode pedir a
-        exclusão a qualquer momento.
+        exclusão a qualquer momento. Para barrar spam, o formulário usa o
+        Cloudflare Turnstile, que verifica seu navegador e sua conexão (incluindo
+        seu endereço IP) para diferenciar pessoas de robôs. Ele não usa cookies de
+        rastreamento e não vê o texto que você digita.
       </p>
     </>
   ),
@@ -349,7 +361,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         nostro provider di hosting, Netlify, e recapitato alla nostra casella di
         posta. Usiamo questi dati solo per risponderti e non li conserviamo oltre
         il tempo necessario per quella conversazione. Puoi chiederci in qualsiasi
-        momento di cancellarli.
+        momento di cancellarli. Per bloccare lo spam, il modulo usa Cloudflare
+        Turnstile, che controlla il browser e la connessione (incluso l’indirizzo
+        IP) per distinguere le persone dai bot. Non imposta cookie di tracciamento e
+        non vede il testo che scrivi.
       </p>
     </>
   ),
@@ -362,7 +377,11 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         Formular wird von unserem Hosting-Anbieter Netlify verarbeitet und an unser
         Postfach zugestellt. Wir verwenden diese Angaben nur, um Ihnen zu antworten,
         und bewahren sie nicht länger auf, als diese Korrespondenz es erfordert.
-        Sie können jederzeit die Löschung verlangen.
+        Sie können jederzeit die Löschung verlangen. Zum Schutz vor Spam nutzt das
+        Formular Cloudflare Turnstile, das Ihren Browser und Ihre Verbindung
+        (einschließlich Ihrer IP-Adresse) prüft, um Menschen von Bots zu
+        unterscheiden. Es setzt keine Tracking-Cookies und sieht den eingegebenen
+        Text nicht.
       </p>
     </>
   ),
@@ -374,7 +393,10 @@ const CONTACT_FORM_SECTION: Record<Locale, ReactNode> = {
         konuyu ve mesajı alırız. Form, barındırma sağlayıcımız Netlify tarafından
         işlenir ve e-posta kutumuza iletilir. Bu bilgileri yalnızca size yanıt
         vermek için kullanır, o yazışmanın gerektirdiğinden daha uzun süre
-        saklamayız. İstediğiniz zaman silinmelerini talep edebilirsiniz.
+        saklamayız. İstediğiniz zaman silinmelerini talep edebilirsiniz. Spamı önlemek için form,
+        insanları botlardan ayırmak amacıyla tarayıcınızı ve bağlantınızı (IP
+        adresiniz dahil) kontrol eden Cloudflare Turnstile kullanır. Turnstile takip
+        çerezi kullanmaz ve yazdığınız metni görmez.
       </p>
     </>
   ),

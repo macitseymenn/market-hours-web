@@ -41,6 +41,12 @@ const A = {
 const scriptHosts: string[] = ["https://static.cloudflareinsights.com"];
 const connectHosts: string[] = ["https://cloudflareinsights.com"];
 const imgHosts: string[] = [];
+const frameHosts: string[] = [];
+// Cloudflare Turnstile on the contact form: its script plus the challenge iframe.
+if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) {
+  scriptHosts.push("https://challenges.cloudflare.com");
+  frameHosts.push("https://challenges.cloudflare.com");
+}
 if (A.google) {
   scriptHosts.push("https://www.googletagmanager.com");
   connectHosts.push(
@@ -71,6 +77,7 @@ const CSP = [
   "media-src 'self'",
   "manifest-src 'self'",
   "worker-src 'self'",
+  `frame-src 'self'${extra(frameHosts)}`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
