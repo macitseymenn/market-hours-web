@@ -76,6 +76,14 @@ export async function POST(request: Request) {
       console.error(`[contact] Netlify Forms rejected the post: ${res.status} from ${res.url}`);
       return fail(502, "delivery");
     }
+    // A recorded submission gets Netlify's own thank-you page. Getting
+    // __forms.html itself back means the form was never detected at deploy
+    // time and nothing was stored.
+    if ((await res.text()).includes("<title>Forms</title>")) {
+      console.error(`[contact] ${res.url} served __forms.html instead of recording the submission`);
+      return fail(502, "not-detected");
+    }
+    console.log(`[contact] Netlify Forms accepted the post: ${res.status} from ${res.url}`);
   } catch (err) {
     console.error(`[contact] Netlify Forms post to ${base} failed:`, err);
     return fail(502, "delivery");
