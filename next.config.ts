@@ -106,6 +106,12 @@ const nextConfig: NextConfig = {
   // Never leak the framework/version banner.
   poweredByHeader: false,
 
+  // Netlify sets DEPLOY_URL only during the build, not inside functions, so
+  // bake it in for src/app/api/contact/route.ts.
+  env: {
+    NETLIFY_DEPLOY_URL: process.env.DEPLOY_URL ?? "",
+  },
+
   // Pin the workspace root to this project. A stray package-lock.json exists in
   // the home directory, which otherwise makes Next infer the wrong root.
   turbopack: {

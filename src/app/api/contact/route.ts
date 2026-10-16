@@ -27,7 +27,10 @@ async function verifyTurnstile(token: string, ip: string | null): Promise<boolea
 }
 
 export async function POST(request: Request) {
-  if (!process.env.TURNSTILE_SECRET_KEY) return fail(500, "not-configured");
+  if (!process.env.TURNSTILE_SECRET_KEY) {
+    console.error("[contact] TURNSTILE_SECRET_KEY is not set for Functions");
+    return fail(500, "not-configured");
+  }
 
   let data: FormData;
   try {
@@ -45,23 +48,36 @@ export async function POST(request: Request) {
     request.headers.get("x-nf-client-connection-ip") ??
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     null;
-  if (!(await verifyTurnstile(token, ip))) return fail(403, "verification");
+  if (!(await verifyTurnstile(token, ip))) {
+    console.error("[contact] Turnstile rejected the token (check the secret key and the widget's hostnames)");
+    return fail(403, "verification");
+  }
 
   const fields = new URLSearchParams();
   for (const k of FORWARDED) fields.set(k, String(data.get(k) ?? ""));
   fields.set("form-name", "contact");
 
-  // DEPLOY_URL is this deploy's own netlify.app address, so the post reaches
-  // Netlify directly instead of looping back through the public domain.
-  const base = process.env.DEPLOY_URL || new URL(request.url).origin;
+  // Post to the site's own netlify.app address, never the public domain: that
+  // one sits behind Cloudflare, whose bot protection blocks server-to-server
+  // posts. Netlify only exposes URL/SITE_NAME/SITE_ID to functions at runtime,
+  // so DEPLOY_URL is baked in at build time (next.config.ts `env`).
+  const base =
+    process.env.NETLIFY_DEPLOY_URL ||
+    (process.env.SITE_NAME ? `https://${process.env.SITE_NAME}.netlify.app` : "") ||
+    new URL(request.url).origin;
   try {
     const res = await fetch(`${base}/__forms.html`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: fields.toString(),
     });
-    if (!res.ok) return fail(502, "delivery");
-  } catch {
+    if (!res.ok) {
+      // Shows up in Netlify -> Logs -> Functions.
+      console.error(`[contact] Netlify Forms rejected the post: ${res.status} from ${res.url}`);
+      return fail(502, "delivery");
+    }
+  } catch (err) {
+    console.error(`[contact] Netlify Forms post to ${base} failed:`, err);
     return fail(502, "delivery");
   }
 
